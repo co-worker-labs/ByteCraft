@@ -1,0 +1,40 @@
+.generator {
+    background-color: #CAEDF7;
+    color: black;
+    height: max-content;
+}
+
+.passDisplay {
+    line-height: 3rem;
+    font-size: 3rem;
+    padding: 1.5rem 1.5rem; 
+}
+
+.passDisplay button:hover {
+    color: #dd2222;
+}
+
+.checkbox input {
+    height: 1.6rem;
+    width: 1.6rem;
+}
+.checkbox input:checked {
+    background-color: #dd2222;
+    border: #dd2222;
+}
+
+.checkbox label {
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+}
+
+.comparisonBody button:hover {
+    color: #dd2222;
+}
+
+.comparisonPassword {
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
