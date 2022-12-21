@@ -29,7 +29,13 @@ const toolsList: ToolData[] = [
     {
         path: '/generator/random',
         title: 'Random Generator',
-        description: 'Generate secure, random passwords to stay safe online',
+        description: 'Generate secure, random passwords',
         keywords: ['password', 'generator', 'random']
+    },
+    {
+        path: '/generator/memorable',
+        title: 'Memorable Generator',
+        description: 'Generate secure, random, memorable passwords',
+        keywords: ['password', 'generator', 'memorable', 'random']
     },
 ]

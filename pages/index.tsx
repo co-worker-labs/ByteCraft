@@ -25,14 +25,14 @@ function Introduce() {
 function ToolCollection({ data }: { data: ToolData[] }) {
   const router = useRouter();
   return (
-    <div className='container'>
+    <div className='container mb-5'>
       <div className='row justify-content-center text-center'>
         <div className='col-11 col-md-10'>
           <div className={`h1 text-capitalize fw-bolder mt-5 ${styles.toolCollectionTitle}`}>
             Tools Collection
           </div>
           <div className='mb-3 mt-3'>
-          <i className="bi bi-heart-pulse me-2 fs-4 text-primary"></i>
+            <i className="bi bi-heart-pulse me-2 fs-4 text-primary"></i>
           </div>
           <div className="row">
             <>
@@ -43,7 +43,7 @@ function ToolCollection({ data }: { data: ToolData[] }) {
                       <div className="card" >
                         <div className="card-body">
                           <h5 className="card-title">{value.title}</h5>
-                          <p className="card-text">{value.description}</p>
+                          <p className="card-text" style={{'height': '3rem'}}>{value.description}</p>
                           <div className="d-flex justify-content-center">
                             <button type="button" className="btn btn-outline-success col-8" disabled={value.path == ''} onClick={() => {
                               router.push(value.path);
@@ -73,7 +73,7 @@ export default function Home({ tools }: InferGetStaticPropsType<typeof getStatic
         <meta name="description" content="Auesome online Tools" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Layout headerPosition='none' asideAds={false}>
+      <Layout headerPosition='none' asideAds={0}>
         <Introduce />
         <ToolCollection data={tools} />
       </Layout>

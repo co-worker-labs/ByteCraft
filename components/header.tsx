@@ -103,7 +103,7 @@ export default function Header({ position }: { position: HeaderPosition }) {
                             <div className="card" >
                               <div className="card-body">
                                 <h5 className="card-title">{value.title}</h5>
-                                <p className="card-text">{value.description}</p>
+                                <p className="card-text" style={{'height': '3rem'}}>{value.description}</p>
                                 <div className="d-flex justify-content-center">
                                   <button type="button" className="btn btn-outline-success col-8" disabled={value.path == ''} onClick={() => {
                                     goto(value.path);
