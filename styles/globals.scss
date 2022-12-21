@@ -1,0 +1,17 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+// $primary: #e91e63;
+// $secondary: #7b809a;
+// $info: #03a9f4;
+// $success: #4caf50;
+// $danger: #f44335;
+// $warning: #fb8c00;
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+a {
+  color: inherit;
+  text-decoration: none;
+}
