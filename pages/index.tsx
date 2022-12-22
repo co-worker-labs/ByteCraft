@@ -43,7 +43,7 @@ function ToolCollection({ data }: { data: ToolData[] }) {
                       <div className="card" >
                         <div className="card-body">
                           <h5 className="card-title">{value.title}</h5>
-                          <p className="card-text" style={{'height': '3rem'}}>{value.description}</p>
+                          <p className="card-text" style={{ 'height': '3rem' }}>{value.description}</p>
                           <div className="d-flex justify-content-center">
                             <button type="button" className="btn btn-outline-success col-8" disabled={value.path == ''} onClick={() => {
                               router.push(value.path);
@@ -74,6 +74,17 @@ export default function Home({ tools }: InferGetStaticPropsType<typeof getStatic
       <Layout headerPosition='none' asideAds={0}>
         <Introduce />
         <ToolCollection data={tools} />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6128301546730956"
+          crossOrigin="anonymous"></script>
+        <ins className="adsbygoogle"
+          style={{ 'display': 'block' }}
+          data-ad-client="ca-pub-6128301546730956"
+          data-ad-slot="2810295936"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>
+          {`(adsbygoogle = window.adsbygoogle || []).push({ });`}
+        </script>
       </Layout>
     </>
   )
