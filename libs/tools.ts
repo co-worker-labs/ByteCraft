@@ -2,7 +2,16 @@ export interface ToolData {
     path: string;
     title: string;
     description: string;
+    searchKeys: string[];
     keywords: string[];
+}
+
+export function findTool(path: string): ToolData {
+    const result = toolsList.find((v) => v.path === path);
+    if (!result) {
+        throw 'Invalid page path: ' + path;
+    }
+    return result;
 }
 
 export function listMatchedTools(filter: string): ToolData[] {
@@ -14,10 +23,9 @@ export function listMatchedTools(filter: string): ToolData[] {
     console.log(filterWords);
     return toolsList.filter((data) => {
         for (var fw of filterWords) {
-            let found = data.keywords.filter(it => it.includes(fw));
+            let found = data.searchKeys.filter(it => it.includes(fw));
             console.log(fw + ' => ' + found);
             if (found.length == 0) {
-                console.log('return falwe');
                 return false;
             }
         }
@@ -25,17 +33,12 @@ export function listMatchedTools(filter: string): ToolData[] {
     })
 }
 
-const toolsList: ToolData[] = [
+export const toolsList: ToolData[] = [
     {
-        path: '/generator/random',
-        title: 'Random Generator',
-        description: 'Generate secure, random passwords',
-        keywords: ['password', 'generator', 'random']
-    },
-    {
-        path: '/generator/memorable',
-        title: 'Memorable Generator',
-        description: 'Generate secure, random, memorable passwords',
-        keywords: ['password', 'generator', 'memorable', 'random']
+        path: '/generator/password',
+        title: 'Password Generator',
+        description: 'Generate secure, random, memorable passwords to stay safe online.',
+        searchKeys: ['password', 'generator', 'random', 'memorable', 'pin'],
+        keywords: ['password', 'generator', 'random', 'memorable', 'pin', 'gen', 'pass', 'text'],
     },
 ]

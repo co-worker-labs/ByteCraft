@@ -11,7 +11,7 @@ function Introduce() {
       <div className='container'>
         <div className='row text-center justify-content-center'>
           <div className='col-10 col-md-8'>
-            <span className={`h1 text-capitalize fw-bolder ${styles.introduceTitle}`}>Build amazing Tools</span>
+            <span className={`h1 text-capitalize fw-bolder ${styles.introduceTitle}`}>Search amazing Tools</span>
             <p className='mt-5 fs-5'>
               We offer those to the community for free, but our day job is building and selling useful tools for developers like you.
             </p>
@@ -59,8 +59,6 @@ function ToolCollection({ data }: { data: ToolData[] }) {
           </div>
         </div>
       </div>
-
-
     </div>
   )
 }
