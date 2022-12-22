@@ -1,17 +1,75 @@
-import styles from '../../styles/generator/Memorable.module.css'
+import styles from '../../styles/generator/Password.module.css'
 import 'rc-slider/assets/index.css'
 import Slider from 'rc-slider';
-import { useEffect, useState } from 'react';
-import { ComparisonData, len_default, printPassword, joinPassword, generate, len_min, len_max } from '../../libs/generator/memorable'
+import { ChangeEvent, useEffect, useState } from 'react';
+import {
+    memorable_capitalize_checked, memorable_full_words_checked,
+    random_uppercase_checked, random_lowercase_checked, random_numbers_checked, random_symbols_checked, random_avoid_amibugous_checked,
+    printPassword, copyPassword, generate, defaultCharacters, defaultLength,
+    ComparisonData, PasswordLength, PasswordType,
+} from '../../libs/generator/password'
+
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { showToast } from "../../libs/toast";
 import Layout from '../../components/layout';
-import Head from 'next/head';
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { findTool, ToolData } from '../../libs/tools';
+import { ToolPageHeadBuilder } from '../../components/head_builder';
 
-const alert_copy_timeout = 3000;
-const alert_del_timeout = 3000;
-const alert_gen_timeout = 3000;
-const alert_comparison_timeout = 3000;
+const default_type = 'Random'
+
+const alert_copy_timeout = 2000;
+const alert_del_timeout = 2000;
+const alert_gen_timeout = 1000;
+const alert_comparison_timeout = 1000;
+
+function getPasswordLevelStyle(type: PasswordType, password: string[]) {
+    let width = undefined;
+    let backgroundColor = undefined;
+    let len = 0;
+    switch (type) {
+        case 'Random':
+            len = password[0].length;
+            if (len >= 12) {
+                width = '100%';
+                backgroundColor = 'green';
+            } else if (len >= 10) {
+                width = '75%';
+                backgroundColor = 'green';
+            } else if (len >= 8) {
+                width = '50%';
+                backgroundColor = 'orange';
+            } else if (len >= 6) {
+                width = '25%';
+                backgroundColor = 'red';
+            } else {
+                width = '0%';
+            }
+            break;
+        case 'Memorable':
+            len = password.length;
+            if (len >= 6) {
+                width = '100%';
+                backgroundColor = 'green';
+            } else if (len >= 5) {
+                width = '75%';
+                backgroundColor = 'green';
+            } else if (len >= 4) {
+                width = '50%';
+                backgroundColor = 'orange';
+            } else if (len >= 3) {
+                width = '25%';
+                backgroundColor = 'red';
+            } else {
+                width = '0%';
+            }
+            break;
+    }
+
+    return {
+        width: width,
+        backgroundColor: backgroundColor,
+    }
+}
 
 function toggleCopyIcon(element: HTMLElement, timeout: number) {
     // bi-clipboard bi-clipboard-check
@@ -26,11 +84,10 @@ function toggleCopyIcon(element: HTMLElement, timeout: number) {
 }
 
 function ComparisonList({ list, delCallback, clearAll }: { list: Array<ComparisonData>, delCallback: (index: number) => void, clearAll: () => void }) {
-
     function onCopy(e: React.MouseEvent<HTMLElement>, index: number) {
         const iconEle = e.currentTarget.getElementsByTagName('i')[0];
         toggleCopyIcon(iconEle, alert_copy_timeout);
-        navigator.clipboard.writeText(joinPassword(list[index].password));
+        navigator.clipboard.writeText(copyPassword(list[index].type, list[index].password));
         showToast('Copied', 'success', alert_copy_timeout);
     }
 
@@ -77,11 +134,12 @@ function ComparisonList({ list, delCallback, clearAll }: { list: Array<Compariso
                 <>
                     {
                         list.map((record, index) => {
+                            const { width, backgroundColor } = getPasswordLevelStyle(record.type, record.password);
                             const datetime = new Date(record.timestamp).toLocaleString();
                             return (
                                 <div className='mt-2 card position-relative' key={index}>
                                     <div className={`row gx-0 ${styles.comparisonPassword}`}>
-                                        <div className='col text-center text-break' dangerouslySetInnerHTML={{ __html: printPassword(record.password) }}>
+                                        <div className='col text-center text-break' dangerouslySetInnerHTML={{ __html: printPassword(record.type, record.password) }}>
                                         </div>
                                         <div className='col-auto d-none d-md-flex d-flex justify-content-around align-items-center '>
                                             <button type='button' className='btn btn-sm flex-col' data-toggle="tooltip" data-placement="right" title="Copy"
@@ -99,6 +157,9 @@ function ComparisonList({ list, delCallback, clearAll }: { list: Array<Compariso
                                                 <i className="bi bi-trash3 fs-5" ></i>
                                             </button>
                                         </div>
+                                    </div>
+                                    <div className="progress w-100 rounded-bottom rounded-0" style={{ 'height': '0.2rem' }}>
+                                        <div className="progress-bar" role="progressbar" style={{ width: width, 'backgroundColor': backgroundColor }}></div>
                                     </div>
                                     <div className='row d-flex justify-content-around align-items-center d-md-none'>
                                         <button type='button' className='btn col-3 btn-sm'
@@ -125,14 +186,67 @@ function ComparisonList({ list, delCallback, clearAll }: { list: Array<Compariso
 }
 
 function Generator() {
-    const [capitalize, setCapitalize] = useState<boolean>(false);
-    const [fullWords, setFullWords] = useState<boolean>(true);
-    const [passwordLength, setPasswordLength] = useState<number>(len_default);
-    const [password, setPassword] = useState<string[]>([]);
+    const [passwordType, setPasswordType] = useState<PasswordType>(default_type);
+    const [characters, setCharacters] = useState<number>(defaultCharacters(default_type));
+    const [passwordLength, setPasswordLength] = useState<PasswordLength>(defaultLength(default_type));
+
+    const [password, setPassword] = useState<string[]>(['']);
     const [comparisons, setComparisons] = useState<ComparisonData[]>([]);
 
+    function onTypeChange(event: ChangeEvent<HTMLInputElement>) {
+        let type: PasswordType = event.target.checked ? 'Memorable' : 'Random';
+
+        setPasswordType(type);
+        setCharacters(defaultCharacters(type));
+        setPasswordLength(defaultLength(type));
+    }
+
+    function bitOperate(currentValue: number, checked: boolean, checkedValue: number) {
+        if (checked) {
+            return currentValue | checkedValue;
+        } else {
+            return currentValue & (~checkedValue);
+        }
+    }
+
+    function onCheckBoxChange(event: ChangeEvent<HTMLInputElement>) {
+        const name = event.target.name;
+        const checked = event.target.checked;
+
+        let chars = characters;
+        switch (name) {
+            case "uppercase":
+                chars = bitOperate(chars, checked, random_uppercase_checked);
+                break;
+            case "lowercase":
+                chars = bitOperate(chars, checked, random_lowercase_checked);
+                break;
+            case "symbols":
+                chars = bitOperate(chars, checked, random_symbols_checked);
+                break;
+            case "numbers":
+                chars = bitOperate(chars, checked, random_numbers_checked);
+                break;
+            case "avoidAmibugous":
+                chars = bitOperate(chars, checked, random_avoid_amibugous_checked);
+                break;
+            case "capitalize":
+                chars = bitOperate(chars, checked, memorable_capitalize_checked);
+                break;
+            case "fullwords":
+                chars = bitOperate(chars, checked, memorable_full_words_checked);
+                break;
+            default:
+                console.error("Invalid checkbox name: " + name);
+                return;
+        }
+        if (passwordType == 'Memorable' || (chars != 0 && chars != random_avoid_amibugous_checked)) {
+            setCharacters(chars);
+        }
+    }
+
     function copyAction() {
-        navigator.clipboard.writeText(joinPassword(password));
+        navigator.clipboard.writeText(copyPassword(passwordType, password));
         const icons = document.getElementsByClassName('copyIcon');
         if (icons) {
             for (var i = 0; i < icons.length; i++) {
@@ -143,22 +257,44 @@ function Generator() {
     }
 
     function generateAction() {
-        const password = generate(capitalize, fullWords, passwordLength);
+        const password = generate(passwordType, characters, passwordLength.current);
         setPassword(password);
         showToast('Generated', 'info', alert_gen_timeout, 'generatedAlert');
     }
 
+    function setLength(length: number) {
+        setPasswordLength({
+            current: length,
+            min: passwordLength.min,
+            max: passwordLength.max,
+        })
+    }
+
     useEffect(() => {
         // generate password
-        const password = generate(capitalize, fullWords, passwordLength);
-        setPassword(password);
+        const newPassword = generate(passwordType, characters, passwordLength.current);
+        setPassword(newPassword);
 
-    }, [capitalize, fullWords, passwordLength]);
+        // update level indict
+        const el = document.getElementById('passLevelIndict');
+        if (el) {
+            const { width, backgroundColor } = getPasswordLevelStyle(passwordType, newPassword);
+            if (width) {
+                el.style.width = width;
+            }
+            if (backgroundColor) {
+                el.style.backgroundColor = backgroundColor;
+            }
+        }
+
+    }, [passwordType, characters, passwordLength])
 
     function addComparisionAction() {
         if (comparisons.length == 0 || comparisons[0].password != password) {
             const comparisonsTemp = [{
+                type: passwordType,
                 password: password,
+                characters: characters,
                 timestamp: new Date().getTime(),
             }];
             comparisonsTemp.push(...comparisons);
@@ -179,19 +315,22 @@ function Generator() {
     }
 
     return (
-        <section id="generator" className={`${styles.generator}`}>
+        <section id="generator" className={`container-fluid ${styles.generator}`}>
             <div className='container py-4'>
                 <div className='row justify-content-center'>
-                    <div className='col-11 col-lg-8 px-0'>
+                    <div className='col-12 col-lg-8 px-0'>
                         <div className='row justify-content-center text-center text-dark'>
                             <div className='col-12 col-md-10'>
-                                <p className='fw-bold fs-2'>Need a memorable password? Try it.</p>
-                                <p className='fs-4 fw-light fst-italic' >Generate secure, memorable passwords to stay safe online.</p>
+                                <p className='fw-bold fs-2'>Need a random password? Try it.</p>
+                                <p className='fs-4 fw-light fst-italic' >Generate secure, random, memorable passwords to stay safe online.</p>
                             </div>
                         </div>
-                        <div className='bg-white text-dark mt-3 card'>
-                            <div className={`row gx-0 ${styles.passDisplay}`}>
-                                <div className='col text-center text-break' dangerouslySetInnerHTML={{ __html: printPassword(password) }}>
+                        <div className='row fw-bold fs-4 mt-3 px-3 text-dark mb-2'>
+                            Generated Password:
+                        </div>
+                        <div className='bg-white text-dark card'>
+                            <div className={`row gx-0 ${styles.passDisplay} position-relative`}>
+                                <div className='col text-center text-break' dangerouslySetInnerHTML={{ __html: printPassword(passwordType, password) }}>
                                 </div>
                                 <div className='col-auto d-none d-md-flex d-flex justify-content-around align-items-center '>
                                     <button type='button' className='btn btn-sm flex-col' onClick={copyAction} data-toggle="tooltip" data-placement="right" title="Copy">
@@ -205,53 +344,87 @@ function Generator() {
                                     <i className="bagIcon bi bi-save"></i>
                                 </button>
                             </div>
+                            <div className="progress w-100 rounded-bottom rounded-0" style={{ 'height': '0.6rem' }}>
+                                <div className="progress-bar" role="progressbar" id='passLevelIndict' aria-valuemin={0} aria-valuemax={100}></div>
+                            </div>
                         </div>
                         <div className='row mt-4 d-flex justify-content-around align-items-center d-md-none'>
                             <button type='button' className='btn btn-lg  col-10  btn-primary rounded-pill fw-bold' onClick={generateAction}>Generate Password</button>
                             <button type='button' className='btn btn-lg  col-10  btn-danger rounded-pill fw-bold mt-3' onClick={copyAction}> Copy Password</button>
                         </div>
-                        <div className='mt-4 bg-white text-dark card p-4'>
-                            <p className='fs-4 fw-bold'>Customize your password</p>
-                            <div className='w-100 pt-1 bg-light'></div>
-                            <div className='mt-3 px-3'>
-                                <label className='fs-5'>Password Length</label>
-                                <div className='row justify-content-start align-items-center mt-2'>
-                                    <div className='col-4 col-lg-4'>
-                                        <input type="number" className="form-control form-control-lg" step={1} min={len_min} max={len_max} value={passwordLength} onChange={(e) => {
-                                            setPasswordLength(parseInt(e.target.value));
-                                        }} />
-                                    </div>
-                                    <div className='col-7 col-lg-6'>
-                                        <Slider min={len_min} max={len_max} step={1} value={passwordLength}
-                                            railStyle={{ 'backgroundColor': 'light', 'height': '6px' }}
-                                            trackStyle={{ 'backgroundColor': '#dd2222', 'height': '6px' }}
-                                            handleStyle={{
-                                                'backgroundColor': '#dd2222',
-                                                'height': '30px',
-                                                'width': '30px',
-                                                'marginTop': '-12px',
-                                                'marginLeft': '-12px',
-                                                'border': '0',
-                                                'transform': 'none',
-                                                'opacity': '100'
-                                            }}
-                                            onChange={(value) => setPasswordLength(value as number)}
-                                        />
-                                    </div>
+                        <div className='mt-4 bg-white text-dark card p-md-4  p-3'>
+                            <div className='row align-items-center justify-content-end justify-content-md-between mb-2'>
+                                <span className='fs-4 fw-bold col-12 col-md-auto mt-2'>Customize your password</span>
+                                <div className="form-check form-switch col-auto mt-2">
+                                    <input className="form-check-input" type="checkbox" role="switch" id="memorableSwitch"
+                                        checked={passwordType == 'Memorable'} onChange={onTypeChange} />
+                                    <label className="form-check-label fw-bold text-danger" htmlFor="memorableSwitch">Memorable</label>
                                 </div>
                             </div>
-                            <div className={`px-3 mt-3 d-flex ${styles.checkbox}`}>
-                                <div className={`form-check form-control-lg col-6 d-flex align-items-center`}>
-                                    <input className='form-check-input' type="checkbox" checked={capitalize} id="capitalizeCheck" onChange={(e) => {
-                                        setCapitalize(e.target.checked);
-                                    }} />
-                                    <label className="form-check-label" htmlFor="capitalizeCheck">Capitalize</label>
+                            <div className='w-100 pt-1 bg-light'></div>
+                            <div className='row px-3'>
+                                <div className='col-lg-6 col-12 mt-3 gx-0'>
+                                    <label className='fs-5'>Password Length</label>
+                                    <div className='row justify-content-start align-items-center mt-2'>
+                                        <div className='col-4'>
+                                            <input type="number" className="form-control form-control-lg" step={1} min={passwordLength.min} max={passwordLength.max} value={passwordLength.current} onChange={(e) => {
+                                                setLength(parseInt(e.target.value))
+                                            }} />
+                                        </div>
+                                        <div className='col-7'>
+                                            <Slider min={passwordLength.min} max={passwordLength.max} step={1} value={passwordLength.current}
+                                                railStyle={{ 'backgroundColor': 'light', 'height': '6px' }}
+                                                trackStyle={{ 'backgroundColor': '#dd2222', 'height': '6px' }}
+                                                handleStyle={{
+                                                    'backgroundColor': '#dd2222',
+                                                    'height': '30px',
+                                                    'width': '30px',
+                                                    'marginTop': '-12px',
+                                                    'marginLeft': '-12px',
+                                                    'border': '0',
+                                                    'transform': 'none',
+                                                    'opacity': '100'
+                                                }}
+                                                onChange={(value) => {
+                                                    setLength(value as number);
+                                                }}
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className={`form-check form-control-lg  col-6 d-flex align-items-center`}>
-                                    <input className='form-check-input' type="checkbox" checked={fullWords} id="fullwordsCheck" onChange={(e) => {
-                                        setFullWords(e.target.checked);
-                                    }} />
-                                    <label className="form-check-label" htmlFor="fullwordsCheck">Full Words</label>
+                                <div className={`col-lg-6 col-12 mt-3 ${styles.checkbox}`}>
+                                    <div className='row justify-content-start' hidden={passwordType != 'Random'}>
+                                        <div className="form-check form-control-lg col-6 d-flex align-items-center">
+                                            <input className='form-check-input' type="checkbox" checked={(characters & random_uppercase_checked) != 0} id="uppercaseCheck" name='uppercase' onChange={onCheckBoxChange} />
+                                            <label className="form-check-label" htmlFor="uppercaseCheck">Uppercase</label>
+                                        </div>
+                                        <div className="form-check form-control-lg col-6 d-flex align-items-center">
+                                            <input className='form-check-input' type="checkbox" checked={(characters & random_lowercase_checked) != 0} id="lowercaseCheck" name='lowercase' onChange={onCheckBoxChange} />
+                                            <label className="form-check-label" htmlFor="lowercaseCheck">Lowercase</label>
+                                        </div>
+                                        <div className="form-check form-control-lg col-6 d-flex align-items-center">
+                                            <input className='form-check-input' type="checkbox" checked={(characters & random_numbers_checked) != 0} id="numbersCheck" name='numbers' onChange={onCheckBoxChange} />
+                                            <label className="form-check-label" htmlFor="numbersCheck">Numbers</label>
+                                        </div>
+                                        <div className="form-check form-control-lg col-6 d-flex align-items-center">
+                                            <input className='form-check-input' type="checkbox" checked={(characters & random_symbols_checked) != 0} id="symoblsCheck" name='symbols' onChange={onCheckBoxChange} />
+                                            <label className="form-check-label" htmlFor="symoblsCheck">Symobls</label>
+                                        </div>
+                                        <div className="form-check form-control-lg col-auto d-flex align-items-center">
+                                            <input className='form-check-input' type="checkbox" checked={(characters & random_avoid_amibugous_checked) != 0} id="avoidAmibugousCheck" name='avoidAmibugous' onChange={onCheckBoxChange} />
+                                            <label className="form-check-label" htmlFor="avoidAmibugousCheck">Avoid Amibugous</label>
+                                        </div>
+                                    </div>
+                                    <div className='row justify-content-start' hidden={passwordType != 'Memorable'}>
+                                        <div className="form-check form-control-lg col-auto d-flex align-items-center">
+                                            <input className='form-check-input' type="checkbox" checked={(characters & memorable_capitalize_checked) != 0} id="capitalizeCheck" name='capitalize' onChange={onCheckBoxChange} />
+                                            <label className="form-check-label" htmlFor="capitalizeCheck">Capitalize</label>
+                                        </div>
+                                        <div className="form-check form-control-lg col-auto d-flex align-items-center">
+                                            <input className='form-check-input' type="checkbox" checked={(characters & memorable_full_words_checked) != 0} id="fullwordsCheck" name='fullwords' onChange={onCheckBoxChange} />
+                                            <label className="form-check-label" htmlFor="fullwordsCheck">Full Words</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -261,7 +434,7 @@ function Generator() {
                         <div className='row mt-4 justify-content-center'>
                             <button type='button' className='btn btn-lg col-md-7 col-lg-4 col-10  btn-dark rounded-pill fw-bold' onClick={(e) => {
                                 navigator.clipboard.writeText('');
-                                showToast('Cleared clipboard', 'danger', 3000);
+                                showToast('Cleared clipboard', 'danger', 1000);
                             }}>Clear Clipboard</button>
                         </div>
 
@@ -323,15 +496,10 @@ function Question({ data }: { data: QuestionData[] }) {
     )
 }
 
-
-function MemorablePage({ questions }: InferGetStaticPropsType<typeof getStaticProps>) {
+function PasswordPage({ questions, toolData }: InferGetStaticPropsType<typeof getStaticProps>) {
     return (
         <>
-            <Head>
-                <title>Memorable Generator</title>
-                <meta name="description" content="Generate secure, random, memorable passwords to stay safe online." />
-                <meta name='keyword' content='random, memorable, password, generator, w3tools, online' />
-            </Head>
+            <ToolPageHeadBuilder data={toolData} />
             <Layout asideAds={0}>
                 <Generator />
                 <Question data={questions} />
@@ -341,6 +509,8 @@ function MemorablePage({ questions }: InferGetStaticPropsType<typeof getStaticPr
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
+    const toolData: ToolData = findTool('/generator/password');
+
     const questions: QuestionData[] = [
         {
             'title': 'Strong passwords are unique and random.',
@@ -355,12 +525,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
             'body': "Random passwords are hard to guess and harder for computer programs to crack. If there's a discernible pattern, the odds of an attacker using a brute force attack and gaining access to your account goes up exponentially. Random passwords might contain a jumble of unrelated characters, but combining unrelated words also works. That's how the Strong Password Generator creates passwords that are easy to remember but still cryptographically strong.",
         },
     ];
+
     return {
         props: {
             questions,
+            toolData,
         }
     }
 }
 
-
-export default MemorablePage;
+export default PasswordPage;
