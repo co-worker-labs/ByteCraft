@@ -502,6 +502,17 @@ function PasswordPage({ questions, toolData }: InferGetStaticPropsType<typeof ge
             <ToolPageHeadBuilder data={toolData} />
             <Layout asideAds={0}>
                 <Generator />
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6128301546730956"
+                    crossOrigin="anonymous"></script>
+                <ins className="adsbygoogle"
+                    style={{ 'display': 'block' }}
+                    data-ad-client="ca-pub-6128301546730956"
+                    data-ad-slot="2810295936"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    {`(adsbygoogle = window.adsbygoogle || []).push({ });`}
+                </script>
                 <Question data={questions} />
             </Layout>
         </>
