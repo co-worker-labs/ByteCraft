@@ -2,7 +2,7 @@ import Layout from '../../components/layout'
 
 export default function Privacy() {
     return (
-        <Layout footerPosition='none'>
+        <Layout footerPosition='none' title='Privacy'>
             <section className='container pt-3 text-break'>
                 <div className='text-start'>
                     <h1>About Privacy</h1>

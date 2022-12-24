@@ -71,7 +71,7 @@ export default function Header({ position, title }: { position: HeaderPosition, 
               <Image src={logoIcon} alt="Logo" height={28} width={28} className="d-inline-block align-text-top me-2" />
               <span className={`d-none d-md-inline text-dark fw-bold`}>W3tools Online</span>
             </Link>
-            {title && <span className="d-none d-md-inline text-secondary fw-bold ms-2 text-nowrap"> @ {title}</span>}
+            {title && <span className="d-none d-md-inline text-secondary fw-bold ms-2 text-nowrap">@{title}</span>}
           </div>
 
           <div className="col col-md-4 col-lg-3">

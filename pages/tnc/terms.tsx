@@ -2,7 +2,7 @@ import Layout from '../../components/layout'
 
 export default function Terms() {
     return (
-        <Layout footerPosition='none'>
+        <Layout footerPosition='none' title='Terms of Service'>
             <section className='container pt-3'>
                 <div className='text-start'>
                     <h1>Terms of Service</h1>
