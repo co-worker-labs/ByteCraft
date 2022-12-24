@@ -39,7 +39,7 @@ export default function Footer({ position }: { position: FooterPosition }) {
                     </div>
                     <div className="col-12 col-lg-6 ps-lg-4 order-lg-1">
                         <div className="copyright text-center text-sm text-muted text-lg-start">
-                            &copy; {year} w3tools.online All Rights Reserved.
+                            &copy; {year} by w3tools.online. All Rights Reserved.
                         </div>
                     </div>
                 </div>

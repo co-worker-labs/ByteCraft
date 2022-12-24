@@ -1,7 +1,8 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode, useEffect } from "react";
 import Footer, { FooterPosition } from "./footer";
 import Header, { HeaderPosition } from "./header";
 import { Context, createContext, useContext, useState } from "react";
+import styles from './Layout.module.css'
 
 interface LayoutSettings {
     reset: () => void;
@@ -24,9 +25,9 @@ const LayoutContext: Context<LayoutSettings> = createContext<LayoutSettings>({
 });
 
 export default function Layout({
-    children, title, headerPosition, footerPosition, hidden, asideAds,
+    children, title, headerPosition, footerPosition, hidden, asideAds = true, className, style, bodyClassName, bodyStyle
 }: {
-    children: ReactNode, title?: string, headerPosition?: HeaderPosition, footerPosition?: FooterPosition, hidden?: boolean, asideAds?: boolean;
+    children: ReactNode, title?: string, headerPosition?: HeaderPosition, footerPosition?: FooterPosition, hidden?: boolean, asideAds?: boolean, className?: string, style?: CSSProperties, bodyClassName?: string, bodyStyle?: CSSProperties
 }) {
 
     const [isHidden, setIsHidden] = useState<boolean>(hidden || false);
@@ -53,23 +54,41 @@ export default function Layout({
         },
     }
 
+    useEffect(() => {
+        window.addEventListener('scroll', (e) => {
+            const el = document.getElementById('backtopbtn');
+            if (el) {
+                if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                    if (el.hasAttribute('hidden')) {
+                        el.removeAttribute('hidden');
+                    }
+                } else {
+                    if (!el.hasAttribute('hidden')) {
+                        el.setAttribute('hidden', 'true');
+                    }
+                }
+            }
+        })
+    }, []);
+
     return (
         <LayoutContext.Provider value={config}>
-            <div hidden={isHidden}>
+            <div hidden={isHidden} className={` ${footerPos == 'fixed' ? 'pb-5' : ''} ${bodyClassName ? bodyClassName : ''}`} style={bodyStyle} >
                 <Header position={headerPos} title={title} />
-                <main className={`contain-fluid ${footerPos == 'fixed' ? 'pb-5' : ''}`} >
+                <a href="#" className={`btn rounded-circle ${styles.backUpBtn} btn-dark`} id="backtopbtn" hidden ><i className="bi bi-arrow-bar-up fs-4"></i></a>
+                <main className={`${className ? className : ''}`} style={style} >
                     {
                         asideAds ? (
-                            <div className="row gx-0">
-                                <aside className="col-2 d-none d-lg-block py-5">
-                                </aside>
-                                <div className="col-12 col-lg-8">
+                            <div className="row justify-content-center px-0 gx-0">
+                                <div className="col d-none d-lg-block">
+                                </div>
+                                <div className={`col col-lg-7`} >
                                     {children}
                                 </div>
-                                <aside className="col-2 d-none d-lg-block">
-                                </aside>
+                                <div className="col d-none d-lg-block">
+                                </div>
                             </div>
-                        ) : (children)
+                        ) : <>{children}</>
                     }
                 </main>
                 <Footer position={footerPos} />
