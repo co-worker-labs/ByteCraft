@@ -9,10 +9,10 @@ function Introduce() {
   return (
     <div className={`${styles.introduce}`}>
       <div className='container text-center'>
-        <span className={`h1 text-capitalize fw-bolder ${styles.introduceTitle}`}>Search amazing Tools</span>
-        <p className='mt-5 fs-5'>
+        <span className={`h1 text-capitalize fw-bolder ${styles.introduceTitle}`}>Explore amazing Tools</span>
+        {/* <p className='mt-5 fs-5'>
           We offer those to the community for free, but our day job is building and selling useful tools for developers like you.
-        </p>
+        </p> */}
       </div>
     </div>
   )
