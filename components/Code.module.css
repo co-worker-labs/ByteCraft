@@ -1,0 +1,35 @@
+.main {
+  width: 100%;
+  height: fit-content;
+  background-color: #f8f9fa;
+  padding: 1rem 1rem;
+}
+
+.main code {
+  overflow-x: auto;
+}
+
+.comment {
+  color: #467790;
+}
+
+.keyword {
+  color: #006aff;
+}
+
+.operator {
+  color: #9b51e0;
+  font-weight: 500;
+}
+
+.string {
+  color: #27ae60;
+}
+
+.punctuation {
+    color: #9b51e0;
+}
+
+.function {
+    color: #5c51e0;
+}

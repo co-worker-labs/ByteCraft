@@ -7,12 +7,6 @@ export const timeout_default = 3000; // 3s
 export function showToast(message: string, type: ToastType = 'default', timeout: number = timeout_default, tid: string = '') {
     const template = document.getElementById('toastTemplate');
     if (template) {
-        if (tid != '') {
-            const t = document.getElementById(tid);
-            if (t) {
-                return;
-            }
-        }
         const temp = template.cloneNode(true) as HTMLElement;
         if (tid) {
             temp.setAttribute('id', tid);
@@ -33,11 +27,14 @@ export function showToast(message: string, type: ToastType = 'default', timeout:
         temp.classList.add('show');
         const body = temp.getElementsByClassName('toast-body');
         if (body) {
-            body[0].textContent = message;
+            body[0].innerHTML = message;
         }
         temp.addEventListener('hidden.bs.toast', () => {
             temp.remove();
         })
+        if (tid != '') {
+            document.getElementById(tid)?.remove();
+        }
         template.parentElement?.appendChild(temp);
         if (timeout > 0) {
             setTimeout(() => {
