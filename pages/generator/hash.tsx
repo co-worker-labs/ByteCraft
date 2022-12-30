@@ -1,5 +1,5 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { useEffect, useRef, useState } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { ToolPageHeadBuilder } from "../../components/head_builder";
 import Layout from "../../components/layout";
 import { showToast } from "../../libs/toast";
@@ -7,6 +7,7 @@ import { findTool, ToolData } from "../../libs/tools";
 import { fromEvent } from 'file-selector';
 
 const CryptoJS = require("crypto-js");
+const short = require('short-uuid');
 
 function toggleCopyIcon(element: HTMLElement, timeout: number) {
     // bi-clipboard bi-clipboard-check
@@ -52,111 +53,192 @@ interface HashResult {
     sha3_512: string;
 }
 
-function HashResultTable({ data }: { data: HashResult }) {
+function HashResultList({ id, list, calculating }: { id: string, list: HashResult[], calculating: boolean }) {
+    const [types, setTypes] = useState<string[]>(['md5', 'sha1', 'sha3-256', 'sha3-512']);
+
+    function onToggleCheck(event: ChangeEvent<HTMLInputElement>) {
+        const checked = event.target.checked;
+        const value = event.target.value;
+        if (checked) {
+            const t = [...types];
+            t.push(value);
+            setTypes(t);
+        } else {
+            setTypes(types.filter(t => t != value));
+        }
+    }
     return (
-        <div className="table-resposive">
-            <table className="table table-hover table-striped caption-top text-break">
-                <tbody>
-                    <tr>
-                        <th scope="row">Size</th>
-                        <td>
-                            {data.size}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">MD5</th>
-                        <td>
-                            {data.md5}
-                            <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
-                                onClick={(e) => onCopy(e, data.md5)}
-                            >
-                                <i className="bi bi-clipboard fs-5"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row" className="text-nowrap">SHA-1</th>
-                        <td>{data.sha1}
-                            <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
-                                onClick={(e) => onCopy(e, data.sha1)}
-                            >
-                                <i className="bi bi-clipboard fs-5"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row" className="text-nowrap">SHA2-256</th>
-                        <td>{data.sha2_256}
-                            <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
-                                onClick={(e) => onCopy(e, data.sha2_256)}
-                            >
-                                <i className="bi bi-clipboard fs-5"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row" className="text-nowrap">SHA2-384</th>
-                        <td>{data.sha2_384}
-                            <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
-                                onClick={(e) => onCopy(e, data.sha2_384)}
-                            >
-                                <i className="bi bi-clipboard fs-5"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row" className="text-nowrap">SHA2-512</th>
-                        <td>{data.sha2_512}
-                            <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
-                                onClick={(e) => onCopy(e, data.sha2_512)}
-                            >
-                                <i className="bi bi-clipboard fs-5"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row" className="text-nowrap">SHA3-224</th>
-                        <td>{data.sha3_224}
-                            <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
-                                onClick={(e) => onCopy(e, data.sha3_224)}
-                            >
-                                <i className="bi bi-clipboard fs-5"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row" className="text-nowrap">SHA3-256</th>
-                        <td>{data.sha3_256}
-                            <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
-                                onClick={(e) => onCopy(e, data.sha3_256)}
-                            >
-                                <i className="bi bi-clipboard fs-5"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row" className="text-nowrap">SHA3-384</th>
-                        <td>{data.sha3_384}
-                            <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
-                                onClick={(e) => onCopy(e, data.sha3_384)}
-                            >
-                                <i className="bi bi-clipboard fs-5"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row" className="text-nowrap">SHA3-512</th>
-                        <td>{data.sha3_512}
-                            <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
-                                onClick={(e) => onCopy(e, data.sha3_512)}
-                            >
-                                <i className="bi bi-clipboard fs-5"></i>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <>
+            <div className="row my-3 px-3">
+                <div className="form-check form-check-lg col-auto">
+                    <input className="form-check-input" type="checkbox" value="md5" id={"md5Check_" + id} checked={types.includes('md5')} onChange={onToggleCheck} />
+                    <label className="form-check-label" htmlFor={"md5Check_" + id}> MD5</label>
+                </div>
+                <div className="form-check form-check-lg col-auto">
+                    <input className="form-check-input" type="checkbox" value="sha1" id={"sha1Check_" + id} checked={types.includes('sha1')} onChange={onToggleCheck} />
+                    <label className="form-check-label" htmlFor={"sha1Check_" + id}> SHA-1</label>
+                </div>
+                <div className="form-check form-check-lg col-auto">
+                    <input className="form-check-input" type="checkbox" value="sha2-256" id={"sha2-256Check_" + id} checked={types.includes('sha2-256')} onChange={onToggleCheck} />
+                    <label className="form-check-label" htmlFor={"sha2-256Check_" + id}> SHA2-256</label>
+                </div>
+                <div className="form-check form-check-lg col-auto">
+                    <input className="form-check-input" type="checkbox" value="sha2-384" id={"sha2-384Check_" + id} checked={types.includes('sha2-384')} onChange={onToggleCheck} />
+                    <label className="form-check-label" htmlFor={"sha2-384Check_" + id}> SHA2-384</label>
+                </div>
+                <div className="form-check form-check-lg col-auto">
+                    <input className="form-check-input" type="checkbox" value="sha2-512" id={"sha2-512Check_" + id} checked={types.includes('sha2-512')} onChange={onToggleCheck} />
+                    <label className="form-check-label" htmlFor={"sha2-512Check_" + id}> SHA2-512</label>
+                </div>
+                <div className="form-check form-check-lg col-auto">
+                    <input className="form-check-input" type="checkbox" value="sha3-224" id={"sha3-224Check_" + id} checked={types.includes('sha3-224')} onChange={onToggleCheck} />
+                    <label className="form-check-label" htmlFor={"sha3-224Check_" + id}> SHA3-224</label>
+                </div>
+                <div className="form-check form-check-lg col-auto">
+                    <input className="form-check-input" type="checkbox" value="sha3-256" id={"sha3-256Check_" + id} checked={types.includes('sha3-256')} onChange={onToggleCheck} />
+                    <label className="form-check-label" htmlFor={"sha3-256Check_" + id}> SHA3-256</label>
+                </div>
+                <div className="form-check form-check-lg col-auto">
+                    <input className="form-check-input" type="checkbox" value="sha3-384" id={"sha3-384Check_" + id} checked={types.includes('sha3-384')} onChange={onToggleCheck} />
+                    <label className="form-check-label" htmlFor={"sha3-384Check_" + id}> SHA3-384</label>
+                </div>
+                <div className="form-check form-check-lg col-auto">
+                    <input className="form-check-input" type="checkbox" value="sha3-512" id={"sha3-512Check_" + id} checked={types.includes('sha3-512')} onChange={onToggleCheck} />
+                    <label className="form-check-label" htmlFor={"sha3-512Check_" + id}> SHA3-512</label>
+                </div>
+            </div>
+            {
+                calculating && (
+                    <div className="spinner-grow text-primary align-self-center" role="status">
+                        <span className="visually-hidden1 ms-5">Calculating...</span>
+                    </div>
+                )
+            }
+            {
+                list.length == 0 ? <></> : (
+                    <div className="accordion" id={`hashResultList_` + id}>
+                        {
+                            list.map((data, index) => {
+                                return (
+                                    <div className="accordion-item" key={index}>
+                                        <h2 className="accordion-header" id={'heading_' + id + index}>
+                                            <button className={"accordion-button fw-bolder text-break" + (index != 0 ? ' collapsed' : '')} type="button" data-bs-toggle="collapse" data-bs-target={'#collapse_' + id + index} aria-expanded={index == 0 ? "true" : 'false'} aria-controls={'collapse_' + id + index}>
+                                                {data.title}
+                                            </button>
+                                        </h2>
+                                        <div id={'collapse_' + id + index} className={index == 0 ? "accordion-collapse collapse show" : 'accordion-collapse collapse'} aria-labelledby={'heading_' + id + index} data-bs-parent={'#hashResultList_' + id}>
+                                            <div className="accordion-body p-1 pt-2">
+                                                <table className="table table-hover table-striped caption-top text-break">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Size</th>
+                                                            <td>
+                                                                {data.size}
+                                                            </td>
+                                                        </tr>
+                                                        <tr hidden={!types.includes('md5')}>
+                                                            <th scope="row">MD5</th>
+                                                            <td>
+                                                                {data.md5}
+                                                                <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
+                                                                    onClick={(e) => onCopy(e, data.md5)}
+                                                                >
+                                                                    <i className="bi bi-clipboard fs-5"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr hidden={!types.includes('sha1')}>
+                                                            <th scope="row" className="text-nowrap">SHA-1</th>
+                                                            <td>{data.sha1}
+                                                                <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
+                                                                    onClick={(e) => onCopy(e, data.sha1)}
+                                                                >
+                                                                    <i className="bi bi-clipboard fs-5"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr hidden={!types.includes('sha2-256')}>
+                                                            <th scope="row" className="text-nowrap">SHA2-256</th>
+                                                            <td>{data.sha2_256}
+                                                                <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
+                                                                    onClick={(e) => onCopy(e, data.sha2_256)}
+                                                                >
+                                                                    <i className="bi bi-clipboard fs-5"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr hidden={!types.includes('sha2-384')}>
+                                                            <th scope="row" className="text-nowrap">SHA2-384</th>
+                                                            <td>{data.sha2_384}
+                                                                <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
+                                                                    onClick={(e) => onCopy(e, data.sha2_384)}
+                                                                >
+                                                                    <i className="bi bi-clipboard fs-5"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr hidden={!types.includes('sha2-512')}>
+                                                            <th scope="row" className="text-nowrap">SHA2-512</th>
+                                                            <td>{data.sha2_512}
+                                                                <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
+                                                                    onClick={(e) => onCopy(e, data.sha2_512)}
+                                                                >
+                                                                    <i className="bi bi-clipboard fs-5"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr hidden={!types.includes('sha3-224')}>
+                                                            <th scope="row" className="text-nowrap">SHA3-224</th>
+                                                            <td>{data.sha3_224}
+                                                                <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
+                                                                    onClick={(e) => onCopy(e, data.sha3_224)}
+                                                                >
+                                                                    <i className="bi bi-clipboard fs-5"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr hidden={!types.includes('sha3-256')}>
+                                                            <th scope="row" className="text-nowrap">SHA3-256</th>
+                                                            <td>{data.sha3_256}
+                                                                <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
+                                                                    onClick={(e) => onCopy(e, data.sha3_256)}
+                                                                >
+                                                                    <i className="bi bi-clipboard fs-5"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr hidden={!types.includes('sha3-384')}>
+                                                            <th scope="row" className="text-nowrap">SHA3-384</th>
+                                                            <td>{data.sha3_384}
+                                                                <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
+                                                                    onClick={(e) => onCopy(e, data.sha3_384)}
+                                                                >
+                                                                    <i className="bi bi-clipboard fs-5"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr hidden={!types.includes('sha3-512')}>
+                                                            <th scope="row" className="text-nowrap">SHA3-512</th>
+                                                            <td>{data.sha3_512}
+                                                                <button type='button' className='btn btn-sm ms-1' data-toggle="tooltip" data-placement="right" title="Copy"
+                                                                    onClick={(e) => onCopy(e, data.sha3_512)}
+                                                                >
+                                                                    <i className="bi bi-clipboard fs-5"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                )
+            }
+        </>
     )
 }
 
@@ -258,39 +340,7 @@ function FileCalculator() {
                     />
                 </div>
             </div>
-            <div className="mt-3">
-                {
-                    calculating && (
-                        <div className="spinner-grow text-primary align-self-center" role="status">
-                            <span className="visually-hidden1 ms-5">Calculating...</span>
-                        </div>
-                    )
-                }
-                {
-                    hashRes && hashRes.length > 0 ? (
-                        <div className="accordion" id="hashResultList">
-                            {
-                                hashRes.map((data, index) => {
-                                    return (
-                                        <div className="accordion-item" key={index}>
-                                            <h2 className="accordion-header" id={'heading_' + index}>
-                                                <button className={"accordion-button fw-bolder text-break" + (index != 0 ? ' collapsed' : '')} type="button" data-bs-toggle="collapse" data-bs-target={'#collapse' + index} aria-expanded={index == 0 ? "true" : 'false'} aria-controls={'collapse' + index}>
-                                                    {data.title}
-                                                </button>
-                                            </h2>
-                                            <div id={'collapse' + index} className={index == 0 ? "accordion-collapse collapse show" : 'accordion-collapse collapse'} aria-labelledby={'heading_' + index} data-bs-parent="#hashResultList">
-                                                <div className="accordion-body p-1 pt-2">
-                                                    <HashResultTable key={index} data={data} />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )
-                                })
-                            }
-                        </div>
-                    ) : <></>
-                }
-            </div>
+            <HashResultList id={short.generate()} list={hashRes} calculating={calculating} />
         </section>
     )
 }
@@ -299,7 +349,7 @@ function FileCalculator() {
 function TextCalculator() {
     const [content, setContent] = useState<string>('');
     const [isTrim, setIsTrim] = useState<boolean>(true);
-    const [hashRes, setHashRes] = useState<HashResult>();
+    const [hashRes, setHashRes] = useState<HashResult[]>([]);
 
     function countLength(content: string): string {
         const length = Buffer.byteLength(content, 'utf-8');
@@ -309,21 +359,23 @@ function TextCalculator() {
     useEffect(() => {
         const raw = isTrim ? content.trim() : content;
         if (raw) {
-            setHashRes({
-                title: 'Text Hash Result',
-                size: countLength(raw),
-                md5: CryptoJS.MD5(raw).toString(),
-                sha1: CryptoJS.SHA1(raw).toString(),
-                sha2_256: CryptoJS.SHA256(raw).toString(),
-                sha2_384: CryptoJS.SHA384(raw).toString(),
-                sha2_512: CryptoJS.SHA512(raw).toString(),
-                sha3_224: CryptoJS.SHA3(raw, { outputLength: 224 }).toString(),
-                sha3_256: CryptoJS.SHA3(raw, { outputLength: 256 }).toString(),
-                sha3_384: CryptoJS.SHA3(raw, { outputLength: 384 }).toString(),
-                sha3_512: CryptoJS.SHA3(raw, { outputLength: 512 }).toString(),
-            })
+            setHashRes([
+                {
+                    title: 'Hashing Result',
+                    size: countLength(raw),
+                    md5: CryptoJS.MD5(raw).toString(),
+                    sha1: CryptoJS.SHA1(raw).toString(),
+                    sha2_256: CryptoJS.SHA256(raw).toString(),
+                    sha2_384: CryptoJS.SHA384(raw).toString(),
+                    sha2_512: CryptoJS.SHA512(raw).toString(),
+                    sha3_224: CryptoJS.SHA3(raw, { outputLength: 224 }).toString(),
+                    sha3_256: CryptoJS.SHA3(raw, { outputLength: 256 }).toString(),
+                    sha3_384: CryptoJS.SHA3(raw, { outputLength: 384 }).toString(),
+                    sha3_512: CryptoJS.SHA3(raw, { outputLength: 512 }).toString(),
+                }
+            ])
         } else {
-            setHashRes(undefined);
+            setHashRes([]);
         }
     }, [content, isTrim])
     return (
@@ -342,8 +394,9 @@ function TextCalculator() {
                     }}></textarea>
                     <button type='button' className='btn btn-sm flex-col position-absolute end-0 top-0' data-toggle="tooltip" data-placement="right" title="Copy"
                         onClick={(e) => {
-                            if (content) {
-                                onCopy(e, content);
+                            const raw = isTrim ? content.trim() : content; 
+                            if (raw) {
+                                onCopy(e, raw);
                             }
                         }}
                     >
@@ -358,11 +411,7 @@ function TextCalculator() {
                     Trim white space
                 </label>
             </div>
-            <div className="mt-3">
-                {
-                    hashRes && <HashResultTable data={hashRes} />
-                }
-            </div>
+            <HashResultList id={short.generate()} list={hashRes} calculating={false} />
         </section>
     )
 }
