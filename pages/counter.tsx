@@ -161,24 +161,24 @@ function TextCounterPage({ toolData }: InferGetStaticPropsType<typeof getStaticP
                                     <input type="number" className="form-control" readOnly id="characterCount" value={countCharacters(content)} />
                                 </div>
                                 <div className="mt-3 col-12 col-lg-6">
-                                    <label htmlFor="characterCount" className="form-label">Number of word characters</label>
-                                    <input type="number" className="form-control" readOnly id="characterCount" value={countWordCharacters(content)} />
+                                    <label htmlFor="wordCharacterCount" className="form-label">Number of word characters</label>
+                                    <input type="number" className="form-control" readOnly id="wordCharacterCount" value={countWordCharacters(content)} />
                                 </div>
                                 <div className="mt-3 col-12 col-lg-6">
-                                    <label htmlFor="wordCount" className="form-label">Number of alphabet</label>
-                                    <input type="number" className="form-control" readOnly id="wordCount" value={countAlphabets(content)} />
+                                    <label htmlFor="alphabetCount" className="form-label">Number of alphabet</label>
+                                    <input type="number" className="form-control" readOnly id="alphabetCount" value={countAlphabets(content)} />
                                 </div>
                                 <div className="mt-3 col-12 col-lg-6">
                                     <label htmlFor="lineCount" className="form-label">Number of lines</label>
                                     <input type="number" className="form-control" readOnly id="lineCount" value={countLines(content, false)} />
                                 </div>
                                 <div className="mt-3 col-12 col-lg-6">
-                                    <label htmlFor="lineCount" className="form-label">Number of content lines<span className="text-primary"> (without empty)</span></label>
-                                    <input type="number" className="form-control" readOnly id="lineCount" value={countLines(content, true)} />
+                                    <label htmlFor="contentLineCount" className="form-label">Number of content lines<span className="text-primary"> (without empty)</span></label>
+                                    <input type="number" className="form-control" readOnly id="contentLineCount" value={countLines(content, true)} />
                                 </div>
                                 <div className="mt-3 col-12 col-lg-6">
-                                    <label htmlFor="alphabetCount" className="form-label">Number of words</label>
-                                    <input type="number" className="form-control" readOnly id="alphabetCount" value={countWords(content)} />
+                                    <label htmlFor="wordsCount" className="form-label">Number of words</label>
+                                    <input type="number" className="form-control" readOnly id="wordsCount" value={countWords(content)} />
                                 </div>
                             </div>
                         </div>
