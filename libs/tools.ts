@@ -64,11 +64,11 @@ export const toolsList: ToolData[] = [
         keywords: ['base64 encode', 'base64', 'base64 decode', 'basic authentication', 'basicauth'],
     },
     {
-        path: '/text/analytic',
-        title: 'Text Analytics',
-        description: 'Analyze text content instantly - Count word, character and so on.',
-        searchKeys: ['text', 'analytic', 'analyze', 'counter', 'character', 'insight'],
-        keywords: ['word counter', 'counter', 'text analytic', 'analyze text', 'character counter'],
+        path: '/counter',
+        title: 'Text Counter',
+        description: 'Count text instantly - Count words, characters and lines',
+        searchKeys: ['text counter', 'words', 'characters', 'insight'],
+        keywords: ['words counter', 'counter', 'text counter', 'character counter'],
     },
     {
         path: '/hashing',
