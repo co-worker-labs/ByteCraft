@@ -1,16 +1,17 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { useState } from "react";
-import { ToolPageHeadBuilder } from "../../components/head_builder";
-import Layout from "../../components/layout";
-import { showToast } from "../../libs/toast";
-import { findTool, ToolData } from "../../libs/tools";
-import styles from '../../styles/text/Analytic.module.css'
+import { ToolPageHeadBuilder } from "../components/head_builder";
+import Layout from "../components/layout";
+import { showToast } from "../libs/toast";
+import { findTool, ToolData } from "../libs/tools";
+import styles from '../styles/Counter.module.css'
+import { formatBytes } from "../utils/storage";
 
-function TextAnalyticPage({ toolData }: InferGetStaticPropsType<typeof getStaticProps>) {
+function TextCounterPage({ toolData }: InferGetStaticPropsType<typeof getStaticProps>) {
     const [content, setContent] = useState<string>('');
     const [delimiter, setDelimiter] = useState<string>('');
     const [delimiterCustomFlag, setDelimiterCustomFlag] = useState<boolean>(false);
-    const [kilobytesConversion, setKilobytesConversion] = useState<number>(1024);
+    const [kilobytesConversion, setKilobytesConversion] = useState<1000 | 1024>(1024);
 
     function getLines(content: string): string[] {
         return content.split(/\r|\r\n|\n/);
@@ -76,40 +77,34 @@ function TextAnalyticPage({ toolData }: InferGetStaticPropsType<typeof getStatic
         return sum;
     }
 
-    function formatBytes(bytes: number, decimals = 4) {
-        if (!+bytes) return '0 Bytes'
-
-        const k = kilobytesConversion
-        const dm = decimals < 0 ? 0 : decimals
-        const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
-
-        const i = Math.floor(Math.log(bytes) / Math.log(k))
-
-        return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
-    }
-
     function countLength(content: string): string {
         const length = Buffer.byteLength(content, 'utf-8');
-        return formatBytes(length);
+        return formatBytes(length, kilobytesConversion);
     }
 
     return (
         <>
             <ToolPageHeadBuilder data={toolData} />
             <Layout title={toolData.title}>
-                <div className="container py-lg-5 py-3">
-                    <div>
-                        <span className="h4">Analyze Text Content Instantly</span>
+                <div className="container py-3">
+                    <div className="alert alert-danger py-4 my-lg-4" role="alert">
+                        * Your content are not transferred to the server. All calculations are performed directly in the browser
                     </div>
-                    <div className="mt-3">
-                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Input Content</label>
-                        <textarea className="form-control" id="exampleFormControlTextarea1" rows={10} value={content} onChange={(e) => {
+                    <textarea className="form-control mt-4" rows={8} value={content}
+                        placeholder='Paste or type the text here'
+                        onChange={(e) => {
                             setContent(e.target.value);
-                        }}></textarea>
+                        }}>
+                    </textarea>
+                    <div className="mt-3 text-center">
+                        <button type="button" disabled={!content} className={`btn btn-sm btn-danger col-8 col-lg-3 rounded-pill text-uppercase`} onClick={() => {
+                            setContent('')
+                            showToast('Cleared', 'danger', 2000);
+                        }}>{'Clear'}</button>
                     </div>
-                    <section id="settings" className="card mt-4">
+                    <section id="settings" className="card mt-3">
                         <div className="card-body">
-                            <span className='fs-4 fw-bold mt-2'>Customize your analyze</span>
+                            <span className='fs-4 fw-bold mt-2'>Customize your counter</span>
                             <div className='w-100 pt-1 mt-1 bg-light'></div>
                             <div className="mt-3 d-flex align-items-center justify-content-start">
                                 <label className="col-auto fw-bolder">Delimiter: </label>
@@ -136,9 +131,9 @@ function TextAnalyticPage({ toolData }: InferGetStaticPropsType<typeof getStatic
                                 </div>
                             </div>
                             <div className="mt-3 d-flex align-items-center justify-content-start">
-                                <label className="col-auto fw-bolder">Kilobytes Conversion: </label>
+                                <label className="col-auto fw-bolder">Storage Unit: </label>
                                 <select className="form-select col ms-2" value={kilobytesConversion} onChange={(e) => {
-                                    setKilobytesConversion(parseInt(e.target.value));
+                                    setKilobytesConversion(parseInt(e.target.value) as (1000 | 1024));
                                 }}>
                                     <option value="1024">1 K = 1024 Bytes</option>
                                     <option value="1000">1 K = 1000 Bytes</option>
@@ -146,11 +141,11 @@ function TextAnalyticPage({ toolData }: InferGetStaticPropsType<typeof getStatic
                             </div>
                         </div>
                     </section>
-                    <section id="statistic" className="card mt-4">
+                    <section id="statistic" className="card mt-3">
                         <div className="card-body">
                             <div className='row align-items-center justify-content-between mb-2'>
-                                <span className='fs-4 fw-bold col-auto mt-2'>Statistic</span>
-                                <button type="button" disabled={countCharacters(content) == 0} className="col-auto btn btn-sm me-3 btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#colorInsightModal">
+                                <span className='fs-4 fw-bold col-auto mt-2'>Counter Insight</span>
+                                <button type="button" disabled={countCharacters(content) == 0} className="col-auto btn btn-sm me-3 btn-outline-success mt-2" data-bs-toggle="modal" data-bs-target="#colorInsightModal">
                                     <i className="bi bi-kanban"></i>
                                 </button>
                             </div>
@@ -166,24 +161,24 @@ function TextAnalyticPage({ toolData }: InferGetStaticPropsType<typeof getStatic
                                     <input type="number" className="form-control" readOnly id="characterCount" value={countCharacters(content)} />
                                 </div>
                                 <div className="mt-3 col-12 col-lg-6">
-                                    <label htmlFor="characterCount" className="form-label">Number of word characters</label>
-                                    <input type="number" className="form-control" readOnly id="characterCount" value={countWordCharacters(content)} />
+                                    <label htmlFor="wordCharacterCount" className="form-label">Number of word characters</label>
+                                    <input type="number" className="form-control" readOnly id="wordCharacterCount" value={countWordCharacters(content)} />
                                 </div>
                                 <div className="mt-3 col-12 col-lg-6">
-                                    <label htmlFor="wordCount" className="form-label">Number of alphabet</label>
-                                    <input type="number" className="form-control" readOnly id="wordCount" value={countAlphabets(content)} />
+                                    <label htmlFor="alphabetCount" className="form-label">Number of alphabet</label>
+                                    <input type="number" className="form-control" readOnly id="alphabetCount" value={countAlphabets(content)} />
                                 </div>
                                 <div className="mt-3 col-12 col-lg-6">
                                     <label htmlFor="lineCount" className="form-label">Number of lines</label>
                                     <input type="number" className="form-control" readOnly id="lineCount" value={countLines(content, false)} />
                                 </div>
                                 <div className="mt-3 col-12 col-lg-6">
-                                    <label htmlFor="lineCount" className="form-label">Number of lines<span className="text-primary"> (without empty)</span></label>
-                                    <input type="number" className="form-control" readOnly id="lineCount" value={countLines(content, true)} />
+                                    <label htmlFor="contentLineCount" className="form-label">Number of content lines<span className="text-primary"> (without empty)</span></label>
+                                    <input type="number" className="form-control" readOnly id="contentLineCount" value={countLines(content, true)} />
                                 </div>
                                 <div className="mt-3 col-12 col-lg-6">
-                                    <label htmlFor="alphabetCount" className="form-label">Number of words</label>
-                                    <input type="number" className="form-control" readOnly id="alphabetCount" value={countWords(content)} />
+                                    <label htmlFor="wordsCount" className="form-label">Number of words</label>
+                                    <input type="number" className="form-control" readOnly id="wordsCount" value={countWords(content)} />
                                 </div>
                             </div>
                         </div>
@@ -193,10 +188,10 @@ function TextAnalyticPage({ toolData }: InferGetStaticPropsType<typeof getStatic
                             <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
                                 <div className="modal-content">
                                     <div className="modal-header">
-                                        <h1 className="modal-title fs-5" id="colorInsightModalLabel">Color Insight</h1>
+                                        <h1 className="modal-title fs-5 text-success" id="colorInsightModalLabel">Colorful Insight</h1>
                                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <div className={`modal-body ${styles.colorInsight}`}>
+                                    <div className={`modal-body text-break ${styles.colorInsight}`}>
                                         {
                                             getLines(content).map((line, index) => {
                                                 const words = getWords(line);
@@ -223,7 +218,7 @@ function TextAnalyticPage({ toolData }: InferGetStaticPropsType<typeof getStatic
                                                                                         + (index + 1)
                                                                                         + '</span>, Word: <span class="text-danger fw-bold">'
                                                                                         + (wi + 1) + '</span><br/>'
-                                                                                        + '<span class="' + styles.colorInsightWord + '">' + word + '</span>',
+                                                                                        + '<span class="text-break ' + styles.colorInsightWord + '">' + word + '</span>',
                                                                                         'info', 2000, 'wordInsightInfo');
                                                                                 }}>{word}</span>
                                                                             )
@@ -248,7 +243,7 @@ function TextAnalyticPage({ toolData }: InferGetStaticPropsType<typeof getStatic
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    const toolData: ToolData = findTool('/text/analytic');
+    const toolData: ToolData = findTool('/counter');
     return {
         props: {
             toolData,
@@ -256,4 +251,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
     }
 }
 
-export default TextAnalyticPage 
+export default TextCounterPage 
