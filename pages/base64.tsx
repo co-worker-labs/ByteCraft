@@ -117,7 +117,7 @@ function Conversion() {
                     </div>
                 </div>
                 <div className="position-relative">
-                    <textarea className="form-control form-control-lg" id="rawContentTextarea" placeholder="Paster or type the plain text here" rows={5} value={rawContent} onChange={(e) => {
+                    <textarea className="form-control" id="rawContentTextarea" placeholder="Paster or type the plain text here" rows={5} value={rawContent} onChange={(e) => {
                         updateRawContent(e.target.value)
                     }}></textarea>
                     <CopyButton getContent={() => rawContent} className='position-absolute end-0 top-0' />
@@ -167,7 +167,7 @@ function Conversion() {
                     }}>Clear</a>
                 </label>
                 <div className="position-relative">
-                    <textarea className="form-control form-control-lg" id="encodedContentTextarea" placeholder="Encoded Output" rows={5} value={encodedContent} onChange={(e) => {
+                    <textarea className="form-control" id="encodedContentTextarea" placeholder="Encoded Output" rows={5} value={encodedContent} onChange={(e) => {
                         updateEncodedContent(e.target.value)
                     }}></textarea>
                     <CopyButton getContent={() => encodedContent} className='position-absolute end-0 top-0' />
