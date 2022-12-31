@@ -219,7 +219,7 @@ function Conversion() {
 
             <div className="mt-3">
                 <label htmlFor="passphraseTextarea" className="form-label">
-                    <span className="fw-bold text-secondary">Secret Passphrase</span>
+                    <span className="fw-bold text-primary">Secret Passphrase</span>
                     <a href="#" className={`text-danger ms-2 ${styles.clearLink}`} onClick={() => {
                         setPassphrase('')
                         showToast('Cleared', 'danger', 2000)
