@@ -84,4 +84,11 @@ export const toolsList: ToolData[] = [
         searchKeys: ['file checksum', 'checksum', 'file', 'keccak', 'md5', 'sha-1', 'sha1', 'sha224', 'sha2-224', 'sha3-224', 'sha256', 'sha2-256', 'sha3-256', 'sha384', 'sha2-384', 'sha3-384', 'sha512', 'sha2-512', 'sha3-512', 'ripemd-160'],
         keywords: ['file checksum', 'checksum', 'keccak', 'md5', 'sha-1', 'sha1', 'sha224', 'sha2-224', 'sha3-224', 'sha256', 'sha2-256', 'sha3-256', 'sha384', 'sha2-384', 'sha3-384', 'sha512', 'sha2-512', 'sha3-512', 'ripemd-160', 'hashing', 'hashing algorithms', 'message-digest algorithm', 'cryptographic protocol', 'digital signatures'],
     },
+    {
+        path: '/cipher',
+        title: 'Text Encrypt/Decrypt',
+        description: 'AES, DES, Triple DES, Rabbit, RC4, RC4Drop',
+        searchKeys: ['text encrypt', 'text decrypt', 'aes', 'des', 'triple des', 'rabbit', 'rc4', 'rc4drop', 'cipher'],
+        keywords: ['cipher', 'text encrypt', 'encrypt', 'text decrypt', 'decrypt', 'aes', 'des', 'triple des', 'rabbit', 'rc4', 'rc4drop'],
+    },
 ]
