@@ -33,7 +33,7 @@ export function listMatchedTools(filter: string): ToolData[] {
 
 export const toolsList: ToolData[] = [
     {
-        path: '/generator/password',
+        path: '/password',
         title: 'Password Generator',
         description: 'Generate secure, random, memorable passwords to stay safe online.',
         searchKeys: ['password', 'generator', 'random', 'memorable', 'pin'],
