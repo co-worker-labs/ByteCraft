@@ -68,7 +68,7 @@ export default function Home({ tools }: InferGetStaticPropsType<typeof getStatic
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name='keyword' content={keywords.join(',')} />
       </Head>
-      <Layout headerPosition='none' asideAds={false}>
+      <Layout headerPosition='none' aside={false}>
         <Introduce />
         <ToolCollection data={tools} />
       </Layout>
