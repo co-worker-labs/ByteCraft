@@ -372,7 +372,7 @@ function CipherPage({ toolData, relatedTools }: InferGetStaticPropsType<typeof g
             <Layout title={toolData.title} relatedTools={relatedTools}>
                 <div className="container pt-4">
                     <div className="alert alert-danger py-3" role="alert">
-                        * Your inputed content are not transferred to the server. All calculations are performed directly in the browser
+                        * Your content are not transferred to the server. All calculations are performed directly in the browser
                     </div>
                     <Conversion />
                     <Description />

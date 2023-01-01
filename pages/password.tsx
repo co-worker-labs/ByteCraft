@@ -325,7 +325,7 @@ function Generator() {
     return (
         <section id="generator" >
             <div className="alert alert-danger py-3" role="alert">
-                * The generated passwords are not transferred or saved to the server. All generations are performed directly in the browser
+                * All generated passwords are not transferred or saved to the server. All generations are performed directly in the browser
             </div>
             <div className='row justify-content-center text-center text-dark'>
                 <div className='col-11'>

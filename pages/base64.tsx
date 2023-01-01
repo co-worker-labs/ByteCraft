@@ -243,7 +243,7 @@ function Base64Page({ toolData, relatedTools }: InferGetStaticPropsType<typeof g
             <Layout title={toolData.title} relatedTools={relatedTools}>
                 <div className="container pt-3">
                     <div className="alert alert-danger py-3 my-lg-4" role="alert">
-                        * Your text is not transferred to the server. All calculations are performed directly in the browser
+                        * Your content are not transferred to the server. All calculations are performed directly in the browser
                     </div>
                     <Conversion />
                     <Description />
