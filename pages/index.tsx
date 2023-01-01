@@ -58,7 +58,11 @@ function ToolCollection({ data }: { data: ToolData[] }) {
 export default function Home({ tools }: InferGetStaticPropsType<typeof getStaticProps>) {
   const keywords: string[] = [];
   tools.forEach((value: ToolData) => {
-    keywords.push(...value.keywords);
+    value.keywords.forEach((kw) => {
+      if (!keywords.includes(kw)) {
+        keywords.push(kw);
+      }
+    })
   });
   return (
     <>
