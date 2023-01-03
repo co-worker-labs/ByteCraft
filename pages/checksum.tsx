@@ -163,20 +163,21 @@ function FileCalculator() {
                 const reader = new FileReader()
                 reader.onload = (e) => {
                     var bin = e.target?.result;
+                    console.log('file loaded');
                     resArr.push({
                         title: f.name,
                         size: '(' + f.type + ') - ' + formatBytes(f.size, storageUnit),
-                        md5: CryptoJS.MD5(bin).toString(),
-                        sha1: CryptoJS.SHA1(bin).toString(),
-                        sha224: CryptoJS.SHA224(bin).toString(),
-                        sha256: CryptoJS.SHA256(bin).toString(),
-                        sha384: CryptoJS.SHA384(bin).toString(),
-                        sha512: CryptoJS.SHA512(bin).toString(),
-                        sha3_224: CryptoJS.SHA3(bin, { outputLength: 224 }).toString(),
-                        sha3_256: CryptoJS.SHA3(bin, { outputLength: 256 }).toString(),
-                        sha3_384: CryptoJS.SHA3(bin, { outputLength: 384 }).toString(),
-                        sha3_512: CryptoJS.SHA3(bin, { outputLength: 512 }).toString(),
-                        RIPEMD160: CryptoJS.RIPEMD160(bin).toString(),
+                        md5: types.includes('md5') ? CryptoJS.MD5(bin).toString() : '',
+                        sha1: types.includes('sha1') ? CryptoJS.SHA1(bin).toString() : '',
+                        sha224: types.includes('sha224') ? CryptoJS.SHA224(bin).toString() : '',
+                        sha256: types.includes('sha256') ? CryptoJS.SHA256(bin).toString() : '',
+                        sha384: types.includes('sha384') ? CryptoJS.SHA384(bin).toString() : '',
+                        sha512: types.includes('sha512') ? CryptoJS.SHA512(bin).toString() : '',
+                        sha3_224: types.includes('sha3-224') ? CryptoJS.SHA3(bin, { outputLength: 224 }).toString() : '',
+                        sha3_256: types.includes('sha3-256') ? CryptoJS.SHA3(bin, { outputLength: 256 }).toString() : '',
+                        sha3_384: types.includes('sha3-384') ? CryptoJS.SHA3(bin, { outputLength: 384 }).toString() : '',
+                        sha3_512: types.includes('sha3-512') ? CryptoJS.SHA3(bin, { outputLength: 512 }).toString() : '',
+                        RIPEMD160: types.includes('RIPEMD160') ? CryptoJS.RIPEMD160(bin).toString() : '',
                     });
                     if (resArr.length == length) {
                         setCalculating(false);
@@ -186,7 +187,7 @@ function FileCalculator() {
                 reader.readAsBinaryString(f);
             })
         }
-    }, [selectedFiles, storageUnit])
+    }, [selectedFiles, storageUnit, types])
 
     useEffect(() => {
         const input = document.getElementById('fileSelector');

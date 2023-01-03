@@ -84,15 +84,15 @@ export default function Layout({
                                         {
                                             recent.length > 0 && (
                                                 <div className={`${styles.asideContent} mt-3 px-2 mb-2`}>
-                                                    <div className="h5 fw-bolder text-danger text-uppercase">Recent</div>
+                                                    <div className="h5 fw-bolder text-danger text-uppercase">Recent &gt;&gt;</div>
                                                     <hr />
                                                     {
                                                         recent.map((data, index) => {
                                                             return (
                                                                 <div className="card mt-3 text-center" key={index}>
                                                                     <div className="card-body py-2" >
-                                                                        <Link href={data.path}>
-                                                                            <h5 className="card-title text-secondary fw-bold">{data.title}</h5>
+                                                                        <Link href={data.path} className={`${styles.asideItem}`}>
+                                                                            <h5 className="card-title fw-bold">{data.title}</h5>
                                                                             <p className="card-text text-truncate text-wrap text-muted" style={{ 'maxHeight': '2.8rem' }}>{data.description}</p>
                                                                         </Link>
                                                                     </div>
@@ -106,15 +106,15 @@ export default function Layout({
                                         {
                                             relatedTools && relatedTools.length > 0 && (
                                                 <div className={`${styles.asideContent} mt-3 px-2`}>
-                                                    <div className="h5 fw-bolder text-success text-uppercase">Relate</div>
+                                                    <div className="h5 fw-bolder text-primary text-uppercase">Relate &gt;&gt;</div>
                                                     <hr />
                                                     {
                                                         relatedTools.map((data, index) => {
                                                             return (
                                                                 <div className="card mt-3 text-center" key={index}>
                                                                     <div className="card-body py-2" >
-                                                                        <Link href={data.path}>
-                                                                            <h5 className="card-title text-secondary fw-bold">{data.title}</h5>
+                                                                        <Link href={data.path} className={`${styles.asideItem}`}>
+                                                                            <h5 className='card-title fw-bold'>{data.title}</h5>
                                                                             <p className="card-text text-truncate text-wrap text-muted" style={{ 'maxHeight': '2.8rem' }}>{data.description}</p>
                                                                         </Link>
                                                                     </div>

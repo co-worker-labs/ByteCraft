@@ -16,3 +16,12 @@
 .asideContent {
   max-width: 17rem;
 }
+
+.asideItem {
+  color: rgb(90, 138, 138);
+  font-size: 0.9rem;
+}
+
+.asideItem:hover {
+  color: rgb(243, 11, 177);
+}

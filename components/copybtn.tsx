@@ -14,7 +14,7 @@ function toggleCopyIcon(element: HTMLElement, timeout: number) {
 
 export function CopyButton({ getContent, className, toast = true, timeout = 3000 }: { getContent: () => string, className?: string, toast?: boolean, timeout?: number }) {
     return (
-        <button type='button' hidden={!getContent()} className={`btn btn-ms${className ? ' ' + className : ''}`} data-toggle="tooltip" data-placement="right" title="Copy"
+        <button type='button' hidden={!getContent()} className={`btn btn-sm${className ? ' ' + className : ''}`} data-toggle="tooltip" data-placement="right" title="Copy"
             onClick={(e) => {
                 const content = getContent();
                 const iconEle = e.currentTarget.getElementsByTagName('i')[0];
