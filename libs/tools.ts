@@ -91,7 +91,7 @@ export const toolsList: ToolData[] = [
         description: 'Count text instantly - Count words, characters and lines',
         searchKeys: ['text counter', 'words', 'characters', 'insight'],
         keywords: ['words counter', 'counter', 'text counter', 'character counter'],
-        related: [],
+        related: ['/hashing', '/storageunit'],
     },
     {
         path: '/hashing',
@@ -116,5 +116,19 @@ export const toolsList: ToolData[] = [
         searchKeys: ['text encrypt', 'text decrypt', 'aes', 'des', 'triple des', 'rabbit', 'rc4', 'rc4drop', 'cipher'],
         keywords: ['cipher', 'text encrypt', 'encrypt', 'text decrypt', 'decrypt', 'aes', 'des', 'triple des', 'rabbit', 'rc4', 'rc4drop'],
         related: ['/hashing', '/base64', '/password'],
+    },
+    {
+        path: '/storageunit',
+        title: 'Storage Unit Conversion',
+        description: 'Make conversions between a great number of various data units like byte, kilobyte, megabyte, terabyte, petabyte, and many other',
+        searchKeys: ['conversion', 'storage unit',
+            'byte', 'bit', 'kilobyte', 'megabyte', 'gigabyte', 'terabyte', 'petabyte',
+            'kb', 'mb', 'gb', 'tb', 'pb', 'kib', 'mib', 'gib', 'tib', 'pib',
+            'kilobit', 'megabit', 'gibabit', 'terabit', 'petabit'],
+        keywords: ['conversion', 'storage unit',
+            'byte', 'bit', 'kilobyte', 'megabyte', 'gigabyte', 'terabyte', 'petabyte',
+            'kb', 'mb', 'gb', 'tb', 'pb', 'kib', 'mib', 'gib', 'tib', 'pib',
+            'kilobit', 'megabit', 'gibabit', 'terabit', 'petabit'],
+        related: ['/counter', '/checksum'],
     },
 ]
