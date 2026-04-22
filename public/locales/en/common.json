@@ -12,9 +12,7 @@
     "privacy": "Privacy",
     "copyright": "© {{year}} by w3tools.online. All Rights Reserved."
   },
-  "layout": {
-    "recent": "Recent >>"
-  },
+  "layout": {},
   "common": {
     "comingSoon": "Coming Soon",
     "goto": "Goto",

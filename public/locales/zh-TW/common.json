@@ -12,9 +12,7 @@
     "privacy": "隱私權政策",
     "copyright": "© {{year}} by w3tools.online. 保留所有權利。"
   },
-  "layout": {
-    "recent": "近期 >>"
-  },
+  "layout": {},
   "common": {
     "comingSoon": "即將推出",
     "goto": "前往",
