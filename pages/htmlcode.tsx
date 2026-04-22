@@ -16,11 +16,11 @@ import {
   PronunciationCharacterData,
 } from "../libs/htmlcode";
 import { findTool, ToolData } from "../libs/tools";
-import styles from "../styles/HtmlCode.module.css";
+import { NeonTabs } from "../components/ui/tabs";
 
 function printEntityName(code: string | undefined) {
   if (code && code.startsWith("&")) {
-    return <code>{code}</code>;
+    return <code className="text-accent-cyan">{code}</code>;
   } else {
     return code;
   }
@@ -35,39 +35,57 @@ function PronunciationPrinter({
 }) {
   const { t } = useTranslation("htmlcode");
   return (
-    <div className={`${styles.character}`} style={{ top: "3rem" }}>
-      <p>{desc}</p>
-      <table className="table text-center table-striped table-hover table-bordered">
-        <thead className="table-dark sticky-top">
-          <tr className="text-uppercase">
-            <th scope="col">{t("tableHeaders.character")}</th>
-            <th scope="col">{t("tableHeaders.entityName")}</th>
-            <th scope="col">{t("tableHeaders.entityCode")}</th>
-            <th scope="col">{t("tableHeaders.ipa")}</th>
-            <th scope="col">{t("tableHeaders.ipaEntityName")}</th>
-            <th scope="col">{t("tableHeaders.ipaEntityCode")}</th>
-            <th scope="col">{t("tableHeaders.example")}</th>
+    <div>
+      <p className="text-fg-secondary" style={{ textIndent: "3rem", lineHeight: "2rem" }}>
+        {desc}
+      </p>
+      <table className="w-full text-center border-collapse">
+        <thead className="bg-bg-elevated sticky top-12">
+          <tr className="text-xs uppercase text-fg-muted">
+            <th className="py-2 px-3 border border-border-default">
+              {t("tableHeaders.character")}
+            </th>
+            <th className="py-2 px-3 border border-border-default">
+              {t("tableHeaders.entityName")}
+            </th>
+            <th className="py-2 px-3 border border-border-default">
+              {t("tableHeaders.entityCode")}
+            </th>
+            <th className="py-2 px-3 border border-border-default">{t("tableHeaders.ipa")}</th>
+            <th className="py-2 px-3 border border-border-default">
+              {t("tableHeaders.ipaEntityName")}
+            </th>
+            <th className="py-2 px-3 border border-border-default">
+              {t("tableHeaders.ipaEntityCode")}
+            </th>
+            <th className="py-2 px-3 border border-border-default">{t("tableHeaders.example")}</th>
           </tr>
         </thead>
-        <tbody className="table-group-divider">
+        <tbody>
           {list.map((data, index) => {
             return (
-              <tr key={index}>
-                <td>
+              <tr key={index} className="even:bg-bg-elevated/50 hover:bg-bg-elevated/80">
+                <td className="py-2 px-3 border border-border-default text-sm">
                   <span dangerouslySetInnerHTML={{ __html: data.code }}></span>
                 </td>
-                <td>{printEntityName(data.entityName)}</td>
-                <td>{data.code}</td>
-                <td>
+                <td className="py-2 px-3 border border-border-default text-sm">
+                  {printEntityName(data.entityName)}
+                </td>
+                <td className="py-2 px-3 border border-border-default text-sm">{data.code}</td>
+                <td className="py-2 px-3 border border-border-default text-sm">
                   {data.ipaCode ? (
                     <span dangerouslySetInnerHTML={{ __html: data.ipaCode }}></span>
                   ) : (
                     <></>
                   )}
                 </td>
-                <td>{printEntityName(data.ipaEntityName)}</td>
-                <td>{data.ipaCode || ""}</td>
-                <td>
+                <td className="py-2 px-3 border border-border-default text-sm">
+                  {printEntityName(data.ipaEntityName)}
+                </td>
+                <td className="py-2 px-3 border border-border-default text-sm">
+                  {data.ipaCode || ""}
+                </td>
+                <td className="py-2 px-3 border border-border-default text-sm">
                   <span dangerouslySetInnerHTML={{ __html: data.example }}></span>
                 </td>
               </tr>
@@ -82,29 +100,47 @@ function PronunciationPrinter({
 function CharacterPrinter({ desc, list }: { list: CharacterData[]; desc: string }) {
   const { t } = useTranslation("htmlcode");
   return (
-    <div className={`${styles.character}`}>
-      <p>{desc}</p>
-      <table className="table text-center table-striped table-hover table-bordered">
-        <thead className="table-dark sticky-top" style={{ top: "3rem" }}>
-          <tr className="text-uppercase">
-            <th scope="col">{t("tableHeaders.character")}</th>
-            <th scope="col">{t("tableHeaders.entityName")}</th>
-            <th scope="col">{t("tableHeaders.entityNumber")}</th>
-            <th scope="col">{t("tableHeaders.hexCode")}</th>
-            <th scope="col">{t("tableHeaders.description")}</th>
+    <div>
+      <p className="text-fg-secondary" style={{ textIndent: "3rem", lineHeight: "2rem" }}>
+        {desc}
+      </p>
+      <table className="w-full text-center border-collapse">
+        <thead className="bg-bg-elevated sticky top-12">
+          <tr className="text-xs uppercase text-fg-muted">
+            <th className="py-2 px-3 border border-border-default">
+              {t("tableHeaders.character")}
+            </th>
+            <th className="py-2 px-3 border border-border-default">
+              {t("tableHeaders.entityName")}
+            </th>
+            <th className="py-2 px-3 border border-border-default">
+              {t("tableHeaders.entityNumber")}
+            </th>
+            <th className="py-2 px-3 border border-border-default">{t("tableHeaders.hexCode")}</th>
+            <th className="py-2 px-3 border border-border-default">
+              {t("tableHeaders.description")}
+            </th>
           </tr>
         </thead>
-        <tbody className="table-group-divider">
+        <tbody>
           {list.map((data, index) => {
             return (
-              <tr key={index}>
-                <td>
+              <tr key={index} className="even:bg-bg-elevated/50 hover:bg-bg-elevated/80">
+                <td className="py-2 px-3 border border-border-default text-sm">
                   <span dangerouslySetInnerHTML={{ __html: "&#" + data.entityNumber + ";" }}></span>
                 </td>
-                <td>{printEntityName(data.entityName)}</td>
-                <td>{"&#" + data.entityNumber + ";"}</td>
-                <td>{"&#x" + data.entityNumber.toString(16).toUpperCase() + ";"}</td>
-                <td>{data.description}</td>
+                <td className="py-2 px-3 border border-border-default text-sm">
+                  {printEntityName(data.entityName)}
+                </td>
+                <td className="py-2 px-3 border border-border-default text-sm font-mono">
+                  {"&#" + data.entityNumber + ";"}
+                </td>
+                <td className="py-2 px-3 border border-border-default text-sm font-mono">
+                  {"&#x" + data.entityNumber.toString(16).toUpperCase() + ";"}
+                </td>
+                <td className="py-2 px-3 border border-border-default text-sm text-fg-secondary">
+                  {data.description}
+                </td>
               </tr>
             );
           })}
@@ -123,14 +159,14 @@ function PrintLetters({ list }: { list: CharacterData[] }) {
 
   return (
     <>
-      <div className="card my-2">
-        <div className="row card-body">
+      <div className="my-2 bg-bg-surface border border-border-default rounded-xl p-3">
+        <div className="flex flex-wrap">
           {letters.map((code) => {
             const chr = String.fromCharCode(code);
             return (
               <a
                 key={"letters-goto-" + chr}
-                className="btn btn-light col-auto m-1"
+                className="px-3 py-1 m-1 rounded-lg text-fg-primary hover:bg-bg-elevated hover:text-accent-cyan transition-colors"
                 href={"#letters-" + chr}
               >
                 {chr}
@@ -139,26 +175,46 @@ function PrintLetters({ list }: { list: CharacterData[] }) {
           })}
         </div>
       </div>
-      <table className="table text-center table-striped table-hover table-bordered">
-        <thead className="table-dark sticky-top" style={{ top: "3rem" }}>
-          <tr className="text-uppercase">
-            <th scope="col">{t("tableHeaders.character")}</th>
-            <th scope="col">{t("tableHeaders.entityName")}</th>
-            <th scope="col">{t("tableHeaders.entityNumber")}</th>
-            <th scope="col">{t("tableHeaders.hexCode")}</th>
-            <th scope="col">{t("tableHeaders.description")}</th>
+      <table className="w-full text-center border-collapse">
+        <thead className="bg-bg-elevated sticky top-12">
+          <tr className="text-xs uppercase text-fg-muted">
+            <th className="py-2 px-3 border border-border-default">
+              {t("tableHeaders.character")}
+            </th>
+            <th className="py-2 px-3 border border-border-default">
+              {t("tableHeaders.entityName")}
+            </th>
+            <th className="py-2 px-3 border border-border-default">
+              {t("tableHeaders.entityNumber")}
+            </th>
+            <th className="py-2 px-3 border border-border-default">{t("tableHeaders.hexCode")}</th>
+            <th className="py-2 px-3 border border-border-default">
+              {t("tableHeaders.description")}
+            </th>
           </tr>
         </thead>
-        <tbody className="table-group-divider">
+        <tbody>
           {list.map((data, index) => {
             const chr = String.fromCharCode(data.entityNumber);
             return (
-              <tr key={index} id={chr >= "A" && chr <= "Z" ? "letters-" + chr : undefined}>
-                <td>{chr}</td>
-                <td>{printEntityName(data.entityName)}</td>
-                <td>{"&#" + data.entityNumber + ";"}</td>
-                <td>{"&#x" + data.entityNumber.toString(16).toUpperCase() + ";"}</td>
-                <td>{data.description}</td>
+              <tr
+                key={index}
+                id={chr >= "A" && chr <= "Z" ? "letters-" + chr : undefined}
+                className="even:bg-bg-elevated/50 hover:bg-bg-elevated/80"
+              >
+                <td className="py-2 px-3 border border-border-default text-sm">{chr}</td>
+                <td className="py-2 px-3 border border-border-default text-sm">
+                  {printEntityName(data.entityName)}
+                </td>
+                <td className="py-2 px-3 border border-border-default text-sm font-mono">
+                  {"&#" + data.entityNumber + ";"}
+                </td>
+                <td className="py-2 px-3 border border-border-default text-sm font-mono">
+                  {"&#x" + data.entityNumber.toString(16).toUpperCase() + ";"}
+                </td>
+                <td className="py-2 px-3 border border-border-default text-sm text-fg-secondary">
+                  {data.description}
+                </td>
               </tr>
             );
           })}
@@ -171,11 +227,15 @@ function PrintLetters({ list }: { list: CharacterData[] }) {
 function Description() {
   const { t } = useTranslation("htmlcode");
   return (
-    <section id="description" className={`mt-3 text-break ${styles.description}`}>
-      <p>{t("description.p1")}</p>
-      <p>{t("description.p2")}</p>
-      <div className="row justify-content-start">
-        <pre className="border col-auto rounded py-2 px-5 ms-md-4">
+    <section id="description" className="mt-3 text-break">
+      <p className="text-fg-secondary" style={{ textIndent: "3rem", lineHeight: "2rem" }}>
+        {t("description.p1")}
+      </p>
+      <p className="text-fg-secondary" style={{ textIndent: "3rem", lineHeight: "2rem" }}>
+        {t("description.p2")}
+      </p>
+      <div className="flex justify-start">
+        <pre className="border border-border-default col-auto rounded-xl py-2 px-5 ms-md-4 bg-bg-elevated text-fg-secondary font-mono text-sm">
           &lt;meta charset=&quot;utf-8&quot; &gt;
         </pre>
       </div>
@@ -199,200 +259,61 @@ function HtmlCodePage({
     <>
       <ToolPageHeadBuilder toolPath="/htmlcode" />
       <Layout title={toolData.title}>
-        <div className="container py-4">
+        <div className="container mx-auto px-4 py-4">
           <Description />
           <section>
-            <ul className="nav nav-tabs" id="myTab" role="tablist">
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link active fw-bold"
-                  id="letters-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#letters-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="letters-tab-pane"
-                  aria-selected="true"
-                >
-                  {t("tabs.letters")}
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link fw-bold"
-                  id="Punctuation-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#Punctuation-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="Punctuation-tab-pane"
-                  aria-selected="false"
-                >
-                  {t("tabs.punctuation")}
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link fw-bold"
-                  id="currencies-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#currencies-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="currencies-tab-pane"
-                  aria-selected="false"
-                >
-                  {t("tabs.currencies")}
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link fw-bold"
-                  id="mathematical-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#mathematical-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="mathematical-tab-pane"
-                  aria-selected="false"
-                >
-                  {t("tabs.mathematical")}
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link fw-bold"
-                  id="pronunciations-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#pronunciations-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="pronunciations-tab-pane"
-                  aria-selected="false"
-                >
-                  {t("tabs.pronunciations")}
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link fw-bold"
-                  id="diacritics-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#diacritics-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="diacritics-tab-pane"
-                  aria-selected="false"
-                >
-                  {t("tabs.diacritics")}
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link fw-bold"
-                  id="ascii-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#ascii-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="ascii-tab-pane"
-                  aria-selected="false"
-                >
-                  {t("tabs.ascii")}
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link fw-bold"
-                  id="icons-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#icons-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="icons-tab-pane"
-                  aria-selected="false"
-                >
-                  {t("tabs.icons")}
-                </button>
-              </li>
-            </ul>
-            <div className="tab-content mt-2" id="myTabContent">
-              <div
-                className="tab-pane fade show active"
-                id="letters-tab-pane"
-                role="tabpanel"
-                aria-labelledby="letters-tab"
-                tabIndex={0}
-              >
-                <PrintLetters list={letters} />
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Punctuation-tab-pane"
-                role="tabpanel"
-                aria-labelledby="Punctuation-tab"
-                tabIndex={1}
-              >
-                <CharacterPrinter desc={t("tabDescriptions.punctuation")} list={punctuations} />
-              </div>
-              <div
-                className="tab-pane fade"
-                id="currencies-tab-pane"
-                role="tabpanel"
-                aria-labelledby="currencies-tab"
-                tabIndex={2}
-              >
-                <CharacterPrinter desc={t("tabDescriptions.currencies")} list={currencies} />
-              </div>
-              <div
-                className="tab-pane fade"
-                id="mathematical-tab-pane"
-                role="tabpanel"
-                aria-labelledby="mathematical-tab"
-                tabIndex={3}
-              >
-                <CharacterPrinter desc={t("tabDescriptions.mathematical")} list={mathematical} />
-              </div>
-              <div
-                className="tab-pane fade"
-                id="pronunciations-tab-pane"
-                role="tabpanel"
-                aria-labelledby="pronunciations-tab"
-                tabIndex={4}
-              >
-                <PronunciationPrinter
-                  desc={t("tabDescriptions.pronunciations")}
-                  list={pronunciations}
-                />
-              </div>
-              <div
-                className="tab-pane fade"
-                id="diacritics-tab-pane"
-                role="tabpanel"
-                aria-labelledby="diacritics-tab"
-                tabIndex={5}
-              >
-                <CharacterPrinter desc={t("tabDescriptions.diacritics")} list={diacritics} />
-              </div>
-              <div
-                className="tab-pane fade"
-                id="ascii-tab-pane"
-                role="tabpanel"
-                aria-labelledby="ascii-tab"
-                tabIndex={6}
-              >
-                <CharacterPrinter desc={t("tabDescriptions.ascii")} list={ascii} />
-              </div>
-              <div
-                className="tab-pane fade"
-                id="icons-tab-pane"
-                role="tabpanel"
-                aria-labelledby="icons-tab"
-                tabIndex={7}
-              >
-                <CharacterPrinter desc={t("tabDescriptions.icons")} list={icons} />
-              </div>
-            </div>
+            <NeonTabs
+              tabs={[
+                {
+                  label: <span className="font-bold">{t("tabs.letters")}</span>,
+                  content: <PrintLetters list={letters} />,
+                },
+                {
+                  label: <span className="font-bold">{t("tabs.punctuation")}</span>,
+                  content: (
+                    <CharacterPrinter desc={t("tabDescriptions.punctuation")} list={punctuations} />
+                  ),
+                },
+                {
+                  label: <span className="font-bold">{t("tabs.currencies")}</span>,
+                  content: (
+                    <CharacterPrinter desc={t("tabDescriptions.currencies")} list={currencies} />
+                  ),
+                },
+                {
+                  label: <span className="font-bold">{t("tabs.mathematical")}</span>,
+                  content: (
+                    <CharacterPrinter
+                      desc={t("tabDescriptions.mathematical")}
+                      list={mathematical}
+                    />
+                  ),
+                },
+                {
+                  label: <span className="font-bold">{t("tabs.pronunciations")}</span>,
+                  content: (
+                    <PronunciationPrinter
+                      desc={t("tabDescriptions.pronunciations")}
+                      list={pronunciations}
+                    />
+                  ),
+                },
+                {
+                  label: <span className="font-bold">{t("tabs.diacritics")}</span>,
+                  content: (
+                    <CharacterPrinter desc={t("tabDescriptions.diacritics")} list={diacritics} />
+                  ),
+                },
+                {
+                  label: <span className="font-bold">{t("tabs.ascii")}</span>,
+                  content: <CharacterPrinter desc={t("tabDescriptions.ascii")} list={ascii} />,
+                },
+                {
+                  label: <span className="font-bold">{t("tabs.icons")}</span>,
+                  content: <CharacterPrinter desc={t("tabDescriptions.icons")} list={icons} />,
+                },
+              ]}
+            />
           </section>
         </div>
       </Layout>

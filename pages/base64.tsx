@@ -1,14 +1,19 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Image from "next/image";
 import { useState } from "react";
-import { CopyButton } from "../components/copybtn";
+import { CopyButton } from "../components/ui/copy-btn";
 import { ToolPageHeadBuilder } from "../components/head_builder";
 import Layout from "../components/layout";
 import { showToast } from "../libs/toast";
 import codingTableImg from "../public/base64/decimal-to-base64-table.png";
-import styles from "../styles/Base64.module.css";
 import { useTranslation } from "next-i18next/pages";
 import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
+import { StyledTextarea } from "../components/ui/input";
+import { StyledInput } from "../components/ui/input";
+import { StyledSelect } from "../components/ui/input";
+import { StyledCheckbox } from "../components/ui/input";
+import { Button } from "../components/ui/button";
+import { ChevronsDown, ChevronsUp, X } from "lucide-react";
 
 function Conversion() {
   const { t } = useTranslation(["common", "base64"]);
@@ -80,34 +85,17 @@ function Conversion() {
     return !raw && !encoded;
   }
 
-  function toggleCopyIcon(element: HTMLElement, timeout: number) {
-    element.classList.remove("bi-clipboard");
-    element.classList.add("bi-clipboard-check");
-    element.classList.add("text-success");
-    setTimeout(() => {
-      element.classList.remove("bi-clipboard-check");
-      element.classList.remove("text-success");
-      element.classList.add("bi-clipboard");
-    }, timeout);
-  }
-
-  function onCopy(e: React.MouseEvent<HTMLElement>, content: string) {
-    const iconEle = e.currentTarget.getElementsByTagName("i")[0];
-    toggleCopyIcon(iconEle, 2000);
-    navigator.clipboard.writeText(content);
-    showToast(t("common:common.copied"), "success", 2000);
-  }
-
   return (
     <section id="conversion">
       <div>
-        <div className="row justify-content-between">
-          <label htmlFor="rawContentTextarea" className="form-label col-auto">
-            <span className="fw-bold text-primary">{t("base64:plainText")}</span>
+        <div className="flex flex-wrap justify-between items-center">
+          <label htmlFor="rawContentTextarea" className="col-auto">
+            <span className="font-bold text-accent-cyan">{t("base64:plainText")}</span>
             <a
               href="#"
-              className={`text-danger ms-2 ${styles.clearLink}`}
-              onClick={() => {
+              className="text-danger text-xs ms-2"
+              onClick={(e) => {
+                e.preventDefault();
                 updateRawContent("");
                 showToast(t("common:common.cleared"), "danger", 2000);
               }}
@@ -115,25 +103,17 @@ function Conversion() {
               {t("common:common.clear")}
             </a>
           </label>
-          <div className="form-check col-auto">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              aria-label="Removes the leading and trailing white space and line terminator characters from a string."
-              id="isTrimCheck"
-              checked={isTrimRaw}
-              onChange={(e) => {
-                setIsTrimRaw(e.target.checked);
-              }}
-            />
-            <label className="form-check-label" htmlFor="isTrimCheck">
-              {t("common:common.trimWhiteSpace")}
-            </label>
-          </div>
+          <StyledCheckbox
+            label={t("common:common.trimWhiteSpace")}
+            id="isTrimCheck"
+            checked={isTrimRaw}
+            onChange={(e) => {
+              setIsTrimRaw(e.target.checked);
+            }}
+          />
         </div>
-        <div className="position-relative">
-          <textarea
-            className="form-control"
+        <div className="relative">
+          <StyledTextarea
             id="rawContentTextarea"
             placeholder={t("base64:plainTextPlaceholder")}
             rows={5}
@@ -141,52 +121,48 @@ function Conversion() {
             onChange={(e) => {
               updateRawContent(e.target.value);
             }}
-          ></textarea>
-          <CopyButton getContent={() => rawContent} className="position-absolute end-0 top-0" />
+          />
+          <CopyButton getContent={() => rawContent} className="absolute end-0 top-0" />
         </div>
       </div>
       <div className="mt-2">
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value=""
-            id="basicAuthFlag"
-            checked={basicAuthEnabled}
-            onChange={(e) => setBasicAuthEnabled(e.target.checked)}
-          />
-          <label className="form-check-label" htmlFor="basicAuthFlag">
-            {t("base64:basicAuthentication")}
-          </label>
-        </div>
-        <div className="input-group mt-2" hidden={!basicAuthEnabled}>
-          <input
-            type="text"
-            className="form-control"
-            placeholder={t("base64:username")}
-            aria-label={t("base64:username")}
-            value={username}
-            onChange={(e) => {
-              updateRawContent(buildBasicAuth(e.target.value, password));
-            }}
-          />
-          <span className="input-group-text">:</span>
-          <input
-            type="text"
-            className="form-control"
-            placeholder={t("base64:password")}
-            aria-label={t("base64:password")}
-            value={password}
-            onChange={(e) => {
-              updateRawContent(buildBasicAuth(username, e.target.value));
-            }}
-          />
-        </div>
+        <StyledCheckbox
+          label={t("base64:basicAuthentication")}
+          id="basicAuthFlag"
+          checked={basicAuthEnabled}
+          onChange={(e) => setBasicAuthEnabled(e.target.checked)}
+        />
+        {basicAuthEnabled && (
+          <div className="flex gap-0 mt-2">
+            <StyledInput
+              type="text"
+              placeholder={t("base64:username")}
+              aria-label={t("base64:username")}
+              value={username}
+              onChange={(e) => {
+                updateRawContent(buildBasicAuth(e.target.value, password));
+              }}
+              className="rounded-r-none"
+            />
+            <span className="flex items-center px-2 bg-bg-elevated border-y border-border-default text-fg-muted">
+              :
+            </span>
+            <StyledInput
+              type="text"
+              placeholder={t("base64:password")}
+              aria-label={t("base64:password")}
+              value={password}
+              onChange={(e) => {
+                updateRawContent(buildBasicAuth(username, e.target.value));
+              }}
+              className="rounded-l-none"
+            />
+          </div>
+        )}
       </div>
-      <div className="row justify-content-start mb-3">
-        <div className="col-auto mt-3 pe-0">
-          <select
-            className="form-select form-select-sm"
+      <div className="flex flex-wrap justify-start mb-3">
+        <div className="mt-3 pe-0 w-auto">
+          <StyledSelect
             aria-label="Plain Content Charset"
             value={rawCharset}
             onChange={(e) => {
@@ -195,47 +171,51 @@ function Conversion() {
           >
             <option value="ascii">ASCII</option>
             <option value="utf-8">UTF-8</option>
-          </select>
+          </StyledSelect>
         </div>
-        <button
-          type="button"
-          className="btn btn-sm btn-primary col-auto ms-1 mt-3"
+        <Button
+          variant="primary"
+          size="sm"
           disabled={isDisabledEncode()}
           onClick={doEncode}
+          className="ms-1 mt-3"
         >
           {t("base64:encode")}
-          <i className="bi bi-chevron-double-down ms-1"></i>
-        </button>
-        <button
-          type="button"
-          className="btn btn-sm btn-success col-auto ms-1 mt-3"
+          <ChevronsDown size={16} className="ms-1" />
+        </Button>
+        <Button
+          variant="primary"
+          size="sm"
           disabled={isDiabledDecode()}
           onClick={doDecode}
+          className="ms-1 mt-3"
         >
           {t("base64:decode")}
-          <i className="bi bi-chevron-double-up ms-1"></i>
-        </button>
-        <button
-          type="button"
-          className="btn btn-sm btn-danger col-auto ms-1 mt-3"
+          <ChevronsUp size={16} className="ms-1" />
+        </Button>
+        <Button
+          variant="danger"
+          size="sm"
           disabled={isDiabledClear()}
           onClick={() => {
             updateRawContent("");
             updateEncodedContent("");
             showToast(t("common:common.allCleared"), "danger", 2000);
           }}
+          className="ms-1 mt-3"
         >
           {t("common:common.clearAll")}
-          <i className="bi bi-x ms-1"></i>
-        </button>
+          <X size={16} className="ms-1" />
+        </Button>
       </div>
       <div className="mb-3">
-        <label htmlFor="encodedContentTextarea" className="form-label">
-          <span className="fw-bold text-success">{t("base64:encodedText")}</span>
+        <label htmlFor="encodedContentTextarea">
+          <span className="font-bold text-accent-cyan">{t("base64:encodedText")}</span>
           <a
             href="#"
-            className={`text-danger ms-2 ${styles.clearLink}`}
-            onClick={() => {
+            className="text-danger text-xs ms-2"
+            onClick={(e) => {
+              e.preventDefault();
               setEncodedContent("");
               showToast(t("common:common.cleared"), "danger", 2000);
             }}
@@ -243,9 +223,8 @@ function Conversion() {
             {t("common:common.clear")}
           </a>
         </label>
-        <div className="position-relative">
-          <textarea
-            className="form-control"
+        <div className="relative">
+          <StyledTextarea
             id="encodedContentTextarea"
             placeholder={t("base64:encodedOutput")}
             rows={5}
@@ -253,8 +232,8 @@ function Conversion() {
             onChange={(e) => {
               updateEncodedContent(e.target.value);
             }}
-          ></textarea>
-          <CopyButton getContent={() => encodedContent} className="position-absolute end-0 top-0" />
+          />
+          <CopyButton getContent={() => encodedContent} className="absolute end-0 top-0" />
         </div>
       </div>
     </section>
@@ -264,17 +243,17 @@ function Conversion() {
 function Description() {
   const { t } = useTranslation("base64");
   return (
-    <section id="description" className="mt-4 sentence">
-      <div>
-        <h3>{t("descriptions.whatIsTitle")}</h3>
-        <p>{t("descriptions.whatIsP1")}</p>
-        <p>{t("descriptions.whatIsP2")}</p>
-        <p>{t("descriptions.whatIsP3")}</p>
+    <section id="description" className="mt-4">
+      <div className="mb-4">
+        <h3 className="font-semibold text-fg-primary">{t("descriptions.whatIsTitle")}</h3>
+        <p className="text-fg-secondary mt-1">{t("descriptions.whatIsP1")}</p>
+        <p className="text-fg-secondary mt-1">{t("descriptions.whatIsP2")}</p>
+        <p className="text-fg-secondary mt-1">{t("descriptions.whatIsP3")}</p>
       </div>
-      <div>
-        <h3>{t("descriptions.howTitle")}</h3>
-        <p>{t("descriptions.howP1")}</p>
-        <ol>
+      <div className="mb-4">
+        <h3 className="font-semibold text-fg-primary">{t("descriptions.howTitle")}</h3>
+        <p className="text-fg-secondary mt-1">{t("descriptions.howP1")}</p>
+        <ol className="list-decimal list-inside text-fg-secondary mt-1">
           <li>{t("descriptions.howStep1")}</li>
           <li>{t("descriptions.howStep2")}</li>
           <li>{t("descriptions.howStep3")}</li>
@@ -282,20 +261,20 @@ function Description() {
         </ol>
         <Image src={codingTableImg} alt="" />
       </div>
-      <div>
-        <h3>{t("descriptions.whyTitle")}</h3>
-        <p>{t("descriptions.whyP1")}</p>
-        <p>{t("descriptions.whyP2")}</p>
+      <div className="mb-4">
+        <h3 className="font-semibold text-fg-primary">{t("descriptions.whyTitle")}</h3>
+        <p className="text-fg-secondary mt-1">{t("descriptions.whyP1")}</p>
+        <p className="text-fg-secondary mt-1">{t("descriptions.whyP2")}</p>
       </div>
-      <div>
-        <h3>{t("descriptions.useCasesTitle")}</h3>
-        <p>{t("descriptions.useCasesP1")}</p>
-        <p>{t("descriptions.useCasesP2")}</p>
+      <div className="mb-4">
+        <h3 className="font-semibold text-fg-primary">{t("descriptions.useCasesTitle")}</h3>
+        <p className="text-fg-secondary mt-1">{t("descriptions.useCasesP1")}</p>
+        <p className="text-fg-secondary mt-1">{t("descriptions.useCasesP2")}</p>
       </div>
-      <div>
-        <h3>{t("descriptions.limitationsTitle")}</h3>
-        <p>{t("descriptions.limitationsP1")}</p>
-        <p>{t("descriptions.limitationsP2")}</p>
+      <div className="mb-4">
+        <h3 className="font-semibold text-fg-primary">{t("descriptions.limitationsTitle")}</h3>
+        <p className="text-fg-secondary mt-1">{t("descriptions.limitationsP1")}</p>
+        <p className="text-fg-secondary mt-1">{t("descriptions.limitationsP2")}</p>
       </div>
     </section>
   );
@@ -309,8 +288,8 @@ function Base64Page() {
     <>
       <ToolPageHeadBuilder toolPath="/base64" />
       <Layout title={title}>
-        <div className="container pt-3">
-          <div className="alert alert-danger py-3 my-lg-4" role="alert">
+        <div className="container mx-auto px-4 pt-3">
+          <div className="bg-accent-cyan-dim/20 border border-accent-cyan/30 rounded-xl p-3 text-fg-secondary text-sm my-4">
             {t("common:alert.notTransferred")}
           </div>
           <Conversion />

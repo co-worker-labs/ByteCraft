@@ -4,10 +4,14 @@ import { ToolPageHeadBuilder } from "../components/head_builder";
 import Layout from "../components/layout";
 import { showToast } from "../libs/toast";
 import { formatBytes } from "../utils/storage";
-import { CopyButton } from "../components/copybtn";
-import styles from "../styles/Hashing.module.css";
+import { CopyButton } from "../components/ui/copy-btn";
 import { useTranslation } from "next-i18next/pages";
 import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
+import { NeonTabs } from "../components/ui/tabs";
+import { StyledTextarea } from "../components/ui/input";
+import { StyledSelect } from "../components/ui/input";
+import { StyledCheckbox } from "../components/ui/input";
+import { Button } from "../components/ui/button";
 
 const CryptoJS = require("crypto-js");
 
@@ -37,150 +41,172 @@ function Display({ data }: { data: Result }) {
 
   return (
     <>
-      <div className="position-relative mt-2">
-        <textarea
-          className="form-control"
+      <div className="relative mt-2">
+        <StyledTextarea
           placeholder={t("hashing:pasteToCompare")}
           rows={3}
           value={testChecksum}
           onChange={(e) => {
             setTestChecksum(e.target.value);
           }}
-        ></textarea>
+        />
         <button
           type="button"
-          className="btn btn-sm text-danger flex-col position-absolute end-0 top-0 fw-bold"
-          data-toggle="tooltip"
-          data-placement="right"
+          className="btn btn-sm text-danger flex-col absolute end-0 top-0 font-bold"
           title={t("common:common.clear")}
-          onClick={(e) => {
+          onClick={() => {
             setTestChecksum("");
           }}
         >
           {t("common:common.clear")}
         </button>
       </div>
-      <table className="table table-hover table-striped caption-top text-break mt-4">
+      <table className="w-full mt-4">
         <tbody>
-          <tr>
-            <th scope="row">{t("common:common.size")}</th>
-            <td>{data.size}</td>
+          <tr className="border-b border-border-default even:bg-bg-elevated/50">
+            <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
+              {t("common:common.size")}
+            </th>
+            <td className="py-2 text-sm">{data.size}</td>
           </tr>
           {data.md5 && (
-            <tr>
-              <th scope="row">MD5</th>
-              <td className={data.md5 == testChecksum ? "text-success fw-bold" : ""}>
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.md5 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
+                MD5
+              </th>
+              <td className="py-2 font-mono text-sm break-all">
                 {data.md5}
                 <CopyButton getContent={() => data.md5} className="ms-1" />
               </td>
             </tr>
           )}
           {data.sha1 && (
-            <tr>
-              <th scope="row" className="text-nowrap">
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha1 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
                 SHA-1
               </th>
-              <td className={data.sha1 == testChecksum ? "text-success fw-bold" : ""}>
+              <td className="py-2 font-mono text-sm break-all">
                 {data.sha1}
                 <CopyButton getContent={() => data.sha1} className="ms-1" />
               </td>
             </tr>
           )}
           {data.sha224 && (
-            <tr>
-              <th scope="row" className="text-nowrap">
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha224 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
                 SHA-224
               </th>
-              <td className={data.sha224 == testChecksum ? "text-success fw-bold" : ""}>
+              <td className="py-2 font-mono text-sm break-all">
                 {data.sha224}
                 <CopyButton getContent={() => data.sha224} className="ms-1" />
               </td>
             </tr>
           )}
           {data.sha256 && (
-            <tr>
-              <th scope="row" className="text-nowrap">
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha256 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
                 SHA-256
               </th>
-              <td className={data.sha256 == testChecksum ? "text-success fw-bold" : ""}>
+              <td className="py-2 font-mono text-sm break-all">
                 {data.sha256}
                 <CopyButton getContent={() => data.sha256} className="ms-1" />
               </td>
             </tr>
           )}
           {data.sha384 && (
-            <tr>
-              <th scope="row" className="text-nowrap">
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha384 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
                 SHA-384
               </th>
-              <td className={data.sha384 == testChecksum ? "text-success fw-bold" : ""}>
+              <td className="py-2 font-mono text-sm break-all">
                 {data.sha384}
                 <CopyButton getContent={() => data.sha384} className="ms-1" />
               </td>
             </tr>
           )}
           {data.sha512 && (
-            <tr>
-              <th scope="row" className="text-nowrap">
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha512 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
                 SHA-512
               </th>
-              <td className={data.sha512 == testChecksum ? "text-success fw-bold" : ""}>
+              <td className="py-2 font-mono text-sm break-all">
                 {data.sha512}
-
                 <CopyButton getContent={() => data.sha512} className="ms-1" />
               </td>
             </tr>
           )}
           {data.sha3_224 && (
-            <tr>
-              <th scope="row" className="text-nowrap">
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha3_224 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
                 SHA3-224
               </th>
-              <td className={data.sha3_224 == testChecksum ? "text-success fw-bold" : ""}>
+              <td className="py-2 font-mono text-sm break-all">
                 {data.sha3_224}
                 <CopyButton getContent={() => data.sha3_224} className="ms-1" />
               </td>
             </tr>
           )}
           {data.sha3_256 && (
-            <tr>
-              <th scope="row" className="text-nowrap">
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha3_256 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
                 SHA3-256
               </th>
-              <td className={data.sha3_256 == testChecksum ? "text-success fw-bold" : ""}>
+              <td className="py-2 font-mono text-sm break-all">
                 {data.sha3_256}
                 <CopyButton getContent={() => data.sha3_256} className="ms-1" />
               </td>
             </tr>
           )}
           {data.sha3_384 && (
-            <tr>
-              <th scope="row" className="text-nowrap">
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha3_384 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
                 SHA3-384
               </th>
-              <td className={data.sha3_384 == testChecksum ? "text-success fw-bold" : ""}>
+              <td className="py-2 font-mono text-sm break-all">
                 {data.sha3_384}
                 <CopyButton getContent={() => data.sha3_384} className="ms-1" />
               </td>
             </tr>
           )}
           {data.sha3_512 && (
-            <tr>
-              <th scope="row" className="text-nowrap">
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha3_512 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
                 SHA3-512
               </th>
-              <td className={data.sha3_512 == testChecksum ? "text-success fw-bold" : ""}>
+              <td className="py-2 font-mono text-sm break-all">
                 {data.sha3_512}
                 <CopyButton getContent={() => data.sha3_512} className="ms-1" />
               </td>
             </tr>
           )}
           {data.RIPEMD160 && (
-            <tr>
-              <th scope="row" className="text-nowrap">
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.RIPEMD160 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
                 RIPEMD-160
               </th>
-              <td className={data.RIPEMD160 == testChecksum ? "text-success fw-bold" : ""}>
+              <td className="py-2 font-mono text-sm break-all">
                 {data.RIPEMD160}
                 <CopyButton getContent={() => data.RIPEMD160} className="ms-1" />
               </td>
@@ -272,16 +298,31 @@ function TextHashing() {
     }
   }
 
+  const hashTypeOptions = [
+    { value: "md5", label: "MD5", id: "md5Check" },
+    { value: "sha1", label: "SHA-1", id: "sha1Check" },
+    { value: "sha224", label: "SHA-224", id: "sha224Check" },
+    { value: "sha256", label: "SHA-256", id: "sha256Check" },
+    { value: "sha384", label: "SHA-384", id: "sha384Check" },
+    { value: "sha512", label: "SHA-512", id: "sha512Check" },
+    { value: "sha3-224", label: "SHA3-224", id: "sha3-224Check" },
+    { value: "sha3-256", label: "SHA3-256", id: "sha3-256Check" },
+    { value: "sha3-384", label: "SHA3-384", id: "sha3-384Check" },
+    { value: "sha3-512", label: "SHA3-512", id: "sha3-512Check" },
+    { value: "RIPEMD160", label: "RIPEMD-160", id: "RIPEMD160Check" },
+  ];
+
   return (
     <section id="calculator">
       <div className="mt-4">
-        <div className="row justify-content-between">
-          <label htmlFor="contentTextarea" className="form-label col-auto">
-            <span className="fw-bold text-primary">{t("hashing:plainText")}</span>
+        <div className="flex flex-wrap justify-between items-center">
+          <label htmlFor="contentTextarea" className="col-auto">
+            <span className="font-bold text-accent-cyan">{t("hashing:plainText")}</span>
             <a
               href="#"
-              className={`text-danger ms-2 ${styles.clearLink}`}
-              onClick={() => {
+              className="text-danger text-xs ms-2"
+              onClick={(e) => {
+                e.preventDefault();
                 setContent("");
                 showToast(t("common:common.cleared"), "danger", 2000);
               }}
@@ -289,25 +330,17 @@ function TextHashing() {
               {t("common:common.clear")}
             </a>
           </label>
-          <div className="form-check col-auto">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              aria-label="Removes the leading and trailing white space and line terminator characters from a string."
-              id="isTrimCheck"
-              checked={isTrim}
-              onChange={(e) => {
-                setIsTrim(e.target.checked);
-              }}
-            />
-            <label className="form-check-label" htmlFor="isTrimCheck">
-              {t("common:common.trimWhiteSpace")}
-            </label>
-          </div>
+          <StyledCheckbox
+            label={t("common:common.trimWhiteSpace")}
+            id="isTrimCheck"
+            checked={isTrim}
+            onChange={(e) => {
+              setIsTrim(e.target.checked);
+            }}
+          />
         </div>
-        <div className="position-relative">
-          <textarea
-            className="form-control"
+        <div className="relative">
+          <StyledTextarea
             id="contentTextarea"
             placeholder="Paster or type the plain text here"
             rows={5}
@@ -315,20 +348,21 @@ function TextHashing() {
             onChange={(e) => {
               setContent(e.target.value);
             }}
-          ></textarea>
+          />
           <CopyButton
             getContent={() => (isTrim ? content.trim() : content)}
-            className="position-absolute end-0 top-0"
+            className="absolute end-0 top-0"
           />
         </div>
       </div>
       <div className="mt-3">
-        <label htmlFor="passphraseTextarea" className="form-label col-auto">
-          <span className="fw-bold text-secondary">{t("hashing:secretPassphrase")}</span>
+        <label htmlFor="passphraseTextarea" className="block mb-1">
+          <span className="font-bold text-fg-secondary">{t("hashing:secretPassphrase")}</span>
           <a
             href="#"
-            className={`text-danger ms-2 ${styles.clearLink}`}
-            onClick={() => {
+            className="text-danger text-xs ms-2"
+            onClick={(e) => {
+              e.preventDefault();
               setPassphrase("");
               showToast(t("common:common.cleared"), "danger", 2000);
             }}
@@ -336,9 +370,8 @@ function TextHashing() {
             {t("common:common.clear")}
           </a>
         </label>
-        <div className="position-relative">
-          <textarea
-            className="form-control"
+        <div className="relative">
+          <StyledTextarea
             id="passphraseTextarea"
             placeholder={t("hashing:passphrasePlaceholder")}
             rows={2}
@@ -346,33 +379,30 @@ function TextHashing() {
             onChange={(e) => {
               setPassphrase(e.target.value);
             }}
-          ></textarea>
-          <CopyButton
-            getContent={() => passphrase.trim()}
-            className="position-absolute end-0 top-0"
           />
+          <CopyButton getContent={() => passphrase.trim()} className="absolute end-0 top-0" />
         </div>
       </div>
       <div className="mt-3 text-center">
-        <button
-          type="button"
+        <Button
+          variant="danger"
+          size="sm"
           disabled={!content && !passphrase}
-          className={`btn btn-sm btn-danger col-8 col-lg-3 rounded-pill text-uppercase`}
           onClick={() => {
             setContent("");
             setPassphrase("");
             showToast(t("common:common.allCleared"), "danger", 2000);
           }}
+          className="w-3/4 lg:w-1/4 rounded-full uppercase"
         >
           {t("common:common.clearAll")}
-        </button>
+        </Button>
       </div>
 
-      <div className="row mt-3">
-        <div className="col-auto d-flex align-items-center justify-content-start">
-          <label className="fw-bolder col-auto">{t("common:common.storageUnit")} </label>
-          <select
-            className="form-select form-select-sm col ms-2"
+      <div className="flex flex-wrap items-center mt-3">
+        <label className="font-bold col-auto">{t("common:common.storageUnit")} </label>
+        <div className="ms-2">
+          <StyledSelect
             aria-label="Storage Unit"
             value={storageUnit}
             onChange={(e) => {
@@ -381,221 +411,40 @@ function TextHashing() {
           >
             <option value="1000">{t("hashing:storageUnit1000")}</option>
             <option value="1024">{t("hashing:storageUnit1024")}</option>
-          </select>
+          </StyledSelect>
         </div>
       </div>
-      <div className="row px-3">
-        <div className="form-check form-check-lg col-auto mt-3">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="md5"
-            id={"md5Check"}
-            checked={types.includes("md5")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"md5Check"}>
-            {" "}
-            MD5
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto mt-3">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha1"
-            id={"sha1Check"}
-            checked={types.includes("sha1")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha1Check"}>
-            {" "}
-            SHA-1
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto mt-3">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha224"
-            id={"sha224Check"}
-            checked={types.includes("sha224")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha224Check"}>
-            {" "}
-            SHA-224
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto mt-3">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha256"
-            id={"sha256Check"}
-            checked={types.includes("sha256")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha256Check"}>
-            {" "}
-            SHA-256
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto mt-3">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha384"
-            id={"sha384Check"}
-            checked={types.includes("sha384")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha384Check"}>
-            {" "}
-            SHA-384
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto mt-3">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha512"
-            id={"sha512Check"}
-            checked={types.includes("sha512")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha512Check"}>
-            {" "}
-            SHA-512
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto mt-3">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha3-224"
-            id={"sha3-224Check"}
-            checked={types.includes("sha3-224")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha3-224Check"}>
-            {" "}
-            SHA3-224
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto mt-3">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha3-256"
-            id={"sha3-256Check"}
-            checked={types.includes("sha3-256")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha3-256Check"}>
-            {" "}
-            SHA3-256
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto mt-3">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha3-384"
-            id={"sha3-384Check"}
-            checked={types.includes("sha3-384")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha3-384Check"}>
-            {" "}
-            SHA3-384
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto mt-3">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha3-512"
-            id={"sha3-512Check"}
-            checked={types.includes("sha3-512")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha3-512Check"}>
-            {" "}
-            SHA3-512
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto mt-3">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="RIPEMD160"
-            id={"RIPEMD160Check"}
-            checked={types.includes("RIPEMD160")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"RIPEMD160Check"}>
-            {" "}
-            RIPEMD-160
-          </label>
-        </div>
+      <div className="flex flex-wrap px-3">
+        {hashTypeOptions.map((opt) => (
+          <div key={opt.id} className="col-auto mt-3 me-4">
+            <StyledCheckbox
+              label={opt.label}
+              value={opt.value}
+              id={opt.id}
+              checked={types.includes(opt.value)}
+              onChange={onToggleCheck}
+            />
+          </div>
+        ))}
       </div>
       {hashRes && (
         <div className="mt-4">
-          <ul className="nav nav-tabs" id="myTab" role="tablist">
-            <li className="nav-item" role="presentation">
-              <button
-                className="nav-link active fw-bolder"
-                id="hashing-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#hashing-tab-pane"
-                type="button"
-                role="tab"
-                aria-controls="hashing-tab-pane"
-                aria-selected="true"
-              >
-                {t("common:common.hashing")}
-              </button>
-            </li>
-            {hmacRes && (
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link fw-bolder"
-                  id="hmac-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#hmac-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="hmac-tab-pane"
-                  aria-selected="false"
-                >
-                  {t("common:common.hmac")}
-                </button>
-              </li>
-            )}
-          </ul>
-          <div className="tab-content" id="myTabContent">
-            <div
-              className="tab-pane fade show active"
-              id="hashing-tab-pane"
-              role="tabpanel"
-              aria-labelledby="hashing-tab"
-              tabIndex={0}
-            >
-              <Display data={hashRes} />
-            </div>
-            {hmacRes && (
-              <div
-                className="tab-pane fade"
-                id="hmac-tab-pane"
-                role="tabpanel"
-                aria-labelledby="hmac-tab"
-                tabIndex={1}
-              >
-                <Display data={hmacRes} />
-              </div>
-            )}
-          </div>
+          <NeonTabs
+            tabs={[
+              {
+                label: <span className="font-bold">{t("common:common.hashing")}</span>,
+                content: <Display data={hashRes} />,
+              },
+              ...(hmacRes
+                ? [
+                    {
+                      label: <span className="font-bold">{t("common:common.hmac")}</span>,
+                      content: <Display data={hmacRes} />,
+                    },
+                  ]
+                : []),
+            ]}
+          />
         </div>
       )}
     </section>
@@ -605,27 +454,27 @@ function TextHashing() {
 function Description() {
   const { t } = useTranslation("hashing");
   return (
-    <section id="description" className="mt-5 paragraph">
-      <div>
-        <h5>{t("descriptions.md5Title")}</h5>
-        <p>{t("descriptions.md5")}</p>
+    <section id="description" className="mt-5">
+      <div className="mb-4">
+        <h5 className="font-semibold text-fg-primary">{t("descriptions.md5Title")}</h5>
+        <p className="text-fg-secondary mt-1">{t("descriptions.md5")}</p>
       </div>
-      <div>
-        <h5>{t("descriptions.sha1Title")}</h5>
-        <p>{t("descriptions.sha1")}</p>
+      <div className="mb-4">
+        <h5 className="font-semibold text-fg-primary">{t("descriptions.sha1Title")}</h5>
+        <p className="text-fg-secondary mt-1">{t("descriptions.sha1")}</p>
       </div>
-      <div>
-        <h5>{t("descriptions.sha2Title")}</h5>
-        <p>{t("descriptions.sha2")}</p>
-        <p>{t("descriptions.sha2extra")}</p>
+      <div className="mb-4">
+        <h5 className="font-semibold text-fg-primary">{t("descriptions.sha2Title")}</h5>
+        <p className="text-fg-secondary mt-1">{t("descriptions.sha2")}</p>
+        <p className="text-fg-secondary mt-1">{t("descriptions.sha2extra")}</p>
       </div>
-      <div>
-        <h5>{t("descriptions.sha3Title")}</h5>
-        <p>{t("descriptions.sha3")}</p>
+      <div className="mb-4">
+        <h5 className="font-semibold text-fg-primary">{t("descriptions.sha3Title")}</h5>
+        <p className="text-fg-secondary mt-1">{t("descriptions.sha3")}</p>
       </div>
-      <div>
-        <h5>{t("descriptions.hmacTitle")}</h5>
-        <p>{t("descriptions.hmac")}</p>
+      <div className="mb-4">
+        <h5 className="font-semibold text-fg-primary">{t("descriptions.hmacTitle")}</h5>
+        <p className="text-fg-secondary mt-1">{t("descriptions.hmac")}</p>
       </div>
     </section>
   );
@@ -639,8 +488,8 @@ function HashingPage() {
     <>
       <ToolPageHeadBuilder toolPath="/hashing" />
       <Layout title={title}>
-        <div className="container py-3">
-          <div className="alert alert-danger py-3 my-lg-4" role="alert">
+        <div className="container mx-auto px-4 py-3">
+          <div className="bg-accent-cyan-dim/20 border border-accent-cyan/30 rounded-xl p-3 text-fg-secondary text-sm my-4">
             {t("common:alert.notTransferred")}
           </div>
           <TextHashing />

@@ -2,12 +2,15 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { ChangeEvent, useMemo, useState } from "react";
 import { useTranslation } from "next-i18next/pages";
 import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
-import { CopyButton } from "../components/copybtn";
+import { CopyButton } from "../components/ui/copy-btn";
 import { ToolPageHeadBuilder } from "../components/head_builder";
 import Layout from "../components/layout";
 import { showToast } from "../libs/toast";
 import { findTool, ToolData } from "../libs/tools";
 import { convert, getStorageUnitData, StorageUnitData, storageUnitList } from "../utils/storage";
+import { StyledInput } from "../components/ui/input";
+import { StyledSelect } from "../components/ui/input";
+import { StyledCheckbox } from "../components/ui/input";
 
 interface ConversionOutput {
   unit: StorageUnitData;
@@ -75,12 +78,11 @@ function Conversion() {
   return (
     <section id="conversion">
       <div className="mt-4">
-        <label htmlFor="currentInput" className="form-label h5 text-primary fw-bolder ">
+        <label htmlFor="currentInput" className="text-lg font-bold text-accent-cyan">
           {t("conversion", { unit: selectedUnitData?.title })}
         </label>
-        <input
+        <StyledInput
           type="number"
-          className="form-control form-control-lg"
           id="currentInput"
           min={0}
           placeholder=""
@@ -88,12 +90,12 @@ function Conversion() {
           onChange={(e) => {
             setCurrent(parseFloat(e.target.value));
           }}
+          className="mt-1 text-lg"
         />
       </div>
-      <div className="row">
-        <div className="col-12 col-lg-6 mt-4">
-          <select
-            className="form-select form-select-lg"
+      <div className="flex flex-wrap">
+        <div className="w-full lg:w-1/2 mt-4">
+          <StyledSelect
             value={selectedUnit}
             aria-label="Storage Unit"
             onChange={(e) => {
@@ -107,70 +109,58 @@ function Conversion() {
                 </option>
               );
             })}
-          </select>
+          </StyledSelect>
         </div>
-        <div className="col-12 col-lg-6 mt-4">
-          <div className="d-flex justify-content-start align-items-center">
-            <div className="form-check col-auto form-control-lg">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                value="Decimal"
-                id="decimalCheck"
-                checked={measurements.includes("Decimal")}
-                onChange={toggleMeasurementTypes}
-              />
-              <label className="form-check-label" htmlFor="decimalCheck">
-                {t("decimal")}
-              </label>
-            </div>
-            <div className="form-check col-auto form-control-lg">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                value="Binary"
-                id="binaryCheck"
-                checked={measurements.includes("Binary")}
-                onChange={toggleMeasurementTypes}
-              />
-              <label className="form-check-label" htmlFor="binaryCheck">
-                {t("binary")}
-              </label>
-            </div>
-            <div className="form-check col-auto form-control-lg">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                value="Bit"
-                id="bitCheck"
-                checked={measurements.includes("Bit")}
-                onChange={toggleMeasurementTypes}
-              />
-              <label className="form-check-label" htmlFor="bitCheck">
-                {t("bit")}
-              </label>
-            </div>
+        <div className="w-full lg:w-1/2 mt-4">
+          <div className="flex justify-start items-center gap-4">
+            <StyledCheckbox
+              label={t("decimal")}
+              value="Decimal"
+              id="decimalCheck"
+              checked={measurements.includes("Decimal")}
+              onChange={toggleMeasurementTypes}
+            />
+            <StyledCheckbox
+              label={t("binary")}
+              value="Binary"
+              id="binaryCheck"
+              checked={measurements.includes("Binary")}
+              onChange={toggleMeasurementTypes}
+            />
+            <StyledCheckbox
+              label={t("bit")}
+              value="Bit"
+              id="bitCheck"
+              checked={measurements.includes("Bit")}
+              onChange={toggleMeasurementTypes}
+            />
           </div>
         </div>
       </div>
 
-      <div className="table-responsive mt-3">
-        <table className="table caption-top table-striped table-hover table-bordered align-middle text-start">
-          <caption>{t("conversionOutput")}</caption>
-          <thead className="table-dark">
-            <tr>
-              <th>{t("measurement")}</th>
-              <th>{t("conversionCol")}</th>
+      <div className="overflow-x-auto mt-3">
+        <table className="w-full border-collapse">
+          <caption className="text-left text-fg-secondary text-sm mb-2">
+            {t("conversionOutput")}
+          </caption>
+          <thead>
+            <tr className="bg-bg-elevated">
+              <th className="py-2 px-3 border border-border-default text-left text-sm text-fg-muted">
+                {t("measurement")}
+              </th>
+              <th className="py-2 px-3 border border-border-default text-left text-sm text-fg-muted">
+                {t("conversionCol")}
+              </th>
             </tr>
           </thead>
-          <tbody className="table-group-divider">
-            {outputs.map((op, index) => {
+          <tbody>
+            {outputs.map((op) => {
               return (
-                <tr key={op.unit.unit}>
-                  <th scope="row">
+                <tr key={op.unit.unit} className="even:bg-bg-elevated/50 hover:bg-bg-elevated/80">
+                  <th scope="row" className="py-2 px-3 border border-border-default text-sm">
                     {op.unit.title} (<span className="text-danger">{op.unit.unit}</span>)
                   </th>
-                  <td>
+                  <td className="py-2 px-3 border border-border-default text-sm font-mono">
                     {op.valueView}
                     <CopyButton getContent={() => op.value.toString()} />
                   </td>
@@ -186,7 +176,7 @@ function Conversion() {
 
 function ConversionTable({ list }: { list: { from: string; target: string }[] }) {
   return (
-    <table className="table table-striped table-hover table-bordered align-middle text-center">
+    <table className="w-full text-center border-collapse">
       <tbody>
         {list.map((cnv, index) => {
           const fromUnitData = getStorageUnitData(cnv.from);
@@ -197,12 +187,12 @@ function ConversionTable({ list }: { list: { from: string; target: string }[] })
           let value = convert(1, fromUnitData, targetUnitData);
           let valueView = formatByComma(value.toString());
           return (
-            <tr key={index}>
-              <th scope="row">
-                1 <span className="text-primary">{cnv.from}</span>
+            <tr key={index} className="even:bg-bg-elevated/50 hover:bg-bg-elevated/80">
+              <th scope="row" className="py-2 px-3 border border-border-default text-sm">
+                1 <span className="text-accent-cyan">{cnv.from}</span>
               </th>
-              <td className="text-start">
-                {valueView} <span className="text-success fw-bold">{cnv.target}</span>
+              <td className="py-2 px-3 border border-border-default text-sm text-left">
+                {valueView} <span className="text-accent-cyan font-bold">{cnv.target}</span>
                 <CopyButton className="" getContent={() => value.toString()} />
               </td>
             </tr>
@@ -296,10 +286,10 @@ function MostConversionList() {
 
   return (
     <section id="conversionTable" className="mt-4">
-      <div className="row">
+      <div className="flex flex-wrap">
         {cnvList.map((list, index) => {
           return (
-            <div key={index} className="col-12 col-md-6">
+            <div key={index} className="w-full md:w-1/2">
               <ConversionTable list={list} />
             </div>
           );
@@ -314,10 +304,12 @@ function StorageUnitPage({ toolData }: InferGetStaticPropsType<typeof getStaticP
     <>
       <ToolPageHeadBuilder toolPath="/storageunit" />
       <Layout title={toolData.title}>
-        <div className="container pt-3">
+        <div className="container mx-auto px-4 pt-3">
           <Conversion />
-          <div className="text-center h5 mt-4 text-uppercase">{t("commonConversionTable")}</div>
-          <hr className="text-danger" />
+          <div className="text-center text-lg mt-4 uppercase font-semibold text-fg-primary">
+            {t("commonConversionTable")}
+          </div>
+          <hr className="border-danger" />
           <MostConversionList />
         </div>
       </Layout>

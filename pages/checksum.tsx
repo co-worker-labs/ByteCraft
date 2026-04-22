@@ -8,7 +8,13 @@ import { showToast } from "../libs/toast";
 import { findTool, ToolData } from "../libs/tools";
 import { fromEvent } from "file-selector";
 import { formatBytes } from "../utils/storage";
-import { CopyButton } from "../components/copybtn";
+import { CopyButton } from "../components/ui/copy-btn";
+import { StyledTextarea } from "../components/ui/input";
+import { StyledSelect } from "../components/ui/input";
+import { StyledCheckbox } from "../components/ui/input";
+import { Button } from "../components/ui/button";
+import { Accordion } from "../components/ui/accordion";
+import { Plus } from "lucide-react";
 
 const CryptoJS = require("crypto-js");
 
@@ -38,133 +44,177 @@ function ChecksumDisplay({ data, types }: { data: HashResult; types: string[] })
 
   return (
     <>
-      <div className="position-relative">
-        <textarea
-          className="form-control"
+      <div className="relative">
+        <StyledTextarea
           placeholder={t("checksum:compareToChecksum")}
           rows={3}
           value={testChecksum}
           onChange={(e) => {
             setTestChecksum(e.target.value);
           }}
-        ></textarea>
+        />
         <button
           type="button"
-          className="btn btn-sm text-danger flex-col position-absolute end-0 top-0 fw-bold"
-          data-toggle="tooltip"
-          data-placement="right"
+          className="text-danger font-bold text-sm absolute end-0 top-0 bg-transparent border-none cursor-pointer"
           title={t("common:common.clear")}
-          onClick={(e) => {
+          onClick={() => {
             setTestChecksum("");
           }}
         >
           {t("common:common.clear")}
         </button>
       </div>
-      <table className="table table-hover table-striped caption-top text-break mt-2">
+      <table className="w-full mt-2">
         <tbody>
-          <tr>
-            <th scope="row">{t("common:common.size")}</th>
-            <td>{data.size}</td>
-          </tr>
-          <tr hidden={!types.includes("md5")}>
-            <th scope="row">MD5</th>
-            <td className={data.md5 == testChecksum ? "text-success fw-bold" : ""}>
-              {data.md5}
-              <CopyButton getContent={() => data.md5} className="ms-1" />
-            </td>
-          </tr>
-          <tr hidden={!types.includes("sha1")}>
-            <th scope="row" className="text-nowrap">
-              SHA-1
+          <tr className="border-b border-border-default even:bg-bg-elevated/50">
+            <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
+              {t("common:common.size")}
             </th>
-            <td className={data.sha1 == testChecksum ? "text-success fw-bold" : ""}>
-              {data.sha1}
-              <CopyButton getContent={() => data.sha1} className="ms-1" />
-            </td>
+            <td className="py-2 text-sm">{data.size}</td>
           </tr>
-          <tr hidden={!types.includes("sha224")}>
-            <th scope="row" className="text-nowrap">
-              SHA-224
-            </th>
-            <td className={data.sha224 == testChecksum ? "text-success fw-bold" : ""}>
-              {data.sha224}
-              <CopyButton getContent={() => data.sha224} className="ms-1" />
-            </td>
-          </tr>
-          <tr hidden={!types.includes("sha256")}>
-            <th scope="row" className="text-nowrap">
-              SHA-256
-            </th>
-            <td className={data.sha256 == testChecksum ? "text-success fw-bold" : ""}>
-              {data.sha256}
-              <CopyButton getContent={() => data.sha256} className="ms-1" />
-            </td>
-          </tr>
-          <tr hidden={!types.includes("sha384")}>
-            <th scope="row" className="text-nowrap">
-              SHA-384
-            </th>
-            <td className={data.sha384 == testChecksum ? "text-success fw-bold" : ""}>
-              {data.sha384}
-              <CopyButton getContent={() => data.sha384} className="ms-1" />
-            </td>
-          </tr>
-          <tr hidden={!types.includes("sha512")}>
-            <th scope="row" className="text-nowrap">
-              SHA-512
-            </th>
-            <td className={data.sha512 == testChecksum ? "text-success fw-bold" : ""}>
-              {data.sha512}
-
-              <CopyButton getContent={() => data.sha512} className="ms-1" />
-            </td>
-          </tr>
-          <tr hidden={!types.includes("sha3-224")}>
-            <th scope="row" className="text-nowrap">
-              SHA3-224
-            </th>
-            <td className={data.sha3_224 == testChecksum ? "text-success fw-bold" : ""}>
-              {data.sha3_224}
-              <CopyButton getContent={() => data.sha3_224} className="ms-1" />
-            </td>
-          </tr>
-          <tr hidden={!types.includes("sha3-256")}>
-            <th scope="row" className="text-nowrap">
-              SHA3-256
-            </th>
-            <td className={data.sha3_256 == testChecksum ? "text-success fw-bold" : ""}>
-              {data.sha3_256}
-              <CopyButton getContent={() => data.sha3_256} className="ms-1" />
-            </td>
-          </tr>
-          <tr hidden={!types.includes("sha3-384")}>
-            <th scope="row" className="text-nowrap">
-              SHA3-384
-            </th>
-            <td className={data.sha3_384 == testChecksum ? "text-success fw-bold" : ""}>
-              {data.sha3_384}
-              <CopyButton getContent={() => data.sha3_384} className="ms-1" />
-            </td>
-          </tr>
-          <tr hidden={!types.includes("sha3-512")}>
-            <th scope="row" className="text-nowrap">
-              SHA3-512
-            </th>
-            <td className={data.sha3_512 == testChecksum ? "text-success fw-bold" : ""}>
-              {data.sha3_512}
-              <CopyButton getContent={() => data.sha3_512} className="ms-1" />
-            </td>
-          </tr>
-          <tr hidden={!types.includes("RIPEMD160")}>
-            <th scope="row" className="text-nowrap">
-              RIPEMD-160
-            </th>
-            <td className={data.RIPEMD160 == testChecksum ? "text-success fw-bold" : ""}>
-              {data.RIPEMD160}
-              <CopyButton getContent={() => data.RIPEMD160} className="ms-1" />
-            </td>
-          </tr>
+          {types.includes("md5") && (
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.md5 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
+                MD5
+              </th>
+              <td className="py-2 font-mono text-sm break-all">
+                {data.md5}
+                <CopyButton getContent={() => data.md5} className="ms-1" />
+              </td>
+            </tr>
+          )}
+          {types.includes("sha1") && (
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha1 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
+                SHA-1
+              </th>
+              <td className="py-2 font-mono text-sm break-all">
+                {data.sha1}
+                <CopyButton getContent={() => data.sha1} className="ms-1" />
+              </td>
+            </tr>
+          )}
+          {types.includes("sha224") && (
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha224 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
+                SHA-224
+              </th>
+              <td className="py-2 font-mono text-sm break-all">
+                {data.sha224}
+                <CopyButton getContent={() => data.sha224} className="ms-1" />
+              </td>
+            </tr>
+          )}
+          {types.includes("sha256") && (
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha256 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
+                SHA-256
+              </th>
+              <td className="py-2 font-mono text-sm break-all">
+                {data.sha256}
+                <CopyButton getContent={() => data.sha256} className="ms-1" />
+              </td>
+            </tr>
+          )}
+          {types.includes("sha384") && (
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha384 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
+                SHA-384
+              </th>
+              <td className="py-2 font-mono text-sm break-all">
+                {data.sha384}
+                <CopyButton getContent={() => data.sha384} className="ms-1" />
+              </td>
+            </tr>
+          )}
+          {types.includes("sha512") && (
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha512 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
+                SHA-512
+              </th>
+              <td className="py-2 font-mono text-sm break-all">
+                {data.sha512}
+                <CopyButton getContent={() => data.sha512} className="ms-1" />
+              </td>
+            </tr>
+          )}
+          {types.includes("sha3-224") && (
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha3_224 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
+                SHA3-224
+              </th>
+              <td className="py-2 font-mono text-sm break-all">
+                {data.sha3_224}
+                <CopyButton getContent={() => data.sha3_224} className="ms-1" />
+              </td>
+            </tr>
+          )}
+          {types.includes("sha3-256") && (
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha3_256 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
+                SHA3-256
+              </th>
+              <td className="py-2 font-mono text-sm break-all">
+                {data.sha3_256}
+                <CopyButton getContent={() => data.sha3_256} className="ms-1" />
+              </td>
+            </tr>
+          )}
+          {types.includes("sha3-384") && (
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha3_384 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
+                SHA3-384
+              </th>
+              <td className="py-2 font-mono text-sm break-all">
+                {data.sha3_384}
+                <CopyButton getContent={() => data.sha3_384} className="ms-1" />
+              </td>
+            </tr>
+          )}
+          {types.includes("sha3-512") && (
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.sha3_512 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
+                SHA3-512
+              </th>
+              <td className="py-2 font-mono text-sm break-all">
+                {data.sha3_512}
+                <CopyButton getContent={() => data.sha3_512} className="ms-1" />
+              </td>
+            </tr>
+          )}
+          {types.includes("RIPEMD160") && (
+            <tr
+              className={`border-b border-border-default even:bg-bg-elevated/50 ${data.RIPEMD160 == testChecksum ? "bg-accent-cyan-dim text-accent-cyan font-semibold" : ""}`}
+            >
+              <th className="py-2 pr-4 text-fg-secondary text-sm text-left whitespace-nowrap">
+                RIPEMD-160
+              </th>
+              <td className="py-2 font-mono text-sm break-all">
+                {data.RIPEMD160}
+                <CopyButton getContent={() => data.RIPEMD160} className="ms-1" />
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
     </>
@@ -184,11 +234,11 @@ function FileCalculator() {
     const checked = event.target.checked;
     const value = event.target.value;
     if (checked) {
-      const t = [...types];
-      t.push(value);
-      setTypes(t);
+      const newTypes = [...types];
+      newTypes.push(value);
+      setTypes(newTypes);
     } else {
-      setTypes(types.filter((t) => t != value));
+      setTypes(types.filter((it) => it != value));
     }
     setHashResList([]);
   }
@@ -205,7 +255,6 @@ function FileCalculator() {
         const reader = new FileReader();
         reader.onload = (e) => {
           var bin = e.target?.result;
-          console.log("file loaded");
           resArr.push({
             title: f.name,
             size: "(" + f.type + ") - " + formatBytes(f.size, storageUnit),
@@ -245,39 +294,46 @@ function FileCalculator() {
     });
   }, []);
 
+  const hashTypeOptions = [
+    { value: "md5", label: "MD5", id: "md5Check" },
+    { value: "sha1", label: "SHA-1", id: "sha1Check" },
+    { value: "sha224", label: "SHA-224", id: "sha224Check" },
+    { value: "sha256", label: "SHA-256", id: "sha256Check" },
+    { value: "sha384", label: "SHA-384", id: "sha384Check" },
+    { value: "sha512", label: "SHA-512", id: "sha512Check" },
+    { value: "sha3-224", label: "SHA3-224", id: "sha3-224Check" },
+    { value: "sha3-256", label: "SHA3-256", id: "sha3-256Check" },
+    { value: "sha3-384", label: "SHA3-384", id: "sha3-384Check" },
+    { value: "sha3-512", label: "SHA3-512", id: "sha3-512Check" },
+    { value: "RIPEMD160", label: "RIPEMD-160", id: "RIPEMD160Check" },
+  ];
+
   return (
     <section id="calculator" className="mt-4">
       <div
-        className="position-relative fs-4"
-        style={{
-          width: "100%",
-          height: "10rem",
-          border: "1px dashed #d6e9c6",
-          borderRadius: "0.5rem",
-          backgroundColor: "#dff0d8",
-          color: "#468847",
-        }}
+        className="relative text-xl rounded-lg border-2 border-dashed border-accent-cyan/30 bg-accent-cyan-dim/10 text-accent-cyan"
+        style={{ width: "100%", height: "10rem" }}
       >
-        <div className="position-absolute top-50 start-50 translate-middle transmit-middle d-flex align-items-center w-100 w-lg-75 justify-content-center">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center w-full w-lg-3/4 justify-center px-4">
           {selectedFiles && selectedFiles.length > 0 ? (
-            <span className="text-truncate">{filenames(selectedFiles)}</span>
+            <span className="truncate">{filenames(selectedFiles)}</span>
           ) : (
             <>
-              <i className="bi bi-plus me-1"></i>
-              <span className="fw-bold">{t("checksum:dropFilesHere")}</span>
+              <Plus size={20} className="me-1" />
+              <span className="font-bold">{t("checksum:dropFilesHere")}</span>
             </>
           )}
         </div>
         <input
           ref={fileRef}
-          className="form-control"
           type="file"
           id="fileSelector"
-          style={{ opacity: 0, zIndex: -1, width: "100%", height: "100%" }}
+          className="opacity-0 absolute inset-0 w-full h-full cursor-pointer"
+          style={{ zIndex: -1 }}
           onClick={() => {
             if (fileRef.current) {
-              const t = fileRef.current as any;
-              t.value = null;
+              const input = fileRef.current as any;
+              input.value = null;
             }
           }}
           onChange={(e) => {
@@ -304,29 +360,29 @@ function FileCalculator() {
         />
       </div>
       <div className="mt-3 text-center">
-        <button
-          type="button"
+        <Button
+          variant="danger"
+          size="sm"
           disabled={selectedFiles.length == 0}
-          className={`btn btn-sm btn-danger col-8 col-lg-3 rounded-pill text-uppercase`}
           onClick={() => {
             setSelectedFiles([]);
             setHashResList([]);
             if (fileRef.current) {
-              const t = fileRef.current as any;
-              t.value = null;
+              const input = fileRef.current as any;
+              input.value = null;
             }
             showToast(t("common:common.deselected"), "danger", 2000);
           }}
+          className="w-3/4 lg:w-1/4 rounded-full uppercase"
         >
           {selectedFiles.length > 0
             ? t("checksum:deselect", { count: selectedFiles.length })
             : t("checksum:noFileChosen")}
-        </button>
+        </Button>
       </div>
-      <div className="row justify-content-start mt-3">
-        <div className="col-auto">
-          <select
-            className="form-select form-select-sm"
+      <div className="flex justify-start mt-3">
+        <div className="w-auto">
+          <StyledSelect
             aria-label="Storage Unit"
             value={storageUnit}
             onChange={(e) => {
@@ -336,211 +392,44 @@ function FileCalculator() {
           >
             <option value="1000">{t("checksum:storageUnit1000")}</option>
             <option value="1024">{t("checksum:storageUnit1024")}</option>
-          </select>
+          </StyledSelect>
         </div>
       </div>
-      <div className="row mt-3 px-3">
-        <div className="form-check form-check-lg col-auto">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="md5"
-            id={"md5Check"}
-            checked={types.includes("md5")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"md5Check"}>
-            {" "}
-            MD5
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha1"
-            id={"sha1Check"}
-            checked={types.includes("sha1")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha1Check"}>
-            {" "}
-            SHA-1
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha224"
-            id={"sha224Check"}
-            checked={types.includes("sha224")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha224Check"}>
-            {" "}
-            SHA-224
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha256"
-            id={"sha256Check"}
-            checked={types.includes("sha256")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha256Check"}>
-            {" "}
-            SHA-256
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha384"
-            id={"sha384Check"}
-            checked={types.includes("sha384")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha384Check"}>
-            {" "}
-            SHA-384
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha512"
-            id={"sha512Check"}
-            checked={types.includes("sha512")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha512Check"}>
-            {" "}
-            SHA-512
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha3-224"
-            id={"sha3-224Check"}
-            checked={types.includes("sha3-224")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha3-224Check"}>
-            {" "}
-            SHA3-224
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha3-256"
-            id={"sha3-256Check"}
-            checked={types.includes("sha3-256")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha3-256Check"}>
-            {" "}
-            SHA3-256
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha3-384"
-            id={"sha3-384Check"}
-            checked={types.includes("sha3-384")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha3-384Check"}>
-            {" "}
-            SHA3-384
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="sha3-512"
-            id={"sha3-512Check"}
-            checked={types.includes("sha3-512")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"sha3-512Check"}>
-            {" "}
-            SHA3-512
-          </label>
-        </div>
-        <div className="form-check form-check-lg col-auto">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value="RIPEMD160"
-            id={"RIPEMD160Check"}
-            checked={types.includes("RIPEMD160")}
-            onChange={onToggleCheck}
-          />
-          <label className="form-check-label" htmlFor={"RIPEMD160Check"}>
-            {" "}
-            RIPEMD-160
-          </label>
-        </div>
+      <div className="flex flex-wrap mt-3 px-3">
+        {hashTypeOptions.map((opt) => (
+          <div key={opt.id} className="me-4 mt-2">
+            <StyledCheckbox
+              label={opt.label}
+              value={opt.value}
+              id={opt.id}
+              checked={types.includes(opt.value)}
+              onChange={onToggleCheck}
+            />
+          </div>
+        ))}
       </div>
       {calculating && (
-        <div className="spinner-grow text-primary align-self-center mt-4" role="status">
-          <span className="visually-hidden1 ms-5">{t("common:common.calculating")}</span>
+        <div className="flex justify-center mt-4">
+          <div className="w-6 h-6 border-2 border-accent-cyan border-t-transparent rounded-full animate-spin" />
+          <span className="ms-3 text-fg-secondary">{t("common:common.calculating")}</span>
         </div>
       )}
       {hashResList.length == 0 ? (
         <div
-          className="border rounded w-100 d-flex justify-content-center align-items-center mt-4 fs-4 text-muted fw-bold bg-light"
+          className="border border-border-default rounded-xl w-full flex justify-center items-center mt-4 text-lg text-fg-muted font-bold bg-bg-surface"
           style={{ height: "8rem" }}
         >
           {t("checksum:checksumOutput")}
         </div>
       ) : (
-        <div className="accordion mt-4" id={`hashResultList`}>
-          {hashResList.map((data, index) => {
-            return (
-              <div className="accordion-item" key={index}>
-                <h2 className="accordion-header" id={"heading_" + index}>
-                  <button
-                    className={
-                      "accordion-button fw-bolder text-break" + (index != 0 ? " collapsed" : "")
-                    }
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target={"#collapse_" + index}
-                    aria-expanded={index == 0 ? "true" : "false"}
-                    aria-controls={"collapse_" + index}
-                  >
-                    {data.title}
-                  </button>
-                </h2>
-                <div
-                  id={"collapse_" + index}
-                  className={
-                    index == 0 ? "accordion-collapse collapse show" : "accordion-collapse collapse"
-                  }
-                  aria-labelledby={"heading_" + index}
-                  data-bs-parent={"#hashResultList"}
-                >
-                  <div className="accordion-body p-1 pt-2">
-                    <ChecksumDisplay data={data} types={types} />
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+        <div className="mt-4">
+          <Accordion
+            items={hashResList.map((data, index) => ({
+              title: <span className="text-sm font-mono">{data.title}</span>,
+              content: <ChecksumDisplay data={data} types={types} />,
+              defaultOpen: index === 0,
+            }))}
+          />
         </div>
       )}
     </section>
@@ -550,23 +439,23 @@ function FileCalculator() {
 function Description() {
   const { t } = useTranslation("checksum");
   return (
-    <section id="description" className="mt-5 paragraph">
-      <div>
-        <h5>{t("descriptions.md5Title")}</h5>
-        <p>{t("descriptions.md5")}</p>
+    <section id="description" className="mt-5">
+      <div className="mb-4">
+        <h5 className="font-semibold text-fg-primary">{t("descriptions.md5Title")}</h5>
+        <p className="text-fg-secondary mt-1">{t("descriptions.md5")}</p>
       </div>
-      <div>
-        <h5>{t("descriptions.sha1Title")}</h5>
-        <p>{t("descriptions.sha1")}</p>
+      <div className="mb-4">
+        <h5 className="font-semibold text-fg-primary">{t("descriptions.sha1Title")}</h5>
+        <p className="text-fg-secondary mt-1">{t("descriptions.sha1")}</p>
       </div>
-      <div>
-        <h5>{t("descriptions.sha2Title")}</h5>
-        <p>{t("descriptions.sha2")}</p>
-        <p>{t("descriptions.sha2extra")}</p>
+      <div className="mb-4">
+        <h5 className="font-semibold text-fg-primary">{t("descriptions.sha2Title")}</h5>
+        <p className="text-fg-secondary mt-1">{t("descriptions.sha2")}</p>
+        <p className="text-fg-secondary mt-1">{t("descriptions.sha2extra")}</p>
       </div>
-      <div>
-        <h5>{t("descriptions.sha3Title")}</h5>
-        <p>{t("descriptions.sha3")}</p>
+      <div className="mb-4">
+        <h5 className="font-semibold text-fg-primary">{t("descriptions.sha3Title")}</h5>
+        <p className="text-fg-secondary mt-1">{t("descriptions.sha3")}</p>
       </div>
     </section>
   );
@@ -578,11 +467,11 @@ function HashCalculatorPage({ toolData }: InferGetStaticPropsType<typeof getStat
     <>
       <ToolPageHeadBuilder toolPath="/checksum" />
       <Layout title={toolData.title}>
-        <div className="container py-3">
-          <div className="alert alert-danger py-3 my-lg-4" role="alert">
+        <div className="container mx-auto px-4 py-3">
+          <div className="bg-accent-cyan-dim/20 border border-accent-cyan/30 rounded-xl p-3 text-fg-secondary text-sm my-4">
             {t("alert.filesNotTransferred")}
           </div>
-          <div className="alert alert-info py-3" role="alert">
+          <div className="bg-accent-purple-dim/20 border border-accent-purple/30 rounded-xl p-3 text-fg-secondary text-sm my-4">
             {t("alert.checksumInfo")}
           </div>
           <FileCalculator />
