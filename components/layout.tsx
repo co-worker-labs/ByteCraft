@@ -24,7 +24,6 @@ export default function Layout({
   headerPosition,
   footerPosition,
   hidden,
-  aside = true,
   className,
   style,
   bodyClassName,
@@ -35,7 +34,7 @@ export default function Layout({
   headerPosition?: HeaderPosition;
   footerPosition?: FooterPosition;
   hidden?: boolean;
-  aside?: boolean;
+
   className?: string;
   style?: CSSProperties;
   bodyClassName?: string;
@@ -96,7 +95,7 @@ export default function Layout({
         </button>
 
         <main className={`flex-1 ${className || ""}`} style={style}>
-          {aside ? <div className="mx-auto max-w-3xl px-4">{children}</div> : <>{children}</>}
+          {children}
         </main>
 
         <Footer position={footerPos} />
