@@ -7,7 +7,7 @@ import { useTranslation } from "next-i18next/pages";
 import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import { getTranslatedTools } from "../libs/tools";
 import { Card } from "../components/ui/card";
-import { Button } from "../components/ui/button";
+
 import {
   Hash,
   FileCode,
@@ -80,7 +80,10 @@ function ToolCollection() {
             <Card
               key={index}
               hover={!isDisabled}
-              className={`group flex flex-col ${isDisabled ? "opacity-50" : ""}`}
+              className={`group flex flex-col ${isDisabled ? "opacity-50 cursor-default" : "cursor-pointer"}`}
+              onClick={() => {
+                if (value.path) router.push(value.path);
+              }}
             >
               <div className="flex flex-1 flex-col items-center p-5">
                 {icon && (
@@ -91,23 +94,9 @@ function ToolCollection() {
 
                 <h3 className="font-semibold text-fg-primary text-center">{value.title}</h3>
 
-                <p className="mt-2 line-clamp-3 text-sm text-fg-secondary text-center leading-relaxed">
+                <p className="mt-2 line-clamp-2 text-sm text-fg-secondary text-center leading-relaxed">
                   {value.description}
                 </p>
-
-                <div className="mt-auto w-full pt-4">
-                  <Button
-                    variant={isDisabled ? "outline" : "primary"}
-                    size="sm"
-                    disabled={isDisabled}
-                    onClick={() => {
-                      if (value.path) router.push(value.path);
-                    }}
-                    className="w-full"
-                  >
-                    {isDisabled ? t("common:common.comingSoon") : t("common:common.goto")}
-                  </Button>
-                </div>
               </div>
             </Card>
           );
