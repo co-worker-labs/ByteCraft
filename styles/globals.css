@@ -44,6 +44,7 @@
   --color-accent-purple: #8b5cf6;
   --color-accent-cyan-dim: rgba(6, 214, 160, 0.15);
   --color-accent-purple-dim: rgba(139, 92, 246, 0.15);
+  --color-danger: #ef4444;
 
   --font-family-mono: "JetBrains Mono", monospace;
   --font-family-sans: "Inter", ui-sans-serif, system-ui, sans-serif;

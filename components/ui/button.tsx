@@ -12,7 +12,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   primary: "bg-accent-cyan text-bg-base hover:brightness-110 focus:shadow-glow active:scale-95",
   secondary:
     "border border-accent-purple text-accent-purple hover:bg-accent-purple-dim active:scale-95",
-  danger: "text-danger hover:bg-red-500/10 active:scale-95",
+  danger: "border border-danger text-danger hover:bg-red-500/10 active:scale-95",
   outline:
     "border border-fg-muted text-fg-muted hover:border-fg-secondary hover:text-fg-secondary active:scale-95",
 };
