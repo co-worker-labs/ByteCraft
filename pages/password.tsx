@@ -1,6 +1,6 @@
 import "rc-slider/assets/index.css";
 import Slider from "rc-slider";
-import { ChangeEvent, useMemo, useRef, useState } from "react";
+import { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
 import {
   memorable_capitalize_checked,
   memorable_full_words_checked,
@@ -224,15 +224,16 @@ function Generator() {
   const [passwordLength, setPasswordLength] = useState<PasswordLength>(defaultLength(default_type));
   const [visible, setVisible] = useState<boolean>(true);
 
-  const [password, setPassword] = useState<string[]>(() => {
-    if (typeof window === "undefined") return [];
-    return generate(
-      default_type,
-      defaultCharacters(default_type),
-      defaultLength(default_type).current
-    );
-  });
+  const [password, setPassword] = useState<string[]>([]);
   const [history, setHistory] = useState<HistoryRecord[]>([]);
+  const initialized = useRef(false);
+
+  useEffect(() => {
+    if (!initialized.current) {
+      initialized.current = true;
+      setPassword(generate(passwordType, characters, passwordLength.current));
+    }
+  });
 
   const levelStyle = useMemo(
     () =>
