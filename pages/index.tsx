@@ -72,11 +72,6 @@ function ToolCollection() {
 
   return (
     <section className="container mx-auto px-4 pb-20 pt-12">
-      <div className="mb-10 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-fg-primary">{t("toolsSectionTitle")}</h2>
-        <p className="mt-2 text-fg-secondary">{t("toolsSectionSubtitle")}</p>
-      </div>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {data.map((value, index) => {
           const isDisabled = value.path == "";
