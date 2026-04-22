@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/* ===== Google Fonts ===== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+/* ===== Theme Variables ===== */
+@layer base {
+  :root {
+    --bg-base: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-elevated: #ffffff;
+    --bg-input: #f1f5f9;
+    --fg-primary: #0f172a;
+    --fg-secondary: #475569;
+    --fg-muted: #94a3b8;
+    --border-default: #e2e8f0;
+    --border-subtle: #f1f5f9;
+  }
+
+  .dark {
+    --bg-base: #0b0f1a;
+    --bg-surface: #111827;
+    --bg-elevated: #1e293b;
+    --bg-input: #0d1117;
+    --fg-primary: #f1f5f9;
+    --fg-secondary: #94a3b8;
+    --fg-muted: #64748b;
+    --border-default: #1e293b;
+    --border-subtle: #334155;
+  }
+}
+
+/* ===== Tailwind Theme ===== */
+@theme {
+  --color-bg-base: var(--bg-base);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-input: var(--bg-input);
+  --color-fg-primary: var(--fg-primary);
+  --color-fg-secondary: var(--fg-secondary);
+  --color-fg-muted: var(--fg-muted);
+  --color-border-default: var(--border-default);
+  --color-border-subtle: var(--border-subtle);
+  --color-accent-cyan: #06d6a0;
+  --color-accent-purple: #8b5cf6;
+  --color-accent-cyan-dim: rgba(6, 214, 160, 0.15);
+  --color-accent-purple-dim: rgba(139, 92, 246, 0.15);
+
+  --font-family-mono: "JetBrains Mono", monospace;
+  --font-family-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-card: 0 0 0 1px rgba(6, 214, 160, 0.1), 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover:
+    0 0 0 1px rgba(6, 214, 160, 0.4), 0 0 20px rgba(6, 214, 160, 0.1), 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 15px rgba(6, 214, 160, 0.3);
+  --shadow-input-focus: 0 0 0 2px rgba(6, 214, 160, 0.5);
+}
+
+/* ===== Base Styles ===== */
+@layer base {
+  html {
+    font-family: var(--font-family-sans);
+    background-color: var(--bg-base);
+    color: var(--fg-primary);
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .dark ::-webkit-scrollbar {
+    width: 8px;
+  }
+  .dark ::-webkit-scrollbar-track {
+    background: var(--bg-base);
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: var(--border-subtle);
+    border-radius: 4px;
+  }
+}
+
+/* ===== Utility Classes ===== */
+@utility text-shadow-glow {
+  text-shadow: 0 0 30px rgba(6, 214, 160, 0.3);
+}
+
+@utility border-glow {
+  border-color: rgba(6, 214, 160, 0.4);
+}
+
+@utility border-glow-strong {
+  border-color: rgba(6, 214, 160, 0.8);
+}
+
+@utility bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(6, 214, 160, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 214, 160, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@layer utilities {
+  .paragraph p {
+    text-indent: 3rem;
+    line-height: 2rem;
+  }
+
+  .sentence {
+    line-height: 2rem;
+  }
+}
