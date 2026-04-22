@@ -8,17 +8,7 @@ import { serverSideTranslations } from "next-i18next/pages/serverSideTranslation
 import { getTranslatedTools } from "../libs/tools";
 import { Card } from "../components/ui/card";
 
-import {
-  Hash,
-  FileCode,
-  Lock,
-  KeyRound,
-  FileCheck,
-  Type,
-  Code,
-  HardDrive,
-  Terminal,
-} from "lucide-react";
+import { Hash, FileCode, Lock, KeyRound, FileCheck, Type, Code, HardDrive } from "lucide-react";
 
 const toolIcons: Record<string, React.ReactNode> = {
   "/hashing": <Hash size={28} className="text-accent-cyan" />,
@@ -41,18 +31,13 @@ function Introduce() {
         aria-hidden="true"
       />
 
-      <div className="relative container mx-auto px-4 py-20 md:py-28 text-center">
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent-cyan/20 bg-accent-cyan/5 px-4 py-1.5 text-sm text-accent-cyan">
-          <Terminal size={14} />
-          <span>{t("badge")}</span>
-        </div>
-
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-mono font-bold text-fg-primary tracking-tight">
-          {t("exploreTitle")}
+      <div className="relative mx-auto max-w-5xl px-6 py-24 md:py-32 text-center">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-mono font-bold text-fg-primary tracking-tight leading-snug">
+          {t("subtitle")}
         </h1>
 
-        <p className="mx-auto mt-4 max-w-xl text-lg text-fg-secondary leading-relaxed">
-          {t("subtitle")}
+        <p className="mx-auto mt-4 max-w-lg text-lg text-fg-secondary leading-relaxed">
+          {t("tagline")}
         </p>
 
         <div className="mx-auto mt-8 flex items-center justify-center gap-3">
