@@ -254,11 +254,11 @@ function HtmlCodePage({
   icons,
   pronunciations,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation("htmlcode");
+  const { t } = useTranslation(["htmlcode", "tools"]);
   return (
     <>
       <ToolPageHeadBuilder toolPath="/htmlcode" />
-      <Layout title={toolData.title}>
+      <Layout title={t("tools:htmlcode.title")}>
         <div className="container mx-auto px-4 py-4">
           <Description />
           <section>
@@ -344,7 +344,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       ascii,
       icons,
       pronunciations,
-      ...(await serverSideTranslations(locale, ["common", "htmlcode"])),
+      ...(await serverSideTranslations(locale, ["common", "htmlcode", "tools"])),
     },
   };
 };

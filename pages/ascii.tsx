@@ -160,11 +160,11 @@ function AsciiPage({
   printableCharacters,
   controlCodes,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation(["ascii", "common"]);
+  const { t } = useTranslation(["ascii", "common", "tools"]);
   return (
     <>
       <ToolPageHeadBuilder toolPath="/ascii" />
-      <Layout title={toolData.title}>
+      <Layout title={t("tools:ascii.title")}>
         <div className="container mx-auto px-4 py-4">
           <section id="description" className="py-3">
             <p className="text-fg-secondary" style={{ textIndent: "3rem", lineHeight: "2rem" }}>
@@ -203,7 +203,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       toolData: toolData,
       printableCharacters: printableCharacters,
       controlCodes: controlCodes,
-      ...(await serverSideTranslations(locale, ["common", "ascii"])),
+      ...(await serverSideTranslations(locale, ["common", "ascii", "tools"])),
     },
   };
 };

@@ -298,11 +298,11 @@ function MostConversionList() {
   );
 }
 function StorageUnitPage({ toolData }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation("storageunit");
+  const { t } = useTranslation(["storageunit", "tools"]);
   return (
     <>
       <ToolPageHeadBuilder toolPath="/storageunit" />
-      <Layout title={toolData.title}>
+      <Layout title={t("tools:storageunit.title")}>
         <div className="container mx-auto px-4 pt-3">
           <Conversion />
           <div className="text-center text-lg mt-4 uppercase font-semibold text-fg-primary">
@@ -323,7 +323,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       toolData,
-      ...(await serverSideTranslations(locale, ["common", "storageunit"])),
+      ...(await serverSideTranslations(locale, ["common", "storageunit", "tools"])),
     },
   };
 };

@@ -433,11 +433,11 @@ function Description() {
 }
 
 function CipherPage({ toolData }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation(["common", "tools"]);
   return (
     <>
       <ToolPageHeadBuilder toolPath="/cipher" />
-      <Layout title={toolData.title}>
+      <Layout title={t("tools:cipher.title")}>
         <div className="container mx-auto px-4 pt-4">
           <div className="bg-accent-cyan-dim/20 border border-accent-cyan/30 rounded-xl p-3 text-fg-secondary text-sm my-4">
             {t("alert.notTransferred")}
@@ -457,7 +457,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       toolData,
-      ...(await serverSideTranslations(locale, ["common", "cipher"])),
+      ...(await serverSideTranslations(locale, ["common", "cipher", "tools"])),
     },
   };
 };

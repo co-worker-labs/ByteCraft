@@ -462,11 +462,11 @@ function Description() {
 }
 
 function HashCalculatorPage({ toolData }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation(["common", "tools"]);
   return (
     <>
       <ToolPageHeadBuilder toolPath="/checksum" />
-      <Layout title={toolData.title}>
+      <Layout title={t("tools:checksum.title")}>
         <div className="container mx-auto px-4 py-3">
           <div className="bg-accent-cyan-dim/20 border border-accent-cyan/30 rounded-xl p-3 text-fg-secondary text-sm my-4">
             {t("alert.filesNotTransferred")}
@@ -489,7 +489,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       toolData,
-      ...(await serverSideTranslations(locale, ["common", "checksum"])),
+      ...(await serverSideTranslations(locale, ["common", "checksum", "tools"])),
     },
   };
 };
