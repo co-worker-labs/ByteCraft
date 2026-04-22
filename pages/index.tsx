@@ -27,12 +27,12 @@ function Introduce() {
     <section className="relative overflow-hidden bg-gradient-to-b from-bg-base via-bg-base to-bg-surface">
       <div className="bg-grid-pattern absolute inset-0" />
       <div
-        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px] rounded-full bg-accent-cyan/5 blur-3xl"
+        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[250px] w-[600px] rounded-full bg-accent-cyan/5 blur-3xl"
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto max-w-5xl px-6 py-24 md:py-32 text-center">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-mono font-bold text-fg-primary tracking-tight leading-snug">
+      <div className="relative mx-auto max-w-5xl px-6 py-12 md:py-16 text-center">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-mono font-bold text-fg-primary tracking-tight leading-snug">
           {t("subtitle")}
         </h1>
 
