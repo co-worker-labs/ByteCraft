@@ -23,7 +23,7 @@ import {
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { showToast } from "../libs/toast";
 import Layout from "../components/layout";
-import { findTool, listRelatedTools, ToolData } from "../libs/tools";
+import { findTool, ToolData } from "../libs/tools";
 import { ToolPageHeadBuilder } from "../components/head_builder";
 import Link from "next/link";
 
@@ -710,15 +710,11 @@ function Question({ data }: { data: QuestionData[] }) {
   );
 }
 
-function PasswordPage({
-  questions,
-  toolData,
-  relatedTools,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+function PasswordPage({ questions, toolData }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <ToolPageHeadBuilder data={toolData} />
-      <Layout title={toolData.title} relatedTools={relatedTools}>
+      <Layout title={toolData.title}>
         <div className="container pt-4">
           <Generator />
           <Question data={questions} />
@@ -731,7 +727,6 @@ function PasswordPage({
 export const getStaticProps: GetStaticProps = async (context) => {
   const path = "/password";
   const toolData: ToolData = findTool(path);
-  const relatedTools: ToolData[] = listRelatedTools(path);
 
   const questions: QuestionData[] = [
     {
@@ -752,7 +747,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       questions,
       toolData,
-      relatedTools,
     },
   };
 };

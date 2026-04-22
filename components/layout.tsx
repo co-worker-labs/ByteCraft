@@ -3,7 +3,6 @@ import Footer, { FooterPosition } from "./footer";
 import Header, { HeaderPosition } from "./header";
 import { Context, createContext, useContext, useState } from "react";
 import styles from "./Layout.module.css";
-import { ToolData } from "../libs/tools";
 import { useRouter } from "next/router";
 import { listRecents, logAccess } from "../libs/recent";
 import { pathTrim } from "../utils/path";
@@ -24,7 +23,6 @@ const LayoutContext: Context<LayoutSettings> = createContext<LayoutSettings>({
 export default function Layout({
   children,
   title,
-  relatedTools,
   headerPosition,
   footerPosition,
   hidden,
@@ -36,7 +34,6 @@ export default function Layout({
 }: {
   children: ReactNode;
   title?: string;
-  relatedTools?: ToolData[];
   headerPosition?: HeaderPosition;
   footerPosition?: FooterPosition;
   hidden?: boolean;
@@ -56,12 +53,8 @@ export default function Layout({
 
   const recent = useMemo(() => {
     if (typeof window === "undefined") return [];
-    const excludePaths =
-      relatedTools && relatedTools.length > 0
-        ? relatedTools.map((data) => data.path).concat(path)
-        : [path];
-    return listRecents(excludePaths);
-  }, [path, relatedTools]);
+    return listRecents([path]);
+  }, [path]);
 
   const config = {
     reset: () => {
@@ -117,31 +110,6 @@ export default function Layout({
                       <div className="h5 fw-bolder text-danger text-uppercase">Recent &gt;&gt;</div>
                       <hr />
                       {recent.map((data, index) => {
-                        return (
-                          <div className="card mt-3 text-center" key={index}>
-                            <div className="card-body py-2">
-                              <Link href={data.path} className={`${styles.asideItem}`}>
-                                <h5 className="card-title fw-bold">{data.title}</h5>
-                                <p
-                                  className="card-text text-truncate text-wrap text-muted"
-                                  style={{ maxHeight: "2.8rem" }}
-                                >
-                                  {data.description}
-                                </p>
-                              </Link>
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  )}
-                  {relatedTools && relatedTools.length > 0 && (
-                    <div className={`${styles.asideContent} mt-3 px-2`}>
-                      <div className="h5 fw-bolder text-primary text-uppercase">
-                        Relate &gt;&gt;
-                      </div>
-                      <hr />
-                      {relatedTools.map((data, index) => {
                         return (
                           <div className="card mt-3 text-center" key={index}>
                             <div className="card-body py-2">

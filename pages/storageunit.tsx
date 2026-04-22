@@ -4,7 +4,7 @@ import { CopyButton } from "../components/copybtn";
 import { ToolPageHeadBuilder } from "../components/head_builder";
 import Layout from "../components/layout";
 import { showToast } from "../libs/toast";
-import { findTool, listRelatedTools, ToolData } from "../libs/tools";
+import { findTool, ToolData } from "../libs/tools";
 import { convert, getStorageUnitData, StorageUnitData, storageUnitList } from "../utils/storage";
 
 interface ConversionOutput {
@@ -305,14 +305,11 @@ function MostConversionList() {
     </section>
   );
 }
-function StorageUnitPage({
-  toolData,
-  relatedTools,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+function StorageUnitPage({ toolData }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <ToolPageHeadBuilder data={toolData} />
-      <Layout title={toolData.title} relatedTools={relatedTools}>
+      <Layout title={toolData.title}>
         <div className="container pt-3">
           <Conversion />
           <div className="text-center h5 mt-4 text-uppercase">Common Conversion Table</div>
@@ -327,11 +324,9 @@ function StorageUnitPage({
 export const getStaticProps: GetStaticProps = async (context) => {
   const path = "/storageunit";
   const toolData: ToolData = findTool(path);
-  const relatedTools: ToolData[] = listRelatedTools(path);
   return {
     props: {
       toolData,
-      relatedTools,
     },
   };
 };
