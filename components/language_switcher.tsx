@@ -23,7 +23,7 @@ export default function LanguageSwitcher() {
       trigger={
         <button
           type="button"
-          className="flex h-8 w-8 items-center justify-center rounded-lg border border-border-default text-fg-secondary hover:text-accent-cyan hover:border-accent-cyan/40 transition-colors"
+          className="flex h-8 w-8 items-center justify-center rounded-lg text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors"
           aria-label={t("common.language")}
         >
           <Globe size={16} />

@@ -61,7 +61,7 @@ export default function Header({ position, title }: { position: HeaderPosition; 
               trigger={
                 <button
                   type="button"
-                  className="flex h-8 w-8 items-center justify-center rounded-lg border border-border-default text-fg-secondary hover:text-accent-cyan hover:border-accent-cyan/40 transition-colors"
+                  className="flex h-8 w-8 items-center justify-center rounded-lg text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors"
                   aria-label={t("nav.tools")}
                 >
                   <LayoutGrid size={16} />
@@ -72,7 +72,7 @@ export default function Header({ position, title }: { position: HeaderPosition; 
 
             <button
               type="button"
-              className="flex h-8 w-8 items-center justify-center rounded-lg border border-border-default text-fg-secondary hover:text-accent-cyan hover:border-accent-cyan/40 transition-colors"
+              className="flex h-8 w-8 items-center justify-center rounded-lg text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors"
               onClick={toggleTheme}
               aria-label={t(theme === "dark" ? "nav.switchToLight" : "nav.switchToDark")}
             >
