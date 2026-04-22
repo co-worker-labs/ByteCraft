@@ -77,7 +77,7 @@ export default function Layout({
     <LayoutContext.Provider value={config}>
       <div
         hidden={isHidden}
-        className={`${footerPos === "fixed" ? "pb-5" : ""} ${bodyClassName || ""}`}
+        className={`min-h-screen flex flex-col ${footerPos === "fixed" ? "pb-5" : ""} ${bodyClassName || ""}`}
         style={bodyStyle}
       >
         <Header position={headerPos} title={title} />
@@ -95,7 +95,7 @@ export default function Layout({
           <ArrowUp size={18} />
         </button>
 
-        <main className={className} style={style}>
+        <main className={`flex-1 ${className || ""}`} style={style}>
           {aside ? <div className="mx-auto max-w-3xl px-4">{children}</div> : <>{children}</>}
         </main>
 
