@@ -23,7 +23,7 @@ export default function Footer({ position }: { position: FooterPosition }) {
 
   return (
     <footer className={`bg-bg-surface border-t border-border-default py-2 px-4 ${positionClass}`}>
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-1 sm:flex-row">
+      <div className="flex flex-col items-center justify-between gap-1 sm:flex-row">
         <p className="text-fg-muted text-xs">
           {t("footer.copyright", { year: new Date().getFullYear() })}
         </p>
