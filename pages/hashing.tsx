@@ -325,14 +325,14 @@ function TextHashing() {
               onChange={(e) => {
                 setStorageUnit(parseInt(e.target.value) as 1000 | 1024);
               }}
-              className="rounded-full text-xs font-bold px-3 py-1 w-full"
+              className="appearance-none rounded-full font-bold text-center w-full"
             >
               <option value="1000">{t("hashing:storageUnit1000")}</option>
               <option value="1024">{t("hashing:storageUnit1024")}</option>
             </StyledSelect>
           </div>
         </div>
-        <div className="sm:w-1/2 sm:flex sm:justify-end">
+        <div className="w-full sm:w-1/2 sm:flex sm:justify-end">
           <Button
             variant="danger"
             size="sm"
@@ -342,7 +342,7 @@ function TextHashing() {
               setPassphrase("");
               showToast(t("common:common.allCleared"), "danger", 2000);
             }}
-            className="rounded-full uppercase font-bold"
+            className="rounded-full uppercase font-bold w-full sm:w-auto"
           >
             {t("common:common.clearAll")}
             <X size={14} className="ms-1" />
