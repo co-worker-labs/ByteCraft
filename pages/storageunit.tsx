@@ -336,17 +336,12 @@ function MostConversionList() {
   );
 }
 function StorageUnitPage({ toolData }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation(["storageunit", "tools", "common"]);
+  const { t } = useTranslation(["storageunit", "tools"]);
   return (
     <>
       <ToolPageHeadBuilder toolPath="/storageunit" />
       <Layout title={t("tools:storageunit.title")}>
         <div className="container mx-auto px-4 pt-3 pb-6">
-          <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-            <span className="text-sm text-fg-secondary leading-relaxed">
-              {t("common:alert.notTransferred")}
-            </span>
-          </div>
           <Conversion />
           <div className="flex items-center gap-3 my-6">
             <div className="flex-1 h-px bg-border-default" />
