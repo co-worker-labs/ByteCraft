@@ -1,15 +1,16 @@
-import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { useState, useMemo } from "react";
-import { useTranslation } from "next-i18next/pages";
-import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
+"use client";
+
+import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Search, ChevronDown, ChevronUp } from "lucide-react";
-import { ToolPageHeadBuilder } from "../components/head_builder";
-import Layout from "../components/layout";
-import { ControlCode, getControlCodes, getPrintableCharacters } from "../libs/ascii";
-import { findTool, ToolData } from "../libs/tools";
-import { NeonTabs } from "../components/ui/tabs";
-import { Badge } from "../components/ui/badge";
-import { StyledInput } from "../components/ui/input";
+import Layout from "../../../components/layout";
+import { ControlCode, getControlCodes, getPrintableCharacters } from "../../../libs/ascii";
+import { NeonTabs } from "../../../components/ui/tabs";
+import { Badge } from "../../../components/ui/badge";
+import { StyledInput } from "../../../components/ui/input";
+
+const printableCharacters = getPrintableCharacters();
+const controlCodes = getControlCodes();
 
 function beautyPrint(
   code: number,
@@ -60,7 +61,7 @@ function beautyPrint(
 }
 
 function ControlCodeChart({ list }: { list: ControlCode[] }) {
-  const { t } = useTranslation("ascii");
+  const t = useTranslations("ascii");
   return (
     <div className="rounded-lg border border-border-default overflow-hidden">
       <div className="overflow-x-auto">
@@ -143,19 +144,18 @@ const categoryBadge: Record<
 };
 
 function PrintableCharacters({ list }: { list: number[] }) {
-  const { t } = useTranslation("ascii");
+  const t = useTranslations("ascii");
   const [search, setSearch] = useState("");
 
-  const filtered = useMemo(() => {
-    if (!search.trim()) return list;
-    const q = search.trim().toLowerCase();
-    return list.filter((code) => {
-      const dec = code.toString();
-      const hex = code.toString(16).toUpperCase();
-      const char = String.fromCharCode(code);
-      return dec.includes(q) || hex.toLowerCase().includes(q) || char.toLowerCase().includes(q);
-    });
-  }, [list, search]);
+  const q = search.trim().toLowerCase();
+  const filtered = !q
+    ? list
+    : list.filter((code) => {
+        const dec = code.toString();
+        const hex = code.toString(16).toUpperCase();
+        const char = String.fromCharCode(code);
+        return dec.includes(q) || hex.toLowerCase().includes(q) || char.toLowerCase().includes(q);
+      });
 
   return (
     <div>
@@ -267,17 +267,13 @@ function PrintableCharacters({ list }: { list: number[] }) {
   );
 }
 
-function AsciiPage({
-  toolData,
-  printableCharacters,
-  controlCodes,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation(["ascii", "common", "tools"]);
+export default function AsciiPage() {
+  const t = useTranslations("tools");
+  const ta = useTranslations("ascii");
   const [expanded, setExpanded] = useState(false);
   return (
     <>
-      <ToolPageHeadBuilder toolPath="/ascii" />
-      <Layout title={t("tools:ascii.title")}>
+      <Layout title={t("ascii.title")}>
         <div className="container mx-auto px-4 pt-3 pb-6">
           <section id="description" className="py-3">
             <div className="relative">
@@ -287,7 +283,7 @@ function AsciiPage({
                 }`}
               >
                 <p className="text-fg-secondary text-sm leading-8 indent-12">
-                  {t("ascii:description.text")}
+                  {ta("description.text")}
                 </p>
               </div>
               {!expanded && (
@@ -302,35 +298,31 @@ function AsciiPage({
               {expanded ? (
                 <>
                   <ChevronUp size={14} />
-                  {t("ascii:description.showLess")}
+                  {ta("description.showLess")}
                 </>
               ) : (
                 <>
                   <ChevronDown size={14} />
-                  {t("ascii:description.showMore")}
+                  {ta("description.showMore")}
                 </>
               )}
             </button>
           </section>
           <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-            <span className="text-sm text-fg-secondary leading-relaxed">{t("ascii:tip")}</span>
+            <span className="text-sm text-fg-secondary leading-relaxed">{ta("tip")}</span>
           </div>
           <section>
             <NeonTabs
               tabs={[
                 {
                   label: (
-                    <span className="font-mono text-sm font-bold">
-                      {t("ascii:printableCharacters")}
-                    </span>
+                    <span className="font-mono text-sm font-bold">{ta("printableCharacters")}</span>
                   ),
                   content: <PrintableCharacters list={printableCharacters} />,
                 },
                 {
                   label: (
-                    <span className="font-mono text-sm font-bold">
-                      {t("ascii:controlCodeCharts")}
-                    </span>
+                    <span className="font-mono text-sm font-bold">{ta("controlCodeCharts")}</span>
                   ),
                   content: <ControlCodeChart list={controlCodes} />,
                 },
@@ -342,22 +334,3 @@ function AsciiPage({
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const locale = context.locale || "en";
-  const path = "/ascii";
-  const toolData: ToolData = findTool(path);
-  const printableCharacters: number[] = getPrintableCharacters();
-  const controlCodes: ControlCode[] = getControlCodes();
-
-  return {
-    props: {
-      toolData: toolData,
-      printableCharacters: printableCharacters,
-      controlCodes: controlCodes,
-      ...(await serverSideTranslations(locale, ["common", "ascii", "tools"])),
-    },
-  };
-};
-
-export default AsciiPage;

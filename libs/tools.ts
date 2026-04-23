@@ -1,4 +1,4 @@
-import { TFunction } from "i18next";
+import type { useTranslations } from "next-intl";
 
 export interface ToolData {
   path: string;
@@ -12,13 +12,13 @@ function pathToToolKey(path: string): string {
   return path.replace("/", "").replace(/-/g, "");
 }
 
-export function getTranslatedTools(t: TFunction): ToolData[] {
+export function getTranslatedTools(t: ReturnType<typeof useTranslations>): ToolData[] {
   return toolsList.map((tool) => {
     const key = pathToToolKey(tool.path);
     return {
       ...tool,
-      title: t(`tools:${key}.title`),
-      description: t(`tools:${key}.description`),
+      title: t(`${key}.title`),
+      description: t(`${key}.description`),
     };
   });
 }

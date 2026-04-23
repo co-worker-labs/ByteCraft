@@ -1,16 +1,19 @@
-import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { ChangeEvent, useMemo, useState } from "react";
-import { useTranslation } from "next-i18next/pages";
-import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
-import { CopyButton } from "../components/ui/copy-btn";
-import { ToolPageHeadBuilder } from "../components/head_builder";
-import Layout from "../components/layout";
-import { showToast } from "../libs/toast";
-import { findTool, ToolData } from "../libs/tools";
-import { convert, getStorageUnitData, StorageUnitData, storageUnitList } from "../utils/storage";
-import { StyledInput } from "../components/ui/input";
-import { StyledSelect } from "../components/ui/input";
-import { StyledCheckbox } from "../components/ui/input";
+"use client";
+
+import { ChangeEvent, useState } from "react";
+import { useTranslations } from "next-intl";
+import { CopyButton } from "../../../components/ui/copy-btn";
+import Layout from "../../../components/layout";
+import { showToast } from "../../../libs/toast";
+import {
+  convert,
+  getStorageUnitData,
+  StorageUnitData,
+  storageUnitList,
+} from "../../../utils/storage";
+import { StyledInput } from "../../../components/ui/input";
+import { StyledSelect } from "../../../components/ui/input";
+import { StyledCheckbox } from "../../../components/ui/input";
 
 interface ConversionOutput {
   unit: StorageUnitData;
@@ -32,20 +35,20 @@ function formatByComma(value: string): string {
 }
 
 function Conversion() {
-  const { t } = useTranslation("storageunit");
+  const t = useTranslations("storageunit");
+  const tc = useTranslations("common");
   const [current, setCurrent] = useState<number>(1);
   const [selectedUnit, setSelectedUnit] = useState<string>("GB");
 
   const [measurements, setMeasurementTypes] = useState<string[]>(["Decimal"]);
 
-  const unitList = useMemo(
-    () => storageUnitList.filter((data) => data.type == "Base" || measurements.includes(data.type)),
-    [measurements]
+  const unitList = storageUnitList.filter(
+    (data) => data.type == "Base" || measurements.includes(data.type)
   );
 
-  const selectedUnitData = useMemo(() => getStorageUnitData(selectedUnit), [selectedUnit]);
+  const selectedUnitData = getStorageUnitData(selectedUnit);
 
-  const outputs = useMemo(() => {
+  const outputs = (() => {
     const currentUnitData = getStorageUnitData(selectedUnit);
     if (!currentUnitData) return [];
 
@@ -62,7 +65,7 @@ function Conversion() {
       }
     }
     return result;
-  }, [selectedUnit, current, unitList]);
+  })();
 
   function toggleMeasurementTypes(event: ChangeEvent<HTMLInputElement>) {
     const value = event.target.value;
@@ -82,7 +85,7 @@ function Conversion() {
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-accent-cyan/60" />
             <span className="font-mono text-sm font-semibold text-accent-cyan">
-              {t("conversion", { unit: selectedUnitData?.title })}
+              {t("conversion", { unit: selectedUnitData?.title ?? "" })}
             </span>
           </div>
           <button
@@ -90,10 +93,10 @@ function Conversion() {
             className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
             onClick={() => {
               setCurrent(1);
-              showToast(t("common:common.reset"), "success", 2000);
+              showToast(tc("common.reset"), "success", 2000);
             }}
           >
-            {t("common:common.reset")}
+            {tc("common.reset")}
           </button>
         </div>
         <div className="flex items-center gap-3 mt-1">
@@ -335,38 +338,23 @@ function MostConversionList() {
     </section>
   );
 }
-function StorageUnitPage({ toolData }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation(["storageunit", "tools"]);
+
+export default function StorageUnitPage() {
+  const t = useTranslations("tools");
+  const ts = useTranslations("storageunit");
   return (
-    <>
-      <ToolPageHeadBuilder toolPath="/storageunit" />
-      <Layout title={t("tools:storageunit.title")}>
-        <div className="container mx-auto px-4 pt-3 pb-6">
-          <Conversion />
-          <div className="flex items-center gap-3 my-6">
-            <div className="flex-1 h-px bg-border-default" />
-            <span className="font-mono text-xs font-semibold text-fg-muted uppercase tracking-wider">
-              {t("commonConversionTable")}
-            </span>
-            <div className="flex-1 h-px bg-border-default" />
-          </div>
-          <MostConversionList />
+    <Layout title={t("storageunit.title")}>
+      <div className="container mx-auto px-4 pt-3 pb-6">
+        <Conversion />
+        <div className="flex items-center gap-3 my-6">
+          <div className="flex-1 h-px bg-border-default" />
+          <span className="font-mono text-xs font-semibold text-fg-muted uppercase tracking-wider">
+            {ts("commonConversionTable")}
+          </span>
+          <div className="flex-1 h-px bg-border-default" />
         </div>
-      </Layout>
-    </>
+        <MostConversionList />
+      </div>
+    </Layout>
   );
 }
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const locale = context.locale || "en";
-  const path = "/storageunit";
-  const toolData: ToolData = findTool(path);
-  return {
-    props: {
-      toolData,
-      ...(await serverSideTranslations(locale, ["common", "storageunit", "tools"])),
-    },
-  };
-};
-
-export default StorageUnitPage;

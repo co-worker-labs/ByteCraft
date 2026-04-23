@@ -1,10 +1,9 @@
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
+"use client";
+
 import { useEffect } from "react";
 import { ThemeProvider } from "../libs/theme";
 import { ToastProvider, useToastContext } from "../components/ui/toast";
 import { registerToastFn } from "../libs/toast";
-import { appWithTranslation } from "next-i18next/pages";
 
 function ToastBridge() {
   const { addToast } = useToastContext();
@@ -14,15 +13,13 @@ function ToastBridge() {
   return null;
 }
 
-function App({ Component, pageProps }: AppProps) {
+export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider>
       <ToastProvider>
         <ToastBridge />
-        <Component {...pageProps} />
+        {children}
       </ToastProvider>
     </ThemeProvider>
   );
 }
-
-export default appWithTranslation(App);

@@ -1,10 +1,12 @@
-import Link from "next/link";
-import { useTranslation } from "next-i18next/pages";
+"use client";
+
+import { Link } from "../i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export type FooterPosition = "sticky" | "fixed" | "none" | "hidden";
 
 export default function Footer({ position }: { position: FooterPosition }) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("common");
 
   if (position === "hidden") {
     return <></>;

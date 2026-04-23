@@ -1,12 +1,11 @@
-import Head from "next/head";
-import Layout from "../components/layout";
-import { listMatchedTools, ToolData } from "../libs/tools";
-import { useRouter } from "next/router";
-import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { useTranslation } from "next-i18next/pages";
-import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
-import { getTranslatedTools } from "../libs/tools";
-import { Card } from "../components/ui/card";
+"use client";
+
+import Layout from "../../components/layout";
+import { listMatchedTools, ToolData } from "../../libs/tools";
+import { useRouter } from "../../i18n/navigation";
+import { useTranslations } from "next-intl";
+import { getTranslatedTools } from "../../libs/tools";
+import { Card } from "../../components/ui/card";
 
 import { Hash, FileCode, Lock, KeyRound, FileCheck, Type, Code, HardDrive } from "lucide-react";
 
@@ -22,7 +21,7 @@ const toolIcons: Record<string, React.ReactNode> = {
 };
 
 function Introduce() {
-  const { t } = useTranslation("home");
+  const t = useTranslations("home");
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-bg-base via-bg-base to-bg-surface">
       <div className="bg-grid-pattern absolute inset-0" />
@@ -52,7 +51,7 @@ function Introduce() {
 
 function ToolCollection() {
   const router = useRouter();
-  const { t } = useTranslation(["common", "tools"]);
+  const t = useTranslations("tools");
   const data = getTranslatedTools(t);
 
   return (
@@ -91,8 +90,9 @@ function ToolCollection() {
   );
 }
 
-export default function Home({ tools }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation(["home", "tools"]);
+export default function HomePage() {
+  const t = useTranslations("tools");
+  const tools = listMatchedTools("");
   const keywords: string[] = [];
   tools.forEach((value: ToolData) => {
     value.keywords.forEach((kw) => {
@@ -102,28 +102,9 @@ export default function Home({ tools }: InferGetStaticPropsType<typeof getStatic
     });
   });
   return (
-    <>
-      <Head>
-        <title>{t("home:title")}</title>
-        <meta name="description" content={t("home:metaDescription")} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keyword" content={keywords.join(",")} />
-      </Head>
-      <Layout headerPosition="none">
-        <Introduce />
-        <ToolCollection />
-      </Layout>
-    </>
+    <Layout headerPosition="none">
+      <Introduce />
+      <ToolCollection />
+    </Layout>
   );
 }
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const locale = context.locale || "en";
-  const tools: ToolData[] = listMatchedTools("");
-  return {
-    props: {
-      tools,
-      ...(await serverSideTranslations(locale, ["common", "home", "tools"])),
-    },
-  };
-};

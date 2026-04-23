@@ -1,5 +1,7 @@
-import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next/pages";
+"use client";
+
+import { useRouter, usePathname } from "../i18n/navigation";
+import { useLocale } from "next-intl";
 import { Globe } from "lucide-react";
 import { Dropdown } from "./ui/dropdown";
 
@@ -11,11 +13,11 @@ const languages = [
 
 export default function LanguageSwitcher() {
   const router = useRouter();
-  const { t } = useTranslation("common");
-  const currentLocale = router.locale || "en";
+  const pathname = usePathname();
+  const currentLocale = useLocale();
 
   function switchLocale(locale: string) {
-    router.push(router.pathname, router.asPath, { locale });
+    router.replace(pathname, { locale });
   }
 
   return (
@@ -24,7 +26,7 @@ export default function LanguageSwitcher() {
         <button
           type="button"
           className="flex h-8 w-8 items-center justify-center rounded-lg text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors"
-          aria-label={t("common.language")}
+          aria-label="Language"
         >
           <Globe size={16} />
         </button>

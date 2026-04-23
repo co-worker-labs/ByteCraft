@@ -1,11 +1,15 @@
-import { GetStaticProps } from "next";
-import { useTranslation } from "next-i18next/pages";
-import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
+"use client";
 
-import Layout from "../../components/layout";
+import { useTranslations } from "next-intl";
+import Layout from "../../../../components/layout";
 
-export default function Privacy() {
-  const { t } = useTranslation("privacy");
+function tList(t: ReturnType<typeof useTranslations>, key: string): string[] {
+   
+  return (t as any)(key, { returnObjects: true }) as string[];
+}
+
+export default function PrivacyPage() {
+  const t = useTranslations("privacy");
 
   return (
     <Layout footerPosition="none" title={t("title")}>
@@ -25,7 +29,7 @@ export default function Privacy() {
             <p className="mt-1">{t("personalInfoP1")}</p>
             <p className="mt-1">{t("personalInfoP2")}</p>
             <ul className="list-disc list-inside mt-1">
-              {(t("personalInfoList1", { returnObjects: true }) as string[]).map((item, i) => (
+              {tList(t, "personalInfoList1").map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
@@ -39,7 +43,7 @@ export default function Privacy() {
             <p className="mt-1">{t("personalUserInfoP2")}</p>
             <p className="mt-1">{t("personalUserInfoP3")}</p>
             <ul className="list-disc list-inside mt-1">
-              {(t("personalUserInfoList1", { returnObjects: true }) as string[]).map((item, i) => (
+              {tList(t, "personalUserInfoList1").map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
@@ -47,7 +51,7 @@ export default function Privacy() {
             <p className="mt-1">{t("personalUserInfoP4")}</p>
             <p className="mt-1">{t("personalUserInfoP5")}</p>
             <ul className="list-disc list-inside mt-1">
-              {(t("personalUserInfoList2", { returnObjects: true }) as string[]).map((item, i) => (
+              {tList(t, "personalUserInfoList2").map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
@@ -69,7 +73,7 @@ export default function Privacy() {
             <p className="mt-1">{t("advertisingP1")}</p>
             <p className="mt-1">{t("advertisingP2")}</p>
             <ul className="list-disc list-inside mt-1">
-              {(t("advertisingList", { returnObjects: true }) as string[]).map((item, i) => (
+              {tList(t, "advertisingList").map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
@@ -115,7 +119,7 @@ export default function Privacy() {
             <p className="mt-1">{t("googleDriveP1")}</p>
             <p className="mt-1">{t("googleDriveP2")}</p>
             <ul className="list-disc list-inside mt-1">
-              {(t("googleDriveList", { returnObjects: true }) as string[]).map((item, i) => (
+              {tList(t, "googleDriveList").map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
@@ -140,12 +144,3 @@ export default function Privacy() {
     </Layout>
   );
 }
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const locale = context.locale || "en";
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common", "privacy"])),
-    },
-  };
-};

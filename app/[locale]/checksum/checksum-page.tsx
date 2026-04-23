@@ -1,22 +1,19 @@
-import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { ChangeEvent, useEffect, useRef, useState } from "react";
-import { useTranslation } from "next-i18next/pages";
-import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
-import { ToolPageHeadBuilder } from "../components/head_builder";
-import Layout from "../components/layout";
-import { showToast } from "../libs/toast";
-import { findTool, ToolData } from "../libs/tools";
-import { fromEvent } from "file-selector";
-import { formatBytes } from "../utils/storage";
-import { CopyButton } from "../components/ui/copy-btn";
-import { StyledTextarea } from "../components/ui/input";
-import { StyledSelect } from "../components/ui/input";
-import { StyledCheckbox } from "../components/ui/input";
-import { Button } from "../components/ui/button";
-import { Accordion } from "../components/ui/accordion";
-import { Plus, X, Play } from "lucide-react";
+"use client";
 
-const CryptoJS = require("crypto-js");
+import { ChangeEvent, useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
+import Layout from "../../../components/layout";
+import { showToast } from "../../../libs/toast";
+import { fromEvent } from "file-selector";
+import { formatBytes } from "../../../utils/storage";
+import { CopyButton } from "../../../components/ui/copy-btn";
+import { StyledTextarea } from "../../../components/ui/input";
+import { StyledSelect } from "../../../components/ui/input";
+import { StyledCheckbox } from "../../../components/ui/input";
+import { Button } from "../../../components/ui/button";
+import { Accordion } from "../../../components/ui/accordion";
+import { Plus, X, Play } from "lucide-react";
+import CryptoJS from "crypto-js";
 
 interface HashResult {
   title: string;
@@ -87,7 +84,7 @@ async function computeFileHashes(
   storageUnit: 1000 | 1024,
   signal?: AbortSignal
 ): Promise<HashResult> {
-  const hashers = new Map<string, any>();
+  const hashers = new Map<string, ReturnType<typeof createHasher>>();
   for (const type of activeTypes) {
     const hasher = createHasher(type);
     if (hasher) hashers.set(type, hasher);
@@ -105,7 +102,7 @@ async function computeFileHashes(
       if (done) break;
       const wordArray = CryptoJS.lib.WordArray.create(value);
       for (const h of hashers.values()) {
-        h.update(wordArray);
+        h?.update(wordArray);
       }
       processedBytes += value.byteLength;
       if (processedBytes >= nextYieldAt) {
@@ -134,8 +131,9 @@ async function computeFileHashes(
   };
 
   for (const [type, hasher] of hashers) {
+    if (!hasher) continue;
     const key = type.replace("-", "_") as keyof Omit<HashResult, "title" | "size">;
-    (result as any)[key] = hasher.finalize().toString();
+    (result as unknown as Record<string, string>)[key] = hasher.finalize().toString();
   }
 
   return result;
@@ -172,14 +170,15 @@ function HashResultRow({
 }
 
 function ChecksumDisplay({ data, types }: { data: HashResult; types: string[] }) {
-  const { t } = useTranslation(["checksum", "common"]);
+  const t = useTranslations("checksum");
+  const tc = useTranslations("common");
   const [testChecksum, setTestChecksum] = useState<string>("");
 
   return (
     <>
       <div className="relative mt-1">
         <StyledTextarea
-          placeholder={t("checksum:compareToChecksum")}
+          placeholder={t("compareToChecksum")}
           rows={2}
           value={testChecksum}
           onChange={(e) => {
@@ -191,7 +190,7 @@ function ChecksumDisplay({ data, types }: { data: HashResult; types: string[] })
           <button
             type="button"
             className="px-2.5 py-0.5 text-xs text-danger hover:text-danger/80 font-medium absolute end-2 top-2 transition-colors cursor-pointer"
-            title={t("common:common.clear")}
+            title={tc("common.clear")}
             onClick={() => {
               setTestChecksum("");
             }}
@@ -205,7 +204,7 @@ function ChecksumDisplay({ data, types }: { data: HashResult; types: string[] })
           <tbody>
             <tr className="border-b border-border-default bg-bg-elevated/40">
               <th className="py-2 px-4 text-fg-muted text-xs font-mono font-medium text-left whitespace-nowrap uppercase tracking-wider">
-                {t("common:common.size")}
+                {tc("common.size")}
               </th>
               <td className="py-2 text-sm text-fg-secondary font-mono">{data.size}</td>
             </tr>
@@ -229,7 +228,8 @@ function ChecksumDisplay({ data, types }: { data: HashResult; types: string[] })
 }
 
 function FileCalculator() {
-  const { t } = useTranslation(["checksum", "common"]);
+  const t = useTranslations("checksum");
+  const tc = useTranslations("common");
   const fileRef = useRef<HTMLInputElement>(null);
   const dropZoneRef = useRef<HTMLDivElement>(null);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -356,7 +356,7 @@ function FileCalculator() {
         <div className="absolute inset-0 z-10 bg-bg-base/75 rounded-xl flex flex-col items-center justify-center gap-4">
           <div className="w-8 h-8 border-2 border-accent-cyan border-t-transparent rounded-full animate-spin" />
           <span className="text-fg-secondary text-sm">
-            {t("common:common.calculating")} · {formatElapsed(elapsed)}
+            {tc("common.calculating")} · {formatElapsed(elapsed)}
           </span>
           <Button
             variant="danger"
@@ -365,7 +365,7 @@ function FileCalculator() {
             className="rounded-full uppercase font-bold px-10"
           >
             <X size={14} className="me-1" />
-            {t("common:common.cancel")}
+            {tc("common.cancel")}
           </Button>
         </div>
       )}
@@ -380,7 +380,7 @@ function FileCalculator() {
           ) : (
             <>
               <Plus size={20} className="me-1" />
-              <span className="font-bold">{t("checksum:dropFilesHere")}</span>
+              <span className="font-bold">{t("dropFilesHere")}</span>
             </>
           )}
         </div>
@@ -402,7 +402,7 @@ function FileCalculator() {
               }
               setSelectedFiles(files);
               showToast(
-                t("checksum:selectedFiles", {
+                t("selectedFiles", {
                   count: files.length,
                   files: files.length > 1 ? " files" : " file",
                 }),
@@ -419,7 +419,7 @@ function FileCalculator() {
       <div className="flex flex-col-reverse sm:flex-row sm:items-center gap-3 mt-4">
         <div className="flex items-center gap-2 sm:w-1/2">
           <label className="font-mono text-xs font-medium text-fg-muted uppercase tracking-wider whitespace-nowrap">
-            {t("common:common.storageUnit")}
+            {tc("common.storageUnit")}
           </label>
           <div className="flex-1">
             <StyledSelect
@@ -430,8 +430,8 @@ function FileCalculator() {
               }}
               className="appearance-none rounded-full font-bold text-center w-full"
             >
-              <option value="1000">{t("checksum:storageUnit1000")}</option>
-              <option value="1024">{t("checksum:storageUnit1024")}</option>
+              <option value="1000">{t("storageUnit1000")}</option>
+              <option value="1024">{t("storageUnit1024")}</option>
             </StyledSelect>
           </div>
         </div>
@@ -457,7 +457,7 @@ function FileCalculator() {
         </div>
         <p className="text-xs text-fg-muted/70 mt-2.5 flex items-center gap-1.5">
           <span className="inline-block w-3 h-3 rounded-full border border-current" />
-          {t("checksum:algoTip")}
+          {t("algoTip")}
         </p>
       </div>
       <div className="flex flex-col sm:flex-row gap-2 mt-4 sm:w-1/2">
@@ -469,7 +469,7 @@ function FileCalculator() {
           className="rounded-full uppercase font-bold flex-1"
         >
           <Play size={16} className="me-1" />
-          {t("checksum:calculate")}
+          {t("calculate")}
         </Button>
         <Button
           variant="danger"
@@ -483,14 +483,14 @@ function FileCalculator() {
             if (fileRef.current) {
               fileRef.current.value = "";
             }
-            showToast(t("common:common.deselected"), "danger", 2000);
+            showToast(tc("common.deselected"), "danger", 2000);
           }}
           className="rounded-full uppercase font-bold flex-1"
         >
           <X size={14} className="me-1" />
           {selectedFiles.length > 0
-            ? t("checksum:deselect", { count: selectedFiles.length })
-            : t("checksum:noFileChosen")}
+            ? t("deselect", { count: selectedFiles.length })
+            : t("noFileChosen")}
         </Button>
       </div>
       {hashResList.length == 0 ? (
@@ -498,7 +498,7 @@ function FileCalculator() {
           className="border border-border-default rounded-xl w-full flex justify-center items-center mt-4 text-lg text-fg-muted font-bold bg-bg-surface"
           style={{ height: "8rem" }}
         >
-          {t("checksum:checksumOutput")}
+          {t("checksumOutput")}
         </div>
       ) : (
         <div className="mt-4">
@@ -516,7 +516,7 @@ function FileCalculator() {
 }
 
 function Description() {
-  const { t } = useTranslation("checksum");
+  const t = useTranslations("checksum");
   return (
     <section id="description" className="mt-8">
       <div className="mb-4">
@@ -542,41 +542,25 @@ function Description() {
   );
 }
 
-function HashCalculatorPage({ toolData }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation(["common", "tools"]);
+export default function ChecksumPage() {
+  const tc = useTranslations("common");
+  const t = useTranslations("tools");
   return (
-    <>
-      <ToolPageHeadBuilder toolPath="/checksum" />
-      <Layout title={t("tools:checksum.title")}>
-        <div className="container mx-auto px-4 pt-3 pb-6">
-          <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-            <span className="text-sm text-fg-secondary leading-relaxed">
-              {t("alert.filesNotTransferred")}
-            </span>
-          </div>
-          <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-3 my-4">
-            <span className="text-sm text-fg-secondary leading-relaxed">
-              {t("alert.checksumInfo")}
-            </span>
-          </div>
-          <FileCalculator />
-          <Description />
+    <Layout title={t("checksum.title")}>
+      <div className="container mx-auto px-4 pt-3 pb-6">
+        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
+          <span className="text-sm text-fg-secondary leading-relaxed">
+            {tc("alert.filesNotTransferred")}
+          </span>
         </div>
-      </Layout>
-    </>
+        <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-3 my-4">
+          <span className="text-sm text-fg-secondary leading-relaxed">
+            {tc("alert.checksumInfo")}
+          </span>
+        </div>
+        <FileCalculator />
+        <Description />
+      </div>
+    </Layout>
   );
 }
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const locale = context.locale || "en";
-  const path = "/checksum";
-  const toolData: ToolData = findTool(path);
-  return {
-    props: {
-      toolData,
-      ...(await serverSideTranslations(locale, ["common", "checksum", "tools"])),
-    },
-  };
-};
-
-export default HashCalculatorPage;

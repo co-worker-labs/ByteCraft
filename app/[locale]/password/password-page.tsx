@@ -1,14 +1,8 @@
+"use client";
+
 import "rc-slider/assets/index.css";
 import Slider from "rc-slider";
-import {
-  ChangeEvent,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-  useSyncExternalStore,
-} from "react";
+import { ChangeEvent, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import {
   memorable_capitalize_checked,
   memorable_full_words_checked,
@@ -27,17 +21,14 @@ import {
   PasswordLength,
   PasswordType,
   calculateEntropy,
-} from "../libs/password/main";
+} from "../../../libs/password/main";
 
-import { GetStaticProps } from "next";
-import { showToast } from "../libs/toast";
-import Layout from "../components/layout";
-import { ToolPageHeadBuilder } from "../components/head_builder";
-import { useTranslation } from "next-i18next/pages";
-import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
-import { CopyButton } from "../components/ui/copy-btn";
-import { Button } from "../components/ui/button";
-import { StyledCheckbox } from "../components/ui/input";
+import { showToast } from "../../../libs/toast";
+import Layout from "../../../components/layout";
+import { useTranslations } from "next-intl";
+import { CopyButton } from "../../../components/ui/copy-btn";
+import { Button } from "../../../components/ui/button";
+import { StyledCheckbox } from "../../../components/ui/input";
 
 import {
   Clipboard,
@@ -105,7 +96,8 @@ function SavedPasswords({
   delCallback: (index: number) => void;
   clearAll: () => void;
 }) {
-  const { t } = useTranslation(["common", "password"]);
+  const t = useTranslations("password");
+  const tc = useTranslations("common");
   const [visibleMap, setVisibleMap] = useState<Record<string, boolean>>({});
 
   function passwordHash(pw: string[], type: string): string {
@@ -119,12 +111,12 @@ function SavedPasswords({
 
   function onDel(index: number) {
     delCallback(index);
-    showToast(t("common:common.deleted"), "danger", alert_del_timeout);
+    showToast(tc("common.deleted"), "danger", alert_del_timeout);
   }
 
   function onClearAll() {
     clearAll();
-    showToast(t("common:common.cleared"), "danger", alert_del_timeout);
+    showToast(tc("common.cleared"), "danger", alert_del_timeout);
   }
 
   function toggleAllVisibility() {
@@ -143,15 +135,15 @@ function SavedPasswords({
         <div className="flex items-center gap-2">
           <span className="w-1.5 h-4 rounded-full bg-accent-cyan" />
           <span className="font-mono text-xs font-semibold text-fg-muted uppercase tracking-wider">
-            {t("password:savedTitle")}
+            {t("savedTitle")}
           </span>
           <button
             type="button"
             className="text-fg-muted hover:text-accent-cyan bg-fg-muted/10 hover:bg-accent-cyan/10 transition-colors cursor-pointer ml-1 rounded p-1"
             title={
               list.every((r) => visibleMap[passwordHash(r.password, r.type)] === true)
-                ? t("password:hidePassword")
-                : t("password:showPassword")
+                ? t("hidePassword")
+                : t("showPassword")
             }
             onClick={toggleAllVisibility}
           >
@@ -166,7 +158,7 @@ function SavedPasswords({
           className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
           onClick={onClearAll}
         >
-          {t("password:clearAllWithCount", { count: list.length })}
+          {t("clearAllWithCount", { count: list.length })}
         </button>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
@@ -187,9 +179,7 @@ function SavedPasswords({
                   <button
                     type="button"
                     className="text-fg-muted hover:text-accent-cyan transition-colors cursor-pointer p-1"
-                    title={
-                      isRecordVisible ? t("password:hidePassword") : t("password:showPassword")
-                    }
+                    title={isRecordVisible ? t("hidePassword") : t("showPassword")}
                     onClick={() => setVisibleMap((prev) => ({ ...prev, [rid]: !isRecordVisible }))}
                   >
                     {isRecordVisible ? <EyeOff size={14} /> : <Eye size={14} />}
@@ -198,7 +188,7 @@ function SavedPasswords({
                   <button
                     type="button"
                     className="text-fg-muted hover:text-danger transition-colors cursor-pointer p-1"
-                    title={t("common:common.delete")}
+                    title={tc("common.delete")}
                     onClick={() => onDel(index)}
                   >
                     <Trash2 size={14} />
@@ -236,7 +226,8 @@ function Generator({
   saved: SavedRecord[];
   setSaved: React.Dispatch<React.SetStateAction<SavedRecord[]>>;
 }) {
-  const { t } = useTranslation(["common", "password"]);
+  const t = useTranslations("password");
+  const tc = useTranslations("common");
   const [passwordType, setPasswordType] = useState<PasswordType>(default_type);
   const [characters, setCharacters] = useState<number>(defaultCharacters(default_type));
   const [passwordLength, setPasswordLength] = useState<PasswordLength>(defaultLength(default_type));
@@ -252,13 +243,10 @@ function Generator({
     }
   });
 
-  const levelStyle = useMemo(
-    () =>
-      password.length > 0
-        ? getPasswordLevelStyle(passwordType, password, characters)
-        : { width: "0%", backgroundColor: undefined, strengthLabel: "", entropy: 0 },
-    [passwordType, password, characters]
-  );
+  const levelStyle =
+    password.length > 0
+      ? getPasswordLevelStyle(passwordType, password, characters)
+      : { width: "0%", backgroundColor: undefined, strengthLabel: "", entropy: 0 };
 
   function onTypeChange(event: ChangeEvent<HTMLInputElement>) {
     let type: PasswordType = event.target.checked ? "Memorable" : "Random";
@@ -318,13 +306,13 @@ function Generator({
 
   function copyAction() {
     navigator.clipboard.writeText(copyPassword(passwordType, password));
-    showToast(t("common:common.copied"), "success", alert_copy_timeout);
+    showToast(tc("common.copied"), "success", alert_copy_timeout);
   }
 
   function generateAction() {
     const password = generate(passwordType, characters, passwordLength.current);
     setPassword(password);
-    showToast(t("common:common.generated"), "info", alert_gen_timeout, "generatedAlert");
+    showToast(tc("common.generated"), "info", alert_gen_timeout, "generatedAlert");
   }
 
   function setLength(length: number) {
@@ -349,7 +337,7 @@ function Generator({
       ];
       savedTemp.push(...saved);
       setSaved(savedTemp);
-      showToast(t("common:common.bookmarked"), "success", alert_saved_timeout);
+      showToast(tc("common.bookmarked"), "success", alert_saved_timeout);
     }
   }
 
@@ -357,9 +345,7 @@ function Generator({
     <section id="generator">
       <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
         <Lock size={18} className="text-accent-cyan mt-0.5 shrink-0" />
-        <span className="text-sm text-fg-secondary leading-relaxed">
-          {t("password:localGenerated")}
-        </span>
+        <span className="text-sm text-fg-secondary leading-relaxed">{t("localGenerated")}</span>
       </div>
       <div className="relative mt-2">
         <div className="flex items-center relative py-4 sm:py-5 px-4 sm:px-5">
@@ -379,7 +365,7 @@ function Generator({
               type="button"
               className="text-fg-muted hover:text-accent-cyan transition-colors cursor-pointer p-2"
               onClick={() => setVisible(!visible)}
-              title={visible ? t("password:hidePassword") : t("password:showPassword")}
+              title={visible ? t("hidePassword") : t("showPassword")}
             >
               {visible ? <EyeOff size={18} /> : <Eye size={18} />}
             </button>
@@ -387,7 +373,7 @@ function Generator({
               type="button"
               className="text-fg-muted hover:text-accent-cyan transition-colors cursor-pointer p-2"
               onClick={copyAction}
-              title={t("common:common.copy")}
+              title={tc("common.copy")}
             >
               <Clipboard size={18} />
             </button>
@@ -408,7 +394,7 @@ function Generator({
               />
             )}
             <span className="text-sm font-semibold" style={{ color: levelStyle.backgroundColor }}>
-              {t(`password:${levelStyle.strengthLabel}`)}
+              {t(`${levelStyle.strengthLabel}`)}
             </span>
           </div>
           <div className="flex items-center gap-2">
@@ -421,7 +407,7 @@ function Generator({
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-4 rounded-full bg-accent-purple" />
             <span className="font-mono text-xs font-semibold text-fg-muted uppercase tracking-wider">
-              {t("password:customizeYourPassword")}
+              {t("customizeYourPassword")}
             </span>
           </div>
           <div className="flex items-center rounded-full border border-border-default p-0.5 text-xs font-mono font-semibold">
@@ -437,7 +423,7 @@ function Generator({
                   onTypeChange({ target: { checked: false } } as ChangeEvent<HTMLInputElement>);
               }}
             >
-              {t("password:random")}
+              {t("random")}
             </button>
             <button
               type="button"
@@ -451,7 +437,7 @@ function Generator({
                   onTypeChange({ target: { checked: true } } as ChangeEvent<HTMLInputElement>);
               }}
             >
-              {t("password:memorable")}
+              {t("memorable")}
             </button>
           </div>
         </div>
@@ -460,7 +446,7 @@ function Generator({
           <div className="w-full lg:w-1/2 mt-4">
             <div className="flex items-center justify-between px-2">
               <label className="font-mono text-sm font-medium text-fg-secondary">
-                {t("password:passwordLength")}
+                {t("passwordLength")}
               </label>
               <span className="font-mono text-sm font-bold text-accent-cyan">
                 {passwordLength.current}
@@ -499,7 +485,7 @@ function Generator({
               <div className="flex flex-wrap">
                 <div className="w-1/2">
                   <StyledCheckbox
-                    label={t("password:uppercase")}
+                    label={t("uppercase")}
                     checked={(characters & random_uppercase_checked) != 0}
                     id="uppercaseCheck"
                     name="uppercase"
@@ -509,7 +495,7 @@ function Generator({
                 </div>
                 <div className="w-1/2">
                   <StyledCheckbox
-                    label={t("password:lowercase")}
+                    label={t("lowercase")}
                     checked={(characters & random_lowercase_checked) != 0}
                     id="lowercaseCheck"
                     name="lowercase"
@@ -519,7 +505,7 @@ function Generator({
                 </div>
                 <div className="w-1/2">
                   <StyledCheckbox
-                    label={t("password:numbers")}
+                    label={t("numbers")}
                     checked={(characters & random_numbers_checked) != 0}
                     id="numbersCheck"
                     name="numbers"
@@ -529,7 +515,7 @@ function Generator({
                 </div>
                 <div className="w-1/2">
                   <StyledCheckbox
-                    label={t("password:symbols")}
+                    label={t("symbols")}
                     checked={(characters & random_symbols_checked) != 0}
                     id="symoblsCheck"
                     name="symbols"
@@ -539,7 +525,7 @@ function Generator({
                 </div>
                 <div className="w-auto">
                   <StyledCheckbox
-                    label={t("password:avoidAmbiguous")}
+                    label={t("avoidAmbiguous")}
                     checked={(characters & random_avoid_amibugous_checked) != 0}
                     id="avoidAmibugousCheck"
                     name="avoidAmibugous"
@@ -553,7 +539,7 @@ function Generator({
               <div className="flex flex-wrap">
                 <div className="w-1/2">
                   <StyledCheckbox
-                    label={t("password:capitalize")}
+                    label={t("capitalize")}
                     checked={(characters & memorable_capitalize_checked) != 0}
                     id="capitalizeCheck"
                     name="capitalize"
@@ -563,7 +549,7 @@ function Generator({
                 </div>
                 <div className="w-1/2">
                   <StyledCheckbox
-                    label={t("password:fullWords")}
+                    label={t("fullWords")}
                     checked={(characters & memorable_full_words_checked) != 0}
                     id="fullwordsCheck"
                     name="fullwords"
@@ -584,7 +570,7 @@ function Generator({
           className="w-full rounded-full font-bold !border-emerald-400 !text-emerald-400 hover:!bg-emerald-400/10"
         >
           <RefreshCw size={16} />
-          {t("password:generatePassword")}
+          {t("generatePassword")}
         </Button>
         <Button
           variant="outline"
@@ -593,7 +579,7 @@ function Generator({
           className="w-full rounded-full font-bold !border-blue-500 !text-blue-500 hover:!bg-blue-500/10"
         >
           <Clipboard size={16} />
-          {t("password:copyPassword")}
+          {t("copyPassword")}
         </Button>
         <Button
           variant="outline"
@@ -602,19 +588,19 @@ function Generator({
           className="w-full rounded-full font-bold !border-accent-purple !text-accent-purple hover:!bg-accent-purple-dim"
         >
           <BookmarkPlus size={16} />
-          {t("password:bookmarkPassword")}
+          {t("bookmarkPassword")}
         </Button>
         <Button
           variant="outline"
           size="lg"
           onClick={() => {
             navigator.clipboard.writeText("");
-            showToast(t("common:common.clearedClipboard"), "danger", 1000);
+            showToast(tc("common.clearedClipboard"), "danger", 1000);
           }}
           className="w-full rounded-full font-bold !border-danger !text-danger hover:!bg-danger/10"
         >
           <XCircle size={16} />
-          {t("password:clearClipboard")}
+          {t("clearClipboard")}
         </Button>
       </div>
     </section>
@@ -644,67 +630,48 @@ function parseSavedPasswords(raw: string): SavedRecord[] {
   }
 }
 
-function PasswordPage() {
-  const { t } = useTranslation(["tools", "password"]);
-  const title = t("password.title");
+export default function PasswordPage() {
+  const t = useTranslations("password");
+  const title = t("title");
 
   const rawSaved = useSyncExternalStore(subscribeToSavedPasswords, getSnapshot, getServerSnapshot);
-  const saved = useMemo(() => parseSavedPasswords(rawSaved), [rawSaved]);
+  const saved = parseSavedPasswords(rawSaved);
 
-  const setSaved = useCallback(
-    (updater: SavedRecord[] | ((prev: SavedRecord[]) => SavedRecord[])) => {
-      const current = parseSavedPasswords(localStorage.getItem(SAVED_PASSWORDS_KEY) ?? "[]");
-      const next = typeof updater === "function" ? updater(current) : updater;
-      localStorage.setItem(SAVED_PASSWORDS_KEY, JSON.stringify(next));
-      window.dispatchEvent(new StorageEvent("storage", { key: SAVED_PASSWORDS_KEY }));
-    },
-    []
-  );
+  const setSaved = (updater: SavedRecord[] | ((prev: SavedRecord[]) => SavedRecord[])) => {
+    const current = parseSavedPasswords(localStorage.getItem(SAVED_PASSWORDS_KEY) ?? "[]");
+    const next = typeof updater === "function" ? updater(current) : updater;
+    localStorage.setItem(SAVED_PASSWORDS_KEY, JSON.stringify(next));
+    window.dispatchEvent(new StorageEvent("storage", { key: SAVED_PASSWORDS_KEY }));
+  };
 
   return (
-    <>
-      <ToolPageHeadBuilder toolPath="/password" />
-      <Layout title={title}>
-        <div className="container mx-auto px-4 pt-3 pb-6">
-          <Generator saved={saved} setSaved={setSaved} />
-          <div className="mt-8 flex flex-col gap-3">
-            <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3">
-              <KeyRound size={18} className="text-accent-cyan mt-0.5 shrink-0" />
-              <span className="text-sm text-fg-secondary leading-relaxed">
-                {t("password:securityTip")}
-              </span>
-            </div>
-            <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-3">
-              <BarChart3 size={16} className="text-accent-purple mt-0.5 shrink-0" />
-              <span className="text-sm text-fg-secondary leading-relaxed">
-                {t("password:entropyVerifiedDesc")}
-              </span>
-            </div>
+    <Layout title={title}>
+      <div className="container mx-auto px-4 pt-3 pb-6">
+        <Generator saved={saved} setSaved={setSaved} />
+        <div className="mt-8 flex flex-col gap-3">
+          <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3">
+            <KeyRound size={18} className="text-accent-cyan mt-0.5 shrink-0" />
+            <span className="text-sm text-fg-secondary leading-relaxed">{t("securityTip")}</span>
           </div>
-          <SavedPasswords
-            list={saved}
-            delCallback={(index) => {
-              const temp = saved.slice(0, index);
-              temp.push(...saved.slice(index + 1));
-              setSaved(temp);
-            }}
-            clearAll={() => {
-              setSaved([]);
-            }}
-          />
+          <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-3">
+            <BarChart3 size={16} className="text-accent-purple mt-0.5 shrink-0" />
+            <span className="text-sm text-fg-secondary leading-relaxed">
+              {t("entropyVerifiedDesc")}
+            </span>
+          </div>
         </div>
-      </Layout>
-    </>
+        <SavedPasswords
+          list={saved}
+          delCallback={(index) => {
+            const temp = saved.slice(0, index);
+            temp.push(...saved.slice(index + 1));
+            setSaved(temp);
+          }}
+          clearAll={() => {
+            setSaved([]);
+          }}
+        />
+      </div>
+    </Layout>
   );
 }
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const locale = context.locale || "en";
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common", "password", "tools"])),
-    },
-  };
-};
-
-export default PasswordPage;

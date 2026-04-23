@@ -1,9 +1,10 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
+"use client";
+
+import { useRouter, usePathname, Link } from "../i18n/navigation";
 import { LayoutGrid, Sun, Moon } from "lucide-react";
 import { getTranslatedTools } from "../libs/tools";
 import { useTheme } from "../libs/theme";
-import { useTranslation } from "next-i18next/pages";
+import { useTranslations } from "next-intl";
 import LanguageSwitcher from "./language_switcher";
 import { Dropdown } from "./ui/dropdown";
 
@@ -11,15 +12,16 @@ export type HeaderPosition = "sticky" | "none" | "hidden";
 
 export default function Header({ position, title }: { position: HeaderPosition; title?: string }) {
   const router = useRouter();
+  const currentPath = usePathname();
   const { theme, toggleTheme } = useTheme();
-  const { t } = useTranslation("common");
+  const t = useTranslations("common");
+  const tTools = useTranslations("tools");
 
   if (position === "hidden") {
     return <></>;
   }
 
-  const tools = getTranslatedTools(t);
-  const currentPath = router.asPath;
+  const tools = getTranslatedTools(tTools);
 
   const toolItems = tools.map((tool) => ({
     label: tool.title,
@@ -48,7 +50,7 @@ export default function Header({ position, title }: { position: HeaderPosition; 
               href=""
               onClick={(e) => {
                 e.preventDefault();
-                router.reload();
+                router.refresh();
               }}
               className="mx-4 truncate text-center text-sm font-bold text-fg-secondary hover:text-fg-primary transition-colors"
             >

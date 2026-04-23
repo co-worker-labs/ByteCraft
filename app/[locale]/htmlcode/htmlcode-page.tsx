@@ -1,10 +1,9 @@
-import { GetStaticProps, InferGetStaticPropsType } from "next";
+"use client";
+
 import { useState } from "react";
-import { useTranslation } from "next-i18next/pages";
-import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
+import { useTranslations } from "next-intl";
 import { Search, ChevronDown, ChevronUp } from "lucide-react";
-import { ToolPageHeadBuilder } from "../components/head_builder";
-import Layout from "../components/layout";
+import Layout from "../../../components/layout";
 import {
   getLetters,
   CharacterData,
@@ -16,10 +15,9 @@ import {
   getIcons,
   getPronunciations,
   PronunciationCharacterData,
-} from "../libs/htmlcode";
-import { findTool, ToolData } from "../libs/tools";
-import { NeonTabs } from "../components/ui/tabs";
-import { StyledInput } from "../components/ui/input";
+} from "../../../libs/htmlcode";
+import { NeonTabs } from "../../../components/ui/tabs";
+import { StyledInput } from "../../../components/ui/input";
 
 function printEntityName(code: string | undefined) {
   if (code && code.startsWith("&")) {
@@ -35,7 +33,7 @@ function PronunciationPrinter({
   list: PronunciationCharacterData[];
   desc: string;
 }) {
-  const { t } = useTranslation("htmlcode");
+  const t = useTranslations("htmlcode");
   const [search, setSearch] = useState("");
 
   const q = search.trim().toLowerCase();
@@ -144,7 +142,7 @@ function PronunciationPrinter({
 }
 
 function CharacterPrinter({ desc, list }: { list: CharacterData[]; desc: string }) {
-  const { t } = useTranslation("htmlcode");
+  const t = useTranslations("htmlcode");
   const [search, setSearch] = useState("");
 
   const q = search.trim().toLowerCase();
@@ -247,7 +245,7 @@ function CharacterPrinter({ desc, list }: { list: CharacterData[]; desc: string 
 }
 
 function PrintLetters({ list }: { list: CharacterData[] }) {
-  const { t } = useTranslation("htmlcode");
+  const t = useTranslations("htmlcode");
   const [search, setSearch] = useState("");
 
   const letters: number[] = [];
@@ -365,7 +363,7 @@ function PrintLetters({ list }: { list: CharacterData[] }) {
 }
 
 function Description() {
-  const { t } = useTranslation("htmlcode");
+  const t = useTranslations("htmlcode");
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -409,98 +407,10 @@ function Description() {
   );
 }
 
-function HtmlCodePage({
-  toolData,
-  letters,
-  punctuations,
-  currencies,
-  mathematical,
-  diacritics,
-  ascii,
-  icons,
-  pronunciations,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation(["htmlcode", "tools"]);
-  return (
-    <>
-      <ToolPageHeadBuilder toolPath="/htmlcode" />
-      <Layout title={t("tools:htmlcode.title")}>
-        <div className="container mx-auto px-4 pt-3 pb-6">
-          <Description />
-          <section>
-            <NeonTabs
-              tabs={[
-                {
-                  label: <span className="font-mono text-sm font-bold">{t("tabs.letters")}</span>,
-                  content: <PrintLetters list={letters} />,
-                },
-                {
-                  label: (
-                    <span className="font-mono text-sm font-bold">{t("tabs.punctuation")}</span>
-                  ),
-                  content: (
-                    <CharacterPrinter desc={t("tabDescriptions.punctuation")} list={punctuations} />
-                  ),
-                },
-                {
-                  label: (
-                    <span className="font-mono text-sm font-bold">{t("tabs.currencies")}</span>
-                  ),
-                  content: (
-                    <CharacterPrinter desc={t("tabDescriptions.currencies")} list={currencies} />
-                  ),
-                },
-                {
-                  label: (
-                    <span className="font-mono text-sm font-bold">{t("tabs.mathematical")}</span>
-                  ),
-                  content: (
-                    <CharacterPrinter
-                      desc={t("tabDescriptions.mathematical")}
-                      list={mathematical}
-                    />
-                  ),
-                },
-                {
-                  label: (
-                    <span className="font-mono text-sm font-bold">{t("tabs.pronunciations")}</span>
-                  ),
-                  content: (
-                    <PronunciationPrinter
-                      desc={t("tabDescriptions.pronunciations")}
-                      list={pronunciations}
-                    />
-                  ),
-                },
-                {
-                  label: (
-                    <span className="font-mono text-sm font-bold">{t("tabs.diacritics")}</span>
-                  ),
-                  content: (
-                    <CharacterPrinter desc={t("tabDescriptions.diacritics")} list={diacritics} />
-                  ),
-                },
-                {
-                  label: <span className="font-mono text-sm font-bold">{t("tabs.ascii")}</span>,
-                  content: <CharacterPrinter desc={t("tabDescriptions.ascii")} list={ascii} />,
-                },
-                {
-                  label: <span className="font-mono text-sm font-bold">{t("tabs.icons")}</span>,
-                  content: <CharacterPrinter desc={t("tabDescriptions.icons")} list={icons} />,
-                },
-              ]}
-            />
-          </section>
-        </div>
-      </Layout>
-    </>
-  );
-}
+export default function HtmlCodePage() {
+  const t = useTranslations("tools");
+  const th = useTranslations("htmlcode");
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const locale = context.locale || "en";
-  const path = "/htmlcode";
-  const toolData: ToolData = findTool(path);
   const letters = getLetters();
   const punctuations = getPunctuations();
   const currencies = getCurrencies();
@@ -509,20 +419,69 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const ascii = getAscii();
   const icons = getIcons();
   const pronunciations = getPronunciations();
-  return {
-    props: {
-      toolData,
-      letters,
-      punctuations,
-      currencies,
-      mathematical,
-      diacritics,
-      ascii,
-      icons,
-      pronunciations,
-      ...(await serverSideTranslations(locale, ["common", "htmlcode", "tools"])),
-    },
-  };
-};
 
-export default HtmlCodePage;
+  return (
+    <Layout title={t("htmlcode.title")}>
+      <div className="container mx-auto px-4 pt-3 pb-6">
+        <Description />
+        <section>
+          <NeonTabs
+            tabs={[
+              {
+                label: <span className="font-mono text-sm font-bold">{th("tabs.letters")}</span>,
+                content: <PrintLetters list={letters} />,
+              },
+              {
+                label: (
+                  <span className="font-mono text-sm font-bold">{th("tabs.punctuation")}</span>
+                ),
+                content: (
+                  <CharacterPrinter desc={th("tabDescriptions.punctuation")} list={punctuations} />
+                ),
+              },
+              {
+                label: <span className="font-mono text-sm font-bold">{th("tabs.currencies")}</span>,
+                content: (
+                  <CharacterPrinter desc={th("tabDescriptions.currencies")} list={currencies} />
+                ),
+              },
+              {
+                label: (
+                  <span className="font-mono text-sm font-bold">{th("tabs.mathematical")}</span>
+                ),
+                content: (
+                  <CharacterPrinter desc={th("tabDescriptions.mathematical")} list={mathematical} />
+                ),
+              },
+              {
+                label: (
+                  <span className="font-mono text-sm font-bold">{th("tabs.pronunciations")}</span>
+                ),
+                content: (
+                  <PronunciationPrinter
+                    desc={th("tabDescriptions.pronunciations")}
+                    list={pronunciations}
+                  />
+                ),
+              },
+              {
+                label: <span className="font-mono text-sm font-bold">{th("tabs.diacritics")}</span>,
+                content: (
+                  <CharacterPrinter desc={th("tabDescriptions.diacritics")} list={diacritics} />
+                ),
+              },
+              {
+                label: <span className="font-mono text-sm font-bold">{th("tabs.ascii")}</span>,
+                content: <CharacterPrinter desc={th("tabDescriptions.ascii")} list={ascii} />,
+              },
+              {
+                label: <span className="font-mono text-sm font-bold">{th("tabs.icons")}</span>,
+                content: <CharacterPrinter desc={th("tabDescriptions.icons")} list={icons} />,
+              },
+            ]}
+          />
+        </section>
+      </div>
+    </Layout>
+  );
+}

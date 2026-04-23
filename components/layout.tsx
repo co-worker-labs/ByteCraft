@@ -1,9 +1,19 @@
-import { CSSProperties, ReactNode, useCallback, useEffect } from "react";
+"use client";
+
+import {
+  CSSProperties,
+  ReactNode,
+  useCallback,
+  useEffect,
+  Context,
+  createContext,
+  useContext,
+  useState,
+} from "react";
 import Footer, { FooterPosition } from "./footer";
 import Header, { HeaderPosition } from "./header";
-import { Context, createContext, useContext, useState } from "react";
 import { ArrowUp } from "lucide-react";
-import { useRouter } from "next/router";
+import { usePathname } from "../i18n/navigation";
 import { pathTrim } from "../utils/path";
 
 interface LayoutSettings {
@@ -46,8 +56,8 @@ export default function Layout({
   const footerPos = footerPosition || "none";
   const headerPos = headerPosition || "sticky";
 
-  const router = useRouter();
-  const path = pathTrim(router.asPath);
+  const pathname = usePathname();
+  const path = pathTrim(pathname);
 
   const config = {
     reset: () => {

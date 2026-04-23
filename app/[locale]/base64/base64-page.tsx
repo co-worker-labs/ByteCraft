@@ -1,19 +1,23 @@
-import { GetStaticProps } from "next";
+"use client";
+
 import Image from "next/image";
 import { useState } from "react";
-import { CopyButton } from "../components/ui/copy-btn";
-import { ToolPageHeadBuilder } from "../components/head_builder";
-import Layout from "../components/layout";
-import { showToast } from "../libs/toast";
-import codingTableImg from "../public/base64/decimal-to-base64-table.png";
-import { useTranslation } from "next-i18next/pages";
-import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
-import { StyledTextarea, StyledInput, StyledSelect, StyledCheckbox } from "../components/ui/input";
-import { Button } from "../components/ui/button";
+import { CopyButton } from "../../../components/ui/copy-btn";
+import Layout from "../../../components/layout";
+import { showToast } from "../../../libs/toast";
+import { useTranslations } from "next-intl";
+import {
+  StyledTextarea,
+  StyledInput,
+  StyledSelect,
+  StyledCheckbox,
+} from "../../../components/ui/input";
+import { Button } from "../../../components/ui/button";
 import { ChevronsDown, ChevronsUp, X } from "lucide-react";
 
 function Conversion() {
-  const { t } = useTranslation(["common", "base64"]);
+  const t = useTranslations("base64");
+  const tc = useTranslations("common");
   const [rawContent, setRawContent] = useState<string>("");
   const [isTrimRaw, setIsTrimRaw] = useState<boolean>(true);
   const [rawCharset, setRawCharset] = useState<BufferEncoding>("utf-8");
@@ -51,7 +55,7 @@ function Conversion() {
     const encoded = Buffer.from(raw, rawCharset).toString("base64");
     updateEncodedContent(encoded);
     updateRawContent(raw);
-    showToast(t("common:common.encoded"), "success", 2000);
+    showToast(tc("common.encoded"), "success", 2000);
   }
 
   function doDecode() {
@@ -64,7 +68,7 @@ function Conversion() {
     const raw = Buffer.from(encoded, "base64").toString(rawCharset);
     updateEncodedContent(encoded);
     updateRawContent(raw);
-    showToast(t("common:common.decoded"), "success", 2000);
+    showToast(tc("common.decoded"), "success", 2000);
   }
 
   function isDisabledEncode(): boolean {
@@ -89,12 +93,12 @@ function Conversion() {
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-accent-cyan/60" />
             <span className="font-mono text-sm font-semibold text-accent-cyan">
-              {t("base64:plainText")}
+              {t("plainText")}
             </span>
           </div>
           <div className="flex items-center gap-3">
             <StyledCheckbox
-              label={t("common:common.trimWhiteSpace")}
+              label={tc("common.trimWhiteSpace")}
               id="isTrimCheck"
               checked={isTrimRaw}
               onChange={(e) => {
@@ -106,17 +110,17 @@ function Conversion() {
               className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
               onClick={() => {
                 updateRawContent("");
-                showToast(t("common:common.cleared"), "danger", 2000);
+                showToast(tc("common.cleared"), "danger", 2000);
               }}
             >
-              {t("common:common.clear")}
+              {tc("common.clear")}
             </button>
           </div>
         </div>
         <div className="relative mt-1">
           <StyledTextarea
             id="rawContentTextarea"
-            placeholder={t("base64:plainTextPlaceholder")}
+            placeholder={t("plainTextPlaceholder")}
             rows={6}
             value={rawContent}
             onChange={(e) => {
@@ -130,7 +134,7 @@ function Conversion() {
 
       <div className="mt-4">
         <StyledCheckbox
-          label={t("base64:basicAuthentication")}
+          label={t("basicAuthentication")}
           id="basicAuthFlag"
           checked={basicAuthEnabled}
           onChange={(e) => setBasicAuthEnabled(e.target.checked)}
@@ -139,8 +143,8 @@ function Conversion() {
           <div className="flex gap-0 mt-2">
             <StyledInput
               type="text"
-              placeholder={t("base64:username")}
-              aria-label={t("base64:username")}
+              placeholder={t("username")}
+              aria-label={t("username")}
               value={username}
               onChange={(e) => {
                 updateRawContent(buildBasicAuth(e.target.value, password));
@@ -152,8 +156,8 @@ function Conversion() {
             </span>
             <StyledInput
               type="text"
-              placeholder={t("base64:password")}
-              aria-label={t("base64:password")}
+              placeholder={t("password")}
+              aria-label={t("password")}
               value={password}
               onChange={(e) => {
                 updateRawContent(buildBasicAuth(username, e.target.value));
@@ -183,7 +187,7 @@ function Conversion() {
           onClick={doEncode}
           className="rounded-full font-bold"
         >
-          {t("base64:encode")}
+          {t("encode")}
           <ChevronsDown size={16} className="ms-1" />
         </Button>
         <Button
@@ -193,7 +197,7 @@ function Conversion() {
           onClick={doDecode}
           className="rounded-full font-bold"
         >
-          {t("base64:decode")}
+          {t("decode")}
           <ChevronsUp size={16} className="ms-1" />
         </Button>
         <Button
@@ -203,11 +207,11 @@ function Conversion() {
           onClick={() => {
             updateRawContent("");
             updateEncodedContent("");
-            showToast(t("common:common.allCleared"), "danger", 2000);
+            showToast(tc("common.allCleared"), "danger", 2000);
           }}
           className="rounded-full font-bold"
         >
-          {t("common:common.clearAll")}
+          {tc("common.clearAll")}
           <X size={16} className="ms-1" />
         </Button>
       </div>
@@ -217,7 +221,7 @@ function Conversion() {
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-accent-purple/60" />
             <span className="font-mono text-sm font-semibold text-accent-purple">
-              {t("base64:encodedText")}
+              {t("encodedText")}
             </span>
           </div>
           <button
@@ -225,16 +229,16 @@ function Conversion() {
             className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
             onClick={() => {
               setEncodedContent("");
-              showToast(t("common:common.cleared"), "danger", 2000);
+              showToast(tc("common.cleared"), "danger", 2000);
             }}
           >
-            {t("common:common.clear")}
+            {tc("common.clear")}
           </button>
         </div>
         <div className="relative mt-1">
           <StyledTextarea
             id="encodedContentTextarea"
-            placeholder={t("base64:encodedOutput")}
+            placeholder={t("encodedOutput")}
             rows={6}
             value={encodedContent}
             onChange={(e) => {
@@ -250,7 +254,7 @@ function Conversion() {
 }
 
 function Description() {
-  const { t } = useTranslation("base64");
+  const t = useTranslations("base64");
   return (
     <section id="description" className="mt-8">
       <div className="mb-4">
@@ -272,7 +276,13 @@ function Description() {
           <li>{t("descriptions.howStep4")}</li>
         </ol>
         <div className="mt-3 flex justify-center rounded-lg overflow-hidden border border-border-default bg-bg-elevated/50 p-3">
-          <Image src={codingTableImg} alt="" className="h-auto max-w-full" />
+          <Image
+            src="/base64/decimal-to-base64-table.png"
+            alt=""
+            width={600}
+            height={400}
+            className="h-auto max-w-full"
+          />
         </div>
       </div>
 
@@ -307,36 +317,23 @@ function Description() {
   );
 }
 
-function Base64Page() {
-  const { t } = useTranslation(["common", "tools"]);
-  const title = t("tools:base64.title");
+export default function Base64Page() {
+  const tc = useTranslations("common");
+  const t = useTranslations("tools");
+  const title = t("base64.title");
 
   return (
-    <>
-      <ToolPageHeadBuilder toolPath="/base64" />
-      <Layout title={title}>
-        <div className="container mx-auto px-4 pt-3 pb-6">
-          <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-            <span className="text-sm text-fg-secondary leading-relaxed">
-              {t("common:alert.notTransferred")}
-            </span>
-          </div>
-
-          <Conversion />
-          <Description />
+    <Layout title={title}>
+      <div className="container mx-auto px-4 pt-3 pb-6">
+        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
+          <span className="text-sm text-fg-secondary leading-relaxed">
+            {tc("alert.notTransferred")}
+          </span>
         </div>
-      </Layout>
-    </>
+
+        <Conversion />
+        <Description />
+      </div>
+    </Layout>
   );
 }
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const locale = context.locale || "en";
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common", "base64", "tools"])),
-    },
-  };
-};
-
-export default Base64Page;

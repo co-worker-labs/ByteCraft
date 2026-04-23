@@ -1,20 +1,18 @@
-import { GetStaticProps } from "next";
-import { ChangeEvent, useMemo, useState } from "react";
-import { ToolPageHeadBuilder } from "../components/head_builder";
-import Layout from "../components/layout";
-import { showToast } from "../libs/toast";
-import { formatBytes } from "../utils/storage";
-import { CopyButton } from "../components/ui/copy-btn";
-import { useTranslation } from "next-i18next/pages";
-import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
-import { NeonTabs } from "../components/ui/tabs";
-import { StyledTextarea } from "../components/ui/input";
-import { StyledSelect } from "../components/ui/input";
-import { StyledCheckbox } from "../components/ui/input";
-import { Button } from "../components/ui/button";
-import { X } from "lucide-react";
+"use client";
 
-const CryptoJS = require("crypto-js");
+import { ChangeEvent, useState } from "react";
+import Layout from "../../../components/layout";
+import { showToast } from "../../../libs/toast";
+import { formatBytes } from "../../../utils/storage";
+import { CopyButton } from "../../../components/ui/copy-btn";
+import { useTranslations } from "next-intl";
+import { NeonTabs } from "../../../components/ui/tabs";
+import { StyledTextarea } from "../../../components/ui/input";
+import { StyledSelect } from "../../../components/ui/input";
+import { StyledCheckbox } from "../../../components/ui/input";
+import { Button } from "../../../components/ui/button";
+import { X } from "lucide-react";
+import CryptoJS from "crypto-js";
 
 interface Result {
   title: string;
@@ -84,14 +82,15 @@ function HashResultRow({
 }
 
 function Display({ data }: { data: Result }) {
-  const { t } = useTranslation(["common", "hashing"]);
+  const t = useTranslations("hashing");
+  const tc = useTranslations("common");
   const [testChecksum, setTestChecksum] = useState<string>("");
 
   return (
     <>
       <div className="relative mt-1">
         <StyledTextarea
-          placeholder={t("hashing:pasteToCompare")}
+          placeholder={t("pasteToCompare")}
           rows={2}
           value={testChecksum}
           onChange={(e) => {
@@ -103,7 +102,7 @@ function Display({ data }: { data: Result }) {
           <button
             type="button"
             className="px-2.5 py-0.5 text-xs text-danger hover:text-danger/80 font-medium absolute end-2 top-2 transition-colors cursor-pointer"
-            title={t("common:common.clear")}
+            title={tc("common.clear")}
             onClick={() => {
               setTestChecksum("");
             }}
@@ -117,7 +116,7 @@ function Display({ data }: { data: Result }) {
           <tbody>
             <tr className="border-b border-border-default bg-bg-elevated/40">
               <th className="py-2 px-4 text-fg-muted text-xs font-mono font-medium text-left whitespace-nowrap uppercase tracking-wider">
-                {t("common:common.size")}
+                {tc("common.size")}
               </th>
               <td className="py-2 text-sm text-fg-secondary font-mono">{data.size}</td>
             </tr>
@@ -142,45 +141,46 @@ function Display({ data }: { data: Result }) {
 }
 
 function TextHashing() {
-  const { t } = useTranslation(["common", "hashing"]);
+  const t = useTranslations("hashing");
+  const tc = useTranslations("common");
   const [types, setTypes] = useState<string[]>(["md5", "sha1", "sha256", "sha512"]);
   const [storageUnit, setStorageUnit] = useState<1000 | 1024>(1000);
   const [content, setContent] = useState<string>("");
   const [isTrim, setIsTrim] = useState<boolean>(true);
 
-  const hashRes = useMemo<Result | undefined>(() => {
-    const raw = isTrim ? content.trim() : content;
-    if (!raw) return undefined;
-    const length = Buffer.byteLength(raw, "utf-8");
-    const size = formatBytes(length, storageUnit);
-    return {
-      title: "Hashing Result",
-      size: size,
-      md5: types.includes("md5") ? CryptoJS.MD5(raw).toString() : "",
-      sha1: types.includes("sha1") ? CryptoJS.SHA1(raw).toString() : "",
-      sha224: types.includes("sha224") ? CryptoJS.SHA224(raw).toString() : "",
-      sha256: types.includes("sha256") ? CryptoJS.SHA256(raw).toString() : "",
-      sha384: types.includes("sha384") ? CryptoJS.SHA384(raw).toString() : "",
-      sha512: types.includes("sha512") ? CryptoJS.SHA512(raw).toString() : "",
-      sha3_224: types.includes("sha3-224")
-        ? CryptoJS.SHA3(raw, { outputLength: 224 }).toString()
-        : "",
-      sha3_256: types.includes("sha3-256")
-        ? CryptoJS.SHA3(raw, { outputLength: 256 }).toString()
-        : "",
-      sha3_384: types.includes("sha3-384")
-        ? CryptoJS.SHA3(raw, { outputLength: 384 }).toString()
-        : "",
-      sha3_512: types.includes("sha3-512")
-        ? CryptoJS.SHA3(raw, { outputLength: 512 }).toString()
-        : "",
-      RIPEMD160: types.includes("RIPEMD160") ? CryptoJS.RIPEMD160(raw).toString() : "",
-    };
-  }, [content, isTrim, storageUnit, types]);
+  const raw = isTrim ? content.trim() : content;
+  const hashRes: Result | undefined = raw
+    ? (() => {
+        const length = Buffer.byteLength(raw, "utf-8");
+        const size = formatBytes(length, storageUnit);
+        return {
+          title: "Hashing Result",
+          size: size,
+          md5: types.includes("md5") ? CryptoJS.MD5(raw).toString() : "",
+          sha1: types.includes("sha1") ? CryptoJS.SHA1(raw).toString() : "",
+          sha224: types.includes("sha224") ? CryptoJS.SHA224(raw).toString() : "",
+          sha256: types.includes("sha256") ? CryptoJS.SHA256(raw).toString() : "",
+          sha384: types.includes("sha384") ? CryptoJS.SHA384(raw).toString() : "",
+          sha512: types.includes("sha512") ? CryptoJS.SHA512(raw).toString() : "",
+          sha3_224: types.includes("sha3-224")
+            ? CryptoJS.SHA3(raw, { outputLength: 224 }).toString()
+            : "",
+          sha3_256: types.includes("sha3-256")
+            ? CryptoJS.SHA3(raw, { outputLength: 256 }).toString()
+            : "",
+          sha3_384: types.includes("sha3-384")
+            ? CryptoJS.SHA3(raw, { outputLength: 384 }).toString()
+            : "",
+          sha3_512: types.includes("sha3-512")
+            ? CryptoJS.SHA3(raw, { outputLength: 512 }).toString()
+            : "",
+          RIPEMD160: types.includes("RIPEMD160") ? CryptoJS.RIPEMD160(raw).toString() : "",
+        };
+      })()
+    : undefined;
 
   const [passphrase, setPassphrase] = useState<string>("");
-  const hmacRes = useMemo<Result | undefined>(() => {
-    const raw = isTrim ? content.trim() : content;
+  const hmacRes: Result | undefined = (() => {
     if (!raw) return undefined;
     const phrase = passphrase.trim();
     if (!phrase) return undefined;
@@ -207,7 +207,7 @@ function TextHashing() {
           : "",
       RIPEMD160: types.includes("RIPEMD160") ? CryptoJS.HmacRIPEMD160(raw, phrase).toString() : "",
     };
-  }, [content, isTrim, passphrase, types, storageUnit]);
+  })();
 
   function onToggleCheck(event: ChangeEvent<HTMLInputElement>) {
     const checked = event.target.checked;
@@ -240,12 +240,12 @@ function TextHashing() {
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-accent-cyan/60" />
             <span className="font-mono text-sm font-semibold text-accent-cyan">
-              {t("hashing:plainText")}
+              {t("plainText")}
             </span>
           </div>
           <div className="flex items-center gap-3">
             <StyledCheckbox
-              label={t("common:common.trimWhiteSpace")}
+              label={tc("common.trimWhiteSpace")}
               id="isTrimCheck"
               checked={isTrim}
               onChange={(e) => {
@@ -257,10 +257,10 @@ function TextHashing() {
               className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
               onClick={() => {
                 setContent("");
-                showToast(t("common:common.cleared"), "danger", 2000);
+                showToast(tc("common.cleared"), "danger", 2000);
               }}
             >
-              {t("common:common.clear")}
+              {tc("common.clear")}
             </button>
           </div>
         </div>
@@ -285,23 +285,23 @@ function TextHashing() {
       <div className="mt-4">
         <div className="flex flex-wrap justify-between items-center">
           <span className="font-mono text-sm font-semibold text-accent-purple">
-            {t("hashing:secretPassphrase")}
+            {t("secretPassphrase")}
           </span>
           <button
             type="button"
             className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
             onClick={() => {
               setPassphrase("");
-              showToast(t("common:common.cleared"), "danger", 2000);
+              showToast(tc("common.cleared"), "danger", 2000);
             }}
           >
-            {t("common:common.clear")}
+            {tc("common.clear")}
           </button>
         </div>
         <div className="relative mt-1">
           <StyledTextarea
             id="passphraseTextarea"
-            placeholder={t("hashing:passphrasePlaceholder")}
+            placeholder={t("passphrasePlaceholder")}
             rows={2}
             value={passphrase}
             onChange={(e) => {
@@ -316,7 +316,7 @@ function TextHashing() {
       <div className="flex flex-col-reverse sm:flex-row sm:items-center gap-3 mt-4">
         <div className="flex items-center gap-2 sm:w-1/2">
           <label className="font-mono text-xs font-medium text-fg-muted uppercase tracking-wider whitespace-nowrap">
-            {t("common:common.storageUnit")}
+            {tc("common.storageUnit")}
           </label>
           <div className="flex-1">
             <StyledSelect
@@ -327,8 +327,8 @@ function TextHashing() {
               }}
               className="appearance-none rounded-full font-bold text-center w-full"
             >
-              <option value="1000">{t("hashing:storageUnit1000")}</option>
-              <option value="1024">{t("hashing:storageUnit1024")}</option>
+              <option value="1000">{t("storageUnit1000")}</option>
+              <option value="1024">{t("storageUnit1024")}</option>
             </StyledSelect>
           </div>
         </div>
@@ -340,11 +340,11 @@ function TextHashing() {
             onClick={() => {
               setContent("");
               setPassphrase("");
-              showToast(t("common:common.allCleared"), "danger", 2000);
+              showToast(tc("common.allCleared"), "danger", 2000);
             }}
             className="rounded-full uppercase font-bold w-full sm:w-auto"
           >
-            {t("common:common.clearAll")}
+            {tc("common.clearAll")}
             <X size={14} className="ms-1" />
           </Button>
         </div>
@@ -376,18 +376,14 @@ function TextHashing() {
           <NeonTabs
             tabs={[
               {
-                label: (
-                  <span className="font-mono text-sm font-bold">{t("common:common.hashing")}</span>
-                ),
+                label: <span className="font-mono text-sm font-bold">{tc("common.hashing")}</span>,
                 content: <Display data={hashRes} />,
               },
               ...(hmacRes
                 ? [
                     {
                       label: (
-                        <span className="font-mono text-sm font-bold">
-                          {t("common:common.hmac")}
-                        </span>
+                        <span className="font-mono text-sm font-bold">{tc("common.hmac")}</span>
                       ),
                       content: <Display data={hmacRes} />,
                     },
@@ -402,7 +398,7 @@ function TextHashing() {
 }
 
 function Description() {
-  const { t } = useTranslation("hashing");
+  const t = useTranslations("hashing");
   return (
     <section id="description" className="mt-8">
       <div className="mb-4">
@@ -430,35 +426,22 @@ function Description() {
   );
 }
 
-function HashingPage() {
-  const { t } = useTranslation(["common", "tools"]);
-  const title = t("tools:hashing.title");
+export default function HashingPage() {
+  const tc = useTranslations("common");
+  const t = useTranslations("tools");
+  const title = t("hashing.title");
 
   return (
-    <>
-      <ToolPageHeadBuilder toolPath="/hashing" />
-      <Layout title={title}>
-        <div className="container mx-auto px-4 pt-3 pb-6">
-          <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-            <span className="text-sm text-fg-secondary leading-relaxed">
-              {t("common:alert.notTransferred")}
-            </span>
-          </div>
-          <TextHashing />
-          <Description />
+    <Layout title={title}>
+      <div className="container mx-auto px-4 pt-3 pb-6">
+        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
+          <span className="text-sm text-fg-secondary leading-relaxed">
+            {tc("alert.notTransferred")}
+          </span>
         </div>
-      </Layout>
-    </>
+        <TextHashing />
+        <Description />
+      </div>
+    </Layout>
   );
 }
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const locale = context.locale || "en";
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common", "hashing", "tools"])),
-    },
-  };
-};
-
-export default HashingPage;

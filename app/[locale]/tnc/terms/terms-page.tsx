@@ -1,11 +1,15 @@
-import { GetStaticProps } from "next";
-import { useTranslation } from "next-i18next/pages";
-import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
+"use client";
 
-import Layout from "../../components/layout";
+import { useTranslations } from "next-intl";
+import Layout from "../../../../components/layout";
 
-export default function Terms() {
-  const { t } = useTranslation("terms");
+function tList(t: ReturnType<typeof useTranslations>, key: string): string[] {
+   
+  return (t as any)(key, { returnObjects: true }) as string[];
+}
+
+export default function TermsPage() {
+  const t = useTranslations("terms");
 
   return (
     <Layout footerPosition="none" title={t("title")}>
@@ -49,14 +53,14 @@ export default function Terms() {
             <p className="mt-1">{t("fairUseP1")}</p>
             <p className="mt-1">{t("fairUseP2")}</p>
             <ul className="list-disc list-inside mt-1">
-              {(t("fairUseList1", { returnObjects: true }) as string[]).map((item, i) => (
+              {tList(t, "fairUseList1").map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
 
             <p className="mt-1">{t("fairUseP3")}</p>
             <ul className="list-disc list-inside mt-1">
-              {(t("fairUseList2", { returnObjects: true }) as string[]).map((item, i) => (
+              {tList(t, "fairUseList2").map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
@@ -66,12 +70,3 @@ export default function Terms() {
     </Layout>
   );
 }
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const locale = context.locale || "en";
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common", "terms"])),
-    },
-  };
-};

@@ -1,24 +1,27 @@
-import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { useState } from "react";
-import { useTranslation } from "next-i18next/pages";
-import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
-import { CopyButton } from "../components/ui/copy-btn";
-import { ToolPageHeadBuilder } from "../components/head_builder";
-import Layout from "../components/layout";
-import { showToast } from "../libs/toast";
-import { findTool, ToolData } from "../libs/tools";
-import { StyledTextarea, StyledInput, StyledSelect, StyledCheckbox } from "../components/ui/input";
-import { Button } from "../components/ui/button";
-import { ChevronsDown, ChevronsUp, X } from "lucide-react";
+"use client";
 
-const CryptoJS = require("crypto-js");
+import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { CopyButton } from "../../../components/ui/copy-btn";
+import Layout from "../../../components/layout";
+import { showToast } from "../../../libs/toast";
+import {
+  StyledTextarea,
+  StyledInput,
+  StyledSelect,
+  StyledCheckbox,
+} from "../../../components/ui/input";
+import { Button } from "../../../components/ui/button";
+import { ChevronsDown, ChevronsUp, X } from "lucide-react";
+import CryptoJS from "crypto-js";
 
 type Algorithms = "AES" | "DES" | "Triple DES" | "Rabbit" | "RC4" | "RC4Drop";
 type BlockMode = "CBC" | "CFB" | "CTR" | "OFB" | "ECB";
 type PaddingScheme = "Pkcs7" | "Iso97971" | "AnsiX923" | "Iso10126" | "ZeroPadding" | "NoPadding";
 
 function Conversion() {
-  const { t } = useTranslation(["cipher", "common"]);
+  const t = useTranslations("cipher");
+  const tc = useTranslations("common");
   const [rawContent, setRawContent] = useState<string>("");
   const [isTrimRaw, setIsTrimRaw] = useState<boolean>(true);
   const [passphrase, setPassphrase] = useState<string>("");
@@ -131,7 +134,7 @@ function Conversion() {
       setPassphrase(phrase);
       setRawContent(raw);
       setEncryptedContent(encrypted.toString());
-      showToast(t("common:common.encrypted"), "success", 3000);
+      showToast(tc("common.encrypted"), "success", 3000);
     }
   }
 
@@ -183,9 +186,9 @@ function Conversion() {
       setPassphrase(phrase);
       try {
         setRawContent(decrypted.toString(CryptoJS.enc.Utf8));
-        showToast(t("common:common.decrypted"), "success", 3000);
+        showToast(tc("common.decrypted"), "success", 3000);
       } catch (e) {
-        showToast(t("common:alert.invalidCipher"), "danger", 3000);
+        showToast(tc("alert.invalidCipher"), "danger", 3000);
       }
     }
   }
@@ -197,12 +200,12 @@ function Conversion() {
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-accent-cyan/60" />
             <span className="font-mono text-sm font-semibold text-accent-cyan">
-              {t("cipher:plaintext")}
+              {t("plaintext")}
             </span>
           </div>
           <div className="flex items-center gap-3">
             <StyledCheckbox
-              label={t("common:common.trimWhiteSpace")}
+              label={tc("common.trimWhiteSpace")}
               id="isTrimCheck"
               checked={isTrimRaw}
               onChange={(e) => {
@@ -214,17 +217,17 @@ function Conversion() {
               className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
               onClick={() => {
                 setRawContent("");
-                showToast(t("common:common.cleared"), "danger", 2000);
+                showToast(tc("common.cleared"), "danger", 2000);
               }}
             >
-              {t("common:common.clear")}
+              {tc("common.clear")}
             </button>
           </div>
         </div>
         <div className="relative mt-1">
           <StyledTextarea
             id="rawContentTextarea"
-            placeholder={t("cipher:plaintextPlaceholder")}
+            placeholder={t("plaintextPlaceholder")}
             rows={5}
             value={rawContent}
             onChange={(e) => {
@@ -241,7 +244,7 @@ function Conversion() {
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-accent-purple/60" />
             <span className="font-mono text-sm font-semibold text-accent-purple">
-              {t("cipher:secretPassphrase")}
+              {t("secretPassphrase")}
             </span>
           </div>
           <button
@@ -249,16 +252,16 @@ function Conversion() {
             className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
             onClick={() => {
               setPassphrase("");
-              showToast(t("common:common.cleared"), "danger", 2000);
+              showToast(tc("common.cleared"), "danger", 2000);
             }}
           >
-            {t("common:common.clear")}
+            {tc("common.clear")}
           </button>
         </div>
         <div className="relative mt-1">
           <StyledTextarea
             id="passphraseTextarea"
-            placeholder={t("cipher:passphrasePlaceholder")}
+            placeholder={t("passphrasePlaceholder")}
             rows={3}
             value={passphrase}
             onChange={(e) => {
@@ -280,7 +283,7 @@ function Conversion() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <div className="flex items-center gap-3 sm:flex-col sm:items-stretch sm:gap-0">
             <label className="shrink-0 w-28 text-xs text-fg-muted font-mono uppercase tracking-wider sm:w-auto sm:mb-1.5">
-              {t("cipher:algorithms")}
+              {t("algorithms")}
             </label>
             <StyledSelect
               aria-label="Cipher Algorithms"
@@ -303,7 +306,7 @@ function Conversion() {
           </div>
           <div className="flex items-center gap-3 sm:flex-col sm:items-stretch sm:gap-0">
             <label className="shrink-0 w-28 text-xs text-fg-muted font-mono uppercase tracking-wider sm:w-auto sm:mb-1.5">
-              {t("cipher:blockMode")}
+              {t("blockMode")}
             </label>
             <StyledSelect
               aria-label="Block Mode"
@@ -322,7 +325,7 @@ function Conversion() {
           </div>
           <div className="flex items-center gap-3 sm:flex-col sm:items-stretch sm:gap-0">
             <label className="shrink-0 w-28 text-xs text-fg-muted font-mono uppercase tracking-wider sm:w-auto sm:mb-1.5">
-              {t("cipher:paddingScheme")}
+              {t("paddingScheme")}
             </label>
             <StyledSelect
               aria-label="Padding Scheme"
@@ -346,7 +349,7 @@ function Conversion() {
                 htmlFor="droppedWords"
                 className="shrink-0 w-28 text-xs text-fg-muted font-mono uppercase tracking-wider sm:w-auto sm:mb-1.5"
               >
-                {t("cipher:droppedWords")}
+                {t("droppedWords")}
               </label>
               <StyledInput
                 type="number"
@@ -371,7 +374,7 @@ function Conversion() {
           onClick={doEncrypt}
           className="rounded-full font-bold"
         >
-          {t("common:common.encrypted")}
+          {tc("common.encrypted")}
           <ChevronsDown size={16} className="ms-1" />
         </Button>
         <Button
@@ -381,7 +384,7 @@ function Conversion() {
           onClick={doDecrypt}
           className="rounded-full font-bold"
         >
-          {t("common:common.decrypted")}
+          {tc("common.decrypted")}
           <ChevronsUp size={16} className="ms-1" />
         </Button>
         <Button
@@ -392,11 +395,11 @@ function Conversion() {
             setRawContent("");
             setEncryptedContent("");
             setPassphrase("");
-            showToast(t("common:common.allCleared"), "danger", 2000);
+            showToast(tc("common.allCleared"), "danger", 2000);
           }}
           className="rounded-full font-bold col-span-2 md:col-span-1"
         >
-          {t("common:common.clearAll")}
+          {tc("common.clearAll")}
           <X size={16} className="ms-1" />
         </Button>
       </div>
@@ -406,7 +409,7 @@ function Conversion() {
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-accent-purple/60" />
             <span className="font-mono text-sm font-semibold text-accent-purple">
-              {t("cipher:ciphertext")}
+              {t("ciphertext")}
             </span>
           </div>
           <button
@@ -414,16 +417,16 @@ function Conversion() {
             className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
             onClick={() => {
               setEncryptedContent("");
-              showToast(t("common:common.cleared"), "danger", 2000);
+              showToast(tc("common.cleared"), "danger", 2000);
             }}
           >
-            {t("common:common.clear")}
+            {tc("common.clear")}
           </button>
         </div>
         <div className="relative mt-1">
           <StyledTextarea
             id="encryptedContentTextarea"
-            placeholder={t("cipher:ciphertextOutput")}
+            placeholder={t("ciphertextOutput")}
             rows={5}
             value={encryptedContent}
             onChange={(e) => {
@@ -439,7 +442,7 @@ function Conversion() {
 }
 
 function Description() {
-  const { t } = useTranslation("cipher");
+  const t = useTranslations("cipher");
   return (
     <section id="description" className="mt-8">
       <div className="mb-4">
@@ -471,36 +474,20 @@ function Description() {
   );
 }
 
-function CipherPage({ toolData }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation(["common", "tools"]);
+export default function CipherPage() {
+  const tc = useTranslations("common");
+  const t = useTranslations("tools");
   return (
-    <>
-      <ToolPageHeadBuilder toolPath="/cipher" />
-      <Layout title={t("tools:cipher.title")}>
-        <div className="container mx-auto px-4 pt-3 pb-6">
-          <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-            <span className="text-sm text-fg-secondary leading-relaxed">
-              {t("common:alert.notTransferred")}
-            </span>
-          </div>
-          <Conversion />
-          <Description />
+    <Layout title={t("cipher.title")}>
+      <div className="container mx-auto px-4 pt-3 pb-6">
+        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
+          <span className="text-sm text-fg-secondary leading-relaxed">
+            {tc("alert.notTransferred")}
+          </span>
         </div>
-      </Layout>
-    </>
+        <Conversion />
+        <Description />
+      </div>
+    </Layout>
   );
 }
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const locale = context.locale || "en";
-  const path = "/cipher";
-  const toolData: ToolData = findTool(path);
-  return {
-    props: {
-      toolData,
-      ...(await serverSideTranslations(locale, ["common", "cipher", "tools"])),
-    },
-  };
-};
-
-export default CipherPage;
