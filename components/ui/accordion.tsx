@@ -31,7 +31,7 @@ export function Accordion({ items, className = "" }: AccordionProps) {
                   className={`text-fg-muted transition-transform duration-200 ${open ? "rotate-180" : ""}`}
                 />
               </DisclosureButton>
-              <DisclosurePanel className="px-4 pb-3 pt-1 text-fg-secondary text-sm border-l-2 border-accent-cyan ml-2">
+              <DisclosurePanel className="px-4 pb-3 pt-1 text-fg-secondary text-sm">
                 {item.content}
               </DisclosurePanel>
             </>
