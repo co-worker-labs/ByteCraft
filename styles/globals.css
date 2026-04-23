@@ -85,6 +85,15 @@
   }
 }
 
+/* Hide scrollbar for password display while keeping scroll functionality */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 /* ===== Utility Classes ===== */
 @utility text-shadow-glow {
   text-shadow: 0 0 30px rgba(6, 214, 160, 0.3);

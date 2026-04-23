@@ -12,7 +12,7 @@ export const memorable_full_words_checked = 1 << 1;
 
 export type PasswordType = "Random" | "Memorable";
 
-export interface HistoryRecord {
+export interface SavedRecord {
   type: PasswordType;
   password: string[];
   characters: number;
@@ -77,9 +77,9 @@ export function defaultCharacters(passwordType: PasswordType): number {
 export function defaultLength(passwordType: PasswordType): PasswordLength {
   switch (passwordType) {
     case "Random":
-      return new PasswordLength(15, 8, 64);
+      return new PasswordLength(16, 8, 128);
     case "Memorable":
-      return new PasswordLength(6, 4, 16);
+      return new PasswordLength(6, 4, 32);
   }
 }
 
