@@ -12,9 +12,14 @@ export default function TermsPage() {
 
   const navItems = [
     { id: "overview", label: t("overviewTitle") },
-    { id: "site-usage", label: t("siteUsageTitle") },
-    { id: "general-conditions", label: t("generalConditionsTitle") },
-    { id: "fair-use", label: t("fairUseTitle") },
+    { id: "acceptance", label: t("acceptanceTitle") },
+    { id: "services", label: t("servicesTitle") },
+    { id: "conduct", label: t("conductTitle") },
+    { id: "ip", label: t("ipTitle") },
+    { id: "advertising", label: t("advertisingTitle") },
+    { id: "disclaimer", label: t("disclaimerTitle") },
+    { id: "changes", label: t("changesTitle") },
+    { id: "contact", label: t("contactTitle") },
   ];
 
   return (
@@ -29,6 +34,7 @@ export default function TermsPage() {
           <h1 className="text-2xl md:text-3xl font-bold text-fg-primary tracking-tight">
             {t("title")}
           </h1>
+          <p className="mt-2 text-sm text-fg-muted">{t("lastUpdated")}</p>
           <div className="mt-4 flex items-center gap-3">
             <span className="h-px w-12 bg-gradient-to-r from-accent-cyan/40 to-transparent" />
             <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan/60" />
@@ -55,56 +61,96 @@ export default function TermsPage() {
           <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
             <p>{t("overviewP1")}</p>
             <p>{t("overviewP2")}</p>
-            <p>{t("overviewP3")}</p>
-            <p>{t("overviewP4")}</p>
-            <p>{t("overviewP5")}</p>
           </div>
         </div>
 
-        <div id="site-usage" className="scroll-mt-6">
+        <div id="acceptance" className="scroll-mt-6">
           <div className="border-l-2 border-accent-cyan pl-3 mb-3">
-            <h3 className="text-lg font-semibold text-fg-primary">{t("siteUsageTitle")}</h3>
+            <h3 className="text-lg font-semibold text-fg-primary">{t("acceptanceTitle")}</h3>
           </div>
           <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
-            <p>{t("siteUsageP1")}</p>
-            <p>{t("siteUsageP2")}</p>
-            <p>{t("siteUsageP3")}</p>
-            <p>{t("siteUsageP4")}</p>
-            <p>{t("siteUsageP5")}</p>
+            <p>{t("acceptanceP1")}</p>
+            <p>{t("acceptanceP2")}</p>
           </div>
         </div>
 
-        <div id="general-conditions" className="scroll-mt-6">
+        <div id="services" className="scroll-mt-6">
           <div className="border-l-2 border-accent-cyan pl-3 mb-3">
-            <h3 className="text-lg font-semibold text-fg-primary">{t("generalConditionsTitle")}</h3>
+            <h3 className="text-lg font-semibold text-fg-primary">{t("servicesTitle")}</h3>
           </div>
           <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
-            <p>{t("generalConditionsP1")}</p>
-            <p>{t("generalConditionsP2")}</p>
-            <p>{t("generalConditionsP3")}</p>
-            <p>{t("generalConditionsP4")}</p>
-            <p>{t("generalConditionsP5")}</p>
-          </div>
-        </div>
-
-        <div id="fair-use" className="scroll-mt-6">
-          <div className="border-l-2 border-accent-cyan pl-3 mb-3">
-            <h3 className="text-lg font-semibold text-fg-primary">{t("fairUseTitle")}</h3>
-          </div>
-          <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
-            <p>{t("fairUseP1")}</p>
-            <p>{t("fairUseP2")}</p>
+            <p>{t("servicesP1")}</p>
             <ul className="list-disc list-outside ml-5 space-y-1.5">
-              {tList(t, "fairUseList1").map((item, i) => (
+              {tList(t, "servicesList1").map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
-            <p>{t("fairUseP3")}</p>
+            <p>{t("servicesP2")}</p>
+          </div>
+        </div>
+
+        <div id="conduct" className="scroll-mt-6">
+          <div className="border-l-2 border-accent-cyan pl-3 mb-3">
+            <h3 className="text-lg font-semibold text-fg-primary">{t("conductTitle")}</h3>
+          </div>
+          <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
+            <p>{t("conductP1")}</p>
             <ul className="list-disc list-outside ml-5 space-y-1.5">
-              {tList(t, "fairUseList2").map((item, i) => (
+              {tList(t, "conductList1").map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
+            <p>{t("conductP2")}</p>
+          </div>
+        </div>
+
+        <div id="ip" className="scroll-mt-6">
+          <div className="border-l-2 border-accent-cyan pl-3 mb-3">
+            <h3 className="text-lg font-semibold text-fg-primary">{t("ipTitle")}</h3>
+          </div>
+          <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
+            <p>{t("ipP1")}</p>
+            <p>{t("ipP2")}</p>
+          </div>
+        </div>
+
+        <div id="advertising" className="scroll-mt-6">
+          <div className="border-l-2 border-accent-cyan pl-3 mb-3">
+            <h3 className="text-lg font-semibold text-fg-primary">{t("advertisingTitle")}</h3>
+          </div>
+          <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
+            <p>{t("advertisingP1")}</p>
+            <p>{t("advertisingP2")}</p>
+            <p>{t("advertisingP3")}</p>
+          </div>
+        </div>
+
+        <div id="disclaimer" className="scroll-mt-6">
+          <div className="border-l-2 border-accent-cyan pl-3 mb-3">
+            <h3 className="text-lg font-semibold text-fg-primary">{t("disclaimerTitle")}</h3>
+          </div>
+          <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
+            <p>{t("disclaimerP1")}</p>
+            <p>{t("disclaimerP2")}</p>
+            <p>{t("disclaimerP3")}</p>
+          </div>
+        </div>
+
+        <div id="changes" className="scroll-mt-6">
+          <div className="border-l-2 border-accent-cyan pl-3 mb-3">
+            <h3 className="text-lg font-semibold text-fg-primary">{t("changesTitle")}</h3>
+          </div>
+          <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
+            <p>{t("changesP1")}</p>
+          </div>
+        </div>
+
+        <div id="contact" className="scroll-mt-6">
+          <div className="border-l-2 border-accent-cyan pl-3 mb-3">
+            <h3 className="text-lg font-semibold text-fg-primary">{t("contactTitle")}</h3>
+          </div>
+          <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
+            <p>{t("contactP1")}</p>
           </div>
         </div>
 

@@ -1,50 +1,82 @@
 {
-  "title": "关于隐私",
-  "privacyStatementTitle": "字节工坊 隐私声明",
-  "privacyStatementP1": "本隐私政策描述了你访问或购买 w3tools.online（以下简称\"本站\"）时，我们如何收集、使用和共享你的个人信息。",
-  "personalInfoTitle": "我们收集的个人信息",
-  "personalInfoP1": "当你访问本站时，我们会自动收集有关你设备的某些信息，包括你的网络浏览器、IP 地址、时区以及设备上安装的某些 Cookie 的信息。此外，当你浏览本站时，我们会收集你查看的单个网页或产品信息、引导你访问本站的网站或搜索词，以及你与本站互动的相关信息。我们将这些自动收集的信息称为\"设备信息\"。",
-  "personalInfoP2": "我们使用以下技术收集设备信息：",
-  "personalInfoList1": ["\"Cookie\" 是放置在你设备或计算机上的数据文件，通常包含一个匿名唯一标识符。有关 Cookie 的更多信息以及如何禁用 Cookie，请访问 http://www.allaboutcookies.org。", "\"日志文件\"和用户账户会跟踪本站上的操作，并收集包括你的 IP 地址、浏览器类型、互联网服务提供商、引荐/退出页面以及日期/时间戳等数据。", "\"网络信标\"、\"标签\"和\"像素\"是用于记录你浏览本站方式的电子文件。"],
-  "personalInfoP3": "此外，当你通过本站进行购买或尝试购买时，我们会收集你的某些信息，包括你的姓名、账单地址、收货地址、付款信息（包括信用卡号）、电子邮件地址和电话号码。我们将这些信息称为\"订单信息\"。",
-  "personalUserInfoTitle": "个人用户信息",
-  "personalUserInfoP1": "在本隐私政策中，当我们提到\"个人信息\"时，我们同时指设备信息和订单信息。",
-  "personalUserInfoP2": "我们如何使用你的个人信息？",
-  "personalUserInfoP3": "我们收集的订单信息通常用于处理通过本站下达的订单（包括处理你的付款信息、安排发货以及向你提供发票和/或订单确认）。此外，我们还将此订单信息用于：",
-  "personalUserInfoList1": ["与你沟通；", "审查我们的订单是否存在潜在风险或欺诈行为；以及", "根据你与我们分享的偏好，向你提供与我们的产品或服务相关的信息或广告。"],
-  "personalUserInfoP4": "我们收集的设备信息用于帮助我们筛查潜在风险和欺诈（特别是你的 IP 地址），以及更广泛地改进和优化本站（例如，通过生成有关客户如何浏览和与本站互动的分析数据，以及评估我们的营销和广告活动的效果）。",
-  "personalUserInfoP5": "我们收集的账户信息通常用于为你生成统计数据并提供个性化的学习路线。此外，我们还使用此信息来：",
-  "personalUserInfoList2": ["与你沟通；", "根据你与我们分享的偏好，向你提供与我们的产品或服务相关的信息或广告。"],
-  "sharingTitle": "个人信息的共享",
-  "sharingP1": "我们与第三方共享你的个人信息，以帮助我们如上所述使用你的个人信息。",
-  "sharingP2": "例如，我们使用 Google Analytics 来帮助我们了解客户如何使用本站。你可以在以下链接了解 Google 如何使用你的个人信息：https://www.google.com/intl/en/policies/privacy/。你也可以在此处选择退出 Google Analytics：https://tools.google.com/dlpage/gaoptout。",
-  "sharingP3": "我们还使用 Shopify 来运营我们的在线商店。你可以在以下链接了解 Shopify 如何使用你的个人信息：https://www.shopify.com/legal/privacy。",
-  "sharingP4": "我们通过在你浏览时展示广告来为本站提供资金支持。这些广告通常由专门为多个网站提供广告服务的合作伙伴管理。这些合作伙伴通常会收集你访问网站的匿名数据，以便为你个性化广告内容，确保你不会频繁看到相同的广告，并最终向广告主报告哪些广告效果良好。我们使用第三方为本站提供变现技术。你可以在此处查看他们的隐私和 Cookie 政策。",
-  "sharingP5": "最后，我们还可能为了遵守适用的法律法规、响应传票、搜查令或其他合法的信息请求，或为保护我们的权利而共享你的个人信息。",
-  "advertisingTitle": "行为广告",
-  "advertisingP1": "如上所述，我们使用你的个人信息为你提供我们认为你可能感兴趣的定向广告或营销信息。有关定向广告工作原理的更多信息，你可以访问网络广告促进会 (\"NAI\") 的教育页面：http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work。",
-  "advertisingP2": "你可以通过以下链接选择退出定向广告：",
-  "advertisingList": ["- Facebook: https://www.facebook.com/settings/?tab=ads", "- Google: https://www.google.com/settings/ads/anonymous", "- Bing: https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads"],
-  "advertisingP3": "你可以通过访问我们的 ads.txt 文件获取我们使用的合作伙伴的完整列表。",
-  "advertisingP4": "此外，你可以通过访问数字广告联盟的选择退出门户来选择退出其中一些服务：http://optout.aboutads.info/。",
-  "advertisingP5": "你可以在 https://www.youronlinechoices.com 了解更多关于在线广告的信息，或选择退出几乎所有广告 Cookie。",
-  "advertisingNote": "注意：选择退出不会禁用广告，只是广告将不再针对你进行个性化。",
-  "doNotTrackTitle": "请勿追踪",
-  "doNotTrackP1": "请注意，当我们从你的浏览器检测到\"请勿追踪\"信号时，我们不会改变本站的数据收集和使用方式。",
+  "title": "隐私政策",
+  "lastUpdated": "最后更新：2026年4月23日",
+
+  "privacyStatementTitle": "隐私声明",
+  "privacyStatementP1": "本隐私政策描述了 ByteCraft（以下简称\"我们\"）在你访问本站（以下简称\"本站\"）时如何收集、使用和共享信息。我们致力于保护你的隐私并对数据实践保持透明。",
+  "privacyStatementP2": "使用本站即表示你同意本政策中描述的数据实践。",
+
+  "infoCollectTitle": "我们收集的信息",
+  "infoCollectP1": "我们收集少量信息以运营和改进本站。我们可能收集的信息包括：",
+  "infoCollectList1": [
+    "设备信息：当你访问本站时，我们可能会自动收集你的 IP 地址、浏览器类型、操作系统、屏幕分辨率和时区。",
+    "使用信息：我们可能会收集有关你查看的页面、使用的工具以及在本站上的一般交互模式的数据。",
+    "Cookie 数据：我们使用 Cookie 和类似的跟踪技术来增强你的体验并支持我们的广告合作伙伴。"
+  ],
+  "infoCollectP2": "重要提示：ByteCraft 上的所有开发者工具完全在你的浏览器中运行。你使用我们的工具编码、解码、哈希、加密或以其他方式处理的文本永远不会传输到我们的服务器或任何第三方服务器。",
+
+  "infoUseTitle": "我们如何使用你的信息",
+  "infoUseP1": "我们将收集的信息用于以下目的：",
+  "infoUseList1": [
+    "站点分析：了解访问者如何使用本站，识别趋势，并改进我们的工具和用户体验。",
+    "广告：通过第三方广告网络展示相关广告，以支持我们的免费服务。",
+    "安全：检测和防止滥用、欺诈或安全问题。",
+    "合规：遵守适用的法律义务。"
+  ],
+  "infoUseP2": "我们不会将你的个人信息出售给第三方。",
+
+  "cookiesTitle": "Cookie 和跟踪技术",
+  "cookiesP1": "本站使用 Cookie 和类似技术用于以下目的：",
+  "cookiesList1": [
+    "必要 Cookie：确保本站正常运行所必需（例如记住你的语言偏好）。",
+    "分析 Cookie：由 Google Analytics 等服务使用，用于收集匿名使用统计数据。",
+    "广告 Cookie：由我们的广告合作伙伴使用，用于投放相关广告并衡量广告效果。"
+  ],
+  "cookiesP2": "你可以通过浏览器设置管理 Cookie 偏好。请注意，禁用某些 Cookie 可能会影响你在本站的体验。有关 Cookie 的更多信息，请访问 www.allaboutcookies.org。",
+
+  "advertisingTitle": "广告",
+  "advertisingP1": "ByteCraft 是一项由广告支持的免费服务。我们与第三方广告网络合作，他们可能会收集你在多个网站上的浏览活动信息，以展示个性化广告。",
+  "advertisingP2": "这些合作伙伴可能会使用 Cookie、网络信标和跟踪像素等技术来收集浏览数据，用于广告定位和效果衡量。所收集的信息通常是匿名的，不会识别你的个人身份。",
+  "advertisingP3": "你有权退出个性化广告。你可以通过以下方式行使此权利：",
+  "advertisingOptList": [
+    "浏览器的隐私和 Cookie 设置",
+    "数字广告联盟退订页面：optout.aboutads.info",
+    "网络广告促进会退订页面：networkadvertising.org/choices",
+    "欧洲互动数字广告联盟：youronlinechoices.com"
+  ],
+  "advertisingNote": "注意：退出个性化广告并不意味着你将不再看到广告——而是你看到的广告将不再与你的兴趣相关。",
+
+  "thirdPartyTitle": "第三方服务",
+  "thirdPartyP1": "我们使用 Google Analytics 来收集和分析本站的使用数据。Google Analytics 会收集诸如用户访问频率、访问页面以及访问本站前使用的其他网站等信息。你可以在 google.com/intl/en/policies/privacy 了解 Google 的隐私做法，并在 tools.google.com/dlpage/gaoptout 退出 Google Analytics。",
+  "thirdPartyP2": "我们可能会使用额外的第三方服务用于广告、分析或站点功能。每个第三方服务都有自己的隐私政策，我们建议你查阅。",
+
+  "dataSecurityTitle": "数据安全",
+  "dataSecurityP1": "ByteCraft 上的所有开发者工具使用客户端 JavaScript 完全在你的浏览器中处理数据。你的数据——包括文本、文件和加密操作——永远不会离开你的设备。我们无法访问，也不会存储你使用我们的工具处理的任何数据。",
+  "dataSecurityP2": "我们采取合理的安全措施来保护本站及其基础设施。但是，没有任何电子传输或存储方法是 100% 安全的，我们无法保证绝对安全。",
+
   "yourRightsTitle": "你的权利",
-  "yourRightsP1": "如果你是欧洲居民，你有权访问我们持有的关于你的个人信息，并要求更正、更新或删除你的个人信息。如果你想行使这项权利，请通过下面的联系方式与我们联系。",
-  "yourRightsP2": "此外，如果你是欧洲居民，请注意我们处理你的信息是为了履行我们可能与你的合同（例如你在本站下单），或者是为了追求我们上面列出的合法商业利益。另外请注意，你的信息将被传输到欧洲以外，包括加拿大和美国。",
+  "yourRightsP1": "根据你所在的地区，你可能对个人信息享有以下权利：",
+  "yourRightsList1": [
+    "访问权：你有权请求访问我们持有的关于你的个人信息。",
+    "更正权：你有权请求更正不准确或不完整的个人信息。",
+    "删除权：你有权请求删除你的个人信息，但受某些法律例外情况的限制。",
+    "退出权：你有权退出个性化广告和某些数据处理活动。",
+    "数据可携带权：在某些司法管辖区，你有权以结构化、机器可读的格式接收你的个人信息。"
+  ],
+  "yourRightsP2": "如需行使上述任何权利，请联系我们。我们将根据适用法律回应你的请求。",
+
   "dataRetentionTitle": "数据保留",
-  "dataRetentionP1": "当你通过本站下订单时，我们将保留你的订单信息作为记录，除非你要求我们删除此信息。",
+  "dataRetentionP1": "我们仅在实现本政策所述目的所必需的时间内，或法律要求的期限内保留分析和广告数据。你通过我们的开发者工具处理的数据从未被我们存储，仅在你的浏览器会话中临时存在。",
+
+  "childrenTitle": "儿童隐私",
+  "childrenP1": "本站不面向 13 岁以下的儿童。我们不会故意收集 13 岁以下儿童的个人信息。如果你认为我们无意中收集了 13 岁以下儿童的信息，请联系我们，我们将及时采取措施删除此类信息。",
+
   "changesTitle": "政策变更",
-  "changesP1": "我们可能会不时更新本隐私政策，以反映例如我们做法的变更或其他运营、法律或监管方面的原因。",
-  "googleDriveTitle": "在我们的 Tryit 编辑器中使用 Google Drive",
-  "googleDriveP1": "我们的 Tryit 编辑器允许用户将代码存储到 Google Drive 或从 Google Drive 导入代码。",
-  "googleDriveP2": "这允许用户：",
-  "googleDriveList": ["将示例/代码存储到他们的 Google Drive", "通过 Google Drive 分享示例/代码"],
-  "googleDriveP3": "字节工坊 不会为自己保留此信息，也不会与第三方共享此信息。",
-  "linksTitle": "链接",
-  "linksP1": "字节工坊 包含指向其他网站的链接。我们不对这些网站的隐私做法或内容负责。本隐私文件仅适用于 字节工坊。",
+  "changesP1": "我们可能会不时更新本隐私政策，以反映我们做法、技术或法律要求的变化。我们将在本页面发布更新后的政策，并修改\"最后更新\"日期。你在变更后继续使用本站即构成对更新后政策的接受。",
+
+  "linksTitle": "其他网站链接",
+  "linksP1": "本站可能包含指向第三方网站或服务的链接。我们不对这些外部网站的隐私做法或内容负责。我们建议你查看访问的任何第三方网站的隐私政策。",
+
   "contactTitle": "联系我们",
-  "contactP1": "如需了解更多关于我们隐私做法的信息，如果你有任何问题，或想提出投诉，请通过电子邮件联系我们：help@w3tools.online"
+  "contactP1": "如果你对本隐私政策或我们的数据做法有任何疑问或顾虑，请通过适当渠道联系我们。"
 }

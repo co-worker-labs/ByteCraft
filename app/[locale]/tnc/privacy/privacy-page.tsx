@@ -12,15 +12,16 @@ export default function PrivacyPage() {
 
   const navItems = [
     { id: "privacy-statement", label: t("privacyStatementTitle") },
-    { id: "personal-info", label: t("personalInfoTitle") },
-    { id: "personal-user-info", label: t("personalUserInfoTitle") },
-    { id: "sharing", label: t("sharingTitle") },
+    { id: "info-collect", label: t("infoCollectTitle") },
+    { id: "info-use", label: t("infoUseTitle") },
+    { id: "cookies", label: t("cookiesTitle") },
     { id: "advertising", label: t("advertisingTitle") },
-    { id: "do-not-track", label: t("doNotTrackTitle") },
+    { id: "third-party", label: t("thirdPartyTitle") },
+    { id: "data-security", label: t("dataSecurityTitle") },
     { id: "your-rights", label: t("yourRightsTitle") },
     { id: "data-retention", label: t("dataRetentionTitle") },
+    { id: "children", label: t("childrenTitle") },
     { id: "changes", label: t("changesTitle") },
-    { id: "google-drive", label: t("googleDriveTitle") },
     { id: "links", label: t("linksTitle") },
     { id: "contact", label: t("contactTitle") },
   ];
@@ -37,6 +38,7 @@ export default function PrivacyPage() {
           <h1 className="text-2xl md:text-3xl font-bold text-fg-primary tracking-tight">
             {t("title")}
           </h1>
+          <p className="mt-2 text-sm text-fg-muted">{t("lastUpdated")}</p>
           <div className="mt-4 flex items-center gap-3">
             <span className="h-px w-12 bg-gradient-to-r from-accent-cyan/40 to-transparent" />
             <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan/60" />
@@ -62,58 +64,54 @@ export default function PrivacyPage() {
           </div>
           <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
             <p>{t("privacyStatementP1")}</p>
+            <p>{t("privacyStatementP2")}</p>
           </div>
         </div>
 
-        <div id="personal-info" className="scroll-mt-6">
+        <div id="info-collect" className="scroll-mt-6">
           <div className="border-l-2 border-accent-cyan pl-3 mb-3">
-            <h3 className="text-lg font-semibold text-fg-primary">{t("personalInfoTitle")}</h3>
+            <h3 className="text-lg font-semibold text-fg-primary">{t("infoCollectTitle")}</h3>
           </div>
           <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
-            <p>{t("personalInfoP1")}</p>
-            <p>{t("personalInfoP2")}</p>
+            <p>{t("infoCollectP1")}</p>
             <ul className="list-disc list-outside ml-5 space-y-1.5">
-              {tList(t, "personalInfoList1").map((item, i) => (
+              {tList(t, "infoCollectList1").map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
-            <p>{t("personalInfoP3")}</p>
+            <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan/5 rounded-r-lg p-3">
+              <span className="text-sm text-fg-primary">{t("infoCollectP2")}</span>
+            </div>
           </div>
         </div>
 
-        <div id="personal-user-info" className="scroll-mt-6">
+        <div id="info-use" className="scroll-mt-6">
           <div className="border-l-2 border-accent-cyan pl-3 mb-3">
-            <h3 className="text-lg font-semibold text-fg-primary">{t("personalUserInfoTitle")}</h3>
+            <h3 className="text-lg font-semibold text-fg-primary">{t("infoUseTitle")}</h3>
           </div>
           <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
-            <p>{t("personalUserInfoP1")}</p>
-            <p>{t("personalUserInfoP2")}</p>
-            <p>{t("personalUserInfoP3")}</p>
+            <p>{t("infoUseP1")}</p>
             <ul className="list-disc list-outside ml-5 space-y-1.5">
-              {tList(t, "personalUserInfoList1").map((item, i) => (
+              {tList(t, "infoUseList1").map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
-            <p>{t("personalUserInfoP4")}</p>
-            <p>{t("personalUserInfoP5")}</p>
-            <ul className="list-disc list-outside ml-5 space-y-1.5">
-              {tList(t, "personalUserInfoList2").map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
+            <p>{t("infoUseP2")}</p>
           </div>
         </div>
 
-        <div id="sharing" className="scroll-mt-6">
+        <div id="cookies" className="scroll-mt-6">
           <div className="border-l-2 border-accent-cyan pl-3 mb-3">
-            <h3 className="text-lg font-semibold text-fg-primary">{t("sharingTitle")}</h3>
+            <h3 className="text-lg font-semibold text-fg-primary">{t("cookiesTitle")}</h3>
           </div>
           <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
-            <p>{t("sharingP1")}</p>
-            <p>{t("sharingP2")}</p>
-            <p>{t("sharingP3")}</p>
-            <p>{t("sharingP4")}</p>
-            <p>{t("sharingP5")}</p>
+            <p>{t("cookiesP1")}</p>
+            <ul className="list-disc list-outside ml-5 space-y-1.5">
+              {tList(t, "cookiesList1").map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+            <p>{t("cookiesP2")}</p>
           </div>
         </div>
 
@@ -124,25 +122,36 @@ export default function PrivacyPage() {
           <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
             <p>{t("advertisingP1")}</p>
             <p>{t("advertisingP2")}</p>
+            <p>{t("advertisingP3")}</p>
             <ul className="list-disc list-outside ml-5 space-y-1.5">
-              {tList(t, "advertisingList").map((item, i) => (
+              {tList(t, "advertisingOptList").map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
-            <p>{t("advertisingP3")}</p>
-            <p>{t("advertisingP4")}</p>
-            <p>{t("advertisingP5")}</p>
             <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-3">
               <span className="font-semibold text-fg-primary text-sm">{t("advertisingNote")}</span>
             </div>
           </div>
         </div>
 
-        <div id="do-not-track" className="scroll-mt-6">
+        <div id="third-party" className="scroll-mt-6">
           <div className="border-l-2 border-accent-cyan pl-3 mb-3">
-            <h3 className="text-lg font-semibold text-fg-primary">{t("doNotTrackTitle")}</h3>
+            <h3 className="text-lg font-semibold text-fg-primary">{t("thirdPartyTitle")}</h3>
           </div>
-          <div className="text-fg-secondary leading-relaxed text-justify">{t("doNotTrackP1")}</div>
+          <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
+            <p>{t("thirdPartyP1")}</p>
+            <p>{t("thirdPartyP2")}</p>
+          </div>
+        </div>
+
+        <div id="data-security" className="scroll-mt-6">
+          <div className="border-l-2 border-accent-cyan pl-3 mb-3">
+            <h3 className="text-lg font-semibold text-fg-primary">{t("dataSecurityTitle")}</h3>
+          </div>
+          <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
+            <p>{t("dataSecurityP1")}</p>
+            <p>{t("dataSecurityP2")}</p>
+          </div>
         </div>
 
         <div id="your-rights" className="scroll-mt-6">
@@ -151,6 +160,11 @@ export default function PrivacyPage() {
           </div>
           <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
             <p>{t("yourRightsP1")}</p>
+            <ul className="list-disc list-outside ml-5 space-y-1.5">
+              {tList(t, "yourRightsList1").map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
             <p>{t("yourRightsP2")}</p>
           </div>
         </div>
@@ -164,28 +178,21 @@ export default function PrivacyPage() {
           </div>
         </div>
 
+        <div id="children" className="scroll-mt-6">
+          <div className="border-l-2 border-accent-cyan pl-3 mb-3">
+            <h3 className="text-lg font-semibold text-fg-primary">{t("childrenTitle")}</h3>
+          </div>
+          <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
+            <p>{t("childrenP1")}</p>
+          </div>
+        </div>
+
         <div id="changes" className="scroll-mt-6">
           <div className="border-l-2 border-accent-cyan pl-3 mb-3">
             <h3 className="text-lg font-semibold text-fg-primary">{t("changesTitle")}</h3>
           </div>
           <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
             <p>{t("changesP1")}</p>
-          </div>
-        </div>
-
-        <div id="google-drive" className="scroll-mt-6">
-          <div className="border-l-2 border-accent-cyan pl-3 mb-3">
-            <h3 className="text-lg font-semibold text-fg-primary">{t("googleDriveTitle")}</h3>
-          </div>
-          <div className="text-fg-secondary leading-relaxed text-justify space-y-3">
-            <p>{t("googleDriveP1")}</p>
-            <p>{t("googleDriveP2")}</p>
-            <ul className="list-disc list-outside ml-5 space-y-1.5">
-              {tList(t, "googleDriveList").map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-            <p>{t("googleDriveP3")}</p>
           </div>
         </div>
 
