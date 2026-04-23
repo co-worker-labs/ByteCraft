@@ -45,7 +45,7 @@ export const StyledSelect = forwardRef<
   SelectHTMLAttributes<HTMLSelectElement> & { label?: ReactNode }
 >(({ label, className = "", children, ...props }, ref) => {
   return (
-    <div>
+    <div className="w-full">
       {label && <label className="block text-sm font-medium text-fg-secondary mb-1">{label}</label>}
       <select
         ref={ref}

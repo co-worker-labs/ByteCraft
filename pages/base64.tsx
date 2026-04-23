@@ -8,11 +8,9 @@ import { showToast } from "../libs/toast";
 import codingTableImg from "../public/base64/decimal-to-base64-table.png";
 import { useTranslation } from "next-i18next/pages";
 import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
-import { StyledTextarea } from "../components/ui/input";
-import { StyledInput } from "../components/ui/input";
-import { StyledSelect } from "../components/ui/input";
-import { StyledCheckbox } from "../components/ui/input";
+import { StyledTextarea, StyledInput, StyledSelect, StyledCheckbox } from "../components/ui/input";
 import { Button } from "../components/ui/button";
+import { Card } from "../components/ui/card";
 import { ChevronsDown, ChevronsUp, X } from "lucide-react";
 
 function Conversion() {
@@ -87,45 +85,53 @@ function Conversion() {
 
   return (
     <section id="conversion">
-      <div>
-        <div className="flex flex-wrap justify-between items-center">
-          <label htmlFor="rawContentTextarea" className="col-auto">
-            <span className="font-bold text-accent-cyan">{t("base64:plainText")}</span>
-            <a
-              href="#"
-              className="text-danger text-xs ms-2"
-              onClick={(e) => {
-                e.preventDefault();
+      <Card hover={false} className="relative overflow-hidden">
+        <div className="flex items-center justify-between px-4 py-2.5 border-b border-border-default bg-bg-elevated/50 rounded-t-xl">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-accent-cyan/60" />
+            <span className="font-mono text-sm font-semibold text-accent-cyan">
+              {t("base64:plainText")}
+            </span>
+          </div>
+          <div className="flex items-center gap-3">
+            <StyledCheckbox
+              label={t("common:common.trimWhiteSpace")}
+              id="isTrimCheck"
+              checked={isTrimRaw}
+              onChange={(e) => {
+                setIsTrimRaw(e.target.checked);
+              }}
+            />
+            <button
+              type="button"
+              className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
+              onClick={() => {
                 updateRawContent("");
                 showToast(t("common:common.cleared"), "danger", 2000);
               }}
             >
               {t("common:common.clear")}
-            </a>
-          </label>
-          <StyledCheckbox
-            label={t("common:common.trimWhiteSpace")}
-            id="isTrimCheck"
-            checked={isTrimRaw}
-            onChange={(e) => {
-              setIsTrimRaw(e.target.checked);
-            }}
-          />
+            </button>
+          </div>
         </div>
-        <div className="relative">
-          <StyledTextarea
-            id="rawContentTextarea"
-            placeholder={t("base64:plainTextPlaceholder")}
-            rows={5}
-            value={rawContent}
-            onChange={(e) => {
-              updateRawContent(e.target.value);
-            }}
-          />
-          <CopyButton getContent={() => rawContent} className="absolute end-0 top-0" />
+        <div className="pt-3 pb-0.5 px-0.5">
+          <div className="relative">
+            <StyledTextarea
+              id="rawContentTextarea"
+              placeholder={t("base64:plainTextPlaceholder")}
+              rows={6}
+              value={rawContent}
+              onChange={(e) => {
+                updateRawContent(e.target.value);
+              }}
+              className="font-mono text-sm"
+            />
+            <CopyButton getContent={() => rawContent} className="absolute end-2 top-2" />
+          </div>
         </div>
-      </div>
-      <div className="mt-2">
+      </Card>
+
+      <div className="mt-5">
         <StyledCheckbox
           label={t("base64:basicAuthentication")}
           id="basicAuthFlag"
@@ -144,7 +150,7 @@ function Conversion() {
               }}
               className="rounded-r-none"
             />
-            <span className="flex items-center px-2 bg-bg-elevated border-y border-border-default text-fg-muted">
+            <span className="flex items-center px-2 bg-bg-elevated border-y border-border-default text-fg-muted font-mono">
               :
             </span>
             <StyledInput
@@ -160,82 +166,90 @@ function Conversion() {
           </div>
         )}
       </div>
-      <div className="flex flex-wrap justify-start mb-3">
-        <div className="mt-3 pe-0 w-auto">
-          <StyledSelect
-            aria-label="Plain Content Charset"
-            value={rawCharset}
-            onChange={(e) => {
-              setRawCharset(e.target.value as BufferEncoding);
-            }}
-          >
-            <option value="ascii">ASCII</option>
-            <option value="utf-8">UTF-8</option>
-          </StyledSelect>
-        </div>
+
+      <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3 items-center">
+        <StyledSelect
+          aria-label="Plain Content Charset"
+          value={rawCharset}
+          onChange={(e) => {
+            setRawCharset(e.target.value as BufferEncoding);
+          }}
+          className="appearance-none rounded-full font-bold text-center"
+        >
+          <option value="ascii">ASCII</option>
+          <option value="utf-8">UTF-8</option>
+        </StyledSelect>
         <Button
           variant="primary"
-          size="sm"
+          size="md"
           disabled={isDisabledEncode()}
           onClick={doEncode}
-          className="ms-1 mt-3"
+          className="rounded-full font-bold"
         >
           {t("base64:encode")}
           <ChevronsDown size={16} className="ms-1" />
         </Button>
         <Button
           variant="primary"
-          size="sm"
+          size="md"
           disabled={isDiabledDecode()}
           onClick={doDecode}
-          className="ms-1 mt-3"
+          className="rounded-full font-bold"
         >
           {t("base64:decode")}
           <ChevronsUp size={16} className="ms-1" />
         </Button>
         <Button
           variant="danger"
-          size="sm"
+          size="md"
           disabled={isDiabledClear()}
           onClick={() => {
             updateRawContent("");
             updateEncodedContent("");
             showToast(t("common:common.allCleared"), "danger", 2000);
           }}
-          className="ms-1 mt-3"
+          className="rounded-full font-bold"
         >
           {t("common:common.clearAll")}
           <X size={16} className="ms-1" />
         </Button>
       </div>
-      <div className="mb-3">
-        <label htmlFor="encodedContentTextarea">
-          <span className="font-bold text-accent-cyan">{t("base64:encodedText")}</span>
-          <a
-            href="#"
-            className="text-danger text-xs ms-2"
-            onClick={(e) => {
-              e.preventDefault();
+
+      <Card hover={false} className="relative overflow-hidden mt-5">
+        <div className="flex items-center justify-between px-4 py-2.5 border-b border-border-default bg-bg-elevated/50 rounded-t-xl">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-accent-purple/60" />
+            <span className="font-mono text-sm font-semibold text-accent-purple">
+              {t("base64:encodedText")}
+            </span>
+          </div>
+          <button
+            type="button"
+            className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
+            onClick={() => {
               setEncodedContent("");
               showToast(t("common:common.cleared"), "danger", 2000);
             }}
           >
             {t("common:common.clear")}
-          </a>
-        </label>
-        <div className="relative">
-          <StyledTextarea
-            id="encodedContentTextarea"
-            placeholder={t("base64:encodedOutput")}
-            rows={5}
-            value={encodedContent}
-            onChange={(e) => {
-              updateEncodedContent(e.target.value);
-            }}
-          />
-          <CopyButton getContent={() => encodedContent} className="absolute end-0 top-0" />
+          </button>
         </div>
-      </div>
+        <div className="pt-3 pb-0.5 px-0.5">
+          <div className="relative">
+            <StyledTextarea
+              id="encodedContentTextarea"
+              placeholder={t("base64:encodedOutput")}
+              rows={6}
+              value={encodedContent}
+              onChange={(e) => {
+                updateEncodedContent(e.target.value);
+              }}
+              className="font-mono text-sm"
+            />
+            <CopyButton getContent={() => encodedContent} className="absolute end-2 top-2" />
+          </div>
+        </div>
+      </Card>
     </section>
   );
 }
@@ -243,39 +257,53 @@ function Conversion() {
 function Description() {
   const { t } = useTranslation("base64");
   return (
-    <section id="description" className="mt-4">
-      <div className="mb-4">
-        <h3 className="font-semibold text-fg-primary">{t("descriptions.whatIsTitle")}</h3>
-        <p className="text-fg-secondary mt-1">{t("descriptions.whatIsP1")}</p>
-        <p className="text-fg-secondary mt-1">{t("descriptions.whatIsP2")}</p>
-        <p className="text-fg-secondary mt-1">{t("descriptions.whatIsP3")}</p>
-      </div>
-      <div className="mb-4">
-        <h3 className="font-semibold text-fg-primary">{t("descriptions.howTitle")}</h3>
-        <p className="text-fg-secondary mt-1">{t("descriptions.howP1")}</p>
-        <ol className="list-decimal list-inside text-fg-secondary mt-1">
+    <section id="description" className="mt-8">
+      <Card hover={false} className="mb-4">
+        <h3 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h3>
+        <div className="mt-2 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{t("descriptions.whatIsP2")}</p>
+          <p>{t("descriptions.whatIsP3")}</p>
+        </div>
+      </Card>
+
+      <Card hover={false} className="mb-4">
+        <h3 className="font-semibold text-fg-primary text-base">{t("descriptions.howTitle")}</h3>
+        <p className="text-fg-secondary text-sm mt-2 leading-relaxed">{t("descriptions.howP1")}</p>
+        <ol className="list-decimal list-inside text-fg-secondary text-sm mt-2 space-y-1">
           <li>{t("descriptions.howStep1")}</li>
           <li>{t("descriptions.howStep2")}</li>
           <li>{t("descriptions.howStep3")}</li>
           <li>{t("descriptions.howStep4")}</li>
         </ol>
-        <Image src={codingTableImg} alt="" />
-      </div>
-      <div className="mb-4">
-        <h3 className="font-semibold text-fg-primary">{t("descriptions.whyTitle")}</h3>
-        <p className="text-fg-secondary mt-1">{t("descriptions.whyP1")}</p>
-        <p className="text-fg-secondary mt-1">{t("descriptions.whyP2")}</p>
-      </div>
-      <div className="mb-4">
-        <h3 className="font-semibold text-fg-primary">{t("descriptions.useCasesTitle")}</h3>
-        <p className="text-fg-secondary mt-1">{t("descriptions.useCasesP1")}</p>
-        <p className="text-fg-secondary mt-1">{t("descriptions.useCasesP2")}</p>
-      </div>
-      <div className="mb-4">
-        <h3 className="font-semibold text-fg-primary">{t("descriptions.limitationsTitle")}</h3>
-        <p className="text-fg-secondary mt-1">{t("descriptions.limitationsP1")}</p>
-        <p className="text-fg-secondary mt-1">{t("descriptions.limitationsP2")}</p>
-      </div>
+        <div className="mt-4 flex justify-center rounded-lg overflow-hidden border border-border-default bg-bg-elevated/50 p-3">
+          <Image src={codingTableImg} alt="" className="h-auto max-w-full" />
+        </div>
+      </Card>
+
+      <Card hover={false} className="mb-4">
+        <h3 className="font-semibold text-fg-primary text-base">{t("descriptions.whyTitle")}</h3>
+        <div className="mt-2 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+          <p>{t("descriptions.whyP1")}</p>
+          <p>{t("descriptions.whyP2")}</p>
+        </div>
+      </Card>
+
+      <Card hover={false} className="mb-4">
+        <h3 className="font-semibold text-fg-primary text-base">{t("descriptions.useCasesTitle")}</h3>
+        <div className="mt-2 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+          <p>{t("descriptions.useCasesP1")}</p>
+          <p>{t("descriptions.useCasesP2")}</p>
+        </div>
+      </Card>
+
+      <Card hover={false} className="mb-4">
+        <h3 className="font-semibold text-fg-primary text-base">{t("descriptions.limitationsTitle")}</h3>
+        <div className="mt-2 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+          <p>{t("descriptions.limitationsP1")}</p>
+          <p>{t("descriptions.limitationsP2")}</p>
+        </div>
+      </Card>
     </section>
   );
 }
@@ -288,10 +316,13 @@ function Base64Page() {
     <>
       <ToolPageHeadBuilder toolPath="/base64" />
       <Layout title={title}>
-        <div className="container mx-auto px-4 pt-3">
-          <div className="bg-accent-cyan-dim/20 border border-accent-cyan/30 rounded-xl p-3 text-fg-secondary text-sm my-4">
-            {t("common:alert.notTransferred")}
+        <div className="container mx-auto px-4 pt-3 pb-6">
+          <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
+            <span className="text-sm text-fg-secondary leading-relaxed">
+              {t("common:alert.notTransferred")}
+            </span>
           </div>
+
           <Conversion />
           <Description />
         </div>
