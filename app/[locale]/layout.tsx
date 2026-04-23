@@ -34,15 +34,9 @@ export default async function LocaleLayout({ children, params }: Props) {
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <script
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var theme = localStorage.getItem('bytecraft-theme');
-                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.documentElement.classList.add('dark');
-                }
-              })();
-            `,
+            __html: `(function(){var t=localStorage.getItem('bytecraft-theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}})();`,
           }}
         />
       </head>
