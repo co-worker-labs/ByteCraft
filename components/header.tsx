@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter, usePathname, Link } from "../i18n/navigation";
 import { LayoutGrid, Sun, Moon } from "lucide-react";
 import { getTranslatedTools } from "../libs/tools";
@@ -16,6 +17,8 @@ export default function Header({ position, title }: { position: HeaderPosition; 
   const { theme, toggleTheme } = useTheme();
   const t = useTranslations("common");
   const tTools = useTranslations("tools");
+  const [spinning, setSpinning] = useState(false);
+  const [flipping, setFlipping] = useState(false);
 
   if (position === "hidden") {
     return <></>;
@@ -46,16 +49,9 @@ export default function Header({ position, title }: { position: HeaderPosition; 
           </Link>
 
           {title && (
-            <Link
-              href=""
-              onClick={(e) => {
-                e.preventDefault();
-                router.refresh();
-              }}
-              className="mx-4 truncate text-center text-sm font-bold text-fg-secondary hover:text-fg-primary transition-colors"
-            >
+            <span className="mx-4 truncate text-center text-sm font-bold text-fg-secondary">
               {title}
-            </Link>
+            </span>
           )}
 
           <div className="flex items-center gap-2">
@@ -63,7 +59,9 @@ export default function Header({ position, title }: { position: HeaderPosition; 
               trigger={
                 <button
                   type="button"
-                  className="flex h-8 w-8 items-center justify-center rounded-lg text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors"
+                  className={`flex h-8 w-8 items-center justify-center rounded-lg text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors ${spinning ? "nav-btn-spin" : ""}`}
+                  onClick={() => setSpinning(true)}
+                  onAnimationEnd={() => setSpinning(false)}
                   aria-label={t("nav.tools")}
                 >
                   <LayoutGrid size={16} />
@@ -74,8 +72,12 @@ export default function Header({ position, title }: { position: HeaderPosition; 
 
             <button
               type="button"
-              className="flex h-8 w-8 items-center justify-center rounded-lg text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors"
-              onClick={toggleTheme}
+              className={`flex h-8 w-8 items-center justify-center rounded-lg text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors ${flipping ? "nav-btn-flip" : ""}`}
+              onClick={() => {
+                setFlipping(true);
+                toggleTheme();
+              }}
+              onAnimationEnd={() => setFlipping(false)}
               aria-label={t(theme === "dark" ? "nav.switchToLight" : "nav.switchToDark")}
             >
               {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}

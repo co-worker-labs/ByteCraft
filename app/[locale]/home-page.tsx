@@ -1,7 +1,6 @@
 "use client";
 
 import Layout from "../../components/layout";
-import { listMatchedTools, ToolData } from "../../libs/tools";
 import { useRouter } from "../../i18n/navigation";
 import { useTranslations } from "next-intl";
 import { getTranslatedTools } from "../../libs/tools";
@@ -91,16 +90,6 @@ function ToolCollection() {
 }
 
 export default function HomePage() {
-  const t = useTranslations("tools");
-  const tools = listMatchedTools("");
-  const keywords: string[] = [];
-  tools.forEach((value: ToolData) => {
-    value.keywords.forEach((kw) => {
-      if (!keywords.includes(kw)) {
-        keywords.push(kw);
-      }
-    });
-  });
   return (
     <Layout headerPosition="none">
       <Introduce />

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter, usePathname } from "../i18n/navigation";
 import { useLocale } from "next-intl";
 import { Globe } from "lucide-react";
@@ -15,6 +16,7 @@ export default function LanguageSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
   const currentLocale = useLocale();
+  const [bouncing, setBouncing] = useState(false);
 
   function switchLocale(locale: string) {
     router.replace(pathname, { locale });
@@ -25,7 +27,9 @@ export default function LanguageSwitcher() {
       trigger={
         <button
           type="button"
-          className="flex h-8 w-8 items-center justify-center rounded-lg text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors"
+          className={`flex h-8 w-8 items-center justify-center rounded-lg text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors ${bouncing ? "nav-btn-bounce" : ""}`}
+          onClick={() => setBouncing(true)}
+          onAnimationEnd={() => setBouncing(false)}
           aria-label="Language"
         >
           <Globe size={16} />

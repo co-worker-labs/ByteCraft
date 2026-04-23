@@ -124,3 +124,50 @@
     line-height: 2rem;
   }
 }
+
+/* ===== Nav Button Click Effects ===== */
+@keyframes btn-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes btn-flip {
+  0% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(360deg);
+  }
+}
+
+@keyframes btn-bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.85);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  75% {
+    transform: scale(0.95);
+  }
+}
+
+.nav-btn-spin {
+  animation: btn-spin 0.5s ease-in-out;
+}
+
+.nav-btn-flip {
+  animation: btn-flip 0.6s ease-in-out;
+}
+
+.nav-btn-bounce {
+  animation: btn-bounce 0.4s ease-in-out;
+}
