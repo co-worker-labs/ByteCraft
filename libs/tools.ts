@@ -23,16 +23,6 @@ export function getTranslatedTools(t: TFunction): ToolData[] {
   });
 }
 
-export function getTranslatedTool(t: TFunction, path: string): ToolData {
-  const tool = findTool(path);
-  const key = pathToToolKey(path);
-  return {
-    ...tool,
-    title: t(`tools:${key}.title`),
-    description: t(`tools:${key}.description`),
-  };
-}
-
 export function findTool(path: string): ToolData {
   const result = toolsList.find((v) => v.path === path);
   if (!result) {
