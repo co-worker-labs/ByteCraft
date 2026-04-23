@@ -77,78 +77,99 @@ function Conversion() {
 
   return (
     <section id="conversion">
-      <div className="mt-4">
-        <label htmlFor="currentInput" className="text-lg font-bold text-accent-cyan">
-          {t("conversion", { unit: selectedUnitData?.title })}
-        </label>
-        <StyledInput
-          type="number"
-          id="currentInput"
-          min={0}
-          placeholder=""
-          value={current}
-          onChange={(e) => {
-            setCurrent(parseFloat(e.target.value));
-          }}
-          className="mt-1 text-lg"
-        />
-      </div>
-      <div className="flex flex-wrap items-center">
-        <div className="w-full lg:w-1/2 mt-4">
-          <StyledSelect
-            value={selectedUnit}
-            aria-label="Storage Unit"
-            onChange={(e) => {
-              setSelectedUnit(e.target.value);
+      <div>
+        <div className="flex flex-wrap justify-between items-center">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-accent-cyan/60" />
+            <span className="font-mono text-sm font-semibold text-accent-cyan">
+              {t("conversion", { unit: selectedUnitData?.title })}
+            </span>
+          </div>
+          <button
+            type="button"
+            className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
+            onClick={() => {
+              setCurrent(1);
+              showToast(t("common:common.reset"), "success", 2000);
             }}
           >
-            {unitList.map((data) => {
-              return (
-                <option key={data.unit} value={data.unit}>
-                  {data.title}
-                </option>
-              );
-            })}
-          </StyledSelect>
+            {t("common:common.reset")}
+          </button>
         </div>
-        <div className="w-full lg:w-1/2 mt-4 lg:pl-6">
-          <div className="flex justify-start items-center gap-4">
-            <StyledCheckbox
-              label={t("decimal")}
-              value="Decimal"
-              id="decimalCheck"
-              checked={measurements.includes("Decimal")}
-              onChange={toggleMeasurementTypes}
+        <div className="flex items-center gap-3 mt-1">
+          <div className="flex-1">
+            <StyledInput
+              type="number"
+              id="currentInput"
+              min={0}
+              placeholder=""
+              value={current}
+              onChange={(e) => {
+                setCurrent(parseFloat(e.target.value));
+              }}
+              className="text-lg font-mono rounded-full font-bold text-center w-full"
             />
-            <StyledCheckbox
-              label={t("binary")}
-              value="Binary"
-              id="binaryCheck"
-              checked={measurements.includes("Binary")}
-              onChange={toggleMeasurementTypes}
-            />
-            <StyledCheckbox
-              label={t("bit")}
-              value="Bit"
-              id="bitCheck"
-              checked={measurements.includes("Bit")}
-              onChange={toggleMeasurementTypes}
-            />
+          </div>
+          <div className="flex-1">
+            <StyledSelect
+              value={selectedUnit}
+              aria-label="Storage Unit"
+              onChange={(e) => {
+                setSelectedUnit(e.target.value);
+              }}
+              className="appearance-none rounded-full font-bold text-center w-full"
+            >
+              {unitList.map((data) => {
+                return (
+                  <option key={data.unit} value={data.unit}>
+                    {data.title}
+                  </option>
+                );
+              })}
+            </StyledSelect>
           </div>
         </div>
       </div>
+      <div className="mt-4">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="w-1.5 h-4 rounded-full bg-accent-cyan" />
+          <span className="font-mono text-xs font-semibold text-fg-muted uppercase tracking-wider">
+            Measurement
+          </span>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-2">
+          <StyledCheckbox
+            label={t("decimal")}
+            value="Decimal"
+            id="decimalCheck"
+            checked={measurements.includes("Decimal")}
+            onChange={toggleMeasurementTypes}
+          />
+          <StyledCheckbox
+            label={t("binary")}
+            value="Binary"
+            id="binaryCheck"
+            checked={measurements.includes("Binary")}
+            onChange={toggleMeasurementTypes}
+          />
+          <StyledCheckbox
+            label={t("bit")}
+            value="Bit"
+            id="bitCheck"
+            checked={measurements.includes("Bit")}
+            onChange={toggleMeasurementTypes}
+          />
+        </div>
+      </div>
 
-      <div className="overflow-x-auto mt-3">
-        <table className="w-full border-collapse">
-          <caption className="text-left text-fg-secondary text-sm mb-2">
-            {t("conversionOutput")}
-          </caption>
+      <div className="mt-4 rounded-lg border border-border-default overflow-hidden">
+        <table className="w-full">
           <thead>
-            <tr className="bg-bg-elevated">
-              <th className="py-2 px-3 border border-border-default text-left text-sm text-fg-muted">
+            <tr className="border-b border-border-default bg-bg-elevated/40">
+              <th className="py-2 px-4 text-fg-muted text-xs font-mono font-medium text-left whitespace-nowrap uppercase tracking-wider">
                 {t("measurement")}
               </th>
-              <th className="py-2 px-3 border border-border-default text-left text-sm text-fg-muted">
+              <th className="py-2 px-4 text-fg-muted text-xs font-mono font-medium text-left whitespace-nowrap uppercase tracking-wider">
                 {t("conversionCol")}
               </th>
             </tr>
@@ -156,13 +177,22 @@ function Conversion() {
           <tbody>
             {outputs.map((op) => {
               return (
-                <tr key={op.unit.unit} className="even:bg-bg-elevated/50 hover:bg-bg-elevated/80">
-                  <th scope="row" className="py-2 px-3 border border-border-default text-sm">
+                <tr
+                  key={op.unit.unit}
+                  className="border-b border-border-default hover:bg-bg-elevated/60"
+                >
+                  <th
+                    scope="row"
+                    className="py-2.5 px-4 text-fg-secondary text-xs font-mono font-medium text-left whitespace-nowrap"
+                  >
                     {op.unit.title} (<span className="text-danger">{op.unit.unit}</span>)
                   </th>
-                  <td className="py-2 px-3 border border-border-default text-sm font-mono">
+                  <td className="py-2.5 font-mono text-sm break-all">
                     {op.valueView}
-                    <CopyButton getContent={() => op.value.toString()} />
+                    <CopyButton
+                      getContent={() => op.value.toString()}
+                      className="ms-1.5 opacity-60 hover:opacity-100 transition-opacity"
+                    />
                   </td>
                 </tr>
               );
@@ -176,29 +206,37 @@ function Conversion() {
 
 function ConversionTable({ list }: { list: { from: string; target: string }[] }) {
   return (
-    <table className="w-full text-center border-collapse">
-      <tbody>
-        {list.map((cnv, index) => {
-          const fromUnitData = getStorageUnitData(cnv.from);
-          const targetUnitData = getStorageUnitData(cnv.target);
-          if (!fromUnitData || !targetUnitData) {
-            throw "Invalid conversion table";
-          }
-          let value = convert(1, fromUnitData, targetUnitData);
-          let valueView = formatByComma(value.toString());
-          return (
-            <tr key={index} className="even:bg-bg-elevated/50 hover:bg-bg-elevated/80">
-              <th scope="row" className="py-2 px-3 border border-border-default text-sm w-[120px]">
-                1 <span className="text-accent-cyan">{cnv.from}</span>
-              </th>
-              <td className="py-2 px-3 border border-border-default text-sm text-left">
-                {valueView} <span className="text-accent-cyan font-bold">{cnv.target}</span>
-              </td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
+    <div className="rounded-lg border border-border-default overflow-hidden">
+      <table className="w-full">
+        <tbody>
+          {list.map((cnv, index) => {
+            const fromUnitData = getStorageUnitData(cnv.from);
+            const targetUnitData = getStorageUnitData(cnv.target);
+            if (!fromUnitData || !targetUnitData) {
+              throw "Invalid conversion table";
+            }
+            let value = convert(1, fromUnitData, targetUnitData);
+            let valueView = formatByComma(value.toString());
+            return (
+              <tr
+                key={index}
+                className="border-b border-border-default last:border-b-0 hover:bg-bg-elevated/60"
+              >
+                <th
+                  scope="row"
+                  className="py-2.5 px-4 w-28 text-fg-secondary text-xs font-mono font-medium text-left whitespace-nowrap"
+                >
+                  1 <span className="text-accent-cyan">{cnv.from}</span>
+                </th>
+                <td className="py-2.5 px-4 font-mono text-sm">
+                  {valueView} <span className="text-accent-cyan font-bold">{cnv.target}</span>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
@@ -285,10 +323,10 @@ function MostConversionList() {
 
   return (
     <section id="conversionTable" className="mt-4">
-      <div className="flex flex-wrap">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {cnvList.map((list, index) => {
           return (
-            <div key={index} className="w-full md:w-1/2">
+            <div key={index}>
               <ConversionTable list={list} />
             </div>
           );
@@ -298,17 +336,25 @@ function MostConversionList() {
   );
 }
 function StorageUnitPage({ toolData }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { t } = useTranslation(["storageunit", "tools"]);
+  const { t } = useTranslation(["storageunit", "tools", "common"]);
   return (
     <>
       <ToolPageHeadBuilder toolPath="/storageunit" />
       <Layout title={t("tools:storageunit.title")}>
-        <div className="container mx-auto px-4 pt-3">
-          <Conversion />
-          <div className="text-center text-lg mt-4 uppercase font-semibold text-fg-primary">
-            {t("commonConversionTable")}
+        <div className="container mx-auto px-4 pt-3 pb-6">
+          <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
+            <span className="text-sm text-fg-secondary leading-relaxed">
+              {t("common:alert.notTransferred")}
+            </span>
           </div>
-          <hr className="border-danger" />
+          <Conversion />
+          <div className="flex items-center gap-3 my-6">
+            <div className="flex-1 h-px bg-border-default" />
+            <span className="font-mono text-xs font-semibold text-fg-muted uppercase tracking-wider">
+              {t("commonConversionTable")}
+            </span>
+            <div className="flex-1 h-px bg-border-default" />
+          </div>
           <MostConversionList />
         </div>
       </Layout>
