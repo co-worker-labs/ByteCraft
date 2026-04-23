@@ -1,4 +1,4 @@
-import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { GetStaticProps } from "next";
 import Image from "next/image";
 import { useState } from "react";
 import { CopyButton } from "../components/ui/copy-btn";
@@ -10,7 +10,6 @@ import { useTranslation } from "next-i18next/pages";
 import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import { StyledTextarea, StyledInput, StyledSelect, StyledCheckbox } from "../components/ui/input";
 import { Button } from "../components/ui/button";
-import { Card } from "../components/ui/card";
 import { ChevronsDown, ChevronsUp, X } from "lucide-react";
 
 function Conversion() {
@@ -85,8 +84,8 @@ function Conversion() {
 
   return (
     <section id="conversion">
-      <Card hover={false} className="relative overflow-hidden">
-        <div className="flex items-center justify-between px-4 py-2.5 border-b border-border-default bg-bg-elevated/50 rounded-t-xl">
+      <div>
+        <div className="flex flex-wrap justify-between items-center">
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-accent-cyan/60" />
             <span className="font-mono text-sm font-semibold text-accent-cyan">
@@ -114,24 +113,22 @@ function Conversion() {
             </button>
           </div>
         </div>
-        <div className="pt-3 pb-0.5 px-0.5">
-          <div className="relative">
-            <StyledTextarea
-              id="rawContentTextarea"
-              placeholder={t("base64:plainTextPlaceholder")}
-              rows={6}
-              value={rawContent}
-              onChange={(e) => {
-                updateRawContent(e.target.value);
-              }}
-              className="font-mono text-sm"
-            />
-            <CopyButton getContent={() => rawContent} className="absolute end-2 top-2" />
-          </div>
+        <div className="relative mt-1">
+          <StyledTextarea
+            id="rawContentTextarea"
+            placeholder={t("base64:plainTextPlaceholder")}
+            rows={6}
+            value={rawContent}
+            onChange={(e) => {
+              updateRawContent(e.target.value);
+            }}
+            className="font-mono text-sm"
+          />
+          <CopyButton getContent={() => rawContent} className="absolute end-2 top-2" />
         </div>
-      </Card>
+      </div>
 
-      <div className="mt-5">
+      <div className="mt-4">
         <StyledCheckbox
           label={t("base64:basicAuthentication")}
           id="basicAuthFlag"
@@ -167,7 +164,7 @@ function Conversion() {
         )}
       </div>
 
-      <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3 items-center">
+      <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 items-center">
         <StyledSelect
           aria-label="Plain Content Charset"
           value={rawCharset}
@@ -215,8 +212,8 @@ function Conversion() {
         </Button>
       </div>
 
-      <Card hover={false} className="relative overflow-hidden mt-5">
-        <div className="flex items-center justify-between px-4 py-2.5 border-b border-border-default bg-bg-elevated/50 rounded-t-xl">
+      <div className="mt-4">
+        <div className="flex flex-wrap justify-between items-center">
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-accent-purple/60" />
             <span className="font-mono text-sm font-semibold text-accent-purple">
@@ -234,22 +231,20 @@ function Conversion() {
             {t("common:common.clear")}
           </button>
         </div>
-        <div className="pt-3 pb-0.5 px-0.5">
-          <div className="relative">
-            <StyledTextarea
-              id="encodedContentTextarea"
-              placeholder={t("base64:encodedOutput")}
-              rows={6}
-              value={encodedContent}
-              onChange={(e) => {
-                updateEncodedContent(e.target.value);
-              }}
-              className="font-mono text-sm"
-            />
-            <CopyButton getContent={() => encodedContent} className="absolute end-2 top-2" />
-          </div>
+        <div className="relative mt-1">
+          <StyledTextarea
+            id="encodedContentTextarea"
+            placeholder={t("base64:encodedOutput")}
+            rows={6}
+            value={encodedContent}
+            onChange={(e) => {
+              updateEncodedContent(e.target.value);
+            }}
+            className="font-mono text-sm"
+          />
+          <CopyButton getContent={() => encodedContent} className="absolute end-2 top-2" />
         </div>
-      </Card>
+      </div>
     </section>
   );
 }
@@ -258,52 +253,56 @@ function Description() {
   const { t } = useTranslation("base64");
   return (
     <section id="description" className="mt-8">
-      <Card hover={false} className="mb-4">
-        <h3 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h3>
-        <div className="mt-2 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+      <div className="mb-4">
+        <h5 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h5>
+        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{t("descriptions.whatIsP1")}</p>
           <p>{t("descriptions.whatIsP2")}</p>
           <p>{t("descriptions.whatIsP3")}</p>
         </div>
-      </Card>
+      </div>
 
-      <Card hover={false} className="mb-4">
-        <h3 className="font-semibold text-fg-primary text-base">{t("descriptions.howTitle")}</h3>
-        <p className="text-fg-secondary text-sm mt-2 leading-relaxed">{t("descriptions.howP1")}</p>
-        <ol className="list-decimal list-inside text-fg-secondary text-sm mt-2 space-y-1">
+      <div className="mb-4">
+        <h5 className="font-semibold text-fg-primary text-base">{t("descriptions.howTitle")}</h5>
+        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{t("descriptions.howP1")}</p>
+        <ol className="list-decimal list-inside text-fg-secondary text-sm mt-1 space-y-1">
           <li>{t("descriptions.howStep1")}</li>
           <li>{t("descriptions.howStep2")}</li>
           <li>{t("descriptions.howStep3")}</li>
           <li>{t("descriptions.howStep4")}</li>
         </ol>
-        <div className="mt-4 flex justify-center rounded-lg overflow-hidden border border-border-default bg-bg-elevated/50 p-3">
+        <div className="mt-3 flex justify-center rounded-lg overflow-hidden border border-border-default bg-bg-elevated/50 p-3">
           <Image src={codingTableImg} alt="" className="h-auto max-w-full" />
         </div>
-      </Card>
+      </div>
 
-      <Card hover={false} className="mb-4">
-        <h3 className="font-semibold text-fg-primary text-base">{t("descriptions.whyTitle")}</h3>
-        <div className="mt-2 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+      <div className="mb-4">
+        <h5 className="font-semibold text-fg-primary text-base">{t("descriptions.whyTitle")}</h5>
+        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{t("descriptions.whyP1")}</p>
           <p>{t("descriptions.whyP2")}</p>
         </div>
-      </Card>
+      </div>
 
-      <Card hover={false} className="mb-4">
-        <h3 className="font-semibold text-fg-primary text-base">{t("descriptions.useCasesTitle")}</h3>
-        <div className="mt-2 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+      <div className="mb-4">
+        <h5 className="font-semibold text-fg-primary text-base">
+          {t("descriptions.useCasesTitle")}
+        </h5>
+        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{t("descriptions.useCasesP1")}</p>
           <p>{t("descriptions.useCasesP2")}</p>
         </div>
-      </Card>
+      </div>
 
-      <Card hover={false} className="mb-4">
-        <h3 className="font-semibold text-fg-primary text-base">{t("descriptions.limitationsTitle")}</h3>
-        <div className="mt-2 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+      <div className="mb-4">
+        <h5 className="font-semibold text-fg-primary text-base">
+          {t("descriptions.limitationsTitle")}
+        </h5>
+        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{t("descriptions.limitationsP1")}</p>
           <p>{t("descriptions.limitationsP2")}</p>
         </div>
-      </Card>
+      </div>
     </section>
   );
 }
