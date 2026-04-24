@@ -38,5 +38,10 @@
     "title": "儲存單位轉換器 - 位元組到 TB",
     "shortTitle": "儲存單位轉換",
     "description": "在位元組、KB、MB、GB、TB、PB 等單位之間轉換。線上儲存單位轉換工具，開發者必備。"
+  },
+  "uuid": {
+    "title": "UUID 產生器 - RFC 4122/9562 線上工具",
+    "shortTitle": "UUID 產生器",
+    "description": "在瀏覽器中產生 v1/v3/v4/v5/v7 UUID。免費、完全本機、無追蹤。"
   }
 }

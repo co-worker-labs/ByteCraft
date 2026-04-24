@@ -15,6 +15,7 @@ const namespaces = [
   "storageunit",
   "terms",
   "privacy",
+  "uuid",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

@@ -38,5 +38,10 @@
     "title": "存储单位转换器 - 字节到 TB",
     "shortTitle": "存储单位转换",
     "description": "在字节、KB、MB、GB、TB、PB 等单位之间转换。在线存储单位转换工具，开发者必备。"
+  },
+  "uuid": {
+    "title": "UUID 生成器 - RFC 4122/9562 在线工具",
+    "shortTitle": "UUID 生成器",
+    "description": "在浏览器中生成 v1/v3/v4/v5/v7 UUID。免费、完全本地化、无跟踪。"
   }
 }

@@ -38,5 +38,10 @@
     "title": "Storage Unit Converter - Bytes to TB",
     "shortTitle": "Storage Unit Conversion",
     "description": "Convert between bytes, KB, MB, GB, TB, PB and more. Free online storage unit converter for developers."
+  },
+  "uuid": {
+    "title": "UUID Generator - RFC 4122/9562 Online",
+    "shortTitle": "UUID Generator",
+    "description": "Generate v1/v3/v4/v5/v7 UUIDs in your browser. Free, fully local, no tracking."
   }
 }
