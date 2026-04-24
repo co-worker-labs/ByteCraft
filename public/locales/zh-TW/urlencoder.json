@@ -29,7 +29,7 @@
     "tableForm": "Form",
     "tableNote": "Component 會編碼除 A–Z a–z 0–9 - _ . ! ~ * ' ( ) 以外的全部字元。Whole URL 在此基礎上額外保留結構性字元 ; , / ? : @ & = + $ # !。Form 的編碼集與 Component 相同，並額外編碼 ! ' ( ) ~（但不編碼 *），把空格換成 + 而非 %20，並把 \\n / \\r / \\r\\n 歸一化為 \\r\\n（編碼為 %0D%0A）—— 這正是瀏覽器提交 application/x-www-form-urlencoded 表單時送出的位元組序列。",
     "useCasesTitle": "常見用例",
-    "useCasesP1": "以程式方式建構安全的查詢字串：手動拼接 /search?q=<value> 這類 URL 時，把值經過 Component 模式編碼，確保值中出現的 & 或 = 不會汙染外層 URL 結構。",
+    "useCasesP1": "以程式方式建構安全的查詢字串：手動拼接 /search?q=[value] 這類 URL 時，把值經過 Component 模式編碼，確保值中出現的 & 或 = 不會汙染外層 URL 結構。",
     "useCasesP2": "在 URL 中嵌套 URL：當你把一個 URL 作為另一個 URL 的參數傳遞（例如 OAuth 回呼位址）時，必須用 Component 模式編碼內層 URL，而非 Whole URL —— 否則內層 URL 中的 / : ? & 會被外層 URL 誤判為結構符。",
     "useCasesP3": "使用 fetch 送出表單：當你 POST 一個 Content-Type: application/x-www-form-urlencoded 的請求主體時，主體必須按 Form 模式編碼。本工具的 Form 模式輸出與瀏覽器送出的位元組一致。",
     "limitationsTitle": "局限性",

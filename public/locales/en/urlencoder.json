@@ -29,7 +29,7 @@
     "tableForm": "Form",
     "tableNote": "Component encodes everything except the unreserved set A–Z a–z 0–9 - _ . ! ~ * ' ( ). Whole URL additionally preserves the structural set ; , / ? : @ & = + $ # !. Form encodes the same set as Component plus ! ' ( ) ~ (but not *), turns space into + instead of %20, and normalizes \\n / \\r / \\r\\n to \\r\\n (encoded as %0D%0A) — matching what the browser sends for an application/x-www-form-urlencoded submission.",
     "useCasesTitle": "Common Use Cases",
-    "useCasesP1": "Building safe query strings programmatically: when you construct URLs like /search?q=<value> by hand, run the value through Component mode so that characters like & or = inside the value cannot corrupt the surrounding URL.",
+    "useCasesP1": "Building safe query strings programmatically: when you construct URLs like /search?q=[value] by hand, run the value through Component mode so that characters like & or = inside the value cannot corrupt the surrounding URL.",
     "useCasesP2": "Embedding a URL inside another URL: when you pass one URL as the parameter of another (for example, an OAuth redirect URL), you must encode the inner URL with Component mode — not Whole URL — so that / : ? & inside the inner URL are not misread as the outer URL's structure.",
     "useCasesP3": "Submitting form data with fetch: when you POST a body with Content-Type: application/x-www-form-urlencoded, the body must be encoded with Form mode semantics. This tool's Form mode produces output byte-compatible with what the browser sends.",
     "limitationsTitle": "Limitations",
