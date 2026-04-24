@@ -102,6 +102,42 @@ function generateV7(): UuidBytes {
   return b;
 }
 
+const UUID_EPOCH_OFFSET_MS = 12219292800000;
+
+function generateV1(): UuidBytes {
+  const nowMs = Date.now();
+  const base100ns = (nowMs + UUID_EPOCH_OFFSET_MS) * 10000;
+  const subMs = Math.floor(Math.random() * 10000);
+  const ts = base100ns + subMs;
+
+  const b = new Uint8Array(16);
+  const high = Math.floor(ts / 2 ** 32);
+  const low = ts >>> 0;
+  const timeLow = low;
+  const timeMid = high & 0xffff;
+  const timeHi = (high >>> 16) & 0x0fff;
+
+  b[0] = (timeLow >>> 24) & 0xff;
+  b[1] = (timeLow >>> 16) & 0xff;
+  b[2] = (timeLow >>> 8) & 0xff;
+  b[3] = timeLow & 0xff;
+  b[4] = (timeMid >>> 8) & 0xff;
+  b[5] = timeMid & 0xff;
+  b[6] = ((timeHi >>> 8) & 0x0f) | 0x10;
+  b[7] = timeHi & 0xff;
+
+  const csRand = randomBytes(2);
+  const clockSeq = ((csRand[0] << 8) | csRand[1]) & 0x3fff;
+  b[8] = ((clockSeq >>> 8) & 0x3f) | 0x80;
+  b[9] = clockSeq & 0xff;
+
+  const node = randomBytes(6);
+  node[0] |= 0x01;
+  for (let i = 0; i < 6; i++) b[10 + i] = node[i];
+
+  return b;
+}
+
 export function generate(opts: GenerateOptions): UuidBytes[] {
   const out: UuidBytes[] = [];
   const count = Math.max(1, Math.floor(opts.count));
@@ -111,6 +147,9 @@ export function generate(opts: GenerateOptions): UuidBytes[] {
       return out;
     case "v7":
       for (let i = 0; i < count; i++) out.push(generateV7());
+      return out;
+    case "v1":
+      for (let i = 0; i < count; i++) out.push(generateV1());
       return out;
     default:
       throw new Error(`Unsupported version: ${opts.version}`);
