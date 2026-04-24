@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { RefreshCw, Clipboard, Lock } from "lucide-react";
+import { RefreshCw, Clipboard, Lock, Download } from "lucide-react";
 import { useTranslations } from "next-intl";
+import "rc-slider/assets/index.css";
+import Slider from "rc-slider";
 
 import { generate, formatUuid, UuidBytes, UuidVersion, UuidFormat } from "../../../libs/uuid/main";
 import { showToast } from "../../../libs/toast";
@@ -22,16 +24,53 @@ export default function UuidPage() {
   const [version, setVersion] = useState<UuidVersion>(DEFAULT_VERSION);
   const [format, setFormat] = useState<UuidFormat>("standard");
   const [upper, setUpper] = useState(false);
+  const [count, setCount] = useState(1);
   const [bytesList, setBytesList] = useState<UuidBytes[]>([]);
   const initialized = useRef(false);
 
-  function runGenerate(v: UuidVersion = version) {
+  function runGenerate(v: UuidVersion = version, n: number = count) {
     if (v === "v3" || v === "v5") {
       setBytesList([]);
       return;
     }
-    const out = generate({ version: v, count: 1 });
+    const out = generate({ version: v, count: n });
     setBytesList(out);
+  }
+
+  function onChangeVersion(v: UuidVersion) {
+    setVersion(v);
+    runGenerate(v, count);
+  }
+
+  function formatAll(): string[] {
+    return bytesList.map((b) => formatUuid(b, format, upper));
+  }
+
+  function copyCurrent() {
+    if (bytesList.length === 0) return;
+    navigator.clipboard.writeText(formatUuid(bytesList[0], format, upper));
+    showToast(tc("copied"), "success", TOAST_MS);
+  }
+
+  function copyAll() {
+    if (bytesList.length === 0) return;
+    navigator.clipboard.writeText(formatAll().join("\n"));
+    showToast(tc("copied"), "success", TOAST_MS);
+  }
+
+  function downloadTxt() {
+    if (bytesList.length === 0) return;
+    const blob = new Blob([formatAll().join("\n") + "\n"], {
+      type: "text/plain;charset=utf-8",
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = t("downloadFilename");
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
   }
 
   useEffect(() => {
@@ -40,18 +79,6 @@ export default function UuidPage() {
       runGenerate();
     }
   });
-
-  function onChangeVersion(v: UuidVersion) {
-    setVersion(v);
-    runGenerate(v);
-  }
-
-  function copyCurrent() {
-    if (bytesList.length === 0) return;
-    const s = formatUuid(bytesList[0], format, upper);
-    navigator.clipboard.writeText(s);
-    showToast(tc("copied"), "success", TOAST_MS);
-  }
 
   const displayed = bytesList.length > 0 ? formatUuid(bytesList[0], format, upper) : "";
 
@@ -64,22 +91,45 @@ export default function UuidPage() {
         </div>
 
         <div className="relative mt-2">
-          <div className="flex items-center relative py-4 sm:py-5 px-4 sm:px-5">
-            <div className="flex-1 text-center whitespace-nowrap overflow-x-auto scrollbar-none text-2xl sm:text-3xl font-mono leading-normal">
-              {displayed || <span className="text-fg-muted text-base">{t("waitingForName")}</span>}
+          {count === 1 ? (
+            <div className="flex items-center relative py-4 sm:py-5 px-4 sm:px-5">
+              <div className="flex-1 text-center whitespace-nowrap overflow-x-auto scrollbar-none text-2xl sm:text-3xl font-mono leading-normal">
+                {displayed || (
+                  <span className="text-fg-muted text-base">{t("waitingForName")}</span>
+                )}
+              </div>
+              <div className="hidden md:flex items-center gap-1 border-l border-border-default pl-3">
+                <button
+                  type="button"
+                  className="text-fg-muted hover:text-accent-cyan transition-colors cursor-pointer p-2"
+                  onClick={copyCurrent}
+                  title={tc("copy")}
+                  disabled={!displayed}
+                >
+                  <Clipboard size={18} />
+                </button>
+              </div>
             </div>
-            <div className="hidden md:flex items-center gap-1 border-l border-border-default pl-3">
-              <button
-                type="button"
-                className="text-fg-muted hover:text-accent-cyan transition-colors cursor-pointer p-2"
-                onClick={copyCurrent}
-                title={tc("copy")}
-                disabled={!displayed}
-              >
-                <Clipboard size={18} />
-              </button>
+          ) : (
+            <div className="max-h-[40vh] overflow-y-auto border border-border-default rounded-lg divide-y divide-border-default">
+              {formatAll().map((s, i) => (
+                <div key={i} className="flex items-center gap-3 px-3 py-2 hover:bg-bg-elevated/40">
+                  <span className="font-mono text-sm flex-1 truncate">{s}</span>
+                  <button
+                    type="button"
+                    className="text-fg-muted hover:text-accent-cyan transition-colors cursor-pointer p-1"
+                    onClick={() => {
+                      navigator.clipboard.writeText(s);
+                      showToast(tc("copied"), "success", TOAST_MS);
+                    }}
+                    title={tc("copy")}
+                  >
+                    <Clipboard size={14} />
+                  </button>
+                </div>
+              ))}
             </div>
-          </div>
+          )}
         </div>
 
         <div className="mt-6 px-1">
@@ -109,6 +159,46 @@ export default function UuidPage() {
           </div>
           <div className="w-full h-px bg-border-default" />
         </div>
+
+        {version !== "v3" && version !== "v5" && (
+          <div className="mt-4 px-1">
+            <div className="flex items-center justify-between px-2">
+              <label className="font-mono text-sm font-medium text-fg-secondary">
+                {t("quantity")}
+              </label>
+              <span className="font-mono text-sm font-bold text-accent-cyan">{count}</span>
+            </div>
+            <div className="mt-2 px-2">
+              <Slider
+                min={1}
+                max={100}
+                step={1}
+                value={count}
+                railStyle={{ backgroundColor: "var(--color-bg-elevated)", height: "6px" }}
+                trackStyle={{ backgroundColor: "var(--color-accent-cyan)", height: "6px" }}
+                handleStyle={{
+                  backgroundColor: "var(--color-accent-cyan)",
+                  height: "30px",
+                  width: "30px",
+                  marginTop: "-12px",
+                  marginLeft: "-12px",
+                  border: "0",
+                  transform: "none",
+                  opacity: "100",
+                }}
+                onChange={(value) => {
+                  const n = value as number;
+                  setCount(n);
+                  runGenerate(version, n);
+                }}
+              />
+            </div>
+            <div className="flex justify-between mt-1 px-2">
+              <span className="font-mono text-xs text-fg-muted">1</span>
+              <span className="font-mono text-xs text-fg-muted">100</span>
+            </div>
+          </div>
+        )}
 
         <div className="mt-5 flex flex-wrap items-center gap-4 px-1">
           <div className="flex items-center gap-2">
@@ -147,7 +237,7 @@ export default function UuidPage() {
           </label>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           <Button
             variant="outline"
             size="lg"
@@ -161,12 +251,34 @@ export default function UuidPage() {
             variant="outline"
             size="lg"
             onClick={copyCurrent}
-            disabled={!displayed}
+            disabled={!displayed || count > 1}
             className="w-full rounded-full font-bold !border-blue-500 !text-blue-500 hover:!bg-blue-500/10"
           >
             <Clipboard size={16} />
             {t("copy")}
           </Button>
+          {count > 1 && (
+            <>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={copyAll}
+                className="w-full rounded-full font-bold !border-accent-purple !text-accent-purple hover:!bg-accent-purple-dim"
+              >
+                <Clipboard size={16} />
+                {t("copyAll")}
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={downloadTxt}
+                className="w-full rounded-full font-bold !border-accent-cyan !text-accent-cyan hover:!bg-accent-cyan-dim"
+              >
+                <Download size={16} />
+                {t("download")}
+              </Button>
+            </>
+          )}
         </div>
       </div>
     </Layout>
