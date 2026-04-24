@@ -29,6 +29,7 @@
   "copied": "Copied",
   "cleared": "Cleared",
   "clearedClipboard": "Cleared clipboard",
+  "copyFailed": "Copy failed",
   "generated": "Generated",
   "encoded": "Encoded",
   "decoded": "Decoded",
