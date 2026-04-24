@@ -138,20 +138,71 @@ function generateV1(): UuidBytes {
   return b;
 }
 
+function bytesToWordArray(bytes: Uint8Array): CryptoJS.lib.WordArray {
+  const words: number[] = [];
+  for (let i = 0; i < bytes.length; i++) {
+    words[i >>> 2] = (words[i >>> 2] || 0) | (bytes[i] << (24 - (i % 4) * 8));
+  }
+  return CryptoJS.lib.WordArray.create(words, bytes.length);
+}
+
+function wordArrayToBytes(wa: CryptoJS.lib.WordArray, length: number): Uint8Array {
+  const out = new Uint8Array(length);
+  for (let i = 0; i < length; i++) {
+    out[i] = (wa.words[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xff;
+  }
+  return out;
+}
+
+function namespaceAndName(namespace: string, name: string): CryptoJS.lib.WordArray {
+  const nsBytes = parseUuid(namespace);
+  const nameBytes = new TextEncoder().encode(name);
+  const combined = new Uint8Array(nsBytes.length + nameBytes.length);
+  combined.set(nsBytes, 0);
+  combined.set(nameBytes, nsBytes.length);
+  return bytesToWordArray(combined);
+}
+
+function generateV3(namespace: string, name: string): UuidBytes {
+  const digest = CryptoJS.MD5(namespaceAndName(namespace, name));
+  const b = wordArrayToBytes(digest, 16);
+  b[6] = (b[6] & 0x0f) | 0x30;
+  b[8] = (b[8] & 0x3f) | 0x80;
+  return b;
+}
+
+function generateV5(namespace: string, name: string): UuidBytes {
+  const digest = CryptoJS.SHA1(namespaceAndName(namespace, name));
+  const b = wordArrayToBytes(digest, 16);
+  b[6] = (b[6] & 0x0f) | 0x50;
+  b[8] = (b[8] & 0x3f) | 0x80;
+  return b;
+}
+
 export function generate(opts: GenerateOptions): UuidBytes[] {
-  const out: UuidBytes[] = [];
   const count = Math.max(1, Math.floor(opts.count));
   switch (opts.version) {
-    case "v4":
+    case "v4": {
+      const out: UuidBytes[] = [];
       for (let i = 0; i < count; i++) out.push(generateV4());
       return out;
-    case "v7":
+    }
+    case "v7": {
+      const out: UuidBytes[] = [];
       for (let i = 0; i < count; i++) out.push(generateV7());
       return out;
-    case "v1":
+    }
+    case "v1": {
+      const out: UuidBytes[] = [];
       for (let i = 0; i < count; i++) out.push(generateV1());
       return out;
-    default:
-      throw new Error(`Unsupported version: ${opts.version}`);
+    }
+    case "v3":
+    case "v5": {
+      if (!opts.namespace) throw new Error("namespace is required for v3/v5");
+      if (opts.name === undefined) throw new Error("name is required for v3/v5");
+      const fn = opts.version === "v3" ? generateV3 : generateV5;
+      return [fn(opts.namespace, opts.name)];
+    }
   }
 }
