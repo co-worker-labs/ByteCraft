@@ -86,12 +86,31 @@ function generateV4(): UuidBytes {
   return b;
 }
 
+function generateV7(): UuidBytes {
+  const b = new Uint8Array(16);
+  const ts = Date.now();
+  b[0] = (ts / 2 ** 40) & 0xff;
+  b[1] = (ts / 2 ** 32) & 0xff;
+  b[2] = (ts >>> 24) & 0xff;
+  b[3] = (ts >>> 16) & 0xff;
+  b[4] = (ts >>> 8) & 0xff;
+  b[5] = ts & 0xff;
+  const rand = randomBytes(10);
+  for (let i = 0; i < 10; i++) b[6 + i] = rand[i];
+  b[6] = (b[6] & 0x0f) | 0x70;
+  b[8] = (b[8] & 0x3f) | 0x80;
+  return b;
+}
+
 export function generate(opts: GenerateOptions): UuidBytes[] {
   const out: UuidBytes[] = [];
   const count = Math.max(1, Math.floor(opts.count));
   switch (opts.version) {
     case "v4":
       for (let i = 0; i < count; i++) out.push(generateV4());
+      return out;
+    case "v7":
+      for (let i = 0; i < count; i++) out.push(generateV7());
       return out;
     default:
       throw new Error(`Unsupported version: ${opts.version}`);
