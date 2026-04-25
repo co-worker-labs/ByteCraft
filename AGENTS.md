@@ -1,31 +1,37 @@
-# CLAUDE.md — ByteCraft
+# AGENTS.md — ByteCraft
 
-# Stack: Typescript, Nextjs, React, Bootstrap
+## Stack
 
-## PROJECT OVERVIEW
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4 with CSS variables
+- **i18n**: next-intl
+- **Crypto**: CryptoJS
 
-This is a production typescript frontend website. You are operating as a senior Typescript engineer.
-Before any code change, read the relevant source files. Never assume structure.
+## Project Overview
 
-## ARCHITECTURE RULES
+ByteCraft is a collection of browser-based developer utilities. All operations run entirely in the browser — no data is sent to any server.
 
-### Simplicity first
+## Available Tools
 
-Follow Go's "less is more" philosophy. Never abstract prematurely, never introduce
-an unnecessary dependency.
+| Route          | Tool               | Description                                          |
+| -------------- | ------------------ | ---------------------------------------------------- |
+| `/base64`      | Base64             | Base64 encoding/decoding, Basic Auth header          |
+| `/password`    | Password Generator | Secure, memorable password generation                |
+| `/hashing`     | Hashing            | MD5, SHA-1/224/256/384/512, SHA3, Keccak, RIPEMD-160 |
+| `/cipher`      | Encrypt/Decrypt    | AES, DES, Triple DES, Rabbit, RC4, RC4Drop           |
+| `/checksum`    | File Checksum      | Unlimited file size checksums                        |
+| `/ascii`       | ASCII Table        | ASCII reference with conversions                     |
+| `/htmlcode`    | HTML Code          | HTML special characters reference                    |
+| `/storageunit` | Storage Unit       | Byte, KB, MB, GB, TB, PB conversion                  |
+| `/uuid`        | UUID               | UUID v4/v7 generation                                |
+| `/urlencoder`  | URL Encoder        | URL encoding/decoding                                |
 
-- **YAGNI**: Implement only what the requirements document explicitly asks for.
-- **Standard library first**: Always prefer the Go standard library over third-party packages.
-- **Anti over-engineering**: Simple functions and plain structs beat complex interface hierarchies.
+## Architecture Rules
 
 ### React Compiler memoization
 
-This project uses React Compiler (via `eslint-config-next/core-web-vitals`). The compiler
-automatically memoizes values — **never manually write `useMemo`, `useCallback`, or `React.memo`**.
-
-The ESLint rule `react-hooks/preserve-manual-memoization` will error if you write `useMemo` and
-the compiler cannot preserve its semantics in the compiled output. Fix: remove the manual
-memoization and let the compiler handle it.
+This project uses React Compiler (via `eslint-config-next/core-web-vitals`). The compiler automatically memoizes values — **never manually write `useMemo`, `useCallback`, or `React.memo`**.
 
 ```tsx
 // ❌ WRONG — will fail eslint
@@ -36,45 +42,207 @@ const q = search.trim().toLowerCase();
 const filtered = !q ? list : list.filter(...);
 ```
 
-## RESPONSE PROTOCOL
+### Simplicity first
 
-### Before making changes
+Follow Go's "less is more" philosophy. Never abstract prematurely.
+
+- **YAGNI**: Implement only what the requirements document explicitly asks for.
+- **Anti over-engineering**: Simple functions and plain structs beat complex interface hierarchies.
+
+## Page Structure
+
+Each tool has **two files** in its directory:
+
+```
+app/[locale]/base64/
+├── page.tsx          # Route entry - loads data/hydration
+└── base64-page.tsx   # Page component with business logic
+```
+
+**Pattern:**
+
+- `page.tsx` — route entry with optional static params, loads initial data
+- `<tool>-page.tsx` — default export page component, contains all UI and logic
+
+### Page Component Structure
+
+Each page follows a consistent structure:
+
+```tsx
+"use client";
+
+import { useState } from "react";
+import Layout from "../../../components/layout";
+import { useTranslations } from "next-intl";
+// ... UI components
+
+function Conversion() {
+  const t = useTranslations("tool-name");
+  // ... state and handlers
+}
+
+function Description() {
+  // ... optional description/help section
+}
+
+export default function ToolPage() {
+  const t = useTranslations("tools");
+  return (
+    <Layout title={t("tool.shortTitle")}>
+      <Conversion />
+      <Description />
+    </Layout>
+  );
+}
+```
+
+## UI Components
+
+Located in `components/ui/`:
+
+| Component        | Usage                                                   |
+| ---------------- | ------------------------------------------------------- | ---------------------- |
+| `Button`         | Primary action buttons (`variant="primary               | danger"`, `size="md"`) |
+| `StyledInput`    | Text input fields                                       |
+| `StyledTextarea` | Multi-line text areas (`rows={n}`)                      |
+| `StyledSelect`   | Dropdown select (`value`, `onChange`)                   |
+| `StyledCheckbox` | Checkbox (`checked`, `onChange`)                        |
+| `CopyButton`     | Copy to clipboard (`getContent={() => text}`)           |
+| `Card`           | Container with shadow/hover effects                     |
+| `Badge`          | Small label/tag                                         |
+| `Tabs`           | Tab navigation                                          |
+| `Accordion`      | Collapsible sections                                    |
+| `Dropdown`       | Dropdown menu                                           |
+| `Toast`          | Notification (via `showToast(message, type, duration)`) |
+
+Shared components in `components/`:
+
+- `Layout` — page layout wrapper
+- `Header` — site header
+- `Footer` — site footer
+- `LanguageSwitcher` — locale switcher
+
+## Theme & Styling
+
+**Colors** (defined in `app/globals.css`):
+
+| Variable           | Light     | Dark      | Usage            |
+| ------------------ | --------- | --------- | ---------------- |
+| `--bg-base`        | `#f8fafc` | `#0b0f1a` | Background       |
+| `--bg-surface`     | `#ffffff` | `#111827` | Cards            |
+| `--bg-elevated`    | `#ffffff` | `#1e293b` | Elevated         |
+| `--bg-input`       | `#f1f5f9` | `#0d1117` | Input fields     |
+| `--fg-primary`     | `#0f172a` | `#f1f5f9` | Main text        |
+| `--fg-secondary`   | `#475569` | `#94a3b8` | Secondary text   |
+| `--fg-muted`       | `#94a3b8` | `#64748b` | Muted text       |
+| `--border-default` | `#e2e8f0` | `#1e293b` | Borders          |
+| `--accent-cyan`    | `#06d6a0` | `#06d6a0` | Primary accent   |
+| `--accent-purple`  | `#8b5cf6` | `#8b5cf6` | Secondary accent |
+| `--danger`         | `#ef4444` | `#ef4444` | Danger/delete    |
+
+**Tailwind Classes:**
+
+- Use Tailwind utility classes
+- Avoid custom CSS unless necessary
+- Follow existing patterns in page components
+
+**Fonts:**
+
+- **Sans**: Inter
+- **Mono**: JetBrains Mono
+
+## i18n
+
+Supports three locales with next-intl:
+
+| Locale              | Code    | URL             |
+| ------------------- | ------- | --------------- |
+| English             | `en`    | `/` (no prefix) |
+| Simplified Chinese  | `zh-CN` | `/zh-CN`        |
+| Traditional Chinese | `zh-TW` | `/zh-TW`        |
+
+**i18n routing**: `as-needed` - default locale has no prefix.
+
+### Using Translations
+
+```tsx
+const t = useTranslations("tool-name"); // tool-specific namespace
+const tc = useTranslations("common"); // shared translations
+const ts = useTranslations("site"); // site config
+```
+
+Translation files located in `messages/` directory.
+
+## Business Logic
+
+Libraries in `libs/`:
+
+| File                              | Purpose                           |
+| --------------------------------- | --------------------------------- |
+| `tools.ts`                        | Tool registry (name, route, icon) |
+| `site.ts`                         | Site metadata                     |
+| `theme.tsx`                       | Theme provider (light/dark)       |
+| `toast.ts`                        | Toast notification system         |
+| `uuid/main.ts`                    | UUID v4/v7 generation             |
+| `password/main.ts`, `wordlist.ts` | Password generation               |
+| `ascii.ts`                        | ASCII table data                  |
+| `htmlcode.ts`                     | HTML entities data                |
+
+## Utilities
+
+Pure functions in `utils/`:
+
+| File         | Purpose              |
+| ------------ | -------------------- |
+| `storage.ts` | localStorage wrapper |
+| `math.ts`    | Math utilities       |
+| `path.ts`    | Path utilities       |
+
+## Version Control
+
+### Commit Message Format
+
+Strictly follow Conventional Commits:
+
+```
+<type>(<scope>): <subject>
+```
+
+| Type       | Usage                |
+| ---------- | -------------------- |
+| `feat`     | New tool, feature    |
+| `fix`      | Bug fix              |
+| `refactor` | Code refactor        |
+| `test`     | Test changes         |
+| `chore`    | Dependencies, config |
+| `docs`     | Documentation        |
+| `perf`     | Performance          |
+
+### Git Hooks
+
+Husky + lint-staged configured:
+
+- Prettier on `*.{js,jsx,ts,tsx,mjs,js,css,scss,md}`
+- ESLint fix on `*.{js,jsx,ts,tsx,mjs}`
+
+## Response Protocol
+
+### Before Making Changes
 
 1. State which files you will read and modify, and why.
+2. Read the relevant source files first. Never assume structure.
 
-### Format for code changes
+### Code Quality
 
 - Show diffs or complete functions, never decontextualized snippets.
 - After changes: list every file modified and any required follow-up steps.
 - Flag trade-offs explicitly: `// TODO(claude): review this tradeoff`
 
-### Never do without asking
+### Never Do Without Asking
 
 - Rename exported symbols
 - Delete files or remove exported functions
 
-### Solution quality
+### Solution Quality
 
-Always produce the technically correct solution for the problem at hand.
-Do not cut corners to reduce implementation scope — if the right solution
-requires more code, write it. If a simpler solution is genuinely correct,
-prefer it (YAGNI). Correctness and simplicity are not in conflict.
-
-## VERSION CONTROL
-
-### Commit message format
-
-Strictly follow Conventional Commits. Format: `<type>(<scope>): <subject>`
-
-Common types: `feat`, `fix`, `refactor`, `test`, `chore`, `docs`, `perf`
-
-Examples:
-
-```
-feat(auth): add refresh token rotation
-fix(user): return 404 when profile not found
-chore(deps): upgrade pgx to v5.6.0
-```
-
-When asked to generate a commit message, always use this format. Never generate
-free-form commit messages.
+Always produce the technically correct solution for the problem. Do not cut corners. Correctness and simplicity are not in conflict.
