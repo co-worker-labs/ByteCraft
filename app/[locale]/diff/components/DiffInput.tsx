@@ -5,8 +5,8 @@ import { useTranslations } from "next-intl";
 import { Upload } from "lucide-react";
 import { LineNumberedTextarea } from "../../../../components/ui/line-numbered-textarea";
 import { showToast } from "../../../../libs/toast";
-import { isBinaryFile } from "../../../../libs/diff/binary-sniff";
-import { MAX_FILE_BYTES } from "../../../../libs/diff/compute";
+import { isBinaryFile } from "../../../../libs/file/binary-sniff";
+import { MAX_FILE_BYTES } from "../../../../libs/file/limits";
 import { formatJson } from "../../../../libs/diff/json-format";
 
 export interface DiffInputProps {

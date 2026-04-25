@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import Layout from "../../../components/layout";
+import { useIsMobile } from "../../../hooks/use-is-mobile";
 import { showToast } from "../../../libs/toast";
 import { STORAGE_KEYS } from "../../../libs/storage-keys";
 import {
@@ -47,18 +48,6 @@ function readPersisted(): DiffPersisted {
   } catch {
     return DEFAULT_PERSISTED;
   }
-}
-
-function useIsMobile(breakpointPx = 768) {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia(`(max-width: ${breakpointPx - 1}px)`);
-    const listener = () => setIsMobile(mq.matches);
-    listener();
-    mq.addEventListener("change", listener);
-    return () => mq.removeEventListener("change", listener);
-  }, [breakpointPx]);
-  return isMobile;
 }
 
 function DiffPageBody() {
