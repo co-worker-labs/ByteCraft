@@ -22,7 +22,7 @@ A browser-only text/code diff tool. Two inputs (Original / Modified) are compare
 
 ## Non-Goals (explicit)
 
-- General syntax highlighting (no prism / highlight.js / shiki). JSON is special-cased via a tiny built-in tokenizer.
+- General syntax highlighting (no prism / highlight.js / shiki). JSON is special-cased via a tiny built-in tokenizer, auto-detected when both inputs parse as valid JSON (no manual toggle needed).
 - A per-tool theme switch (the site already has a global theme).
 - Character-level diff (visually noisy in CJK and rarely useful).
 - Three-way diff, multi-file diff, directory diff.
@@ -53,7 +53,7 @@ A browser-only text/code diff tool. Two inputs (Original / Modified) are compare
 | Clear all              | Toolbar button to clear both sides                                                                                                                                                        |
 | Copy diff              | Copy the unified-diff representation to clipboard                                                                                                                                         |
 | Empty / equal states   | Both empty → placeholder, no diff. Non-empty but identical (under current options) → "No differences found"                                                                               |
-| Persistence            | View mode and the two option toggles persisted via `libs/storage-keys.ts`                                                                                                                 |
+| Persistence            | View mode and the two option toggles persisted as a single JSON object under the `diff` key in `libs/storage-keys.ts`                                                                     |
 
 ### Always-On Normalization (no UI)
 
@@ -99,11 +99,9 @@ app/[locale]/diff/
     ├── DiffInline.tsx            # single-column virtualized list
     └── DiffRow.tsx               # per-row renderer with word-level spans
 
-app/[locale]/diff/worker/
-└── diff.worker.ts                # Worker entry: receives request, runs jsdiff, posts result
-
 libs/diff/
 ├── compute.ts                    # Main-thread wrapper: spawns/holds the Worker, marshals messages
+├── diff.worker.ts                # Worker entry: receives request, runs jsdiff, posts result (co-located with compute.ts to keep `new URL("./diff.worker.ts", import.meta.url)` resolution simple and avoid the dynamic `[locale]` segment under app router)
 ├── normalize.ts                  # CRLF → LF, trailing-whitespace trim
 ├── binary-sniff.ts               # First-8KB binary detection
 ├── json-format.ts                # JSON.parse + stringify(2) with friendly error
@@ -114,7 +112,7 @@ libs/diff/
 - app/[locale]/home-page.tsx      # Append icon card
 - public/locales/{en,zh-CN,zh-TW}/tools.json   # Append diff title/shortTitle/description
 - public/locales/{en,zh-CN,zh-TW}/diff.json    # Tool's own translations (flat keys)
-- libs/storage-keys.ts            # Append DIFF_VIEW_MODE, DIFF_OPTIONS keys
+- libs/storage-keys.ts            # Append a single `diff` key (`bc:diff`); stores `{ viewMode, ignoreWhitespace, ignoreCase }` as one JSON object
 ```
 
 ### Component Hierarchy
@@ -145,28 +143,72 @@ User input / file upload
         ▼
 normalize.ts  (CRLF → LF, trim trailing whitespace)
         │
-        ├──[ size < 512KB per side ]──> debounce 300ms ──┐
-        └──[ size ≥ 512KB any side ]──> show "Compare"   │
-                                          button click ──┤
-                                                         ▼
-                                          libs/diff/compute.ts
+        ├──[ total < 50KB ]───────────> runDiffSync() on main thread ──┐
+        │                                                               │
+        ├──[ 50KB ≤ total < 512KB ]───> debounce 300ms ──┐              │
+        └──[ total ≥ 512KB ]─────────> show "Compare"    │              │
+                                        button click ────┤              │
+                                                         ▼              │
+                                          libs/diff/compute.ts          │
+                                                         │              │
+                                                postMessage to Worker   │
+                                                         ▼              │
+                                          diff.worker.ts                │
+                                            jsdiff.diffLines(opts)      │
+                                            (uses shared build-rows.ts) │
+                                                         │              │
+                                                postMessage result      │
+                                                         │              │
+                                          ◄─────────────────────────────┘
                                                          │
-                                                postMessage to Worker
-                                                         ▼
-                                          diff.worker.ts
-                                            jsdiff.diffLines(opts)
-                                            pair add/del runs → diffWordsWithSpace
-                                            build unified-diff string
-                                                         │
-                                                postMessage result
-                                                         ▼
-                                          React state
+                                                  React state
                                                          │
                                                  ┌───────┴────────┐
                                                  ▼                ▼
-                                       row count ≤ 2000      row count > 2000
-                                       direct render        virtualized render
+                                       row count ≤ 2000       row count > 2000
+                                       direct render         virtualized render
 ```
+
+User input / file upload
+│
+▼
+normalize.ts (CRLF → LF, trim trailing whitespace)
+│
+├──[ size < 512KB per side ]──> debounce 300ms ──┐
+└──[ size ≥ 512KB any side ]──> show "Compare" │
+button click ──┤
+▼
+libs/diff/compute.ts
+│
+postMessage to Worker
+▼
+diff.worker.ts
+jsdiff.diffLines(opts)
+pair add/del runs → diffWordsWithSpace
+build unified-diff string
+│
+postMessage result
+▼
+React state
+│
+┌───────┴────────┐
+▼ ▼
+row count ≤ 2000 row count > 2000
+direct render virtualized render
+
+````
+
+### Diff Engine (Sync + Worker Hybrid)
+
+Small inputs are fast enough to run synchronously on the main thread without blocking a frame. Only large inputs require a Worker.
+
+| Input Size (total bytes) | Strategy | Rationale |
+|---|---|---|
+| `< 50KB` | **Synchronous** on main thread | `< 16ms` — fits in a single frame; zero Worker overhead |
+| `50KB – 512KB` | **Web Worker** (auto-compute) | May block several frames; Worker keeps UI responsive |
+| `≥ 512KB` | **Web Worker** (manual Compare button) | Heavy computation; user controls timing |
+
+Both paths use the same `buildRows()` function from `libs/diff/build-rows.ts`. The Worker is a thin shell around the shared algorithm.
 
 ### Worker Protocol
 
@@ -194,7 +236,7 @@ type DiffRowData =
   | { kind: "add"; newNo: number; segments: WordSeg[] };
 
 type WordSeg = { text: string; changed: boolean };
-```
+````
 
 The same `DiffRowData[]` is consumed by both `DiffSideBySide` (which slots `del`/`add` into left/right columns by pairing) and `DiffInline` (which renders sequentially). The `DiffRow.tsx` component file holds the per-row React renderer; the type and the component intentionally do not share a name.
 
@@ -208,7 +250,7 @@ This is the standard GitHub/GitLab approach and degrades gracefully when add/del
 
 ### Layout
 
-- Max-width: 1400px centered (matches existing tools)
+- Container: `container mx-auto px-4` (matches sibling tools — no explicit max-width)
 - Two `DiffInput` blocks: stacked vertically on `< 1024px`, side-by-side on `≥ 1024px`
 - Diff result area below the inputs, full-width
 - Each `StyledTextarea` min-height 240px, resizable
@@ -334,7 +376,7 @@ Pin exact versions during the install step in the implementation plan.
 4. Files exceeding 5MB are rejected with a toast.
 5. With both sides under 512KB, the diff recomputes 300ms after the user stops typing.
 6. With either side ≥ 512KB, auto-compute is disabled and a Compare button appears; clicking it runs the diff.
-7. The diff computation runs in a Web Worker; the main thread never blocks for more than a frame.
+7. The diff computation runs synchronously on the main thread for inputs < 50KB total (completes within one frame); for larger inputs, it runs in a Web Worker.
 8. Side-by-side view shows two columns with line numbers and per-row coloring; inline view shows a single column.
 9. Within paired removed/added lines, word-level differences are highlighted in a deeper variant of the row's color.
 10. The view toggle switches modes; on viewports `< 768px` it is hidden and the layout is forced to inline.
@@ -347,17 +389,19 @@ Pin exact versions during the install step in the implementation plan.
 17. With both sides non-empty and identical under the active options, "No differences found" is displayed.
 18. When the diff produces > 2000 rows, the result list is virtualized; DOM node count stays bounded.
 19. The page includes the project-standard "data not transferred" alert banner at the top.
-20. View mode and the two option toggles persist via keys defined in `libs/storage-keys.ts`.
+20. View mode and the two option toggles persist as a single JSON object under the `diff` key defined in `libs/storage-keys.ts`.
 21. The tool is registered in `libs/tools.ts`, `app/[locale]/home-page.tsx` (icon card), and each locale's `tools.json`.
-22. `app/[locale]/diff/page.tsx` exports SEO metadata (title, description, openGraph) consistent with sibling tools.
+22. `app/[locale]/diff/page.tsx` exports SEO metadata (`title`, `description`, `keywords`) consistent with sibling tools (no `openGraph` — sibling tools don't currently export it; revisit when siblings adopt it).
 23. CRLF vs LF differences and trailing whitespace differences never appear as changes (always normalized).
 24. The description section renders five subsections: What / How / Algorithm / Use cases / Limitations.
 25. Translations exist and pass type checking for `en`, `zh-CN`, and `zh-TW`.
 
 ## Implementation Notes
 
-- The Worker is implemented as a Next.js native worker (`new Worker(new URL("./diff.worker.ts", import.meta.url), { type: "module" })`). No Comlink unless the protocol grows beyond two message types.
-- `libs/diff/compute.ts` should hold a single Worker instance for the page's lifetime, debounce/cancel in-flight requests by id, and only deliver the most recent response.
+- The diff algorithm (Myers `diffLines` + word-level pairing) lives in a shared `libs/diff/build-rows.ts` file, used by both the synchronous path (inputs < 50KB total — runs on main thread, < 16ms) and the Web Worker path.
+- The Worker (for larger inputs) is implemented as a Next.js native worker (`new Worker(new URL("./diff.worker.ts", import.meta.url), { type: "module" })`). It is a thin shell around `build-rows.ts`. No Comlink unless the protocol grows beyond two message types.
+- `libs/diff/compute.ts` exports both `runDiffSync()` for the sync path and `compute()` for the Worker path. It holds a single Worker instance for the page's lifetime, debounces/cancels in-flight requests by id.
+- JSON syntax highlighting is auto-detected: when both inputs parse as valid JSON (`looksLikeJson()`), the tokenizer colors keys/strings/numbers/keywords without requiring a manual toggle.
 - React Compiler handles memoization: per project rules, do **not** write `useMemo` / `useCallback` / `React.memo` manually.
 - Virtualization threshold (2000) lives as a named constant in `libs/diff/compute.ts`.
 - Token names in the visual design (`bg-success-dim`, `bg-danger-dim`, etc.) are placeholders; the implementation plan must verify the actual token names against the Tailwind config and adjust before coding.
