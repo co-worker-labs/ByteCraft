@@ -12,9 +12,11 @@ import {
 } from "react";
 import Footer, { FooterPosition } from "./footer";
 import Header, { HeaderPosition } from "./header";
+import FloatingToolbar from "./floating-toolbar";
 import { ArrowUp } from "lucide-react";
 import { usePathname } from "../i18n/navigation";
 import { pathTrim } from "../utils/path";
+import { useFullscreen } from "../hooks/use-fullscreen";
 
 interface LayoutSettings {
   reset: () => void;
@@ -52,9 +54,14 @@ export default function Layout({
 }) {
   const [isHidden, setIsHidden] = useState<boolean>(hidden || false);
   const [showBackTop, setShowBackTop] = useState(false);
+  const fullscreen = useFullscreen();
 
-  const footerPos = footerPosition || "none";
-  const headerPos = headerPosition || "sticky";
+  const isInFullscreen = fullscreen.isFullscreen;
+
+  const footerPos =
+    isInFullscreen || footerPosition === "hidden" ? "hidden" : footerPosition || "none";
+  const headerPos =
+    isInFullscreen || headerPosition === "hidden" ? "hidden" : headerPosition || "sticky";
 
   const pathname = usePathname();
   const path = pathTrim(pathname);
@@ -91,6 +98,8 @@ export default function Layout({
       >
         <Header position={headerPos} title={title} />
 
+        {isInFullscreen && <FloatingToolbar />}
+
         <button
           type="button"
           onClick={scrollToTop}
@@ -104,7 +113,10 @@ export default function Layout({
           <ArrowUp size={18} />
         </button>
 
-        <main className={`flex-1 mb-6 ${className || ""}`} style={style}>
+        <main
+          className={`flex-1 ${isInFullscreen ? "w-full" : "mb-6"} ${className || ""}`}
+          style={style}
+        >
           {children}
         </main>
 
