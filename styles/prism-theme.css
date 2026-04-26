@@ -1,0 +1,105 @@
+/* Custom Prism theme using ByteCraft CSS variables.
+   Works with both light and dark themes via existing var indirection in app/globals.css. */
+
+pre[class*="language-"],
+code[class*="language-"] {
+  color: var(--fg-primary);
+  background: var(--bg-input);
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  text-shadow: none;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  tab-size: 2;
+  hyphens: none;
+}
+
+pre[class*="language-"] {
+  padding: 0.9rem 1rem;
+  margin: 0.75rem 0;
+  border: 1px solid var(--border-default);
+  border-radius: 0.5rem;
+  overflow: auto;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  border: 1px solid var(--border-default);
+}
+
+/* Tokens */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--fg-muted);
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: var(--fg-secondary);
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: var(--accent-purple);
+}
+
+.token.boolean,
+.token.number {
+  color: var(--accent-cyan);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--accent-cyan);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: var(--fg-secondary);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: var(--accent-purple);
+}
+
+.token.function,
+.token.class-name {
+  color: var(--accent-cyan);
+}
+
+.token.regex,
+.token.important {
+  color: var(--danger);
+}
+
+.token.important,
+.token.bold {
+  font-weight: 600;
+}
+.token.italic {
+  font-style: italic;
+}
