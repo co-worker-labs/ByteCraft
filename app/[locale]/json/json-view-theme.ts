@@ -1,0 +1,25 @@
+import type { CSSProperties } from "react";
+
+export const byteCraftJsonTheme: CSSProperties = {
+  "--w-rjv-background-color": "transparent",
+  "--w-rjv-color": "var(--fg-primary)",
+  "--w-rjv-key-string": "var(--accent-cyan)",
+  "--w-rjv-type-string-color": "var(--accent-purple)",
+  "--w-rjv-type-int-color": "var(--accent-cyan)",
+  "--w-rjv-type-float-color": "var(--accent-cyan)",
+  "--w-rjv-type-bigint-color": "var(--accent-cyan)",
+  "--w-rjv-type-boolean-color": "var(--danger)",
+  "--w-rjv-type-null-color": "var(--fg-muted)",
+  "--w-rjv-type-undefined-color": "var(--fg-muted)",
+  "--w-rjv-type-nan-color": "var(--fg-muted)",
+  "--w-rjv-arrow-color": "var(--fg-secondary)",
+  "--w-rjv-info-color": "var(--fg-muted)",
+  "--w-rjv-update-color": "var(--accent-cyan)",
+  "--w-rjv-line-color": "var(--border-default)",
+  "--w-rjv-curlybraces-color": "var(--fg-secondary)",
+  "--w-rjv-brackets-color": "var(--fg-secondary)",
+  "--w-rjv-colon-color": "var(--fg-muted)",
+  "--w-rjv-quotes-color": "var(--fg-secondary)",
+  "--w-rjv-quotes-string-color": "var(--accent-purple)",
+  "--w-rjv-ellipsis-color": "var(--fg-muted)",
+} as CSSProperties;
