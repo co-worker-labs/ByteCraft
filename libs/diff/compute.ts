@@ -2,7 +2,6 @@ import type { DiffRequest, DiffResponse, DiffWorkerMessage } from "./types";
 import { buildRows } from "./build-rows";
 
 export const AUTO_COMPUTE_MAX_BYTES = 512 * 1024;
-export const MAX_FILE_BYTES = 5 * 1024 * 1024;
 export const WORKER_THRESHOLD = 50 * 1024;
 export const DEBOUNCE_MS = 300;
 export const VIRTUALIZATION_THRESHOLD = 2000;

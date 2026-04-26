@@ -53,6 +53,10 @@
     "title": "文字差異比較 - 免費線上工具",
     "shortTitle": "文字差異",
     "description": "以行級 + 字詞級精度比較兩段文字或程式碼。支援並排與行內兩種檢視，100% 瀏覽器端處理。"
+  },
+  "markdown": {
+    "title": "Markdown 編輯器與預覽 - 免費線上工具",
+    "shortTitle": "Markdown 編輯器",
+    "description": "使用支援 GitHub Flavored Markdown 的線上編輯器撰寫並預覽 Markdown。免費線上 Markdown 編輯器，即時預覽，100% 客戶端處理。"
   }
-}
 }

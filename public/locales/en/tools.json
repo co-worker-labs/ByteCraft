@@ -53,5 +53,10 @@
     "title": "Text Diff Comparison - Free Online Tool",
     "shortTitle": "Text Diff",
     "description": "Compare two texts or code snippets with line and word-level precision. Side-by-side or inline view, 100% client-side."
+  },
+  "markdown": {
+    "title": "Markdown Editor & Preview - Free Online Tool",
+    "shortTitle": "Markdown Editor",
+    "description": "Write and preview Markdown with GitHub Flavored Markdown support. Free online Markdown editor with live preview, 100% client-side."
   }
 }

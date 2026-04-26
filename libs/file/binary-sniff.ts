@@ -19,7 +19,7 @@ export async function isBinaryFile(file: File): Promise<boolean> {
   const decoded = new TextDecoder("utf-8", { fatal: false }).decode(buf);
   let replacements = 0;
   for (const ch of decoded) {
-    if (ch === "\uFFFD") replacements++;
+    if (ch === "�") replacements++;
   }
   return replacements / decoded.length > REPLACEMENT_RATIO_THRESHOLD;
 }
