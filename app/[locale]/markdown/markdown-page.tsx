@@ -2,20 +2,12 @@
 
 import "../../../styles/prism-theme.css";
 
-import { useEffect, useRef, useState, type ChangeEvent, type UIEvent } from "react";
+import { useEffect, useRef, useState, type ChangeEvent, type DragEvent, type UIEvent } from "react";
 import { useTranslations } from "next-intl";
-import {
-  Upload,
-  Download,
-  FileImage,
-  Printer,
-  Trash2,
-  Columns2,
-  Rows2,
-  PanelTop,
-} from "lucide-react";
+import { Upload, Download, FileDown, FileImage, Printer, Trash2, Columns2 } from "lucide-react";
 import Layout from "../../../components/layout";
 import { Button } from "../../../components/ui/button";
+import { Dropdown } from "../../../components/ui/dropdown";
 import { CopyButton } from "../../../components/ui/copy-btn";
 import { showToast } from "../../../libs/toast";
 import { STORAGE_KEYS } from "../../../libs/storage-keys";
@@ -27,14 +19,13 @@ import { useIsMobile } from "../../../hooks/use-is-mobile";
 import { EditorView } from "./components/EditorView";
 import { PreviewView } from "./components/PreviewView";
 
-type ViewMode = "tab" | "horizontal" | "vertical";
-type ActiveTab = "edit" | "preview";
+type EditorMode = "edit" | "preview" | "split";
 
 interface Persisted {
-  viewMode: ViewMode;
+  editorMode: EditorMode;
 }
 
-const DEFAULT_PERSISTED: Persisted = { viewMode: "tab" };
+const DEFAULT_PERSISTED: Persisted = { editorMode: "preview" };
 const RENDER_DEBOUNCE_MS = 200;
 const AUTO_RENDER_MAX_BYTES = 512 * 1024;
 
@@ -44,9 +35,9 @@ function readPersisted(): Persisted {
   if (!raw) return DEFAULT_PERSISTED;
   try {
     const parsed = JSON.parse(raw) as Partial<Persisted>;
-    const vm = parsed.viewMode;
+    const em = parsed.editorMode;
     return {
-      viewMode: vm === "horizontal" || vm === "vertical" || vm === "tab" ? vm : "tab",
+      editorMode: em === "edit" || em === "preview" || em === "split" ? em : "preview",
     };
   } catch {
     return DEFAULT_PERSISTED;
@@ -58,11 +49,13 @@ function MarkdownPageBody() {
   const tc = useTranslations("common");
 
   const [markdown, setMarkdown] = useState("");
-  const [viewMode, setViewMode] = useState<ViewMode>(DEFAULT_PERSISTED.viewMode);
-  const [activeTab, setActiveTab] = useState<ActiveTab>("edit");
+  const [editorMode, setEditorMode] = useState<EditorMode>(DEFAULT_PERSISTED.editorMode);
   const [renderedHtml, setRenderedHtml] = useState("");
   const [hydrated, setHydrated] = useState(false);
   const [pendingLargeRender, setPendingLargeRender] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const dragCounterRef = useRef(0);
 
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const editorRef = useRef<HTMLTextAreaElement | null>(null);
@@ -70,24 +63,29 @@ function MarkdownPageBody() {
   const scrollLockRef = useRef(false);
 
   const isMobile = useIsMobile();
-  const effectiveViewMode: ViewMode = isMobile ? "tab" : viewMode;
 
   const tooLargeForAuto = markdown.length > AUTO_RENDER_MAX_BYTES;
   const wordCount = markdown.trim() ? markdown.trim().split(/\s+/).length : 0;
   const charCount = markdown.length;
-  const readMin = Math.max(1, Math.ceil(wordCount / 200));
+  const readMin = wordCount ? Math.max(1, Math.ceil(wordCount / 200)) : 0;
 
   /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     const persisted = readPersisted();
-    setViewMode(persisted.viewMode);
+    setEditorMode(isMobile && persisted.editorMode === "split" ? "preview" : persisted.editorMode);
     setHydrated(true);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (!hydrated) return;
-    window.localStorage.setItem(STORAGE_KEYS.markdown, JSON.stringify({ viewMode }));
-  }, [viewMode, hydrated]);
+    window.localStorage.setItem(STORAGE_KEYS.markdown, JSON.stringify({ editorMode }));
+  }, [editorMode, hydrated]);
+
+  useEffect(() => {
+    if (isMobile && editorMode === "split") {
+      setEditorMode("preview");
+    }
+  }, [isMobile]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (!markdown) {
@@ -158,7 +156,43 @@ function MarkdownPageBody() {
   function onClearAll() {
     setMarkdown("");
     setRenderedHtml("");
-    showToast(tc("allCleared"), "danger", 2000);
+    showToast(tc("cleared"), "danger", 2000);
+  }
+
+  // ---- Drag and drop ----
+
+  function onDragOver(ev: DragEvent) {
+    ev.preventDefault();
+    ev.stopPropagation();
+    ev.dataTransfer.dropEffect = "copy";
+  }
+
+  function onDragEnter(ev: DragEvent) {
+    ev.preventDefault();
+    ev.stopPropagation();
+    dragCounterRef.current++;
+    if (ev.dataTransfer.types.includes("Files")) {
+      setIsDragging(true);
+    }
+  }
+
+  function onDragLeave(ev: DragEvent) {
+    ev.preventDefault();
+    ev.stopPropagation();
+    dragCounterRef.current--;
+    if (dragCounterRef.current === 0) {
+      setIsDragging(false);
+    }
+  }
+
+  async function onDrop(ev: DragEvent) {
+    ev.preventDefault();
+    ev.stopPropagation();
+    dragCounterRef.current = 0;
+    setIsDragging(false);
+
+    const file = ev.dataTransfer.files?.[0];
+    if (file) void handleFile(file);
   }
 
   // ---- Scroll sync (Split modes only) ----
@@ -175,67 +209,89 @@ function MarkdownPageBody() {
   }
 
   function onEditorScroll(ev: UIEvent<HTMLTextAreaElement>) {
-    if (effectiveViewMode === "tab") return;
+    if (editorMode !== "split") return;
     if (!previewRef.current) return;
     syncScroll(ev.currentTarget, previewRef.current);
   }
 
   function onPreviewScroll(ev: UIEvent<HTMLDivElement>) {
-    if (effectiveViewMode === "tab") return;
+    if (editorMode !== "split") return;
     if (!editorRef.current) return;
     syncScroll(ev.currentTarget, editorRef.current);
   }
 
   // ---- Layout ----
 
+  const modeToolbarEl = (
+    <div className="inline-flex border border-border-default rounded-lg overflow-hidden bg-bg-surface/90 shadow-sm">
+      <button
+        type="button"
+        onClick={() => setEditorMode("edit")}
+        className={`px-2 py-1 text-xs transition-colors ${editorMode === "edit" ? "bg-accent-cyan text-bg-base" : "text-fg-secondary hover:bg-bg-elevated"}`}
+      >
+        {t("edit")}
+      </button>
+      <button
+        type="button"
+        onClick={() => setEditorMode("preview")}
+        className={`px-2 py-1 text-xs transition-colors ${editorMode === "preview" ? "bg-accent-cyan text-bg-base" : "text-fg-secondary hover:bg-bg-elevated"}`}
+      >
+        {t("preview")}
+      </button>
+      <button
+        type="button"
+        onClick={() => setEditorMode("split")}
+        disabled={isMobile}
+        title={isMobile ? undefined : t("split")}
+        className={`px-2 py-1 text-xs transition-colors ${editorMode === "split" ? "bg-accent-purple-dim text-accent-purple" : "text-fg-secondary hover:bg-bg-elevated"} ${isMobile ? "opacity-30 cursor-not-allowed" : ""}`}
+      >
+        <Columns2 size={12} className="inline-block mr-0.5" />
+        {t("split")}
+      </button>
+    </div>
+  );
+
   const editorEl = (
-    <EditorView
-      value={markdown}
-      onChange={setMarkdown}
-      placeholder={t("placeholder")}
-      scrollRef={editorRef}
-      onScroll={onEditorScroll}
-    />
+    <div className="relative">
+      <EditorView
+        value={markdown}
+        onChange={setMarkdown}
+        placeholder={t("placeholder")}
+        scrollRef={editorRef}
+        onScroll={onEditorScroll}
+      />
+      <div className="absolute top-3 right-3 z-10">{modeToolbarEl}</div>
+    </div>
   );
 
   const previewEl = (
-    <PreviewView
-      ref={previewRef}
-      html={renderedHtml}
-      emptyMessage={pendingLargeRender ? t("renderTooLarge") : t("emptyPreview")}
-      onScroll={onPreviewScroll}
-    />
+    <div className="relative">
+      <PreviewView
+        ref={previewRef}
+        html={renderedHtml}
+        emptyMessage={pendingLargeRender ? t("renderTooLarge") : t("emptyPreview")}
+        onScroll={onPreviewScroll}
+      />
+      <div className="absolute top-3 right-3 z-10">{modeToolbarEl}</div>
+    </div>
   );
 
   let contentArea;
-  if (effectiveViewMode === "tab") {
+  if (editorMode === "edit") {
     contentArea = (
-      <div className="h-[55vh]">
-        {activeTab === "edit" ? (
-          <div data-no-print className="h-full">
-            {editorEl}
-          </div>
-        ) : (
-          previewEl
-        )}
+      <div data-no-print className="min-h-[50vh]">
+        {editorEl}
       </div>
     );
-  } else if (effectiveViewMode === "horizontal") {
-    contentArea = (
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-[55vh]">
-        <div data-no-print className="h-full min-h-0">
-          {editorEl}
-        </div>
-        <div className="h-full min-h-0">{previewEl}</div>
-      </div>
-    );
+  } else if (editorMode === "preview") {
+    contentArea = <div className="min-h-[50vh]">{previewEl}</div>;
   } else {
     contentArea = (
-      <div className="flex flex-col gap-4">
-        <div data-no-print className="h-[28vh]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div data-no-print className="min-h-[50vh]">
           {editorEl}
         </div>
-        <div className="h-[28vh]">{previewEl}</div>
+        <div className="min-h-[50vh]">{previewEl}</div>
       </div>
     );
   }
@@ -243,7 +299,22 @@ function MarkdownPageBody() {
   // ---- Render ----
 
   return (
-    <>
+    <div
+      className="relative"
+      onDragOver={onDragOver}
+      onDragEnter={onDragEnter}
+      onDragLeave={onDragLeave}
+      onDrop={onDrop}
+    >
+      {isDragging && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center rounded-xl border-2 border-dashed border-accent-cyan bg-accent-cyan/5 backdrop-blur-sm pointer-events-none">
+          <div className="text-center">
+            <Upload size={40} className="mx-auto mb-3 text-accent-cyan" />
+            <p className="text-lg font-semibold text-accent-cyan">{t("dropActive")}</p>
+            <p className="text-sm text-fg-muted mt-1">{t("dropZone")}</p>
+          </div>
+        </div>
+      )}
       <div
         data-no-print
         className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4"
@@ -254,56 +325,6 @@ function MarkdownPageBody() {
       </div>
 
       <div data-no-print className="flex flex-wrap items-center gap-2 my-3">
-        {/* Tab switcher */}
-        {effectiveViewMode === "tab" && (
-          <div className="inline-flex border border-border-default rounded-lg overflow-hidden">
-            <button
-              type="button"
-              onClick={() => setActiveTab("edit")}
-              className={`px-3 py-1.5 text-sm transition-colors ${activeTab === "edit" ? "bg-accent-cyan text-bg-base" : "text-fg-secondary hover:bg-bg-elevated"}`}
-            >
-              {t("edit")}
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTab("preview")}
-              className={`px-3 py-1.5 text-sm transition-colors ${activeTab === "preview" ? "bg-accent-cyan text-bg-base" : "text-fg-secondary hover:bg-bg-elevated"}`}
-            >
-              {t("preview")}
-            </button>
-          </div>
-        )}
-
-        {/* View mode (desktop only) */}
-        {!isMobile && (
-          <div className="inline-flex border border-border-default rounded-lg overflow-hidden">
-            <button
-              type="button"
-              title={t("viewMode.tab")}
-              onClick={() => setViewMode("tab")}
-              className={`px-2 py-1.5 transition-colors ${viewMode === "tab" ? "bg-accent-purple-dim text-accent-purple" : "text-fg-muted hover:bg-bg-elevated"}`}
-            >
-              <PanelTop size={16} />
-            </button>
-            <button
-              type="button"
-              title={t("viewMode.horizontal")}
-              onClick={() => setViewMode("horizontal")}
-              className={`px-2 py-1.5 transition-colors ${viewMode === "horizontal" ? "bg-accent-purple-dim text-accent-purple" : "text-fg-muted hover:bg-bg-elevated"}`}
-            >
-              <Columns2 size={16} />
-            </button>
-            <button
-              type="button"
-              title={t("viewMode.vertical")}
-              onClick={() => setViewMode("vertical")}
-              className={`px-2 py-1.5 transition-colors ${viewMode === "vertical" ? "bg-accent-purple-dim text-accent-purple" : "text-fg-muted hover:bg-bg-elevated"}`}
-            >
-              <Rows2 size={16} />
-            </button>
-          </div>
-        )}
-
         {/* Actions */}
         <input
           ref={fileInputRef}
@@ -312,23 +333,52 @@ function MarkdownPageBody() {
           className="hidden"
           onChange={onPickFile}
         />
-        <Button variant="outline" size="sm" onClick={() => fileInputRef.current?.click()}>
+        <Button variant="primary" size="sm" onClick={() => fileInputRef.current?.click()}>
           <Upload size={14} />
           {t("loadFile")}
         </Button>
-        <Button variant="outline" size="sm" onClick={onDownload} disabled={!markdown}>
+        <Button variant="secondary" size="sm" onClick={onDownload} disabled={!markdown}>
           <Download size={14} />
           {t("downloadFile")}
         </Button>
-        <CopyButton getContent={() => renderedHtml} />
-        <Button variant="outline" size="sm" onClick={printPdf} disabled={!renderedHtml}>
-          <Printer size={14} />
-          {t("exportPdf")}
-        </Button>
-        <Button variant="outline" size="sm" onClick={onExportPng} disabled={!renderedHtml}>
-          <FileImage size={14} />
-          {t("exportPng")}
-        </Button>
+        <CopyButton getContent={() => renderedHtml} alwaysShow label={tc("copy")} />
+        {!markdown ? (
+          <Button variant="primary" size="sm" disabled>
+            <FileDown size={14} />
+            {t("exportLabel")}
+          </Button>
+        ) : (
+          <Dropdown
+            trigger={
+              <Button variant="primary" size="sm">
+                <FileDown size={14} />
+                {t("exportLabel")}
+              </Button>
+            }
+            items={[
+              {
+                label: (
+                  <>
+                    <Printer size={14} className="inline mr-2" />
+                    {t("exportPdf")}
+                  </>
+                ),
+                onClick: printPdf,
+                disabled: !renderedHtml,
+              },
+              {
+                label: (
+                  <>
+                    <FileImage size={14} className="inline mr-2" />
+                    {t("exportPng")}
+                  </>
+                ),
+                onClick: onExportPng,
+                disabled: !renderedHtml,
+              },
+            ]}
+          />
+        )}
         <Button
           variant="danger"
           size="sm"
@@ -337,7 +387,7 @@ function MarkdownPageBody() {
           className="ml-auto"
         >
           <Trash2 size={14} />
-          {tc("clearAll")}
+          {tc("clear")}
         </Button>
       </div>
 
@@ -365,7 +415,7 @@ function MarkdownPageBody() {
         <span>·</span>
         <span>{t("readTime", { min: readMin })}</span>
       </div>
-    </>
+    </div>
   );
 }
 
@@ -389,14 +439,6 @@ function Description() {
         <h5 className="font-semibold text-fg-primary text-base">{t("descriptions.gfmTitle")}</h5>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{t("descriptions.gfmP1")}</p>
-        </div>
-      </div>
-      <div className="mb-4">
-        <h5 className="font-semibold text-fg-primary text-base">
-          {t("descriptions.privacyTitle")}
-        </h5>
-        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.privacyP1")}</p>
         </div>
       </div>
     </section>

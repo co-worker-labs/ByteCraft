@@ -20,7 +20,11 @@ export function printPdf(): void {
 
 /** Capture `el` as a PNG and trigger a download. Throws on failure. */
 export async function exportPng(el: HTMLElement, filename = "preview.png"): Promise<void> {
-  const bg = getComputedStyle(document.body).backgroundColor || "#ffffff";
+  const bodyBg = getComputedStyle(document.body).backgroundColor;
+  const isTransparent = !bodyBg || bodyBg === "rgba(0, 0, 0, 0)" || bodyBg === "transparent";
+  const bg = isTransparent
+    ? getComputedStyle(document.documentElement).backgroundColor || "#ffffff"
+    : bodyBg;
   const dataUrl = await domToPng(el, {
     scale: 2,
     backgroundColor: bg,

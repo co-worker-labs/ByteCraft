@@ -29,9 +29,16 @@ md.renderer.rules.fence = (tokens, idx) => {
   const token = tokens[idx];
   const code = token.content;
   const raw = (token.info || "").trim().toLowerCase();
-  const lang = resolveLanguage(raw);
   const escaped = md.utils.escapeHtml(code);
 
+  // Mermaid diagrams — output raw text for client-side rendering.
+  // The mermaid runtime scans <pre class="mermaid"> elements and replaces
+  // their content with rendered SVGs.
+  if (raw === "mermaid" || raw === "mmd") {
+    return `<pre class="mermaid">${escaped}</pre>`;
+  }
+
+  const lang = resolveLanguage(raw);
   if (!lang) {
     return `<pre class="language-text"><code>${escaped}</code></pre>`;
   }

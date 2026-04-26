@@ -87,8 +87,9 @@ export function EditorView({ value, onChange, placeholder, scrollRef, onScroll }
       onScroll={onScroll}
       placeholder={placeholder}
       showLineNumbers={showLineNumbers}
+      autoGrow
       spellCheck={false}
-      className="h-full"
+      className="min-h-[50vh]"
     />
   );
 }
