@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { useRouter, usePathname, Link } from "../i18n/navigation";
 import { LayoutGrid, Sun, Moon, ClipboardX, Maximize, Minimize } from "lucide-react";
 import { getToolCards } from "../libs/tools";
@@ -23,8 +23,11 @@ export default function Header({ position, title }: { position: HeaderPosition; 
   const [flipping, setFlipping] = useState(false);
   const fullscreen = useFullscreen();
   const [clipAnimating, setClipAnimating] = useState(false);
-
-  const isClipboardSupported = typeof navigator !== "undefined" && !!navigator.clipboard;
+  const isClipboardSupported = useSyncExternalStore(
+    () => () => {},
+    () => typeof navigator !== "undefined" && !!navigator.clipboard,
+    () => false
+  );
 
   const handleClearClipboard = async () => {
     setClipAnimating(true);
@@ -107,6 +110,7 @@ export default function Header({ position, title }: { position: HeaderPosition; 
                 className="flex h-8 w-8 items-center justify-center rounded-lg text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors"
                 onClick={() => fullscreen.toggle()}
                 aria-label={fullscreen.isFullscreen ? t("nav.exitFullscreen") : t("nav.fullscreen")}
+                title={fullscreen.isFullscreen ? t("nav.exitFullscreen") : t("nav.fullscreen")}
               >
                 {fullscreen.isFullscreen ? <Minimize size={16} /> : <Maximize size={16} />}
               </button>
@@ -119,6 +123,7 @@ export default function Header({ position, title }: { position: HeaderPosition; 
                 onClick={handleClearClipboard}
                 onAnimationEnd={() => setClipAnimating(false)}
                 aria-label={t("nav.clearClipboard")}
+                title={t("nav.clearClipboard")}
               >
                 <ClipboardX size={16} />
               </button>
