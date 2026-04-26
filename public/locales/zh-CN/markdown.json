@@ -1,0 +1,38 @@
+{
+  "edit": "编辑",
+  "preview": "预览",
+  "placeholder": "在此输入或粘贴 Markdown 内容...",
+  "emptyPreview": "暂无内容可预览",
+  "loadFile": "加载 .md",
+  "downloadFile": "下载 .md",
+  "copyHtml": "复制 HTML",
+  "copiedHtml": "HTML 已复制到剪贴板",
+  "fileLoaded": "文件已加载",
+  "tooLarge": "文件过大（上限 5MB）",
+  "binaryRejected": "已拒绝二进制文件",
+  "exportPdf": "导出 PDF",
+  "exportPng": "导出 PNG",
+  "pngFontNotice": "PNG 已导出（字体可能由系统替代）",
+  "exportFailed": "导出失败，请重试",
+  "nothingToExport": "无内容可导出",
+  "renderTooLarge": "内容过大，已暂停实时预览",
+  "renderNow": "立即渲染",
+  "wordsCount": "{count} 词",
+  "charsCount": "{count} 字符",
+  "readTime": "{min} 分钟阅读",
+  "viewMode": {
+    "tab": "切页",
+    "horizontal": "横向分屏",
+    "vertical": "纵向分屏"
+  },
+  "descriptions": {
+    "whatIsTitle": "什么是 Markdown？",
+    "whatIsP1": "Markdown 是一种轻量级标记语言，可用简洁可读的语法格式化纯文本。它是 README、文档与笔记的事实标准——易写、易 diff，跨平台渲染一致。",
+    "howTitle": "如何使用",
+    "howP1": "在编辑器中输入或粘贴 Markdown，预览随输入更新。可在切页、横向分屏、纵向分屏之间切换。可导出 .md、复制渲染后的 HTML、或将预览保存为 PDF / PNG。所有处理均在浏览器中完成。",
+    "gfmTitle": "GitHub Flavored Markdown",
+    "gfmP1": "支持表格、任务清单（- [ ] todo）、删除线和自动链接。本版本暂不支持数学公式、Mermaid 图表和脚注。",
+    "privacyTitle": "隐私",
+    "privacyP1": "所有处理均在浏览器中完成，不会向任何服务器发送内容。"
+  }
+}

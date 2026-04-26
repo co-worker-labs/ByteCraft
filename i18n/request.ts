@@ -18,6 +18,7 @@ const namespaces = [
   "uuid",
   "urlencoder",
   "diff",
+  "markdown",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

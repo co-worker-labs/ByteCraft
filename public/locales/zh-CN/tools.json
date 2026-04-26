@@ -53,6 +53,10 @@
     "title": "文本差异比较 - 免费在线工具",
     "shortTitle": "文本差异",
     "description": "以行级 + 词级精度比较两段文本或代码。支持并排和行内两种视图，100% 浏览器端处理。"
+  },
+  "markdown": {
+    "title": "Markdown 编辑器与预览 - 免费在线工具",
+    "shortTitle": "Markdown 编辑器",
+    "description": "使用支持 GitHub Flavored Markdown 的在线编辑器编写和预览 Markdown。免费在线 Markdown 编辑器，实时预览，100% 客户端处理。"
   }
-}
 }

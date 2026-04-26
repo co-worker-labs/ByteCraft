@@ -18,6 +18,7 @@ import {
   FingerprintPattern,
   Percent,
   GitCompare,
+  FileText,
 } from "lucide-react";
 
 const toolIcons: Record<string, React.ReactNode> = {
@@ -32,6 +33,7 @@ const toolIcons: Record<string, React.ReactNode> = {
   "/uuid": <FingerprintPattern size={28} className="text-accent-cyan" />,
   "/urlencoder": <Percent size={28} className="text-accent-cyan" />,
   "/diff": <GitCompare size={28} className="text-accent-cyan" />,
+  "/markdown": <FileText size={28} className="text-accent-cyan" />,
 };
 
 function Introduce() {
