@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter, usePathname, Link } from "../i18n/navigation";
 import { LayoutGrid, Sun, Moon, ClipboardX, Maximize, Minimize } from "lucide-react";
 import { getToolCards } from "../libs/tools";
@@ -23,7 +23,6 @@ export default function Header({ position, title }: { position: HeaderPosition; 
   const [flipping, setFlipping] = useState(false);
   const fullscreen = useFullscreen();
   const [clipAnimating, setClipAnimating] = useState(false);
-
   const isClipboardSupported = typeof navigator !== "undefined" && !!navigator.clipboard;
 
   const handleClearClipboard = async () => {

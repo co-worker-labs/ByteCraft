@@ -137,6 +137,12 @@
   }
 }
 
+/* ===== Fullscreen Layout Overrides ===== */
+:fullscreen .container,
+:-webkit-full-screen .container {
+  max-width: 100%;
+}
+
 /* ===== Nav Button Click Effects ===== */
 @keyframes btn-spin {
   from {
