@@ -21,6 +21,7 @@ const namespaces = [
   "diff",
   "markdown",
   "pwa",
+  "dbviewer",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

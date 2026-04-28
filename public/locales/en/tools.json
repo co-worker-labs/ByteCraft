@@ -63,5 +63,10 @@
     "title": "JSON Formatter / Compressor - Free Online Tool",
     "shortTitle": "JSON Format / Compress",
     "description": "Format, compress, and validate JSON online. Pretty-print with configurable indentation, minify to single line, or parse JSON5. 100% client-side."
+  },
+  "dbviewer": {
+    "title": "SQLite DB Viewer - Browse and Query .db Files Online",
+    "shortTitle": "DB Viewer",
+    "description": "Open SQLite databases in your browser, browse schema, run read-only SQL with autocomplete, paginate large result sets, and export to CSV or JSON. 100% client-side."
   }
 }

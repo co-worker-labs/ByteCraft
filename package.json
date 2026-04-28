@@ -9,9 +9,16 @@
     "start": "next start",
     "prepare": "husky",
     "icons:generate": "node scripts/generate-pwa-icons.mjs",
-    "typecheck:sw": "tsc -p tsconfig.sw.json"
+    "typecheck:sw": "tsc -p tsconfig.sw.json",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
+    "@codemirror/autocomplete": "^6.20.1",
+    "@codemirror/commands": "^6.10.3",
+    "@codemirror/lang-sql": "^6.10.0",
+    "@codemirror/state": "^6.6.0",
+    "@codemirror/view": "^6.41.1",
     "@headlessui/react": "^2.2.10",
     "@serwist/turbopack": "^9.5.7",
     "@swc/helpers": "^0.5.21",
@@ -36,6 +43,8 @@
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "serwist": "^9.5.7",
+    "sql-formatter": "^15.4.10",
+    "sql.js": "^1.13.0",
     "tailwindcss": "^4.2.4",
     "uuid": "^14.0.0"
   },
@@ -50,8 +59,10 @@
     "@types/prismjs": "^1.26.5",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@types/sql.js": "^1.4.11",
     "@types/uuid": "^10.0.0",
     "esbuild": "^0.28.0",
+    "@vitest/coverage-v8": "^2.1.9",
     "eslint": "^9.28.0",
     "eslint-config-next": "^16.2.4",
     "eslint-config-prettier": "^10.1.8",
@@ -60,7 +71,8 @@
     "png-to-ico": "^3.0.1",
     "prettier": "^3.8.3",
     "sharp": "^0.34.5",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vitest": "^2.1.9"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,mjs}": [

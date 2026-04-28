@@ -18,6 +18,23 @@ const nextConfig = {
       },
     ];
   },
+  serverExternalPackages: ["sql.js"],
+  turbopack: {
+    resolveAlias: {
+      fs: { browser: "./scripts/empty-module.js" },
+      path: { browser: "./scripts/empty-module.js" },
+    },
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false,
+      };
+    }
+    return config;
+  },
 };
 
 export default withSerwist(withNextIntl(nextConfig));
