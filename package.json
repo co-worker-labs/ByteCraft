@@ -7,10 +7,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prepare": "husky"
+    "prepare": "husky",
+    "icons:generate": "node scripts/generate-pwa-icons.mjs",
+    "typecheck:sw": "tsc -p tsconfig.sw.json"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.10",
+    "@serwist/turbopack": "^9.5.7",
     "@swc/helpers": "^0.5.21",
     "@tailwindcss/postcss": "^4.2.4",
     "@tanstack/react-virtual": "3.13.24",
@@ -32,6 +35,7 @@
     "rc-slider": "^11.1.9",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "serwist": "^9.5.7",
     "tailwindcss": "^4.2.4",
     "uuid": "^14.0.0"
   },
@@ -47,12 +51,15 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@types/uuid": "^10.0.0",
+    "esbuild": "^0.28.0",
     "eslint": "^9.28.0",
     "eslint-config-next": "^16.2.4",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
+    "png-to-ico": "^3.0.1",
     "prettier": "^3.8.3",
+    "sharp": "^0.34.5",
     "typescript": "^6.0.3"
   },
   "lint-staged": {
