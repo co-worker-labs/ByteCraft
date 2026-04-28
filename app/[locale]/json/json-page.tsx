@@ -11,7 +11,7 @@ import { CopyButton } from "../../../components/ui/copy-btn";
 import { Button } from "../../../components/ui/button";
 import { StyledTextarea } from "../../../components/ui/input";
 import { showToast } from "../../../libs/toast";
-import { byteCraftJsonTheme } from "./json-view-theme";
+import { byteCraftJsonTheme } from "../../../libs/json-view-theme";
 
 type IndentSize = 2 | 4 | 8;
 

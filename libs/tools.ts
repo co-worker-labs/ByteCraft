@@ -18,6 +18,7 @@ export const TOOLS: { key: string; path: string }[] = [
   { key: "storageunit", path: "/storageunit" },
   { key: "ascii", path: "/ascii" },
   { key: "cipher", path: "/cipher" },
+  { key: "jwt", path: "/jwt" },
   { key: "diff", path: "/diff" },
   { key: "markdown", path: "/markdown" },
   { key: "dbviewer", path: "/dbviewer" },

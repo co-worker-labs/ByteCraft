@@ -68,5 +68,10 @@
     "title": "SQLite 資料庫檢視器 - 瀏覽和查詢 .db 檔案",
     "shortTitle": "資料庫檢視器",
     "description": "在瀏覽器中開啟 SQLite 資料庫，瀏覽結構、執行唯讀 SQL（含自動補全）、分頁載入大型結果集，匯出 CSV/JSON。完全在本機處理。"
+  },
+  "jwt": {
+    "title": "JWT 除錯器 - JSON Web Token 編碼與解碼",
+    "shortTitle": "JWT",
+    "description": "線上編碼、解碼和驗證 JSON Web Token（JWT）。支援 HS256、RS256、ES256 等演算法。100% 瀏覽器端處理。"
   }
 }
