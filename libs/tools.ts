@@ -7,23 +7,23 @@ export interface ToolCard {
 }
 
 export const TOOLS: { key: string; path: string }[] = [
+  { key: "json", path: "/json" },
   { key: "base64", path: "/base64" },
+  { key: "jwt", path: "/jwt" },
   { key: "urlencoder", path: "/urlencoder" },
   { key: "uuid", path: "/uuid" },
-  { key: "password", path: "/password" },
-  { key: "hashing", path: "/hashing" },
-  { key: "checksum", path: "/checksum" },
-  { key: "json", path: "/json" },
-  { key: "htmlcode", path: "/htmlcode" },
-  { key: "storageunit", path: "/storageunit" },
-  { key: "ascii", path: "/ascii" },
-  { key: "cipher", path: "/cipher" },
-  { key: "jwt", path: "/jwt" },
   { key: "diff", path: "/diff" },
+  { key: "hashing", path: "/hashing" },
+  { key: "password", path: "/password" },
+  { key: "cipher", path: "/cipher" },
+  { key: "cron", path: "/cron" },
+  { key: "unixtime", path: "/unixtime" },
   { key: "markdown", path: "/markdown" },
   { key: "dbviewer", path: "/dbviewer" },
-  { key: "unixtime", path: "/unixtime" },
-  { key: "cron", path: "/cron" },
+  { key: "checksum", path: "/checksum" },
+  { key: "storageunit", path: "/storageunit" },
+  { key: "ascii", path: "/ascii" },
+  { key: "htmlcode", path: "/htmlcode" },
 ] as const;
 
 export function getToolCards(t: ReturnType<typeof useTranslations>): ToolCard[] {

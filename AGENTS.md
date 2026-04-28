@@ -16,23 +16,23 @@ OmniKit is a collection of browser-based developer utilities. All operations run
 
 | Route          | Tool               | Description                                                                |
 | -------------- | ------------------ | -------------------------------------------------------------------------- |
+| `/json`        | JSON               | Format, minify, validate JSON/JSON5, configurable indentation              |
 | `/base64`      | Base64             | Base64 encoding/decoding, Basic Auth header                                |
+| `/jwt`         | JWT                | Encode, decode, verify JWT (HS/RS/ES/PS 256/384/512)                       |
 | `/urlencoder`  | URL Encoder        | URL encoding/decoding with Component, Whole URL, Form modes                |
 | `/uuid`        | UUID               | UUID v1/v3/v4/v5/v7 generation (RFC 4122/9562)                             |
-| `/password`    | Password Generator | Secure, memorable password generation                                      |
-| `/hashing`     | Hashing            | MD5, SHA-1/224/256/384/512, SHA3, Keccak, RIPEMD-160                       |
-| `/checksum`    | File Checksum      | Unlimited file size checksums                                              |
-| `/json`        | JSON               | Format, minify, validate JSON/JSON5, configurable indentation              |
-| `/htmlcode`    | HTML Code          | HTML special characters reference                                          |
-| `/storageunit` | Storage Unit       | Byte, KB, MB, GB, TB, PB conversion                                        |
-| `/ascii`       | ASCII Table        | ASCII reference with conversions                                           |
-| `/cipher`      | Encrypt/Decrypt    | AES, DES, Triple DES, Rabbit, RC4, RC4Drop                                 |
-| `/jwt`         | JWT                | Encode, decode, verify JWT (HS/RS/ES/PS 256/384/512)                       |
 | `/diff`        | Text Diff          | Side-by-side or inline diff with word-level highlights, Web Worker powered |
+| `/hashing`     | Hashing            | MD5, SHA-1/224/256/384/512, SHA3, Keccak, RIPEMD-160                       |
+| `/password`    | Password Generator | Secure, memorable password generation                                      |
+| `/cipher`      | Encrypt/Decrypt    | AES, DES, Triple DES, Rabbit, RC4, RC4Drop                                 |
+| `/cron`        | Cron               | Build/decode Cron expressions (Standard, Spring, Quartz), next-run preview |
+| `/unixtime`    | Unix Timestamp     | Timestamp ↔ date conversion, live clock, seconds/milliseconds, local/UTC   |
 | `/markdown`    | Markdown           | Editor & live preview with GFM, syntax highlighting, PDF/PNG export        |
 | `/dbviewer`    | DB Viewer          | SQLite viewer with SQL editor, autocomplete, pagination, CSV/JSON export   |
-| `/unixtime`    | Unix Timestamp     | Timestamp ↔ date conversion, live clock, seconds/milliseconds, local/UTC   |
-| `/cron`        | Cron               | Build/decode Cron expressions (Standard, Spring, Quartz), next-run preview |
+| `/checksum`    | File Checksum      | Unlimited file size checksums                                              |
+| `/storageunit` | Storage Unit       | Byte, KB, MB, GB, TB, PB conversion                                        |
+| `/ascii`       | ASCII Table        | ASCII reference with conversions                                           |
+| `/htmlcode`    | HTML Code          | HTML special characters reference                                          |
 
 ## Architecture Rules
 

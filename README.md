@@ -6,23 +6,23 @@ A collection of browser-based developer utilities, built with [Next.js](https://
 
 | Tool                    | Description                                                                                |
 | ----------------------- | ------------------------------------------------------------------------------------------ |
+| JSON Format / Compress  | Format, minify, and validate JSON/JSON5 with configurable indentation                      |
 | Base64 Encode/Decode    | Base64 encoding & decoding, Basic Authentication header generation                         |
+| JWT                     | Encode, decode, and verify JSON Web Tokens (HS/RS/ES/PS 256/384/512)                       |
 | URL Encoder/Decoder     | URL encoding & decoding with Component, Whole URL, and Form modes                          |
 | UUID Generator          | UUID v1/v3/v4/v5/v7 generation (RFC 4122/9562)                                             |
-| Password Generator      | Secure, random, memorable password generation                                              |
-| Text Hashing            | MD5, SHA-1/224/256/384/512, SHA3 family, Keccak, RIPEMD-160                                |
-| File Checksum           | Unlimited files, unlimited file size                                                       |
-| JSON Format / Compress  | Format, minify, and validate JSON/JSON5 with configurable indentation                      |
-| HTML Code               | HTML special characters and entity reference                                               |
-| Storage Unit Conversion | Byte, kilobyte, megabyte, terabyte, petabyte and more                                      |
-| ASCII Table             | Complete ASCII reference with hex, octal, HTML, decimal conversions                        |
-| Text Encrypt/Decrypt    | AES, DES, Triple DES, Rabbit, RC4, RC4Drop                                                 |
-| JWT                     | Encode, decode, and verify JSON Web Tokens (HS/RS/ES/PS 256/384/512)                       |
 | Text Diff               | Side-by-side or inline text comparison with word-level highlights, Web Worker powered      |
+| Text Hashing            | MD5, SHA-1/224/256/384/512, SHA3 family, Keccak, RIPEMD-160                                |
+| Password Generator      | Secure, random, memorable password generation                                              |
+| Text Encrypt/Decrypt    | AES, DES, Triple DES, Rabbit, RC4, RC4Drop                                                 |
+| Cron                    | Build and decode Cron expressions (Standard, Spring, Quartz) with next-run preview         |
+| Unix Timestamp          | Convert between Unix timestamps and dates with live clock, supports seconds & milliseconds |
 | Markdown Editor         | Live preview with GFM support, syntax highlighting, export to PDF/PNG                      |
 | DB Viewer               | SQLite database viewer with SQL editor, autocomplete, and CSV/JSON export                  |
-| Unix Timestamp          | Convert between Unix timestamps and dates with live clock, supports seconds & milliseconds |
-| Cron                    | Build and decode Cron expressions (Standard, Spring, Quartz) with next-run preview         |
+| File Checksum           | Unlimited files, unlimited file size                                                       |
+| Storage Unit Conversion | Byte, kilobyte, megabyte, terabyte, petabyte and more                                      |
+| ASCII Table             | Complete ASCII reference with hex, octal, HTML, decimal conversions                        |
+| HTML Code               | HTML special characters and entity reference                                               |
 
 All operations run entirely in the browser — no data is sent to any server.
 
@@ -66,23 +66,23 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ```
 app/[locale]/       # Pages (one directory per tool)
+  json/             # JSON formatter/compressor
   base64/           # Base64 encode/decode
+  jwt/              # JWT debugger
   urlencoder/       # URL encode/decode
   uuid/             # UUID generator
-  password/         # Password generator
-  hashing/          # Text hashing
-  checksum/         # File checksum
-  json/             # JSON formatter/compressor
-  htmlcode/         # HTML entity reference
-  storageunit/      # Storage unit converter
-  ascii/            # ASCII table
-  cipher/           # Text encrypt/decrypt
-  jwt/              # JWT debugger
   diff/             # Text diff comparison
+  hashing/          # Text hashing
+  password/         # Password generator
+  cipher/           # Text encrypt/decrypt
+  cron/             # Cron expression builder
+  unixtime/         # Unix timestamp converter
   markdown/         # Markdown editor & preview
   dbviewer/         # SQLite database viewer
-  unixtime/         # Unix timestamp converter
-  cron/             # Cron expression builder
+  checksum/         # File checksum
+  storageunit/      # Storage unit converter
+  ascii/            # ASCII table
+  htmlcode/         # HTML entity reference
 app/serwist/        # Serwist PWA runtime caching routes
 components/         # Shared UI components
   ui/               # Reusable primitives (Button, Card, Tabs, etc.)
