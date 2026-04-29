@@ -16,6 +16,7 @@ export const TOOLS: { key: string; path: string }[] = [
   { key: "diff", path: "/diff" },
   { key: "hashing", path: "/hashing" },
   { key: "password", path: "/password" },
+  { key: "textcase", path: "/textcase" },
   { key: "cipher", path: "/cipher" },
   { key: "cron", path: "/cron" },
   { key: "unixtime", path: "/unixtime" },
@@ -25,7 +26,6 @@ export const TOOLS: { key: string; path: string }[] = [
   { key: "storageunit", path: "/storageunit" },
   { key: "ascii", path: "/ascii" },
   { key: "htmlcode", path: "/htmlcode" },
-  { key: "textcase", path: "/textcase" },
 ] as const;
 
 export function getToolCards(t: ReturnType<typeof useTranslations>): ToolCard[] {

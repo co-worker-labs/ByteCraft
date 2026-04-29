@@ -79,7 +79,7 @@ function Conversion() {
                 return (
                   <tr
                     key={r.key}
-                    className="border-b border-border-default last:border-b-0 hover:bg-bg-elevated/60"
+                    className="border-b border-border-default last:border-b-0 odd:bg-bg-elevated/40 hover:bg-accent-cyan/10"
                   >
                     <th
                       scope="row"
@@ -142,7 +142,7 @@ function Description() {
             {REFERENCE_ROWS.map((row) => (
               <tr
                 key={row.key}
-                className="border-b border-border-default last:border-b-0 hover:bg-bg-elevated/60"
+                className="border-b border-border-default last:border-b-0 odd:bg-bg-elevated/40 hover:bg-accent-cyan/10"
               >
                 <th
                   scope="row"
@@ -165,9 +165,15 @@ function Description() {
 
 export default function TextCasePage() {
   const t = useTranslations("tools");
+  const tc = useTranslations("common");
   return (
     <Layout title={t("textcase.shortTitle")}>
       <div className="container mx-auto px-4 pt-3 pb-6">
+        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
+          <span className="text-sm text-fg-secondary leading-relaxed">
+            {tc("alert.notTransferred")}
+          </span>
+        </div>
         <Conversion />
         <Description />
       </div>
