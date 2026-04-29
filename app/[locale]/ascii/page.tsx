@@ -1,14 +1,18 @@
 import { getTranslations } from "next-intl/server";
+import { generatePageMeta } from "../../../libs/seo";
 import AsciiPage from "./ascii-page";
+
+const PATH = "/ascii";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tools" });
-  return {
+  return generatePageMeta({
+    locale,
+    path: PATH,
     title: t("ascii.title"),
     description: t("ascii.description"),
-    keywords: "",
-  };
+  });
 }
 
 export default function AsciiRoute() {

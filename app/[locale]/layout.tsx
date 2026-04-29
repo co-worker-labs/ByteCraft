@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import type { Viewport } from "next";
 import { cookies } from "next/headers";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -13,6 +13,7 @@ import type { Theme } from "../../libs/theme";
 import { SITE_URL } from "../../libs/site";
 import { SerwistProvider } from "../serwist";
 import { IOSSplashLinks } from "../../components/ios-splash-links";
+import { WebsiteJsonLd } from "../../components/json-ld";
 import "../globals.css";
 
 type Props = {
@@ -26,14 +27,24 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "home" });
 
   return {
+    title: {
+      default: t("title"),
+      template: "%s | OmniKit",
+    },
     alternates: {
       languages: {
+        "x-default": SITE_URL + "/",
         en: SITE_URL + "/",
         "zh-CN": SITE_URL + "/zh-CN",
         "zh-TW": SITE_URL + "/zh-TW",
       },
+    },
+    openGraph: {
+      siteName: "OmniKit",
+      images: [{ url: "/og-image.svg", width: 1200, height: 630 }],
     },
   };
 }
@@ -68,10 +79,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="OmniKit" />
         <IOSSplashLinks />
-        <meta property="og:image" content="/og-image.svg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta name="twitter:card" content="summary_large_image" />
+        <WebsiteJsonLd />
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
