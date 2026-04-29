@@ -1,19 +1,18 @@
-import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { generatePageMeta } from "../../../libs/seo";
 import MarkdownPage from "./markdown-page";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+const PATH = "/markdown";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tools" });
-  return {
+  return generatePageMeta({
+    locale,
+    path: PATH,
     title: t("markdown.title"),
     description: t("markdown.description"),
-    keywords: "",
-  };
+  });
 }
 
 export default function MarkdownRoute() {
