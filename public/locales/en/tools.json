@@ -83,5 +83,10 @@
     "shortTitle": "Cron",
     "title": "Cron Expression Generator & Parser",
     "description": "Build and decode Cron expressions for Standard, Spring, and Quartz schedulers. See human-readable explanations and the next 5 execution times."
+  },
+  "qrcode": {
+    "title": "QR Code Generator - Free Online Tool",
+    "shortTitle": "QR Code Generator",
+    "description": "Generate styled QR codes for text, URLs, WiFi, vCard, email, and SMS. Custom colors, logos, and dot styles. 100% client-side."
   }
 }

@@ -12,6 +12,7 @@ export const TOOLS: { key: string; path: string }[] = [
   { key: "jwt", path: "/jwt" },
   { key: "urlencoder", path: "/urlencoder" },
   { key: "uuid", path: "/uuid" },
+  { key: "qrcode", path: "/qrcode" },
   { key: "diff", path: "/diff" },
   { key: "hashing", path: "/hashing" },
   { key: "password", path: "/password" },

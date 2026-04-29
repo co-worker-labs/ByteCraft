@@ -83,5 +83,10 @@
     "shortTitle": "Cron 表達式",
     "title": "Cron 表達式產生與解析",
     "description": "為 Standard、Spring 和 Quartz 排程器產生與解析 Cron 表達式，附人類可讀的解釋與未來 5 次執行時間。"
+  },
+  "qrcode": {
+    "title": "QR Code 產生器 - 免費線上工具",
+    "shortTitle": "QR Code 產生器",
+    "description": "為文字、URL、WiFi、vCard、電子郵件和簡訊產生帶樣式的 QR Code。自訂顏色、Logo 和點樣式。100% 客戶端處理。"
   }
 }

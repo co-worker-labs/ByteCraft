@@ -25,6 +25,7 @@ const namespaces = [
   "jwt",
   "unixtime",
   "cron",
+  "qrcode",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

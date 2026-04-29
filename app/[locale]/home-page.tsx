@@ -23,6 +23,7 @@ import {
   Database,
   ShieldCheck,
   Clock,
+  QrCode,
 } from "lucide-react";
 
 const toolIcons: Record<string, React.ReactNode> = {
@@ -43,6 +44,7 @@ const toolIcons: Record<string, React.ReactNode> = {
   "/jwt": <ShieldCheck size={28} className="text-accent-cyan" />,
   "/unixtime": <Clock size={28} className="text-accent-cyan" />,
   "/cron": <Clock size={28} className="text-accent-cyan" />,
+  "/qrcode": <QrCode size={28} className="text-accent-cyan" />,
 };
 
 function Introduce() {

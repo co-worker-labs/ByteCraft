@@ -83,5 +83,10 @@
     "shortTitle": "Cron 表达式",
     "title": "Cron 表达式生成与解析",
     "description": "为 Standard、Spring 和 Quartz 调度器生成与解析 Cron 表达式，附人类可读的解释与未来 5 次执行时间。"
+  },
+  "qrcode": {
+    "title": "二维码生成器 - 免费在线工具",
+    "shortTitle": "二维码生成器",
+    "description": "为文本、URL、WiFi、vCard、邮件和短信生成带样式的二维码。自定义颜色、Logo 和点样式。100% 客户端处理。"
   }
 }
