@@ -28,6 +28,7 @@ import {
   Palette,
   Globe,
   Regex,
+  Binary,
 } from "lucide-react";
 
 const toolIcons: Record<string, React.ReactNode> = {
@@ -53,6 +54,7 @@ const toolIcons: Record<string, React.ReactNode> = {
   "/color": <Palette size={28} className="text-accent-cyan" />,
   "/httpstatus": <Globe size={28} className="text-accent-cyan" />,
   "/regex": <Regex size={28} className="text-accent-cyan" />,
+  "/numbase": <Binary size={28} className="text-accent-cyan" />,
 };
 
 function Introduce() {

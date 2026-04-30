@@ -29,6 +29,7 @@ export const TOOLS: { key: string; path: string }[] = [
   { key: "htmlcode", path: "/htmlcode" },
   { key: "httpstatus", path: "/httpstatus" },
   { key: "color", path: "/color" },
+  { key: "numbase", path: "/numbase" },
 ] as const;
 
 export function getToolCards(t: ReturnType<typeof useTranslations>): ToolCard[] {
