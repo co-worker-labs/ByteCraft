@@ -25,6 +25,7 @@ import {
   Palette,
   Binary,
   FileSpreadsheet,
+  ImageDown,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -82,6 +83,7 @@ export const TOOLS: ToolEntry[] = [
   { key: "color", path: "/color", icon: Palette },
   { key: "numbase", path: "/numbase", icon: Binary },
   { key: "csv", path: "/csv", icon: FileSpreadsheet },
+  { key: "image", path: "/image", icon: ImageDown },
 ] as const;
 
 export function getToolCards(t: ReturnType<typeof useTranslations>): ToolCard[] {
