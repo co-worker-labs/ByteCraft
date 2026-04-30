@@ -18,6 +18,7 @@ const namespaces = [
   "privacy",
   "uuid",
   "urlencoder",
+  "yaml",
   "diff",
   "markdown",
   "pwa",

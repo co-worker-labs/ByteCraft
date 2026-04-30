@@ -65,6 +65,12 @@
     "description": "支援元件編碼、完整 URL 編碼和表單編碼三種模式。免費線上 URL 編碼解碼工具，100% 瀏覽器端處理。",
     "searchTerms": "urlbianmajiema urlbmjm"
   },
+  "yaml": {
+    "title": "YAML 轉換器 - JSON 轉 YAML & YAML 轉 JSON",
+    "shortTitle": "JSON / YAML 轉換",
+    "description": "在 JSON 和 YAML 格式之間雙向轉換，支援完整 YAML 1.2 規範。處理多文件 YAML、錨點和別名。100% 瀏覽器端處理。",
+    "searchTerms": "yamlzhuanhuanqi ylzhq jsonzhuanyaml yamlzhuanjson"
+  },
   "diff": {
     "title": "文字對比工具 - 線上 Diff 比較",
     "shortTitle": "文字差異",

@@ -3,6 +3,7 @@ import type { useTranslations } from "next-intl";
 import {
   FileJson,
   FileCode,
+  FileBraces,
   ShieldCheck,
   Percent,
   FingerprintPattern,
@@ -62,6 +63,7 @@ export const TOOLS: ToolEntry[] = [
   { key: "base64", path: "/base64", icon: FileCode },
   { key: "jwt", path: "/jwt", icon: ShieldCheck },
   { key: "urlencoder", path: "/urlencoder", icon: Percent },
+  { key: "yaml", path: "/yaml", icon: FileBraces },
   { key: "uuid", path: "/uuid", icon: FingerprintPattern },
   { key: "regex", path: "/regex", icon: Regex },
   { key: "qrcode", path: "/qrcode", icon: QrCode },

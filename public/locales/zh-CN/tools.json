@@ -65,6 +65,12 @@
     "description": "支持组件编码、完整 URL 编码和表单编码三种模式。免费在线 URL 编码解码工具，100% 浏览器端处理。",
     "searchTerms": "urlbianmajiema urlbmjm"
   },
+  "yaml": {
+    "title": "YAML 转换器 - JSON 转 YAML & YAML 转 JSON",
+    "shortTitle": "JSON / YAML 转换",
+    "description": "在 JSON 和 YAML 格式之间双向转换，支持完整 YAML 1.2 规范。处理多文档 YAML、锚点和别名。100% 浏览器端处理。",
+    "searchTerms": "yamlzhuanhuanqi ylzhq jsonzhuanyaml yamlzhuanjson"
+  },
   "diff": {
     "title": "文本对比工具 - 在线 Diff 比较",
     "shortTitle": "文本差异",

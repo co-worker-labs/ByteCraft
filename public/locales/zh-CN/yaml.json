@@ -1,0 +1,30 @@
+{
+  "jsonPlaceholder": "在此粘贴或输入 JSON...",
+  "yamlPlaceholder": "在此粘贴或输入 YAML...",
+  "loadFile": "加载",
+  "download": "下载",
+  "advancedSettings": "高级设置",
+  "layoutHorizontal": "水平",
+  "layoutVertical": "垂直",
+  "jsonToYaml": "JSON → YAML",
+  "yamlToJson": "JSON ← YAML",
+  "json5": "JSON5",
+  "indent": "缩进",
+  "sortKeys": "排序键名",
+  "dropZone": "拖放 .json、.yaml 或 .yml 文件",
+  "convertedToYaml": "已转换为 YAML",
+  "convertedToJson": "已转换为 JSON",
+  "invalidInput": "输入无效",
+  "descriptions": {
+    "whatIsTitle": "什么是 YAML？",
+    "whatIsP1": "YAML（YAML Ain't Markup Language）是一种人类可读的数据序列化格式，广泛用于配置文件、数据交换和结构化内容。它使用缩进表示层级结构，对于复杂的嵌套数据比 JSON 更易读。",
+    "yamlVsJsonTitle": "YAML 与 JSON",
+    "yamlVsJsonP1": "YAML 是 JSON 的超集——每个合法的 JSON 文档同时也是合法的 YAML。YAML 增加了注释（#）、多文档支持（---）、锚点和别名（&/*）以及更宽松的语法。JSON 更简洁，被更多编程语言原生支持。",
+    "yaml12Title": "YAML 1.2 特性",
+    "yaml12P1": "YAML 1.2（2009）是当前规范。主要特性包括：锚点（&）和别名（*）实现内容复用、--- 分隔多文档流、显式类型标签（!!str、!!int、!!seq）以及块/流式标量风格。",
+    "useCasesTitle": "使用场景",
+    "useCasesP1": "配置文件（Docker Compose、Kubernetes、CI/CD 流水线）、API 定义（OpenAPI/Swagger）、数据序列化、日志文件格式和跨语言数据交换。",
+    "limitationsTitle": "局限性",
+    "limitationsP1": "多文档 YAML 会转换为 JSON 数组，无法无损地转回多文档 YAML。YAML 的灵活性可能导致歧义——相同的数据可以有多种表示方式。不支持 Tab 缩进（YAML 规范推荐使用空格）。"
+  }
+}
