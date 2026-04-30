@@ -19,6 +19,8 @@ Add a bidirectional format converter tool to OmniKit at route `/csv`. Users can 
 | Hand-written parser | Rejected. CSV spec edge cases (RFC 4180) are numerous and error-prone to implement from scratch.                                           |
 | `csv-parse` (node)  | Rejected. Node.js oriented, heavier than papaparse for browser use.                                                                        |
 
+**Dependency installation**: `npm install papaparse && npm install -D @types/papaparse`
+
 No library needed for Markdown Table — pipe-delimited table parsing/generation is straightforward.
 
 No library needed for JSON flattening — recursive dot-notation is a simple function.
@@ -70,7 +72,7 @@ public/locales/
 ```
 ┌──────────────────────────────┐  ┌──────────────────────────────┐
 │ [JSON] [CSV] [Markdown]      │  │ [JSON] [CSV] [Markdown]      │
-│         ↑ input format       │  │        ↑ output format       │
+│  ↑ input format (Button grp)│  │  ↑ output format(Button grp)│
 │ ┌──────────────────────────┐ │  │ ┌──────────────────────────┐ │
 │ │                          │ │  │ │                          │ │
 │ │     StyledTextarea       │ │  │ │     StyledTextarea       │ │
@@ -86,6 +88,7 @@ public/locales/
 ### Format Selector Rules
 
 - Input and output each have 3 options: JSON, CSV, Markdown Table.
+- Format selector uses a **Button group** (inline buttons with `variant="primary"` for selected, `variant="outline"` for unselected).
 - Output format matching the input format is **disabled** (greyed out, not clickable).
 - Default state: input = JSON, output = CSV.
 
@@ -102,7 +105,7 @@ public/locales/
 | Clear       | Clears input textarea and output textarea                                                                                                                                                                                                                                                                                                                                          |
 | Upload      | Opens file picker. Accepted types depend on input format selector: JSON → `.json`, CSV → `.csv,.tsv,.txt`, Markdown → `.md,.txt`                                                                                                                                                                                                                                                   |
 | Paste       | Pastes clipboard content into input textarea                                                                                                                                                                                                                                                                                                                                       |
-| Drag & Drop | Full drag-and-drop support on the input panel. Drag-over shows highlighted border (accent-cyan). Accepted file types match input format selector. Uses `dragCounterRef` pattern from JSON tool to handle nested drag events correctly. File read via `file.text()`. Max file size: 1MB (reuse `libs/file/limits.ts` `MAX_FILE_BYTES`). Binary file rejection via `isBinaryFile()`. |
+| Drag & Drop | Full drag-and-drop support on the input panel. Drag-over shows highlighted border (accent-cyan). Accepted file types match input format selector. Uses `dragCounterRef` pattern from JSON tool to handle nested drag events correctly. File read via `file.text()`. Max file size: 5MB (reuse `libs/file/limits.ts` `MAX_FILE_BYTES`). Binary file rejection via `isBinaryFile()`. |
 
 ### Output Panel Actions
 
@@ -146,7 +149,7 @@ Rules:
 
 Input must be a JSON array of objects. Single object input is auto-wrapped into an array `[obj]`.
 
-When array elements have inconsistent keys, the first element's keys define the column set. Missing keys in subsequent elements are filled with `""`.
+When array elements have inconsistent keys, the union of all unique keys across objects defines the column set. Missing keys in any element are filled with `""`.
 
 ### CSV Stringify (`libs/csv/csv-stringify.ts`)
 
@@ -252,7 +255,7 @@ Routes to the appropriate conversion path. Returns error message on parse failur
 | Inconsistent array element keys             | Use first element's keys as columns; missing keys → `""`    |
 | CSV parse error (malformed)                 | papaparse returns error with row/message; display in output |
 | Invalid Markdown table (no pipe delimiters) | Show "Cannot detect Markdown table format" in output        |
-| File too large (> 1MB)                      | Show toast "File too large" (reuse common i18n key)         |
+| File too large (> 5MB)                      | Show toast "File too large" (reuse common i18n key)         |
 | Binary file dropped                         | Show toast "Binary file rejected" (reuse common i18n key)   |
 | Input format === Output format              | Output format button disabled, cannot be selected           |
 
@@ -276,15 +279,14 @@ File reading: `file.text()` API (same as Markdown tool). Binary rejection via `i
 
 ## Components Used
 
-| Component        | Usage                                   |
-| ---------------- | --------------------------------------- |
-| `Layout`         | Page wrapper                            |
-| `StyledTextarea` | Input and output text areas             |
-| `Tabs`           | Format selector (JSON / CSV / Markdown) |
-| `Button`         | Clear, Upload, Download actions         |
-| `CopyButton`     | Copy output to clipboard                |
-| `showToast`      | Error/success notifications             |
-| `useIsMobile`    | Responsive layout switching             |
+| Component        | Usage                                                   |
+| ---------------- | ------------------------------------------------------- |
+| `Layout`         | Page wrapper                                            |
+| `StyledTextarea` | Input and output text areas                             |
+| `Button`         | Format selector groups, Clear, Upload, Download actions |
+| `CopyButton`     | Copy output to clipboard                                |
+| `showToast`      | Error/success notifications                             |
+| `useIsMobile`    | Responsive layout switching                             |
 
 ## Out of Scope (YAGNI)
 
