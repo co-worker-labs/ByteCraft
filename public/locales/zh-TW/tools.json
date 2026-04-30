@@ -98,5 +98,10 @@
     "title": "顏色轉換與選色器 - HEX, RGB, HSL, OKLCH",
     "shortTitle": "顏色轉換",
     "description": "在 HEX、RGB、HSL、HSV、CMYK、LAB、OKLCH 之間轉換。提供選色器、螢幕滴管、調色板產生、圖片取色、WCAG + APCA 對比檢查與色盲預覽。100% 瀏覽器端處理。"
+  },
+  "regex": {
+    "title": "正則表達式線上測試工具 - 即時匹配高亮",
+    "shortTitle": "正則測試器",
+    "description": "線上測試正則表達式，支援即時匹配高亮、捕獲組檢視、替換預覽。內建預設模式庫和逐詞解析。100%客戶端運行。"
   }
 }
