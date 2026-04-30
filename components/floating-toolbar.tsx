@@ -1,14 +1,14 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useState, useEffect, useSyncExternalStore } from "react";
 import { useRouter, usePathname } from "../i18n/navigation";
 import { LayoutGrid, Sun, Moon, ClipboardX, Maximize, Minimize, Globe } from "lucide-react";
-import { getToolCards } from "../libs/tools";
 import { useTheme } from "../libs/theme";
 import { useTranslations, useLocale } from "next-intl";
 import { Dropdown } from "./ui/dropdown";
 import { useFullscreen } from "../hooks/use-fullscreen";
 import { showToast } from "../libs/toast";
+import ToolsDrawer from "./tools-drawer";
 
 const languages = [
   { code: "en", label: "English", shortLabel: "EN" },
@@ -22,9 +22,9 @@ export default function FloatingToolbar() {
   const { theme, toggleTheme } = useTheme();
   const t = useTranslations("common");
   const currentLocale = useLocale();
-  const tTools = useTranslations("tools");
   const [spinning, setSpinning] = useState(false);
   const [flipping, setFlipping] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const fullscreen = useFullscreen();
   const [clipAnimating, setClipAnimating] = useState(false);
   const [globeBouncing, setGlobeBouncing] = useState(false);
@@ -44,30 +44,33 @@ export default function FloatingToolbar() {
     }
   };
 
-  const tools = getToolCards(tTools);
-
-  const toolItems = tools.map((tool) => ({
-    label: tool.title,
-    onClick: () => router.push(tool.path),
-    active: tool.path === currentPath,
-  }));
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        setDrawerOpen(true);
+      }
+    }
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   return (
     <div className="fixed top-3 right-3 z-[60] flex items-center gap-0 bg-bg-surface/80 backdrop-blur-xl rounded-xl shadow-lg border border-border-default transition-opacity duration-200">
-      <Dropdown
-        trigger={
-          <button
-            type="button"
-            className={`flex h-[34px] w-[34px] items-center justify-center text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors border-r border-border-default ${spinning ? "nav-btn-spin" : ""}`}
-            onClick={() => setSpinning(true)}
-            onAnimationEnd={() => setSpinning(false)}
-            aria-label={t("nav.tools")}
-          >
-            <LayoutGrid size={16} />
-          </button>
-        }
-        items={toolItems}
-      />
+      <button
+        type="button"
+        className={`flex h-[34px] w-[34px] items-center justify-center text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors border-r border-border-default ${spinning ? "nav-btn-spin" : ""}`}
+        onClick={() => {
+          setSpinning(true);
+          setDrawerOpen(true);
+        }}
+        onAnimationEnd={() => setSpinning(false)}
+        aria-label={t("nav.tools")}
+        title={t("nav.searchToolsHint")}
+      >
+        <LayoutGrid size={16} />
+      </button>
+      <ToolsDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
 
       {isClipboardSupported && (
         <button

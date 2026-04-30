@@ -34,6 +34,7 @@
     "crypto-js": "^4.2.0",
     "diff": "^7.0.0",
     "file-selector": "^2.1.2",
+    "fuzzysort": "^3.1.0",
     "jose": "^6.2.3",
     "json5": "^2.2.3",
     "lucide-react": "^1.8.0",
