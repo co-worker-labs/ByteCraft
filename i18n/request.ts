@@ -29,6 +29,7 @@ const namespaces = [
   "textcase",
   "color",
   "httpstatus",
+  "regex",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

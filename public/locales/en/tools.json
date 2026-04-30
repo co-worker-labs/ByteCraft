@@ -103,5 +103,10 @@
     "title": "Color Converter & Picker - HEX, RGB, HSL, OKLCH",
     "shortTitle": "Color Converter",
     "description": "Convert HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH. Visual picker with eyedropper, palette generator, image color extraction, WCAG + APCA contrast, and color-blindness preview. 100% client-side."
+  },
+  "regex": {
+    "title": "Regex Tester & Live Regex Editor",
+    "shortTitle": "Regex Tester",
+    "description": "Test regular expressions in real-time with match highlighting, capture group inspection, and replacement preview. Built-in preset library and token-level explanation. 100% client-side."
   }
 }

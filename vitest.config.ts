@@ -9,6 +9,7 @@ export default defineConfig({
       "libs/qrcode/**/*.test.ts",
       "libs/textcase/**/*.test.ts",
       "libs/color/**/*.test.ts",
+      "libs/regex/**/*.test.ts",
     ],
     environment: "node",
     pool: "forks",
