@@ -31,6 +31,7 @@ const namespaces = [
   "httpstatus",
   "regex",
   "csv",
+  "numbase",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

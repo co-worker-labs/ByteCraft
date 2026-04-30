@@ -29,6 +29,7 @@ import {
   Globe,
   Regex,
   FileSpreadsheet,
+  Binary,
 } from "lucide-react";
 
 const toolIcons: Record<string, React.ReactNode> = {
@@ -55,6 +56,7 @@ const toolIcons: Record<string, React.ReactNode> = {
   "/httpstatus": <Globe size={28} className="text-accent-cyan" />,
   "/regex": <Regex size={28} className="text-accent-cyan" />,
   "/csv": <FileSpreadsheet size={28} className="text-accent-cyan" />,
+  "/numbase": <Binary size={28} className="text-accent-cyan" />,
 };
 
 function Introduce() {

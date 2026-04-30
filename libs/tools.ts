@@ -30,6 +30,7 @@ export const TOOLS: { key: string; path: string }[] = [
   { key: "httpstatus", path: "/httpstatus" },
   { key: "color", path: "/color" },
   { key: "csv", path: "/csv" },
+  { key: "numbase", path: "/numbase" },
 ] as const;
 
 export function getToolCards(t: ReturnType<typeof useTranslations>): ToolCard[] {
