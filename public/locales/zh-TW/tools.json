@@ -160,5 +160,13 @@
     "shortTitle": "圖片壓縮",
     "description": "線上壓縮、調整大小、轉換圖片格式，支援 PNG、JPG、WebP。所有處理在瀏覽器本機完成，不上傳資料。",
     "searchTerms": "tupianyasuo tpyas yasuo webp"
+  },
+  "categories": {
+    "text": "文本處理",
+    "encoding": "編碼轉換",
+    "security": "安全加密",
+    "generators": "生成器",
+    "visual": "視覺媒體",
+    "reference": "參考速查"
   }
 }

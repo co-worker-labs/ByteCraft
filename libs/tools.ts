@@ -44,6 +44,24 @@ export interface ToolEntry {
   icon: LucideIcon;
 }
 
+export type ToolCategory = "text" | "encoding" | "security" | "generators" | "visual" | "reference";
+
+export interface CategoryGroup {
+  key: ToolCategory;
+  tools: string[]; // tool keys in display order
+}
+
+export const TOOL_CATEGORIES: CategoryGroup[] = [
+  { key: "text", tools: ["json", "regex", "textcase", "diff", "markdown"] },
+  { key: "encoding", tools: ["base64", "urlencoder", "yaml", "csv", "numbase", "storageunit"] },
+  { key: "security", tools: ["jwt", "hashing", "cipher", "password", "checksum"] },
+  { key: "generators", tools: ["uuid", "qrcode", "cron", "unixtime"] },
+  { key: "visual", tools: ["color", "image"] },
+  { key: "reference", tools: ["ascii", "htmlcode", "httpstatus", "dbviewer"] },
+];
+
+export const QUICK_ACCESS_DEFAULT: string[] = ["json", "base64", "jwt", "regex", "diff", "hashing"];
+
 const PALETTE_SIZE = 20;
 
 function hashCode(str: string): number {
@@ -98,4 +116,18 @@ export function getToolCards(t: ReturnType<typeof useTranslations>): ToolCard[] 
     icon: tool.icon,
     searchTerms: t.has(`${tool.key}.searchTerms`) ? t(`${tool.key}.searchTerms`) : "",
   }));
+}
+
+export function getToolCardMap(t: ReturnType<typeof useTranslations>): Map<string, ToolCard> {
+  const cards = getToolCards(t);
+  return new Map(cards.map((card) => [card.path, card]));
+}
+
+export function getToolCardsByKeys(keys: string[], cardMap: Map<string, ToolCard>): ToolCard[] {
+  return keys
+    .map((key) => {
+      const path = `/${key}`;
+      return cardMap.get(path);
+    })
+    .filter((card): card is ToolCard => card !== undefined);
 }

@@ -12,7 +12,15 @@ import { showToast } from "../libs/toast";
 
 export type HeaderPosition = "sticky" | "none" | "hidden";
 
-export default function Header({ position, title }: { position: HeaderPosition; title?: string }) {
+export default function Header({
+  position,
+  title,
+  hideToolsButton,
+}: {
+  position: HeaderPosition;
+  title?: string;
+  hideToolsButton?: boolean;
+}) {
   const router = useRouter();
   const currentPath = usePathname();
   const { theme, toggleTheme } = useTheme();
@@ -29,6 +37,7 @@ export default function Header({ position, title }: { position: HeaderPosition; 
   );
 
   useEffect(() => {
+    if (hideToolsButton) return;
     function handleKeyDown(e: KeyboardEvent) {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
         e.preventDefault();
@@ -37,7 +46,7 @@ export default function Header({ position, title }: { position: HeaderPosition; 
     }
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [hideToolsButton]);
 
   const handleClearClipboard = async () => {
     setClipAnimating(true);
@@ -76,20 +85,24 @@ export default function Header({ position, title }: { position: HeaderPosition; 
           )}
 
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              className={`flex h-8 w-8 items-center justify-center rounded-lg text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors ${spinning ? "nav-btn-spin" : ""}`}
-              onClick={() => {
-                setSpinning(true);
-                setDrawerOpen(true);
-              }}
-              onAnimationEnd={() => setSpinning(false)}
-              aria-label={t("nav.tools")}
-              title={t("nav.searchToolsHint")}
-            >
-              <LayoutGrid size={16} />
-            </button>
-            <ToolsDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
+            {!hideToolsButton && (
+              <>
+                <button
+                  type="button"
+                  className={`flex h-8 w-8 items-center justify-center rounded-lg text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors ${spinning ? "nav-btn-spin" : ""}`}
+                  onClick={() => {
+                    setSpinning(true);
+                    setDrawerOpen(true);
+                  }}
+                  onAnimationEnd={() => setSpinning(false)}
+                  aria-label={t("nav.tools")}
+                  title={t("nav.searchToolsHint")}
+                >
+                  <LayoutGrid size={16} />
+                </button>
+                <ToolsDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
+              </>
+            )}
 
             {isClipboardSupported && (
               <button
