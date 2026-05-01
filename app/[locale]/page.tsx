@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { generatePageMeta } from "../../libs/seo";
-import HomePage from "./home-page";
+import HomeClient from "./home-page";
 
 const PATH = "";
 
@@ -16,5 +16,5 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function HomeRoute() {
-  return <HomePage />;
+  return <HomeClient />;
 }

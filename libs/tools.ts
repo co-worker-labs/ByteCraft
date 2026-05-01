@@ -3,6 +3,7 @@ import type { useTranslations } from "next-intl";
 import {
   FileJson,
   FileCode,
+  FileBraces,
   ShieldCheck,
   Percent,
   FingerprintPattern,
@@ -24,7 +25,9 @@ import {
   Globe,
   Palette,
   Binary,
+  Table,
   FileSpreadsheet,
+  ImageDown,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -40,6 +43,27 @@ export interface ToolEntry {
   path: string;
   icon: LucideIcon;
 }
+
+export type ToolCategory = "text" | "encoding" | "security" | "generators" | "visual" | "reference";
+
+export interface CategoryGroup {
+  key: ToolCategory;
+  tools: string[]; // tool keys in display order
+}
+
+export const TOOL_CATEGORIES: CategoryGroup[] = [
+  { key: "text", tools: ["json", "regex", "diff", "markdown", "textcase"] },
+  {
+    key: "encoding",
+    tools: ["base64", "urlencoder", "csv", "csv-md", "numbase", "yaml", "storageunit"],
+  },
+  { key: "security", tools: ["jwt", "hashing", "password", "cipher", "checksum"] },
+  { key: "generators", tools: ["uuid", "cron", "unixtime", "qrcode"] },
+  { key: "visual", tools: ["color", "image"] },
+  { key: "reference", tools: ["httpstatus", "dbviewer", "ascii", "htmlcode"] },
+];
+
+export const QUICK_ACCESS_DEFAULT: string[] = ["json", "base64", "jwt", "regex", "diff", "hashing"];
 
 const PALETTE_SIZE = 20;
 
@@ -61,27 +85,30 @@ export const TOOLS: ToolEntry[] = [
   { key: "json", path: "/json", icon: FileJson },
   { key: "base64", path: "/base64", icon: FileCode },
   { key: "jwt", path: "/jwt", icon: ShieldCheck },
-  { key: "urlencoder", path: "/urlencoder", icon: Percent },
-  { key: "uuid", path: "/uuid", icon: FingerprintPattern },
   { key: "regex", path: "/regex", icon: Regex },
-  { key: "qrcode", path: "/qrcode", icon: QrCode },
-  { key: "diff", path: "/diff", icon: GitCompare },
+  { key: "uuid", path: "/uuid", icon: FingerprintPattern },
   { key: "hashing", path: "/hashing", icon: Hash },
-  { key: "password", path: "/password", icon: KeyRound },
-  { key: "textcase", path: "/textcase", icon: CaseSensitive },
-  { key: "cipher", path: "/cipher", icon: Lock },
-  { key: "cron", path: "/cron", icon: Clock },
+  { key: "urlencoder", path: "/urlencoder", icon: Percent },
   { key: "unixtime", path: "/unixtime", icon: Timer },
+  { key: "diff", path: "/diff", icon: GitCompare },
+  { key: "password", path: "/password", icon: KeyRound },
+  { key: "color", path: "/color", icon: Palette },
+  { key: "cron", path: "/cron", icon: Clock },
   { key: "markdown", path: "/markdown", icon: FileText },
+  { key: "qrcode", path: "/qrcode", icon: QrCode },
+  { key: "textcase", path: "/textcase", icon: CaseSensitive },
+  { key: "csv", path: "/csv", icon: FileSpreadsheet },
+  { key: "csv-md", path: "/csv-md", icon: Table },
+  { key: "cipher", path: "/cipher", icon: Lock },
+  { key: "numbase", path: "/numbase", icon: Binary },
   { key: "dbviewer", path: "/dbviewer", icon: Database },
   { key: "checksum", path: "/checksum", icon: FileCheck },
   { key: "storageunit", path: "/storageunit", icon: HardDrive },
-  { key: "ascii", path: "/ascii", icon: Type },
-  { key: "htmlcode", path: "/htmlcode", icon: Code },
   { key: "httpstatus", path: "/httpstatus", icon: Globe },
-  { key: "color", path: "/color", icon: Palette },
-  { key: "numbase", path: "/numbase", icon: Binary },
-  { key: "csv", path: "/csv", icon: FileSpreadsheet },
+  { key: "yaml", path: "/yaml", icon: FileBraces },
+  { key: "image", path: "/image", icon: ImageDown },
+  { key: "htmlcode", path: "/htmlcode", icon: Code },
+  { key: "ascii", path: "/ascii", icon: Type },
 ] as const;
 
 export function getToolCards(t: ReturnType<typeof useTranslations>): ToolCard[] {
@@ -92,4 +119,18 @@ export function getToolCards(t: ReturnType<typeof useTranslations>): ToolCard[] 
     icon: tool.icon,
     searchTerms: t.has(`${tool.key}.searchTerms`) ? t(`${tool.key}.searchTerms`) : "",
   }));
+}
+
+export function getToolCardMap(t: ReturnType<typeof useTranslations>): Map<string, ToolCard> {
+  const cards = getToolCards(t);
+  return new Map(cards.map((card) => [card.path, card]));
+}
+
+export function getToolCardsByKeys(keys: string[], cardMap: Map<string, ToolCard>): ToolCard[] {
+  return keys
+    .map((key) => {
+      const path = `/${key}`;
+      return cardMap.get(path);
+    })
+    .filter((card): card is ToolCard => card !== undefined);
 }

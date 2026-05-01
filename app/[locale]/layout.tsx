@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: Props) {
   const t = await getTranslations({ locale, namespace: "home" });
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: {
       default: t("title"),
       template: "%s | OmniKit",
@@ -41,6 +42,9 @@ export async function generateMetadata({ params }: Props) {
         "zh-CN": SITE_URL + "/zh-CN",
         "zh-TW": SITE_URL + "/zh-TW",
       },
+    },
+    icons: {
+      icon: { url: "/favicon.svg", type: "image/svg+xml" },
     },
     openGraph: {
       siteName: "OmniKit",
@@ -71,7 +75,6 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={initialTheme === "dark" ? "dark" : ""} suppressHydrationWarning>
       <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="manifest" href={`/${locale}/manifest.webmanifest`} />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

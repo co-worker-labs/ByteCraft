@@ -18,6 +18,7 @@ const namespaces = [
   "privacy",
   "uuid",
   "urlencoder",
+  "yaml",
   "diff",
   "markdown",
   "pwa",
@@ -31,7 +32,9 @@ const namespaces = [
   "httpstatus",
   "regex",
   "csv",
+  "csv-md",
   "numbase",
+  "image",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

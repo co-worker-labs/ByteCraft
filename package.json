@@ -56,12 +56,16 @@
     "sql.js": "^1.13.0",
     "tailwindcss": "^4.2.4",
     "title-case": "^4.3.2",
-    "uuid": "^14.0.0"
+    "uuid": "^14.0.0",
+    "yaml": "^2.8.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
     "@eslint/eslintrc": "^3.3.5",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
     "@types/colorthief": "^2.6.1",
     "@types/crypto-js": "^4.2.2",
     "@types/diff": "^7.0.0",
@@ -79,6 +83,7 @@
     "eslint-config-next": "^16.2.4",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
+    "jsdom": "^29.1.1",
     "lint-staged": "^16.4.0",
     "png-to-ico": "^3.0.1",
     "prettier": "^3.8.3",
