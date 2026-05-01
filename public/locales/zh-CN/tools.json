@@ -154,5 +154,13 @@
     "shortTitle": "图片压缩",
     "description": "在线压缩、调整大小、转换图片格式，支持 PNG、JPG、WebP。所有处理在浏览器本地完成，不上传数据。",
     "searchTerms": "tupianyasuo tpyas yasuo webp"
+  },
+  "categories": {
+    "text": "文本处理",
+    "encoding": "编码转换",
+    "security": "安全加密",
+    "generators": "生成器",
+    "visual": "视觉媒体",
+    "reference": "参考速查"
   }
 }

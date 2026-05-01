@@ -13,6 +13,8 @@ export default defineConfig({
       "libs/csv/**/*.test.ts",
       "libs/numbase/**/*.test.ts",
       "libs/image/**/*.test.ts",
+      "libs/__tests__/*.test.ts",
+      "hooks/**/*.test.ts",
     ],
     environment: "node",
     pool: "forks",

@@ -128,5 +128,13 @@
     "title": "Image Compressor & Format Converter - PNG, JPG, WebP",
     "shortTitle": "Image Compressor",
     "description": "Compress, resize, and convert images between PNG, JPG, and WebP formats. All processing runs locally in your browser."
+  },
+  "categories": {
+    "text": "Text Processing",
+    "encoding": "Encoding & Conversion",
+    "security": "Security & Crypto",
+    "generators": "Generators",
+    "visual": "Visual & Media",
+    "reference": "Reference & Lookup"
   }
 }
