@@ -18,13 +18,8 @@ import { Dropdown } from "./ui/dropdown";
 import { useFullscreen } from "../hooks/use-fullscreen";
 import { useDraggable } from "../hooks/use-draggable";
 import { showToast } from "../libs/toast";
+import { languages } from "../libs/i18n/languages";
 import ToolsDrawer from "./tools-drawer";
-
-const languages = [
-  { code: "en", label: "English", shortLabel: "EN" },
-  { code: "zh-CN", label: "简体中文", shortLabel: "中" },
-  { code: "zh-TW", label: "繁體中文", shortLabel: "繁" },
-];
 
 // Approximate toolbar width: 5 buttons × 34px + drag handle 30px + border paddings
 // Used as fallback before element is measured

@@ -4,14 +4,14 @@ import { SITE_URL } from "../libs/site";
 import { TOOLS } from "../libs/tools";
 
 function makeAlternates(path: string) {
-  return {
-    languages: {
-      "x-default": `${SITE_URL}${path}`,
-      en: `${SITE_URL}${path}`,
-      "zh-CN": `${SITE_URL}/zh-CN${path}`,
-      "zh-TW": `${SITE_URL}/zh-TW${path}`,
-    },
+  const languages: Record<string, string> = {
+    "x-default": `${SITE_URL}${path}`,
   };
+  for (const locale of routing.locales) {
+    const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+    languages[locale] = `${SITE_URL}${prefix}${path}`;
+  }
+  return { languages };
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -40,7 +40,7 @@
 - **框架**：Next.js 16（App Router）
 - **语言**：TypeScript
 - **样式**：Tailwind CSS 4
-- **国际化**：next-intl（English、简体中文、繁體中文）
+- **国际化**：next-intl（en、zh-CN、zh-TW、ja、ko、es、pt-BR、fr、de、ru）
 - **加密**：CryptoJS、jose（JWT）
 - **PWA**：Serwist（Service Worker）
 - **编辑器**：CodeMirror 6（DB Viewer 中的 SQL 编辑器）
@@ -115,15 +115,24 @@ utils/              # 纯工具函数
 i18n/               # 国际化配置与路由
 styles/             # 全局样式（PrismJS 主题）
 scripts/            # 构建与生成脚本
-public/locales/     # 翻译文件（en、zh-CN、zh-TW）
+public/locales/     # 翻译文件（en、zh-CN、zh-TW、ja、ko、es、pt-BR、fr、de、ru）
 ```
 
 ## 国际化
 
-支持三种语言：
+支持 10 种语言：
 
-- `en` — English（默认）
-- `zh-CN` — 简体中文
-- `zh-TW` — 繁體中文
+| 语言      | 代码    | URL           |
+| --------- | ------- | ------------- |
+| English   | `en`    | `/`（无前缀） |
+| 简体中文  | `zh-CN` | `/zh-CN`      |
+| 繁體中文  | `zh-TW` | `/zh-TW`      |
+| 日本語    | `ja`    | `/ja`         |
+| 한국어    | `ko`    | `/ko`         |
+| Español   | `es`    | `/es`         |
+| Português | `pt-BR` | `/pt-BR`      |
+| Français  | `fr`    | `/fr`         |
+| Deutsch   | `de`    | `/de`         |
+| Русский   | `ru`    | `/ru`         |
 
 语言前缀策略为 `as-needed` — 默认语言在 URL 中不带前缀。

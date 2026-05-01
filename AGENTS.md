@@ -5,7 +5,7 @@
 - **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS 4 with CSS variables
-- **i18n**: next-intl (English, 简体中文, 繁體中文)
+- **i18n**: next-intl (en, zh-CN, zh-TW, ja, ko, es, pt-BR, fr, de, ru)
 - **Crypto**: CryptoJS, jose (JWT)
 - **PWA**: Serwist (Service Worker)
 - **Testing**: Vitest
@@ -211,15 +211,24 @@ export default function ToolPage() {
 
 ## i18n
 
-Supports three locales with next-intl:
+Supports 10 locales with next-intl:
 
 | Locale              | Code    | URL             |
 | ------------------- | ------- | --------------- |
 | English             | `en`    | `/` (no prefix) |
 | Simplified Chinese  | `zh-CN` | `/zh-CN`        |
 | Traditional Chinese | `zh-TW` | `/zh-TW`        |
+| 日本語              | `ja`    | `/ja`           |
+| 한국어              | `ko`    | `/ko`           |
+| Español             | `es`    | `/es`           |
+| Português (BR)      | `pt-BR` | `/pt-BR`        |
+| Français            | `fr`    | `/fr`           |
+| Deutsch             | `de`    | `/de`           |
+| Русский             | `ru`    | `/ru`           |
 
 **i18n routing**: `as-needed` - default locale has no prefix.
+
+**Language config**: `libs/i18n/languages.ts` is the single source of truth for the language list used by `LanguageSwitcher` and `FloatingToolbar`. When adding a new locale, update `i18n/routing.ts`, `libs/i18n/languages.ts`, and `libs/seo.ts`.
 
 ### Using Translations
 
@@ -238,17 +247,18 @@ Translation files located in `public/locales/` directory.
 **Rules:**
 
 - **English (`en`)**: Omit `searchTerms` entirely. The `shortTitle` is already English and fuzzysort matches it directly.
-- **Chinese (`zh-CN` / `zh-TW`)**: Include `searchTerms` with space-separated tokens. **Maximum 5 tokens.** Format:
+- **CJK languages (`zh-CN`, `zh-TW`, `ja`, `ko`)**: Include `searchTerms` with space-separated tokens. **Maximum 5 tokens.** Use romanization (pinyin for Chinese, romaji for Japanese, romanized Korean) plus domain-specific keywords.
+- **Latin-script languages (`es`, `pt-BR`, `fr`, `de`, `ru`)**: The `shortTitle` is already in Latin script (or Cyrillic for Russian), so fuzzysort matches directly. Include `searchTerms` only if there are alternative terms users might search for (e.g., abbreviations, synonyms in other scripts).
 
 ```
-"<pinyin full> <pinyin initials> <keyword1> <keyword2> <keyword3>"
+"<romanized full> <romanized initials> <keyword1> <keyword2> <keyword3>"
 ```
 
-| Position | Token type         | Description                                                                                     | Example (密码生成器)    |
-| -------- | ------------------ | ----------------------------------------------------------------------------------------------- | ----------------------- |
-| 1        | Pinyin full        | Full pinyin of the tool's `shortTitle`, no spaces                                               | `mimashengchengqi`      |
-| 2        | Pinyin initials    | First letter of each character's pinyin                                                         | `mmscq`                 |
-| 3–5      | Long-tail keywords | Pinyin of **tool-specific** functional keywords derived from the tool's title and core features | `suiji` `mima` `anquan` |
+| Position | Token type         | Description                                                                                           | Example (密码生成器)    |
+| -------- | ------------------ | ----------------------------------------------------------------------------------------------------- | ----------------------- |
+| 1        | Romanized full     | Full romanization of the tool's `shortTitle`, no spaces                                               | `mimashengchengqi`      |
+| 2        | Romanized initials | First letter of each character's romanization                                                         | `mmscq`                 |
+| 3–5      | Long-tail keywords | Romanization of **tool-specific** functional keywords derived from the tool's title and core features | `suiji` `mima` `anquan` |
 
 **Keyword selection rules:**
 
@@ -265,7 +275,7 @@ Keywords must be **specific enough to discriminate** — they should strongly as
 
 1. Unique to this tool's domain (e.g. `sanlie` for hashing, `pipei` for regex)
 2. A specific sub-action users would search for (e.g. `yasuo` for JSON compression)
-3. A recognizable English term used in the Chinese title (e.g. `json`, `base64`, `jwt`)
+3. A recognizable English term used in the CJK title (e.g. `json`, `base64`, `jwt`)
 
 If fewer than 3 good keywords exist, use fewer — do not pad with generic terms.
 
@@ -310,6 +320,7 @@ Libraries in `libs/`:
 | `tools-search.ts`                 | Fuzzy search for tools (fuzzysort)                                                                         |
 | `site.ts`                         | Site metadata (`SITE_URL`)                                                                                 |
 | `seo.ts`                          | SEO metadata generation (OG, Twitter, alternates)                                                          |
+| `i18n/languages.ts`               | Language list config (single source of truth for LanguageSwitcher and FloatingToolbar)                     |
 | `theme.tsx`                       | Theme provider (light/dark)                                                                                |
 | `toast.ts`                        | Toast notification system                                                                                  |
 | `storage-keys.ts`                 | localStorage key constants                                                                                 |
