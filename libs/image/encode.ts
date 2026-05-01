@@ -1,8 +1,5 @@
 // libs/image/encode.ts
 import type { OutputFormat } from "./types";
-import { encodeAvif } from "./avif-worker";
-
-export type AvifStatus = "downloading" | "encoding";
 
 export async function encode(
   bitmap: ImageBitmap,
@@ -11,8 +8,7 @@ export async function encode(
     quality: number;
     width: number;
     height: number;
-  },
-  onAvifStatus?: (status: AvifStatus) => void
+  }
 ): Promise<Blob> {
   const canvas = document.createElement("canvas");
   canvas.width = options.width;
@@ -26,13 +22,6 @@ export async function encode(
   }
 
   ctx.drawImage(bitmap, 0, 0, options.width, options.height);
-
-  if (options.format === "avif") {
-    // @jsquash/avif/encode only accepts ImageData, not Canvas
-    const imageData = ctx.getImageData(0, 0, options.width, options.height);
-    const buffer = await encodeAvif(imageData, { quality: options.quality });
-    return new Blob([buffer], { type: "image/avif" });
-  }
 
   return new Promise<Blob>((resolve, reject) => {
     canvas.toBlob(

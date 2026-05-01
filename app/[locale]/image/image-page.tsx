@@ -10,17 +10,15 @@ import Slider from "rc-slider";
 import { Download, Clipboard, RefreshCw, ImageIcon, ImagePlus, ArrowLeftRight } from "lucide-react";
 import { StyledSelect, StyledInput, StyledCheckbox } from "../../../components/ui/input";
 import { Button } from "../../../components/ui/button";
-import { encode, type AvifStatus } from "../../../libs/image/encode";
+import { encode } from "../../../libs/image/encode";
 import { calculateDimensions } from "../../../libs/image/resize";
 import { getSupportedEncodeFormats } from "../../../libs/image/format-support";
-import { terminateAvifWorker } from "../../../libs/image/avif-worker";
 import type { OutputFormat, ResizeMode } from "../../../libs/image/types";
 
 const FORMAT_OPTIONS: { value: OutputFormat; label: string }[] = [
   { value: "png", label: "PNG" },
   { value: "jpeg", label: "JPG" },
   { value: "webp", label: "WebP" },
-  { value: "avif", label: "AVIF" },
 ];
 
 const MAX_MEGAPIXELS = 50;
@@ -56,7 +54,6 @@ function Conversion() {
   const [keepAspectRatio, setKeepAspectRatio] = useState(true);
   const [resultBlob, setResultBlob] = useState<Blob | null>(null);
   const [processing, setProcessing] = useState(false);
-  const [avifStatus, setAvifStatus] = useState<AvifStatus | null>(null);
   const [supportedFormats, setSupportedFormats] = useState<Set<OutputFormat> | null>(null);
 
   const [sliderPos, setSliderPos] = useState(50);
@@ -137,15 +134,14 @@ function Conversion() {
         const callId = ++stalenessId.current;
 
         setProcessing(true);
-        setAvifStatus(null);
 
         try {
-          const onStatus = outputFormat === "avif" ? setAvifStatus : undefined;
-          const blob = await encode(
-            sourceBitmap,
-            { format: outputFormat, quality, width: dims.width, height: dims.height },
-            onStatus
-          );
+          const blob = await encode(sourceBitmap, {
+            format: outputFormat,
+            quality,
+            width: dims.width,
+            height: dims.height,
+          });
 
           if (callId !== stalenessId.current) return;
 
@@ -162,7 +158,6 @@ function Conversion() {
         } finally {
           if (callId === stalenessId.current) {
             setProcessing(false);
-            setAvifStatus(null);
           }
         }
       },
@@ -187,7 +182,6 @@ function Conversion() {
 
   useEffect(() => {
     return () => {
-      terminateAvifWorker();
       if (prevBlobUrlRef.current) URL.revokeObjectURL(prevBlobUrlRef.current);
       if (originalUrlRef.current) URL.revokeObjectURL(originalUrlRef.current);
     };
@@ -229,7 +223,6 @@ function Conversion() {
     setSourceBitmap(null);
     setResultBlob(null);
     setProcessing(false);
-    setAvifStatus(null);
     setOutputFormat("webp");
     setQuality(80);
     setResizeMode("none");
@@ -247,7 +240,6 @@ function Conversion() {
       png: ".png",
       jpeg: ".jpg",
       webp: ".webp",
-      avif: ".avif",
     };
     const filename = baseName + (extMap[outputFormat] || ".png");
     const url = URL.createObjectURL(resultBlob);
@@ -636,13 +628,7 @@ function Conversion() {
             {processing && (
               <div className="absolute inset-0 bg-bg-base/60 flex flex-col items-center justify-center gap-2 z-30">
                 <div className="w-8 h-8 border-2 border-accent-cyan border-t-transparent rounded-full animate-spin" />
-                <span className="text-sm text-fg-secondary">
-                  {avifStatus === "downloading"
-                    ? t("loadingEncoder")
-                    : avifStatus === "encoding"
-                      ? t("encodingAvif")
-                      : t("processing")}
-                </span>
+                <span className="text-sm text-fg-secondary">{t("processing")}</span>
               </div>
             )}
           </div>

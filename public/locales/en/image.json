@@ -1,9 +1,9 @@
 {
   "dropImage": "Drop an image here or click to select",
-  "supportedFormats": "Supports PNG, JPG, WebP, AVIF, GIF, BMP, SVG",
+  "supportedFormats": "Supports PNG, JPG, WebP, GIF, BMP, SVG",
   "outputFormat": "Output Format",
   "formatUnsupported": "Not supported in this browser",
-  "formatNotSupported": "This image format is not supported. Please use PNG, JPG, WebP, AVIF, GIF, BMP, or SVG.",
+  "formatNotSupported": "This image format is not supported. Please use PNG, JPG, WebP, GIF, BMP, or SVG.",
   "quality": "Quality",
   "resize": "Resize",
   "noResize": "Original size",
@@ -19,8 +19,6 @@
   "original": "Original",
   "compressed": "Compressed",
   "saved": "Saved {percent}%",
-  "loadingEncoder": "Loading AVIF encoder...",
-  "encodingAvif": "Encoding AVIF...",
   "encodingFailed": "Encoding failed for this format",
   "processing": "Processing...",
   "firstFrameOnly": "Animated image — only the first frame is used",
@@ -28,7 +26,7 @@
   "descriptions": {
     "title": "About Image Compressor",
     "p1": "Compress, resize, and convert images right in your browser. No data is uploaded — all processing happens locally.",
-    "p2": "Supports PNG, JPG, WebP, and AVIF output formats. AVIF offers the best compression ratio for web images.",
+    "p2": "Supports PNG, JPG, and WebP output formats. WebP offers the best compression ratio for web images.",
     "p3": "Use the quality slider to balance file size and image quality. Lower quality means smaller files.",
     "p4": "Copying to clipboard converts the image to PNG format regardless of the selected output format."
   }

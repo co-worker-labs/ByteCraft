@@ -4,7 +4,6 @@ const MIME_MAP: Record<OutputFormat, string> = {
   png: "image/png",
   jpeg: "image/jpeg",
   webp: "image/webp",
-  avif: "image/avif",
 };
 
 function isCanvasEncodingSupported(mime: string): Promise<boolean> {
@@ -21,18 +20,14 @@ let cachedFormats: Set<OutputFormat> | null = null;
 export async function getSupportedEncodeFormats(): Promise<Set<OutputFormat>> {
   if (cachedFormats) return cachedFormats;
 
-  const canvasFormats = await Promise.all(
+  const results = await Promise.all(
     (["png", "jpeg", "webp"] as OutputFormat[]).map(async (fmt) => {
       const ok = await isCanvasEncodingSupported(MIME_MAP[fmt]);
       return [ok, fmt] as const;
     })
   );
 
-  cachedFormats = new Set(canvasFormats.filter(([ok]) => ok).map(([, fmt]) => fmt));
-
-  // AVIF always available via WASM
-  cachedFormats.add("avif");
-
+  cachedFormats = new Set(results.filter(([ok]) => ok).map(([, fmt]) => fmt));
   return cachedFormats;
 }
 

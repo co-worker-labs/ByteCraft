@@ -150,9 +150,9 @@
     "searchTerms": "jinzhizhuanhuan jzzh erjinzhi"
   },
   "image": {
-    "title": "图片压缩 / 格式转换 - PNG, JPG, WebP, AVIF",
+    "title": "图片压缩 / 格式转换 - PNG, JPG, WebP",
     "shortTitle": "图片压缩",
-    "description": "在线压缩、调整大小、转换图片格式，支持 PNG、JPG、WebP、AVIF。所有处理在浏览器本地完成，不上传数据。",
-    "searchTerms": "tupianyasuo tpyas yasuo webp avif"
+    "description": "在线压缩、调整大小、转换图片格式，支持 PNG、JPG、WebP。所有处理在浏览器本地完成，不上传数据。",
+    "searchTerms": "tupianyasuo tpyas yasuo webp"
   }
 }

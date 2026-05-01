@@ -1,4 +1,4 @@
-export type OutputFormat = "png" | "jpeg" | "webp" | "avif";
+export type OutputFormat = "png" | "jpeg" | "webp";
 
 export type ResizeMode = "none" | "percent" | "custom";
 
