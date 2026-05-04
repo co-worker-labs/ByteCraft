@@ -1,0 +1,8 @@
+{
+  "passphrasePlaceholder": "HMAC用の秘密のパスフレーズをここに貼り付けまたは入力",
+  "pasteToCompare": "貼り付けて比較",
+  "descriptions": {
+    "hmacTitle": "HMAC",
+    "hmac": "HMAC（Keyed-hash message authentication codes）は、暗号ハッシュ関数を使用したメッセージ認証の仕組みです。"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "OmniKit - Kostenlose Online-Entwicklertools",
+  "metaDescription": "Eine Sammlung kostenloser, browserbasierter Entwicklertools. Base64-Kodierer, Passwort-Generator, Hash-Generator, Verschlüsselung, Prüfsumme und mehr. 100% clientseitig, keine Daten werden an Server gesendet.",
+  "badge": "Kostenlos & Open Source",
+  "subtitle": "Ihr Schweizer Taschenmesser für Entwickler",
+  "tagline": "Keine Anmeldung, kein Tracking, einfach Ergebnisse.",
+  "searchPlaceholder": "Tools suchen...",
+  "noResults": "Keine Tools für \"{query}\" gefunden",
+  "resultsCount": "{count} Tools gefunden",
+  "allTools": "Alle Tools",
+  "viewGrouped": "Gruppiert",
+  "viewAll": "Alle",
+  "clearSearch": "Suche leeren",
+  "quickAccess": "Schnellzugriff"
+}

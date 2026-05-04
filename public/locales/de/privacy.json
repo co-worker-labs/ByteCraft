@@ -1,0 +1,70 @@
+{
+  "title": "Datenschutzerklärung",
+  "metaDescription": "Datenschutzerklärung für OmniKit. Erfahren Sie, wie wir Ihre Daten mit 100% clientseitiger Verarbeitung ohne serverseitige Datenübertragung schützen.",
+  "lastUpdated": "Zuletzt aktualisiert: 23. April 2026",
+  "privacyStatementTitle": "Datenschutzerklärung",
+  "privacyStatementP1": "Diese Datenschutzerklärung beschreibt, wie OmniKit (\"wir\", \"uns\" oder \"unser\") Informationen erfasst, verwendet und teilt, wenn Sie unsere Website (die \"Site\") besuchen. Wir verpflichten uns, Ihre Privatsphäre zu schützen und transparent über unsere Datenpraktiken zu sein.",
+  "privacyStatementP2": "Durch die Nutzung der Site stimmen Sie den in dieser Richtlinie beschriebenen Datenpraktiken zu.",
+  "infoCollectTitle": "Informationen, die wir erfassen",
+  "infoCollectP1": "Wir erfassen eine begrenzte Menge an Informationen, um unsere Site zu betreiben und zu verbessern. Die Informationen, die wir erfassen können, umfassen:",
+  "infoCollectList1": [
+    "Geräteinformationen: Wenn Sie die Site besuchen, können wir automatisch Ihre IP-Adresse, Browsertyp, Betriebssystem, Bildschirmauflösung und Zeitzone erfassen.",
+    "Nutzungsinformationen: Wir können Daten über die von Ihnen aufgerufenen Seiten, die verwendeten Tools und allgemeine Interaktionsmuster auf der Site erfassen.",
+    "Cookie-Daten: Wir verwenden Cookies und ähnliche Tracking-Technologien, um Ihr Erlebnis zu verbessern und unsere Werbepartner zu unterstützen."
+  ],
+  "infoCollectP2": "Wichtig: Alle Entwicklertools auf OmniKit laufen vollständig in Ihrem Browser. Der Text, den Sie kodieren, dekodieren, hashen, verschlüsseln oder anderweitig verarbeiten, wird niemals an unsere Server oder Server Dritter übertragen.",
+  "infoUseTitle": "Wie wir Ihre Informationen verwenden",
+  "infoUseP1": "Wir verwenden die erfassten Informationen für folgende Zwecke:",
+  "infoUseList1": [
+    "Site-Analyse: Um zu verstehen, wie Besucher unsere Site nutzen, Trends zu identifizieren und unsere Tools und Benutzererfahrung zu verbessern.",
+    "Werbung: Um unseren kostenlosen Service durch die Einblendung relevanter Anzeigen über Drittanbieter-Werbenetzwerke zu unterstützen.",
+    "Sicherheit: Um Missbrauch, Betrug oder Sicherheitsprobleme zu erkennen und zu verhindern.",
+    "Rechtskonformität: Um geltende rechtliche Verpflichtungen zu erfüllen."
+  ],
+  "infoUseP2": "Wir verkaufen Ihre personenbezogenen Daten nicht an Dritte.",
+  "cookiesTitle": "Cookies und Tracking-Technologien",
+  "cookiesP1": "Die Site verwendet Cookies und ähnliche Technologien für folgende Zwecke:",
+  "cookiesList1": [
+    "Essenzielle Cookies: Erforderlich für das ordnungsgemäße Funktionieren der Site (z.B. Speicherung Ihrer Spracheinstellung).",
+    "Analyse-Cookies: Von Diensten wie Google Analytics verwendet, um anonyme Nutzungsstatistiken zu erfassen.",
+    "Werbe-Cookies: Von unseren Werbepartnern verwendet, um relevante Anzeigen zu liefern und die Werbewirksamkeit zu messen."
+  ],
+  "cookiesP2": "Sie können Ihre Cookie-Einstellungen über die Browsereinstellungen verwalten. Bitte beachten Sie, dass das Deaktivieren bestimmter Cookies Ihre Erfahrung auf der Site beeinträchtigen kann. Weitere Informationen über Cookies finden Sie unter www.allaboutcookies.org.",
+  "advertisingTitle": "Werbung",
+  "advertisingP1": "OmniKit ist ein kostenloses, werbefinanziertes Angebot. Wir arbeiten mit Drittanbieter-Werbenetzwerken zusammen, die Informationen über Ihre Surfaktivität über mehrere Websites hinweg erfassen können, um personalisierte Anzeigen zu schalten.",
+  "advertisingP2": "Diese Partner können Technologien wie Cookies, Web Beacons und Tracking-Pixel verwenden, um Surfdaten für die Werbeausrichtung und -messung zu erfassen. Die erfassten Informationen sind in der Regel anonym und identifizieren Sie nicht persönlich.",
+  "advertisingP3": "Sie haben das Recht, personalisierte Werbung abzulehnen. Sie können dieses Recht ausüben über:",
+  "advertisingOptList": [
+    "Die Datenschutz- und Cookie-Einstellungen Ihres Browsers",
+    "Die Opt-out-Seite der Digital Advertising Alliance: optout.aboutads.info",
+    "Die Opt-out-Seite der Network Advertising Initiative: networkadvertising.org/choices",
+    "Die European Interactive Digital Advertising Alliance: youronlinechoices.com"
+  ],
+  "advertisingNote": "Hinweis: Das Opt-out aus personalisierter Werbung bedeutet nicht, dass Sie keine Werbung mehr sehen. Es bedeutet, dass die Anzeigen, die Sie sehen, weniger relevant für Ihre Interessen sind.",
+  "thirdPartyTitle": "Drittanbieter-Dienste",
+  "thirdPartyP1": "Wir verwenden Google Analytics, um Nutzungsdaten für die Site zu erfassen und zu analysieren. Google Analytics erfasst Informationen wie die Häufigkeit von Besuchen, die aufgerufenen Seiten und welche anderen Sites vor dem Besuch unserer Site genutzt wurden. Mehr über Googles Datenschutzpraktiken erfahren Sie unter google.com/intl/en/policies/privacy und Sie können sich unter tools.google.com/dlpage/gaoptout von Google Analytics abmelden.",
+  "thirdPartyP2": "Wir können zusätzliche Drittanbieter-Dienste für Werbung, Analyse oder Site-Funktionalität verwenden. Jeder Drittanbieter-Dienst hat seine eigene Datenschutzerklärung, die wir Ihnen zur Durchsicht empfehlen.",
+  "dataSecurityTitle": "Datensicherheit",
+  "dataSecurityP1": "Alle Entwicklertools auf OmniKit verarbeiten Daten vollständig in Ihrem Webbrowser mittels clientseitigem JavaScript. Ihre Daten, einschließlich Text, Dateien und kryptografischen Operationen, verlassen niemals Ihr Gerät. Wir haben keinen Zugriff auf und speichern keine Daten, die Sie mit unseren Tools verarbeiten.",
+  "dataSecurityP2": "Wir implementieren angemessene Sicherheitsmaßnahmen zum Schutz der Site und ihrer Infrastruktur. Keine Methode der elektronischen Übertragung oder Speicherung ist jedoch zu 100% sicher, und wir können keine absolute Sicherheit garantieren.",
+  "yourRightsTitle": "Ihre Rechte",
+  "yourRightsP1": "Je nach Ihrem Standort können Sie bestimmte Rechte in Bezug auf Ihre personenbezogenen Daten haben:",
+  "yourRightsList1": [
+    "Auskunft: Sie haben das Recht, Auskunft über die personenbezogenen Daten zu verlangen, die wir über Sie gespeichert haben.",
+    "Berichtigung: Sie haben das Recht, die Berichtigung ungenauer oder unvollständiger personenbezogener Daten zu verlangen.",
+    "Löschung: Sie haben das Recht, die Löschung Ihrer personenbezogenen Daten zu verlangen, vorbehaltlich bestimmter gesetzlicher Ausnahmen.",
+    "Widerspruch: Sie haben das Recht, personalisierter Werbung und bestimmten Datenverarbeitungsaktivitäten zu widersprechen.",
+    "Datenübertragbarkeit: In einigen Rechtsgebieten haben Sie das Recht, Ihre personenbezogenen Daten in einem strukturierten, maschinenlesbaren Format zu erhalten."
+  ],
+  "yourRightsP2": "Um eines dieser Rechte auszuüben, kontaktieren Sie uns bitte. Wir werden Ihrem Antrag gemäß den geltenden Gesetzen entsprechen.",
+  "dataRetentionTitle": "Datenspeicherung",
+  "dataRetentionP1": "Wir bewahren Analyse- und Werbedaten nur so lange auf, wie es zur Erfüllung der in dieser Richtlinie beschriebenen Zwecke erforderlich ist oder gesetzlich vorgeschrieben ist. Daten, die von unseren Entwicklertools verarbeitet werden, werden von uns niemals gespeichert und existieren nur vorübergehend in Ihrer Browsersitzung.",
+  "childrenTitle": "Datenschutz von Kindern",
+  "childrenP1": "Die Site richtet sich nicht an Kinder unter 13 Jahren. Wir erfassen wissentlich keine personenbezogenen Daten von Kindern unter 13 Jahren. Wenn Sie glauben, dass wir versehentlich Daten eines Kindes unter 13 Jahren erfasst haben, kontaktieren Sie uns bitte, und wir werden diese Informationen umgehend löschen.",
+  "changesTitle": "Änderungen dieser Richtlinie",
+  "changesP1": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren, um Änderungen in unseren Praktiken, der Technologie oder den gesetzlichen Anforderungen widerzuspiegeln. Wir werden die aktualisierte Richtlinie auf dieser Seite mit einem aktualisierten \"Zuletzt aktualisiert\"-Datum veröffentlichen. Ihre fortgesetzte Nutzung der Site nach Änderungen gilt als Akzeptanz der aktualisierten Richtlinie.",
+  "linksTitle": "Links zu anderen Sites",
+  "linksP1": "Die Site kann Links zu Drittanbieter-Websites oder -Diensten enthalten. Wir sind nicht verantwortlich für die Datenschutzpraktiken oder Inhalte dieser externen Sites. Wir empfehlen Ihnen, die Datenschutzerklärungen aller Drittanbieter-Sites zu lesen, die Sie besuchen.",
+  "contactTitle": "Kontakt",
+  "contactP1": "Wenn Sie Fragen oder Bedenken zu dieser Datenschutzerklärung oder unseren Datenpraktiken haben, kontaktieren Sie uns bitte."
+}

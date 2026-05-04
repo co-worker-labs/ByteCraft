@@ -1,0 +1,31 @@
+{
+  "encodedOutput": "Résultat encodé",
+  "plainTextPlaceholder": "Collez ou saisissez le texte brut ici",
+  "basicAuthentication": "Authentification Basic",
+  "username": "Nom d'utilisateur",
+  "password": "Mot de passe",
+  "descriptions": {
+    "whatIsTitle": "Qu'est-ce que l'encodage Base64 ?",
+    "whatIsP1": "L'encodage Base64 permet de convertir des données (généralement binaires) en un jeu de caractères ASCII. Il est important de préciser que Base64 n'est ni un chiffrement ni une compression, bien qu'on le confonde parfois avec le chiffrement en raison de la manière dont il semble masquer les données. En réalité, la taille d'une information encodée en Base64 est 1,3333 fois supérieure à celle des données d'origine.",
+    "whatIsP2": "Base64 est la technique d'encodage en base la plus utilisée, avec Base16 et Base32 comme les deux autres schémas d'encodage courants.",
+    "whatIsP3": "L'encodage Base64 est l'une des méthodes les plus courantes pour convertir des données binaires en texte ASCII brut. C'est un format très pratique pour la communication entre systèmes qui ne peuvent pas facilement gérer les données binaires, comme les images dans le balisage HTML ou les requêtes web.",
+    "howTitle": "Comment fonctionne Base64 ?",
+    "howP1": "La conversion de données en Base64 est un processus en plusieurs étapes. Voici comment cela fonctionne pour les chaînes de texte :",
+    "howStep1": "Calculer la version binaire 8 bits du texte d'entrée",
+    "howStep2": "Regrouper la version 8 bits des données en blocs de 6 bits",
+    "howStep3": "Trouver la valeur décimale de chaque bloc binaire de 6 bits",
+    "howStep4": "Trouver le symbole Base64 correspondant à chaque valeur décimale via la table de correspondance Base64",
+    "tableCaption": "Table d'encodage Base64",
+    "tableValue": "Valeur",
+    "tableChar": "Caractère",
+    "whyTitle": "Pourquoi utiliser l'encodage Base64 ?",
+    "whyP1": "Envoyer des informations au format binaire peut parfois être risqué, car toutes les applications ou tous les systèmes réseau ne peuvent pas gérer le binaire brut. En revanche, le jeu de caractères ASCII est largement connu et très simple à manipuler pour la plupart des systèmes.",
+    "whyP2": "Par exemple, les serveurs de messagerie attendent des données textuelles, c'est pourquoi on utilise généralement ASCII. Si vous souhaitez envoyer des images ou tout autre fichier binaire à un serveur de messagerie, vous devez d'abord l'encoder dans un format textuel, de préférence ASCII. C'est là que l'encodage Base64 devient extrêmement utile pour convertir les données binaires aux formats appropriés.",
+    "useCasesTitle": "Cas d'utilisation courants de Base64",
+    "useCasesP1": "Vous pouvez aussi utiliser Base64 pour représenter des données binaires de manière compatible avec HTML, JavaScript et CSS. Par exemple, vous pouvez intégrer une image directement dans un fichier CSS ou JavaScript en utilisant Base64.",
+    "useCasesP2": "Il est possible d'utiliser Base64 pour convertir des entrées, comme des données de formulaire ou du JSON, en une chaîne avec un jeu de caractères réduit compatible avec les URL. Cependant, en raison de la façon dont certains serveurs peuvent interpréter les caractères plus (+) et barre oblique (/), il est recommandé d'utiliser encodeURIComponent à la place.",
+    "limitationsTitle": "Limites de Base64",
+    "limitationsP1": "Base64 n'est en aucun cas une méthode de chiffrement sécurisée.",
+    "limitationsP2": "Base64 n'est pas non plus une méthode de compression. L'encodage d'une chaîne en Base64 donne généralement un résultat 33 % plus long."
+  }
+}

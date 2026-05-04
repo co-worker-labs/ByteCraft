@@ -13,6 +13,13 @@ const OG_LOCALES: Record<string, string> = {
   en: "en_US",
   "zh-CN": "zh_CN",
   "zh-TW": "zh_TW",
+  ja: "ja_JP",
+  ko: "ko_KR",
+  es: "es_ES",
+  "pt-BR": "pt_BR",
+  fr: "fr_FR",
+  de: "de_DE",
+  ru: "ru_RU",
 };
 
 export function generatePageMeta({

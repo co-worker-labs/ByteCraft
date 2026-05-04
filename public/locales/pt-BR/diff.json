@@ -1,0 +1,57 @@
+{
+  "textA": "Texto A",
+  "textB": "Texto B",
+  "textAPlaceholder": "Cole ou digite o texto A aqui, ou solte um arquivo",
+  "textBPlaceholder": "Cole ou digite o texto B aqui, ou solte um arquivo",
+  "uploadFile": "Enviar arquivo",
+  "formatJson": "Formatar JSON",
+  "formatJsonInvalid": "JSON inválido: {message}",
+  "swap": "Trocar textos",
+  "copyDiff": "Copiar diff",
+  "compare": "Comparar",
+  "view": {
+    "label": "Visualização",
+    "sideBySide": "Lado a lado",
+    "inline": "Inline",
+    "stacked": "Empilhado"
+  },
+  "layout": {
+    "label": "Layout",
+    "horizontal": "Horizontal",
+    "vertical": "Vertical"
+  },
+  "options": {
+    "label": "Opções",
+    "ignoreWhitespace": "Ignorar espaços",
+    "ignoreCase": "Ignorar maiúsculas/minúsculas"
+  },
+  "fold": {
+    "hiddenLines": "{count} linhas inalteradas",
+    "expand": "Expandir",
+    "collapse": "Recolher",
+    "ariaExpand": "Mostrar {count} linhas ocultas",
+    "ariaCollapse": "Ocultar {count} linhas"
+  },
+  "noChanges": "Nenhuma diferença encontrada",
+  "computing": "Calculando diff...",
+  "manualHint": "Entrada grande — comparação automática desativada. Clique em Comparar quando estiver pronto.",
+  "workerFailed": "Diff falhou, por favor tente novamente",
+  "descriptions": {
+    "whatIsTitle": "O que é um diff?",
+    "whatIsP1": "Um diff é uma comparação estruturada entre dois textos que destaca o que foi adicionado, o que foi removido e o que permaneceu igual. Desenvolvedores o usam diariamente para revisar mudanças de código, auditar divergências de configuração e reconciliar duas versões de um documento.",
+    "whatIsP2": "Esta ferramenta executa a comparação inteiramente no seu navegador usando a biblioteca jsdiff. Nada do que você colar ou enviar é transmitido para qualquer servidor.",
+    "howTitle": "Como usar",
+    "howP1": "Cole ou solte suas duas entradas nos campos Original e Modificado. O diff é calculado automaticamente para entradas menores que 512KB; para entradas maiores, um botão Comparar aparece para que você mantenha o controle.",
+    "howP2": "Alterne entre visualizações lado a lado e inline, ignore espaços ou maiúsculas quando necessário, e use Formatar JSON para normalizar entradas JSON antes de comparar.",
+    "algorithmTitle": "Algoritmo",
+    "algorithmP1": "Baseado no algoritmo de diff Myers via jsdiff. A ferramenta primeiro calcula um diff em nível de linha, depois para cada par de linhas removidas e adicionadas adjacentes executa uma segunda passagem em nível de palavra para destacar quais palavras realmente mudaram — a mesma convenção usada em pull requests do GitHub.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesP1": "Comparar dois arquivos de configuração (JSON, YAML, .env) para identificar divergências entre ambientes.",
+    "useCasesP2": "Revisar uma mudança de código antes de colar em um commit, especialmente quando se trabalha fora de um editor.",
+    "useCasesP3": "Reconciliar duas versões de um documento, log ou resultado de consulta lado a lado.",
+    "limitationsTitle": "Limitações",
+    "limitationsP1": "A ferramenta compara apenas texto. Arquivos binários são detectados e rejeitados para manter o resultado significativo.",
+    "limitationsP2": "As entradas são limitadas a 5MB cada. Entradas acima de 512KB são executadas em um Web Worker em segundo plano; a página permanece responsiva, mas o diff demora proporcionalmente mais para entradas muito grandes.",
+    "limitationsP3": "Diferenças em finais de linha (CRLF vs LF) e espaços trailing são normalizadas — nunca aparecerão como mudanças."
+  }
+}

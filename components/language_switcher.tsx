@@ -5,12 +5,7 @@ import { useRouter, usePathname } from "../i18n/navigation";
 import { useLocale } from "next-intl";
 import { Globe } from "lucide-react";
 import { Dropdown } from "./ui/dropdown";
-
-const languages = [
-  { code: "en", label: "English", shortLabel: "EN" },
-  { code: "zh-CN", label: "简体中文", shortLabel: "中" },
-  { code: "zh-TW", label: "繁體中文", shortLabel: "繁" },
-];
+import { languages } from "../libs/i18n/languages";
 
 export default function LanguageSwitcher() {
   const router = useRouter();

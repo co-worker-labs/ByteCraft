@@ -1,0 +1,72 @@
+{
+  "generatedTitle": "Votre UUID",
+  "version": "Version",
+  "quantity": "Quantité",
+  "namespace": "Espace de noms",
+  "namespaceCustom": "Personnalisé",
+  "namespaceCustomPlaceholder": "Entrez un UUID",
+  "namespaceInvalid": "UUID d'espace de noms invalide",
+  "invalidNamespace": "UUID d'espace de noms invalide",
+  "namespaceDNS": "DNS (noms de domaine)",
+  "namespaceURL": "URL (adresses web)",
+  "namespaceOID": "OID (identifiants d'objets ISO)",
+  "namespaceX500": "X.500 (chemins d'annuaire)",
+  "namespaceCUSTOM": "UUID d'espace de noms personnalisé",
+  "namespaceDesc": "Un espace de noms est un UUID fixe qui sert d'identifiant racine. Les versions v3/v5 utilisent l'espace de noms + le nom pour générer des UUID déterministes. Même espace de noms + même nom produit toujours le même résultat.",
+  "name": "Nom",
+  "namePlaceholder": "Entrez un nom à générer…",
+  "format": "Format",
+  "formatStandard": "Standard",
+  "formatNoHyphens": "Sans tirets",
+  "formatBraces": "Accolades",
+  "uppercase": "Majuscules",
+  "copyAll": "Tout copier",
+  "download": "Télécharger .txt",
+  "localGenerated": "Généré entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil.",
+  "securityTip": "Pour les clés primaires de base de données, préférez v7 (triable, adapté aux index). Pour des identifiants aléatoires généralistes, utilisez v4.",
+  "unsupportedBrowser": "Votre navigateur ne supporte pas la génération aléatoire sécurisée.",
+  "downloadFilename": "uuids.txt",
+  "waitingForName": "Entrez un nom pour générer…",
+  "whatIsUuid": "Qu'est-ce qu'un UUID ?",
+  "uuidDesc": "UUID (Universally Unique Identifier) est un identifiant sur 128 bits utilisé pour étiqueter de manière unique des informations dans les systèmes informatiques. Pensez-y comme une empreinte digitale numérique pour les données. Chaque UUID est unique et généré sans autorité centrale.",
+  "uuidStructure": "Structure d'un UUID",
+  "uuidStructureDesc": "Un UUID s'écrit sous la forme de 32 chiffres hexadécimaux séparés par des tirets en 5 groupes : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. La variante de version est encodée dans des positions de bits spécifiques.",
+  "versionCompare": "Comparaison des versions",
+  "versionTip": "Cliquez sur une version pour en savoir plus",
+  "v1": {
+    "name": "v1 — Horodatage + MAC",
+    "desc": "Combine l'horodatage et l'adresse MAC de la machine hôte. Plus ancien, prévisible, expose l'adresse MAC.",
+    "pros": "Génération rapide, triable par temps",
+    "cons": "Risque de confidentialité (MAC exposée), pas globalement unique sans coordination entre machines"
+  },
+  "v3": {
+    "name": "v3 — Espace de noms + MD5",
+    "desc": "Génère des UUID déterministes via le hachage MD5 de l'espace de noms + le nom. Les mêmes entrées produisent toujours le même résultat.",
+    "pros": "Reproductible, adapté au nommage basé sur DNS/URL",
+    "cons": "MD5 est cryptographiquement faible, sensible aux collisions"
+  },
+  "v4": {
+    "name": "v4 — Aléatoire",
+    "desc": "Utilise des nombres aléatoires cryptographiquement sûrs. Unicité maximale, sans structure ni prévisibilité.",
+    "pros": "Aléatoire maximal, respectueux de la vie privée (pas d'horodatage ni de MAC)",
+    "cons": "Non triable, non reproductible"
+  },
+  "v5": {
+    "name": "v5 — Espace de noms + SHA-1",
+    "desc": "Comme v3 mais utilise le hachage SHA-1. Plus sûr que MD5, toujours déterministe.",
+    "pros": "Reproductible, SHA-1 plus robuste que MD5",
+    "cons": "SHA-1 a des faiblesses connues, collisions théoriquement possibles"
+  },
+  "v7": {
+    "name": "v7 — Époque Unix + Aléatoire",
+    "desc": "Intègre l'horodatage Unix dans les bits de poids fort, suivi de données aléatoires. Triable et unique.",
+    "pros": "Triable par temps, adapté aux index, bonnes performances en base de données, respectueux de la vie privée",
+    "cons": "Non reproductible, plus récent (RFC 9562), support d'outils limité"
+  },
+  "useCases": "Cas d'utilisation courants",
+  "useCaseDb": "Clés primaires de base de données",
+  "useCaseDist": "Identifiants de systèmes distribués",
+  "useCaseWeb": "Identifiants de session ou de ressource",
+  "useCaseMq": "Identifiants de messages dans les files d'attente",
+  "useCaseTest": "Données de test et simulations"
+}

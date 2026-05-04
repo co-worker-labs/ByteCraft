@@ -1,0 +1,129 @@
+{
+  "mode": {
+    "label": "Modo",
+    "standard": "Estándar (5 campos)",
+    "spring": "Spring (6 campos)",
+    "quartz": "Quartz (7 campos)"
+  },
+  "tab": { "generate": "Generar", "parse": "Analizar" },
+  "timezone": { "label": "Zona horaria", "local": "Local", "utc": "UTC" },
+  "field": {
+    "second": "Segundo",
+    "minute": "Minuto",
+    "hour": "Hora",
+    "dayOfMonth": "Día",
+    "month": "Mes",
+    "dayOfWeek": "Día de la semana",
+    "year": "Año"
+  },
+  "fieldType": {
+    "any": "Cualquiera",
+    "noSpecific": "Sin específico",
+    "specific": "Específico",
+    "range": "Rango",
+    "step": "Intervalo",
+    "list": "Lista",
+    "lastDay": "Último día",
+    "weekday": "Día laborable más cercano",
+    "nthDayOfWeek": "N-ésimo día de la semana",
+    "lastDayOffset": "Días antes del último"
+  },
+  "monthShort": [
+    "Ene", "Feb", "Mar", "Abr", "May", "Jun",
+    "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"
+  ],
+  "weekdayShort": ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
+  "weekdayLong": ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+  "presets": {
+    "everyMinute": "Cada minuto",
+    "every5Minutes": "Cada 5 minutos",
+    "every15Minutes": "Cada 15 minutos",
+    "everyHour": "Cada hora",
+    "every2Hours": "Cada 2 horas",
+    "everyDay": "Cada día a las 00:00",
+    "everyMondayMorning": "Cada lunes a las 09:00",
+    "weekdays9am": "Días laborables a las 09:00",
+    "firstOfMonth": "Primer día del mes",
+    "lastOfMonth": "Último día del mes",
+    "everyQuarter": "Cada trimestre (1 Ene/Abr/Jul/Oct)"
+  },
+  "describe": {
+    "everyMinute": "Cada minuto",
+    "everyHour": "Cada hora",
+    "everyHourAt": "Cada hora a las {time}",
+    "everySecond": "Cada segundo",
+    "atTime": "A las {time}",
+    "everyN": "Cada {n} minutos",
+    "lastDow": "el último {weekday} del mes",
+    "fromTo": "de {from} a {to}",
+    "onDays": "los {days}",
+    "throughDays": "de {from} a {to}",
+    "andList": "{prefix} y {item}",
+    "ofEveryMonth": "de cada mes",
+    "lastDayOfMonth": "el último día del mes",
+    "nthWeekday": "el {ordinal} {weekday} del mes",
+    "nearestWeekdayTo": "el día laborable más cercano al día {day}",
+    "lastWeekdayOfMonth": "el último día laborable del mes",
+    "lastDayMinusN": "{n} días antes del último día del mes"
+  },
+  "ordinal": { "1": "primer", "2": "segundo", "3": "tercer", "4": "cuarto", "5": "quinto" },
+  "output": {
+    "expression": "Expresión",
+    "description": "Descripción",
+    "nextExecutions": "Próximas 5 ejecuciones",
+    "header": { "num": "#", "dateTime": "Fecha y hora", "relative": "Relativo" },
+    "relative": { "in": "en {value}", "now": "ahora", "past": "pasado" }
+  },
+  "share": { "button": "Compartir enlace", "copied": "Enlace copiado" },
+  "parse": {
+    "placeholder": "Pega o escribe una expresión Cron",
+    "showingPrevious": "Mostrando el último resultado válido"
+  },
+  "warn": {
+    "neverTriggers": "Esta expresión nunca se ejecutará",
+    "searchWindowExhausted": "Solo se encontraron {found} de {requested} ejecuciones en los próximos 4 años",
+    "secondDropped": "Se eliminó el campo de segundos (era: {value})",
+    "yearDropped": "Se eliminó el campo de año (era: {value})",
+    "specialDroppedFromMode": "El carácter especial {token} no es compatible con el modo {mode} y se eliminó",
+    "bothDayFieldsSet": "Ambos campos día-del-mes y día-de-la-semana están configurados. La expresión se ejecuta cuando CUALQUIERA coincida",
+    "orSemanticsLost": "Quartz no puede representar semántica OR entre campos de día. Se mantiene día-de-la-semana y se establece día-del-mes a '?'"
+  },
+  "errors": {
+    "wrongFieldCount": "Se esperaban {expected} campos para el modo {mode}, se obtuvieron {got}",
+    "outOfRange": "{field} debe ser {min}-{max}, se obtuvo {value}",
+    "invalidSyntax": "Carácter inesperado '{char}' en el campo {field}",
+    "invalidStep": "El valor del intervalo debe ser positivo, se obtuvo {value}",
+    "rangeReversed": "El inicio del rango ({from}) es mayor que el fin ({to}) en {field}",
+    "specialNotAllowed": "'{token}' no está permitido en el campo {field} para el modo {mode}",
+    "quartzNeedsQuestionMark": "El modo Quartz requiere que día-del-mes o día-de-la-semana sea '?'",
+    "quartzBothQuestionMarks": "Día-del-mes y día-de-la-semana no pueden ser ambos '?'",
+    "macroRebootUnsupported": "@reboot no es compatible (el navegador no puede detectar el inicio del sistema)",
+    "unknownMacro": "Macro desconocida '{macro}'",
+    "unknownAlias": "Nombre desconocido '{name}' en el campo {field}",
+    "weekdayOnNonDom": "'W' solo se permite en el campo día-del-mes",
+    "nthOnNonDow": "'#' solo se permite en el campo día-de-la-semana"
+  },
+  "descriptions": {
+    "whatIsTitle": "¿Qué es una expresión Cron?",
+    "whatIs": "Una expresión Cron es una cadena de campos que describe una programación. Cada campo controla una unidad de tiempo (minuto, hora, día, mes, día de la semana). Original del cron de Unix, la sintaxis ha sido extendida por Spring (añade segundos) y Quartz (añade segundos y año, además de los caracteres especiales L, W, #).",
+    "fieldRefTitle": "Referencia de campos",
+    "specialCharsTitle": "Caracteres especiales",
+    "modesTitle": "Modos",
+    "dstTitle": "Horario de verano (DST)",
+    "dst": "Cuando la zona horaria activa observa el horario de verano, las programaciones dentro del salto de primavera se ejecutan en el siguiente momento válido, y las programaciones dentro del solapamiento de otoño se ejecutan en la primera ocurrencia. Cambia a UTC para evitar el DST por completo."
+  },
+  "editor": {
+    "title": "Editar campo",
+    "preview": "Vista previa",
+    "apply": "Aplicar",
+    "specificValue": "Valor",
+    "rangeFrom": "Desde",
+    "rangeTo": "Hasta",
+    "stepStart": "Inicio",
+    "stepInterval": "Intervalo",
+    "stepEvery": "Cada",
+    "listSelect": "Seleccionar valores",
+    "specialKind": "Tipo"
+  },
+  "presetSection": "Presets rápidos"
+}

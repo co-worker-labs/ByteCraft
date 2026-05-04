@@ -1,0 +1,38 @@
+{
+  "description": {
+    "p1": "Es gibt viele verschiedene Buchstaben, Zeichen, Sonderzeichen, Symbole und Icons, die Sie im Inhalt Ihrer Website verwenden möchten, die aber bei der Verwendung nicht wie erwartet angezeigt werden. Um sicherzustellen, dass sie korrekt angezeigt werden, müssen Sie HTML-Codes verwenden. Jeder einzelne Buchstabe, jedes Zeichen, Symbol und Icon hat seinen eigenen HTML-Code, den Sie einfach in Ihr HTML einfügen müssen. Wir haben eine vollständige Liste aller HTML-Codes für die verschiedenen Zeichen, Sonderzeichen, Buchstaben, Symbole und Icons erstellt. Sie können diese HTML-Codes einfach kopieren und in Ihr HTML einfügen, damit sie korrekt innerhalb der Inhalte Ihrer Website angezeigt werden. Wo verfügbar, haben wir den benutzerfreundlichen HTML-Code (Entity-Name), den numerischen HTML-Code (Entity-Nummer) und den HEX-Code hinzugefügt, damit Sie immer den richtigen Code finden.",
+    "p2": "Bevor Sie einen der untenstehenden Codes auf Ihrer Website verwenden, stellen Sie sicher, dass Ihr HTML-Dokument die richtige Kodierung verwendet, damit die HTML-Codes und HTML-Sonderzeichen korrekt angezeigt werden. Um sicherzustellen, dass Ihr HTML die richtige Kodierung verwendet, sollten Sie den Unicode-Zeichensatz verwenden. Dieser Unicode-Zeichensatz muss im Head-Bereich Ihres HTML-Dokuments festgelegt werden. Dies geschieht durch die Verwendung eines Meta-Tags mit dem charset-Attribut und dem Wert UTF-8. Kopieren Sie einfach das folgende Meta-Tag in Ihren Head-Bereich und alle untenstehenden HTML-Zeichen werden perfekt angezeigt."
+  },
+  "tabs": {
+    "letters": "Buchstaben",
+    "punctuation": "Satzzeichen",
+    "currencies": "Währungen",
+    "mathematical": "Mathematik",
+    "pronunciations": "Aussprache",
+    "diacritics": "Diakritika",
+    "ascii": "ASCII",
+    "icons": "Icons"
+  },
+  "tabDescriptions": {
+    "punctuation": "Satzzeichen sind Zeichen, die in Texten verwendet werden, um die Lesbarkeit zu verbessern. Satzzeichen zeigen manchmal auch an, wie ein Satz ausgesprochen werden soll oder was ein Wort oder Satz bedeutet.",
+    "currencies": "Mehrere Währungen haben ihr eigenes HTML-Zeichen, das Sie auf Ihrer Website verwenden können. Finden Sie das HTML-Zeichen aus der untenstehenden HTML-Währungscode-Liste.",
+    "mathematical": "Es gibt einige mathematische HTML-Zeichen, die Sie auf Ihrer Website verwenden können. Diese Liste mathematischer HTML-Zeichen hilft Ihnen, das richtige mathematische Zeichen für Ihr HTML zu finden.",
+    "pronunciations": "Aussprachezeichen helfen den Lesern eines Textes zu verstehen, wie ein Wort gesprochen werden sollte. Unten finden Sie alle HTML-Aussprachezeichen, die Sie in Ihrem HTML verwenden können.",
+    "diacritics": "Es gibt viele Buchstaben und Zeichen, die ein Glyph oder einen Akzent tragen. Diese diakritischen Zeichen können die Aussprache oder Bedeutung eines Wortes verändern. Diese HTML-Diakritika-Liste ermöglicht es Ihnen, das richtige diakritische Zeichen auf Ihrer Website anzuzeigen.",
+    "ascii": "Die ASCII-Teilmenge (American Standard Code for Information Interchange) von Unicode umfasst die Zahlen, Buchstaben und Zeichen, die im Grunde die bekanntesten Zeichen sind. Sie umfasst die Zahlen 0 bis 9, die Kleinbuchstaben a bis z, Großbuchstaben A bis Z und einige grundlegende Satz- und Steuerzeichen. Die folgende ASCII-HTML-Liste enthält alle HTML-Codes der ASCII-Teilmenge.",
+    "icons": "HTML bietet auch Sonderzeichen, die Sie in Ihrem HTML verwenden können. Zum Beispiel ein Herz, ein Geschlechtssymbol, musikalische Noten oder Pfeile. Verwenden Sie die Sonderzeichen und Icons aus der untenstehenden HTML-Icon-Liste frei auf Ihrer Website."
+  },
+  "tableHeaders": {
+    "character": "Zeichen",
+    "entityName": "Entity-Name",
+    "entityNumber": "Entity-Nummer",
+    "hexCode": "Hex-Code",
+    "description": "Beschreibung",
+    "entityCode": "Entity-Code",
+    "ipa": "IPA",
+    "ipaEntityName": "IPA-Entity-Name",
+    "ipaEntityCode": "IPA-Entity-Code",
+    "example": "Beispiel"
+  },
+  "searchPlaceholder": "Suche nach Zeichen, Code oder Beschreibung..."
+}

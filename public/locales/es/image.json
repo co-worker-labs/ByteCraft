@@ -1,0 +1,33 @@
+{
+  "dropImage": "Suelta una imagen aquí o haz clic para seleccionar",
+  "supportedFormats": "Soporta PNG, JPG, WebP, GIF, BMP, SVG",
+  "outputFormat": "Formato de salida",
+  "formatUnsupported": "No soportado en este navegador",
+  "formatNotSupported": "Este formato de imagen no está soportado. Usa PNG, JPG, WebP, GIF, BMP o SVG.",
+  "quality": "Calidad",
+  "resize": "Redimensionar",
+  "noResize": "Tamaño original",
+  "byPercent": "Por porcentaje",
+  "customSize": "Tamaño personalizado",
+  "width": "Ancho",
+  "height": "Alto",
+  "keepAspectRatio": "Mantener proporción",
+  "download": "Descargar",
+  "copyToClipboard": "Copiar al portapapeles",
+  "copiedToClipboard": "Copiada al portapapeles como PNG",
+  "reselect": "Reseleccionar",
+  "original": "Original",
+  "compressed": "Comprimida",
+  "saved": "Ahorrado {percent}%",
+  "encodingFailed": "Falló la codificación para este formato",
+  "processing": "Procesando...",
+  "firstFrameOnly": "Imagen animada. Solo se usa el primer fotograma.",
+  "dragToCompare": "Arrastra para comparar",
+  "descriptions": {
+    "title": "Sobre el compresor de imágenes",
+    "p1": "Comprime, redimensiona y convierte imágenes directamente en tu navegador. No se sube ningún dato, todo el procesamiento es local.",
+    "p2": "Soporta PNG, JPG y WebP como formatos de salida. WebP ofrece la mejor tasa de compresión para imágenes web.",
+    "p3": "Usa el control deslizante de calidad para equilibrar el tamaño del archivo y la calidad de imagen. Menor calidad significa archivos más pequeños.",
+    "p4": "Copiar al portapapeles convierte la imagen a formato PNG independientemente del formato de salida seleccionado."
+  }
+}

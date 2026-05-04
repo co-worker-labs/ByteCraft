@@ -1,0 +1,93 @@
+{
+  "upload": {
+    "drop": ".db-, .sqlite- oder .sqlite3-Datei hier ablegen",
+    "click": "oder klicken zum Auswählen",
+    "tryDemo": "Beispieldatenbank ausprobieren",
+    "releaseToLoad": "Losladen zum Laden",
+    "unsupported": "Nicht unterstützter Dateityp",
+    "tooLarge": "Datei überschreitet das 200-MB-Limit.",
+    "invalidHeader": "Keine gültige SQLite-Datenbankdatei.",
+    "engineFailed": "SQLite-Engine konnte nicht geladen werden. Netzwerk prüfen oder Seite neu laden.",
+    "initializing": "Engine wird initialisiert…",
+    "reading": "Datei wird gelesen… {loaded} / {total}",
+    "privacy": "Alle Daten werden lokal in Ihrem Browser verarbeitet"
+  },
+  "info": {
+    "tables": "{count, plural, =1 {1 Tabelle} other {# Tabellen}}",
+    "views": "{count, plural, =1 {1 Sicht} other {# Sichten}}",
+    "indexes": "{count, plural, =1 {1 Index} other {# Indizes}}",
+    "triggers": "{count, plural, =1 {1 Trigger} other {# Trigger}}",
+    "close": "Schließen"
+  },
+  "sidebar": {
+    "search": "Suchen…",
+    "tables": "TABELLEN",
+    "views": "SICHTEN",
+    "indexes": "INDIZES",
+    "triggers": "TRIGGER",
+    "showSystem": "System anzeigen",
+    "noResults": "Keine Treffer",
+    "collapse": "Seitenleiste einklappen",
+    "expand": "Seitenleiste ausklappen"
+  },
+  "schema": {
+    "columns": "Spalten",
+    "foreignKeys": "Fremdschlüssel",
+    "indexes": "Indizes",
+    "rowCount": "Zeilen: {count}",
+    "rowCountLoading": "Zeilen werden gezählt…",
+    "name": "Name",
+    "type": "Typ",
+    "nullable": "Nullable",
+    "default": "Standard",
+    "pk": "PK",
+    "from": "Von",
+    "to": "Nach",
+    "onDelete": "ON DELETE",
+    "onUpdate": "ON UPDATE",
+    "unique": "Eindeutig",
+    "trigger": "Trigger-SQL"
+  },
+  "editor": {
+    "run": "Ausführen",
+    "stop": "Stoppen",
+    "format": "Formatieren",
+    "compress": "Komprimieren",
+    "clear": "Leeren",
+    "history": "Verlauf",
+    "noHistory": "Noch keine Abfragen",
+    "clearHistory": "Verlauf leeren",
+    "placeholder": "-- SELECT-Abfragen hier schreiben. Strg/Cmd+Enter zum Ausführen."
+  },
+  "result": {
+    "running": "Abfrage wird ausgeführt…",
+    "aborted": "Abfrage abgebrochen",
+    "rowsRange": "Zeilen {from}–{to}",
+    "elapsed": "{ms} ms",
+    "loadMore": "Mehr laden",
+    "loadAll": "Alle laden (max. 100k)",
+    "loadCeilingHit": "Bei 100.000-Zeilen-Limit gestoppt.",
+    "exportCsv": "CSV exportieren",
+    "exportJson": "JSON exportieren",
+    "empty": "Keine Ergebnisse",
+    "tabName": "Ergebnis {n}",
+    "errorTab": "Fehler",
+    "rejectedReadonly": "Nur Lese-Anweisungen sind erlaubt (erhalten: {keyword}).",
+    "rejectedPragma": "PRAGMA „{name}“ ist nicht in der Lese-Whitelist.",
+    "rejectedCte": "Datenmodifizierende CTE erkannt; abgelehnt.",
+    "exportConfirm": "Cursor ist noch nicht fertig. Aktuelle {loaded} Zeilen exportieren, oder erst alle laden?",
+    "exportLoaded": "Aktuelle Zeilen exportieren",
+    "exportLoadAll": "Alle laden, dann exportieren"
+  },
+  "cell": {
+    "null": "NULL",
+    "empty": "(leer)",
+    "blob": "BLOB · {bytes} B",
+    "expandLong": "Volltext anzeigen",
+    "copyLong": "Kopieren"
+  },
+  "status": {
+    "engineRestarted": "Datenbank-Engine neu gestartet. Ihre Daten wurden erneut geladen.",
+    "abortShortcut": "Esc drücken zum Abbrechen"
+  }
+}

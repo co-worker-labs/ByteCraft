@@ -1,0 +1,30 @@
+{
+  "jsonPlaceholder": "Cole ou digite JSON aqui...",
+  "yamlPlaceholder": "Cole ou digite YAML aqui...",
+  "loadFile": "Carregar",
+  "download": "Baixar",
+  "advancedSettings": "Configurações avançadas",
+  "layoutHorizontal": "Lado a lado",
+  "layoutVertical": "Empilhado",
+  "jsonToYaml": "JSON → YAML",
+  "yamlToJson": "JSON ← YAML",
+  "json5": "JSON5",
+  "indent": "Indentação",
+  "sortKeys": "Ordenar chaves",
+  "dropZone": "Solte arquivo .json, .yaml ou .yml",
+  "convertedToYaml": "Convertido para YAML",
+  "convertedToJson": "Convertido para JSON",
+  "invalidInput": "Entrada inválida",
+  "descriptions": {
+    "whatIsTitle": "O que é YAML?",
+    "whatIsP1": "YAML (YAML Ain't Markup Language) é um formato de serialização de dados legível por humanos, comumente usado para arquivos de configuração, troca de dados e conteúdo estruturado. Usa indentação para denotar estrutura, tornando-o mais legível que JSON para dados aninhados complexos.",
+    "yamlVsJsonTitle": "YAML vs JSON",
+    "yamlVsJsonP1": "YAML é um superconjunto de JSON — todo documento JSON válido também é YAML válido. YAML adiciona comentários (#), suporte a múltiplos documentos (---), anchors e aliases (&/*) e uma sintaxe mais relaxada. JSON é mais simples e mais universalmente suportado por linguagens de programação.",
+    "yaml12Title": "Recursos do YAML 1.2",
+    "yaml12P1": "YAML 1.2 (2009) é a especificação atual. Recursos principais incluem: anchors (&) e aliases (*) para conteúdo DRY, streams de múltiplos documentos separados por ---, tags de tipo explícitas (!!str, !!int, !!seq) e estilos de escalares block/flow.",
+    "useCasesTitle": "Casos de uso",
+    "useCasesP1": "Arquivos de configuração (Docker Compose, Kubernetes, pipelines CI/CD), definições de API (OpenAPI/Swagger), serialização de dados, formatos de log e troca de dados entre linguagens.",
+    "limitationsTitle": "Limitações",
+    "limitationsP1": "YAML multi-documento converte para um array JSON e não pode ser revertido para YAML multi-documento. A flexibilidade do YAML pode levar a ambiguidade — os mesmos dados podem ser representados de múltiplas formas. Indentação com tab não é suportada (a spec YAML recomenda espaços)."
+  }
+}

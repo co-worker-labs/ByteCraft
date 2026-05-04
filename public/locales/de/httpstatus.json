@@ -1,0 +1,453 @@
+{
+  "description": {
+    "text": "Vollständige HTTP-Statuscode-Referenz, die alle offiziellen IANA-Codes aus RFC 9110 und verwandten Spezifikationen abdeckt, einschließlich WebDAV (RFC 4918), zusätzliche HTTP-Statuscodes (RFC 6585), 308 Permanent Redirect (RFC 7538), 451 Unavailable For Legal Reasons (RFC 7725) und Early Hints (RFC 8297). Enthält auch inoffizielle Plattform-Erweiterungen von Nginx, Cloudflare und IIS. Jeder Code zeigt seine Beschreibung, RFC-Referenz und gängige Codes enthalten Anwendungsszenarien und häufige Ursachen für die schnelle Fehlerbehebung."
+  },
+  "tip": "Fahren Sie auf dem Desktop mit der Maus über eine Zeile oder tippen Sie auf Mobilgeräten, um Nutzungsdetails und häufige Ursachen zu sehen.",
+  "searchPlaceholder": "Suche nach Code, Name oder Beschreibung...",
+  "noResults": "Keine Ergebnisse gefunden",
+  "categories": {
+    "all": "Alle",
+    "1xx": "1xx Informationell",
+    "2xx": "2xx Erfolg",
+    "3xx": "3xx Umleitung",
+    "4xx": "4xx Client-Fehler",
+    "5xx": "5xx Server-Fehler",
+    "unofficial": "Inoffiziell"
+  },
+  "tableHeaders": {
+    "code": "Code",
+    "name": "Name",
+    "description": "Beschreibung",
+    "spec": "Spezifikation",
+    "source": "Quelle"
+  },
+  "detailLabels": {
+    "usage": "Verwendung",
+    "commonCauses": "Häufige Ursachen"
+  },
+  "codes": {
+    "100": {
+      "description": "Der Server hat die Anfrage-Header empfangen und der Client sollte mit dem Senden des Anfrage-Bodys fortfahren."
+    },
+    "101": {
+      "description": "Der Server wechselt das Protokoll wie vom Client angefordert."
+    },
+    "102": {
+      "description": "Der Server hat die Anfrage erhalten und verarbeitet sie, aber noch ist keine Antwort verfügbar."
+    },
+    "103": {
+      "description": "Wird verwendet, um einige Antwort-Header vor der endgültigen HTTP-Nachricht zurückzugeben."
+    },
+    "200": {
+      "description": "Die Anfrage war erfolgreich.",
+      "details": {
+        "usage": "Standardantwort für erfolgreiche HTTP-Anfragen",
+        "commonCauses": [
+          "Ressource erfolgreich über GET-Anfrage abgerufen",
+          "Ressource erfolgreich über PUT- oder PATCH-Anfrage aktualisiert",
+          "Ressource erfolgreich über POST-Anfrage erstellt",
+          "Ressource erfolgreich über DELETE-Anfrage gelöscht"
+        ]
+      }
+    },
+    "201": {
+      "description": "Die Anfrage war erfolgreich und eine neue Ressource wurde erstellt.",
+      "details": {
+        "usage": "Antwort auf eine POST-Anfrage, die eine neue Ressource erstellt",
+        "commonCauses": [
+          "Erstellen eines neuen Benutzerkontos",
+          "Hochladen einer neuen Datei",
+          "Erstellen eines neuen Datenbankeintrags",
+          "Einreichen einer neuen Bestellung"
+        ]
+      }
+    },
+    "202": {
+      "description": "Die Anfrage wurde empfangen, aber noch nicht bearbeitet."
+    },
+    "203": {
+      "description": "Die Anfrage war erfolgreich, aber die transformierten Metadaten sind nicht die endgültige Version."
+    },
+    "204": {
+      "description": "Der Server hat die Anfrage erfolgreich verarbeitet und gibt keinen Inhalt zurück.",
+      "details": {
+        "usage": "Antwort auf erfolgreiche Anfragen, die keinen Body erfordern",
+        "commonCauses": [
+          "Erfolgreiche DELETE-Anfrage",
+          "Erfolgreiche PUT-Anfrage ohne Antwort-Body",
+          "Aktualisierung eines Ressourcenstatus ohne Rückgabe von Daten",
+          "Leeren eines Caches oder Zurücksetzen eines Status"
+        ]
+      }
+    },
+    "205": {
+      "description": "Der Server hat die Anfrage erfolgreich verarbeitet, gibt jedoch keinen Inhalt zurück und fordert den Anfragenden auf, die Dokumentansicht zurückzusetzen."
+    },
+    "206": {
+      "description": "Der Server liefert nur einen Teil der Ressource aufgrund eines Range-Headers, der vom Client gesendet wurde.",
+      "details": {
+        "usage": "Verwendet für Range-Anfragen, fortsetzbare Downloads und Streaming-Medien",
+        "commonCauses": [
+          "Video-Player fordert einen bestimmten Byte-Bereich für Pufferung an",
+          "Download-Manager setzen unterbrochene Downloads fort",
+          "Große Dateiübertragungen in Blöcken",
+          "HTTP-Range-Anfragen für Paginierung"
+        ]
+      }
+    },
+    "207": {
+      "description": "Der nachfolgende Nachrichtenkörper ist standardmäßig eine XML-Nachricht und kann mehrere separate Antwortcodes enthalten."
+    },
+    "208": {
+      "description": "Die Mitglieder einer DAV-Bindung wurden bereits in einem vorherigen Teil der Multi-Status-Antwort aufgezählt."
+    },
+    "226": {
+      "description": "Der Server hat eine GET-Anfrage für die Ressource erfüllt, und die Antwort ist eine Darstellung des Ergebnisses einer oder mehrerer Instanz-Manipulationen."
+    },
+    "300": {
+      "description": "Die Anfrage hat mehr als eine mögliche Antwort."
+    },
+    "301": {
+      "description": "Die URL der angeforderten Ressource wurde dauerhaft geändert.",
+      "details": {
+        "usage": "Dauerhafte Umleitung für URL-Änderungen und Inhaltsumzug",
+        "commonCauses": [
+          "Wechsel der Website-Domain oder Migration",
+          "URL-Struktur-Redesign für besseres SEO",
+          "Verschiebung von Inhalten an einen neuen Ort",
+          "Migration von HTTP zu HTTPS"
+        ]
+      }
+    },
+    "302": {
+      "description": "Die URL der angeforderten Ressource wurde vorübergehend geändert.",
+      "details": {
+        "usage": "Vorübergehende Umleitung für Inhalte, die verschoben wurden oder sich in Wartung befinden",
+        "commonCauses": [
+          "Vorübergehende Website-Wartung",
+          "A/B-Test-Weiterleitungen",
+          "Benutzerauthentifizierungsablauf",
+          "Vorübergehende Änderung des Inhaltsspeicherorts"
+        ]
+      }
+    },
+    "303": {
+      "description": "Die Antwort auf die Anfrage kann unter einer anderen URI mit der GET-Methode gefunden werden."
+    },
+    "304": {
+      "description": "Die zwischengespeicherte Version der angeforderten Ressource ist noch gültig.",
+      "details": {
+        "usage": "Caching-Optimierung zur Reduzierung der Bandbreite und Verbesserung der Leistung",
+        "commonCauses": [
+          "Browser-Cache-Treffer für unveränderte statische Ressourcen",
+          "CDN-Cache liefert unveränderte Inhalte",
+          "Bedingte GET-Anfrage mit If-None-Match-Header",
+          "Server gibt 304 für Ressourcen zurück, die sich seit der letzten Anfrage nicht geändert haben"
+        ]
+      }
+    },
+    "305": {
+      "description": "Die angeforderte Ressource ist nur über einen Proxy verfügbar."
+    },
+    "307": {
+      "description": "Die Anfrage sollte mit einer anderen URI wiederholt werden, aber zukünftige Anfragen sollten weiterhin die ursprüngliche URI verwenden.",
+      "details": {
+        "usage": "Vorübergehende Umleitung, die die HTTP-Methode beibehält",
+        "commonCauses": [
+          "Weiterleitung von POST-Anfragen während der Wartung",
+          "Vorübergehende URL-Änderungen für API-Endpunkte",
+          "Lastverteilung und Datenverkehrsverteilung",
+          "Testen neuer Funktionen mit temporären Weiterleitungen"
+        ]
+      }
+    },
+    "308": {
+      "description": "Die Anfrage und alle zukünftigen Anfragen sollten mit einer anderen URI wiederholt werden."
+    },
+    "400": {
+      "description": "Der Server konnte die Anfrage aufgrund ungültiger Syntax nicht verstehen.",
+      "details": {
+        "usage": "Allgemeiner Client-Fehler für fehlerhafte Anfragen",
+        "commonCauses": [
+          "Fehlerhaftes JSON im Anfrage-Body",
+          "Fehlende erforderliche Anfrageparameter",
+          "Ungültige Anfrage-Header oder Content-Type",
+          "Fehlerhafte URL oder Abfrageparameter"
+        ]
+      }
+    },
+    "401": {
+      "description": "Der Client muss sich authentifizieren, um die angeforderte Antwort zu erhalten.",
+      "details": {
+        "usage": "Authentifizierung für den Zugriff auf geschützte Ressourcen erforderlich",
+        "commonCauses": [
+          "Fehlendes oder ungültiges Authentifizierungstoken",
+          "Abgelaufenes JWT- oder Session-Token",
+          "Fehlgeschlagener Authentifizierungsversuch",
+          "Zugriff auf geschützte API ohne Anmeldedaten"
+        ]
+      }
+    },
+    "402": {
+      "description": "Dieser Antwortcode ist für zukünftige Verwendung reserviert."
+    },
+    "403": {
+      "description": "Der Client hat keine Zugriffsrechte auf den Inhalt.",
+      "details": {
+        "usage": "Autorisierungsfehler für authentifizierte, aber nicht autorisierte Anfragen",
+        "commonCauses": [
+          "Benutzer fehlt die Berechtigung für den Zugriff auf die Ressource",
+          "IP-Adressen- oder regionales Blocking",
+          "Zugriff auf Admin-Funktionen ohne entsprechende Rolle",
+          "Ratenlimit für authentifizierten Benutzer überschritten"
+        ]
+      }
+    },
+    "404": {
+      "description": "Der Server kann die angeforderte Ressource nicht finden.",
+      "details": {
+        "usage": "Ressource unter der angegebenen URL nicht gefunden",
+        "commonCauses": [
+          "Tippfehler in der URL oder kaputter Link",
+          "Ressource wurde gelöscht oder verschoben",
+          "Falscher API-Endpunkt-Pfad",
+          "Datenbankeintrag existiert nicht mehr"
+        ]
+      }
+    },
+    "405": {
+      "description": "Die Anfragemethode ist dem Server bekannt, wird aber von der Zielressource nicht unterstützt.",
+      "details": {
+        "usage": "HTTP-Methode wird für den angeforderten Endpunkt nicht unterstützt",
+        "commonCauses": [
+          "GET verwendet, obwohl nur POST erlaubt ist",
+          "Versuch, eine schreibgeschützte Ressource zu löschen",
+          "Falsche HTTP-Methode für API-Endpunkt",
+          "Nicht unterstützte Methode für statische Dateiressource"
+        ]
+      }
+    },
+    "406": {
+      "description": "Der Server kann keine Antwort erzeugen, die der Liste der akzeptablen Werte entspricht, die in den Proactive-Content-Negotiation-Headern der Anfrage definiert sind."
+    },
+    "407": {
+      "description": "Der Client muss sich zuerst bei einem Proxy authentifizieren."
+    },
+    "408": {
+      "description": "Der Server möchte diese ungenutzte Verbindung schließen.",
+      "details": {
+        "usage": "Server hat die Verbindung wegen Inaktivität des Clients geschlossen",
+        "commonCauses": [
+          "Client hat zu lange gebraucht, um den Anfrage-Body zu senden",
+          "Netzwerk-Timeout zwischen Client und Server",
+          "Langsame Client-Verbindung verursacht Server-Timeout",
+          "Load-Balancer-Timeout überschritten"
+        ]
+      }
+    },
+    "409": {
+      "description": "Die Anfrage steht im Konflikt mit dem aktuellen Zustand der Zielressource.",
+      "details": {
+        "usage": "Anfrage steht im Konflikt mit dem Serverzustand oder Geschäftsregeln",
+        "commonCauses": [
+          "Erstellen einer bereits existierenden Ressource",
+          "Konflikte durch gleichzeitige Änderungen",
+          "Ungültige Zustandsänderung für Ressource",
+          "Verletzung einer eindeutigen Einschränkung"
+        ]
+      }
+    },
+    "410": {
+      "description": "Die Zielressource ist auf dem Ursprungsserver nicht mehr verfügbar."
+    },
+    "411": {
+      "description": "Der Server hat die Anfrage abgelehnt, da das Content-Length-Header-Feld nicht definiert ist."
+    },
+    "412": {
+      "description": "Der Server erfüllt nicht eine der Vorbedingungen, die der Anfragende in den Anfrage-Header-Feldern festgelegt hat."
+    },
+    "413": {
+      "description": "Die Anfrage-Entität ist größer als die vom Server definierten Limits."
+    },
+    "414": {
+      "description": "Die vom Client angeforderte URI ist länger, als der Server zu interpretieren bereit ist."
+    },
+    "415": {
+      "description": "Das Medienformat der angeforderten Daten wird vom Server nicht unterstützt."
+    },
+    "416": {
+      "description": "Der vom Client angeforderte Byte-Bereich kann nicht erfüllt werden."
+    },
+    "417": {
+      "description": "Die vom Expect-Anfrage-Header-Feld angegebene Erwartung kann nicht erfüllt werden."
+    },
+    "418": {
+      "description": "Der Server weigert sich, Kaffee zuzubereiten, da er dauerhaft eine Teekanne ist."
+    },
+    "421": {
+      "description": "Die Anfrage war an einen Server gerichtet, der nicht in der Lage ist, eine Antwort zu erzeugen."
+    },
+    "422": {
+      "description": "Die Anfrage war wohlgeformt, konnte aber aufgrund semantischer Fehler nicht befolgt werden."
+    },
+    "423": {
+      "description": "Die Ressource, auf die zugegriffen wird, ist gesperrt."
+    },
+    "424": {
+      "description": "Die Anfrage ist fehlgeschlagen, da sie von einer anderen fehlgeschlagenen Anfrage abhing."
+    },
+    "425": {
+      "description": "Der Server ist nicht bereit, eine Anfrage zu riskieren, die möglicherweise wiedergegeben werden könnte."
+    },
+    "426": {
+      "description": "Der Server weigert sich, die Anfrage mit dem aktuellen Protokoll auszuführen, ist aber möglicherweise bereit, nachdem der Client auf ein anderes Protokoll aktualisiert hat."
+    },
+    "428": {
+      "description": "Der Ursprungsserver erfordert, dass die Anfrage bedingt ist."
+    },
+    "429": {
+      "description": "Der Benutzer hat zu viele Anfragen in einem bestimmten Zeitraum gesendet.",
+      "details": {
+        "usage": "Ratenbegrenzung zur Verhinderung von Missbrauch und Sicherstellung fairer Nutzung",
+        "commonCauses": [
+          "API-Ratenlimits überschritten",
+          "Zu viele Anfragen von derselben IP-Adresse",
+          "Bot- oder Scraper-Aktivität erkannt",
+          "Benutzer hat Ratenbegrenzung durch schnelle Anfragen ausgelöst"
+        ]
+      }
+    },
+    "431": {
+      "description": "Der Server ist nicht bereit, die Anfrage zu verarbeiten, da ihre Header-Felder zu groß sind."
+    },
+    "440": {
+      "description": "Die Sitzung des Clients ist abgelaufen."
+    },
+    "444": {
+      "description": "Nginx schließt die Verbindung, ohne eine Antwort an den Client zu senden."
+    },
+    "449": {
+      "description": "Die Anfrage sollte nach Ausführung der entsprechenden Aktion erneut versucht werden."
+    },
+    "451": {
+      "description": "Der Server verweigert den Zugriff auf die Ressource aufgrund einer rechtlichen Anforderung."
+    },
+    "494": {
+      "description": "Nginx hat die Anfrage abgelehnt, da der Anfrage-Header zu groß war."
+    },
+    "495": {
+      "description": "Nginx-Client-SSL-Zertifikatsüberprüfungsfehler."
+    },
+    "496": {
+      "description": "Nginx-Client hat kein SSL-Zertifikat bereitgestellt."
+    },
+    "497": {
+      "description": "Nginx-Client hat eine HTTP-Anfrage an einen HTTPS-Port gesendet."
+    },
+    "499": {
+      "description": "Nginx-Client hat die Verbindung geschlossen, bevor der Server eine Antwort senden konnte."
+    },
+    "500": {
+      "description": "Der Server hat eine Situation festgestellt, mit der er nicht umgehen kann.",
+      "details": {
+        "usage": "Allgemeiner Server-Fehler für unerwartete Bedingungen",
+        "commonCauses": [
+          "Nicht abgefangene Ausnahme im Server-Code",
+          "Datenbankverbindungsfehler",
+          "Konfigurationsfehler auf dem Server",
+          "Fehler bei der Integration eines Drittanbieter-Dienstes"
+        ]
+      }
+    },
+    "501": {
+      "description": "Die Anfragemethode wird vom Server nicht unterstützt und kann nicht verarbeitet werden."
+    },
+    "502": {
+      "description": "Der Server hat als Gateway eine ungültige Antwort erhalten, während er versuchte, die Anfrage zu erfüllen.",
+      "details": {
+        "usage": "Ungültige Antwort vom Upstream-Server",
+        "commonCauses": [
+          "Upstream-Server ist ausgefallen oder unerreichbar",
+          "Ungültige Antwort vom Backend-Dienst",
+          "Netzwerkverbindungsprobleme zwischen Servern",
+          "Timeout beim Warten auf Upstream-Antwort"
+        ]
+      }
+    },
+    "503": {
+      "description": "Der Server ist nicht bereit, die Anfrage zu bearbeiten.",
+      "details": {
+        "usage": "Dienst vorübergehend nicht verfügbar wegen Wartung oder Überlastung",
+        "commonCauses": [
+          "Geplante Serverwartung",
+          "Serverüberlastung durch hohen Datenverkehr",
+          "Datenbankverbindungspool erschöpft",
+          "Abhängiger Dienst vorübergehend ausgefallen"
+        ]
+      }
+    },
+    "504": {
+      "description": "Der Server hat als Gateway keine rechtzeitige Antwort erhalten.",
+      "details": {
+        "usage": "Timeout beim Warten auf Antwort vom Upstream-Server",
+        "commonCauses": [
+          "Upstream-Server hat zu lange für die Antwort gebraucht",
+          "Langsame Backend-Dienstverarbeitung",
+          "Netzwerklatenz zwischen Gateway und Backend",
+          "Datenbankabfrage-Timeout"
+        ]
+      }
+    },
+    "505": {
+      "description": "Die im Request verwendete HTTP-Version wird vom Server nicht unterstützt."
+    },
+    "506": {
+      "description": "Der Server hat einen internen Konfigurationsfehler."
+    },
+    "507": {
+      "description": "Der Server kann die Darstellung nicht speichern, die zum Abschluss der Anfrage benötigt wird."
+    },
+    "508": {
+      "description": "Der Server hat eine Endlosschleife bei der Verarbeitung der Anfrage entdeckt."
+    },
+    "510": {
+      "description": "Weitere Erweiterungen der Anfrage sind erforderlich, damit der Server sie erfüllen kann."
+    },
+    "511": {
+      "description": "Der Client muss sich authentifizieren, um Netzwerkzugang zu erhalten."
+    },
+    "520": {
+      "description": "Der Ursprungsserver hat einen unerwarteten oder unbekannten Fehler zurückgegeben."
+    },
+    "521": {
+      "description": "Der Ursprungsserver hat die Verbindung von Cloudflare abgelehnt."
+    },
+    "522": {
+      "description": "Cloudflare konnte keinen TCP-Handshake mit dem Ursprungsserver aushandeln."
+    },
+    "523": {
+      "description": "Cloudflare konnte den Ursprungsserver nicht erreichen."
+    },
+    "524": {
+      "description": "Cloudflare konnte eine TCP-Verbindung zum Ursprungsserver herstellen, aber der Ursprungsserver hat vor dem Connection-Timeout nicht mit einer HTTP-Antwort geantwortet."
+    },
+    "525": {
+      "description": "Cloudflare konnte keinen SSL/TLS-Handshake mit dem Ursprungsserver aushandeln."
+    },
+    "526": {
+      "description": "Cloudflare konnte das SSL-Zertifikat auf dem Ursprungsserver nicht validieren."
+    },
+    "527": {
+      "description": "Cloudflare Railgun konnte den Ursprungsserver nicht erreichen."
+    },
+    "528": {
+      "description": "Cloudflare hat das Zeitlimit beim Kontaktieren des Ursprungsservers überschritten."
+    },
+    "529": {
+      "description": "Der Ursprungsserver hat seine Ressourcenlimits überschritten."
+    },
+    "530": {
+      "description": "Cloudflare konnte den DNS für den Ursprungsserver nicht auflösen."
+    }
+  }
+}

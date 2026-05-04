@@ -1,0 +1,179 @@
+{
+  "mode": {
+    "label": "Modus",
+    "standard": "Standard (5 Felder)",
+    "spring": "Spring (6 Felder)",
+    "quartz": "Quartz (7 Felder)"
+  },
+  "tab": {
+    "generate": "Erstellen",
+    "parse": "Analysieren"
+  },
+  "timezone": {
+    "label": "Zeitzone",
+    "local": "Lokal",
+    "utc": "UTC"
+  },
+  "field": {
+    "second": "Sekunde",
+    "minute": "Minute",
+    "hour": "Stunde",
+    "dayOfMonth": "Tag",
+    "month": "Monat",
+    "dayOfWeek": "Wochentag",
+    "year": "Jahr"
+  },
+  "fieldType": {
+    "any": "Beliebig",
+    "noSpecific": "Kein bestimmter",
+    "specific": "Bestimmt",
+    "range": "Bereich",
+    "step": "Schritt",
+    "list": "Liste",
+    "lastDay": "Letzter Tag",
+    "weekday": "Nächster Werktag",
+    "nthDayOfWeek": "N-ter Wochentag",
+    "lastDayOffset": "Tage vor dem Letzten"
+  },
+  "monthShort": [
+    "Jan",
+    "Feb",
+    "Mär",
+    "Apr",
+    "Mai",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Okt",
+    "Nov",
+    "Dez"
+  ],
+  "weekdayShort": [
+    "So",
+    "Mo",
+    "Di",
+    "Mi",
+    "Do",
+    "Fr",
+    "Sa"
+  ],
+  "weekdayLong": [
+    "Sonntag",
+    "Montag",
+    "Dienstag",
+    "Mittwoch",
+    "Donnerstag",
+    "Freitag",
+    "Samstag"
+  ],
+  "presets": {
+    "everyMinute": "Jede Minute",
+    "every5Minutes": "Alle 5 Minuten",
+    "every15Minutes": "Alle 15 Minuten",
+    "everyHour": "Jede Stunde",
+    "every2Hours": "Alle 2 Stunden",
+    "everyDay": "Jeden Tag um 00:00",
+    "everyMondayMorning": "Jeden Montag um 09:00",
+    "weekdays9am": "Werktags um 09:00",
+    "firstOfMonth": "Erster Tag des Monats",
+    "lastOfMonth": "Letzter Tag des Monats",
+    "everyQuarter": "Jedes Quartal (Jan/Apr/Jul/Okt 1.)"
+  },
+  "describe": {
+    "everyMinute": "Jede Minute",
+    "everyHour": "Jede Stunde",
+    "everyHourAt": "Jede Stunde um {time}",
+    "everySecond": "Jede Sekunde",
+    "atTime": "Um {time}",
+    "everyN": "Alle {n} Minuten",
+    "lastDow": "der letzte {weekday} des Monats",
+    "fromTo": "von {from} bis {to}",
+    "onDays": "am {days}",
+    "throughDays": "{from} bis {to}",
+    "andList": "{prefix} und {item}",
+    "ofEveryMonth": "jeden Monats",
+    "lastDayOfMonth": "der letzte Tag des Monats",
+    "nthWeekday": "der {ordinal} {weekday} des Monats",
+    "nearestWeekdayTo": "der nächstgelegene Werktag zum {day}. Tag",
+    "lastWeekdayOfMonth": "der letzte Werktag des Monats",
+    "lastDayMinusN": "{n} Tage vor dem letzten Tag des Monats"
+  },
+  "ordinal": {
+    "1": "erste",
+    "2": "zweite",
+    "3": "dritte",
+    "4": "vierte",
+    "5": "fünfte"
+  },
+  "output": {
+    "expression": "Ausdruck",
+    "description": "Beschreibung",
+    "nextExecutions": "Nächste 5 Ausführungen",
+    "header": {
+      "num": "#",
+      "dateTime": "Datum & Uhrzeit",
+      "relative": "Relativ"
+    },
+    "relative": {
+      "in": "in {value}",
+      "now": "jetzt",
+      "past": "vergangen"
+    }
+  },
+  "share": {
+    "button": "Link teilen",
+    "copied": "Freigabelink kopiert"
+  },
+  "parse": {
+    "placeholder": "Cron-Ausdruck einfügen oder eingeben",
+    "showingPrevious": "Letzte gültige Ausgabe wird angezeigt"
+  },
+  "warn": {
+    "neverTriggers": "Dieser Ausdruck wird nie ausgelöst",
+    "searchWindowExhausted": "Nur {found} von {requested} Ausführungen in den nächsten 4 Jahren gefunden",
+    "secondDropped": "Sekundenfeld wurde entfernt (war: {value})",
+    "yearDropped": "Jahresfeld wurde entfernt (war: {value})",
+    "specialDroppedFromMode": "Sonderzeichen {token} wird im {mode}-Modus nicht unterstützt und wurde entfernt",
+    "bothDayFieldsSet": "Tag-des-Monats und Wochentag sind beide gesetzt. Der Ausdruck wird bei TREFFER von entweder beiden ausgelöst.",
+    "orSemanticsLost": "Quartz kann OR-Semantik über Tagesfelder nicht darstellen. Wochentag wird beibehalten, Tag-des-Monats wird auf '?' gesetzt."
+  },
+  "errors": {
+    "wrongFieldCount": "Erwartet {expected} Felder für {mode}-Modus, erhalten {got}",
+    "outOfRange": "{field} muss {min}-{max} sein, erhalten {value}",
+    "invalidSyntax": "Unerwartetes Zeichen '{char}' im {field}-Feld",
+    "invalidStep": "Schrittwert muss positiv sein, erhalten {value}",
+    "rangeReversed": "Bereichsanfang ({from}) ist größer als Ende ({to}) in {field}",
+    "specialNotAllowed": "'{token}' ist im {field}-Feld für {mode}-Modus nicht erlaubt",
+    "quartzNeedsQuestionMark": "Quartz-Modus erfordert, dass entweder Tag-des-Monats oder Wochentag '?' ist",
+    "quartzBothQuestionMarks": "Tag-des-Monats und Wochentag dürfen nicht beide '?' sein",
+    "macroRebootUnsupported": "@reboot wird nicht unterstützt (Browser kann Systemstart nicht erkennen)",
+    "unknownMacro": "Unbekanntes Makro '{macro}'",
+    "unknownAlias": "Unbekannter Name '{name}' im {field}-Feld",
+    "weekdayOnNonDom": "'W' ist nur im Tag-des-Monats-Feld erlaubt",
+    "nthOnNonDow": "'#' ist nur im Wochentag-Feld erlaubt"
+  },
+  "descriptions": {
+    "whatIsTitle": "Was ist ein Cron-Ausdruck?",
+    "whatIs": "Ein Cron-Ausdruck ist eine Zeichenfolge aus Feldern, die einen Zeitplan beschreibt. Jedes Feld steuert eine Zeiteinheit (Minute, Stunde, Tag, Monat, Wochentag). Ursprünglich aus Unix cron, wurde die Syntax von Spring (fügt Sekunden hinzu) und Quartz (fügt Sekunden und Jahr hinzu, plus Sonderzeichen L, W, #) erweitert.",
+    "fieldRefTitle": "Feldreferenz",
+    "specialCharsTitle": "Sonderzeichen",
+    "modesTitle": "Modi",
+    "dstTitle": "Sommerzeitumstellung",
+    "dst": "Wenn die aktive Zeitzone Sommerzeit (DST) beobachtet, werden Zeitpläne innerhalb der Vorstell-Lücke zur nächsten gültigen Zeit ausgelöst, und Zeitpläne innerhalb der Rückstell-Überschneidung beim ersten Auftreten. Wechseln Sie zu UTC, um DST vollständig zu vermeiden."
+  },
+  "editor": {
+    "title": "Feld bearbeiten",
+    "preview": "Vorschau",
+    "apply": "Anwenden",
+    "specificValue": "Wert",
+    "rangeFrom": "Von",
+    "rangeTo": "Bis",
+    "stepStart": "Start",
+    "stepInterval": "Intervall",
+    "stepEvery": "Alle",
+    "listSelect": "Werte auswählen",
+    "specialKind": "Art"
+  },
+  "presetSection": "Schnellvorlagen"
+}

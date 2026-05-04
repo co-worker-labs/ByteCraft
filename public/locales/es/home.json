@@ -1,0 +1,15 @@
+{
+  "title": "OmniKit - Herramientas gratuitas en línea para desarrolladores",
+  "metaDescription": "Colección de herramientas gratuitas para desarrolladores que funcionan en el navegador. Codificador Base64, generador de contraseñas, generador de hashes, cifrado, checksum y más. 100% del lado del cliente, sin datos enviados al servidor.",
+  "badge": "Gratis y de código abierto",
+  "subtitle": "Tu navaja suiza para desarrollo",
+  "tagline": "Sin registro, sin rastreo. Solo resultados.",
+  "searchPlaceholder": "Buscar herramientas...",
+  "noResults": "No hay herramientas que coincidan con \"{query}\"",
+  "resultsCount": "{count} herramientas encontradas",
+  "allTools": "Todas las herramientas",
+  "viewGrouped": "Agrupadas",
+  "viewAll": "Todas",
+  "clearSearch": "Limpiar búsqueda",
+  "quickAccess": "Acceso rápido"
+}

@@ -1,0 +1,31 @@
+{
+  "edit": "Éditer",
+  "preview": "Aperçu",
+  "placeholder": "Écrivez ou collez votre Markdown ici…",
+  "emptyPreview": "Rien à prévisualiser",
+  "loadFile": "Charger",
+  "downloadFile": "Télécharger",
+  "copyHtml": "Copier le HTML",
+  "copiedHtml": "HTML copié dans le presse-papiers",
+  "exportLabel": "Exporter",
+  "exportPdf": "Exporter en PDF",
+  "exportPng": "Exporter en PNG",
+  "pngFontNotice": "PNG exporté (les polices système peuvent être substituées)",
+  "exportFailed": "L'export a échoué, veuillez réessayer",
+  "nothingToExport": "Rien à exporter",
+  "dropZone": "Déposez un fichier .md ici",
+  "renderTooLarge": "Contenu trop volumineux pour l'aperçu en direct",
+  "renderNow": "Rendre maintenant",
+  "wordsCount": "{count} mots",
+  "charsCount": "{count} caractères",
+  "readTime": "{min} min de lecture",
+  "split": "Split",
+  "descriptions": {
+    "whatIsTitle": "Qu'est-ce que Markdown ?",
+    "whatIsP1": "Markdown est un langage de balisage léger qui permet de formater du texte brut avec une syntaxe simple et lisible. C'est le standard de facto pour les README, la documentation et les notes. Facile à écrire, facile à comparer, et un rendu magnifique sur toutes les plateformes.",
+    "howTitle": "Comment utiliser",
+    "howP1": "Saisissez ou collez du Markdown dans l'éditeur. L'aperçu se met à jour en temps réel. Basculez entre les dispositions Éditer, Aperçu et Split. Exportez en .md, copiez le HTML rendu, ou enregistrez l'aperçu en PDF ou PNG. Tout le traitement se fait dans votre navigateur.",
+    "gfmTitle": "GitHub Flavored Markdown",
+    "gfmP1": "Supporte les tableaux, les listes de tâches (- [ ] todo), le texte barré, les liens automatiques et les diagrammes Mermaid (flowchart, sequence, class, state, ER, Gantt, pie, git graph). Utilisez des blocs de code ```mermaid. Les mathématiques et les notes de bas de page ne sont pas incluses."
+  }
+}

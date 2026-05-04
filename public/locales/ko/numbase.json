@@ -1,0 +1,24 @@
+{
+  "tabConverter": "변환기",
+  "tabReference": "참조",
+  "bitWidth": "비트 폭",
+  "decimal": "10진수",
+  "hexadecimal": "16진수",
+  "octal": "8진수",
+  "binary": "2진수",
+  "asciiChar": "ASCII",
+  "unicodePoint": "Unicode",
+  "invalidInput": "유효하지 않은 입력",
+  "overflowWarning": "값이 비트 폭을 초과합니다",
+  "referenceTitle": "진법 참조 (0-15)",
+  "refDec": "10진수",
+  "refHex": "16진수",
+  "refOct": "8진수",
+  "refBin": "2진수",
+  "descriptions": {
+    "whatIsTitle": "진법 변환이란?",
+    "whatIs": "진법 변환은 한 진법 체계의 숫자를 다른 진법 체계로 변환합니다. 컴퓨터는 2진법(기수 2)을 사용하고, 사람은 일반적으로 10진법(기수 10)을 사용합니다. 16진법(기수 16)과 8진법(기수 8)은 바이너리 데이터의 간결한 표현을 제공하며, 디버깅, 네트워크 프로토콜, 색상 코드, 파일 권한에서 자주 사용됩니다.",
+    "twosComplementTitle": "2의 보수",
+    "twosComplement": "2의 보수는 바이너리에서 부호 있는 정수를 나타내는 표준 방식입니다. 최상위 비트(MSB)가 부호 비트 역할을 합니다. 0은 양수, 1은 음수입니다. 음수 값을 구하려면 모든 비트를 반전시키고 1을 더합니다. 예를 들어, 8비트 모드에서 -1은 11111111(0xFF)로 표현됩니다."
+  }
+}

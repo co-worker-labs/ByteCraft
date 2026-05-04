@@ -1,0 +1,38 @@
+{
+  "description": {
+    "p1": "Hay muchas letras, caracteres, caracteres especiales, símbolos e iconos que quizás quieras usar en el contenido de tu sitio web, pero cuando lo haces, no se muestran como deberían. Para asegurarte de que se muestren correctamente, necesitas usar códigos HTML. Cada letra, carácter, símbolo e icono tiene su propio código HTML que solo necesitas colocar en tu HTML. Hemos creado una lista completa de todos los códigos HTML para los diversos caracteres, caracteres especiales, letras, símbolos e iconos. Puedes copiar fácilmente estos códigos HTML y pegarlos en tu HTML para que se muestren correctamente en el contenido de tu sitio web. Donde estén disponibles, hemos añadido el código HTML amigable (nombre de entidad), el código HTML numérico (número de entidad) y el código HEX para que siempre encuentres el código correcto que necesitas.",
+    "p2": "Antes de usar uno de los códigos siguientes en tu sitio web, asegúrate de que tu documento HTML usa la codificación correcta para que los códigos HTML se muestren correctamente. Para ello, debes asegurarte de usar el juego de caracteres Unicode. Este juego de caracteres debe configurarse en la sección head de tu documento HTML. Se hace usando una meta etiqueta con el atributo charset y el valor UTF-8. Solo copia y pega la siguiente meta etiqueta en tu sección head y todos los caracteres HTML se mostrarán perfectamente."
+  },
+  "tabs": {
+    "letters": "Letras",
+    "punctuation": "Puntuación",
+    "currencies": "Monedas",
+    "mathematical": "Matemáticos",
+    "pronunciations": "Pronunciación",
+    "diacritics": "Diacríticos",
+    "ascii": "ASCII",
+    "icons": "Iconos"
+  },
+  "tabDescriptions": {
+    "punctuation": "Los signos de puntuación son caracteres que se usan en los textos para mejorar su legibilidad. La puntuación a veces también indica cómo debe pronunciarse una oración, o qué significa una palabra u oración.",
+    "currencies": "Varias monedas tienen su propio carácter HTML que puedes usar en tu sitio web. Encuentra el carácter HTML en la lista de códigos de moneda HTML a continuación.",
+    "mathematical": "Hay bastantes caracteres matemáticos HTML que puedes usar en tu sitio web. Esta lista te ayudará a encontrar el carácter matemático correcto para mostrar en tu HTML.",
+    "pronunciations": "Los caracteres de pronunciación ayudan a los lectores de un texto a entender cómo debe pronunciarse una palabra. A continuación encontrarás todos los caracteres de pronunciación HTML que puedes usar en tu HTML.",
+    "diacritics": "Hay muchas letras y caracteres que tienen un glifo o acento añadido. Estos diacríticos pueden cambiar la pronunciación o el significado de una palabra. Esta lista de diacríticos HTML te permitirá mostrar el diacrítico correcto en tu sitio web.",
+    "ascii": "El subconjunto ASCII (American Standard Code for Information Interchange) de Unicode incluye los números, letras y caracteres más conocidos. Incluye los números del 0 al 9, las letras minúsculas de la a a la z, las mayúsculas de la A a la Z y algunos signos de puntuación básicos y códigos de control.",
+    "icons": "HTML también ofrece caracteres especiales que puedes usar en tu HTML. Por ejemplo, un corazón, un icono de género, notas musicales o flechas. Usa libremente los caracteres especiales e iconos de la siguiente lista en tu sitio web."
+  },
+  "tableHeaders": {
+    "character": "Carácter",
+    "entityName": "Nombre de entidad",
+    "entityNumber": "Número de entidad",
+    "hexCode": "Código Hex",
+    "description": "Descripción",
+    "entityCode": "Código de entidad",
+    "ipa": "AFI",
+    "ipaEntityName": "Nombre de entidad AFI",
+    "ipaEntityCode": "Código de entidad AFI",
+    "example": "Ejemplo"
+  },
+  "searchPlaceholder": "Buscar por carácter, código o descripción..."
+}

@@ -1,0 +1,31 @@
+{
+  "encodedOutput": "Kodierte Ausgabe",
+  "plainTextPlaceholder": "Klartext hier einfügen oder eingeben",
+  "basicAuthentication": "Basic Authentication",
+  "username": "Benutzername",
+  "password": "Passwort",
+  "descriptions": {
+    "whatIsTitle": "Was ist Base64-Kodierung?",
+    "whatIsP1": "Base64-Kodierung ist ein Verfahren, um Daten (typischerweise Binärdaten) in den ASCII-Zeichensatz umzuwandeln. Wichtig: Base64 ist keine Verschlüsselungs- oder Kompressionsmethode, obwohl es manchmal damit verwechselt wird, da es Daten scheinbar verschleiert. Tatsächlich ist die Größe eines Base64-kodierten Datensatzes etwa das 1,3333-fache der Originalgröße.",
+    "whatIsP2": "Base64 ist die am weitesten verbreitete Basis-Kodierungstechnik, neben Base16 und Base32 als den beiden anderen gängigen Kodierungsverfahren.",
+    "whatIsP3": "Base64-Kodierung ist eine der häufigsten Methoden, um Binärdaten in reinen ASCII-Text umzuwandeln. Es ist ein sehr nützliches Format für die Kommunikation zwischen Systemen, die nicht einfach mit Binärdaten umgehen können, wie etwa Bilder in HTML-Markup oder Web-Anfragen.",
+    "howTitle": "Wie funktioniert Base64?",
+    "howP1": "Die Umwandlung von Daten in Base64 ist ein mehrstufiger Prozess. So funktioniert es für Textzeichenfolgen:",
+    "howStep1": "Berechnen Sie die 8-Bit-Binärversion des Eingabetextes",
+    "howStep2": "Gruppieren Sie die 8-Bit-Daten in Blöcke zu je 6 Bits um",
+    "howStep3": "Ermitteln Sie den Dezimalwert jedes 6-Bit-Binärblocks",
+    "howStep4": "Suchen Sie das Base64-Symbol für jeden Dezimalwert in der Base64-Nachschlagetabelle",
+    "tableCaption": "Base64-Kodierungstabelle",
+    "tableValue": "Wert",
+    "tableChar": "Zeichen",
+    "whyTitle": "Warum Base64-Kodierung verwenden?",
+    "whyP1": "Das Senden von Informationen im Binärformat kann manchmal riskant sein, da nicht alle Anwendungen oder Netzwerksysteme mit rohen Binärdaten umgehen können. Der ASCII-Zeichensatz hingegen ist weit verbreitet und für die meisten Systeme sehr einfach zu verarbeiten.",
+    "whyP2": "E-Mail-Server erwarten beispielsweise Textdaten, daher wird typischerweise ASCII verwendet. Wenn Sie Bilder oder andere Binärdateien an einen E-Mail-Server senden möchten, müssen Sie diese zuerst in ein textbasiertes Format, vorzugsweise ASCII, kodieren. Hier ist Base64-Kodierung extrem nützlich, um Binärdaten in die richtigen Formate umzuwandeln.",
+    "useCasesTitle": "Gängige Anwendungsfälle für Base64",
+    "useCasesP1": "Sie können Base64 auch verwenden, um Binärdaten auf eine Weise darzustellen, die mit HTML, JavaScript und CSS kompatibel ist. Zum Beispiel können Sie ein Bild inline in einer CSS- oder JavaScript-Datei mit Base64 einbetten.",
+    "useCasesP2": "Es ist möglich, Base64 zu verwenden, um Eingaben wie Formulardaten oder JSON in eine Zeichenfolge mit einem reduzierten, URL-sicheren Zeichensatz umzuwandeln. Aufgrund der Art und Weise, wie bestimmte Server die Zeichen Plus (+) und Schrägstrich (/) interpretieren können, wird jedoch empfohlen, stattdessen encodeURIComponent zu verwenden.",
+    "limitationsTitle": "Einschränkungen von Base64",
+    "limitationsP1": "Base64 ist keinesfalls als sichere Verschlüsselungsmethode gedacht.",
+    "limitationsP2": "Base64 ist auch keine Kompressionsmethode. Die Kodierung einer Zeichenfolge in Base64 führt typischerweise zu einer um 33% längeren Ausgabe."
+  }
+}

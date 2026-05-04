@@ -1,0 +1,10 @@
+{
+  "dropFilesHere": "Déposez les fichiers ici ou cliquez pour sélectionner",
+  "deselect": "Désélectionner ({count})",
+  "noFileChosen": "Aucun fichier choisi",
+  "selectedFiles": "{count} fichiers sélectionnés",
+  "selectedFile": "{count} fichier sélectionné",
+  "checksumOutput": "Résultat du checksum",
+  "algoTip": "Pour les gros fichiers, sélectionnez uniquement les algorithmes nécessaires afin de réduire le temps de traitement.",
+  "calculate": "Calculer"
+}

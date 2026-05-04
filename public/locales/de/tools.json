@@ -1,0 +1,145 @@
+{
+  "password": {
+    "title": "Sicherer Zufalls-Passwort-Generator",
+    "shortTitle": "Passwort-Generator",
+    "description": "Generieren Sie sofort kryptografisch sichere, zufällige Passwörter. Kostenloser Online-Passwort-Generator mit anpassbarer Länge und Zeichenoptionen."
+  },
+  "ascii": {
+    "title": "ASCII-Tabelle - Vollständige Zeichenreferenz",
+    "shortTitle": "ASCII-Tabelle",
+    "description": "Vollständige ASCII-Zeichentabelle mit Hex-, Oktal-, HTML- und Dezimalcodes. Kostenlose Online-ASCII-Referenz für Entwickler."
+  },
+  "htmlcode": {
+    "title": "HTML Entity Kodierer & Dekodierer",
+    "shortTitle": "HTML-Code",
+    "description": "Kodieren und dekodieren Sie HTML-Sonderzeichen und Entities. Kostenloser Online-HTML-Code-Konverter für Webentwickler."
+  },
+  "httpstatus": {
+    "title": "HTTP-Statuscode-Referenz - Vollständiger Leitfaden",
+    "shortTitle": "HTTP-Status",
+    "description": "Vollständige HTTP-Statuscode-Referenz mit Beschreibungen, RFC-Referenzen und Nutzungshinweisen. Abdeckt IANA-offizielle und inoffizielle Codes."
+  },
+  "base64": {
+    "title": "Base64 Kodierer & Dekodierer",
+    "shortTitle": "Base64 Kodieren/Dekodieren",
+    "description": "Base64-Zeichenfolgen online kodieren und dekodieren. Kostenloser Base64-Kodierer/Dekodierer mit Basic Authentication Header-Unterstützung. 100% clientseitig."
+  },
+  "hashing": {
+    "title": "Hash-Generator - MD5, SHA-256, SHA-512",
+    "shortTitle": "Text-Hashing",
+    "description": "Generieren Sie MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3 und RIPEMD-160 Hashes. Kostenloser Online-Hash-Generator, 100% browserbasiert."
+  },
+  "checksum": {
+    "title": "Datei-Prüfsummenrechner - MD5, SHA-256",
+    "shortTitle": "Datei-Prüfsumme",
+    "description": "Berechnen Sie MD5, SHA-1, SHA-256 und SHA-512 Prüfsummen für jede Datei. Unterstützt unbegrenzte Dateigröße, 100% clientseitige Verarbeitung."
+  },
+  "cipher": {
+    "title": "Text Ver- und Entschlüsseln - AES, DES, RC4",
+    "shortTitle": "Text Verschlüsseln/Entschlüsseln",
+    "description": "Ver- und entschlüsseln Sie Text mit AES, DES, Triple DES, Rabbit, RC4 und RC4Drop. Kostenloses Online-Chiffre-Tool, 100% browserbasiert."
+  },
+  "storageunit": {
+    "title": "Speichereinheit-Konverter - Bytes bis TB",
+    "shortTitle": "Speichereinheit-Konvertierung",
+    "description": "Umrechnen zwischen Bytes, KB, MB, GB, TB, PB und mehr. Kostenloser Online-Speichereinheit-Konverter für Entwickler."
+  },
+  "uuid": {
+    "title": "UUID-Generator - v4, v7 Zufalls-UUID",
+    "shortTitle": "UUID-Generator",
+    "description": "Generieren Sie v1/v3/v4/v5/v7 UUIDs in Ihrem Browser. Kostenlos, vollständig lokal, kein Tracking."
+  },
+  "urlencoder": {
+    "title": "URL Kodierer & Dekodierer",
+    "shortTitle": "URL Kodieren/Dekodieren",
+    "description": "URL-Zeichenfolgen kodieren und dekodieren mit Component-, Whole URL- und Form-Modi. Kostenloser Online-URL-Kodierer/Dekodierer, 100% clientseitig."
+  },
+  "yaml": {
+    "title": "YAML-Konverter - JSON zu YAML & YAML zu JSON",
+    "shortTitle": "JSON / YAML Konverter",
+    "description": "Konvertieren zwischen JSON- und YAML-Formaten mit vollständiger YAML 1.2-Unterstützung. Verarbeitet Multi-Dokument-YAML, Anker und Aliase. 100% clientseitig."
+  },
+  "diff": {
+    "title": "Diff-Checker - Text online vergleichen",
+    "shortTitle": "Text-Diff",
+    "description": "Zwei Texte oder Code-Snippets mit Zeilen- und Wortgenauigkeit vergleichen. Nebeneinander- oder Inline-Ansicht, 100% clientseitig."
+  },
+  "markdown": {
+    "title": "Markdown-Editor mit Live-Vorschau",
+    "shortTitle": "Markdown-Editor",
+    "description": "Markdown schreiben und mit GitHub Flavored Markdown-Unterstützung vorschauen. Kostenloser Online-Markdown-Editor mit Live-Vorschau, 100% clientseitig."
+  },
+  "json": {
+    "title": "JSON-Formatierer & Validator",
+    "shortTitle": "JSON Formatieren / Komprimieren",
+    "description": "JSON online formatieren, komprimieren und validieren. Pretty-Print mit konfigurierbarer Einrückung, minifizieren oder JSON5 parsen. 100% clientseitig."
+  },
+  "dbviewer": {
+    "title": "SQLite-Viewer - .db-Dateien durchsuchen und abfragen",
+    "shortTitle": "DB-Viewer",
+    "description": "SQLite-Datenbanken im Browser öffnen, Schema durchsuchen, schreibgeschütztes SQL mit Autovervollständigung ausführen, große Ergebnismengen paginieren und als CSV oder JSON exportieren. 100% clientseitig."
+  },
+  "jwt": {
+    "title": "JWT-Debugger - Kodieren, Dekodieren & Verifizieren",
+    "shortTitle": "JWT",
+    "description": "JSON Web Tokens (JWT) kodieren, dekodieren und verifizieren. Unterstützt HS256, RS256, ES256 und mehr. 100% clientseitig."
+  },
+  "unixtime": {
+    "title": "Unix-Timestamp-Konverter - Sekunden & Millisekunden",
+    "shortTitle": "Unix-Timestamp",
+    "description": "Zwischen Unix-Timestamps und lesbaren Daten konvertieren. Unterstützt Sekunden und Millisekunden, zeigt Lokal und UTC nebeneinander mit Live-Uhr. 100% clientseitig."
+  },
+  "cron": {
+    "shortTitle": "Cron",
+    "title": "Cron-Ausdruck-Generator & Erklärer",
+    "description": "Cron-Ausdrücke für Standard-, Spring- und Quartz-Scheduler erstellen und dekodieren. Lesbare Erklärungen und die nächsten 5 Ausführungszeiten anzeigen."
+  },
+  "qrcode": {
+    "title": "QR-Code-Generator - Text, URL, WiFi",
+    "shortTitle": "QR-Code-Generator",
+    "description": "Gestylte QR-Codes für Text, URLs, WiFi, vCard, E-Mail und SMS generieren. Benutzerdefinierte Farben, Logos und Punktstile. 100% clientseitig."
+  },
+  "textcase": {
+    "title": "Text Case Konverter - camelCase, snake_case, kebab-case",
+    "shortTitle": "Text Case Konverter",
+    "description": "Text umwandeln zwischen camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, Title Case und mehr. Kostenloser Online-Text-Case-Konverter, 100% clientseitig."
+  },
+  "color": {
+    "title": "Farbkonverter & Picker - HEX, RGB, HSL, OKLCH",
+    "shortTitle": "Farbkonverter",
+    "description": "HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH konvertieren. Visueller Picker mit Pipette, Palettengenerator, Bild-Farboxtraktion, WCAG + APCA Kontrast und Farbenblindheits-Vorschau. 100% clientseitig."
+  },
+  "regex": {
+    "title": "Regex-Tester & Live-Regex-Editor",
+    "shortTitle": "Regex-Tester",
+    "description": "Reguläre Ausdrücke in Echtzeit testen mit Match-Hervorhebung, Capture-Group-Inspektion und Ersetzungsvorschau. Integrierte Vorlagenbibliothek und Token-Erklärung. 100% clientseitig."
+  },
+  "csv-md": {
+    "title": "CSV ↔ Markdown-Tabellenkonverter",
+    "shortTitle": "CSV / Markdown-Tabelle",
+    "description": "Zwischen CSV- und Markdown-Tabellenformaten konvertieren. Bidirektional, in Echtzeit, 100% clientseitig."
+  },
+  "csv": {
+    "title": "CSV-Konverter - JSON zu CSV Online",
+    "shortTitle": "JSON / CSV Konverter",
+    "description": "Zwischen JSON- und CSV-Formaten konvertieren. Bidirektional, in Echtzeit, 100% clientseitig."
+  },
+  "numbase": {
+    "title": "Zahlenbasiskonverter - Binär, Oktal, Hex, Dezimal",
+    "shortTitle": "Zahlenbasiskonverter",
+    "description": "Zahlen zwischen Binär, Oktal, Dezimal und Hexadezimal mit Echtzeit-Synchronisation konvertieren. Unterstützt 8/16/32/64-Bit-Zweierkomplement, visueller Bit-Editor."
+  },
+  "image": {
+    "title": "Bildkompressor & Formatkonverter - PNG, JPG, WebP",
+    "shortTitle": "Bildkompressor",
+    "description": "Bilder komprimieren, verkleinern und zwischen PNG-, JPG- und WebP-Formaten konvertieren. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser."
+  },
+  "categories": {
+    "text": "Textverarbeitung",
+    "encoding": "Kodierung & Konvertierung",
+    "security": "Sicherheit & Kryptografie",
+    "generators": "Generatoren",
+    "visual": "Visuell & Medien",
+    "reference": "Referenz & Nachschlagewerk"
+  }
+}

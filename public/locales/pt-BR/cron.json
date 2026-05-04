@@ -1,0 +1,179 @@
+{
+  "mode": {
+    "label": "Modo",
+    "standard": "Padrão (5 campos)",
+    "spring": "Spring (6 campos)",
+    "quartz": "Quartz (7 campos)"
+  },
+  "tab": {
+    "generate": "Gerar",
+    "parse": "Analisar"
+  },
+  "timezone": {
+    "label": "Fuso horário",
+    "local": "Local",
+    "utc": "UTC"
+  },
+  "field": {
+    "second": "Segundo",
+    "minute": "Minuto",
+    "hour": "Hora",
+    "dayOfMonth": "Dia",
+    "month": "Mês",
+    "dayOfWeek": "Dia da semana",
+    "year": "Ano"
+  },
+  "fieldType": {
+    "any": "Qualquer",
+    "noSpecific": "Não específico",
+    "specific": "Específico",
+    "range": "Intervalo",
+    "step": "Degrau",
+    "list": "Lista",
+    "lastDay": "Último dia",
+    "weekday": "Dia útil mais próximo",
+    "nthDayOfWeek": "Enésimo dia da semana",
+    "lastDayOffset": "Dias antes do último"
+  },
+  "monthShort": [
+    "Jan",
+    "Fev",
+    "Mar",
+    "Abr",
+    "Mai",
+    "Jun",
+    "Jul",
+    "Ago",
+    "Set",
+    "Out",
+    "Nov",
+    "Dez"
+  ],
+  "weekdayShort": [
+    "Dom",
+    "Seg",
+    "Ter",
+    "Qua",
+    "Qui",
+    "Sex",
+    "Sáb"
+  ],
+  "weekdayLong": [
+    "Domingo",
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira",
+    "Sábado"
+  ],
+  "presets": {
+    "everyMinute": "A cada minuto",
+    "every5Minutes": "A cada 5 minutos",
+    "every15Minutes": "A cada 15 minutos",
+    "everyHour": "A cada hora",
+    "every2Hours": "A cada 2 horas",
+    "everyDay": "Todos os dias às 00:00",
+    "everyMondayMorning": "Toda segunda às 09:00",
+    "weekdays9am": "Dias úteis às 09:00",
+    "firstOfMonth": "Primeiro dia do mês",
+    "lastOfMonth": "Último dia do mês",
+    "everyQuarter": "Trimestral (Jan/Abr/Jul/Out dia 1)"
+  },
+  "describe": {
+    "everyMinute": "A cada minuto",
+    "everyHour": "A cada hora",
+    "everyHourAt": "A cada hora às {time}",
+    "everySecond": "A cada segundo",
+    "atTime": "Às {time}",
+    "everyN": "A cada {n} minutos",
+    "lastDow": "o último {weekday} do mês",
+    "fromTo": "de {from} a {to}",
+    "onDays": "em {days}",
+    "throughDays": "{from} a {to}",
+    "andList": "{prefix} e {item}",
+    "ofEveryMonth": "de cada mês",
+    "lastDayOfMonth": "o último dia do mês",
+    "nthWeekday": "o {ordinal} {weekday} do mês",
+    "nearestWeekdayTo": "o dia útil mais próximo do dia {day}",
+    "lastWeekdayOfMonth": "o último dia útil do mês",
+    "lastDayMinusN": "{n} dias antes do último dia do mês"
+  },
+  "ordinal": {
+    "1": "primeiro",
+    "2": "segundo",
+    "3": "terceiro",
+    "4": "quarto",
+    "5": "quinto"
+  },
+  "output": {
+    "expression": "Expressão",
+    "description": "Descrição",
+    "nextExecutions": "Próximas 5 execuções",
+    "header": {
+      "num": "#",
+      "dateTime": "Data e Hora",
+      "relative": "Relativo"
+    },
+    "relative": {
+      "in": "em {value}",
+      "now": "agora",
+      "past": "passado"
+    }
+  },
+  "share": {
+    "button": "Compartilhar link",
+    "copied": "Link de compartilhamento copiado"
+  },
+  "parse": {
+    "placeholder": "Cole ou digite uma expressão Cron",
+    "showingPrevious": "Exibindo o último resultado válido"
+  },
+  "warn": {
+    "neverTriggers": "Esta expressão nunca será executada",
+    "searchWindowExhausted": "Apenas {found} de {requested} execuções encontradas nos próximos 4 anos",
+    "secondDropped": "Campo de segundos foi removido (era: {value})",
+    "yearDropped": "Campo de ano foi removido (era: {value})",
+    "specialDroppedFromMode": "O caractere especial {token} não é suportado no modo {mode} e foi removido",
+    "bothDayFieldsSet": "Dia do mês e dia da semana estão definidos — a expressão dispara quando QUALQUER UM corresponder",
+    "orSemanticsLost": "Quartz não pode representar semântica OR entre campos de dia — mantendo dia da semana, definindo dia do mês como '?'"
+  },
+  "errors": {
+    "wrongFieldCount": "Esperado {expected} campos para o modo {mode}, recebido {got}",
+    "outOfRange": "{field} deve ser {min}-{max}, recebido {value}",
+    "invalidSyntax": "Caractere inesperado '{char}' no campo {field}",
+    "invalidStep": "O valor do passo deve ser positivo, recebido {value}",
+    "rangeReversed": "Início do intervalo ({from}) é maior que o fim ({to}) em {field}",
+    "specialNotAllowed": "'{token}' não é permitido no campo {field} para o modo {mode}",
+    "quartzNeedsQuestionMark": "O modo Quartz requer que dia do mês ou dia da semana seja '?'",
+    "quartzBothQuestionMarks": "Dia do mês e dia da semana não podem ser ambos '?'",
+    "macroRebootUnsupported": "@reboot não é suportado (o navegador não detecta a inicialização do sistema)",
+    "unknownMacro": "Macro desconhecida '{macro}'",
+    "unknownAlias": "Nome desconhecido '{name}' no campo {field}",
+    "weekdayOnNonDom": "'W' só é permitido no campo de dia do mês",
+    "nthOnNonDow": "'#' só é permitido no campo de dia da semana"
+  },
+  "descriptions": {
+    "whatIsTitle": "O que é uma expressão Cron?",
+    "whatIs": "Uma expressão Cron é uma string de campos que descreve um agendamento. Cada campo controla uma unidade de tempo (minuto, hora, dia, mês, dia da semana). Original do Unix cron, a sintaxe foi estendida pelo Spring (adiciona segundos) e Quartz (adiciona segundos e ano, além dos caracteres especiais L, W, #).",
+    "fieldRefTitle": "Referência de campos",
+    "specialCharsTitle": "Caracteres especiais",
+    "modesTitle": "Modos",
+    "dstTitle": "Horário de verão",
+    "dst": "Quando o fuso horário ativo observa horário de verão, agendamentos dentro do intervalo perdido disparam no próximo horário válido, e agendamentos no horário duplicado disparam na primeira ocorrência. Mude para UTC para evitar o horário de verão completamente."
+  },
+  "editor": {
+    "title": "Editar campo",
+    "preview": "Prévia",
+    "apply": "Aplicar",
+    "specificValue": "Valor",
+    "rangeFrom": "De",
+    "rangeTo": "Até",
+    "stepStart": "Início",
+    "stepInterval": "Intervalo",
+    "stepEvery": "Cada",
+    "listSelect": "Selecionar valores",
+    "specialKind": "Tipo"
+  },
+  "presetSection": "Presets rápidos"
+}

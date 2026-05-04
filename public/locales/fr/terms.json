@@ -1,0 +1,59 @@
+{
+  "title": "Conditions d'utilisation",
+  "metaDescription": "Conditions d'utilisation d'OmniKit. Lisez les termes et conditions d'utilisation de nos outils gratuits en ligne pour développeurs.",
+  "lastUpdated": "Dernière mise à jour : 23 avril 2026",
+
+  "overviewTitle": "Aperçu",
+  "overviewP1": "Bienvenue sur OmniKit (« nous », « notre »), exploitant ce site web (le « Site »). OmniKit est une collection gratuite et open source d'outils pour développeurs basés dans le navigateur, conçus pour vous aider dans vos tâches de développement quotidiennes.",
+  "overviewP2": "Les présentes Conditions d'utilisation (« Conditions ») régissent votre accès et votre utilisation du Site et de tous les outils, fonctionnalités et services fournis via celui-ci (collectivement, les « Services »). En accédant ou en utilisant le Site, vous acceptez d'être lié par les présentes Conditions.",
+
+  "acceptanceTitle": "Acceptation des conditions",
+  "acceptanceP1": "En accédant ou en utilisant une partie quelconque du Site, vous reconnaissez avoir lu, compris et accepté d'être lié par les présentes Conditions. Si vous n'acceptez pas l'intégralité des Conditions, vous ne devez pas accéder au Site ni l'utiliser.",
+  "acceptanceP2": "Vous déclarez avoir au moins 13 ans, ou l'âge de la majorité légale dans votre juridiction, selon celui qui est le plus élevé. Si vous n'avez pas l'âge requis, vous ne pouvez utiliser le Site que sous la supervision d'un parent ou tuteur légal qui accepte d'être lié par les présentes Conditions.",
+
+  "servicesTitle": "Description des services",
+  "servicesP1": "OmniKit fournit une suite d'outils gratuits pour développeurs fonctionnant dans le navigateur. Tout le traitement est effectué localement dans votre navigateur web. Aucune donnée n'est transmise à nos serveurs. Nos outils actuels incluent :",
+  "servicesList1": [
+    "Encodage/Décodage Base64 : encoder et décoder des chaînes Base64, générer des en-têtes d'authentification Basic",
+    "Générateur de mots de passe : générer des mots de passe sécurisés, aléatoires et mémorables",
+    "Hachage de texte : calculer des condensats avec MD5, SHA-1, SHA-256, SHA-512, SHA-3, Keccak, RIPEMD-160 et plus",
+    "Chiffrement/Déchiffrement de texte : chiffrer et déchiffrer du texte avec AES, DES, Triple DES, Rabbit, RC4 et d'autres algorithmes",
+    "Checksum de fichiers : calculer les checksums de fichiers avec support de tailles illimitées",
+    "Table ASCII : référence ASCII complète avec conversions hexadécimales, octales, HTML et décimales",
+    "Code HTML : référence des caractères spéciaux et entités HTML",
+    "Conversion d'unités de stockage : convertir entre octets, kilooctets, mégaoctets, gigaoctets, pétaoctets et plus"
+  ],
+  "servicesP2": "Nous pouvons ajouter, modifier ou retirer des outils à tout moment sans préavis.",
+
+  "conductTitle": "Conducte de l'utilisateur",
+  "conductP1": "Vous vous engagez à ne pas faire un mauvais usage du Site ou de ses Services. Les activités interdites incluent, sans s'y limiter :",
+  "conductList1": [
+    "Utiliser le Site à des fins illégales ou en violation des lois et réglementations applicables",
+    "Tenter d'accéder de manière non autorisée à une partie du Site ou de son infrastructure",
+    "Interférer avec ou perturber les fonctionnalités, les serveurs ou les réseaux du Site",
+    "Utiliser des scripts automatisés, des bots ou des scrapers pour accéder au Site au-delà d'un usage raisonnable",
+    "Transmettre du code malveillant, des virus, des vers ou tout autre contenu nuisible",
+    "Copier, reproduire ou redistribuer le design, le code ou le contenu du Site sans autorisation écrite préalable"
+  ],
+  "conductP2": "Nous nous réservons le droit de restreindre ou de bloquer l'accès à tout utilisateur qui viole les présentes Conditions, à notre seule discrétion.",
+
+  "ipTitle": "Propriété intellectuelle",
+  "ipP1": "Le Site, y compris son contenu original, ses fonctionnalités et son design, appartient à OmniKit et est protégé par les lois internationales sur le droit d'auteur, les marques et d'autres lois sur la propriété intellectuelle.",
+  "ipP2": "Vous ne pouvez pas reproduire, distribuer, modifier, créer des œuvres dérivées, afficher publiquement ou exploiter tout contenu du Site sans notre consentement écrit exprès. Les outils sont fournis pour votre usage personnel et commercial, mais le Site lui-même et son code source restent notre propriété.",
+
+  "advertisingTitle": "Publicité",
+  "advertisingP1": "OmniKit est un service gratuit soutenu par la publicité. Nous pouvons afficher des publicités sur le Site fournies par des réseaux publicitaires tiers. Ces partenaires peuvent utiliser des cookies et des technologies de suivi similaires pour collecter des informations sur votre activité de navigation sur différents sites web.",
+  "advertisingP2": "En utilisant le Site, vous reconnaissez et acceptez l'affichage de publicités et l'utilisation de technologies de suivi par nos partenaires publicitaires comme décrit dans notre Politique de confidentialité. Vous pouvez refuser la publicité personnalisée via les paramètres de votre navigateur ou en visitant les pages de désinscription des réseaux publicitaires respectifs.",
+  "advertisingP3": "Nous ne sommes pas responsables du contenu, de l'exactitude ou des pratiques des publicités affichées sur le Site. Les interactions avec les annonceurs se font uniquement entre vous et l'annonceur.",
+
+  "disclaimerTitle": "Avertissements et limitation de responsabilité",
+  "disclaimerP1": "Les Services sont fournis « en l'état » et « selon leur disponibilité » sans garantie d'aucune sorte, expresse ou implicite, y compris mais sans s'y limiter les garanties implicites de qualité marchande, d'adéquation à un usage particulier et de non-contrefaçon.",
+  "disclaimerP2": "Nous ne garantissons pas que le Site sera ininterrompu, sécurisé ou exempt d'erreurs. Les résultats produits par nos outils sont fournis à titre informatif uniquement. Vous devez vérifier indépendamment tout résultat avant de vous y fier pour des applications sensibles à la sécurité ou critiques.",
+  "disclaimerP3": "Dans la mesure maximale permise par la loi, OmniKit ne saurait être tenu responsable de tout dommage indirect, accidentel, spécial, consécutif ou punitif, y compris mais sans s'y limiter la perte de données, de profits ou de clientèle, découlant de votre utilisation ou de votre incapacité à utiliser le Site ou les Services.",
+
+  "changesTitle": "Modifications des conditions",
+  "changesP1": "Nous nous réservons le droit de mettre à jour ou de modifier les présentes Conditions à tout moment. Les modifications seront publiées sur cette page avec une date de « Dernière mise à jour » révisée. Votre utilisation continue du Site après tout changement constitue une acceptation des Conditions révisées. Nous vous encourageons à consulter cette page périodiquement.",
+
+  "contactTitle": "Nous contacter",
+  "contactP1": "Si vous avez des questions concernant les présentes Conditions, veuillez nous contacter."
+}

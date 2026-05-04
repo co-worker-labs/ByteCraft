@@ -1,0 +1,72 @@
+{
+  "generatedTitle": "Ihre UUID",
+  "version": "Version",
+  "quantity": "Anzahl",
+  "namespace": "Namespace",
+  "namespaceCustom": "Benutzerdefiniert",
+  "namespaceCustomPlaceholder": "UUID eingeben",
+  "namespaceInvalid": "Ungültige Namespace-UUID",
+  "invalidNamespace": "Ungültige Namespace-UUID",
+  "namespaceDNS": "DNS (Domänennamen)",
+  "namespaceURL": "URL (Webadressen)",
+  "namespaceOID": "OID (ISO-Objektidentifikatoren)",
+  "namespaceX500": "X.500 (Verzeichnispfade)",
+  "namespaceCUSTOM": "Benutzerdefinierte Namespace-UUID",
+  "namespaceDesc": "Ein Namespace ist eine feste UUID, die als Root-Identifikator dient. v3/v5 verwenden Namespace + Name, um deterministische UUIDs zu generieren. Gleicher Namespace + gleicher Name erzeugt immer dieselbe Ausgabe.",
+  "name": "Name",
+  "namePlaceholder": "Namen zum Generieren eingeben...",
+  "format": "Format",
+  "formatStandard": "Standard",
+  "formatNoHyphens": "Ohne Bindestriche",
+  "formatBraces": "Geschweifte Klammern",
+  "uppercase": "Großbuchstaben",
+  "copyAll": "Alle kopieren",
+  "download": ".txt herunterladen",
+  "localGenerated": "Vollständig in Ihrem Browser generiert. Ihre Daten verlassen niemals Ihr Gerät.",
+  "securityTip": "Für Datenbank-Primärschlüssel bevorzugen Sie v7 (sortierbar, indexfreundlich). Für allgemeine zufällige IDs verwenden Sie v4.",
+  "unsupportedBrowser": "Ihr Browser unterstützt keine sichere Zufallsgenerierung.",
+  "downloadFilename": "uuids.txt",
+  "waitingForName": "Namen eingeben zum Generieren...",
+  "whatIsUuid": "Was ist eine UUID?",
+  "uuidDesc": "UUID (Universally Unique Identifier) ist ein 128-Bit-Identifikator zur eindeutigen Kennzeichnung von Informationen in Computersystemen. Stellen Sie es sich als digitalen Fingerabdruck für Daten vor: Jede UUID ist einzigartig und wird ohne zentrale Instanz generiert.",
+  "uuidStructure": "UUID-Struktur",
+  "uuidStructureDesc": "Eine UUID wird als 32 hexadezimale Ziffern geschrieben, die durch Bindestriche in 5 Gruppen unterteilt sind: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. Die Version und Variante sind in bestimmten Bitpositionen kodiert.",
+  "versionCompare": "Versionsvergleich",
+  "versionTip": "Klicken Sie auf eine Version für mehr Details",
+  "v1": {
+    "name": "v1, Timestamp + MAC",
+    "desc": "Kombiniert Timestamp und MAC-Adresse des Hostrechners. Älter, vorhersehbar, offenlegt die MAC-Adresse.",
+    "pros": "Schnelle Generierung, zeitlich sortierbar",
+    "cons": "Privatsphärisiko (MAC sichtbar), ohne Koordination nicht global eindeutig"
+  },
+  "v3": {
+    "name": "v3, Namespace + MD5",
+    "desc": "Generiert deterministische UUIDs mittels MD5-Hash aus Namespace + Name. Gleiche Eingaben erzeugen immer dieselbe Ausgabe.",
+    "pros": "Reproduzierbar, gut für DNS-/URL-basierte Benennung",
+    "cons": "MD5 ist kryptografisch schwach, anfällig für Kollisionen"
+  },
+  "v4": {
+    "name": "v4, Zufällig",
+    "desc": "Verwendet kryptografisch sichere Zufallszahlen. Höchste Eindeutigkeit, keine Struktur oder Vorhersehbarkeit.",
+    "pros": "Maximale Zufälligkeit, privatsphäre-freundlich (keine Timestamps oder MAC)",
+    "cons": "Nicht sortierbar, nicht reproduzierbar"
+  },
+  "v5": {
+    "name": "v5, Namespace + SHA-1",
+    "desc": "Wie v3, aber mit SHA-1-Hash. Sicherer als MD5, weiterhin deterministisch.",
+    "pros": "Reproduzierbar, SHA-1 stärker als MD5",
+    "cons": "SHA-1 hat bekannte Schwächen, Kollisionen theoretisch möglich"
+  },
+  "v7": {
+    "name": "v7, Unix-Epoche + Zufall",
+    "desc": "Betten den Unix-Timestamp in die höchstwertigen Bits ein, gefolgt von Zufallsdaten. Sortierbar und eindeutig.",
+    "pros": "Zeitlich sortierbar, indexfreundlich, gute Datenbankleistung, privatsphäre-sicher",
+    "cons": "Nicht reproduzierbar, etwas neuer (RFC 9562), begrenzte Tool-Unterstützung"
+  },
+  "useCases": "Gängige Anwendungsfälle",
+  "useCaseDb": "Datenbank-Primärschlüssel",
+  "useCaseDist": "IDs in verteilten Systemen",
+  "useCaseWeb": "Sitzungs- oder Ressourcenidentifikatoren",
+  "useCaseMq": "Nachrichten-IDs in Message Queues",
+  "useCaseTest": "Testdaten und Mocking"
+}

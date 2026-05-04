@@ -1,0 +1,172 @@
+{
+  "password": {
+    "title": "安全なランダムパスワード生成器",
+    "shortTitle": "パスワード生成",
+    "description": "暗号論的に安全なランダムパスワードを即座に生成。無料のオンラインパスワード生成器で、長さや文字種を自由にカスタマイズ可能。",
+    "searchTerms": "pasuwaadoseisei pwseisei suiji anzen angou"
+  },
+  "ascii": {
+    "title": "ASCIIテーブル - 完全キャラクターリファレンス",
+    "shortTitle": "ASCIIテーブル",
+    "description": "16進数、8進数、HTML、10進数コード付きの完全なASCII文字テーブル。開発者向けの無料オンラインASCIIリファレンス。",
+    "searchTerms": "asukii teburu akitekii moji hyou"
+  },
+  "htmlcode": {
+    "title": "HTMLエンティティエンコーダー＆デコーダー",
+    "shortTitle": "HTMLコード",
+    "description": "HTMLの特殊文字とエンティティをエンコード・デコード。Web開発者向けの無料オンラインHTMLコード変換ツール。",
+    "searchTerms": "htmlkoodo htmlekode tokusuumoji"
+  },
+  "httpstatus": {
+    "title": "HTTPステータスコードリファレンス - 完全ガイド",
+    "shortTitle": "HTTPステータス",
+    "description": "説明、RFCリファレンス、使用ガイド付きの完全なHTTPステータスコードリファレンス。IANA公式コードと非公式コードを網羅。",
+    "searchTerms": "httpsuteetasu suteetasu HTTP koudo webu"
+  },
+  "base64": {
+    "title": "Base64エンコーダー＆デコーダー",
+    "shortTitle": "Base64エンコード/デコード",
+    "description": "Base64文字列をオンラインでエンコード・デコード。Basic認証ヘッダー対応の無料Base64エンコーダー/デコーダー。100%ブラウザ上で処理。",
+    "searchTerms": "base64 enkodebouseki deko-do"
+  },
+  "hashing": {
+    "title": "ハッシュ生成 - MD5、SHA-256、SHA-512",
+    "shortTitle": "テキストハッシュ",
+    "description": "MD5、SHA-1、SHA-224、SHA-256、SHA-384、SHA-512、SHA3、RIPEMD-160のハッシュを生成。無料オンラインハッシュ生成器、100%ブラウザ上で処理。",
+    "searchTerms": "tekisutohasyu hasyu sanretu MD5 SHA"
+  },
+  "checksum": {
+    "title": "ファイルチェックサム計算 - MD5、SHA-256",
+    "shortTitle": "ファイルチェックサム",
+    "description": "あらゆるファイルのMD5、SHA-1、SHA-256、SHA-512チェックサムを計算。ファイルサイズ無制限、100%ブラウザ上で処理。",
+    "searchTerms": "fairutietukusamu tietukusamu kensyou MD5"
+  },
+  "cipher": {
+    "title": "テキスト暗号化・復号 - AES、DES、RC4",
+    "shortTitle": "テキスト暗号化/復号",
+    "description": "AES、DES、Triple DES、Rabbit、RC4、RC4Dropでテキストを暗号化・復号。無料オンライン暗号ツール、100%ブラウザ上で処理。",
+    "searchTerms": "tekisutoangou anngou fukugou AES"
+  },
+  "storageunit": {
+    "title": "ストレージ単位変換 - バイトからTBへ",
+    "shortTitle": "ストレージ単位変換",
+    "description": "バイト、KB、MB、GB、TB、PBなど相互変換。開発者向けの無料オンラインストレージ単位変換ツール。",
+    "searchTerms": "sutoreeijitani henkan baito megabaito"
+  },
+  "uuid": {
+    "title": "UUID生成器 - v4、v7ランダムUUID",
+    "shortTitle": "UUID生成",
+    "description": "ブラウザ上でv1/v3/v4/v5/v7のUUIDを生成。無料、完全ローカル、トラッキングなし。",
+    "searchTerms": "UUID seisei yuniikuidoretifaiya"
+  },
+  "urlencoder": {
+    "title": "URLエンコーダー＆デコーダー",
+    "shortTitle": "URLエンコード/デコード",
+    "description": "Component、Whole URL、FormモードでURL文字列をエンコード・デコード。無料オンラインURLエンコーダー/デコーダー、100%ブラウザ上で処理。",
+    "searchTerms": "URL enko-do deko-do paasento"
+  },
+  "yaml": {
+    "title": "YAML変換 - JSON⇔YAML相互変換",
+    "shortTitle": "JSON/YAML変換",
+    "description": "JSONとYAML形式を相互変換。YAML 1.2完全対応。複数ドキュメントYAML、アンカー、エイリアスを処理。100%ブラウザ上で処理。",
+    "searchTerms": "JSONYAMLhenkan yamuru seiifu"
+  },
+  "diff": {
+    "title": "Diffチェッカー - オンラインテキスト比較",
+    "shortTitle": "テキストDiff",
+    "description": "2つのテキストやコードスニペットを行・単語レベルで比較。サイドバイサイドまたはインライン表示、100%ブラウザ上で処理。",
+    "searchTerms": "tekisutodiffu hikaku saiketsu"
+  },
+  "markdown": {
+    "title": "Markdownエディタ（ライブプレビュー付き）",
+    "shortTitle": "Markdownエディタ",
+    "description": "GitHub Flavored Markdown対応のMarkdown作成・プレビュー。無料オンラインMarkdownエディタ、ライブプレビュー付き、100%ブラウザ上で処理。",
+    "searchTerms": "markdown edita purebyu- kakou"
+  },
+  "json": {
+    "title": "JSONフォーマッター＆バリデーター",
+    "shortTitle": "JSON整形/圧縮",
+    "description": "JSONをオンラインで整形、圧縮、検証。インデント設定可能な整形、1行圧縮、JSON5パースに対応。100%ブラウザ上で処理。",
+    "searchTerms": "JSONseikei assyuku bari-de-to"
+  },
+  "dbviewer": {
+    "title": "SQLiteビューアー - .dbファイルの閲覧・クエリ",
+    "shortTitle": "DBビューアー",
+    "description": "ブラウザ上でSQLiteデータベースを開き、スキーマを閲覧、オートコンプリート付きの読み取り専用SQLを実行、大規模な結果セットをページネーション、CSVやJSONでエクスポート。100%ブラウザ上で処理。",
+    "searchTerms": "DBbyua- SQLite database kueri"
+  },
+  "jwt": {
+    "title": "JWTデバッガー - エンコード、デコード、検証",
+    "shortTitle": "JWT",
+    "description": "JSON Web Token（JWT）をエンコード、デコード、検証。HS256、RS256、ES256などに対応。100%ブラウザ上で処理。",
+    "searchTerms": "JWT deibatga to-ken kensyou"
+  },
+  "unixtime": {
+    "title": "Unixタイムスタンプ変換 - 秒・ミリ秒",
+    "shortTitle": "Unixタイムスタンプ",
+    "description": "Unixタイムスタンプと人間が読める日付を相互変換。秒とミリ秒に対応、ローカルとUTCを並べて表示、ライブクロック付き。100%ブラウザ上で処理。",
+    "searchTerms": "unixtaimusutanpu taimu henkan byou"
+  },
+  "cron": {
+    "shortTitle": "Cron",
+    "title": "Cron式ジェネレーター＆解説",
+    "description": "Standard、Spring、Quartzスケジューラー向けのCron式を構築・解読。人間が読める説明と次回5回の実行時刻を表示。",
+    "searchTerms": "kuron sukejyu-ra- jikkou"
+  },
+  "qrcode": {
+    "title": "QRコード生成 - テキスト、URL、WiFi",
+    "shortTitle": "QRコード生成",
+    "description": "テキスト、URL、WiFi、vCard、メール、SMS向けのスタイル付きQRコードを生成。カスタムカラー、ロゴ、ドットスタイル。100%ブラウザ上で処理。",
+    "searchTerms": "QRko-do seisei kodu soshi"
+  },
+  "textcase": {
+    "title": "テキストケース変換 - camelCase、snake_case、kebab-case",
+    "shortTitle": "テキストケース変換",
+    "description": "camelCase、PascalCase、snake_case、CONSTANT_CASE、kebab-case、dot.case、Title Caseなど相互変換。無料オンラインテキストケース変換、100%ブラウザ上で処理。",
+    "searchTerms": "tekisutuke-su henkan moji henshu-"
+  },
+  "color": {
+    "title": "カラー変換＆ピッカー - HEX、RGB、HSL、OKLCH",
+    "shortTitle": "カラー変換",
+    "description": "HEX、RGB、HSL、HSV、CMYK、LAB、OKLCHを相互変換。ビジュアルピッカー、スポイト、パレット生成、画像からカラー抽出、WCAG + APCAコントラストチェック、色覚シミュレーション。100%ブラウザ上で処理。",
+    "searchTerms": "kara-henkan iro pikku- hexu RGB"
+  },
+  "regex": {
+    "title": "正規表現テスター＆ライブエディター",
+    "shortTitle": "正規表現テスター",
+    "description": "リアルタイムで正規表現をテスト。マッチハイライト、キャプチャグループの確認、置換プレビュー。組み込みプリセットライブラリとトークンレベルの解説。100%ブラウザ上で処理。",
+    "searchTerms": "seikihyougen tesuto pahta-n macchi"
+  },
+  "csv-md": {
+    "title": "CSV⇔Markdownテーブル変換",
+    "shortTitle": "CSV/Markdownテーブル",
+    "description": "CSVとMarkdownテーブル形式を相互変換。双方向、リアルタイム、100%ブラウザ上で処理。",
+    "searchTerms": "CSVmakudaun te-buru henkan"
+  },
+  "csv": {
+    "title": "CSV変換 - JSON⇔CSVオンライン変換",
+    "shortTitle": "JSON/CSV変換",
+    "description": "JSONとCSV形式を相互変換。双方向、リアルタイム、100%ブラウザ上で処理。",
+    "searchTerms": "CSVJSON henkan de-ta yomikomi"
+  },
+  "numbase": {
+    "title": "進数変換 - 2進数、8進数、16進数、10進数",
+    "shortTitle": "進数変換",
+    "description": "2進数、8進数、10進数、16進数をリアルタイム同期で相互変換。8/16/32/64ビットの2の補数、ビットビジュアルエディタに対応。",
+    "searchTerms": "shinsuuhenkan nisshin hasshin jusshin"
+  },
+  "image": {
+    "title": "画像圧縮＆フォーマット変換 - PNG、JPG、WebP",
+    "shortTitle": "画像圧縮",
+    "description": "画像をPNG、JPG、WebP形式間で圧縮、リサイズ、変換。すべての処理はブラウザ上でローカルに実行。",
+    "searchTerms": "gazouasshuku atsushuku rizaizu PNG"
+  },
+  "categories": {
+    "text": "テキスト処理",
+    "encoding": "エンコード・変換",
+    "security": "セキュリティ・暗号",
+    "generators": "ジェネレーター",
+    "visual": "ビジュアル・メディア",
+    "reference": "リファレンス"
+  }
+}

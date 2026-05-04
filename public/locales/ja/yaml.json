@@ -1,0 +1,30 @@
+{
+  "jsonPlaceholder": "JSONをここに貼り付けまたは入力...",
+  "yamlPlaceholder": "YAMLをここに貼り付けまたは入力...",
+  "loadFile": "読み込み",
+  "download": "ダウンロード",
+  "advancedSettings": "詳細設定",
+  "layoutHorizontal": "横並び",
+  "layoutVertical": "縦積み",
+  "jsonToYaml": "JSON → YAML",
+  "yamlToJson": "JSON ← YAML",
+  "json5": "JSON5",
+  "indent": "インデント",
+  "sortKeys": "キーをソート",
+  "dropZone": ".json、.yaml、または.ymlファイルをドロップ",
+  "convertedToYaml": "YAMLに変換しました",
+  "convertedToJson": "JSONに変換しました",
+  "invalidInput": "無効な入力です",
+  "descriptions": {
+    "whatIsTitle": "YAMLとは？",
+    "whatIsP1": "YAML（YAML Ain't Markup Language）は、人間が読みやすいデータ直列化フォーマットで、設定ファイル、データ交換、構造化コンテンツによく使われます。インデントで構造を表すため、複雑なネストデータではJSONより読みやすくなります。",
+    "yamlVsJsonTitle": "YAML vs JSON",
+    "yamlVsJsonP1": "YAMLはJSONのスーパーセットです。すべての有効なJSONドキュメントは有効なYAMLでもあります。YAMLはコメント（#）、複数ドキュメントサポート（---）、アンカーとエイリアス（&/*）、より緩い構文を追加します。JSONはシンプルで、プログラミング言語でのサポートがより普及しています。",
+    "yaml12Title": "YAML 1.2の機能",
+    "yaml12P1": "YAML 1.2（2009）が現在の仕様です。主な機能: DRYコンテンツのためのアンカー（&）とエイリアス（*）、---で区切られる複数ドキュメントストリーム、明示的な型タグ（!!str、!!int、!!seq）、ブロック/フロースカラー形式。",
+    "useCasesTitle": "ユースケース",
+    "useCasesP1": "設定ファイル（Docker Compose、Kubernetes、CI/CDパイプライン）、API定義（OpenAPI/Swagger）、データ直列化、ログファイルフォーマット、言語間のデータ交換など。",
+    "limitationsTitle": "制限事項",
+    "limitationsP1": "複数ドキュメントYAMLはJSON配列に変換され、複数ドキュメントYAMLへのラウンドトリップはできません。YAMLの柔軟性が曖昧さにつながる可能性があり、同じデータを複数の方法で表現できます。タブインデントはサポートされていません（YAML仕様ではスペースを推奨）。"
+  }
+}

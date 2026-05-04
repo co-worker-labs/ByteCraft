@@ -40,7 +40,7 @@ All operations run entirely in the browser — no data is sent to any server.
 - **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS 4
-- **i18n**: next-intl (English, 简体中文, 繁體中文)
+- **i18n**: next-intl (en, zh-CN, zh-TW, ja, ko, es, pt-BR, fr, de, ru)
 - **Crypto**: CryptoJS, jose (JWT)
 - **PWA**: Serwist (Service Worker)
 - **Editor**: CodeMirror 6 (SQL editor in DB Viewer)
@@ -115,15 +115,24 @@ utils/              # Pure utility functions
 i18n/               # Internationalization config & routing
 styles/             # Global styles (PrismJS theme)
 scripts/            # Build & generation scripts
-public/locales/     # Translation files (en, zh-CN, zh-TW)
+public/locales/     # Translation files (en, zh-CN, zh-TW, ja, ko, es, pt-BR, fr, de, ru)
 ```
 
 ## i18n
 
-Supports three locales:
+Supports 10 locales:
 
-- `en` — English (default)
-- `zh-CN` — 简体中文
-- `zh-TW` — 繁體中文
+| Locale         | Code    | URL             |
+| -------------- | ------- | --------------- |
+| English        | `en`    | `/` (no prefix) |
+| 简体中文       | `zh-CN` | `/zh-CN`        |
+| 繁體中文       | `zh-TW` | `/zh-TW`        |
+| 日本語         | `ja`    | `/ja`           |
+| 한국어         | `ko`    | `/ko`           |
+| Español        | `es`    | `/es`           |
+| Português (BR) | `pt-BR` | `/pt-BR`        |
+| Français       | `fr`    | `/fr`           |
+| Deutsch        | `de`    | `/de`           |
+| Русский        | `ru`    | `/ru`           |
 
 Locale prefix is `as-needed` — the default locale has no prefix in the URL.

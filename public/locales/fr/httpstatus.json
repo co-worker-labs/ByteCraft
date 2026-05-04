@@ -1,0 +1,453 @@
+{
+  "description": {
+    "text": "Référence complète des codes d'état HTTP couvrant tous les codes officiels de l'IANA issus de la RFC 9110 et des spécifications associées, y compris WebDAV (RFC 4918), les codes supplémentaires (RFC 6585), la redirection permanente 308 (RFC 7538), le code 451 indisponible pour raisons légales (RFC 7725) et les Early Hints (RFC 8297). Inclut également les extensions non officielles de Nginx, Cloudflare et IIS. Chaque code affiche sa description, sa référence RFC, et les codes les plus courants incluent des scénarios d'utilisation et des causes fréquentes pour faciliter le dépannage."
+  },
+  "tip": "Survolez une ligne sur ordinateur ou appuyez sur mobile pour voir les détails d'utilisation et les causes fréquentes.",
+  "searchPlaceholder": "Rechercher par code, nom ou description…",
+  "noResults": "Aucun résultat trouvé",
+  "categories": {
+    "all": "Tous",
+    "1xx": "1xx Information",
+    "2xx": "2xx Succès",
+    "3xx": "3xx Redirection",
+    "4xx": "4xx Erreur client",
+    "5xx": "5xx Erreur serveur",
+    "unofficial": "Non officiel"
+  },
+  "tableHeaders": {
+    "code": "Code",
+    "name": "Nom",
+    "description": "Description",
+    "spec": "Spéc.",
+    "source": "Source"
+  },
+  "detailLabels": {
+    "usage": "Utilisation",
+    "commonCauses": "Causes fréquentes"
+  },
+  "codes": {
+    "100": {
+      "description": "Le serveur a reçu les en-têtes de la requête et le client doit procéder à l'envoi du corps de la requête."
+    },
+    "101": {
+      "description": "Le serveur change de protocole selon la demande du client."
+    },
+    "102": {
+      "description": "Le serveur a reçu et traite la requête, mais aucune réponse n'est encore disponible."
+    },
+    "103": {
+      "description": "Utilisé pour renvoyer certains en-têtes de réponse avant le message HTTP final."
+    },
+    "200": {
+      "description": "La requête a réussi.",
+      "details": {
+        "usage": "Réponse standard pour les requêtes HTTP réussies",
+        "commonCauses": [
+          "Ressource récupérée avec succès via une requête GET",
+          "Ressource mise à jour avec succès via PUT ou PATCH",
+          "Ressource créée avec succès via POST",
+          "Ressource supprimée avec succès via DELETE"
+        ]
+      }
+    },
+    "201": {
+      "description": "La requête a réussi et une nouvelle ressource a été créée.",
+      "details": {
+        "usage": "Réponse à une requête POST qui crée une nouvelle ressource",
+        "commonCauses": [
+          "Création d'un nouveau compte utilisateur",
+          "Téléchargement d'un nouveau fichier",
+          "Création d'un nouvel enregistrement en base de données",
+          "Soumission d'une nouvelle commande"
+        ]
+      }
+    },
+    "202": {
+      "description": "La requête a été reçue mais n'a pas encore été traitée."
+    },
+    "203": {
+      "description": "La requête a réussi mais les métadonnées transformées ne sont pas la version définitive."
+    },
+    "204": {
+      "description": "Le serveur a traité la requête avec succès et ne renvoie aucun contenu.",
+      "details": {
+        "usage": "Réponse aux requêtes réussies qui ne nécessitent pas de corps de réponse",
+        "commonCauses": [
+          "Requête DELETE réussie",
+          "Requête PUT réussie sans corps de réponse nécessaire",
+          "Mise à jour du statut d'une ressource sans renvoi de données",
+          "Vidage de cache ou réinitialisation d'un état"
+        ]
+      }
+    },
+    "205": {
+      "description": "Le serveur a traité la requête avec succès, ne renvoie aucun contenu et demande au client de réinitialiser la vue du document."
+    },
+    "206": {
+      "description": "Le serveur ne livre qu'une partie de la ressource en raison d'un en-tête de plage envoyé par le client.",
+      "details": {
+        "usage": "Utilisé pour les requêtes de plage, les téléchargements repreneux et le streaming média",
+        "commonCauses": [
+          "Lecteur vidéo demandant une plage d'octets spécifique pour la mise en mémoire tampon",
+          "Gestionnaires de téléchargement reprenant un téléchargement interrompu",
+          "Transferts de gros fichiers par morceaux",
+          "Requêtes de plage HTTP pour la pagination"
+        ]
+      }
+    },
+    "207": {
+      "description": "Le corps du message qui suit est par défaut un message XML pouvant contenir plusieurs codes de réponse distincts."
+    },
+    "208": {
+      "description": "Les membres d'un binding DAV ont déjà été énumérés dans une partie précédente de la réponse multi-statut."
+    },
+    "226": {
+      "description": "Le serveur a satisfait la requête GET pour la ressource, et la réponse est une représentation du résultat d'une ou plusieurs manipulations d'instance appliquées à l'instance courante."
+    },
+    "300": {
+      "description": "La requête a plus d'une réponse possible."
+    },
+    "301": {
+      "description": "L'URL de la ressource demandée a été modifiée de façon permanente.",
+      "details": {
+        "usage": "Redirection permanente pour les changements d'URL et la relocation de contenu",
+        "commonCauses": [
+          "Changement ou migration de nom de domaine",
+          "Restructuration d'URL pour un meilleur SEO",
+          "Déplacement de contenu vers un nouvel emplacement",
+          "Migration de HTTP vers HTTPS"
+        ]
+      }
+    },
+    "302": {
+      "description": "L'URL de la ressource demandée a été modifiée temporairement.",
+      "details": {
+        "usage": "Redirection temporaire pour un contenu déplacé ou en maintenance",
+        "commonCauses": [
+          "Maintenance temporaire du site",
+          "Redirections pour tests A/B",
+          "Flux d'authentification utilisateur",
+          "Changement temporaire de l'emplacement du contenu"
+        ]
+      }
+    },
+    "303": {
+      "description": "La réponse à la requête se trouve sous un autre URI utilisant la méthode GET."
+    },
+    "304": {
+      "description": "La version en cache de la ressource demandée est toujours valide.",
+      "details": {
+        "usage": "Optimisation du cache pour réduire la bande passante et améliorer les performances",
+        "commonCauses": [
+          "Cache navigateur validé pour des ressources statiques inchangées",
+          "Cache CDN servant du contenu inchangé",
+          "Requête GET conditionnelle avec l'en-tête If-None-Match",
+          "Serveur renvoyant 304 pour des ressources non modifiées depuis la dernière requête"
+        ]
+      }
+    },
+    "305": {
+      "description": "La ressource demandée est uniquement disponible via un proxy."
+    },
+    "307": {
+      "description": "La requête doit être répétée avec un autre URI, mais les requêtes futures doivent continuer à utiliser l'URI d'origine.",
+      "details": {
+        "usage": "Redirection temporaire qui préserve la méthode HTTP",
+        "commonCauses": [
+          "Redirection de requêtes POST pendant la maintenance",
+          "Changement temporaire d'URL pour des points d'accès API",
+          "Équilibrage de charge et distribution du trafic",
+          "Test de nouvelles fonctionnalités avec des redirections temporaires"
+        ]
+      }
+    },
+    "308": {
+      "description": "La requête et toutes les requêtes futures doivent être répétées en utilisant un autre URI."
+    },
+    "400": {
+      "description": "Le serveur n'a pas pu comprendre la requête en raison d'une syntaxe invalide.",
+      "details": {
+        "usage": "Erreur client générique pour les requêtes mal formées",
+        "commonCauses": [
+          "JSON mal formé dans le corps de la requête",
+          "Paramètres de requête obligatoires manquants",
+          "En-têtes ou type de contenu invalides",
+          "URL ou paramètres de requête mal formés"
+        ]
+      }
+    },
+    "401": {
+      "description": "Le client doit s'authentifier pour obtenir la réponse demandée.",
+      "details": {
+        "usage": "Authentification requise pour accéder aux ressources protégées",
+        "commonCauses": [
+          "Jeton d'authentification manquant ou invalide",
+          "JWT ou jeton de session expiré",
+          "Tentative d'authentification échouée",
+          "Accès à une API protégée sans identifiants"
+        ]
+      }
+    },
+    "402": {
+      "description": "Ce code de réponse est réservé pour un usage futur."
+    },
+    "403": {
+      "description": "Le client n'a pas les droits d'accès au contenu.",
+      "details": {
+        "usage": "Échec d'autorisation pour des requêtes authentifiées mais non autorisées",
+        "commonCauses": [
+          "L'utilisateur n'a pas la permission d'accéder à la ressource",
+          "Blocage par adresse IP ou région",
+          "Accès à des fonctionnalités admin sans le rôle approprié",
+          "Limite de débit dépassée pour un utilisateur authentifié"
+        ]
+      }
+    },
+    "404": {
+      "description": "Le serveur ne peut pas trouver la ressource demandée.",
+      "details": {
+        "usage": "Ressource introuvable à l'URL spécifiée",
+        "commonCauses": [
+          "Faute de frappe dans l'URL ou lien cassé",
+          "La ressource a été supprimée ou déplacée",
+          "Chemin de point d'accès API incorrect",
+          "L'enregistrement en base de données n'existe plus"
+        ]
+      }
+    },
+    "405": {
+      "description": "La méthode de requête est connue du serveur mais non supportée par la ressource cible.",
+      "details": {
+        "usage": "Méthode HTTP non supportée pour le point d'accès demandé",
+        "commonCauses": [
+          "Utilisation de GET alors que seul POST est autorisé",
+          "Tentative de DELETE sur une ressource en lecture seule",
+          "Méthode HTTP incorrecte pour le point d'accès API",
+          "Méthode non supportée sur une ressource de fichier statique"
+        ]
+      }
+    },
+    "406": {
+      "description": "Le serveur ne peut pas produire de réponse correspondant à la liste des valeurs acceptables définies dans les en-têtes de négociation de contenu."
+    },
+    "407": {
+      "description": "Le client doit d'abord s'authentifier auprès d'un proxy."
+    },
+    "408": {
+      "description": "Le serveur souhaite fermer cette connexion inutilisée.",
+      "details": {
+        "usage": "Le serveur a fermé la connexion en raison de l'inactivité du client",
+        "commonCauses": [
+          "Le client a pris trop de temps pour envoyer le corps de la requête",
+          "Délai d'attente réseau entre le client et le serveur",
+          "Connexion client lente provoquant un délai serveur",
+          "Délai d'équilibreur de charge dépassé"
+        ]
+      }
+    },
+    "409": {
+      "description": "La requête est en conflit avec l'état actuel de la ressource cible.",
+      "details": {
+        "usage": "La requête est en conflit avec l'état du serveur ou les règles métier",
+        "commonCauses": [
+          "Création d'une ressource qui existe déjà",
+          "Conflits de modification simultanée",
+          "Transition d'état invalide pour la ressource",
+          "Violation de contrainte d'unicité"
+        ]
+      }
+    },
+    "410": {
+      "description": "La ressource cible n'est plus disponible sur le serveur d'origine."
+    },
+    "411": {
+      "description": "Le serveur a rejeté la requête car l'en-tête Content-Length n'est pas défini."
+    },
+    "412": {
+      "description": "Le serveur ne satisfait pas l'une des préconditions que le demandeur a placées dans les en-têtes."
+    },
+    "413": {
+      "description": "L'entité de la requête est plus grande que les limites définies par le serveur."
+    },
+    "414": {
+      "description": "L'URI demandé par le client est plus long que ce que le serveur accepte d'interpréter."
+    },
+    "415": {
+      "description": "Le format média des données demandées n'est pas supporté par le serveur."
+    },
+    "416": {
+      "description": "La plage d'octets demandée par le client ne peut pas être satisfaite."
+    },
+    "417": {
+      "description": "L'attente indiquée par l'en-tête Expect ne peut pas être satisfaite."
+    },
+    "418": {
+      "description": "Le serveur refuse de préparer du café car il est, de façon permanente, une théière."
+    },
+    "421": {
+      "description": "La requête a été dirigée vers un serveur incapable de produire une réponse."
+    },
+    "422": {
+      "description": "La requête était bien formée mais n'a pas pu être suivie en raison d'erreurs sémantiques."
+    },
+    "423": {
+      "description": "La ressource consultée est verrouillée."
+    },
+    "424": {
+      "description": "La requête a échoué car elle dépendait d'une autre requête qui a échoué."
+    },
+    "425": {
+      "description": "Le serveur refuse de traiter une requête qui pourrait être rejouée."
+    },
+    "426": {
+      "description": "Le serveur refuse d'exécuter la requête avec le protocole actuel mais pourrait l'accepter si le client passe à un autre protocole."
+    },
+    "428": {
+      "description": "Le serveur d'origine exige que la requête soit conditionnelle."
+    },
+    "429": {
+      "description": "L'utilisateur a envoyé trop de requêtes dans un laps de temps donné.",
+      "details": {
+        "usage": "Limitation de débit pour prévenir les abus et assurer un usage équitable",
+        "commonCauses": [
+          "Dépassement des limites de débit d'une API",
+          "Trop de requêtes depuis la même adresse IP",
+          "Activité de bot ou de scraper détectée",
+          "Limiteur de débit déclenché par des requêtes rapides"
+        ]
+      }
+    },
+    "431": {
+      "description": "Le serveur refuse de traiter la requête car ses champs d'en-tête sont trop grands."
+    },
+    "440": {
+      "description": "La session du client a expiré."
+    },
+    "444": {
+      "description": "Nginx ferme la connexion sans envoyer de réponse au client."
+    },
+    "449": {
+      "description": "La requête doit être retentée après avoir effectué l'action appropriée."
+    },
+    "451": {
+      "description": "Le server refuse l'accès à la ressource en raison d'une exigence légale."
+    },
+    "494": {
+      "description": "Nginx a rejeté la requête car l'en-tête était trop grand."
+    },
+    "495": {
+      "description": "Erreur de vérification du certificat SSL client par Nginx."
+    },
+    "496": {
+      "description": "Le client Nginx n'a pas fourni de certificat SSL."
+    },
+    "497": {
+      "description": "Le client Nginx a envoyé une requête HTTP vers un port HTTPS."
+    },
+    "499": {
+      "description": "Le client Nginx a fermé la connexion avant que le serveur puisse envoyer une réponse."
+    },
+    "500": {
+      "description": "Le serveur a rencontré une situation qu'il ne sait pas gérer.",
+      "details": {
+        "usage": "Erreur serveur générique pour des conditions inattendues",
+        "commonCauses": [
+          "Exception non interceptée dans le code serveur",
+          "Échec de connexion à la base de données",
+          "Erreur de configuration sur le serveur",
+          "Échec d'intégration d'un service tiers"
+        ]
+      }
+    },
+    "501": {
+      "description": "La méthode de requête n'est pas supportée par le serveur et ne peut pas être traitée."
+    },
+    "502": {
+      "description": "Le serveur, agissant comme passerelle, a reçu une réponse invalide.",
+      "details": {
+        "usage": "Réponse invalide du serveur amont",
+        "commonCauses": [
+          "Le serveur amont est indisponible ou injoignable",
+          "Réponse invalide du service backend",
+          "Problèmes de connectivité réseau entre serveurs",
+          "Délai d'attente de la réponse amont dépassé"
+        ]
+      }
+    },
+    "503": {
+      "description": "Le serveur n'est pas prêt à traiter la requête.",
+      "details": {
+        "usage": "Service temporairement indisponible pour maintenance ou surcharge",
+        "commonCauses": [
+          "Maintenance planifiée du serveur",
+          "Surcharge du serveur due à un trafic élevé",
+          "Pool de connexions à la base de données épuisé",
+          "Service dépendant temporairement indisponible"
+        ]
+      }
+    },
+    "504": {
+      "description": "Le serveur, agissant comme passerelle, n'a pas obtenu de réponse dans les temps.",
+      "details": {
+        "usage": "Délai d'attente de la réponse du serveur amont dépassé",
+        "commonCauses": [
+          "Le serveur amont a mis trop de temps à répondre",
+          "Traitement backend lent",
+          "Latence réseau entre la passerelle et le backend",
+          "Délai de requête de base de données dépassé"
+        ]
+      }
+    },
+    "505": {
+      "description": "La version HTTP utilisée dans la requête n'est pas supportée par le serveur."
+    },
+    "506": {
+      "description": "Le serveur a une erreur de configuration interne."
+    },
+    "507": {
+      "description": "Le serveur est incapable de stocker la représentation nécessaire pour compléter la requête."
+    },
+    "508": {
+      "description": "Le serveur a détecté une boucle infinie lors du traitement de la requête."
+    },
+    "510": {
+      "description": "Des extensions supplémentaires à la requête sont nécessaires pour que le serveur puisse la satisfaire."
+    },
+    "511": {
+      "description": "Le client doit s'authentifier pour obtenir l'accès au réseau."
+    },
+    "520": {
+      "description": "Le serveur d'origine a renvoyé une erreur inattendue ou inconnue."
+    },
+    "521": {
+      "description": "Le serveur d'origine a refusé la connexion depuis Cloudflare."
+    },
+    "522": {
+      "description": "Cloudflare n'a pas pu négocier le TCP handshake avec le serveur d'origine."
+    },
+    "523": {
+      "description": "Cloudflare n'a pas pu joindre le serveur d'origine."
+    },
+    "524": {
+      "description": "Cloudflare a pu établir une connexion TCP avec le serveur d'origine, mais le serveur n'a pas répondu avec une réponse HTTP avant l'expiration du délai."
+    },
+    "525": {
+      "description": "Cloudflare n'a pas pu négocier le SSL/TLS handshake avec le serveur d'origine."
+    },
+    "526": {
+      "description": "Cloudflare n'a pas pu valider le certificat SSL sur le serveur d'origine."
+    },
+    "527": {
+      "description": "Cloudflare Railgun n'a pas pu joindre le serveur d'origine."
+    },
+    "528": {
+      "description": "Cloudflare n'a pas pu joindre le serveur d'origine dans les temps."
+    },
+    "529": {
+      "description": "Le serveur d'origine a dépassé ses limites de ressources."
+    },
+    "530": {
+      "description": "Cloudflare n'a pas pu résoudre le DNS du serveur d'origine."
+    }
+  }
+}

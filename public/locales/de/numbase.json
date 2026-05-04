@@ -1,0 +1,24 @@
+{
+  "tabConverter": "Konverter",
+  "tabReference": "Referenz",
+  "bitWidth": "Bit-Breite",
+  "decimal": "Dezimal",
+  "hexadecimal": "Hexadezimal",
+  "octal": "Oktal",
+  "binary": "Binär",
+  "asciiChar": "ASCII",
+  "unicodePoint": "Unicode",
+  "invalidInput": "Ungültige Eingabe",
+  "overflowWarning": "Wert überschreitet Bit-Breite",
+  "referenceTitle": "Basis-Referenz (0-15)",
+  "refDec": "DEZ",
+  "refHex": "HEX",
+  "refOct": "OKT",
+  "refBin": "BIN",
+  "descriptions": {
+    "whatIsTitle": "Was ist Zahlenbasiskonvertierung?",
+    "whatIs": "Zahlenbasiskonvertierung wandelt eine Zahl von einem positionellen Zahlensystem in ein anderes um. Computer verwenden Binär (Basis 2), während Menschen typischerweise mit Dezimal (Basis 10) arbeiten. Hexadezimal (Basis 16) und Oktal (Basis 8) bieten kompakte Darstellungen von Binärdaten, die häufig beim Debuggen, in Netzwerkprotokollen, Farbcodes und Dateiberechtigungen verwendet werden.",
+    "twosComplementTitle": "Zweierkomplement",
+    "twosComplement": "Das Zweierkomplement ist die Standardmethode zur Darstellung vorzeichenbehafteter Ganzzahlen im Binärsystem. Das höchstwertige Bit (MSB) dient als Vorzeichenbit: 0 für positiv, 1 für negativ. Um den negativen Wert zu erhalten, invertieren Sie alle Bits und addieren 1. Zum Beispiel wird im 8-Bit-Modus -1 als 11111111 (0xFF) dargestellt."
+  }
+}

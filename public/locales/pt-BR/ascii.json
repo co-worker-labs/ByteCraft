@@ -1,0 +1,19 @@
+{
+  "printableCharacters": "Caracteres imprimíveis",
+  "controlCodeCharts": "Tabelas de códigos de controle",
+  "description": {
+    "text": "ASCII significa American Standard Code for Information Interchange (Código Padrão Americano para Intercâmbio de Informações). Computadores só entendem números, então um código ASCII é a representação numérica de um caractere como 'a' ou '@' ou de alguma ação. O ASCII foi desenvolvido há muito tempo e hoje os caracteres não imprimíveis raramente são usados para seu propósito original. Abaixo está a tabela de caracteres ASCII, que inclui descrições dos primeiros 32 caracteres não imprimíveis. O ASCII foi originalmente projetado para teletipos, então algumas descrições são um pouco obscuras. Se alguém pede seu currículo em formato ASCII, isso significa que querem texto puro sem formatação como negrito, sublinhado ou tabulações — o formato bruto que qualquer computador entende. Geralmente isso facilita a importação do arquivo em outros aplicativos. O Bloco de Notas cria texto ASCII, ou no MS Word você pode salvar como 'somente texto'."
+  },
+  "tableHeaders": {
+    "decimal": "Decimal",
+    "binary": "Binário",
+    "oct": "Oct",
+    "hex": "Hex",
+    "abbr": "Abrev",
+    "desc": "Desc",
+    "html": "HTML",
+    "glyph": "Glifo"
+  },
+  "tip": "💡 Passe o mouse sobre qualquer linha para ver detalhes. Use a barra de busca para encontrar caracteres por decimal, hex ou glifo.",
+  "searchPlaceholder": "Buscar por decimal, hex ou caractere..."
+}

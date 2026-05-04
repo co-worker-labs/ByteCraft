@@ -1,0 +1,70 @@
+{
+  "title": "Política de Privacidade",
+  "metaDescription": "Política de Privacidade do OmniKit. Saiba como protegemos seus dados com processamento 100% no navegador e sem transmissão de dados para o servidor.",
+  "lastUpdated": "Última atualização: 23 de abril de 2026",
+  "privacyStatementTitle": "Declaração de privacidade",
+  "privacyStatementP1": "Esta Política de Privacidade descreve como o OmniKit (\"nós\", \"nos\" ou \"nosso\") coleta, usa e compartilha informações quando você visita nosso site (o \"Site\"). Estamos comprometidos em proteger sua privacidade e ser transparentes sobre nossas práticas de dados.",
+  "privacyStatementP2": "Ao usar o Site, você concorda com as práticas de dados descritas nesta política.",
+  "infoCollectTitle": "Informações que coletamos",
+  "infoCollectP1": "Coletamos uma quantidade limitada de informações para operar e melhorar nosso Site. As informações que podemos coletar incluem:",
+  "infoCollectList1": [
+    "Informações do dispositivo: Quando você visita o Site, podemos coletar automaticamente seu endereço IP, tipo de navegador, sistema operacional, resolução de tela e fuso horário.",
+    "Informações de uso: Podemos coletar dados sobre as páginas que você visualiza, as ferramentas que usa e padrões gerais de interação no Site.",
+    "Dados de cookies: Usamos cookies e tecnologias de rastreamento semelhantes para melhorar sua experiência e apoiar nossos parceiros de publicidade."
+  ],
+  "infoCollectP2": "Importante: Todas as ferramentas de desenvolvedor do OmniKit rodam inteiramente no seu navegador. O texto que você codifica, decodifica, hasheia, criptografa ou processa de qualquer forma nunca é transmitido para nossos servidores ou qualquer servidor de terceiros.",
+  "infoUseTitle": "Como usamos suas informações",
+  "infoUseP1": "Usamos as informações que coletamos para os seguintes fins:",
+  "infoUseList1": [
+    "Análise do site: Para entender como os visitantes usam nosso Site, identificar tendências e melhorar nossas ferramentas e experiência do usuário.",
+    "Publicidade: Para apoiar nosso serviço gratuito exibindo anúncios relevantes através de redes de anúncios de terceiros.",
+    "Segurança: Para detectar e prevenir abuso, fraude ou problemas de segurança.",
+    "Conformidade: Para cumprir obrigações legais aplicáveis."
+  ],
+  "infoUseP2": "Não vendemos suas informações pessoais para terceiros.",
+  "cookiesTitle": "Cookies e tecnologias de rastreamento",
+  "cookiesP1": "O Site usa cookies e tecnologias semelhantes para os seguintes fins:",
+  "cookiesList1": [
+    "Cookies essenciais: Necessários para o funcionamento adequado do Site (ex: lembrar sua preferência de idioma).",
+    "Cookies de análise: Usados por serviços como Google Analytics para coletar estatísticas anônimas de uso.",
+    "Cookies de publicidade: Usados por nossos parceiros de anúncios para exibir anúncios relevantes e medir a eficácia dos anúncios."
+  ],
+  "cookiesP2": "Você pode gerenciar suas preferências de cookies nas configurações do seu navegador. Desabilitar certos cookies pode afetar sua experiência no Site. Para mais informações sobre cookies, visite www.allaboutcookies.org.",
+  "advertisingTitle": "Publicidade",
+  "advertisingP1": "OmniKit é um serviço gratuito mantido por publicidade. Trabalhamos com redes de anúncios de terceiros que podem coletar informações sobre sua atividade de navegação em vários sites para exibir anúncios personalizados.",
+  "advertisingP2": "Esses parceiros podem usar tecnologias como cookies, web beacons e pixels de rastreamento para coletar dados de navegação para segmentação e medição de anúncios. As informações coletadas são tipicamente anônimas e não identificam você pessoalmente.",
+  "advertisingP3": "Você tem o direito de cancelar a publicidade personalizada. Pode exercer esse direito através de:",
+  "advertisingOptList": [
+    "Configurações de privacidade e cookies do seu navegador",
+    "A página de cancelamento da Digital Advertising Alliance: optout.aboutads.info",
+    "A página de cancelamento da Network Advertising Initiative: networkadvertising.org/choices",
+    "A European Interactive Digital Advertising Alliance: youronlinechoices.com"
+  ],
+  "advertisingNote": "Nota: Cancelar a publicidade personalizada não significa que você não verá mais anúncios — significa que os anúncios que você ver serão menos relevantes aos seus interesses.",
+  "thirdPartyTitle": "Serviços de terceiros",
+  "thirdPartyP1": "Usamos o Google Analytics para coletar e analisar dados de uso do Site. O Google Analytics coleta informações como frequência de visitas, quais páginas são visitadas e quais outros sites os usuários acessaram antes de chegar ao Site. Você pode saber mais sobre as práticas de privacidade do Google em google.com/intl/en/policies/privacy e cancelar o Google Analytics em tools.google.com/dlpage/gaoptout.",
+  "thirdPartyP2": "Podemos usar serviços adicionais de terceiros para publicidade, análise ou funcionalidade do site. Cada serviço tem sua própria política de privacidade, e recomendamos que você as revise.",
+  "dataSecurityTitle": "Segurança de dados",
+  "dataSecurityP1": "Todas as ferramentas de desenvolvedor do OmniKit processam dados inteiramente no seu navegador usando JavaScript do lado do cliente. Seus dados — incluindo texto, arquivos e operações criptográficas — nunca saem do seu dispositivo. Não temos acesso a, nem armazenamos, qualquer dado que você processe usando nossas ferramentas.",
+  "dataSecurityP2": "Implementamos medidas de segurança razoáveis para proteger o Site e sua infraestrutura. Porém, nenhum método de transmissão ou armazenamento eletrônico é 100% seguro, e não podemos garantir segurança absoluta.",
+  "yourRightsTitle": "Seus direitos",
+  "yourRightsP1": "Dependendo da sua localização, você pode ter certos direitos sobre suas informações pessoais:",
+  "yourRightsList1": [
+    "Acesso: Você tem o direito de solicitar acesso às informações pessoais que mantemos sobre você.",
+    "Correção: Você tem o direito de solicitar a correção de informações pessoais imprecisas ou incompletas.",
+    "Exclusão: Você tem o direito de solicitar a exclusão de suas informações pessoais, sujeito a certas exceções legais.",
+    "Cancelamento: Você tem o direito de cancelar a publicidade personalizada e certas atividades de processamento de dados.",
+    "Portabilidade de dados: Em algumas jurisdições, você tem o direito de receber suas informações pessoais em formato estruturado e legível por máquina."
+  ],
+  "yourRightsP2": "Para exercer qualquer um desses direitos, entre em contato conosco. Responderemos à sua solicitação de acordo com as leis aplicáveis.",
+  "dataRetentionTitle": "Retenção de dados",
+  "dataRetentionP1": "Retemos dados de análise e publicidade apenas pelo tempo necessário para cumprir os fins descritos nesta política ou conforme exigido por lei. Dados processados por nossas ferramentas de desenvolvedor nunca são armazenados por nós e existem apenas temporariamente na sua sessão do navegador.",
+  "childrenTitle": "Privacidade de crianças",
+  "childrenP1": "O Site não é direcionado a crianças menores de 13 anos. Não coletamos intencionalmente informações pessoais de menores de 13 anos. Se você acredita que coletamos informações de uma criança menor de 13 anos, entre em contato conosco e tomaremos medidas para excluir essas informações prontamente.",
+  "changesTitle": "Alterações nesta política",
+  "changesP1": "Podemos atualizar esta Política de Privacidade periodicamente para refletir mudanças em nossas práticas, tecnologia ou requisitos legais. Publicaremos a política atualizada nesta página com uma data de \"Última atualização\" revisada. Seu uso continuado do Site após quaisquer alterações constitui aceitação da política atualizada.",
+  "linksTitle": "Links para outros sites",
+  "linksP1": "O Site pode conter links para sites ou serviços de terceiros. Não somos responsáveis pelas práticas de privacidade ou conteúdo desses sites externos. Recomendamos que você revise as políticas de privacidade de qualquer site de terceiros que visite.",
+  "contactTitle": "Entre em contato",
+  "contactP1": "Se você tiver dúvidas ou preocupações sobre esta Política de Privacidade ou nossas práticas de dados, entre em contato conosco."
+}

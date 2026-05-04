@@ -1,0 +1,8 @@
+{
+  "passphrasePlaceholder": "Вставьте или введите секретную парольную фразу для HMAC",
+  "pasteToCompare": "Вставить для сравнения",
+  "descriptions": {
+    "hmacTitle": "HMAC",
+    "hmac": "HMAC (Hash-based Message Authentication Code) — механизм аутентификации сообщений с использованием криптографических хеш-функций."
+  }
+}

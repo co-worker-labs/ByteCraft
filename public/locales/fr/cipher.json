@@ -1,0 +1,24 @@
+{
+  "plaintext": "Texte en clair",
+  "ciphertext": "Texte chiffré",
+  "plaintextPlaceholder": "Collez ou saisissez le texte en clair ici",
+  "passphrasePlaceholder": "Collez ou saisissez la phrase secrète ici",
+  "ciphertextOutput": "Résultat du chiffrement",
+  "algorithms": "Algorithmes :",
+  "blockMode": "Mode de bloc :",
+  "paddingScheme": "Schéma de remplissage :",
+  "droppedWords": "Mots ignorés :",
+  "descriptions": {
+    "aesTitle": "AES",
+    "aes": "L'Advanced Encryption Standard (AES) est une norme fédérale américaine de traitement de l'information (FIPS). Il a été sélectionné à l'issue d'un processus de 5 ans où 15 propositions concurrentes ont été évaluées.",
+    "desTitle": "DES, Triple DES",
+    "des": "DES était autrefois l'algorithme de chiffrement dominant, publié comme norme fédérale officielle (FIPS). DES est aujourd'hui considéré comme non sécurisé en raison de la petite taille de sa clé.",
+    "tripleDes": "Le Triple DES applique DES trois fois à chaque bloc pour augmenter la taille de la clé. L'algorithme est considéré comme sécurisé sous cette forme.",
+    "rabbitTitle": "Rabbit",
+    "rabbit": "Rabbit est un chiffrement de flux haute performance, finaliste du portefeuille eSTREAM. C'est l'un des quatre designs sélectionnés après un processus de 3 ans et demi où 22 propositions ont été évaluées.",
+    "rc4Title": "RC4, RC4Drop",
+    "rc4": "RC4 est un chiffrement de flux très répandu. Il est utilisé dans des protocoles populaires comme SSL et WEP. Bien que remarquable par sa simplicité et sa rapidité, l'historique de cet algorithme n'inspire pas confiance dans sa sécurité.",
+    "rc4drop": "Il a été découvert que les premiers octets du flux de clés sont fortement non aléatoires et divulguent des informations sur la clé. On peut se prémunir contre cette attaque en ignorant la portion initiale du flux de clés. Cet algorithme modifié est traditionnellement appelé RC4-drop.",
+    "rc4dropConfig": "Par défaut, 192 mots (768 octets) sont ignorés, mais vous pouvez configurer l'algorithme pour ignorer n'importe quel nombre de mots."
+  }
+}

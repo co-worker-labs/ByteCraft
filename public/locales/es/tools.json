@@ -1,0 +1,145 @@
+{
+  "password": {
+    "title": "Generador de contraseñas aleatorias seguras",
+    "shortTitle": "Generador de contraseñas",
+    "description": "Genera contraseñas aleatorias criptográficamente seguras al instante. Generador de contraseñas gratuito en línea con longitud y opciones de caracteres personalizables."
+  },
+  "ascii": {
+    "title": "Tabla ASCII - Referencia completa de caracteres",
+    "shortTitle": "Tabla ASCII",
+    "description": "Tabla completa de caracteres ASCII con códigos hex, octal, HTML y decimal. Referencia ASCII gratuita en línea para desarrolladores."
+  },
+  "htmlcode": {
+    "title": "Codificador y decodificador de entidades HTML",
+    "shortTitle": "Código HTML",
+    "description": "Codifica y decodifica caracteres especiales y entidades HTML. Convertidor de código HTML gratuito en línea para desarrolladores web."
+  },
+  "httpstatus": {
+    "title": "Referencia de códigos de estado HTTP - Guía completa",
+    "shortTitle": "Estado HTTP",
+    "description": "Referencia completa de códigos de estado HTTP con descripciones, referencias RFC y guías de uso. Cubre códigos oficiales de IANA y no oficiales."
+  },
+  "base64": {
+    "title": "Codificador y decodificador Base64",
+    "shortTitle": "Codificar/Decodificar Base64",
+    "description": "Codifica y decodifica cadenas Base64 en línea. Codificador/decodificador Base64 gratuito con soporte para cabecera de autenticación Basic. 100% del lado del cliente."
+  },
+  "hashing": {
+    "title": "Generador de Hash - MD5, SHA-256, SHA-512",
+    "shortTitle": "Hash de texto",
+    "description": "Genera hashes MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3 y RIPEMD-160. Generador de hash gratuito en línea, 100% en el navegador."
+  },
+  "checksum": {
+    "title": "Calculadora de checksum de archivos - MD5, SHA-256",
+    "shortTitle": "Checksum de archivos",
+    "description": "Calcula checksums MD5, SHA-1, SHA-256 y SHA-512 para cualquier archivo. Soporta tamaño de archivo ilimitado, procesamiento 100% del lado del cliente."
+  },
+  "cipher": {
+    "title": "Cifrado y descifrado de texto - AES, DES, RC4",
+    "shortTitle": "Cifrar/Descifrar texto",
+    "description": "Cifra y descifra texto usando AES, DES, Triple DES, Rabbit, RC4 y RC4Drop. Herramienta de cifrado gratuita en línea, 100% en el navegador."
+  },
+  "storageunit": {
+    "title": "Conversor de unidades de almacenamiento - Bytes a TB",
+    "shortTitle": "Conversión de unidades",
+    "description": "Convierte entre bytes, KB, MB, GB, TB, PB y más. Conversor de unidades de almacenamiento gratuito en línea para desarrolladores."
+  },
+  "uuid": {
+    "title": "Generador de UUID - UUID aleatorio v4, v7",
+    "shortTitle": "Generador de UUID",
+    "description": "Genera UUIDs v1/v3/v4/v5/v7 en tu navegador. Gratuito, completamente local, sin rastreo."
+  },
+  "urlencoder": {
+    "title": "Codificador y decodificador de URLs",
+    "shortTitle": "Codificador/Decodificador URL",
+    "description": "Codifica y decodifica cadenas URL con modos Componente, URL completa y Formulario. Codificador/decodificador de URL gratuito, 100% del lado del cliente."
+  },
+  "yaml": {
+    "title": "Conversor YAML - JSON a YAML y YAML a JSON",
+    "shortTitle": "Conversor JSON / YAML",
+    "description": "Convierte entre formatos JSON y YAML con soporte completo para YAML 1.2. Maneja YAML multidocumento, anchors y aliases. 100% del lado del cliente."
+  },
+  "diff": {
+    "title": "Comparador de diff - Comparar texto en línea",
+    "shortTitle": "Diff de texto",
+    "description": "Compara dos textos o fragmentos de código con precisión a nivel de línea y palabra. Vista lado a lado o en línea, 100% del lado del cliente."
+  },
+  "markdown": {
+    "title": "Editor Markdown con vista previa en vivo",
+    "shortTitle": "Editor Markdown",
+    "description": "Escribe y previsualiza Markdown con soporte para GitHub Flavored Markdown. Editor Markdown gratuito en línea con vista previa en vivo, 100% del lado del cliente."
+  },
+  "json": {
+    "title": "Formateador y validador JSON",
+    "shortTitle": "Formatear / Comprimir JSON",
+    "description": "Formatea, comprime y valida JSON en línea. Pretty-print con sangría configurable, minificación a una línea, o análisis JSON5. 100% del lado del cliente."
+  },
+  "dbviewer": {
+    "title": "Visor SQLite - Explorar y consultar archivos .db",
+    "shortTitle": "Visor de BD",
+    "description": "Abre bases de datos SQLite en tu navegador, explora el esquema, ejecuta SQL de solo lectura con autocompletado, pagina conjuntos de resultados grandes y exporta a CSV o JSON. 100% del lado del cliente."
+  },
+  "jwt": {
+    "title": "Depurador JWT - Codificar, decodificar y verificar",
+    "shortTitle": "JWT",
+    "description": "Codifica, decodifica y verifica JSON Web Tokens (JWT). Soporta HS256, RS256, ES256 y más. 100% del lado del cliente."
+  },
+  "unixtime": {
+    "title": "Conversor de timestamp Unix - Segundos y milisegundos",
+    "shortTitle": "Timestamp Unix",
+    "description": "Convierte entre timestamps Unix y fechas legibles. Soporta segundos y milisegundos, muestra Local y UTC lado a lado, con reloj en vivo. 100% del lado del cliente."
+  },
+  "cron": {
+    "shortTitle": "Cron",
+    "title": "Generador y explicador de expresiones Cron",
+    "description": "Construye y decodifica expresiones Cron para planificadores Standard, Spring y Quartz. Ve explicaciones legibles y las próximas 5 ejecuciones."
+  },
+  "qrcode": {
+    "title": "Generador de QR - Texto, URL, WiFi",
+    "shortTitle": "Generador de QR",
+    "description": "Genera códigos QR con estilo para texto, URLs, WiFi, vCard, email y SMS. Colores personalizados, logos y estilos de puntos. 100% del lado del cliente."
+  },
+  "textcase": {
+    "title": "Conversor de mayúsculas/minúsculas - camelCase, snake_case, kebab-case",
+    "shortTitle": "Conversor de mayúsculas/minúsculas",
+    "description": "Convierte texto entre camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, Title Case y más. Conversor gratuito en línea, 100% del lado del cliente."
+  },
+  "color": {
+    "title": "Conversor y selector de color - HEX, RGB, HSL, OKLCH",
+    "shortTitle": "Conversor de color",
+    "description": "Convierte HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH. Selector visual con cuentagotas, generador de paletas, extracción de color de imagen, contraste WCAG + APCA y vista previa de daltonismo. 100% del lado del cliente."
+  },
+  "regex": {
+    "title": "Tester de Regex y editor de regex en vivo",
+    "shortTitle": "Tester de Regex",
+    "description": "Prueba expresiones regulares en tiempo real con resaltado de coincidencias, inspección de grupos de captura y vista previa de reemplazo. Biblioteca de presets incorporada y explicación a nivel de token. 100% del lado del cliente."
+  },
+  "csv-md": {
+    "title": "Conversor CSV ↔ Tabla Markdown",
+    "shortTitle": "CSV / Tabla Markdown",
+    "description": "Convierte entre formatos CSV y tabla Markdown. Bidireccional, en tiempo real, 100% del lado del cliente."
+  },
+  "csv": {
+    "title": "Conversor CSV - JSON a CSV en línea",
+    "shortTitle": "Conversor JSON / CSV",
+    "description": "Convierte entre formatos JSON y CSV. Bidireccional, en tiempo real, 100% del lado del cliente."
+  },
+  "numbase": {
+    "title": "Conversor de base numérica - Binario, Octal, Hex, Decimal",
+    "shortTitle": "Conversor de base numérica",
+    "description": "Convierte números entre binario, octal, decimal y hexadecimal con sincronización en tiempo real. Soporta complemento a dos de 8/16/32/64 bits y editor visual de bits."
+  },
+  "image": {
+    "title": "Compresor y conversor de imágenes - PNG, JPG, WebP",
+    "shortTitle": "Compresor de imágenes",
+    "description": "Comprime, redimensiona y convierte imágenes entre formatos PNG, JPG y WebP. Todo el procesamiento se ejecuta localmente en tu navegador."
+  },
+  "categories": {
+    "text": "Procesamiento de texto",
+    "encoding": "Codificación y conversión",
+    "security": "Seguridad y criptografía",
+    "generators": "Generadores",
+    "visual": "Visual y multimedia",
+    "reference": "Referencia y consulta"
+  }
+}

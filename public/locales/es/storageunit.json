@@ -1,0 +1,10 @@
+{
+  "conversion": "Conversión de {unit}",
+  "decimal": "Decimal",
+  "binary": "Binario",
+  "bit": "Bit",
+  "conversionOutput": "Resultado de la conversión",
+  "measurement": "Medida",
+  "conversionCol": "Conversión",
+  "commonConversionTable": "Tabla de conversiones comunes"
+}

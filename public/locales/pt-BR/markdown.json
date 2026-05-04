@@ -1,0 +1,31 @@
+{
+  "edit": "Editar",
+  "preview": "Prévia",
+  "placeholder": "Escreva ou cole seu Markdown aqui...",
+  "emptyPreview": "Nada para prever",
+  "loadFile": "Carregar",
+  "downloadFile": "Baixar",
+  "copyHtml": "Copiar HTML",
+  "copiedHtml": "HTML copiado para a área de transferência",
+  "exportLabel": "Exportar",
+  "exportPdf": "Exportar PDF",
+  "exportPng": "Exportar PNG",
+  "pngFontNotice": "PNG exportado (fontes do sistema podem ser substituídas)",
+  "exportFailed": "Falha na exportação, por favor tente novamente",
+  "nothingToExport": "Nada para exportar",
+  "dropZone": "Solte arquivo .md aqui",
+  "renderTooLarge": "Conteúdo muito grande para prévia em tempo real",
+  "renderNow": "Renderizar agora",
+  "wordsCount": "{count} palavras",
+  "charsCount": "{count} caracteres",
+  "readTime": "{min} min de leitura",
+  "split": "Dividido",
+  "descriptions": {
+    "whatIsTitle": "O que é Markdown?",
+    "whatIsP1": "Markdown é uma linguagem de marcação leve que permite formatar texto puro usando sintaxe simples e legível. É o padrão de fato para READMEs, documentação e notas — fácil de escrever, fácil de comparar e renderiza lindamente em qualquer plataforma.",
+    "howTitle": "Como usar",
+    "howP1": "Digite ou cole Markdown no editor. A prévia atualiza conforme você digita. Alterne entre layouts Editar, Prévia e Dividido. Exporte para .md, copie o HTML renderizado ou salve a prévia como PDF ou PNG. Todo processamento acontece no seu navegador.",
+    "gfmTitle": "GitHub Flavored Markdown",
+    "gfmP1": "Suporta tabelas, listas de tarefas (- [ ] tarefa), tachado, autolinks e diagramas Mermaid (fluxograma, sequência, classe, estado, ER, Gantt, pizza, git graph). Use blocos de código ```mermaid. Matemática e notas de rodapé estão fora do escopo."
+  }
+}

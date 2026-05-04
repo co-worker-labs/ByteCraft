@@ -1,0 +1,57 @@
+{
+  "textA": "Text A",
+  "textB": "Text B",
+  "textAPlaceholder": "Text A hier einfügen oder eingeben, oder Datei ablegen",
+  "textBPlaceholder": "Text B hier einfügen oder eingeben, oder Datei ablegen",
+  "uploadFile": "Datei hochladen",
+  "formatJson": "JSON formatieren",
+  "formatJsonInvalid": "Kein gültiges JSON: {message}",
+  "swap": "Texte tauschen",
+  "copyDiff": "Diff kopieren",
+  "compare": "Vergleichen",
+  "view": {
+    "label": "Ansicht",
+    "sideBySide": "Nebeneinander",
+    "inline": "Inline",
+    "stacked": "Übereinander"
+  },
+  "layout": {
+    "label": "Layout",
+    "horizontal": "Horizontal",
+    "vertical": "Vertikal"
+  },
+  "options": {
+    "label": "Optionen",
+    "ignoreWhitespace": "Leerzeichen ignorieren",
+    "ignoreCase": "Groß-/Kleinschreibung ignorieren"
+  },
+  "fold": {
+    "hiddenLines": "{count} unveränderte Zeilen",
+    "expand": "Aufklappen",
+    "collapse": "Zusammenklappen",
+    "ariaExpand": "{count} ausgeblendete Zeilen anzeigen",
+    "ariaCollapse": "{count} Zeilen ausblenden"
+  },
+  "noChanges": "Keine Unterschiede gefunden",
+  "computing": "Diff wird berechnet...",
+  "manualHint": "Große Eingabe. Auto-Vergleich deaktiviert. Klicken Sie auf Vergleichen, wenn bereit.",
+  "workerFailed": "Diff fehlgeschlagen, bitte versuchen Sie es erneut",
+  "descriptions": {
+    "whatIsTitle": "Was ist ein Diff?",
+    "whatIsP1": "Ein Diff ist ein strukturierter Vergleich zwischen zwei Texten, der zeigt, was hinzugefügt, was entfernt und was beibehalten wurde. Entwickler nutzen es täglich, um Codeänderungen zu überprüfen, Konfigurationsabweichungen zu analysieren und zwei Versionen eines Dokuments abzugleichen.",
+    "whatIsP2": "Dieses Tool führt den Vergleich vollständig in Ihrem Browser mit der jsdiff-Bibliothek durch. Nichts, was Sie einfügen oder hochladen, wird an einen Server gesendet.",
+    "howTitle": "Verwendung",
+    "howP1": "Fügen Sie Ihre zwei Eingaben in die Felder Original und Geändert ein oder legen Sie Dateien ab. Der Diff wird automatisch für Eingaben unter 512KB berechnet; bei größeren Eingaben erscheint ein Vergleichen-Button, damit Sie die Kontrolle behalten.",
+    "howP2": "Wechseln Sie zwischen nebeneinander- und Inline-Ansicht, ignorieren Sie Leerzeichen oder Groß-/Kleinschreibung bei Bedarf, und nutzen Sie JSON formatieren, um JSON-Eingaben vor dem Vergleich zu normalisieren.",
+    "algorithmTitle": "Algorithmus",
+    "algorithmP1": "Basiert auf dem Myers-Diff-Algorithmus über jsdiff. Das Tool berechnet zunächst einen zeilenbasierten Diff und führt dann für jedes Paar benachbarter entfernter und hinzugefügter Zeilen einen zweiten wortbasierten Durchlauf durch, um zu zeigen, welche Wörter sich tatsächlich geändert haben. Die gleiche Konvention wie bei GitHub-Pull-Requests.",
+    "useCasesTitle": "Gängige Anwendungsfälle",
+    "useCasesP1": "Vergleich von zwei Konfigurationsdateien (JSON, YAML, .env), um Abweichungen zwischen Umgebungen zu erkennen.",
+    "useCasesP2": "Überprüfung einer Codeänderung vor dem Committen, besonders wenn Sie außerhalb eines Editors arbeiten.",
+    "useCasesP3": "Abgleich von zwei Versionen eines Dokuments, Logs oder Abfrageergebnisses Seite an Seite.",
+    "limitationsTitle": "Einschränkungen",
+    "limitationsP1": "Das Tool vergleicht nur Text. Binärdateien werden erkannt und abgelehnt, um ein sinnvolles Ergebnis zu gewährleisten.",
+    "limitationsP2": "Eingaben sind auf 5MB pro Seite begrenzt. Eingaben über 512KB werden in einem Hintergrund-Web-Worker verarbeitet; die Seite bleibt responsiv, aber der Diff selbst dauert bei sehr großen Eingaben proportional länger.",
+    "limitationsP3": "Unterschiede in Zeilenenden (CRLF vs. LF) und nachgestellten Leerzeichen werden normalisiert. Sie erscheinen nie als Änderungen."
+  }
+}

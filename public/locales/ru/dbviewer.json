@@ -1,0 +1,93 @@
+{
+  "upload": {
+    "drop": "Перетащите файл .db, .sqlite или .sqlite3 сюда",
+    "click": "или нажмите для выбора файла",
+    "tryDemo": "Попробовать демо-базу",
+    "releaseToLoad": "Отпустите для загрузки",
+    "unsupported": "Неподдерживаемый тип файла",
+    "tooLarge": "Файл превышает ограничение 200 МБ.",
+    "invalidHeader": "Файл не является корректной базой данных SQLite.",
+    "engineFailed": "Не удалось загрузить движок SQLite. Проверьте сеть или перезагрузите страницу.",
+    "initializing": "Инициализация движка…",
+    "reading": "Чтение файла… {loaded} / {total}",
+    "privacy": "Все данные обрабатываются локально в вашем браузере"
+  },
+  "info": {
+    "tables": "{count, plural, =1 {1 таблица} other {# таблиц}}",
+    "views": "{count, plural, =1 {1 представление} other {# представлений}}",
+    "indexes": "{count, plural, =1 {1 индекс} other {# индексов}}",
+    "triggers": "{count, plural, =1 {1 триггер} other {# триггеров}}",
+    "close": "Закрыть"
+  },
+  "sidebar": {
+    "search": "Поиск…",
+    "tables": "ТАБЛИЦЫ",
+    "views": "ПРЕДСТАВЛЕНИЯ",
+    "indexes": "ИНДЕКСЫ",
+    "triggers": "ТРИГГЕРЫ",
+    "showSystem": "Показать системные",
+    "noResults": "Ничего не найдено",
+    "collapse": "Свернуть боковую панель",
+    "expand": "Развернуть боковую панель"
+  },
+  "schema": {
+    "columns": "Столбцы",
+    "foreignKeys": "Внешние ключи",
+    "indexes": "Индексы",
+    "rowCount": "Строк: {count}",
+    "rowCountLoading": "Подсчёт строк…",
+    "name": "Имя",
+    "type": "Тип",
+    "nullable": "Nullable",
+    "default": "По умолчанию",
+    "pk": "PK",
+    "from": "От",
+    "to": "К",
+    "onDelete": "ON DELETE",
+    "onUpdate": "ON UPDATE",
+    "unique": "Уникальный",
+    "trigger": "SQL триггера"
+  },
+  "editor": {
+    "run": "Выполнить",
+    "stop": "Остановить",
+    "format": "Форматировать",
+    "compress": "Сжать",
+    "clear": "Очистить",
+    "history": "История",
+    "noHistory": "Запросов ещё не было",
+    "clearHistory": "Очистить историю",
+    "placeholder": "-- Введите SELECT-запросы здесь. Ctrl/Cmd+Enter для выполнения."
+  },
+  "result": {
+    "running": "Выполнение запроса…",
+    "aborted": "Запрос прерван",
+    "rowsRange": "Строки {from}–{to}",
+    "elapsed": "{ms} мс",
+    "loadMore": "Загрузить ещё",
+    "loadAll": "Загрузить все (макс. 100k)",
+    "loadCeilingHit": "Остановлено на лимите 100 000 строк.",
+    "exportCsv": "Экспорт CSV",
+    "exportJson": "Экспорт JSON",
+    "empty": "Нет результатов",
+    "tabName": "Результат {n}",
+    "errorTab": "Ошибка",
+    "rejectedReadonly": "Допускаются только запросы на чтение (получено: {keyword}).",
+    "rejectedPragma": "PRAGMA \"{name}\" нет в списке разрешённых для чтения.",
+    "rejectedCte": "Обнаружена CTE с модификацией данных; запрос отклонён.",
+    "exportConfirm": "Курсор не завершён. Экспортировать текущие {loaded} строк или сначала загрузить все?",
+    "exportLoaded": "Экспортировать текущие",
+    "exportLoadAll": "Загрузить все и экспортировать"
+  },
+  "cell": {
+    "null": "NULL",
+    "empty": "(пусто)",
+    "blob": "BLOB · {bytes} Б",
+    "expandLong": "Показать полностью",
+    "copyLong": "Копировать"
+  },
+  "status": {
+    "engineRestarted": "Движок базы данных перезапущен — данные загружены заново",
+    "abortShortcut": "Нажмите Esc для прерывания"
+  }
+}

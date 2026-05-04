@@ -1,0 +1,129 @@
+{
+  "mode": {
+    "label": "Режим",
+    "standard": "Стандартный (5 полей)",
+    "spring": "Spring (6 полей)",
+    "quartz": "Quartz (7 полей)"
+  },
+  "tab": { "generate": "Генератор", "parse": "Разбор" },
+  "timezone": { "label": "Часовой пояс", "local": "Местный", "utc": "UTC" },
+  "field": {
+    "second": "Секунда",
+    "minute": "Минута",
+    "hour": "Час",
+    "dayOfMonth": "День",
+    "month": "Месяц",
+    "dayOfWeek": "День недели",
+    "year": "Год"
+  },
+  "fieldType": {
+    "any": "Любой",
+    "noSpecific": "Без конкретного",
+    "specific": "Конкретное значение",
+    "range": "Диапазон",
+    "step": "Шаг",
+    "list": "Список",
+    "lastDay": "Последний день",
+    "weekday": "Ближайший рабочий день",
+    "nthDayOfWeek": "N-й день недели",
+    "lastDayOffset": "Дней до последнего"
+  },
+  "monthShort": [
+    "Янв", "Фев", "Мар", "Апр", "Май", "Июн",
+    "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"
+  ],
+  "weekdayShort": ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+  "weekdayLong": ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+  "presets": {
+    "everyMinute": "Каждую минуту",
+    "every5Minutes": "Каждые 5 минут",
+    "every15Minutes": "Каждые 15 минут",
+    "everyHour": "Каждый час",
+    "every2Hours": "Каждые 2 часа",
+    "everyDay": "Каждый день в 00:00",
+    "everyMondayMorning": "Каждый понедельник в 09:00",
+    "weekdays9am": "Будни в 09:00",
+    "firstOfMonth": "Первый день месяца",
+    "lastOfMonth": "Последний день месяца",
+    "everyQuarter": "Каждый квартал (1 Янв/Апр/Июл/Окт)"
+  },
+  "describe": {
+    "everyMinute": "Каждую минуту",
+    "everyHour": "Каждый час",
+    "everyHourAt": "Каждый час в {time}",
+    "everySecond": "Каждую секунду",
+    "atTime": "В {time}",
+    "everyN": "Каждые {n} минут",
+    "lastDow": "последний {weekday} месяца",
+    "fromTo": "с {from} до {to}",
+    "onDays": "в {days}",
+    "throughDays": "с {from} по {to}",
+    "andList": "{prefix} и {item}",
+    "ofEveryMonth": "каждого месяца",
+    "lastDayOfMonth": "последний день месяца",
+    "nthWeekday": "{ordinal} {weekday} месяца",
+    "nearestWeekdayTo": "ближайший рабочий день к {day}-му числу",
+    "lastWeekdayOfMonth": "последний рабочий день месяца",
+    "lastDayMinusN": "за {n} дней до последнего дня месяца"
+  },
+  "ordinal": { "1": "первый", "2": "второй", "3": "третий", "4": "четвёртый", "5": "пятый" },
+  "output": {
+    "expression": "Выражение",
+    "description": "Описание",
+    "nextExecutions": "Следующие 5 запусков",
+    "header": { "num": "№", "dateTime": "Дата и время", "relative": "Относительно" },
+    "relative": { "in": "через {value}", "now": "сейчас", "past": "прошло" }
+  },
+  "share": { "button": "Поделиться ссылкой", "copied": "Ссылка скопирована" },
+  "parse": {
+    "placeholder": "Вставьте или введите Cron-выражение",
+    "showingPrevious": "Показан последний корректный результат"
+  },
+  "warn": {
+    "neverTriggers": "Это выражение никогда не сработает",
+    "searchWindowExhausted": "Найдено только {found} из {requested} запусков за ближайшие 4 года",
+    "secondDropped": "Поле секунд отброшено (было: {value})",
+    "yearDropped": "Поле года отброшено (было: {value})",
+    "specialDroppedFromMode": "Специальный символ {token} не поддерживается в режиме {mode} и был удалён",
+    "bothDayFieldsSet": "Заданы и день месяца, и день недели — выражение срабатывает при совпадении ЛЮБОГО из них",
+    "orSemanticsLost": "Quartz не может представить OR-логику для полей дня — оставлен день недели, день месяца установлен в '?'"
+  },
+  "errors": {
+    "wrongFieldCount": "Ожидалось {expected} полей для режима {mode}, получено {got}",
+    "outOfRange": "Поле {field}: допустимо {min}–{max}, получено {value}",
+    "invalidSyntax": "Неожиданный символ '{char}' в поле {field}",
+    "invalidStep": "Значение шага должно быть положительным, получено {value}",
+    "rangeReversed": "Начало диапазона ({from}) больше конца ({to}) в поле {field}",
+    "specialNotAllowed": "'{token}' не допускается в поле {field} для режима {mode}",
+    "quartzNeedsQuestionMark": "В режиме Quartz одно из полей (день месяца или день недели) должно быть '?'",
+    "quartzBothQuestionMarks": "Поля дня месяца и дня недели не могут одновременно быть '?'",
+    "macroRebootUnsupported": "@reboot не поддерживается (браузер не может отследить загрузку системы)",
+    "unknownMacro": "Неизвестный макрос '{macro}'",
+    "unknownAlias": "Неизвестное имя '{name}' в поле {field}",
+    "weekdayOnNonDom": "'W' допускается только в поле дня месяца",
+    "nthOnNonDow": "'#' допускается только в поле дня недели"
+  },
+  "descriptions": {
+    "whatIsTitle": "Что такое Cron-выражение?",
+    "whatIs": "Cron-выражение — это строка из полей, описывающая расписание. Каждое поле управляет единицей времени (минута, час, день, месяц, день недели). Изначально из Unix cron, синтаксис был расширен в Spring (добавлены секунды) и Quartz (добавлены секунды и год, плюс специальные символы L, W, #).",
+    "fieldRefTitle": "Справка по полям",
+    "specialCharsTitle": "Специальные символы",
+    "modesTitle": "Режимы",
+    "dstTitle": "Переход на летнее/зимнее время",
+    "dst": "Если активный часовой пояс использует переход на летнее время, расписания в весеннем «пропуске» срабатывают в ближайший корректный момент, а в осеннем «наложении» — при первом совпадении. Переключитесь на UTC, чтобы избежать проблем с переходом."
+  },
+  "editor": {
+    "title": "Редактирование поля",
+    "preview": "Предпросмотр",
+    "apply": "Применить",
+    "specificValue": "Значение",
+    "rangeFrom": "От",
+    "rangeTo": "До",
+    "stepStart": "Начало",
+    "stepInterval": "Интервал",
+    "stepEvery": "Каждые",
+    "listSelect": "Выберите значения",
+    "specialKind": "Тип"
+  },
+  "presetSection": "Быстрые пресеты"
+}

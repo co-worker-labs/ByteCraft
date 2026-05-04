@@ -1,0 +1,30 @@
+{
+  "jsonPlaceholder": "Pega o escribe JSON aquí...",
+  "yamlPlaceholder": "Pega o escribe YAML aquí...",
+  "loadFile": "Cargar",
+  "download": "Descargar",
+  "advancedSettings": "Configuración avanzada",
+  "layoutHorizontal": "Lado a lado",
+  "layoutVertical": "Apilado",
+  "jsonToYaml": "JSON → YAML",
+  "yamlToJson": "JSON ← YAML",
+  "json5": "JSON5",
+  "indent": "Sangría",
+  "sortKeys": "Ordenar claves",
+  "dropZone": "Suelta un archivo .json, .yaml o .yml",
+  "convertedToYaml": "Convertido a YAML",
+  "convertedToJson": "Convertido a JSON",
+  "invalidInput": "Entrada no válida",
+  "descriptions": {
+    "whatIsTitle": "¿Qué es YAML?",
+    "whatIsP1": "YAML (YAML Ain't Markup Language) es un formato de serialización de datos legible por humanos comúnmente usado para archivos de configuración, intercambio de datos y contenido estructurado. Usa indentación para denotar estructura, haciéndolo más legible que JSON para datos anidados complejos.",
+    "yamlVsJsonTitle": "YAML vs JSON",
+    "yamlVsJsonP1": "YAML es un superconjunto de JSON: todo documento JSON válido también es YAML válido. YAML añade comentarios (#), soporte multidocumento (---), anchors y aliases (&/*), y una sintaxis más flexible. JSON es más simple y más universalmente soportado por lenguajes de programación.",
+    "yaml12Title": "Características de YAML 1.2",
+    "yaml12P1": "YAML 1.2 (2009) es la especificación actual. Características clave: anchors (&) y aliases (*) para contenido DRY, streams multidocumento separados por ---, etiquetas de tipo explícitas (!!str, !!int, !!seq) y estilos de escalares block/flow.",
+    "useCasesTitle": "Casos de uso",
+    "useCasesP1": "Archivos de configuración (Docker Compose, Kubernetes, pipelines CI/CD), definiciones de API (OpenAPI/Swagger), serialización de datos, formatos de archivos de log e intercambio de datos entre lenguajes.",
+    "limitationsTitle": "Limitaciones",
+    "limitationsP1": "YAML multidocumento se convierte a un array JSON y no se puede hacer round-trip de vuelta a YAML multidocumento. La flexibilidad de YAML puede llevar a ambigüedad: los mismos datos pueden representarse de múltiples formas. La indentación con tabuladores no es compatible (la especificación YAML recomienda espacios)."
+  }
+}

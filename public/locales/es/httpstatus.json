@@ -1,0 +1,453 @@
+{
+  "description": {
+    "text": "Referencia completa de códigos de estado HTTP que cubre todos los códigos oficiales de IANA desde el RFC 9110 y especificaciones relacionadas, incluyendo WebDAV (RFC 4918), códigos de estado HTTP adicionales (RFC 6585), 308 Permanent Redirect (RFC 7538), 451 Unavailable For Legal Reasons (RFC 7725) y Early Hints (RFC 8297). También incluye extensiones no oficiales de Nginx, Cloudflare e IIS. Cada código muestra su descripción, referencia RFC, y los códigos más usados incluyen escenarios de uso y causas comunes para facilitar la resolución de problemas."
+  },
+  "tip": "Pasa el cursor sobre cualquier fila en escritorio o toca en móvil para ver detalles de uso y causas comunes.",
+  "searchPlaceholder": "Buscar por código, nombre o descripción...",
+  "noResults": "No se encontraron resultados",
+  "categories": {
+    "all": "Todos",
+    "1xx": "1xx Informativo",
+    "2xx": "2xx Éxito",
+    "3xx": "3xx Redirección",
+    "4xx": "4xx Error del cliente",
+    "5xx": "5xx Error del servidor",
+    "unofficial": "No oficial"
+  },
+  "tableHeaders": {
+    "code": "Código",
+    "name": "Nombre",
+    "description": "Descripción",
+    "spec": "Espec",
+    "source": "Fuente"
+  },
+  "detailLabels": {
+    "usage": "Uso",
+    "commonCauses": "Causas comunes"
+  },
+  "codes": {
+    "100": {
+      "description": "El servidor ha recibido las cabeceras de la solicitud y el cliente debe proceder a enviar el cuerpo de la solicitud."
+    },
+    "101": {
+      "description": "El servidor está cambiando de protocolo según lo solicitado por el cliente."
+    },
+    "102": {
+      "description": "El servidor ha recibido y está procesando la solicitud, pero aún no hay respuesta disponible."
+    },
+    "103": {
+      "description": "Se usa para devolver algunas cabeceras de respuesta antes del mensaje HTTP final."
+    },
+    "200": {
+      "description": "La solicitud tuvo éxito.",
+      "details": {
+        "usage": "Respuesta estándar para solicitudes HTTP exitosas",
+        "commonCauses": [
+          "Recurso obtenido exitosamente mediante solicitud GET",
+          "Recurso actualizado exitosamente mediante PUT o PATCH",
+          "Recurso creado exitosamente mediante POST",
+          "Recurso eliminado exitosamente mediante DELETE"
+        ]
+      }
+    },
+    "201": {
+      "description": "La solicitud tuvo éxito y se creó un nuevo recurso.",
+      "details": {
+        "usage": "Respuesta a una solicitud POST que crea un nuevo recurso",
+        "commonCauses": [
+          "Creación de una nueva cuenta de usuario",
+          "Subida de un nuevo archivo",
+          "Creación de un nuevo registro en la base de datos",
+          "Envío de un nuevo pedido"
+        ]
+      }
+    },
+    "202": {
+      "description": "La solicitud ha sido recibida pero aún no se ha actuado sobre ella."
+    },
+    "203": {
+      "description": "La solicitud fue exitosa pero los metadatos transformados no son el conjunto definitivo."
+    },
+    "204": {
+      "description": "El servidor procesó la solicitud exitosamente y no devuelve ningún contenido.",
+      "details": {
+        "usage": "Respuesta a solicitudes exitosas que no requieren devolver un cuerpo",
+        "commonCauses": [
+          "Solicitud DELETE exitosa",
+          "Solicitud PUT exitosa sin necesidad de cuerpo de respuesta",
+          "Actualización del estado de un recurso sin devolver datos",
+          "Limpieza de caché o restablecimiento de un estado"
+        ]
+      }
+    },
+    "205": {
+      "description": "El servidor procesó la solicitud exitosamente pero no devuelve contenido y requiere que el solicitante restablezca la vista del documento."
+    },
+    "206": {
+      "description": "El servidor está entregando solo parte del recurso debido a una cabecera de rango enviada por el cliente.",
+      "details": {
+        "usage": "Se usa para solicitudes de rango, descargas reanudables y streaming de medios",
+        "commonCauses": [
+          "Un reproductor de video solicita un rango de bytes específico para el búfer",
+          "Gestores de descargas reanudando descargas interrumpidas",
+          "Transferencias de archivos grandes en fragmentos",
+          "Solicitudes de rango HTTP para paginación"
+        ]
+      }
+    },
+    "207": {
+      "description": "El cuerpo del mensaje que sigue es por defecto un mensaje XML y puede contener varios códigos de respuesta separados."
+    },
+    "208": {
+      "description": "Los miembros de una vinculación DAV ya fueron enumerados en una parte precedente de la respuesta multi-estado."
+    },
+    "226": {
+      "description": "El servidor ha cumplido una solicitud GET para el recurso, y la respuesta es una representación del resultado de una o más manipulaciones de instancia aplicadas a la instancia actual."
+    },
+    "300": {
+      "description": "La solicitud tiene más de una respuesta posible."
+    },
+    "301": {
+      "description": "La URL del recurso solicitado ha cambiado permanentemente.",
+      "details": {
+        "usage": "Redirección permanente para cambios de URL y reubicación de contenido",
+        "commonCauses": [
+          "Cambio o migración de dominio del sitio web",
+          "Rediseño de estructura de URLs para mejor SEO",
+          "Mover contenido a una nueva ubicación",
+          "Migración de HTTP a HTTPS"
+        ]
+      }
+    },
+    "302": {
+      "description": "La URL del recurso solicitado ha cambiado temporalmente.",
+      "details": {
+        "usage": "Redirección temporal para contenido que se ha movido o está en mantenimiento",
+        "commonCauses": [
+          "Mantenimiento temporal del sitio web",
+          "Redirecciones para pruebas A/B",
+          "Flujo de autenticación de usuario",
+          "Cambios temporales de ubicación del contenido"
+        ]
+      }
+    },
+    "303": {
+      "description": "La respuesta a la solicitud se puede encontrar en otra URI usando el método GET."
+    },
+    "304": {
+      "description": "La versión en caché del recurso solicitado sigue siendo válida.",
+      "details": {
+        "usage": "Optimización de caché para reducir ancho de banda y mejorar el rendimiento",
+        "commonCauses": [
+          "Acierto de caché del navegador para recursos estáticos sin cambios",
+          "CDN sirviendo contenido sin cambios",
+          "Solicitud GET condicional con cabecera If-None-Match",
+          "Servidor devolviendo 304 para recursos que no han cambiado desde la última solicitud"
+        ]
+      }
+    },
+    "305": {
+      "description": "El recurso solicitado solo está disponible a través de un proxy."
+    },
+    "307": {
+      "description": "La solicitud debe repetirse con otra URI, pero las solicitudes futuras deben seguir usando la URI original.",
+      "details": {
+        "usage": "Redirección temporal que preserva el método HTTP",
+        "commonCauses": [
+          "Redirigiendo solicitudes POST durante mantenimiento",
+          "Cambios temporales de URL para endpoints de API",
+          "Balanceo de carga y distribución de tráfico",
+          "Probando nuevas funcionalidades con redirecciones temporales"
+        ]
+      }
+    },
+    "308": {
+      "description": "La solicitud y todas las solicitudes futuras deben repetirse usando otra URI."
+    },
+    "400": {
+      "description": "El servidor no pudo entender la solicitud debido a sintaxis no válida.",
+      "details": {
+        "usage": "Error genérico del cliente para solicitudes mal formadas",
+        "commonCauses": [
+          "JSON mal formado en el cuerpo de la solicitud",
+          "Faltan parámetros requeridos en la solicitud",
+          "Cabeceras o tipo de contenido no válidos",
+          "URL o parámetros de consulta mal formados"
+        ]
+      }
+    },
+    "401": {
+      "description": "El cliente debe autenticarse para obtener la respuesta solicitada.",
+      "details": {
+        "usage": "Autenticación requerida para acceder a recursos protegidos",
+        "commonCauses": [
+          "Token de autenticación faltante o no válido",
+          "JWT o token de sesión expirado",
+          "Intento de autenticación fallido",
+          "Acceso a API protegida sin credenciales"
+        ]
+      }
+    },
+    "402": {
+      "description": "Este código de respuesta está reservado para uso futuro."
+    },
+    "403": {
+      "description": "El cliente no tiene derechos de acceso al contenido.",
+      "details": {
+        "usage": "Fallo de autorización para solicitudes autenticadas pero no autorizadas",
+        "commonCauses": [
+          "El usuario no tiene permiso para acceder al recurso",
+          "Bloqueo por dirección IP o región",
+          "Acceso a funciones de administrador sin el rol adecuado",
+          "Límite de solicitudes excedido para usuario autenticado"
+        ]
+      }
+    },
+    "404": {
+      "description": "El servidor no puede encontrar el recurso solicitado.",
+      "details": {
+        "usage": "Recurso no encontrado en la URL especificada",
+        "commonCauses": [
+          "Error tipográfico en la URL o enlace roto",
+          "El recurso ha sido eliminado o movido",
+          "Ruta de endpoint de API incorrecta",
+          "El registro de la base de datos ya no existe"
+        ]
+      }
+    },
+    "405": {
+      "description": "El método de solicitud es conocido por el servidor pero no está soportado por el recurso de destino.",
+      "details": {
+        "usage": "Método HTTP no soportado para el endpoint solicitado",
+        "commonCauses": [
+          "Usando GET cuando solo se permite POST",
+          "Intentando DELETE en un recurso de solo lectura",
+          "Método HTTP incorrecto para el endpoint de API",
+          "Método no soportado en un recurso de archivo estático"
+        ]
+      }
+    },
+    "406": {
+      "description": "El servidor no puede producir una respuesta que coincida con la lista de valores aceptables definidos en las cabeceras de negociación proactiva de contenido de la solicitud."
+    },
+    "407": {
+      "description": "El cliente debe primero autenticarse con un proxy."
+    },
+    "408": {
+      "description": "El servidor desea cerrar esta conexión no utilizada.",
+      "details": {
+        "usage": "El servidor cerró la conexión debido a inactividad del cliente",
+        "commonCauses": [
+          "El cliente tardó demasiado en enviar el cuerpo de la solicitud",
+          "Tiempo de espera de red entre cliente y servidor",
+          "Conexión lenta del cliente causando tiempo de espera del servidor",
+          "Tiempo de espera del balanceador de carga excedido"
+        ]
+      }
+    },
+    "409": {
+      "description": "La solicitud entra en conflicto con el estado actual del recurso de destino.",
+      "details": {
+        "usage": "La solicitud entra en conflicto con el estado del servidor o reglas de negocio",
+        "commonCauses": [
+          "Creando un recurso que ya existe",
+          "Conflictos de modificación concurrente",
+          "Transición de estado no válida para el recurso",
+          "Violación de restricción única duplicada"
+        ]
+      }
+    },
+    "410": {
+      "description": "El recurso de destino ya no está disponible en el servidor de origen."
+    },
+    "411": {
+      "description": "El servidor rechazó la solicitud porque el campo de cabecera Content-Length no está definido."
+    },
+    "412": {
+      "description": "El servidor no cumple una de las precondiciones que el solicitante puso en los campos de cabecera de la solicitud."
+    },
+    "413": {
+      "description": "La entidad de la solicitud es más grande que los límites definidos por el servidor."
+    },
+    "414": {
+      "description": "La URI solicitada por el cliente es más larga de lo que el servidor está dispuesto a interpretar."
+    },
+    "415": {
+      "description": "El formato multimedia de los datos solicitados no está soportado por el servidor."
+    },
+    "416": {
+      "description": "El rango de bytes solicitado por el cliente no se puede cumplir."
+    },
+    "417": {
+      "description": "La expectativa indicada por el campo de cabecera Expect no se puede cumplir."
+    },
+    "418": {
+      "description": "El servidor se niega a preparar café porque es, permanentemente, una tetera."
+    },
+    "421": {
+      "description": "La solicitud fue dirigida a un servidor que no es capaz de producir una respuesta."
+    },
+    "422": {
+      "description": "La solicitud estaba bien formada pero no se pudo procesar debido a errores semánticos."
+    },
+    "423": {
+      "description": "El recurso al que se accede está bloqueado."
+    },
+    "424": {
+      "description": "La solicitud falló porque dependía de otra solicitud que falló."
+    },
+    "425": {
+      "description": "El servidor no está dispuesto a arriesgarse a procesar una solicitud que podría ser repetida."
+    },
+    "426": {
+      "description": "El servidor se niega a ejecutar la solicitud usando el protocolo actual pero podría estar dispuesto a hacerlo después de que el cliente actualice a un protocolo diferente."
+    },
+    "428": {
+      "description": "El servidor de origen requiere que la solicitud sea condicional."
+    },
+    "429": {
+      "description": "El usuario ha enviado demasiadas solicitudes en un período de tiempo determinado.",
+      "details": {
+        "usage": "Limitación de tasa para prevenir abuso y asegurar un uso justo",
+        "commonCauses": [
+          "Excediendo los límites de tasa de la API",
+          "Demasiadas solicitudes desde la misma dirección IP",
+          "Actividad de bot o scraper detectada",
+          "El usuario activó el limitador con solicitudes rápidas"
+        ]
+      }
+    },
+    "431": {
+      "description": "El servidor no está dispuesto a procesar la solicitud porque sus campos de cabecera son demasiado grandes."
+    },
+    "440": {
+      "description": "La sesión del cliente ha expirado."
+    },
+    "444": {
+      "description": "Nginx cierra la conexión sin enviar ninguna respuesta al cliente."
+    },
+    "449": {
+      "description": "La solicitud debe reintentarse después de realizar la acción apropiada."
+    },
+    "451": {
+      "description": "El servidor está denegando el acceso al recurso como consecuencia de una demanda legal."
+    },
+    "494": {
+      "description": "Nginx rechazó la solicitud porque la cabecera de la solicitud era demasiado grande."
+    },
+    "495": {
+      "description": "Error de verificación del certificado SSL del cliente en Nginx."
+    },
+    "496": {
+      "description": "El cliente de Nginx no proporcionó certificado SSL."
+    },
+    "497": {
+      "description": "El cliente de Nginx envió una solicitud HTTP a un puerto HTTPS."
+    },
+    "499": {
+      "description": "El cliente de Nginx cerró la conexión antes de que el servidor pudiera enviar una respuesta."
+    },
+    "500": {
+      "description": "El servidor ha encontrado una situación que no sabe cómo manejar.",
+      "details": {
+        "usage": "Error genérico del servidor para condiciones inesperadas",
+        "commonCauses": [
+          "Excepción no capturada en el código del servidor",
+          "Fallo de conexión a la base de datos",
+          "Error de configuración en el servidor",
+          "Fallo de integración con servicio de terceros"
+        ]
+      }
+    },
+    "501": {
+      "description": "El método de solicitud no está soportado por el servidor y no se puede manejar."
+    },
+    "502": {
+      "description": "El servidor, mientras trabajaba como puerta de enlace para obtener la respuesta necesaria, recibió una respuesta no válida.",
+      "details": {
+        "usage": "Respuesta no válida del servidor de origen",
+        "commonCauses": [
+          "El servidor de origen está caído o inalcanzable",
+          "Respuesta no válida del servicio de backend",
+          "Problemas de conectividad de red entre servidores",
+          "Tiempo de espera agotado esperando respuesta del servidor de origen"
+        ]
+      }
+    },
+    "503": {
+      "description": "El servidor no está listo para manejar la solicitud.",
+      "details": {
+        "usage": "Servicio temporalmente no disponible debido a mantenimiento o sobrecarga",
+        "commonCauses": [
+          "Mantenimiento programado del servidor",
+          "Sobrecarga del servidor por alto tráfico",
+          "Pool de conexiones a la base de datos agotado",
+          "Servicio dependiente temporalmente caído"
+        ]
+      }
+    },
+    "504": {
+      "description": "El servidor, actuando como puerta de enlace, no pudo obtener una respuesta a tiempo.",
+      "details": {
+        "usage": "Tiempo de espera agotado esperando respuesta del servidor de origen",
+        "commonCauses": [
+          "El servidor de origen tardó demasiado en responder",
+          "Procesamiento lento del servicio de backend",
+          "Latencia de red entre la puerta de enlace y el backend",
+          "Tiempo de espera agotado en consulta a la base de datos"
+        ]
+      }
+    },
+    "505": {
+      "description": "La versión HTTP usada en la solicitud no está soportada por el servidor."
+    },
+    "506": {
+      "description": "El servidor tiene un error de configuración interno."
+    },
+    "507": {
+      "description": "El servidor no puede almacenar la representación necesaria para completar la solicitud."
+    },
+    "508": {
+      "description": "El servidor detectó un bucle infinito al procesar la solicitud."
+    },
+    "510": {
+      "description": "Se requieren extensiones adicionales a la solicitud para que el servidor pueda cumplirla."
+    },
+    "511": {
+      "description": "El cliente necesita autenticarse para obtener acceso a la red."
+    },
+    "520": {
+      "description": "El servidor de origen devolvió un error inesperado o desconocido."
+    },
+    "521": {
+      "description": "El servidor de origen rechazó la conexión de Cloudflare."
+    },
+    "522": {
+      "description": "Cloudflare no pudo negociar un handshake TCP con el servidor de origen."
+    },
+    "523": {
+      "description": "Cloudflare no pudo alcanzar el servidor de origen."
+    },
+    "524": {
+      "description": "Cloudflare pudo completar una conexión TCP al servidor de origen, pero el servidor de origen no respondió con una respuesta HTTP antes de que se agotara el tiempo de espera de la conexión."
+    },
+    "525": {
+      "description": "Cloudflare no pudo negociar un handshake SSL/TLS con el servidor de origen."
+    },
+    "526": {
+      "description": "Cloudflare no pudo validar el certificado SSL en el servidor de origen."
+    },
+    "527": {
+      "description": "Cloudflare Railgun no pudo alcanzar el servidor de origen."
+    },
+    "528": {
+      "description": "Cloudflare agotó el tiempo de espera al contactar el servidor de origen."
+    },
+    "529": {
+      "description": "El servidor de origen ha excedido sus límites de recursos."
+    },
+    "530": {
+      "description": "Cloudflare no pudo resolver el DNS para el servidor de origen."
+    }
+  }
+}

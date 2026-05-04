@@ -1,0 +1,35 @@
+{
+  "plainTextPlaceholder": "Cole ou digite o texto simples aqui",
+  "encodedOutput": "Saída codificada",
+  "mode": {
+    "label": "Modo de codificação",
+    "component": "Componente",
+    "url": "URL inteira",
+    "form": "Formulário (+ para espaços)"
+  },
+  "decodeFailed": "Falha ao decodificar: a entrada não é uma string percent-encoded válida",
+  "descriptions": {
+    "whatIsTitle": "O que é codificação de URL?",
+    "whatIsP1": "A codificação de URL (também chamada de percent-encoding) é o mecanismo definido pela RFC 3986 para transportar dados dentro de URLs. Caracteres que têm significado reservado em uma URL (como ? / # & =) ou que estão fora do intervalo imprimível ASCII são reescritos como um ou mais triplas %XX, onde XX é o valor hexadecimal do byte. Decodificadores revertem o processo byte a byte.",
+    "whatIsP2": "Percent-encoding é um formato de transporte, não um mecanismo de segurança. Qualquer pessoa que receba uma string codificada pode decodificá-la trivialmente; não confunda codificação com criptografia ou hashing.",
+    "howTitle": "Como escolher o modo",
+    "howIntro": "Esta ferramenta expõe os três modos de codificação que todo desenvolvedor eventualmente encontra. O modo que você escolhe determina quais caracteres são codificados.",
+    "howComponent": "Modo Componente (encodeURIComponent). Use quando codificar um único valor que será incorporado dentro de uma URL — um valor de query string, um segmento de caminho, um fragmento. Codifica todos os caracteres reservados de URL para que o resultado seja seguro em qualquer posição.",
+    "howUrl": "Modo URL inteira (encodeURI). Use quando você já tem uma URL montada e só quer escapar caracteres realmente inseguros (espaços, não-ASCII). Mantém os caracteres estruturais : / ? # & = + intactos para que a URL permaneça parseável.",
+    "howForm": "Modo Formulário (application/x-www-form-urlencoded). Use quando construir um corpo de requisição HTTP cujo Content-Type é application/x-www-form-urlencoded. Espaço vira +, novas linhas são normalizadas para CRLF (%0D%0A), e o conjunto de caracteres espelha o que o navegador envia ao submeter um formulário HTML.",
+    "tableTitle": "Referência de caracteres reservados",
+    "tableCaption": "Como cada modo codifica os caracteres reservados comuns",
+    "tableChar": "Caractere",
+    "tableComponent": "Componente",
+    "tableUrl": "URL inteira",
+    "tableForm": "Formulário",
+    "tableNote": "Componente codifica tudo exceto o conjunto não reservado A–Z a–z 0–9 - _ . ! ~ * ' ( ). URL inteira adicionalmente preserva o conjunto estrutural ; , / ? : @ & = + $ # !. Formulário codifica o mesmo conjunto que Componente mais ! ' ( ) ~ (mas não *), transforma espaço em + em vez de %20, e normaliza \\n / \\r / \\r\\n para \\r\\n (codificado como %0D%0A) — correspondendo ao que o navegador envia para uma submissão application/x-www-form-urlencoded.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesP1": "Construindo query strings seguras programaticamente: ao construir URLs como /search?q=[valor] manualmente, passe o valor pelo modo Componente para que caracteres como & ou = dentro do valor não corrompam a URL ao redor.",
+    "useCasesP2": "Incorporando uma URL dentro de outra: ao passar uma URL como parâmetro de outra (por exemplo, uma URL de redirecionamento OAuth), você deve codificar a URL interna com modo Componente — não URL inteira — para que / : ? & dentro da URL interna não sejam interpretados como estrutura da URL externa.",
+    "useCasesP3": "Enviando dados de formulário com fetch: ao fazer POST de um corpo com Content-Type: application/x-www-form-urlencoded, o corpo deve ser codificado com semântica do modo Formulário. Este modo produz saída byte-compatível com o que o navegador envia.",
+    "limitationsTitle": "Limitações",
+    "limitationsP1": "Codificação de URL não é criptografia. Qualquer pessoa pode decodificar a saída com uma única chamada de função; nunca use codificação para esconder segredos.",
+    "limitationsP2": "A escolha do modo importa. Passar uma URL inteira pelo modo Componente quebra a URL (toda / vira %2F). Passar um valor de query pelo modo URL inteira pode deixar caracteres reservados perigosos (um & no valor ainda parece um separador de parâmetro). Na dúvida, escolha Componente."
+  }
+}

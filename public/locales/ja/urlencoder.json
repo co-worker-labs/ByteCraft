@@ -1,0 +1,35 @@
+{
+  "plainTextPlaceholder": "プレーンテキストをここに貼り付けまたは入力",
+  "encodedOutput": "エンコード結果",
+  "mode": {
+    "label": "エンコードモード",
+    "component": "Component",
+    "url": "URL全体",
+    "form": "Form（スペースを+に）"
+  },
+  "decodeFailed": "デコードに失敗しました: 入力が有効なパーセントエンコード文字列ではありません",
+  "descriptions": {
+    "whatIsTitle": "URLエンコードとは？",
+    "whatIsP1": "URLエンコード（パーセントエンコードとも呼ばれる）は、RFC 3986で定義されたURL内にデータを含めるための仕組みです。URLで予約された意味を持つ文字（? / # & =など）やASCII印字可能範囲外の文字は、1つ以上の%XXトリプレットとして書き直されます。XXはバイトの16進数値です。デコーダーはこの処理をバイトごとに逆転します。",
+    "whatIsP2": "パーセントエンコードは転送用フォーマットであり、セキュリティの仕組みではありません。エンコードされた文字列は誰でも簡単にデコードできます。エンコードを暗号化やハッシュと混同しないでください。",
+    "howTitle": "モードの選び方",
+    "howIntro": "このツールは開発者がいずれ出会う3つのエンコードモードを提供しています。選択したモードによって、どの文字がエンコードされるかが決まります。",
+    "howComponent": "Componentモード（encodeURIComponent）。URL内に埋め込む単一の値をエンコードする場合に使います。クエリ文字列の値、パスセグメント、フラグメントなどです。すべてのURL予約文字をエンコードするため、結果はどのスロットでも安全です。",
+    "howUrl": "URL全体モード（encodeURI）。すでに組み立て済みのURLがあり、本当に安全でない文字（スペース、非ASCII）だけをエスケープしたい場合に使います。構造文字（: / ? # & = +）をそのまま残すため、URLが解析可能なままになります。",
+    "howForm": "Formモード（application/x-www-form-urlencoded）。Content-Typeがapplication/x-www-form-urlencodedのHTTPリクエストボディを構築する場合に使います。スペースは+になり、改行はCRLF（%0D%0A）に正規化されます。HTMLフォーム送信時にブラウザが送信するものと同じ文字セットです。",
+    "tableTitle": "予約文字リファレンス",
+    "tableCaption": "各モードが一般的な予約文字をどのようにエンコードするか",
+    "tableChar": "文字",
+    "tableComponent": "Component",
+    "tableUrl": "URL全体",
+    "tableForm": "Form",
+    "tableNote": "Componentは非予約セット A-Z a-z 0-9 - _ . ! ~ * ' ( ) 以外をすべてエンコードします。URL全体はさらに構造セット ; , / ? : @ & = + $ # ! を保持します。FormはComponentと同じセットに加え ! ' ( ) ~ をエンコードし（*は除く）、スペースを%20ではなく+に変換し、\\n / \\r / \\r\\nを\\r\\n（%0D%0Aとしてエンコード）に正規化します。ブラウザがapplication/x-www-form-urlencoded送信で送るものと一致します。",
+    "useCasesTitle": "一般的なユースケース",
+    "useCasesP1": "プログラムによる安全なクエリ文字列の構築: /search?q=[value]のようなURLを手動で構築する場合、値をComponentモードに通して、値内の&や=が周囲のURLを壊さないようにします。",
+    "useCasesP2": "URL内に別のURLを埋め込む: あるURLを別のURLのパラメータとして渡す場合（例: OAuthのリダイレクトURL）、内側のURLはComponentモードでエンコードする必要があります。URL全体モードではなく、/ : ? & が外側のURLの構造として誤読されないようにします。",
+    "useCasesP3": "fetchでのフォームデータ送信: Content-Type: application/x-www-form-urlencodedでPOSTボディを送信する場合、ボディはFormモードのセマンティクスでエンコードする必要があります。このツールのFormモードは、ブラウザが送信するものとバイト互換の出力を生成します。",
+    "limitationsTitle": "制限事項",
+    "limitationsP1": "URLエンコードは暗号化ではありません。誰でも1つの関数呼び出しで出力をデコードできます。秘密を隠すためにエンコードを使わないでください。",
+    "limitationsP2": "モードの選択が重要です。URL全体をComponentモードに通すとURLが壊れます（すべての/が%2Fになります）。クエリ値をURL全体モードに通すと、予約文字がそのまま残り危険です（値内の&がパラメータ区切りに見える）。迷ったらComponentを選んでください。"
+  }
+}

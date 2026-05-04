@@ -1,0 +1,24 @@
+{
+  "plaintext": "Klartext",
+  "ciphertext": "Chiffretext",
+  "plaintextPlaceholder": "Klartext hier einfügen oder eingeben",
+  "passphrasePlaceholder": "Passphrase hier einfügen oder eingeben",
+  "ciphertextOutput": "Chiffretext-Ausgabe",
+  "algorithms": "Algorithmen:",
+  "blockMode": "Blockmodus:",
+  "paddingScheme": "Padding-Schema:",
+  "droppedWords": "Verworfene Wörter:",
+  "descriptions": {
+    "aesTitle": "AES",
+    "aes": "Der Advanced Encryption Standard (AES) ist ein US-amerikanischer Federal Information Processing Standard (FIPS). Er wurde in einem 5-jährigen Prozess ausgewählt, in dem 15 konkurrierende Entwürfe evaluiert wurden.",
+    "desTitle": "DES, Triple DES",
+    "des": "DES war früher der vorherrschende Verschlüsselungsalgorithmus und wurde als offizieller Federal Information Processing Standard (FIPS) veröffentlicht. DES gilt heute aufgrund der kleinen Schlüsselgröße als unsicher.",
+    "tripleDes": "Triple DES wendet DES dreimal auf jeden Block an, um die Schlüsselgröße zu erhöhen. Der Algorithmus gilt in dieser Form als sicher.",
+    "rabbitTitle": "Rabbit",
+    "rabbit": "Rabbit ist eine leistungsstarke Stromchiffre und ein Finalist im eSTREAM-Portfolio. Es ist eines von vier Designs, die nach einem 3½-jährigen Prozess mit 22 evaluierten Entwürfen ausgewählt wurden.",
+    "rc4Title": "RC4, RC4Drop",
+    "rc4": "RC4 ist eine weit verbreitete Stromchiffre. Sie wird in gängigen Protokollen wie SSL und WEP verwendet. Obwohl der Algorithmus für seine Einfachheit und Geschwindigkeit bemerkenswert ist, inspiriert seine Geschichte kein Vertrauen in die Sicherheit.",
+    "rc4drop": "Es wurde festgestellt, dass die ersten Bytes des Schlüsselstroms stark nicht zufällig sind und Informationen über den Schlüssel preisgeben. Sie können sich gegen diesen Angriff verteidigen, indem Sie den anfänglichen Teil des Schlüsselstroms verwerfen. Dieser modifizierte Algorithmus wird traditionell RC4-drop genannt.",
+    "rc4dropConfig": "Standardmäßig werden 192 Wörter (768 Bytes) verworfen, aber Sie können den Algorithmus so konfigurieren, dass eine beliebige Anzahl von Wörtern verworfen wird."
+  }
+}

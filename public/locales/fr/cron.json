@@ -1,0 +1,129 @@
+{
+  "mode": {
+    "label": "Mode",
+    "standard": "Standard (5 champs)",
+    "spring": "Spring (6 champs)",
+    "quartz": "Quartz (7 champs)"
+  },
+  "tab": { "generate": "Générer", "parse": "Analyser" },
+  "timezone": { "label": "Fuseau horaire", "local": "Local", "utc": "UTC" },
+  "field": {
+    "second": "Seconde",
+    "minute": "Minute",
+    "hour": "Heure",
+    "dayOfMonth": "Jour",
+    "month": "Mois",
+    "dayOfWeek": "Jour de semaine",
+    "year": "Année"
+  },
+  "fieldType": {
+    "any": "Tous",
+    "noSpecific": "Non spécifié",
+    "specific": "Spécifique",
+    "range": "Intervalle",
+    "step": "Pas",
+    "list": "Liste",
+    "lastDay": "Dernier jour",
+    "weekday": "Jour de semaine le plus proche",
+    "nthDayOfWeek": "N-ième jour de semaine",
+    "lastDayOffset": "Jours avant le dernier"
+  },
+  "monthShort": [
+    "Jan", "Fév", "Mar", "Avr", "Mai", "Jun",
+    "Jul", "Aoû", "Sep", "Oct", "Nov", "Déc"
+  ],
+  "weekdayShort": ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"],
+  "weekdayLong": ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"],
+  "presets": {
+    "everyMinute": "Chaque minute",
+    "every5Minutes": "Toutes les 5 minutes",
+    "every15Minutes": "Toutes les 15 minutes",
+    "everyHour": "Chaque heure",
+    "every2Hours": "Toutes les 2 heures",
+    "everyDay": "Chaque jour à 00:00",
+    "everyMondayMorning": "Chaque lundi à 09:00",
+    "weekdays9am": "Jours ouvrés à 09:00",
+    "firstOfMonth": "Premier jour du mois",
+    "lastOfMonth": "Dernier jour du mois",
+    "everyQuarter": "Chaque trimestre (1er Jan/Avr/Jul/Oct)"
+  },
+  "describe": {
+    "everyMinute": "Chaque minute",
+    "everyHour": "Chaque heure",
+    "everyHourAt": "Chaque heure à {time}",
+    "everySecond": "Chaque seconde",
+    "atTime": "À {time}",
+    "everyN": "Toutes les {n} minutes",
+    "lastDow": "le dernier {weekday} du mois",
+    "fromTo": "de {from} à {to}",
+    "onDays": "le {days}",
+    "throughDays": "du {from} au {to}",
+    "andList": "{prefix} et {item}",
+    "ofEveryMonth": "de chaque mois",
+    "lastDayOfMonth": "le dernier jour du mois",
+    "nthWeekday": "le {ordinal} {weekday} du mois",
+    "nearestWeekdayTo": "le jour de semaine le plus proche du jour {day}",
+    "lastWeekdayOfMonth": "le dernier jour de semaine du mois",
+    "lastDayMinusN": "{n} jours avant le dernier jour du mois"
+  },
+  "ordinal": { "1": "premier", "2": "deuxième", "3": "troisième", "4": "quatrième", "5": "cinquième" },
+  "output": {
+    "expression": "Expression",
+    "description": "Description",
+    "nextExecutions": "5 prochaines exécutions",
+    "header": { "num": "N°", "dateTime": "Date et heure", "relative": "Relatif" },
+    "relative": { "in": "dans {value}", "now": "maintenant", "past": "passé" }
+  },
+  "share": { "button": "Partager le lien", "copied": "Lien de partage copié" },
+  "parse": {
+    "placeholder": "Collez ou saisissez une expression Cron",
+    "showingPrevious": "Affichage du dernier résultat valide"
+  },
+  "warn": {
+    "neverTriggers": "Cette expression ne se déclenchera jamais",
+    "searchWindowExhausted": "Seules {found} sur {requested} exécutions trouvées dans les 4 prochaines années",
+    "secondDropped": "Le champ des secondes a été ignoré (valeur : {value})",
+    "yearDropped": "Le champ de l'année a été ignoré (valeur : {value})",
+    "specialDroppedFromMode": "Le caractère spécial {token} n'est pas supporté en mode {mode} et a été supprimé",
+    "bothDayFieldsSet": "Les champs jour-du-mois et jour-de-semaine sont tous les deux définis. L'expression se déclenche quand L'UN OU L'AUTRE correspond",
+    "orSemanticsLost": "Quartz ne peut pas représenter la sémantique OR entre les champs de jour. Le jour-de-semaine est conservé, le jour-du-mois est mis à « ? »"
+  },
+  "errors": {
+    "wrongFieldCount": "{expected} champs attendus pour le mode {mode}, {got} trouvés",
+    "outOfRange": "{field} doit être entre {min} et {max}, valeur : {value}",
+    "invalidSyntax": "Caractère inattendu « {char} » dans le champ {field}",
+    "invalidStep": "La valeur du pas doit être positive, valeur : {value}",
+    "rangeReversed": "Le début de l'intervalle ({from}) est supérieur à la fin ({to}) dans {field}",
+    "specialNotAllowed": "« {token} » n'est pas autorisé dans le champ {field} pour le mode {mode}",
+    "quartzNeedsQuestionMark": "Le mode Quartz requiert que le jour-du-mois ou le jour-de-semaine soit « ? »",
+    "quartzBothQuestionMarks": "Le jour-du-mois et le jour-de-semaine ne peuvent pas être tous les deux « ? »",
+    "macroRebootUnsupported": "@reboot n'est pas supporté (le navigateur ne peut pas détecter le démarrage système)",
+    "unknownMacro": "Macro inconnue « {macro} »",
+    "unknownAlias": "Nom inconnu « {name} » dans le champ {field}",
+    "weekdayOnNonDom": "« W » n'est autorisé que dans le champ jour-du-mois",
+    "nthOnNonDow": "« # » n'est autorisé que dans le champ jour-de-semaine"
+  },
+  "descriptions": {
+    "whatIsTitle": "Qu'est-ce qu'une expression Cron ?",
+    "whatIs": "Une expression Cron est une chaîne de champs qui décrit une planification. Chaque champ contrôle une unité de temps (minute, heure, jour, mois, jour de semaine). Issue à l'origine du cron d'Unix, la syntaxe a été étendue par Spring (ajoute les secondes) et Quartz (ajoute les secondes et l'année, plus les caractères spéciaux L, W, #).",
+    "fieldRefTitle": "Référence des champs",
+    "specialCharsTitle": "Caractères spéciaux",
+    "modesTitle": "Modes",
+    "dstTitle": "Heure d'été / heure d'hiver",
+    "dst": "Quand le fuseau horaire actif observe l'heure d'été, les planifications dans le créneau de passage à l'heure d'été se déclenchent à la prochaine heure valide, et les planifications dans le créneau de retour à l'heure d'hiver se déclenchent à la première occurrence. Passez en UTC pour éviter l'heure d'été."
+  },
+  "editor": {
+    "title": "Modifier le champ",
+    "preview": "Aperçu",
+    "apply": "Appliquer",
+    "specificValue": "Valeur",
+    "rangeFrom": "De",
+    "rangeTo": "À",
+    "stepStart": "Début",
+    "stepInterval": "Intervalle",
+    "stepEvery": "Tous les",
+    "listSelect": "Sélectionner les valeurs",
+    "specialKind": "Type"
+  },
+  "presetSection": "Préréglages rapides"
+}

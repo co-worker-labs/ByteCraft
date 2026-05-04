@@ -1,0 +1,75 @@
+{
+  "liveClock": {
+    "title": "現在のUnixタイムスタンプ",
+    "pause": "一時停止",
+    "resume": "再開",
+    "localLabel": "ローカル",
+    "utcLabel": "UTC"
+  },
+  "tsToDate": {
+    "title": "タイムスタンプ → 日時",
+    "unitLegend": "単位",
+    "unitAuto": "自動",
+    "unitSeconds": "秒",
+    "unitMilliseconds": "ミリ秒",
+    "inputLabel": "入力",
+    "inputPlaceholder": "例: 1714521600",
+    "paste": "貼り付け",
+    "clear": "クリア",
+    "quickLegend": "クイック",
+    "now": "現在",
+    "todayLocal": "今日 00:00 ローカル",
+    "todayUtc": "今日 00:00 UTC",
+    "rows": {
+      "local": "ローカル",
+      "utc": "UTC",
+      "iso": "ISO 8601",
+      "sql": "SQL",
+      "rfc": "RFC 2822",
+      "dayWeek": "曜日 / 週",
+      "relative": "相対",
+      "timezone": "タイムゾーン"
+    },
+    "weekShort": "W"
+  },
+  "dateToTs": {
+    "title": "日時 → タイムスタンプ",
+    "quickLegend": "クイック",
+    "now": "現在",
+    "todayLocal": "今日 00:00 ローカル",
+    "todayUtc": "今日 00:00 UTC",
+    "dateLabel": "日付",
+    "timeLabel": "時刻",
+    "msLabel": "ミリ秒（オプション）",
+    "tzLegend": "タイムゾーン",
+    "tzLocal": "ローカル",
+    "tzUtc": "UTC",
+    "rows": {
+      "seconds": "秒",
+      "milliseconds": "ミリ秒"
+    }
+  },
+  "errors": {
+    "notNumeric": "正の整数を入力してください",
+    "negative": "負のタイムスタンプはサポートされていません",
+    "tooLong": "長すぎます。マイクロ秒の可能性があります。13桁に切り詰めてください。",
+    "secondsTooLarge": "秒としては大きすぎる値です。ミリ秒に切り替えますか？",
+    "outOfRange": "サポート範囲外です（1970-01-01から9999-12-31）",
+    "pasteFailed": "貼り付けに失敗しました。Ctrl+V / ⌘Vをお使いください"
+  },
+  "toast": {
+    "paused": "一時停止しました",
+    "resumed": "再開しました",
+    "applied": "適用しました"
+  },
+  "description": {
+    "whatIsTitle": "Unixタイムスタンプとは？",
+    "whatIs": "Unixタイムスタンプは、1970-01-01T00:00:00Z（Unixエポック）からの経過秒数です。タイムゾーンに依存しません。同じ数値は常に同じ瞬間を指し、場所に関係ありません。",
+    "secMsTitle": "秒とミリ秒",
+    "secMs": "ほとんどのUnixツールやログファイルは秒（現在10桁）を使用します。JavaScriptのDate.getTime()、JavaのSystem.currentTimeMillis()、多くのWeb APIはミリ秒（現在13桁）を使用します。",
+    "y2k38Title": "2038年問題",
+    "y2k38": "Unix秒を符号付き32ビット整数で格納するシステムは、2038-01-19 03:14:07 UTCにオーバーフローします。モダンな64ビットシステムは影響を受けません。",
+    "tzTitle": "タイムゾーン",
+    "tz": "タイムスタンプ自体にタイムゾーンはありません。人間が読める形式（例: 2024-05-01 00:00:00）は、どのタイムゾーンで表示するかによって変わります。このツールは常にローカルとUTCの両方を表示します。"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "plainTextPlaceholder": "Klartext hier einfügen oder eingeben",
+  "encodedOutput": "Kodierte Ausgabe",
+  "mode": {
+    "label": "Kodierungsmodus",
+    "component": "Komponente",
+    "url": "Gesamte URL",
+    "form": "Formular (+ für Leerzeichen)"
+  },
+  "decodeFailed": "Dekodierung fehlgeschlagen: Die Eingabe ist keine gültige prozentkodierte Zeichenfolge",
+  "descriptions": {
+    "whatIsTitle": "Was ist URL-Kodierung?",
+    "whatIsP1": "URL-Kodierung (auch Prozentkodierung genannt) ist der in RFC 3986 definierte Mechanismus zum Übertragen von Daten innerhalb von URLs. Zeichen, die in einer URL eine reservierte Bedeutung haben (wie ? / # & =) oder außerhalb des druckbaren ASCII-Bereichs liegen, werden als ein oder mehrere %XX-Tripel umgeschrieben, wobei XX der hexadezimale Wert des Bytes ist. Dekodierer kehren den Prozess Byte für Byte um.",
+    "whatIsP2": "Prozentkodierung ist ein Transportformat, kein Sicherheitsmechanismus. Jeder, der eine kodierte Zeichenfolge erhält, kann sie trivial dekodieren. Verwechseln Sie Kodierung nicht mit Verschlüsselung oder Hashing.",
+    "howTitle": "Wie wählt man einen Modus?",
+    "howIntro": "Dieses Tool bietet die drei Kodierungsmodi, denen jeder Entwickler irgendwann begegnet. Der gewählte Modus bestimmt, welche Zeichen kodiert werden.",
+    "howComponent": "Komponentenmodus (encodeURIComponent). Verwenden Sie diesen, wenn Sie einen einzelnen Wert kodieren, der in eine URL eingebettet wird: ein Query-String-Wert, ein Pfadsegment, ein Fragment. Er kodiert jedes URL-reservierte Zeichen, sodass das Ergebnis an jeder Position sicher ist.",
+    "howUrl": "Gesamte-URL-Modus (encodeURI). Verwenden Sie diesen, wenn Sie bereits eine fertige URL haben und nur wirklich unsichere Zeichen (Leerzeichen, Nicht-ASCII) maskieren möchten. Die strukturellen Zeichen : / ? # & = + bleiben intakt, sodass die URL parsbar bleibt.",
+    "howForm": "Formular-Modus (application/x-www-form-urlencoded). Verwenden Sie diesen, wenn Sie einen HTTP-Request-Body mit Content-Type application/x-www-form-urlencoded erstellen. Leerzeichen werden zu +, Zeilenumbrüche zu CRLF (%0D%0A) normalisiert, und der Zeichensatz spiegelt wider, was der Browser beim Absenden eines HTML-Formulars sendet.",
+    "tableTitle": "Referenz der reservierten Zeichen",
+    "tableCaption": "Wie jeder Modus die gängigen reservierten Zeichen kodiert",
+    "tableChar": "Zeichen",
+    "tableComponent": "Komponente",
+    "tableUrl": "Gesamte URL",
+    "tableForm": "Formular",
+    "tableNote": "Komponente kodiert alles außer dem unreservierten Satz A-Z a-z 0-9 - _ . ! ~ * ' ( ). Gesamte URL zusätzlich mit dem strukturellen Satz ; , / ? : @ & = + $ # !. Formular kodiert denselben Satz wie Komponente plus ! ' ( ) ~ (aber nicht *), wandelt Leerzeichen in + statt %20 um und normalisiert \\n / \\r / \\r\\n zu \\r\\n (kodiert als %0D%0A), passend zu dem, was der Browser für application/x-www-form-urlencoded sendet.",
+    "useCasesTitle": "Gängige Anwendungsfälle",
+    "useCasesP1": "Sichere Query-Strings programmatisch erstellen: Wenn Sie URLs wie /search?q=[wert] von Hand zusammenbauen, leiten Sie den Wert durch den Komponentenmodus, damit Zeichen wie & oder = innerhalb des Werts die umgebende URL nicht beschädigen können.",
+    "useCasesP2": "URL in einer anderen URL einbetten: Wenn Sie eine URL als Parameter einer anderen übergeben (z.B. eine OAuth-Redirect-URL), müssen Sie die innere URL mit dem Komponentenmodus kodieren, nicht mit Gesamte URL, damit / : ? & innerhalb der inneren URL nicht als Struktur der äußeren URL fehlinterpretiert werden.",
+    "useCasesP3": "Formulardaten mit fetch übermitteln: Wenn Sie einen Body mit Content-Type: application/x-www-form-urlencoded POSTen, muss der Body mit Formular-Modus-Semantik kodiert werden. Der Formular-Modus dieses Tools erzeugt byt kompatible Ausgabe mit dem, was der Browser sendet.",
+    "limitationsTitle": "Einschränkungen",
+    "limitationsP1": "URL-Kodierung ist keine Verschlüsselung. Jeder kann die Ausgabe mit einem einzigen Funktionsaufruf dekodieren. Verwenden Sie Kodierung niemals, um Geheimnisse zu verbergen.",
+    "limitationsP2": "Die Wahl des Modus ist entscheidend. Eine gesamte URL durch den Komponentenmodus zu schicken, zerstört die URL (jedes / wird zu %2F). Einen Query-Wert durch den Gesamte-URL-Modus zu schicken, kann reservierte Zeichen gefährlich lassen (ein & im Wert sieht immer noch wie ein Parametertrenner aus). Im Zweifelsfall wählen Sie Komponente."
+  }
+}

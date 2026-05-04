@@ -1,0 +1,33 @@
+{
+  "dropImage": "Solte uma imagem aqui ou clique para selecionar",
+  "supportedFormats": "Suporta PNG, JPG, WebP, GIF, BMP, SVG",
+  "outputFormat": "Formato de saída",
+  "formatUnsupported": "Não suportado neste navegador",
+  "formatNotSupported": "Este formato de imagem não é suportado. Use PNG, JPG, WebP, GIF, BMP ou SVG.",
+  "quality": "Qualidade",
+  "resize": "Redimensionar",
+  "noResize": "Tamanho original",
+  "byPercent": "Por porcentagem",
+  "customSize": "Tamanho personalizado",
+  "width": "Largura",
+  "height": "Altura",
+  "keepAspectRatio": "Manter proporção",
+  "download": "Baixar",
+  "copyToClipboard": "Copiar para área de transferência",
+  "copiedToClipboard": "Copiado para área de transferência como PNG",
+  "reselect": "Selecionar novamente",
+  "original": "Original",
+  "compressed": "Comprimido",
+  "saved": "Economizou {percent}%",
+  "encodingFailed": "Falha na codificação para este formato",
+  "processing": "Processando...",
+  "firstFrameOnly": "Imagem animada — apenas o primeiro quadro é usado",
+  "dragToCompare": "Arraste para comparar",
+  "descriptions": {
+    "title": "Sobre o compressor de imagens",
+    "p1": "Comprima, redimensione e converta imagens diretamente no seu navegador. Nenhum dado é enviado — todo processamento é local.",
+    "p2": "Suporta formatos de saída PNG, JPG e WebP. WebP oferece a melhor taxa de compressão para imagens web.",
+    "p3": "Use o controle de qualidade para equilibrar tamanho do arquivo e qualidade da imagem. Qualidade menor significa arquivos menores.",
+    "p4": "Copiar para área de transferência converte a imagem para PNG, independentemente do formato de saída selecionado."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "printableCharacters": "Caractères imprimables",
+  "controlCodeCharts": "Tableaux des codes de contrôle",
+  "description": {
+    "text": "ASCII signifie American Standard Code for Information Interchange. Les ordinateurs ne comprennent que les nombres, donc un code ASCII est la représentation numérique d'un caractère comme « a » ou « @ », ou d'une action. ASCII a été développé il y a longtemps et les caractères non imprimables sont rarement utilisés pour leur fonction d'origine. Ci-dessous se trouve la table de caractères ASCII, qui inclut les descriptions des 32 premiers caractères non imprimables. ASCII a été conçu à l'origine pour les téléscripteurs, les descriptions sont donc parfois obscures. Si quelqu'un vous demande votre CV au format ASCII, cela signifie simplement qu'il veut du texte brut sans mise en forme (pas de tabulations, pas de gras, pas de souligné), le format brut que tout ordinateur peut comprendre. Cela lui permet d'importer facilement le fichier dans ses propres applications. Le Bloc-notes crée du texte ASCII, et dans MS Word vous pouvez enregistrer un fichier en « texte seulement »."
+  },
+  "tableHeaders": {
+    "decimal": "Décimal",
+    "binary": "Binaire",
+    "oct": "Oct",
+    "hex": "Hex",
+    "abbr": "Abrév.",
+    "desc": "Desc",
+    "html": "HTML",
+    "glyph": "Glyphe"
+  },
+  "tip": "💡 Survolez une ligne pour voir les détails. Utilisez la barre de recherche pour trouver rapidement un caractère par sa valeur décimale, hexadécimale ou son glyphe.",
+  "searchPlaceholder": "Rechercher par décimal, hex ou caractère..."
+}

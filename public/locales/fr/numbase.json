@@ -1,0 +1,24 @@
+{
+  "tabConverter": "Convertisseur",
+  "tabReference": "Référence",
+  "bitWidth": "Largeur de bits",
+  "decimal": "Décimal",
+  "hexadecimal": "Hexadécimal",
+  "octal": "Octal",
+  "binary": "Binaire",
+  "asciiChar": "ASCII",
+  "unicodePoint": "Unicode",
+  "invalidInput": "Entrée invalide",
+  "overflowWarning": "La valeur dépasse la largeur de bits",
+  "referenceTitle": "Référence des bases (0-15)",
+  "refDec": "DÉC",
+  "refHex": "HEX",
+  "refOct": "OCT",
+  "refBin": "BIN",
+  "descriptions": {
+    "whatIsTitle": "Qu'est-ce que la conversion de base numérique ?",
+    "whatIs": "La conversion de base numérique transforme un nombre d'un système de numération positionnel à un autre. Les ordinateurs utilisent le binaire (base 2), tandis que les humains travaillent généralement en décimal (base 10). L'hexadécimal (base 16) et l'octal (base 8) offrent des représentations compactes des données binaires, couramment utilisées dans le débogage, les protocoles réseau, les codes couleur et les permissions de fichiers.",
+    "twosComplementTitle": "Complément à deux",
+    "twosComplement": "Le complément à deux est la méthode standard pour représenter les entiers signés en binaire. Le bit de poids fort (MSB) sert de bit de signe : 0 pour positif, 1 pour négatif. Pour obtenir la valeur négative, inversez tous les bits et ajoutez 1. Par exemple, en mode 8 bits, -1 est représenté par 11111111 (0xFF)."
+  }
+}

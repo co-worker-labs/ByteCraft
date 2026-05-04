@@ -1,0 +1,75 @@
+{
+  "liveClock": {
+    "title": "Timestamp Unix atual",
+    "pause": "Pausar",
+    "resume": "Retomar",
+    "localLabel": "Local",
+    "utcLabel": "UTC"
+  },
+  "tsToDate": {
+    "title": "Timestamp → DateTime",
+    "unitLegend": "Unidade",
+    "unitAuto": "Auto",
+    "unitSeconds": "Segundos",
+    "unitMilliseconds": "Milissegundos",
+    "inputLabel": "Entrada",
+    "inputPlaceholder": "ex: 1714521600",
+    "paste": "Colar",
+    "clear": "Limpar",
+    "quickLegend": "Rápido",
+    "now": "Agora",
+    "todayLocal": "Hoje 00:00 Local",
+    "todayUtc": "Hoje 00:00 UTC",
+    "rows": {
+      "local": "Local",
+      "utc": "UTC",
+      "iso": "ISO 8601",
+      "sql": "SQL",
+      "rfc": "RFC 2822",
+      "dayWeek": "Dia / Semana",
+      "relative": "Relativo",
+      "timezone": "Fuso horário"
+    },
+    "weekShort": "S"
+  },
+  "dateToTs": {
+    "title": "DateTime → Timestamp",
+    "quickLegend": "Rápido",
+    "now": "Agora",
+    "todayLocal": "Hoje 00:00 Local",
+    "todayUtc": "Hoje 00:00 UTC",
+    "dateLabel": "Data",
+    "timeLabel": "Hora",
+    "msLabel": "Milissegundos (opcional)",
+    "tzLegend": "Fuso horário",
+    "tzLocal": "Local",
+    "tzUtc": "UTC",
+    "rows": {
+      "seconds": "Segundos",
+      "milliseconds": "Milissegundos"
+    }
+  },
+  "errors": {
+    "notNumeric": "Deve ser um número inteiro positivo",
+    "negative": "Timestamps negativos não são suportados",
+    "tooLong": "Muito longo — parece microssegundos. Trunque para 13 dígitos.",
+    "secondsTooLarge": "Valor muito grande para segundos. Mudar para milissegundos?",
+    "outOfRange": "Fora do intervalo suportado (1970-01-01 a 9999-12-31)",
+    "pasteFailed": "Colagem indisponível — use Ctrl+V / ⌘V"
+  },
+  "toast": {
+    "paused": "Pausado",
+    "resumed": "Retomado",
+    "applied": "Aplicado"
+  },
+  "description": {
+    "whatIsTitle": "O que é um timestamp Unix?",
+    "whatIs": "Um timestamp Unix é o número de segundos decorridos desde 1970-01-01T00:00:00Z (a era Unix). É independente de fuso horário — o mesmo número sempre se refere ao mesmo instante, independentemente de onde você está.",
+    "secMsTitle": "Segundos vs Milissegundos",
+    "secMs": "A maioria das ferramentas Unix e arquivos de log usam segundos (10 dígitos hoje). O Date.getTime() do JavaScript, System.currentTimeMillis() do Java e muitas APIs web usam milissegundos (13 dígitos hoje).",
+    "y2k38Title": "O problema do ano 2038",
+    "y2k38": "Sistemas que armazenam segundos Unix em um inteiro de 32 bits com sinal transbordam em 2038-01-19 03:14:07 UTC. Sistemas modernos de 64 bits não são afetados.",
+    "tzTitle": "Fusos horários",
+    "tz": "Um timestamp em si não tem fuso horário. A forma legível (ex: 2024-05-01 00:00:00) depende de qual fuso horário você o exibe. Esta ferramenta sempre mostra Local e UTC."
+  }
+}

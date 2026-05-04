@@ -1,0 +1,24 @@
+{
+  "plaintext": "平文",
+  "ciphertext": "暗号文",
+  "plaintextPlaceholder": "平文をここに貼り付けまたは入力",
+  "passphrasePlaceholder": "パスフレーズをここに貼り付けまたは入力",
+  "ciphertextOutput": "暗号文出力",
+  "algorithms": "アルゴリズム:",
+  "blockMode": "ブロックモード:",
+  "paddingScheme": "パディング方式:",
+  "droppedWords": "破棄ワード数:",
+  "descriptions": {
+    "aesTitle": "AES",
+    "aes": "AES（Advanced Encryption Standard）は米国連邦情報処理規格（FIPS）です。15の設計案が評価された5年間の選定プロセスを経て採用されました。",
+    "desTitle": "DES、Triple DES",
+    "des": "DESは以前主流だった暗号化アルゴリズムで、連邦情報処理規格（FIPS）として公開されていました。現在は鍵サイズが小さいため安全ではないと見なされています。",
+    "tripleDes": "Triple DESは鍵サイズを増やすために各ブロックにDESを3回適用します。この形式では安全だと考えられています。",
+    "rabbitTitle": "Rabbit",
+    "rabbit": "Rabbitは高性能なストリーム暗号で、eSTREAMポートフォリオのファイナリストです。22の設計案が評価された3年半のプロセスを経て選ばれた4つの設計の1つです。",
+    "rc4Title": "RC4、RC4Drop",
+    "rc4": "RC4は広く使われているストリーム暗号です。SSLやWEPなどの一般的なプロトコルで使用されています。シンプルさとスピードが特徴ですが、アルゴリズムの歴史からセキュリティの信頼性には疑問があります。",
+    "rc4drop": "キーストリームの最初の数バイトが強い非ランダム性を持ち、鍵の情報を漏洩することが発見されました。キーストリームの初期部分を破棄することでこの攻撃を防げます。この修正アルゴリズムは従来RC4-dropと呼ばれています。",
+    "rc4dropConfig": "デフォルトでは192ワード（768バイト）が破棄されますが、任意のワード数に設定できます。"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "upload": {
+    "drop": "Arrastra y suelta un archivo .db, .sqlite o .sqlite3 aquí",
+    "click": "o haz clic para elegir un archivo",
+    "tryDemo": "Probar base de datos de ejemplo",
+    "releaseToLoad": "Suelta para cargar",
+    "unsupported": "Tipo de archivo no soportado",
+    "tooLarge": "El archivo supera el límite de 200 MB.",
+    "invalidHeader": "No es un archivo de base de datos SQLite válido.",
+    "engineFailed": "No se pudo cargar el motor SQLite. Verifica la conexión o recarga la página.",
+    "initializing": "Inicializando motor…",
+    "reading": "Leyendo archivo… {loaded} / {total}",
+    "privacy": "Todos los datos se procesan localmente en tu navegador"
+  },
+  "info": {
+    "tables": "{count, plural, =1 {1 tabla} other {# tablas}}",
+    "views": "{count, plural, =1 {1 vista} other {# vistas}}",
+    "indexes": "{count, plural, =1 {1 índice} other {# índices}}",
+    "triggers": "{count, plural, =1 {1 trigger} other {# triggers}}",
+    "close": "Cerrar"
+  },
+  "sidebar": {
+    "search": "Buscar…",
+    "tables": "TABLAS",
+    "views": "VISTAS",
+    "indexes": "ÍNDICES",
+    "triggers": "TRIGGERS",
+    "showSystem": "Mostrar sistema",
+    "noResults": "Sin resultados",
+    "collapse": "Colapsar barra lateral",
+    "expand": "Expandir barra lateral"
+  },
+  "schema": {
+    "columns": "Columnas",
+    "foreignKeys": "Claves foráneas",
+    "indexes": "Índices",
+    "rowCount": "Filas: {count}",
+    "rowCountLoading": "Contando filas…",
+    "name": "Nombre",
+    "type": "Tipo",
+    "nullable": "Nulable",
+    "default": "Por defecto",
+    "pk": "PK",
+    "from": "Desde",
+    "to": "Hacia",
+    "onDelete": "ON DELETE",
+    "onUpdate": "ON UPDATE",
+    "unique": "Único",
+    "trigger": "SQL del Trigger"
+  },
+  "editor": {
+    "run": "Ejecutar",
+    "stop": "Detener",
+    "format": "Formatear",
+    "compress": "Comprimir",
+    "clear": "Limpiar",
+    "history": "Historial",
+    "noHistory": "Sin consultas aún",
+    "clearHistory": "Limpiar historial",
+    "placeholder": "-- Escribe consultas SELECT aquí. Ctrl/Cmd+Enter para ejecutar."
+  },
+  "result": {
+    "running": "Ejecutando consulta…",
+    "aborted": "Consulta cancelada",
+    "rowsRange": "Filas {from}–{to}",
+    "elapsed": "{ms} ms",
+    "loadMore": "Cargar más",
+    "loadAll": "Cargar todo (máx. 100k)",
+    "loadCeilingHit": "Se detuvo en el límite de 100.000 filas.",
+    "exportCsv": "Exportar CSV",
+    "exportJson": "Exportar JSON",
+    "empty": "Sin resultados",
+    "tabName": "Resultado {n}",
+    "errorTab": "Error",
+    "rejectedReadonly": "Solo se permiten sentencias de solo lectura (se recibió: {keyword}).",
+    "rejectedPragma": "PRAGMA \"{name}\" no está en la lista blanca de solo lectura.",
+    "rejectedCte": "CTE con modificación de datos detectada; rechazada.",
+    "exportConfirm": "El cursor no ha terminado. ¿Exportar las {loaded} filas actuales, o cargar todo primero?",
+    "exportLoaded": "Exportar filas actuales",
+    "exportLoadAll": "Cargar todo y exportar"
+  },
+  "cell": {
+    "null": "NULL",
+    "empty": "(vacío)",
+    "blob": "BLOB · {bytes} B",
+    "expandLong": "Mostrar texto completo",
+    "copyLong": "Copiar"
+  },
+  "status": {
+    "engineRestarted": "Motor de base de datos reiniciado. Tus datos fueron recargados.",
+    "abortShortcut": "Presiona Esc para cancelar"
+  }
+}

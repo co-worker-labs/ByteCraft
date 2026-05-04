@@ -38,9 +38,12 @@ export async function generateMetadata({ params }: Props) {
     alternates: {
       languages: {
         "x-default": SITE_URL + "/",
-        en: SITE_URL + "/",
-        "zh-CN": SITE_URL + "/zh-CN",
-        "zh-TW": SITE_URL + "/zh-TW",
+        ...Object.fromEntries(
+          routing.locales.map((loc) => {
+            const prefix = loc === routing.defaultLocale ? "" : `/${loc}`;
+            return [loc, SITE_URL + prefix + "/"];
+          })
+        ),
       },
     },
     icons: {

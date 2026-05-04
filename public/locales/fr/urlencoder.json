@@ -1,0 +1,35 @@
+{
+  "plainTextPlaceholder": "Collez ou saisissez le texte brut ici",
+  "encodedOutput": "Résultat encodé",
+  "mode": {
+    "label": "Mode d'encodage",
+    "component": "Composant",
+    "url": "URL complète",
+    "form": "Formulaire (+ pour les espaces)"
+  },
+  "decodeFailed": "Échec du décodage : l'entrée n'est pas une chaîne encodée en pourcentage valide",
+  "descriptions": {
+    "whatIsTitle": "Qu'est-ce que l'encodage d'URL ?",
+    "whatIsP1": "L'encodage d'URL (aussi appelé encodage en pourcentage) est le mécanisme défini par la RFC 3986 pour transporter des données dans les URL. Les caractères ayant une signification réservée dans une URL (comme ? / # & =) ou ceux hors de la plage ASCII imprimable sont réécrits sous forme d'un ou plusieurs triplets %XX, où XX est la valeur hexadécimale de l'octet. Les décodeurs inversent le processus octet par octet.",
+    "whatIsP2": "L'encodage en pourcentage est un format de transport, pas un mécanisme de sécurité. Toute personne qui reçoit une chaîne encodée peut la décoder facilement. Ne confondez pas l'encodage avec le chiffrement ou le hachage.",
+    "howTitle": "Comment choisir un mode",
+    "howIntro": "Cet outil expose les trois modes d'encodage que tout développeur finit par rencontrer. Le mode choisi détermine quels caractères seront encodés.",
+    "howComponent": "Mode Composant (encodeURIComponent). Utilisez ce mode pour encoder une valeur unique qui sera intégrée dans une URL (une valeur de chaîne de requête, un segment de chemin, un fragment). Il encode tous les caractères réservés des URL pour que le résultat soit sûr dans n'importe quel emplacement.",
+    "howUrl": "Mode URL complète (encodeURI). Utilisez ce mode quand vous avez déjà une URL assemblée et que vous voulez seulement échapper les caractères réellement problématiques (espaces, non-ASCII). Il laisse les caractères structurels : / ? # & = + intacts pour que l'URL reste analysable.",
+    "howForm": "Mode Formulaire (application/x-www-form-urlencoded). Utilisez ce mode pour construire un corps de requête HTTP dont le Content-Type est application/x-www-form-urlencoded. L'espace devient +, les sauts de ligne sont normalisés en CRLF (%0D%0A), et le jeu de caractères reflète ce que le navigateur envoie lors de la soumission d'un formulaire HTML.",
+    "tableTitle": "Référence des caractères réservés",
+    "tableCaption": "Comment chaque mode encode les caractères réservés courants",
+    "tableChar": "Caractère",
+    "tableComponent": "Composant",
+    "tableUrl": "URL complète",
+    "tableForm": "Formulaire",
+    "tableNote": "Le mode Composant encode tout sauf le jeu non réservé A-Z a-z 0-9 - _ . ! ~ * ' ( ). Le mode URL complète préserve en plus le jeu structurel ; , / ? : @ & = + $ # !. Le mode Formulaire encode le même jeu que Composant plus ! ' ( ) ~ (mais pas *), transforme l'espace en + au lieu de %20, et normalise \\n / \\r / \\r\\n en \\r\\n (encodé %0D%0A), ce qui correspond à ce que le navigateur envoie pour une soumission application/x-www-form-urlencoded.",
+    "useCasesTitle": "Cas d'utilisation courants",
+    "useCasesP1": "Construire des chaînes de requête sûres : quand vous construisez des URL comme /search?q=[valeur] manuellement, passez la valeur par le mode Composant pour que les caractères comme & ou = dans la valeur ne corrompent pas l'URL environnante.",
+    "useCasesP2": "Intégrer une URL dans une autre URL : quand vous passez une URL comme paramètre d'une autre (par exemple, une URL de redirection OAuth), vous devez encoder l'URL interne avec le mode Composant (pas URL complète) pour que les / : ? & de l'URL interne ne soient pas interprétés comme la structure de l'URL externe.",
+    "useCasesP3": "Soumettre des données de formulaire avec fetch : quand vous POSTez un corps avec Content-Type: application/x-www-form-urlencoded, le corps doit être encodé avec la sémantique du mode Formulaire. La sortie du mode Formulaire de cet outil est compatible octet pour octet avec ce que le navigateur envoie.",
+    "limitationsTitle": "Limites",
+    "limitationsP1": "L'encodage d'URL n'est pas un chiffrement. N'importe qui peut décoder la sortie avec un seul appel de fonction. N'utilisez jamais l'encodage pour cacher des secrets.",
+    "limitationsP2": "Le choix du mode est important. Passer une URL complète par le mode Composant casse l'URL (chaque / devient %2F). Passer une valeur de requête par le mode URL complète peut laisser des caractères réservés dangereux (un & dans la valeur ressemble toujours à un séparateur de paramètre). En cas de doute, choisissez Composant."
+  }
+}

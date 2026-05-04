@@ -1,0 +1,31 @@
+{
+  "encodedOutput": "Saída codificada",
+  "plainTextPlaceholder": "Cole ou digite o texto simples aqui",
+  "basicAuthentication": "Autenticação Basic",
+  "username": "Usuário",
+  "password": "Senha",
+  "descriptions": {
+    "whatIsTitle": "O que é codificação Base64?",
+    "whatIsP1": "A codificação Base64 é uma forma de converter dados (geralmente binários) no conjunto de caracteres ASCII. É importante mencionar que Base64 não é uma técnica de criptografia ou compressão, embora às vezes possa ser confundida com criptografia pela forma como parece ofuscar os dados. Na verdade, o tamanho de uma informação codificada em Base64 é 1,3333 vezes o tamanho original dos dados.",
+    "whatIsP2": "Base64 é a técnica de codificação base mais usada, com Base16 e Base32 sendo os outros dois esquemas comuns.",
+    "whatIsP3": "A codificação Base64 é uma das formas mais comuns de converter dados binários em texto ASCII puro. É um formato muito útil para comunicação entre sistemas que não lidam facilmente com dados binários, como imagens em markup HTML ou requisições web.",
+    "howTitle": "Como funciona o Base64?",
+    "howP1": "Converter dados para Base64 é um processo de várias etapas. Veja como funciona para strings de texto:",
+    "howStep1": "Calcular a versão binária de 8 bits do texto de entrada",
+    "howStep2": "Reagrupar a versão de 8 bits em blocos de 6 bits",
+    "howStep3": "Encontrar a versão decimal de cada bloco binário de 6 bits",
+    "howStep4": "Encontrar o símbolo Base64 para cada valor decimal usando uma tabela de consulta",
+    "tableCaption": "Tabela de codificação Base64",
+    "tableValue": "Valor",
+    "tableChar": "Caractere",
+    "whyTitle": "Por que usar codificação Base64?",
+    "whyP1": "Enviar informações em formato binário pode ser arriscado, pois nem todos os aplicativos ou sistemas de rede lidam com dados binários brutos. Por outro lado, o conjunto de caracteres ASCII é amplamente conhecido e muito simples de processar para a maioria dos sistemas.",
+    "whyP2": "Por exemplo, servidores de email esperam dados textuais, então ASCII é tipicamente usado. Portanto, se você quiser enviar imagens ou qualquer outro arquivo binário para um servidor de email, primeiro precisa codificá-lo em formato baseado em texto, preferencialmente ASCII. É aí que a codificação Base64 se torna extremamente útil.",
+    "useCasesTitle": "Casos de uso comuns do Base64",
+    "useCasesP1": "Você também pode usar Base64 para representar dados binários de forma compatível com HTML, JavaScript e CSS. Por exemplo, é possível incorporar uma imagem inline em um arquivo CSS ou JavaScript usando Base64.",
+    "useCasesP2": "É possível usar Base64 para converter dados de formulário ou JSON em uma string com um conjunto reduzido de caracteres seguro para URLs. No entanto, devido à forma como certos servidores podem interpretar os caracteres + e /, recomenda-se usar encodeURIComponent.",
+    "limitationsTitle": "Limitações do Base64",
+    "limitationsP1": "Base64 não é, de forma alguma, um método seguro de criptografia.",
+    "limitationsP2": "Base64 também não é um método de compressão. Codificar uma string em Base64 geralmente resulta em uma saída 33% maior."
+  }
+}
