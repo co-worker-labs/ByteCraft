@@ -1,8 +1,8 @@
 {
   "password": {
-    "title": "Gerador de Senhas Aleatórias Seguras",
+    "title": "Gerador de Senhas e Verificador de Força",
     "shortTitle": "Gerador de Senhas",
-    "description": "Gere senhas aleatórias criptograficamente seguras instantaneamente. Gerador de senhas gratuito online com comprimento e opções de caracteres personalizáveis."
+    "description": "Gere senhas criptograficamente seguras e verifique a força da senha instantaneamente. Ferramenta online gratuita com opções personalizáveis e análise em tempo real."
   },
   "ascii": {
     "title": "Tabela ASCII - Referência Completa de Caracteres",

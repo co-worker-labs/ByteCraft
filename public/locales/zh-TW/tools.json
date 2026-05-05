@@ -1,9 +1,9 @@
 {
   "password": {
-    "title": "隨機密碼產生器 - 安全強密碼線上產生",
+    "title": "密碼產生器 & 強度檢測 - 安全密碼線上工具",
     "shortTitle": "密碼產生器",
-    "description": "產生加密安全的隨機密碼。線上密碼產生器，支援自訂長度和字元類型，完全免費，100%客戶端處理。",
-    "searchTerms": "mimachanshengqi mmcsq suiji"
+    "description": "產生加密安全的隨機密碼，即時檢測密碼強度。免費線上工具，支援自訂選項和 zxcvbn 強度分析。",
+    "searchTerms": "mimachanshengqi mcscq mimaqiangdu mimajiance anquan"
   },
   "ascii": {
     "title": "ASCII 碼表 - 完整字元參照",

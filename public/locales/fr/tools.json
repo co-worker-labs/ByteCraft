@@ -1,8 +1,8 @@
 {
   "password": {
-    "title": "Générateur de mots de passe aléatoires sécurisés",
-    "shortTitle": "Générateur de mots de passe",
-    "description": "Générez instantanément des mots de passe aléatoires et cryptographiquement sûrs. Générateur de mots de passe gratuit en ligne avec longueur et options de caractères personnalisables."
+    "title": "Générateur de Mots de Passe et Vérificateur de Robustesse",
+    "shortTitle": "Générateur de Mots de Passe",
+    "description": "Générez des mots de passe cryptographiquement sûrs et vérifiez leur robustesse instantanément. Outil en ligne gratuit avec options personnalisables et analyse en temps réel."
   },
   "ascii": {
     "title": "Table ASCII - Référence complète des caractères",

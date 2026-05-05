@@ -11,11 +11,14 @@ interface TabItem {
 interface NeonTabsProps {
   tabs: TabItem[];
   className?: string;
+  selectedIndex?: number;
+  onChange?: (index: number) => void;
 }
 
-export function NeonTabs({ tabs, className = "" }: NeonTabsProps) {
+export function NeonTabs({ tabs, className = "", selectedIndex, onChange }: NeonTabsProps) {
+  const groupProps = selectedIndex !== undefined ? { selectedIndex, onChange } : {};
   return (
-    <Tab.Group>
+    <Tab.Group {...groupProps}>
       <div className="overflow-x-auto scrollbar-none -mx-4 px-4">
         <Tab.List className={`flex border-b border-border-default min-w-max ${className}`}>
           {tabs.map((tab, index) => (

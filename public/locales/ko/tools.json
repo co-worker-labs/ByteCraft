@@ -1,9 +1,9 @@
 {
   "password": {
-    "title": "안전한 무작위 비밀번호 생성기",
+    "title": "비밀번호 생성기 & 강도 검사 도구",
     "shortTitle": "비밀번호 생성기",
-    "description": "암호학적으로 안전한 무작위 비밀번호를 즉시 생성합니다. 길이와 문자 옵션을 설정할 수 있는 무료 온라인 비밀번호 생성기.",
-    "searchTerms": "bimilbeonhosaengseonggi bbhsg anjeon suiji"
+    "description": "암호학적으로 안전한 비밀번호를 생성하고 강도를 실시간으로 검사합니다. 무료 온라인 도구, zxcvbn 강도 분석.",
+    "searchTerms": "bimilbeonhosaengseonggi bbhs gangdo jeomgeom anjeon"
   },
   "ascii": {
     "title": "ASCII 테이블 - 완전한 문자 참조",

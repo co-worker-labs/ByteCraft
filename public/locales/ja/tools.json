@@ -1,9 +1,9 @@
 {
   "password": {
-    "title": "安全なランダムパスワード生成器",
+    "title": "パスワード生成 & 強度チェックツール",
     "shortTitle": "パスワード生成",
-    "description": "暗号論的に安全なランダムパスワードを即座に生成。無料のオンラインパスワード生成器で、長さや文字種を自由にカスタマイズ可能。",
-    "searchTerms": "pasuwaadoseisei pwseisei suiji anzen angou"
+    "description": "暗号論的に安全なパスワードを生成し、強度をリアルタイムでチェック。無料のオンラインツール。zxcvbnによる強度分析。",
+    "searchTerms": "pasuwaadoseisei pws tsuyosa kensa anzen"
   },
   "ascii": {
     "title": "ASCIIテーブル - 完全キャラクターリファレンス",

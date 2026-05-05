@@ -20,7 +20,6 @@ import {
   SavedRecord,
   PasswordLength,
   PasswordType,
-  calculateEntropy,
 } from "../../../libs/password/main";
 
 import { showToast } from "../../../libs/toast";
@@ -30,6 +29,9 @@ import { useTranslations } from "next-intl";
 import { CopyButton } from "../../../components/ui/copy-btn";
 import { Button } from "../../../components/ui/button";
 import { StyledCheckbox } from "../../../components/ui/input";
+import { NeonTabs } from "../../../components/ui/tabs";
+import { analyzeStrength } from "../../../libs/password/strength";
+import type { StrengthResult } from "../../../libs/password/strength";
 
 import {
   Clipboard,
@@ -40,7 +42,7 @@ import {
   EyeOff,
   Lock,
   KeyRound,
-  BarChart3,
+  ShieldCheck,
 } from "lucide-react";
 
 const default_type = "Random";
@@ -51,40 +53,38 @@ const alert_gen_timeout = 1000;
 const alert_saved_timeout = 1000;
 const saved_password_auto_hide_ms = 5000;
 
-function getPasswordLevelStyle(type: PasswordType, password: string[], characters: number) {
-  const entropy = calculateEntropy(password, type, characters);
+function getScoreStyle(score: 0 | 1 | 2 | 3 | 4) {
+  const styles = [
+    { width: "20%", color: "var(--color-danger)", label: "strengthVeryWeak" },
+    { width: "40%", color: "var(--color-danger)", label: "strengthWeak" },
+    { width: "60%", color: "orange", label: "strengthFair" },
+    { width: "80%", color: "var(--color-accent-cyan)", label: "strengthStrong" },
+    { width: "100%", color: "var(--color-accent-cyan)", label: "strengthVeryStrong" },
+  ];
+  return styles[score];
+}
 
-  let width = undefined;
-  let backgroundColor = undefined;
-  let strengthLabel = undefined;
+function SavedCardStrengthBar({ password }: { password: string }) {
+  const [result, setResult] = useState<StrengthResult | null>(null);
 
-  if (entropy >= 80) {
-    width = "100%";
-    backgroundColor = "var(--color-accent-cyan)";
-    strengthLabel = "strengthVeryStrong";
-  } else if (entropy >= 60) {
-    width = "75%";
-    backgroundColor = "var(--color-accent-cyan)";
-    strengthLabel = "strengthStrong";
-  } else if (entropy >= 40) {
-    width = "50%";
-    backgroundColor = "orange";
-    strengthLabel = "strengthGood";
-  } else if (entropy >= 20) {
-    width = "25%";
-    backgroundColor = "var(--color-danger)";
-    strengthLabel = "strengthFair";
-  } else {
-    width = "0%";
-    strengthLabel = entropy >= 10 ? "strengthWeak" : "strengthVeryWeak";
+  useEffect(() => {
+    if (!password) return;
+    analyzeStrength(password).then(setResult);
+  }, [password]);
+
+  if (!result) {
+    return <div className="h-1 bg-bg-elevated" />;
   }
 
-  return {
-    width: width,
-    backgroundColor: backgroundColor,
-    entropy: Math.round(entropy),
-    strengthLabel,
-  };
+  const style = getScoreStyle(result.score);
+  return (
+    <div className="h-1 bg-bg-elevated">
+      <div
+        className="h-full transition-all"
+        style={{ width: style.width, backgroundColor: style.color }}
+      />
+    </div>
+  );
 }
 
 function SavedPasswords({
@@ -202,11 +202,6 @@ function SavedPasswords({
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
         {list.map((record, index) => {
-          const { width, backgroundColor } = getPasswordLevelStyle(
-            record.type,
-            record.password,
-            record.characters
-          );
           const datetime = new Date(record.timestamp).toLocaleString();
           const rid = passwordHash(record.password, record.type);
           const isRecordVisible = visibleMap[rid] ?? false;
@@ -244,12 +239,7 @@ function SavedPasswords({
                   }}
                 />
               </div>
-              <div className="h-1 bg-bg-elevated">
-                <div
-                  className="h-full transition-all"
-                  style={{ width: width, backgroundColor: backgroundColor }}
-                />
-              </div>
+              <SavedCardStrengthBar password={copyPassword(record.type, record.password)} />
             </div>
           );
         })}
@@ -258,12 +248,196 @@ function SavedPasswords({
   );
 }
 
+function StrengthBar({ password }: { password: string }) {
+  const t = useTranslations("password");
+  const [result, setResult] = useState<StrengthResult | null>(null);
+
+  useEffect(() => {
+    if (!password) return;
+    analyzeStrength(password).then(setResult);
+  }, [password]);
+
+  if (!password || !result) {
+    return <div className="h-2 w-full bg-bg-elevated overflow-hidden rounded-full" />;
+  }
+
+  const style = getScoreStyle(result.score);
+
+  return (
+    <>
+      <div className="h-2 w-full bg-bg-elevated overflow-hidden">
+        <div
+          className="h-full rounded-full transition-all duration-500"
+          style={{ width: style.width, backgroundColor: style.color }}
+        />
+      </div>
+      <div className="flex justify-between items-center mt-2.5 px-3 pb-1">
+        <div className="flex items-center gap-2">
+          <span
+            className="w-2 h-2 rounded-full shrink-0"
+            style={{ backgroundColor: style.color }}
+          />
+          <span className="text-sm font-semibold" style={{ color: style.color }}>
+            {t(style.label)}
+          </span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="text-sm text-fg-muted">{result.score} / 4</span>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function CrackTimeDisplay({ result }: { result: StrengthResult }) {
+  const t = useTranslations("password");
+
+  let timeText: string;
+  if (result.crackTimeUnit === "instant") {
+    timeText = t("crackTimeInstant");
+  } else {
+    const unitKey =
+      `crackTime${result.crackTimeUnit.charAt(0).toUpperCase()}${result.crackTimeUnit.slice(1)}` as string;
+    timeText = t(unitKey, { n: result.crackTimeValue });
+  }
+
+  return (
+    <div className="mt-3 px-3">
+      <span className="text-xl font-bold" style={{ color: getScoreStyle(result.score).color }}>
+        {timeText}
+      </span>
+      <span className="text-sm text-fg-muted ml-2">{t("crackTimeLabel")}</span>
+    </div>
+  );
+}
+
+function Checker({ initialInput }: { initialInput: string }) {
+  const t = useTranslations("password");
+  const [input, setInput] = useState(initialInput);
+  const [prevInitial, setPrevInitial] = useState(initialInput);
+  if (initialInput !== prevInitial) {
+    setPrevInitial(initialInput);
+    setInput(initialInput);
+  }
+  const [visible, setVisible] = useState(false);
+  const [result, setResult] = useState<StrengthResult | null>(null);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    if (!input) return;
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => {
+      analyzeStrength(input).then(setResult);
+    }, 300);
+    return () => {
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+    };
+  }, [input]);
+
+  const style = result ? getScoreStyle(result.score) : null;
+  const activeResult = input ? result : null;
+  const activeStyle = activeResult ? style : null;
+
+  return (
+    <section>
+      <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
+        <Lock size={18} className="text-accent-cyan mt-0.5 shrink-0" />
+        <span className="text-sm text-fg-secondary leading-relaxed">{t("localGenerated")}</span>
+      </div>
+
+      <div className="relative mt-2">
+        <div className="flex items-center relative py-3 px-4">
+          <input
+            type={visible ? "text" : "password"}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder={t("enterPassword")}
+            className="w-full text-xl font-mono bg-transparent outline-none text-fg-primary placeholder:text-fg-muted pr-20"
+            autoFocus
+          />
+          <div className="flex items-center gap-1">
+            {input && (
+              <button
+                type="button"
+                className="text-fg-muted hover:text-danger transition-colors cursor-pointer p-1"
+                onClick={() => {
+                  setInput("");
+                }}
+              >
+                <Trash2 size={16} />
+              </button>
+            )}
+            <button
+              type="button"
+              className="text-fg-muted hover:text-accent-cyan transition-colors cursor-pointer p-1"
+              onClick={() => setVisible(!visible)}
+            >
+              {visible ? <EyeOff size={18} /> : <Eye size={18} />}
+            </button>
+          </div>
+        </div>
+
+        {activeResult && activeStyle && (
+          <>
+            <div className="h-2 w-full bg-bg-elevated overflow-hidden">
+              <div
+                className="h-full rounded-full transition-all duration-500"
+                style={{ width: activeStyle.width, backgroundColor: activeStyle.color }}
+              />
+            </div>
+            <div className="flex justify-between items-center mt-2.5 px-3 pb-1">
+              <div className="flex items-center gap-2">
+                <span
+                  className="w-2 h-2 rounded-full shrink-0"
+                  style={{ backgroundColor: activeStyle.color }}
+                />
+                <span className="text-sm font-semibold" style={{ color: activeStyle.color }}>
+                  {t(activeStyle.label)}
+                </span>
+              </div>
+              <span className="text-sm text-fg-muted">{activeResult.score} / 4</span>
+            </div>
+            <CrackTimeDisplay result={activeResult} />
+
+            {activeResult.warningKey && (
+              <div className="mt-4 mx-3 flex items-start gap-2 border-l-2 border-danger bg-danger/10 rounded-r-lg p-3">
+                <span className="text-sm text-danger leading-relaxed">
+                  {t.has(activeResult.warningKey)
+                    ? t(activeResult.warningKey)
+                    : activeResult.warningKey}
+                </span>
+              </div>
+            )}
+
+            {activeResult.suggestionKeys.length > 0 && (
+              <ul className="mt-3 mx-3 space-y-1">
+                {activeResult.suggestionKeys.map((key, i) => (
+                  <li key={i} className="text-sm text-fg-muted flex items-start gap-2">
+                    <span className="mt-1.5 w-1 h-1 rounded-full bg-fg-muted shrink-0" />
+                    <span>{t.has(key) ? t(key) : key}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </>
+        )}
+
+        {!activeResult && input && (
+          <div className="h-2 w-full bg-bg-elevated overflow-hidden rounded-full" />
+        )}
+      </div>
+    </section>
+  );
+}
+
 function Generator({
   saved,
   setSaved,
+  onCheckPassword,
 }: {
   saved: SavedRecord[];
   setSaved: React.Dispatch<React.SetStateAction<SavedRecord[]>>;
+  onCheckPassword: (password: string) => void;
 }) {
   const t = useTranslations("password");
   const tc = useTranslations("common");
@@ -272,20 +446,9 @@ function Generator({
   const [passwordLength, setPasswordLength] = useState<PasswordLength>(defaultLength(default_type));
   const [visible, setVisible] = useState<boolean>(true);
 
-  const [password, setPassword] = useState<string[]>([]);
-  const initialized = useRef(false);
-
-  useEffect(() => {
-    if (!initialized.current) {
-      initialized.current = true;
-      setPassword(generate(passwordType, characters, passwordLength.current));
-    }
-  });
-
-  const levelStyle =
-    password.length > 0
-      ? getPasswordLevelStyle(passwordType, password, characters)
-      : { width: "0%", backgroundColor: undefined, strengthLabel: "", entropy: 0 };
+  const [password, setPassword] = useState<string[]>(() =>
+    generate(default_type, defaultCharacters(default_type), defaultLength(default_type).current)
+  );
 
   function onTypeChange(event: ChangeEvent<HTMLInputElement>) {
     let type: PasswordType = event.target.checked ? "Memorable" : "Random";
@@ -417,30 +580,7 @@ function Generator({
             </button>
           </div>
         </div>
-        <div className="h-2 w-full bg-bg-elevated overflow-hidden">
-          <div
-            className="h-full rounded-full transition-all duration-500"
-            style={{ width: levelStyle.width, backgroundColor: levelStyle.backgroundColor }}
-          />
-        </div>
-        <div className="flex justify-between items-center mt-2.5 px-3 pb-1">
-          <div className="flex items-center gap-2">
-            {levelStyle.backgroundColor && (
-              <span
-                className="w-2 h-2 rounded-full shrink-0"
-                style={{ backgroundColor: levelStyle.backgroundColor }}
-              />
-            )}
-            {levelStyle.strengthLabel && (
-              <span className="text-sm font-semibold" style={{ color: levelStyle.backgroundColor }}>
-                {t(levelStyle.strengthLabel)}
-              </span>
-            )}
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-fg-muted">{levelStyle.entropy} bits</span>
-          </div>
-        </div>
+        <StrengthBar password={password.length > 0 ? copyPassword(passwordType, password) : ""} />
       </div>
       <div className="mt-6 px-1">
         <div className="flex items-center justify-between mb-4">
@@ -612,7 +752,7 @@ function Generator({
           <RefreshCw size={16} />
           {t("generatePassword")}
         </Button>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-3 gap-3">
           <Button
             variant="outline-blue"
             size="lg"
@@ -630,6 +770,15 @@ function Generator({
           >
             <BookmarkPlus size={16} />
             {t("bookmarkPassword")}
+          </Button>
+          <Button
+            variant="outline-cyan"
+            size="lg"
+            onClick={() => onCheckPassword(copyPassword(passwordType, password))}
+            className="w-full rounded-full font-bold"
+          >
+            <ShieldCheck size={16} />
+            {t("checkThisPassword")}
           </Button>
         </div>
       </div>
@@ -665,6 +814,9 @@ export default function PasswordPage() {
   const tTools = useTranslations("tools");
   const title = tTools("password.shortTitle");
 
+  const [activeTab, setActiveTab] = useState(0);
+  const [checkerInput, setCheckerInput] = useState("");
+
   const rawSaved = useSyncExternalStore(subscribeToSavedPasswords, getSnapshot, getServerSnapshot);
   const saved = parseSavedPasswords(rawSaved);
 
@@ -678,16 +830,38 @@ export default function PasswordPage() {
   return (
     <Layout title={title}>
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <Generator saved={saved} setSaved={setSaved} />
+        <NeonTabs
+          selectedIndex={activeTab}
+          onChange={setActiveTab}
+          tabs={[
+            {
+              label: t("tabGenerator"),
+              content: (
+                <Generator
+                  saved={saved}
+                  setSaved={setSaved}
+                  onCheckPassword={(pw) => {
+                    setCheckerInput(pw);
+                    setActiveTab(1);
+                  }}
+                />
+              ),
+            },
+            {
+              label: t("tabChecker"),
+              content: <Checker initialInput={checkerInput} />,
+            },
+          ]}
+        />
         <div className="mt-8 flex flex-col gap-3">
           <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3">
             <KeyRound size={18} className="text-accent-cyan mt-0.5 shrink-0" />
             <span className="text-sm text-fg-secondary leading-relaxed">{t("securityTip")}</span>
           </div>
           <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-3">
-            <BarChart3 size={16} className="text-accent-purple mt-0.5 shrink-0" />
+            <ShieldCheck size={16} className="text-accent-purple mt-0.5 shrink-0" />
             <span className="text-sm text-fg-secondary leading-relaxed">
-              {t("entropyVerifiedDesc")}
+              {t("strengthInfoDesc")}
             </span>
           </div>
         </div>

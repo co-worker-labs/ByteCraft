@@ -1,8 +1,8 @@
 {
   "password": {
-    "title": "Secure Random Password Generator",
+    "title": "Secure Password Generator & Strength Checker",
     "shortTitle": "Password Generator",
-    "description": "Generate cryptographically secure, random passwords instantly. Free online password generator with customizable length and character options."
+    "description": "Generate cryptographically secure passwords and check password strength instantly. Free online tool with customizable options and real-time analysis."
   },
   "ascii": {
     "title": "ASCII Table - Complete Character Reference",

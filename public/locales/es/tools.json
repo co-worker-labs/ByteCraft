@@ -1,8 +1,8 @@
 {
   "password": {
-    "title": "Generador de contraseñas aleatorias seguras",
-    "shortTitle": "Generador de contraseñas",
-    "description": "Genera contraseñas aleatorias criptográficamente seguras al instante. Generador de contraseñas gratuito en línea con longitud y opciones de caracteres personalizables."
+    "title": "Generador de Contraseñas y Comprobador de Fortaleza",
+    "shortTitle": "Generador de Contraseñas",
+    "description": "Genera contraseñas criptográficamente seguras y comprueba su fortaleza al instante. Herramienta online gratuita con opciones personalizables y análisis en tiempo real."
   },
   "ascii": {
     "title": "Tabla ASCII - Referencia completa de caracteres",

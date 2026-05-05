@@ -1,8 +1,8 @@
 {
   "password": {
-    "title": "Sicherer Zufalls-Passwort-Generator",
+    "title": "Passwort-Generator und Stärke-Prüfer",
     "shortTitle": "Passwort-Generator",
-    "description": "Generieren Sie sofort kryptografisch sichere, zufällige Passwörter. Kostenloser Online-Passwort-Generator mit anpassbarer Länge und Zeichenoptionen."
+    "description": "Generieren Sie kryptografisch sichere Passwörter und prüfen Sie die Passwortstärke sofort. Kostenloses Online-Tool mit anpassbaren Optionen und Echtzeit-Analyse."
   },
   "ascii": {
     "title": "ASCII-Tabelle - Vollständige Zeichenreferenz",

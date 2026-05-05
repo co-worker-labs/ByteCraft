@@ -1,9 +1,9 @@
 {
   "password": {
-    "title": "随机密码生成器 - 安全强密码在线生成",
+    "title": "密码生成器 & 强度检测 - 安全密码在线工具",
     "shortTitle": "密码生成器",
-    "description": "生成加密安全的随机密码。在线密码生成器，支持自定义长度和字符类型，完全免费，100%客户端处理。",
-    "searchTerms": "mimashengchengqi mmscq suiji"
+    "description": "生成加密安全的随机密码，实时检测密码强度。免费在线工具，支持自定义选项和 zxcvbn 强度分析。",
+    "searchTerms": "mimashengchengqi mmscq mimaqiangdu mimajiance anquan"
   },
   "ascii": {
     "title": "ASCII 码表 - 完整字符参考",
