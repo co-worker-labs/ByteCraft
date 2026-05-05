@@ -17,7 +17,7 @@ A browser-based SSH key pair generator that runs entirely client-side. Supports 
 - RSA: Native `crypto.subtle.generateKey()` — zero bundle cost
 - Ed25519: `@noble/ed25519` (~15KB gzipped, audited, zero-dependency)
 - OpenSSH wire format: Custom serializers (public key blob, private key format)
-- Passphrase encryption: Minimal in-house bcrypt-pbkdf + AES-256-CTR (~200 lines, no new dependency)
+- Passphrase encryption: In-house bcrypt-pbkdf (~300 lines including Blowfish cipher) + `crypto.subtle` AES-256-CTR (no new dependency)
 
 Rejected alternatives:
 
@@ -86,17 +86,19 @@ function parsePublicKey(publicKey: string): PublicKeyInfo | { error: string };
 
 ### RSA
 
-1. `crypto.subtle.generateKey("RSA-OAEP", modulusLength, 65537, ["sign", "verify"])`
+1. `crypto.subtle.generateKey({ name: "RSASSA-PKCS1-v1_5", modulusLength, publicExponent: new Uint8Array([1, 0, 1]), hash: "SHA-256" }, true, ["sign", "verify"])`
 2. Export as `pkcs8` (private) and `spki` (public) — raw ArrayBuffer
-3. Parse DER to extract RSA components (n, e, d, p, q, dp, dq, qi)
+3. Parse DER/ASN.1 to extract RSA components (n, e, d, p, q, dp, dq, qi) — requires a minimal ASN.1 DER parser (~100 lines) since no browser API extracts these raw integers
 4. Serialize to OpenSSH wire format for both public and private keys
+
+> **Note:** `RSA-OAEP` is an encryption algorithm, not suitable for SSH signatures. `RSASSA-PKCS1-v1_5` is the correct algorithm name for `ssh-rsa` keys.
 
 ### Ed25519
 
 1. `ed25519.utils.randomPrivateKey()` → 32-byte seed
-2. `ed25519.getPublicKey(seed)` → 32-byte public key
+2. `await ed25519.getPublicKeyAsync(seed)` → 32-byte public key (async API uses WebCrypto SHA-512, no extra setup needed)
 3. Serialize public key: `<len>"ssh-ed25519"<len><pub>` → base64
-4. Serialize private key with 64-byte expanded key pair in OpenSSH format
+4. Serialize private key with 64-byte value: `seed (32 bytes) || publicKey (32 bytes)` in OpenSSH format. This is NOT the expanded hash key — OpenSSH stores the raw seed concatenated with the public key.
 
 ### OpenSSH Private Key Format
 
@@ -120,11 +122,11 @@ private-section:
 When a passphrase is provided:
 
 1. Generate 16-byte random salt
-2. bcrypt-pbkdf (16 rounds) → derive 64 bytes (32 for AES key, 32 for IV)
+2. bcrypt-pbkdf (16 rounds) → derive 48 bytes (32 for AES-256 key, 16 for CTR IV/nonce)
 3. AES-256-CTR encrypt the private section
 4. Set `ciphername: "aes256-ctr"`, `kdfname: "bcrypt"`
 
-bcrypt-pbkdf is implemented in-house in `formats-encrypted.ts` (~200 lines). Uses Blowfish cipher internally with PBKDF2 iteration. Avoids adding a 30KB dependency (`bcryptjs`) for one function.
+bcrypt-pbkdf is OpenSSH's custom key derivation function — it is NOT standard bcrypt password hashing. It uses the Blowfish cipher in a PBKDF2-like construction. `bcryptjs` (30KB) only implements bcrypt password hashing and does NOT provide `bcrypt-pbkdf`. Implementation requires: Blowfish cipher (~150 lines) + PBKDF2 wrapper (~100 lines) + AES-256-CTR encryption using `crypto.subtle` (~50 lines) = ~300 lines total in `formats-encrypted.ts`. No additional npm dependency needed since `crypto.subtle` handles AES-256-CTR natively.
 
 ### Fingerprint & Randomart
 
@@ -136,23 +138,25 @@ bcrypt-pbkdf is implemented in-house in `formats-encrypted.ts` (~200 lines). Use
 
 Standard OmniKit pattern: `Layout` wrapper, privacy notice banner, then main content.
 
+Two `NeonTabs` at the top level: **Generate** (default) and **Inspect Public Key**.
+
 ### Tab 1: Generate (default active)
 
 **Configuration panel**:
 
-- **Key type**: Two segmented buttons — `RSA` / `Ed25519`
+- **Key type**: Two mutually-exclusive buttons — `RSA` / `Ed25519` (styled like segmented control, not a tab)
 - **RSA bits**: Dropdown `2048 / 3072 / 4096` (visible only when RSA selected, default 4096)
 - **Comment**: `Input`, placeholder `user@host`
 - **Passphrase**: `Input` with `type="password"` toggle visibility
-- **Generate button**: `Button variant="primary"`
+- **Generate button**: `Button variant="primary"`, disabled during generation, shows spinner for RSA (RSA-4096 can take several seconds via WebCrypto)
 
 **Output panel** (below config):
 
-- **Private key**: `LineNumberedTextarea` (read-only) + `CopyButton` + Download button (`id_rsa` or `id_ed25519`)
-- **Public key**: `LineNumberedTextarea` (read-only) + `CopyButton` + Download button (`id_rsa.pub` or `id_ed25519.pub`)
+- **Private key**: `LineNumberedTextarea` (read-only) + `CopyButton` + Download button (`id_rsa` or `id_ed25519`, content type `text/plain;charset=utf-8`, trailing newline)
+- **Public key**: `LineNumberedTextarea` (read-only) + `CopyButton` + Download button (`id_rsa.pub` or `id_ed25519.pub`, content type `text/plain;charset=utf-8`, trailing newline)
 - **Fingerprint**: Inline SHA-256 + MD5 fingerprints, each with `CopyButton`
 - **Randomart**: `<pre>` block, monospace font, `--fg-muted` color
-- **Quick deploy**: Readonly `Input` with `ssh-copy-id -i <pubkey_filename> user@host` + `CopyButton`. The `user@host` part is a small editable input next to it.
+- **Quick deploy**: Readonly `Input` with `ssh-copy-id -i <pubkey_filename> user@host` + `CopyButton`. The `user@host` part is a small editable input next to it. Persisted to `localStorage` via `STORAGE_KEYS` so it survives page reloads.
 
 ### Tab 2: Inspect Public Key
 
@@ -166,9 +170,9 @@ Standard OmniKit pattern: `Layout` wrapper, privacy notice banner, then main con
 | ---------------- | ------------- | ---------------------- |
 | `@noble/ed25519` | ~15KB gzipped | Ed25519 key generation |
 
-bcrypt-pbkdf implemented in-house — no additional dependency.
+bcrypt-pbkdf implemented in-house (~300 lines including Blowfish cipher) — no additional npm dependency.
 
-All RSA operations use `crypto.subtle` (native browser API, zero bundle cost).
+All RSA operations use `crypto.subtle` (native browser API, zero bundle cost). AES-256-CTR for passphrase encryption also uses `crypto.subtle`.
 
 Next.js code-splitting ensures `@noble/ed25519` and format serializers only load on the `/sshkey` route.
 
@@ -177,7 +181,8 @@ Next.js code-splitting ensures `@noble/ed25519` and format serializers only load
 ### Generation
 
 - `crypto.subtle` unavailable → show error in UI
-- Generation failure → catch, show toast via `showToast()`
+- **Generation failure** → catch, show toast via `showToast()`
+- **RSA generation latency** → disable Generate button and show spinner while `crypto.subtle.generateKey()` runs (RSA-4096 can take 2-5 seconds)
 
 ### Passphrase
 
@@ -192,12 +197,14 @@ Next.js code-splitting ensures `@noble/ed25519` and format serializers only load
 
 ### Download naming
 
-- RSA: `id_rsa` / `id_rsa.pub`
-- Ed25519: `id_ed25519` / `id_ed25519.pub`
+- RSA: `id_rsa` / `id_rsa.pub` (content type `text/plain;charset=utf-8`, trailing newline)
+- Ed25519: `id_ed25519` / `id_ed25519.pub` (content type `text/plain;charset=utf-8`, trailing newline)
 
 ## Testing
 
 Test file: `libs/sshkey/__tests__/sshkey.test.ts`, run via `npm run test`.
+
+**Vitest config**: Add `"libs/sshkey/**/*.test.ts"` to `include` array in `vitest.config.ts`.
 
 ### Format serializers
 
@@ -251,6 +258,6 @@ CJK locales include `searchTerms` following the existing convention (romanized f
 
 In `libs/tools.ts`:
 
-- Import icon from `lucide-react` (e.g. `Terminal` or `Server`)
-- Add to `TOOLS` array: `{ key: "sshkey", path: "/sshkey", icon: <chosen-icon> }`
-- Add `"sshkey"` to `TOOL_CATEGORIES.security`
+- Import `Terminal` icon from `lucide-react`
+- Add to `TOOLS` array: `{ key: "sshkey", path: "/sshkey", icon: Terminal }`
+- Add `"sshkey"` to `TOOL_CATEGORIES.security` after `"password"` (same domain — key/auth tools): `["jwt", "hashing", "password", "sshkey", "cipher", "checksum"]`
