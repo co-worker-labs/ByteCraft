@@ -161,6 +161,12 @@
     "description": "PNG, JPG, WebP 형식 간 이미지를 압축, 크기 조절, 변환합니다. 모든 처리는 브라우저에서 로컬로 실행됩니다.",
     "searchTerms": "imijeuapchuki imac apchuk hyeongsik"
   },
+  "extractor": {
+    "title": "이메일 / URL / 전화번호 추출기 — 온라인 이메일, URL, 전화번호 추출",
+    "shortTitle": "이메일 / URL / 전화 추출",
+    "description": "텍스트에서 이메일, URL, 전화번호를 즉시 추출합니다. 무료 온라인 추출 도구, 100% 브라우저 처리.",
+    "searchTerms": "imeilchuchul imicc url jeonhwa"
+  },
   "categories": {
     "text": "텍스트 처리",
     "encoding": "인코딩 & 변환",

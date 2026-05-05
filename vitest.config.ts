@@ -13,6 +13,7 @@ export default defineConfig({
       "libs/csv/**/*.test.ts",
       "libs/numbase/**/*.test.ts",
       "libs/image/**/*.test.ts",
+      "libs/extractor/**/*.test.ts",
       "libs/__tests__/*.test.ts",
       "hooks/**/*.test.ts",
     ],

@@ -134,6 +134,11 @@
     "shortTitle": "Image Compressor",
     "description": "Compress, resize, and convert images between PNG, JPG, and WebP formats. All processing runs locally in your browser."
   },
+  "extractor": {
+    "title": "Email & URL Extractor — Extract Emails, URLs, Phone Numbers Online",
+    "shortTitle": "Email / URL / Phone Extractor",
+    "description": "Extract emails, URLs, and phone numbers from any text instantly. Free online extraction tool, 100% client-side."
+  },
   "categories": {
     "text": "Text Processing",
     "encoding": "Encoding & Conversion",

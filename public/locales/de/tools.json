@@ -134,6 +134,11 @@
     "shortTitle": "Bildkompressor",
     "description": "Bilder komprimieren, verkleinern und zwischen PNG-, JPG- und WebP-Formaten konvertieren. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser."
   },
+  "extractor": {
+    "title": "E-Mail / URL / Telefon-Extraktor — Online-Extraktion",
+    "shortTitle": "E-Mail / URL / Telefon Extraktor",
+    "description": "Extrahieren Sie E-Mails, URLs und Telefonnummern aus beliebigem Text sofort. Kostenloses Online-Extraktionstool, 100% clientseitig."
+  },
   "categories": {
     "text": "Textverarbeitung",
     "encoding": "Kodierung & Konvertierung",

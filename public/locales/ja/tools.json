@@ -161,6 +161,12 @@
     "description": "画像をPNG、JPG、WebP形式間で圧縮、リサイズ、変換。すべての処理はブラウザ上でローカルに実行。",
     "searchTerms": "gazouasshuku atsushuku rizaizu PNG"
   },
+  "extractor": {
+    "title": "メール / URL / 電話番号抽出 — オンラインでメール、URL、電話番号を抽出",
+    "shortTitle": "メール / URL / 電話抽出",
+    "description": "テキストからメールアドレス、URL、電話番号を即座に抽出。無料オンライン抽出ツール、100%ブラウザ処理。",
+    "searchTerms": "meeruchuushutsu mrchu url denwa"
+  },
   "categories": {
     "text": "テキスト処理",
     "encoding": "エンコード・変換",

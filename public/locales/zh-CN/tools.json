@@ -161,6 +161,12 @@
     "description": "在线压缩、调整大小、转换图片格式，支持 PNG、JPG、WebP。所有处理在浏览器本地完成，不上传数据。",
     "searchTerms": "tupianyasuo tpyas yasuo webp"
   },
+  "extractor": {
+    "title": "邮箱 / URL / 电话提取器 — 在线提取邮箱、网址、电话号码",
+    "shortTitle": "邮箱 / URL / 电话提取",
+    "description": "从任意文本中即时提取邮箱、URL 和电话号码。免费在线提取工具，100% 浏览器端处理。",
+    "searchTerms": "youxiangtiqu yxtq url dianhua"
+  },
   "categories": {
     "text": "文本处理",
     "encoding": "编码转换",

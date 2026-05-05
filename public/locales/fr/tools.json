@@ -134,6 +134,11 @@
     "shortTitle": "Compresseur d'images",
     "description": "Compressez, redimensionnez et convertissez des images entre les formats PNG, JPG et WebP. Tout le traitement s'exécute localement dans votre navigateur."
   },
+  "extractor": {
+    "title": "Extracteur d'Emails, URLs et Téléphones — Extraction en Ligne",
+    "shortTitle": "Extracteur Email / URL / Téléphone",
+    "description": "Extrayez les emails, URLs et numéros de téléphone de tout texte instantanément. Outil d'extraction gratuit, 100% côté client."
+  },
   "categories": {
     "text": "Traitement de texte",
     "encoding": "Encodage et conversion",

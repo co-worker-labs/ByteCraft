@@ -134,6 +134,11 @@
     "shortTitle": "Compresor de imágenes",
     "description": "Comprime, redimensiona y convierte imágenes entre formatos PNG, JPG y WebP. Todo el procesamiento se ejecuta localmente en tu navegador."
   },
+  "extractor": {
+    "title": "Extractor de Emails, URLs y Teléfonos — Extracción en Línea",
+    "shortTitle": "Extractor Email / URL / Teléfono",
+    "description": "Extrae emails, URLs y números de teléfono de cualquier texto al instante. Herramienta de extracción gratuita, 100% en el navegador."
+  },
   "categories": {
     "text": "Procesamiento de texto",
     "encoding": "Codificación y conversión",
