@@ -28,6 +28,35 @@ Pure line-by-line deduplication. No word-level, column-level, or custom delimite
 | Modify    | `libs/tools.ts`                                | Add to TOOLS array + TOOL_CATEGORIES      |
 | Modify    | `public/locales/{locale}/tools.json` × 10      | Add title/shortTitle/description          |
 
+### Route Entry (`page.tsx`)
+
+Follows the project-wide pattern (see `textcase/page.tsx`):
+
+```tsx
+import { getTranslations } from "next-intl/server";
+import { generatePageMeta } from "../../../libs/seo";
+import DeduplinesPage from "./deduplines-page";
+
+const PATH = "/deduplines";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "tools" });
+  return generatePageMeta({
+    locale,
+    path: PATH,
+    title: t("deduplines.title"),
+    description: t("deduplines.description"),
+  });
+}
+
+export default function DeduplinesRoute() {
+  return <DeduplinesPage />;
+}
+```
+
+Note: `params` is `Promise<{ locale: string }>` (Next.js 15+ async params). SEO/sitemap coverage is automatic — `sitemap.ts` iterates the `TOOLS` array.
+
 ## Core Logic (`libs/deduplines/main.ts`)
 
 ### Interface
@@ -50,16 +79,23 @@ interface DedupResult {
 ### Algorithm
 
 1. Normalize line endings: replace `\r\n` and `\r` with `\n`, then split by `\n`.
-2. If `removeEmpty`: filter out lines that are empty or whitespace-only.
-3. Build a comparison key for each line:
+2. Record `originalCount = lines.length` (total lines from split, before any filtering).
+3. If `removeEmpty`: filter out lines that are empty or whitespace-only.
+4. Build a comparison key for each remaining line:
    - If `trimLines`: key = `line.trim()`
    - If `!caseSensitive`: key = `key.toLowerCase()`
-4. Track seen keys with a `Set`. Only keep the first occurrence of each key.
-5. Output preserves the original line text (comparison keys are separate from output).
-6. First-occurrence order is preserved (no sorting).
+5. Track seen keys with a `Set`. Only keep the first occurrence of each key.
+6. Output preserves the original line text (comparison keys are separate from output).
+7. `resultCount = output lines`, `removedCount = originalCount - resultCount`.
+8. First-occurrence order is preserved (no sorting).
+
+### Trailing newline handling
+
+`"a\nb\n".split("\n")` produces `["a", "b", ""]`. When `removeEmpty=true`, the trailing empty string is filtered out — this is the correct behavior. When `removeEmpty=false`, the trailing empty string is preserved as a line and counts toward `originalCount`. This matches the split semantics and is consistent.
 
 ### Design Decisions
 
+- `originalCount` is the raw line count from `split("\n")`, before any filtering. This gives the user a truthful "you had N lines" baseline regardless of which options are active.
 - Comparison keys and original text are handled separately. Trimming and case folding apply only to comparison — the output retains original text.
 - Pure function, no side effects, easily testable.
 
@@ -67,7 +103,19 @@ interface DedupResult {
 
 ### Approach
 
-Top-to-bottom layout, consistent with textcase and other text tools. Real-time computation (no button — results update as the user types or changes options).
+Top-to-bottom layout, consistent with urlencoder and other text tools. Real-time computation (no button — results update as the user types or changes options).
+
+### Imports
+
+```ts
+import { useState } from "react";
+import { useTranslations } from "next-intl";
+import Layout from "../../../components/layout";
+import { StyledTextarea, StyledCheckbox } from "../../../components/ui/input";
+import { CopyButton } from "../../../components/ui/copy-btn";
+import { showToast } from "../../../libs/toast";
+import { dedupLines } from "../../../libs/deduplines/main";
+```
 
 ### Component Structure
 
@@ -93,23 +141,52 @@ Three components: `Conversion`, `Description`, `DeduplinesPage`.
 **Key behaviors**:
 
 - Input textarea: editable, placeholder text, monospace font.
-- Three checkboxes control `DedupOptions`. All default to checked.
+- Three checkboxes control `DedupOptions`. All default to checked (`useState(true)` for each).
 - Output textarea: read-only, auto-populated from `dedupLines(input, options)`.
 - Stats line: shows `"100 lines → 73 lines (-27 duplicates)"` or `"100 lines → no duplicates found"`.
 - Stats and output copy button share a row between checkboxes and output textarea.
-- Clear button resets input textarea only.
+- Clear button resets input textarea and shows toast: `showToast(tc("cleared"), "danger", 2000)` (following base64/urlencoder pattern).
+- Stats hidden when input is empty.
 
 ### Description Component
 
-Standard description section following the project pattern:
+Follows the standard project pattern (`<section id="description" className="mt-8">`), each subsection wrapped in `<div className="mb-4">` with `<h2 className="font-semibold text-fg-primary text-base">` and `<div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">`.
+
+Subsections:
 
 - "What is Line Deduplication?" — brief explanation
 - "How to Use" — explains each option
 - "Common Use Cases" — log cleanup, config dedup, CSV row dedup, removing duplicates from lists
 
+### DeduplinesPage Component (default export)
+
+```tsx
+export default function DeduplinesPage() {
+  const t = useTranslations("tools");
+  const tc = useTranslations("common");
+  return (
+    <Layout title={t("deduplines.shortTitle")}>
+      <div className="container mx-auto px-4 pt-3 pb-6">
+        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
+          <span className="text-sm text-fg-secondary leading-relaxed">
+            {tc("alert.notTransferred")}
+          </span>
+        </div>
+        <Conversion />
+        <Description />
+      </div>
+    </Layout>
+  );
+}
+```
+
+Privacy banner (`tc("alert.notTransferred")`) is standard across all tools and must be included.
+
 ## Translations
 
 ### `deduplines.json` (English baseline)
+
+> **Note on pluralization**: The stats strings use "lines" for all counts. This matches the project convention (no ICU plural support in next-intl usage). For count=1 the grammar is imperfect ("1 lines") but acceptable — other tools in the project follow the same pattern.
 
 ```json
 {
@@ -150,14 +227,22 @@ Standard description section following the project pattern:
 
 ### searchTerms (CJK only)
 
-| Locale | searchTerms                                   |
-| ------ | --------------------------------------------- |
-| zh-CN  | `quchonghang qrch quchong wenben shanchu`     |
-| zh-TW  | `quchonghang qrch quchong wenben shanchu`     |
-| ja     | `jufukudousakujyo jfkdsk dyuipuriku joufuku`  |
-| ko     | `jungbokjegaeseol jbjgs dedupeuraein jungbok` |
+| Locale | searchTerms                                             | Derivation                                               |
+| ------ | ------------------------------------------------------- | -------------------------------------------------------- |
+| zh-CN  | `quchonghang qrch quchong chongfu wenben`               | 去重行 qrch 去重 重复 文本                               |
+| zh-TW  | `quchonghang qrch quchong chongfu wenben`               | same as zh-CN (simplified pinyin covers traditional too) |
+| ja     | `jufukudousakujyo jfkdsk joufuku dyuipuriku hairetsu`   | 重複行削除 jfkdsk 重複 デュプリケート 配列               |
+| ko     | `jungbokhaeng jbhg jungbok jaegidoeeonaen jungbokjegeo` | 중복행 jbhg 중복 재거 (remove) 중복제거                  |
 
-Latin-script locales (en, es, pt-BR, fr, de, ru): no searchTerms needed — the shortTitle is already searchable.
+**Keyword rationale**:
+
+- `quchonghang` / `quchong` — unique to this tool (去重行 / 去重)
+- `chongfu` — "重复" (duplicate), discriminating keyword not shared with other tools
+- `wenben` — "文本" (text), secondary context keyword
+- `shanchu` was removed — "删除" (delete) is too generic, matches diff, checksum, etc.
+- `jungbokhaeng` — "중복행" (duplicate lines), specific to this tool
+- `jaegidoeeonaen` — "재거되어낸" was replaced with `jungbokjegeo` (중복제거), more recognizable
+- `dyuipuriku` kept for ja — "デュプリケート" is a recognizable loanword for deduplication
 
 ## Tool Registration
 
@@ -187,4 +272,4 @@ Test cases:
 - Output preserves original text (not trimmed/lowercased version)
 - Order preservation: first occurrence wins
 
-Add `"deduplines"` to test scopes in `vitest.config.ts`.
+Add `"libs/deduplines/**/*.test.ts"` to the `include` array in `vitest.config.ts` (follows the existing `"libs/<tool>/**/*.test.ts"` pattern).
