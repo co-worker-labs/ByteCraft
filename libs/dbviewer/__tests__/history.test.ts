@@ -29,7 +29,7 @@ beforeEach(() => {
 
 describe("history", () => {
   it("uses the documented key", () => {
-    expect(HISTORY_KEY).toBe("bc:dbviewer:history");
+    expect(HISTORY_KEY).toBe("okrun:dbviewer:history");
   });
 
   it("starts empty", () => {
