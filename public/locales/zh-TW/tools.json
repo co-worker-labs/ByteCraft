@@ -190,13 +190,12 @@
     "shortTitle": "SSH 金鑰產生",
     "description": "完全在瀏覽器中產生 SSH 金鑰對（RSA、Ed25519）。支援密碼短語加密、指紋顯示和公鑰檢查。不向任何伺服器傳送資料。",
     "searchTerms": "sshjinyaoshengchengqi sshjyscq jinyao gongyao"
-=======
+  },
   "httpclient": {
     "title": "HTTP 用戶端 - 線上 REST API 測試工具",
     "shortTitle": "HTTP 用戶端",
     "description": "在瀏覽器中直接傳送 HTTP 請求，測試 REST API。支援 GET、POST、PUT、DELETE，可設定請求標頭、請求主體和認證。免費，資料不上傳伺服器。",
     "searchTerms": "httpkehuduan hkt rest api"
->>>>>>> feature/httpclient
   },
   "categories": {
     "text": "文本處理",

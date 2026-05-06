@@ -190,13 +190,12 @@
     "shortTitle": "SSH 키 생성기",
     "description": "브라우저에서 SSH 키 쌍(RSA, Ed25519)을 생성합니다. 암호화, 핑거프린트 표시, 공개 키 검사를 지원합니다. 데이터는 서버로 전송되지 않습니다.",
     "searchTerms": "sshkisaengseongki sshkssg ki gonggae"
-=======
+  },
   "httpclient": {
     "title": "HTTP 클라이언트 - 온라인 REST API 테스터",
     "shortTitle": "HTTP 클라이언트",
     "description": "브라우저에서 직접 HTTP 요청을 보내 REST API를 테스트하세요. GET, POST, PUT, DELETE 지원. 헤더, 본문, 인증 설정 가능. 무료, 서버에 데이터 전송 없음.",
     "searchTerms": "httpkeulaieondu hk rest api"
->>>>>>> feature/httpclient
   },
   "categories": {
     "text": "텍스트 처리",

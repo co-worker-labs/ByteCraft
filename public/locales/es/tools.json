@@ -158,12 +158,11 @@
     "title": "Generador de Claves SSH - Genera claves RSA y Ed25519 en línea",
     "shortTitle": "Generador de Claves SSH",
     "description": "Genera pares de claves SSH (RSA, Ed25519) completamente en tu navegador. Soporta cifrado con frase de contraseña, huella digital e inspección de claves públicas. Sin envío de datos a servidores."
-=======
+  },
   "httpclient": {
     "title": "Cliente HTTP - Probador de APIs REST en línea",
     "shortTitle": "Cliente HTTP",
     "description": "Envía solicitudes HTTP y prueba APIs REST directamente en tu navegador. Soporta GET, POST, PUT, DELETE con cabeceras, cuerpo y autenticación. Gratis, sin enviar datos a servidores."
->>>>>>> feature/httpclient
   },
   "categories": {
     "text": "Procesamiento de texto",

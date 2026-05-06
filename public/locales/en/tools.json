@@ -158,12 +158,11 @@
     "title": "SSH Key Generator - Generate RSA & Ed25519 Key Pairs Online",
     "shortTitle": "SSH Key Generator",
     "description": "Generate SSH key pairs (RSA, Ed25519) entirely in your browser. Supports passphrase encryption, fingerprint display, and public key inspection. No data sent to any server."
-=======
+  },
   "httpclient": {
     "title": "HTTP Client - Online REST API Tester",
     "shortTitle": "HTTP Client",
     "description": "Send HTTP requests and test REST APIs directly in your browser. Supports GET, POST, PUT, DELETE with headers, body, and auth. Free, no data sent to servers."
->>>>>>> feature/httpclient
   },
   "categories": {
     "text": "Text Processing",

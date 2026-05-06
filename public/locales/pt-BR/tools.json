@@ -158,12 +158,11 @@
     "title": "Gerador de Chaves SSH - Gere chaves RSA e Ed25519 online",
     "shortTitle": "Gerador de Chaves SSH",
     "description": "Gere pares de chaves SSH (RSA, Ed25519) inteiramente no seu navegador. Suporta criptografia com senha, exibição de impressão digital e inspeção de chave pública. Nenhum dado é enviado a servidores."
-=======
+  },
   "httpclient": {
     "title": "Cliente HTTP - Testador de APIs REST Online",
     "shortTitle": "Cliente HTTP",
     "description": "Envie requisições HTTP e teste APIs REST diretamente no seu navegador. Suporta GET, POST, PUT, DELETE com cabeçalhos, corpo e autenticação. Gratuito, sem enviar dados para servidores."
->>>>>>> feature/httpclient
   },
   "categories": {
     "text": "Processamento de texto",
