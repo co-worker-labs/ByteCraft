@@ -139,10 +139,15 @@
     "shortTitle": "Image Compressor",
     "description": "Compress, resize, and convert images between PNG, JPG, and WebP formats. All processing runs locally in your browser."
   },
-  "extractor": {
-    "title": "Email & URL Extractor — Extract Emails, URLs, Phone Numbers Online",
-    "shortTitle": "Email / URL / Phone Extractor",
-    "description": "Extract emails, URLs, and phone numbers from any text instantly. Free online extraction tool, 100% client-side."
+  "sshkey": {
+    "title": "SSH Key Generator - Generate RSA & Ed25519 Key Pairs Online",
+    "shortTitle": "SSH Key Generator",
+    "description": "Generate SSH key pairs (RSA, Ed25519) entirely in your browser. Supports passphrase encryption, fingerprint display, and public key inspection. No data sent to any server."
+  },
+  "httpclient": {
+    "title": "HTTP Client - Online REST API Tester",
+    "shortTitle": "HTTP Client",
+    "description": "Send HTTP requests and test REST APIs directly in your browser. Supports GET, POST, PUT, DELETE with headers, body, and auth. Free, no data sent to servers."
   },
   "wordcounter": {
     "title": "Word Counter - Character Count, Reading Time, Keyword Density",
@@ -153,6 +158,12 @@
     "title": "SSH Key Generator - Generate RSA & Ed25519 Key Pairs Online",
     "shortTitle": "SSH Key Generator",
     "description": "Generate SSH key pairs (RSA, Ed25519) entirely in your browser. Supports passphrase encryption, fingerprint display, and public key inspection. No data sent to any server."
+=======
+  "httpclient": {
+    "title": "HTTP Client - Online REST API Tester",
+    "shortTitle": "HTTP Client",
+    "description": "Send HTTP requests and test REST APIs directly in your browser. Supports GET, POST, PUT, DELETE with headers, body, and auth. Free, no data sent to servers."
+>>>>>>> feature/httpclient
   },
   "categories": {
     "text": "Text Processing",

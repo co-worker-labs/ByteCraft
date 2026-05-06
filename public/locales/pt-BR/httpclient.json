@@ -1,0 +1,69 @@
+{
+  "url": { "placeholder": "https://api.example.com/users" },
+  "method": { "label": "Método" },
+  "timeout": { "label": "Tempo limite" },
+  "send": "Enviar",
+  "sending": "Enviando...",
+  "tabs": { "params": "Parâmetros", "headers": "Cabeçalhos", "body": "Corpo", "auth": "Autenticação" },
+  "bodyType": { "none": "nenhum", "json": "JSON", "form-data": "Form-Data", "urlencoded": "x-www-form-urlencoded", "raw": "Raw" },
+  "authType": { "none": "nenhum", "bearer": "Bearer Token", "basic": "Autenticação Basic" },
+  "bearerToken": { "placeholder": "Insira o token Bearer" },
+  "basicAuth": { "username": "Usuário", "password": "Senha", "usernamePlaceholder": "Usuário", "passwordPlaceholder": "Senha" },
+  "kv": { "keyPlaceholder": "Chave", "valuePlaceholder": "Valor" },
+  "bodyPlaceholder": "Insira o corpo da requisição...",
+  "response": {
+    "title": "Resposta",
+    "emptyState": "Insira uma URL e clique em Enviar para começar",
+    "tabs": { "body": "Corpo", "headers": "Cabeçalhos", "cookies": "Cookies", "timing": "Tempos", "redirects": "Redirecionamentos" },
+    "status": "Status",
+    "time": "Tempo",
+    "size": "Tamanho",
+    "type": "Tipo",
+    "download": "Baixar",
+    "copyBody": "Copiar corpo",
+    "pretty": "Formatado",
+    "raw": "Raw",
+    "largeResponseWarning": "A resposta excede 1MB. Exibindo apenas os primeiros 100KB.",
+    "noHeaders": "Sem cabeçalhos de resposta",
+    "noCookies": "Nenhum cookie acessível",
+    "cookieNote": "Cookies só são visíveis em requisições de mesma origem ou quando o servidor expõe Set-Cookie via cabeçalhos CORS.",
+    "timingNote": "Tempos detalhados (TTFB, download) só estão disponíveis quando o servidor retorna o cabeçalho Timing-Allow-Origin.",
+    "ttfb": "TTFB",
+    "download": "Download",
+    "total": "Total",
+    "na": "N/A",
+    "crossOrigin": "(origem cruzada)",
+    "redirectOccurred": "Ocorreu um redirecionamento",
+    "noRedirect": "Sem redirecionamentos",
+    "finalUrl": "URL final",
+    "redirectNote": "O fetch do navegador não expõe URLs de redirecionamento intermediárias. Apenas o destino final é exibido.",
+    "binaryPreview": "Resposta binária — pré-visualização hex (primeiros 4KB)"
+  },
+  "error": {
+    "cors": "A política CORS bloqueou esta requisição. A API de destino não permite requisições de origem cruzada de navegadores.",
+    "network": "Erro de rede",
+    "timeout": "A requisição excedeu o tempo limite de {timeout}s.",
+    "generic": "Falha na requisição"
+  },
+  "history": {
+    "title": "Histórico",
+    "clear": "Limpar histórico",
+    "empty": "Sem histórico",
+    "ago": { "seconds": "{count}s atrás", "minutes": "{count}min atrás", "hours": "{count}h atrás", "days": "{count}d atrás" }
+  },
+  "description": {
+    "text": "Um cliente HTTP leve baseado em navegador para testar APIs REST. Configure e envie requisições com controle total sobre método, cabeçalhos, corpo e autenticação, depois inspecione as respostas com detalhes de tempo, cabeçalhos e cookies. Todas as requisições são executadas via fetch() do navegador, portanto apenas APIs compatíveis com CORS são suportadas. Nenhum dado é enviado a servidores.",
+    "features": {
+      "title": "Recursos",
+      "methods": "Todos os métodos HTTP padrão: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
+      "auth": "Autenticação: Bearer Token, Autenticação Basic",
+      "body": "Formatos de corpo: JSON, Form-Data, x-www-form-urlencoded, texto Raw",
+      "response": "Inspeção de resposta: corpo formatado, cabeçalhos, cookies, tempos, redirecionamentos",
+      "history": "Histórico de requisições com restauração em um clique (armazenado localmente)"
+    },
+    "cors": {
+      "title": "Limitações do CORS",
+      "text": "Esta ferramenta usa a API fetch() nativa do navegador. Requisições de origem cruzada exigem que o servidor de destino inclua cabeçalhos CORS adequados (Access-Control-Allow-Origin). Se o servidor não suportar CORS, a requisição falhará com um erro CORS. Este é um recurso de segurança do navegador e não pode ser contornado sem um servidor proxy."
+    }
+  }
+}

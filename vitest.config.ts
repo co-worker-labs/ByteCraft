@@ -18,6 +18,7 @@ export default defineConfig({
       "libs/password/**/*.test.ts",
       "libs/wordcounter/**/*.test.ts",
       "libs/sshkey/**/*.test.ts",
+      "libs/httpclient/**/*.test.ts",
       "libs/__tests__/*.test.ts",
       "hooks/**/*.test.ts",
     ],

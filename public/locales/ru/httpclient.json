@@ -1,0 +1,69 @@
+{
+  "url": { "placeholder": "https://api.example.com/users" },
+  "method": { "label": "Метод" },
+  "timeout": { "label": "Таймаут" },
+  "send": "Отправить",
+  "sending": "Отправка...",
+  "tabs": { "params": "Параметры", "headers": "Заголовки", "body": "Тело", "auth": "Аутентификация" },
+  "bodyType": { "none": "нет", "json": "JSON", "form-data": "Form-Data", "urlencoded": "x-www-form-urlencoded", "raw": "Raw" },
+  "authType": { "none": "нет", "bearer": "Bearer Token", "basic": "Basic Auth" },
+  "bearerToken": { "placeholder": "Введите Bearer токен" },
+  "basicAuth": { "username": "Имя пользователя", "password": "Пароль", "usernamePlaceholder": "Имя пользователя", "passwordPlaceholder": "Пароль" },
+  "kv": { "keyPlaceholder": "Ключ", "valuePlaceholder": "Значение" },
+  "bodyPlaceholder": "Введите тело запроса...",
+  "response": {
+    "title": "Ответ",
+    "emptyState": "Введите URL и нажмите Отправить",
+    "tabs": { "body": "Тело", "headers": "Заголовки", "cookies": "Cookies", "timing": "Время", "redirects": "Перенаправления" },
+    "status": "Статус",
+    "time": "Время",
+    "size": "Размер",
+    "type": "Тип",
+    "download": "Скачать",
+    "copyBody": "Копировать тело",
+    "pretty": "Формат.",
+    "raw": "Raw",
+    "largeResponseWarning": "Ответ превышает 1 МБ. Показаны первые 100 КБ.",
+    "noHeaders": "Нет заголовков ответа",
+    "noCookies": "Нет доступных cookies",
+    "cookieNote": "Cookies доступны только для запросов с тем же источником или когда сервер предоставляет Set-Cookie через CORS-заголовки.",
+    "timingNote": "Подробное время (TTFB, загрузка) доступно только когда сервер возвращает заголовок Timing-Allow-Origin.",
+    "ttfb": "TTFB",
+    "download": "Загрузка",
+    "total": "Итого",
+    "na": "Н/Д",
+    "crossOrigin": "(кросс-домен)",
+    "redirectOccurred": "Произошло перенаправление",
+    "noRedirect": "Без перенаправлений",
+    "finalUrl": "Итоговый URL",
+    "redirectNote": "Browser fetch не показывает промежуточные URL перенаправлений. Отображается только конечный адрес.",
+    "binaryPreview": "Бинарный ответ — hex-предпросмотр (первые 4 КБ)"
+  },
+  "error": {
+    "cors": "Политика CORS заблокировала этот запрос. Целевой API не разрешает кросс-доменные запросы из браузера.",
+    "network": "Сетевая ошибка",
+    "timeout": "Время запроса истекло через {timeout}с.",
+    "generic": "Ошибка запроса"
+  },
+  "history": {
+    "title": "История",
+    "clear": "Очистить историю",
+    "empty": "История пуста",
+    "ago": { "seconds": "{count}с назад", "minutes": "{count}мин назад", "hours": "{count}ч назад", "days": "{count}д назад" }
+  },
+  "description": {
+    "text": "Легковесный HTTP-клиент на базе браузера для тестирования REST API. Настраивайте и отправляйте запросы с полным контролем метода, заголовков, тела и аутентификации, затем просматривайте ответы с данными о времени, заголовках и cookies. Все запросы выполняются через fetch() браузера, поэтому поддерживаются только CORS-совместимые API. Данные не отправляются на сервер.",
+    "features": {
+      "title": "Возможности",
+      "methods": "Все стандартные HTTP-методы: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
+      "auth": "Аутентификация: Bearer Token, Basic Auth",
+      "body": "Форматы тела: JSON, Form-Data, x-www-form-urlencoded, Raw-текст",
+      "response": "Инспекция ответа: форматированное тело, заголовки, cookies, время, перенаправления",
+      "history": "История запросов с восстановлением в один клик (локальное хранение)"
+    },
+    "cors": {
+      "title": "Ограничения CORS",
+      "text": "Этот инструмент использует нативный fetch() API браузера. Для кросс-доменных запросов целевой сервер должен включать соответствующие CORS-заголовки (Access-Control-Allow-Origin). Если сервер не поддерживает CORS, запрос завершится ошибкой CORS. Это функция безопасности браузера, которую нельзя обойти без прокси-сервера."
+    }
+  }
+}

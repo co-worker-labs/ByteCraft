@@ -1,0 +1,69 @@
+{
+  "url": { "placeholder": "https://api.example.com/users" },
+  "method": { "label": "Methode" },
+  "timeout": { "label": "Zeitlimit" },
+  "send": "Senden",
+  "sending": "Senden...",
+  "tabs": { "params": "Parameter", "headers": "Header", "body": "Body", "auth": "Authentifizierung" },
+  "bodyType": { "none": "keiner", "json": "JSON", "form-data": "Form-Data", "urlencoded": "x-www-form-urlencoded", "raw": "Raw" },
+  "authType": { "none": "keine", "bearer": "Bearer Token", "basic": "Basic Auth" },
+  "bearerToken": { "placeholder": "Bearer-Token eingeben" },
+  "basicAuth": { "username": "Benutzername", "password": "Passwort", "usernamePlaceholder": "Benutzername", "passwordPlaceholder": "Passwort" },
+  "kv": { "keyPlaceholder": "Schlüssel", "valuePlaceholder": "Wert" },
+  "bodyPlaceholder": "Request-Body eingeben...",
+  "response": {
+    "title": "Antwort",
+    "emptyState": "URL eingeben und auf Senden klicken",
+    "tabs": { "body": "Body", "headers": "Header", "cookies": "Cookies", "timing": "Zeitmessung", "redirects": "Weiterleitungen" },
+    "status": "Status",
+    "time": "Zeit",
+    "size": "Größe",
+    "type": "Typ",
+    "download": "Herunterladen",
+    "copyBody": "Body kopieren",
+    "pretty": "Formatiert",
+    "raw": "Raw",
+    "largeResponseWarning": "Antwort ist größer als 1MB. Es werden nur die ersten 100KB angezeigt.",
+    "noHeaders": "Keine Antwort-Header",
+    "noCookies": "Keine zugänglichen Cookies",
+    "cookieNote": "Cookies sind nur bei Same-Origin-Anfragen sichtbar oder wenn der Server Set-Cookie über CORS-Header freigibt.",
+    "timingNote": "Detaillierte Zeitmessung (TTFB, Download) ist nur verfügbar, wenn der Server den Timing-Allow-Origin-Header zurückgibt.",
+    "ttfb": "TTFB",
+    "download": "Download",
+    "total": "Gesamt",
+    "na": "N/A",
+    "crossOrigin": "(Cross-Origin)",
+    "redirectOccurred": "Eine Weiterleitung hat stattgefunden",
+    "noRedirect": "Keine Weiterleitungen",
+    "finalUrl": "Endgültige URL",
+    "redirectNote": "Der Browser-fetch zeigt keine zwischenzeitlichen Weiterleitungs-URLs an. Nur das endgültige Ziel wird angezeigt.",
+    "binaryPreview": "Binäre Antwort — Hex-Dump-Vorschau (erste 4KB)"
+  },
+  "error": {
+    "cors": "Die CORS-Richtlinie hat diese Anfrage blockiert. Die Ziel-API erlaubt keine Cross-Origin-Anfragen aus Browsern.",
+    "network": "Netzwerkfehler",
+    "timeout": "Zeitlimit nach {timeout}s überschritten.",
+    "generic": "Anfrage fehlgeschlagen"
+  },
+  "history": {
+    "title": "Verlauf",
+    "clear": "Verlauf löschen",
+    "empty": "Kein Verlauf",
+    "ago": { "seconds": "vor {count}s", "minutes": "vor {count}Min", "hours": "vor {count}Std", "days": "vor {count}T" }
+  },
+  "description": {
+    "text": "Ein leichtgewichtiger, browserbasierter HTTP-Client zum Testen von REST-APIs. Stellen Sie Anfragen mit voller Kontrolle über Methode, Header, Body und Authentifizierung zusammen und senden Sie diese — dann inspizieren Sie die Antworten mit Timing-Details, Headern und Cookies. Alle Anfragen werden über das browser-native fetch() ausgeführt, daher werden nur CORS-kompatible APIs unterstützt. Keine Daten werden an Server gesendet.",
+    "features": {
+      "title": "Funktionen",
+      "methods": "Alle Standard-HTTP-Methoden: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
+      "auth": "Authentifizierung: Bearer Token, Basic Auth",
+      "body": "Body-Formate: JSON, Form-Data, x-www-form-urlencoded, Raw-Text",
+      "response": "Antwort-Inspektion: formatierter Body, Header, Cookies, Timing, Weiterleitungs-Info",
+      "history": "Anfrageverlauf mit Ein-Klick-Wiederherstellung (lokal gespeichert)"
+    },
+    "cors": {
+      "title": "CORS-Einschränkungen",
+      "text": "Dieses Tool verwendet die native fetch()-API des Browsers. Cross-Origin-Anfragen erfordern, dass der Zielserver entsprechende CORS-Header (Access-Control-Allow-Origin) sendet. Wenn der Server CORS nicht unterstützt, schlägt die Anfrage mit einem CORS-Fehler fehl. Dies ist eine Browsersicherheitsfunktion und kann ohne Proxy-Server nicht umgangen werden."
+    }
+  }
+}

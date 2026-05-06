@@ -1,0 +1,69 @@
+{
+  "url": { "placeholder": "https://api.example.com/users" },
+  "method": { "label": "Método" },
+  "timeout": { "label": "Tiempo de espera" },
+  "send": "Enviar",
+  "sending": "Enviando...",
+  "tabs": { "params": "Parámetros", "headers": "Cabeceras", "body": "Cuerpo", "auth": "Autenticación" },
+  "bodyType": { "none": "ninguno", "json": "JSON", "form-data": "Form-Data", "urlencoded": "x-www-form-urlencoded", "raw": "Raw" },
+  "authType": { "none": "ninguno", "bearer": "Bearer Token", "basic": "Autenticación Basic" },
+  "bearerToken": { "placeholder": "Introduce el token Bearer" },
+  "basicAuth": { "username": "Usuario", "password": "Contraseña", "usernamePlaceholder": "Usuario", "passwordPlaceholder": "Contraseña" },
+  "kv": { "keyPlaceholder": "Clave", "valuePlaceholder": "Valor" },
+  "bodyPlaceholder": "Introduce el cuerpo de la petición...",
+  "response": {
+    "title": "Respuesta",
+    "emptyState": "Introduce una URL y haz clic en Enviar para empezar",
+    "tabs": { "body": "Cuerpo", "headers": "Cabeceras", "cookies": "Cookies", "timing": "Tiempos", "redirects": "Redirecciones" },
+    "status": "Estado",
+    "time": "Tiempo",
+    "size": "Tamaño",
+    "type": "Tipo",
+    "download": "Descargar",
+    "copyBody": "Copiar cuerpo",
+    "pretty": "Formateado",
+    "raw": "Raw",
+    "largeResponseWarning": "La respuesta supera 1MB. Se muestran solo los primeros 100KB.",
+    "noHeaders": "Sin cabeceras de respuesta",
+    "noCookies": "No hay cookies accesibles",
+    "cookieNote": "Las cookies solo son visibles en solicitudes del mismo origen o cuando el servidor expone Set-Cookie mediante cabeceras CORS.",
+    "timingNote": "Los tiempos detallados (TTFB, descarga) solo están disponibles cuando el servidor devuelve la cabecera Timing-Allow-Origin.",
+    "ttfb": "TTFB",
+    "download": "Descarga",
+    "total": "Total",
+    "na": "N/A",
+    "crossOrigin": "(origen cruzado)",
+    "redirectOccurred": "Ocurrió una redirección",
+    "noRedirect": "Sin redirecciones",
+    "finalUrl": "URL final",
+    "redirectNote": "El fetch del navegador no expone las URLs de redirección intermedias. Solo se muestra el destino final.",
+    "binaryPreview": "Respuesta binaria — vista previa hex (primeros 4KB)"
+  },
+  "error": {
+    "cors": "La política CORS bloqueó esta solicitud. La API de destino no permite solicitudes de origen cruzado desde navegadores.",
+    "network": "Error de red",
+    "timeout": "La solicitud superó el tiempo de espera de {timeout}s.",
+    "generic": "Error en la solicitud"
+  },
+  "history": {
+    "title": "Historial",
+    "clear": "Borrar historial",
+    "empty": "Sin historial",
+    "ago": { "seconds": "hace {count}s", "minutes": "hace {count}min", "hours": "hace {count}h", "days": "hace {count}d" }
+  },
+  "description": {
+    "text": "Un cliente HTTP ligero basado en navegador para probar APIs REST. Configura y envía solicitudes con control total sobre método, cabeceras, cuerpo y autenticación, luego inspecciona las respuestas con detalles de tiempos, cabeceras y cookies. Todas las solicitudes se ejecutan mediante fetch() del navegador, por lo que solo se admiten APIs compatibles con CORS. No se envían datos a ningún servidor.",
+    "features": {
+      "title": "Características",
+      "methods": "Todos los métodos HTTP estándar: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
+      "auth": "Autenticación: Bearer Token, Autenticación Basic",
+      "body": "Formatos de cuerpo: JSON, Form-Data, x-www-form-urlencoded, texto Raw",
+      "response": "Inspección de respuesta: cuerpo formateado, cabeceras, cookies, tiempos, redirecciones",
+      "history": "Historial de solicitudes con restauración en un clic (almacenado localmente)"
+    },
+    "cors": {
+      "title": "Limitaciones de CORS",
+      "text": "Esta herramienta utiliza la API fetch() nativa del navegador. Las solicitudes de origen cruzado requieren que el servidor de destino incluya las cabeceras CORS adecuadas (Access-Control-Allow-Origin). Si el servidor no admite CORS, la solicitud fallará con un error CORS. Esta es una función de seguridad del navegador y no se puede eludir sin un servidor proxy."
+    }
+  }
+}

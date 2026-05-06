@@ -10,6 +10,7 @@ export const STORAGE_KEYS = {
   recentTools: "okrun:recent-tools",
   homeViewMode: "okrun:home-view",
   sshkeyDeployTarget: "okrun:sshkey:deploy",
+  httpclientHistory: "okrun:httpclient:history",
 } as const;
 
 export const COOKIE_KEYS = {

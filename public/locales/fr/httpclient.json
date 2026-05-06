@@ -1,0 +1,69 @@
+{
+  "url": { "placeholder": "https://api.example.com/users" },
+  "method": { "label": "Méthode" },
+  "timeout": { "label": "Délai d'attente" },
+  "send": "Envoyer",
+  "sending": "Envoi en cours...",
+  "tabs": { "params": "Paramètres", "headers": "En-têtes", "body": "Corps", "auth": "Authentification" },
+  "bodyType": { "none": "aucun", "json": "JSON", "form-data": "Form-Data", "urlencoded": "x-www-form-urlencoded", "raw": "Brut" },
+  "authType": { "none": "aucune", "bearer": "Bearer Token", "basic": "Authentification Basic" },
+  "bearerToken": { "placeholder": "Entrez le token Bearer" },
+  "basicAuth": { "username": "Nom d'utilisateur", "password": "Mot de passe", "usernamePlaceholder": "Nom d'utilisateur", "passwordPlaceholder": "Mot de passe" },
+  "kv": { "keyPlaceholder": "Clé", "valuePlaceholder": "Valeur" },
+  "bodyPlaceholder": "Entrez le corps de la requête...",
+  "response": {
+    "title": "Réponse",
+    "emptyState": "Entrez une URL et cliquez sur Envoyer pour commencer",
+    "tabs": { "body": "Corps", "headers": "En-têtes", "cookies": "Cookies", "timing": "Chronométrage", "redirects": "Redirections" },
+    "status": "Statut",
+    "time": "Temps",
+    "size": "Taille",
+    "type": "Type",
+    "download": "Télécharger",
+    "copyBody": "Copier le corps",
+    "pretty": "Formaté",
+    "raw": "Brut",
+    "largeResponseWarning": "La réponse dépasse 1 Mo. Seuls les premiers 100 Ko sont affichés.",
+    "noHeaders": "Aucun en-tête de réponse",
+    "noCookies": "Aucun cookie accessible",
+    "cookieNote": "Les cookies ne sont visibles que pour les requêtes de même origine ou lorsque le serveur expose Set-Cookie via les en-têtes CORS.",
+    "timingNote": "Le chronométrage détaillé (TTFB, téléchargement) n'est disponible que lorsque le serveur renvoie l'en-tête Timing-Allow-Origin.",
+    "ttfb": "TTFB",
+    "download": "Téléchargement",
+    "total": "Total",
+    "na": "N/A",
+    "crossOrigin": "(origine croisée)",
+    "redirectOccurred": "Une redirection a eu lieu",
+    "noRedirect": "Aucune redirection",
+    "finalUrl": "URL finale",
+    "redirectNote": "Le fetch du navigateur n'expose pas les URLs de redirection intermédiaires. Seule la destination finale est affichée.",
+    "binaryPreview": "Réponse binaire — aperçu hex (4 premiers Ko)"
+  },
+  "error": {
+    "cors": "La politique CORS a bloqué cette requête. L'API cible n'autorise pas les requêtes cross-origin depuis les navigateurs.",
+    "network": "Erreur réseau",
+    "timeout": "La requête a expiré après {timeout}s.",
+    "generic": "Échec de la requête"
+  },
+  "history": {
+    "title": "Historique",
+    "clear": "Effacer l'historique",
+    "empty": "Aucun historique",
+    "ago": { "seconds": "il y a {count}s", "minutes": "il y a {count}min", "hours": "il y a {count}h", "days": "il y a {count}j" }
+  },
+  "description": {
+    "text": "Un client HTTP léger basé sur le navigateur pour tester les APIs REST. Composez et envoyez des requêtes avec un contrôle total sur la méthode, les en-têtes, le corps et l'authentification, puis inspectez les réponses avec les détails de chronométrage, les en-têtes et les cookies. Toutes les requêtes s'exécutent via fetch() du navigateur, seules les APIs compatibles CORS sont prises en charge. Aucune donnée n'est envoyée à un serveur.",
+    "features": {
+      "title": "Fonctionnalités",
+      "methods": "Toutes les méthodes HTTP standard : GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
+      "auth": "Authentification : Bearer Token, Authentification Basic",
+      "body": "Formats de corps : JSON, Form-Data, x-www-form-urlencoded, texte brut",
+      "response": "Inspection de la réponse : corps formaté, en-têtes, cookies, chronométrage, redirections",
+      "history": "Historique des requêtes avec restauration en un clic (stocké localement)"
+    },
+    "cors": {
+      "title": "Limitations CORS",
+      "text": "Cet outil utilise l'API fetch() native du navigateur. Les requêtes cross-origin nécessitent que le serveur cible inclue les en-têtes CORS appropriés (Access-Control-Allow-Origin). Si le serveur ne prend pas en charge CORS, la requête échouera avec une erreur CORS. Il s'agit d'une fonctionnalité de sécurité du navigateur qui ne peut être contournée sans serveur proxy."
+    }
+  }
+}

@@ -167,11 +167,17 @@
     "description": "在线压缩、调整大小、转换图片格式，支持 PNG、JPG、WebP。所有处理在浏览器本地完成，不上传数据。",
     "searchTerms": "tupianyasuo tpyas yasuo webp"
   },
-  "extractor": {
-    "title": "邮箱 / URL / 电话提取器 — 在线提取邮箱、网址、电话号码",
-    "shortTitle": "邮箱 / URL / 电话提取",
-    "description": "从任意文本中即时提取邮箱、URL 和电话号码。免费在线提取工具，100% 浏览器端处理。",
-    "searchTerms": "youxiangtiqu yxtq url dianhua"
+  "sshkey": {
+    "title": "SSH 密钥生成器 - 在线生成 RSA 和 Ed25519 密钥对",
+    "shortTitle": "SSH 密钥生成",
+    "description": "完全在浏览器中生成 SSH 密钥对（RSA、Ed25519）。支持密码短语加密、指纹显示和公钥检查。不向任何服务器发送数据。",
+    "searchTerms": "sshmiyaoshengchengqi sshmyscq miyao gongyao"
+  },
+  "httpclient": {
+    "title": "HTTP 客户端 - 在线 REST API 测试工具",
+    "shortTitle": "HTTP 客户端",
+    "description": "在浏览器中直接发送 HTTP 请求，测试 REST API。支持 GET、POST、PUT、DELETE，可配置请求头、请求体和认证。免费，数据不上传服务器。",
+    "searchTerms": "httpkehuduan hkt rest api"
   },
   "wordcounter": {
     "title": "字数统计 - 字符计数、阅读时间、关键词密度",
@@ -184,6 +190,13 @@
     "shortTitle": "SSH 密钥生成",
     "description": "完全在浏览器中生成 SSH 密钥对（RSA、Ed25519）。支持密码短语加密、指纹显示和公钥检查。不向任何服务器发送数据。",
     "searchTerms": "sshmiyaoshengchengqi sshmyscq miyao gongyao"
+=======
+  "httpclient": {
+    "title": "HTTP 客户端 - 在线 REST API 测试工具",
+    "shortTitle": "HTTP 客户端",
+    "description": "在浏览器中直接发送 HTTP 请求，测试 REST API。支持 GET、POST、PUT、DELETE，可配置请求头、请求体和认证。免费，数据不上传服务器。",
+    "searchTerms": "httpkehuduan hkt rest api"
+>>>>>>> feature/httpclient
   },
   "categories": {
     "text": "文本处理",

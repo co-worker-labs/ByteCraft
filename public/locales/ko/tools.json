@@ -167,11 +167,17 @@
     "description": "PNG, JPG, WebP 형식 간 이미지를 압축, 크기 조절, 변환합니다. 모든 처리는 브라우저에서 로컬로 실행됩니다.",
     "searchTerms": "imijeuapchuki imac apchuk hyeongsik"
   },
-  "extractor": {
-    "title": "이메일 / URL / 전화번호 추출기 — 온라인 이메일, URL, 전화번호 추출",
-    "shortTitle": "이메일 / URL / 전화 추출",
-    "description": "텍스트에서 이메일, URL, 전화번호를 즉시 추출합니다. 무료 온라인 추출 도구, 100% 브라우저 처리.",
-    "searchTerms": "imeilchuchul imicc url jeonhwa"
+  "sshkey": {
+    "title": "SSH 키 생성기 - RSA & Ed25519 키 쌍 생성",
+    "shortTitle": "SSH 키 생성기",
+    "description": "브라우저에서 SSH 키 쌍(RSA, Ed25519)을 생성합니다. 암호화, 핑거프린트 표시, 공개 키 검사를 지원합니다. 데이터는 서버로 전송되지 않습니다.",
+    "searchTerms": "sshkisaengseongki sshkssg ki gonggae"
+  },
+  "httpclient": {
+    "title": "HTTP 클라이언트 - 온라인 REST API 테스터",
+    "shortTitle": "HTTP 클라이언트",
+    "description": "브라우저에서 직접 HTTP 요청을 보내 REST API를 테스트하세요. GET, POST, PUT, DELETE 지원. 헤더, 본문, 인증 설정 가능. 무료, 서버에 데이터 전송 없음.",
+    "searchTerms": "httpkeulaieondu hk rest api"
   },
   "wordcounter": {
     "title": "단어 카운터 - 문자 수, 독서 시간, 키워드 밀도",
@@ -184,6 +190,13 @@
     "shortTitle": "SSH 키 생성기",
     "description": "브라우저에서 SSH 키 쌍(RSA, Ed25519)을 생성합니다. 암호화, 핑거프린트 표시, 공개 키 검사를 지원합니다. 데이터는 서버로 전송되지 않습니다.",
     "searchTerms": "sshkisaengseongki sshkssg ki gonggae"
+=======
+  "httpclient": {
+    "title": "HTTP 클라이언트 - 온라인 REST API 테스터",
+    "shortTitle": "HTTP 클라이언트",
+    "description": "브라우저에서 직접 HTTP 요청을 보내 REST API를 테스트하세요. GET, POST, PUT, DELETE 지원. 헤더, 본문, 인증 설정 가능. 무료, 서버에 데이터 전송 없음.",
+    "searchTerms": "httpkeulaieondu hk rest api"
+>>>>>>> feature/httpclient
   },
   "categories": {
     "text": "텍스트 처리",
