@@ -149,6 +149,11 @@
     "shortTitle": "Wortzähler",
     "description": "Zählt Wörter, Zeichen, Sätze und Absätze. Schätzt Lese- und Sprechzeit. Analysiert Schlüsselwort-Häufigkeit und -Dichte für SEO. Kostenloses Online-Tool, 100% im Browser."
   },
+  "sshkey": {
+    "title": "SSH-Schlüsselgenerator - RSA & Ed25519 Schlüsselpaare online erstellen",
+    "shortTitle": "SSH-Schlüsselgenerator",
+    "description": "Erstellen Sie SSH-Schlüsselpaare (RSA, Ed25519) vollständig in Ihrem Browser. Unterstützt Passwort-Verschlüsselung, Fingerabdruck-Anzeige und öffentliche Schlüsselprüfung. Keine Daten werden an Server gesendet."
+  },
   "categories": {
     "text": "Textverarbeitung",
     "encoding": "Kodierung & Konvertierung",

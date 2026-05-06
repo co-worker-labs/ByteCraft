@@ -149,6 +149,11 @@
     "shortTitle": "Contador de Palabras",
     "description": "Cuenta palabras, caracteres, oraciones y párrafos. Estima el tiempo de lectura y habla. Analiza la frecuencia y densidad de palabras clave para SEO. Herramienta gratuita, 100% en el navegador."
   },
+  "sshkey": {
+    "title": "Generador de Claves SSH - Genera claves RSA y Ed25519 en línea",
+    "shortTitle": "Generador de Claves SSH",
+    "description": "Genera pares de claves SSH (RSA, Ed25519) completamente en tu navegador. Soporta cifrado con frase de contraseña, huella digital e inspección de claves públicas. Sin envío de datos a servidores."
+  },
   "categories": {
     "text": "Procesamiento de texto",
     "encoding": "Codificación y conversión",

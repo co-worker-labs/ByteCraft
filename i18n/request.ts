@@ -38,6 +38,7 @@ const namespaces = [
   "extractor",
   "wordcounter",
   "deduplines",
+  "sshkey",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

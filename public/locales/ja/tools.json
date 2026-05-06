@@ -179,6 +179,12 @@
     "description": "単語数、文字数、文、段落を数えます。読書時間と朗読時間を推定します。キーワードの出現頻度と密度を分析します。無料のオンライン文字数カウンター、100%ブラウザ上で処理。",
     "searchTerms": "mojisukazyou dokushojikan kiwaado"
   },
+  "sshkey": {
+    "title": "SSH 鍵ジェネレーター - RSA & Ed25519 鍵ペア生成",
+    "shortTitle": "SSH 鍵生成",
+    "description": "ブラウザ内で SSH 鍵ペア（RSA、Ed25519）を生成。パスフレーズ暗号化、フィンガープリント表示、公開鍵検査をサポート。データはサーバーに送信されません。",
+    "searchTerms": "sshkagiseseiseiki sshkgss kagi koukaken"
+  },
   "categories": {
     "text": "テキスト処理",
     "encoding": "エンコード・変換",

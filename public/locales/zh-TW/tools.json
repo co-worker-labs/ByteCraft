@@ -179,6 +179,12 @@
     "description": "統計字數、字元數、句子和段落。估算閱讀和朗讀時間。分析關鍵詞頻率和密度。免費線上字數統計工具，100% 客戶端處理。",
     "searchTerms": "zishutongji zstj guanjianci yuedushijian guanjianmidu"
   },
+  "sshkey": {
+    "title": "SSH 金鑰產生器 - 線上產生 RSA 和 Ed25519 金鑰對",
+    "shortTitle": "SSH 金鑰產生",
+    "description": "完全在瀏覽器中產生 SSH 金鑰對（RSA、Ed25519）。支援密碼短語加密、指紋顯示和公鑰檢查。不向任何伺服器傳送資料。",
+    "searchTerms": "sshjinyaoshengchengqi sshjyscq jinyao gongyao"
+  },
   "categories": {
     "text": "文本處理",
     "encoding": "編碼轉換",

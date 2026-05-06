@@ -179,6 +179,12 @@
     "description": "단어 수, 문자 수, 문장 및 단락을 계산합니다. 읽기 및 말하기 시간을 추정합니다. 키워드 빈도와 밀도를 분석합니다. 무료 온라인 단어 카운터, 100% 클라이언트 처리.",
     "searchTerms": "geulsujatonggye gstj teukseongeo dokseo sigan"
   },
+  "sshkey": {
+    "title": "SSH 키 생성기 - RSA & Ed25519 키 쌍 생성",
+    "shortTitle": "SSH 키 생성기",
+    "description": "브라우저에서 SSH 키 쌍(RSA, Ed25519)을 생성합니다. 암호화, 핑거프린트 표시, 공개 키 검사를 지원합니다. 데이터는 서버로 전송되지 않습니다.",
+    "searchTerms": "sshkisaengseongki sshkssg ki gonggae"
+  },
   "categories": {
     "text": "텍스트 처리",
     "encoding": "인코딩 & 변환",

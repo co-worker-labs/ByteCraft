@@ -31,6 +31,7 @@ import {
   ListFilter,
   Search,
   AlignLeft,
+  Terminal,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -72,7 +73,7 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
     key: "encoding",
     tools: ["base64", "urlencoder", "csv", "csv-md", "numbase", "yaml", "storageunit"],
   },
-  { key: "security", tools: ["jwt", "hashing", "password", "cipher", "checksum"] },
+  { key: "security", tools: ["jwt", "hashing", "password", "sshkey", "cipher", "checksum"] },
   { key: "generators", tools: ["uuid", "cron", "unixtime", "qrcode"] },
   { key: "visual", tools: ["color", "image"] },
   { key: "reference", tools: ["httpstatus", "dbviewer", "ascii", "htmlcode"] },
@@ -107,6 +108,7 @@ export const TOOLS: ToolEntry[] = [
   { key: "unixtime", path: "/unixtime", icon: Timer },
   { key: "diff", path: "/diff", icon: GitCompare },
   { key: "password", path: "/password", icon: KeyRound },
+  { key: "sshkey", path: "/sshkey", icon: Terminal },
   { key: "color", path: "/color", icon: Palette },
   { key: "cron", path: "/cron", icon: Clock },
   { key: "markdown", path: "/markdown", icon: FileText },

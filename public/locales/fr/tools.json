@@ -149,6 +149,11 @@
     "shortTitle": "Compteur de Mots",
     "description": "Comptez les mots, caractères, phrases et paragraphes. Estimez le temps de lecture et de parole. Analysez la fréquence et la densité des mots-clés pour le SEO. Outil gratuit, 100% dans le navigateur."
   },
+  "sshkey": {
+    "title": "Générateur de Clés SSH - Générez des clés RSA et Ed25519 en ligne",
+    "shortTitle": "Générateur de Clés SSH",
+    "description": "Générez des paires de clés SSH (RSA, Ed25519) entièrement dans votre navigateur. Prend en charge le chiffrement par phrase de passe, l'affichage d'empreinte et l'inspection de clé publique. Aucune donnée envoyée à un serveur."
+  },
   "categories": {
     "text": "Traitement de texte",
     "encoding": "Encodage et conversion",
