@@ -303,8 +303,8 @@ export function parseProxyResponse(data: Record<string, unknown>, startTime: num
     bodyType,
     size: data.size as number,
     timing: {
-      total: Date.now() - startTime,
       ...(data.timing as { total: number }),
+      total: Date.now() - startTime,
     },
     cookies: parseSetCookieHeaders(setCookieHeaders),
     redirected: data.redirected as boolean,
