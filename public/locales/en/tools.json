@@ -1,8 +1,8 @@
 {
   "password": {
-    "title": "Secure Random Password Generator",
+    "title": "Secure Password Generator & Strength Checker",
     "shortTitle": "Password Generator",
-    "description": "Generate cryptographically secure, random passwords instantly. Free online password generator with customizable length and character options."
+    "description": "Generate cryptographically secure passwords and check password strength instantly. Free online tool with customizable options and real-time analysis."
   },
   "ascii": {
     "title": "ASCII Table - Complete Character Reference",
@@ -104,6 +104,11 @@
     "shortTitle": "Text Case Converter",
     "description": "Convert text between camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, Title Case and more. Free online text case converter, 100% client-side."
   },
+  "deduplines": {
+    "title": "Remove Duplicate Lines - Deduplicate Text Online",
+    "shortTitle": "Deduplicate Lines",
+    "description": "Remove duplicate lines from text. Options for case sensitivity, trim, empty lines. 100% client-side."
+  },
   "color": {
     "title": "Color Converter & Picker - HEX, RGB, HSL, OKLCH",
     "shortTitle": "Color Converter",
@@ -133,6 +138,26 @@
     "title": "Image Compressor & Format Converter - PNG, JPG, WebP",
     "shortTitle": "Image Compressor",
     "description": "Compress, resize, and convert images between PNG, JPG, and WebP formats. All processing runs locally in your browser."
+  },
+  "extractor": {
+    "title": "Email & URL Extractor — Extract Emails, URLs, Phone Numbers Online",
+    "shortTitle": "Email / URL / Phone Extractor",
+    "description": "Extract emails, URLs, and phone numbers from any text instantly. Free online extraction tool, 100% client-side."
+  },
+  "wordcounter": {
+    "title": "Word Counter - Character Count, Reading Time, Keyword Density",
+    "shortTitle": "Word Counter",
+    "description": "Count words, characters, sentences, and paragraphs. Estimate reading and speaking time. Analyze keyword frequency and density for SEO. Free online word counter, 100% client-side."
+  },
+  "sshkey": {
+    "title": "SSH Key Generator - Generate RSA & Ed25519 Key Pairs Online",
+    "shortTitle": "SSH Key Generator",
+    "description": "Generate SSH key pairs (RSA, Ed25519) entirely in your browser. Supports passphrase encryption, fingerprint display, and public key inspection. No data sent to any server."
+  },
+  "httpclient": {
+    "title": "HTTP Client - Online REST API Tester",
+    "shortTitle": "HTTP Client",
+    "description": "Send HTTP requests and test REST APIs directly in your browser. Supports GET, POST, PUT, DELETE with headers, body, and auth. Free, no data sent to servers."
   },
   "categories": {
     "text": "Text Processing",

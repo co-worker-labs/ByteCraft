@@ -21,33 +21,6 @@ export interface SavedRecord {
 
 const characters_symbols = "~!@#$%^&*()_-+=}]{[:;?<>,'\"\\";
 
-function getPoolSize(cs: number, avoid: boolean): number {
-  let size = 0;
-  if ((cs & random_uppercase_checked) != 0)
-    size += avoid ? "ABCDEFGHIJKLMNOPQRSTUVWXYZ".replace(/[OI]/g, "").length : 26;
-  if ((cs & random_lowercase_checked) != 0)
-    size += avoid ? "abcdefghijklmnopqrstuvwxyz".replace(/[lI]/g, "").length : 26;
-  if ((cs & random_numbers_checked) != 0)
-    size += avoid ? "0123456789".replace(/[01]/g, "").length : 10;
-  if ((cs & random_symbols_checked) != 0) size += characters_symbols.length;
-  return size;
-}
-
-export function calculateEntropy(password: string[], type: PasswordType, chars: number): number {
-  if (type === "Memorable") {
-    const wordCount = password.length;
-    const poolSize =
-      (chars & memorable_full_words_checked) != 0 ? agwordlist.length : agsyllables.length;
-    return wordCount * Math.log2(poolSize);
-  } else {
-    const length = password[0].length;
-    const avoid = (chars & random_avoid_amibugous_checked) != 0;
-    const poolSize = getPoolSize(chars, avoid);
-    if (poolSize === 0) return 0;
-    return length * Math.log2(poolSize);
-  }
-}
-
 export class PasswordLength {
   current: number;
   min: number;

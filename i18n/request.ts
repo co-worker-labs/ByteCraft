@@ -35,6 +35,11 @@ const namespaces = [
   "csv-md",
   "numbase",
   "image",
+  "extractor",
+  "wordcounter",
+  "deduplines",
+  "sshkey",
+  "httpclient",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

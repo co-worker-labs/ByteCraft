@@ -28,6 +28,11 @@ import {
   Table,
   FileSpreadsheet,
   ImageDown,
+  ListFilter,
+  Search,
+  AlignLeft,
+  Terminal,
+  Send,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -52,15 +57,27 @@ export interface CategoryGroup {
 }
 
 export const TOOL_CATEGORIES: CategoryGroup[] = [
-  { key: "text", tools: ["json", "regex", "diff", "markdown", "textcase"] },
+  {
+    key: "text",
+    tools: [
+      "json",
+      "regex",
+      "diff",
+      "markdown",
+      "textcase",
+      "extractor",
+      "wordcounter",
+      "deduplines",
+    ],
+  },
   {
     key: "encoding",
     tools: ["base64", "urlencoder", "csv", "csv-md", "numbase", "yaml", "storageunit"],
   },
-  { key: "security", tools: ["jwt", "hashing", "password", "cipher", "checksum"] },
+  { key: "security", tools: ["jwt", "hashing", "password", "sshkey", "cipher", "checksum"] },
   { key: "generators", tools: ["uuid", "cron", "unixtime", "qrcode"] },
   { key: "visual", tools: ["color", "image"] },
-  { key: "reference", tools: ["httpstatus", "dbviewer", "ascii", "htmlcode"] },
+  { key: "reference", tools: ["httpstatus", "httpclient", "dbviewer", "ascii", "htmlcode"] },
 ];
 
 export const QUICK_ACCESS_DEFAULT: string[] = ["json", "base64", "jwt", "regex", "diff", "hashing"];
@@ -92,11 +109,13 @@ export const TOOLS: ToolEntry[] = [
   { key: "unixtime", path: "/unixtime", icon: Timer },
   { key: "diff", path: "/diff", icon: GitCompare },
   { key: "password", path: "/password", icon: KeyRound },
+  { key: "sshkey", path: "/sshkey", icon: Terminal },
   { key: "color", path: "/color", icon: Palette },
   { key: "cron", path: "/cron", icon: Clock },
   { key: "markdown", path: "/markdown", icon: FileText },
   { key: "qrcode", path: "/qrcode", icon: QrCode },
   { key: "textcase", path: "/textcase", icon: CaseSensitive },
+  { key: "deduplines", path: "/deduplines", icon: ListFilter },
   { key: "csv", path: "/csv", icon: FileSpreadsheet },
   { key: "csv-md", path: "/csv-md", icon: Table },
   { key: "cipher", path: "/cipher", icon: Lock },
@@ -109,6 +128,9 @@ export const TOOLS: ToolEntry[] = [
   { key: "image", path: "/image", icon: ImageDown },
   { key: "htmlcode", path: "/htmlcode", icon: Code },
   { key: "ascii", path: "/ascii", icon: Type },
+  { key: "extractor", path: "/extractor", icon: Search },
+  { key: "wordcounter", path: "/wordcounter", icon: AlignLeft },
+  { key: "httpclient", path: "/httpclient", icon: Send },
 ] as const;
 
 export function getToolCards(t: ReturnType<typeof useTranslations>): ToolCard[] {

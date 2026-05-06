@@ -11,7 +11,9 @@
     "exitFullscreen": "Vollbild beenden",
     "searchTools": "Tools suchen… (Strg+K)",
     "searchToolsHint": "Tools (⌘K)",
-    "noMatchingTools": "Keine passenden Tools gefunden"
+    "noMatchingTools": "Keine passenden Tools gefunden",
+    "quickAccess": "Schnellzugriff",
+    "recentTools": "Kürzlich"
   },
   "footer": {
     "home": "Startseite",
@@ -75,6 +77,8 @@
   "binaryRejected": "Binärdatei erkannt, bitte laden Sie eine Textdatei hoch",
   "fileLoaded": "Datei geladen",
   "dropActive": "Loslassen zum Öffnen",
+  "loadFile": "Datei öffnen",
+  "download": "Herunterladen",
   "showMore": "Mehr anzeigen",
   "showLess": "Weniger anzeigen",
   "algorithms": {

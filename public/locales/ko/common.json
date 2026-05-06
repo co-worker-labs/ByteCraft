@@ -11,7 +11,9 @@
     "exitFullscreen": "전체화면 종료",
     "searchTools": "도구 검색… (Ctrl+K)",
     "searchToolsHint": "도구 (⌘K)",
-    "noMatchingTools": "일치하는 도구가 없습니다"
+    "noMatchingTools": "일치하는 도구가 없습니다",
+    "quickAccess": "빠른 접근",
+    "recentTools": "최근 사용"
   },
   "footer": {
     "home": "홈",
@@ -75,6 +77,8 @@
   "binaryRejected": "바이너리 파일이 감지되었습니다. 텍스트 파일을 업로드해 주세요",
   "fileLoaded": "파일 로드됨",
   "dropActive": "놓아서 열기",
+  "loadFile": "파일 열기",
+  "download": "다운로드",
   "showMore": "더 보기",
   "showLess": "접기",
   "algorithms": {

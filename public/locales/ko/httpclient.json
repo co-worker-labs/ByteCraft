@@ -1,0 +1,71 @@
+{
+  "url": { "placeholder": "https://api.example.com/users" },
+  "method": { "label": "메서드" },
+  "timeout": { "label": "시간 초과" },
+  "proxy": { "label": "Proxy", "tooltip": "서버 측 프록시를 통해 요청을 전송하여 CORS 제한 우회" },
+  "send": "보내기",
+  "sending": "전송 중...",
+  "tabs": { "params": "매개변수", "headers": "헤더", "body": "본문", "auth": "인증" },
+  "bodyType": { "none": "없음", "json": "JSON", "form-data": "폼 데이터", "urlencoded": "x-www-form-urlencoded", "raw": "Raw" },
+  "authType": { "none": "없음", "bearer": "Bearer Token", "basic": "Basic 인증" },
+  "bearerToken": { "placeholder": "Bearer 토큰 입력" },
+  "basicAuth": { "username": "사용자 이름", "password": "비밀번호", "usernamePlaceholder": "사용자 이름", "passwordPlaceholder": "비밀번호" },
+  "kv": { "keyPlaceholder": "키", "valuePlaceholder": "값" },
+  "bodyPlaceholder": "요청 본문을 입력하세요...",
+  "response": {
+    "title": "응답",
+    "emptyState": "URL을 입력하고 보내기를 클릭하세요",
+    "tabs": { "body": "본문", "headers": "헤더", "cookies": "Cookies", "timing": "타이밍", "redirects": "리다이렉트" },
+    "status": "상태",
+    "time": "시간",
+    "size": "크기",
+    "type": "유형",
+    "download": "다운로드",
+    "copyBody": "본문 복사",
+    "pretty": "포맷",
+    "raw": "Raw",
+    "largeResponseWarning": "응답이 1MB를 초과합니다. 처음 100KB만 표시합니다.",
+    "noHeaders": "응답 헤더 없음",
+    "noCookies": "접근 가능한 쿠키 없음",
+    "cookieNote": "Cookie는 동일 출처 요청이거나 서버가 CORS를 통해 Set-Cookie를 노출하는 경우에만 볼 수 있습니다.",
+    "timingNote": "상세 타이밍(TTFB, 다운로드)은 서버가 Timing-Allow-Origin 헤더를 반환할 때만 사용할 수 있습니다.",
+    "ttfb": "TTFB",
+    "download": "다운로드",
+    "total": "총계",
+    "na": "N/A",
+    "crossOrigin": "(크로스 오리진)",
+    "redirectOccurred": "리다이렉트가 발생했습니다",
+    "noRedirect": "리다이렉트 없음",
+    "finalUrl": "최종 URL",
+    "redirectNote": "브라우저 fetch는 중간 리다이렉트 URL을 노출하지 않습니다. 최종 목적지만 표시됩니다.",
+    "binaryPreview": "바이너리 응답 — hex 덤프 미리보기 (처음 4KB)"
+  },
+  "error": {
+    "cors": "CORS 정책이 이 요청을 차단했습니다. 대상 API가 브라우저의 크로스 오리진 요청을 허용하지 않습니다.",
+    "network": "네트워크 오류",
+    "timeout": "{timeout}초 후 요청이 시간 초과되었습니다.",
+    "generic": "요청 실패"
+  },
+  "history": {
+    "title": "기록",
+    "clear": "기록 삭제",
+    "empty": "기록 없음",
+    "ago": { "seconds": "{count}초 전", "minutes": "{count}분 전", "hours": "{count}시간 전", "days": "{count}일 전" }
+  },
+  "description": {
+    "text": "REST API 테스트를 위한 가벼운 브라우저 기반 HTTP 클라이언트입니다. 요청 메서드, 헤더, 본문, 인증 방식을 자유롭게 구성하고, 응답의 타이밍 정보, 헤더, 쿠키를 확인할 수 있습니다. 기본적으로 브라우저 fetch()로 직접 요청을 보냅니다. 프록시 토글을 켜면 서버 측 프록시를 통해 요청이 전달되어 CORS 제한을 우회할 수 있습니다. 데이터는 어떤 서버에도 저장되지 않습니다.",
+    "features": {
+      "title": "기능",
+      "methods": "모든 표준 HTTP 메서드: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
+      "auth": "인증 방식: Bearer Token, Basic Auth",
+      "body": "요청 본문 형식: JSON, Form-Data, x-www-form-urlencoded, Raw 텍스트",
+      "response": "응답 검사: 포맷된 본문, 헤더, 쿠키, 타이밍, 리다이렉트 정보",
+      "history": "요청 기록, 원클릭 복원 (로컬 저장)",
+      "proxy": "서버 측 프록시 모드: 토글 하나로 CORS 제한 우회"
+    },
+    "cors": {
+      "title": "CORS 및 프록시",
+      "text": "기본적으로 브라우저의 네이티브 fetch() API를 사용합니다. 크로스 오리진 요청은 대상 서버가 적절한 CORS 헤더를 반환해야 합니다. 서버가 CORS를 지원하지 않는 경우 프록시 토글을 활성화하세요. 요청이 서버 측 프록시를 통해 전달되어 CORS 제한을 완전히 우회합니다."
+    }
+  }
+}

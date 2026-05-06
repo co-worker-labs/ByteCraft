@@ -1,8 +1,8 @@
 {
   "password": {
-    "title": "Gerador de Senhas Aleatórias Seguras",
+    "title": "Gerador de Senhas e Verificador de Força",
     "shortTitle": "Gerador de Senhas",
-    "description": "Gere senhas aleatórias criptograficamente seguras instantaneamente. Gerador de senhas gratuito online com comprimento e opções de caracteres personalizáveis."
+    "description": "Gere senhas criptograficamente seguras e verifique a força da senha instantaneamente. Ferramenta online gratuita com opções personalizáveis e análise em tempo real."
   },
   "ascii": {
     "title": "Tabela ASCII - Referência Completa de Caracteres",
@@ -104,6 +104,11 @@
     "shortTitle": "Conversor de Caixa de Texto",
     "description": "Converta texto entre camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, Title Case e mais. Conversor de caixa de texto gratuito online, 100% no navegador."
   },
+  "deduplines": {
+    "title": "Remover Linhas Duplicadas - Deduplicar Texto Online",
+    "shortTitle": "Deduplicar Linhas",
+    "description": "Remove linhas duplicadas do texto. Opções de diferenciação de maiúsculas, espaços e linhas vazias. 100% no navegador."
+  },
   "color": {
     "title": "Conversor e Seletor de Cores - HEX, RGB, HSL, OKLCH",
     "shortTitle": "Conversor de Cores",
@@ -133,6 +138,26 @@
     "title": "Compressor e Conversor de Imagens - PNG, JPG, WebP",
     "shortTitle": "Compressor de Imagens",
     "description": "Comprima, redimensione e converta imagens entre formatos PNG, JPG e WebP. Todo processamento é local no navegador."
+  },
+  "extractor": {
+    "title": "Extrator de Emails, URLs e Telefones — Extração Online",
+    "shortTitle": "Extrator Email / URL / Telefone",
+    "description": "Extraia emails, URLs e números de telefone de qualquer texto instantaneamente. Ferramenta de extração gratuita, 100% no navegador."
+  },
+  "wordcounter": {
+    "title": "Contador de Palavras - Caracteres, Tempo de Leitura, Densidade de Palavras-chave",
+    "shortTitle": "Contador de Palavras",
+    "description": "Conte palavras, caracteres, frases e parágrafos. Estime o tempo de leitura e fala. Analise a frequência e densidade de palavras-chave para SEO. Ferramenta gratuita, 100% no navegador."
+  },
+  "sshkey": {
+    "title": "Gerador de Chaves SSH - Gere chaves RSA e Ed25519 online",
+    "shortTitle": "Gerador de Chaves SSH",
+    "description": "Gere pares de chaves SSH (RSA, Ed25519) inteiramente no seu navegador. Suporta criptografia com senha, exibição de impressão digital e inspeção de chave pública. Nenhum dado é enviado a servidores."
+  },
+  "httpclient": {
+    "title": "Cliente HTTP - Testador de APIs REST Online",
+    "shortTitle": "Cliente HTTP",
+    "description": "Envie requisições HTTP e teste APIs REST diretamente no seu navegador. Suporta GET, POST, PUT, DELETE com cabeçalhos, corpo e autenticação. Gratuito, sem enviar dados para servidores."
   },
   "categories": {
     "text": "Processamento de texto",

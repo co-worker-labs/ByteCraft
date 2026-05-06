@@ -1,0 +1,116 @@
+{
+  "url": {
+    "placeholder": "https://api.example.com/users"
+  },
+  "method": {
+    "label": "Method"
+  },
+  "timeout": {
+    "label": "Timeout"
+  },
+  "proxy": {
+    "label": "Proxy",
+    "tooltip": "Route requests through server-side proxy to bypass CORS restrictions"
+  },
+  "send": "Send",
+  "sending": "Sending...",
+  "tabs": {
+    "params": "Params",
+    "headers": "Headers",
+    "body": "Body",
+    "auth": "Auth"
+  },
+  "bodyType": {
+    "none": "none",
+    "json": "JSON",
+    "form-data": "Form-Data",
+    "urlencoded": "x-www-form-urlencoded",
+    "raw": "Raw"
+  },
+  "authType": {
+    "none": "none",
+    "bearer": "Bearer Token",
+    "basic": "Basic Auth"
+  },
+  "bearerToken": {
+    "placeholder": "Enter Bearer token"
+  },
+  "basicAuth": {
+    "username": "Username",
+    "password": "Password",
+    "usernamePlaceholder": "Username",
+    "passwordPlaceholder": "Password"
+  },
+  "kv": {
+    "keyPlaceholder": "Key",
+    "valuePlaceholder": "Value"
+  },
+  "bodyPlaceholder": "Enter request body...",
+  "response": {
+    "title": "Response",
+    "emptyState": "Enter a URL and click Send to get started",
+    "tabs": {
+      "body": "Body",
+      "headers": "Headers",
+      "cookies": "Cookies",
+      "timing": "Timing",
+      "redirects": "Redirects"
+    },
+    "status": "Status",
+    "time": "Time",
+    "size": "Size",
+    "type": "Type",
+    "download": "Download",
+    "copyBody": "Copy Body",
+    "pretty": "Pretty",
+    "raw": "Raw",
+    "largeResponseWarning": "Response is larger than 1MB. Showing first 100KB.",
+    "noHeaders": "No response headers",
+    "noCookies": "No accessible cookies",
+    "cookieNote": "Cookies are only visible for same-origin requests or when the server exposes Set-Cookie via CORS headers.",
+    "timingNote": "Detailed timing (TTFB, Download) is only available when the server returns Timing-Allow-Origin header.",
+    "ttfb": "TTFB",
+    "download": "Download",
+    "total": "Total",
+    "na": "N/A",
+    "crossOrigin": "(cross-origin)",
+    "redirectOccurred": "A redirect occurred",
+    "noRedirect": "No redirects",
+    "finalUrl": "Final URL",
+    "redirectNote": "Browser fetch does not expose intermediate redirect URLs. Only the final destination is shown.",
+    "binaryPreview": "Binary response — hex dump preview (first 4KB)"
+  },
+  "error": {
+    "cors": "CORS policy blocked this request. The target API does not allow cross-origin requests from browsers.",
+    "network": "Network error",
+    "timeout": "Request timed out after {timeout}s.",
+    "generic": "Request failed"
+  },
+  "history": {
+    "title": "History",
+    "clear": "Clear History",
+    "empty": "No history yet",
+    "ago": {
+      "seconds": "{count}s ago",
+      "minutes": "{count}min ago",
+      "hours": "{count}h ago",
+      "days": "{count}d ago"
+    }
+  },
+  "description": {
+    "text": "A lightweight, browser-based HTTP client for testing REST APIs. Compose and send requests with full control over method, headers, body, and auth — then inspect responses with timing details, headers, and cookies. Requests execute directly via browser fetch() by default. Enable the Proxy toggle to route requests through the server-side proxy, bypassing CORS restrictions. No data is stored on any server.",
+    "features": {
+      "title": "Features",
+      "methods": "All standard HTTP methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
+      "auth": "Authentication: Bearer Token, Basic Auth",
+      "body": "Request body formats: JSON, Form-Data, x-www-form-urlencoded, Raw text",
+      "response": "Response inspection: formatted body, headers, cookies, timing, redirect info",
+      "history": "Request history with one-click restore (stored locally)",
+      "proxy": "Server-side proxy mode: bypass CORS restrictions with a single toggle"
+    },
+    "cors": {
+      "title": "CORS & Proxy",
+      "text": "By default, this tool uses the browser's native fetch() API. Cross-origin requests require the target server to include appropriate CORS headers. If a server does not support CORS, enable the Proxy toggle — requests will be routed through the server-side proxy, bypassing CORS restrictions entirely."
+    }
+  }
+}

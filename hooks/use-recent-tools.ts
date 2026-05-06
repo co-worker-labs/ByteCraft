@@ -42,8 +42,17 @@ function getServerSnapshot(): string[] {
   return EMPTY;
 }
 
-function subscribe() {
-  return () => {};
+const listeners = new Set<() => void>();
+
+function subscribe(callback: () => void) {
+  listeners.add(callback);
+  return () => {
+    listeners.delete(callback);
+  };
+}
+
+function emitChange() {
+  for (const cb of listeners) cb();
 }
 
 export function useRecentTools() {
@@ -56,6 +65,7 @@ export function useRecentTools() {
     saveRecentTools(updated);
     cachedRaw = JSON.stringify(updated);
     cachedSnapshot = updated;
+    emitChange();
   }, []);
 
   return { recentTools, trackUsage };

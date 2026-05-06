@@ -1,9 +1,9 @@
 {
   "password": {
-    "title": "隨機密碼產生器 - 安全強密碼線上產生",
+    "title": "密碼產生器 & 強度檢測 - 安全密碼線上工具",
     "shortTitle": "密碼產生器",
-    "description": "產生加密安全的隨機密碼。線上密碼產生器，支援自訂長度和字元類型，完全免費，100%客戶端處理。",
-    "searchTerms": "mimachanshengqi mmcsq suiji"
+    "description": "產生加密安全的隨機密碼，即時檢測密碼強度。免費線上工具，支援自訂選項和 zxcvbn 強度分析。",
+    "searchTerms": "mimachanshengqi mcscq mimaqiangdu mimajiance anquan"
   },
   "ascii": {
     "title": "ASCII 碼表 - 完整字元參照",
@@ -125,6 +125,12 @@
     "description": "在 camelCase、PascalCase、snake_case、CONSTANT_CASE、kebab-case、dot.case、Title Case 等 11 種命名格式間互轉。免費線上工具，100% 客戶端處理。",
     "searchTerms": "wenzidaxiaoxiezhuanhuan wzdxxzh"
   },
+  "deduplines": {
+    "title": "文字行去重 - 線上去除重複行",
+    "shortTitle": "行去重",
+    "description": "移除文字中的重複行。支援大小寫敏感、去除空白、移除空行等選項。100% 客戶端處理。",
+    "searchTerms": "quchonghang qrch quchong chongfu wenben"
+  },
   "color": {
     "title": "顏色轉換與選色器 - HEX, RGB, HSL, OKLCH",
     "shortTitle": "顏色轉換",
@@ -160,6 +166,30 @@
     "shortTitle": "圖片壓縮",
     "description": "線上壓縮、調整大小、轉換圖片格式，支援 PNG、JPG、WebP。所有處理在瀏覽器本機完成，不上傳資料。",
     "searchTerms": "tupianyasuo tpyas yasuo webp"
+  },
+  "extractor": {
+    "title": "信箱 / URL / 電話提取器 — 線上提取信箱、網址、電話號碼",
+    "shortTitle": "信箱 / URL / 電話提取",
+    "description": "從任意文字中即時提取信箱、URL 和電話號碼。免費線上提取工具，100% 瀏覽器端處理。",
+    "searchTerms": "youxiangtiqu yxtq url dianhua"
+  },
+  "wordcounter": {
+    "title": "字數統計 - 字元計數、閱讀時間、關鍵詞密度",
+    "shortTitle": "字數統計",
+    "description": "統計字數、字元數、句子和段落。估算閱讀和朗讀時間。分析關鍵詞頻率和密度。免費線上字數統計工具，100% 客戶端處理。",
+    "searchTerms": "zishutongji zstj guanjianci yuedushijian guanjianmidu"
+  },
+  "sshkey": {
+    "title": "SSH 金鑰產生器 - 線上產生 RSA 和 Ed25519 金鑰對",
+    "shortTitle": "SSH 金鑰產生",
+    "description": "完全在瀏覽器中產生 SSH 金鑰對（RSA、Ed25519）。支援密碼短語加密、指紋顯示和公鑰檢查。不向任何伺服器傳送資料。",
+    "searchTerms": "sshjinyaoshengchengqi sshjyscq jinyao gongyao"
+  },
+  "httpclient": {
+    "title": "HTTP 用戶端 - 線上 REST API 測試工具",
+    "shortTitle": "HTTP 用戶端",
+    "description": "在瀏覽器中直接傳送 HTTP 請求，測試 REST API。支援 GET、POST、PUT、DELETE，可設定請求標頭、請求主體和認證。免費，資料不上傳伺服器。",
+    "searchTerms": "httpkehuduan hkt rest api"
   },
   "categories": {
     "text": "文本處理",

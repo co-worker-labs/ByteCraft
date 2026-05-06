@@ -11,7 +11,9 @@
     "exitFullscreen": "フルスクリーンを終了",
     "searchTools": "ツールを検索…（Ctrl+K）",
     "searchToolsHint": "ツール（⌘K）",
-    "noMatchingTools": "一致するツールが見つかりません"
+    "noMatchingTools": "一致するツールが見つかりません",
+    "quickAccess": "クイックアクセス",
+    "recentTools": "最近使用"
   },
   "footer": {
     "home": "ホーム",
@@ -75,6 +77,8 @@
   "binaryRejected": "バイナリファイルが検出されました。テキストファイルをアップロードしてください",
   "fileLoaded": "ファイルを読み込みました",
   "dropActive": "ドロップして開く",
+  "loadFile": "ファイルを開く",
+  "download": "ダウンロード",
   "showMore": "もっと見る",
   "showLess": "閉じる",
   "algorithms": {

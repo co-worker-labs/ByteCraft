@@ -1,0 +1,71 @@
+{
+  "url": { "placeholder": "https://api.example.com/users" },
+  "method": { "label": "請求方法" },
+  "timeout": { "label": "逾時時間" },
+  "proxy": { "label": "Proxy", "tooltip": "透過本站伺服器端代理轉發請求，繞過 CORS 跨域限制" },
+  "send": "傳送",
+  "sending": "傳送中...",
+  "tabs": { "params": "參數", "headers": "請求標頭", "body": "請求主體", "auth": "認證" },
+  "bodyType": { "none": "無", "json": "JSON", "form-data": "表單資料", "urlencoded": "x-www-form-urlencoded", "raw": "原始文字" },
+  "authType": { "none": "無", "bearer": "Bearer Token", "basic": "Basic 認證" },
+  "bearerToken": { "placeholder": "輸入 Bearer Token" },
+  "basicAuth": { "username": "使用者名稱", "password": "密碼", "usernamePlaceholder": "使用者名稱", "passwordPlaceholder": "密碼" },
+  "kv": { "keyPlaceholder": "鍵", "valuePlaceholder": "值" },
+  "bodyPlaceholder": "輸入請求主體...",
+  "response": {
+    "title": "回應",
+    "emptyState": "輸入 URL 並點擊傳送開始測試",
+    "tabs": { "body": "回應主體", "headers": "回應標頭", "cookies": "Cookies", "timing": "耗時", "redirects": "重新導向" },
+    "status": "狀態",
+    "time": "耗時",
+    "size": "大小",
+    "type": "類型",
+    "download": "下載",
+    "copyBody": "複製回應主體",
+    "pretty": "格式化",
+    "raw": "原始",
+    "largeResponseWarning": "回應超過 1MB，僅顯示前 100KB。",
+    "noHeaders": "無回應標頭",
+    "noCookies": "無可存取的 Cookie",
+    "cookieNote": "Cookie 僅在同源請求或伺服器透過 CORS 暴露 Set-Cookie 時可見。",
+    "timingNote": "詳細耗時（TTFB、下載）僅在伺服器回傳 Timing-Allow-Origin 標頭時可用。",
+    "ttfb": "首字元組時間",
+    "download": "下載",
+    "total": "總計",
+    "na": "不適用",
+    "crossOrigin": "（跨域）",
+    "redirectOccurred": "發生了重新導向",
+    "noRedirect": "無重新導向",
+    "finalUrl": "最終 URL",
+    "redirectNote": "瀏覽器 fetch 不暴露中間重新導向 URL，僅顯示最終位址。",
+    "binaryPreview": "二進位回應 — 十六進位預覽（前 4KB）"
+  },
+  "error": {
+    "cors": "CORS 政策阻擋了此請求。目標 API 不允許來自瀏覽器的跨域請求。",
+    "network": "網路錯誤",
+    "timeout": "請求在 {timeout} 秒後逾時。",
+    "generic": "請求失敗"
+  },
+  "history": {
+    "title": "歷史紀錄",
+    "clear": "清空歷史",
+    "empty": "暫無歷史紀錄",
+    "ago": { "seconds": "{count} 秒前", "minutes": "{count} 分鐘前", "hours": "{count} 小時前", "days": "{count} 天前" }
+  },
+  "description": {
+    "text": "一個輕量級的瀏覽器端 HTTP 用戶端，用於測試 REST API。可以自由設定請求方法、請求頭、請求體和認證方式，發送請求後檢視回應的耗時詳情、回應標頭和 Cookie。預設透過瀏覽器 fetch() 直接發送請求，開啟代理開關後可經由伺服器端代理轉發，繞過 CORS 跨域限制。資料不會儲存在任何伺服器上。",
+    "features": {
+      "title": "功能特性",
+      "methods": "所有標準 HTTP 方法：GET、POST、PUT、PATCH、DELETE、HEAD、OPTIONS",
+      "auth": "認證方式：Bearer Token、Basic 認證",
+      "body": "請求體格式：JSON、表單資料、x-www-form-urlencoded、原始文字",
+      "response": "回應檢查：格式化回應體、回應標頭、Cookie、耗時、重導向資訊",
+      "history": "請求歷史記錄，一鍵恢復（本地儲存）",
+      "proxy": "伺服器端代理模式：一鍵開關即可繞過 CORS 跨域限制"
+    },
+    "cors": {
+      "title": "CORS 與代理",
+      "text": "預設情況下，本工具使用瀏覽器原生 fetch() API。跨域請求需要目標伺服器包含正確的 CORS 回應標頭。如果伺服器不支援 CORS，可以開啟代理開關——請求將透過伺服器端代理轉發，完全繞過 CORS 限制。"
+    }
+  }
+}

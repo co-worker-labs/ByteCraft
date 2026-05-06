@@ -9,6 +9,8 @@ export const STORAGE_KEYS = {
   floatingToolbarPosition: "okrun:ftp",
   recentTools: "okrun:recent-tools",
   homeViewMode: "okrun:home-view",
+  sshkeyDeployTarget: "okrun:sshkey:deploy",
+  httpclientHistory: "okrun:httpclient:history",
 } as const;
 
 export const COOKIE_KEYS = {

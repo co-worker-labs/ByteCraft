@@ -1,0 +1,71 @@
+{
+  "url": { "placeholder": "https://api.example.com/users" },
+  "method": { "label": "メソッド" },
+  "timeout": { "label": "タイムアウト" },
+  "proxy": { "label": "Proxy", "tooltip": "サーバーサイドプロキシ経由でリクエストを送信し、CORS 制限をバイパス" },
+  "send": "送信",
+  "sending": "送信中...",
+  "tabs": { "params": "パラメータ", "headers": "ヘッダー", "body": "ボディ", "auth": "認証" },
+  "bodyType": { "none": "なし", "json": "JSON", "form-data": "フォームデータ", "urlencoded": "x-www-form-urlencoded", "raw": "Raw" },
+  "authType": { "none": "なし", "bearer": "Bearer Token", "basic": "Basic 認証" },
+  "bearerToken": { "placeholder": "Bearer トークンを入力" },
+  "basicAuth": { "username": "ユーザー名", "password": "パスワード", "usernamePlaceholder": "ユーザー名", "passwordPlaceholder": "パスワード" },
+  "kv": { "keyPlaceholder": "キー", "valuePlaceholder": "値" },
+  "bodyPlaceholder": "リクエストボディを入力...",
+  "response": {
+    "title": "レスポンス",
+    "emptyState": "URL を入力して送信をクリックしてください",
+    "tabs": { "body": "ボディ", "headers": "ヘッダー", "cookies": "Cookies", "timing": "タイミング", "redirects": "リダイレクト" },
+    "status": "ステータス",
+    "time": "時間",
+    "size": "サイズ",
+    "type": "タイプ",
+    "download": "ダウンロード",
+    "copyBody": "ボディをコピー",
+    "pretty": "整形",
+    "raw": "Raw",
+    "largeResponseWarning": "レスポンスが 1MB を超えています。最初の 100KB のみ表示しています。",
+    "noHeaders": "レスポンスヘッダーなし",
+    "noCookies": "アクセス可能な Cookie なし",
+    "cookieNote": "Cookie は同一オリジンリクエスト、またはサーバーが CORS 経由で Set-Cookie を公開している場合にのみ表示されます。",
+    "timingNote": "詳細なタイミング（TTFB、ダウンロード）は、サーバーが Timing-Allow-Origin ヘッダーを返した場合にのみ利用可能です。",
+    "ttfb": "TTFB",
+    "download": "ダウンロード",
+    "total": "合計",
+    "na": "N/A",
+    "crossOrigin": "（クロスオリジン）",
+    "redirectOccurred": "リダイレクトが発生しました",
+    "noRedirect": "リダイレクトなし",
+    "finalUrl": "最終 URL",
+    "redirectNote": "ブラウザの fetch は中間リダイレクト URL を公開しません。最終宛先のみ表示されます。",
+    "binaryPreview": "バイナリレスポンス — hex ダンププレビュー（先頭 4KB）"
+  },
+  "error": {
+    "cors": "CORS ポリシーによりこのリクエストがブロックされました。対象 API はブラウザからのクロスオリジンリクエストを許可していません。",
+    "network": "ネットワークエラー",
+    "timeout": "{timeout} 秒後にリクエストがタイムアウトしました。",
+    "generic": "リクエスト失敗"
+  },
+  "history": {
+    "title": "履歴",
+    "clear": "履歴をクリア",
+    "empty": "履歴なし",
+    "ago": { "seconds": "{count}秒前", "minutes": "{count}分前", "hours": "{count}時間前", "days": "{count}日前" }
+  },
+  "description": {
+    "text": "REST API テスト用の軽量ブラウザ HTTP クライアント。リクエストメソッド、ヘッダー、ボディ、認証を自由に設定し、レスポンスのタイミング詳細、ヘッダー、Cookie を確認できます。デフォルトではブラウザの fetch() で直接リクエストを送信します。プロキシスイッチを有効にすると、サーバーサイドプロキシ経由でリクエストが転送され、CORS 制限をバイパスできます。データはサーバーに保存されません。",
+    "features": {
+      "title": "機能",
+      "methods": "全標準 HTTP メソッド：GET、POST、PUT、PATCH、DELETE、HEAD、OPTIONS",
+      "auth": "認証方式：Bearer Token、Basic Auth",
+      "body": "リクエストボディ形式：JSON、Form-Data、x-www-form-urlencoded、Raw テキスト",
+      "response": "レスポンス検査：フォーマット済みボディ、ヘッダー、Cookie、タイミング、リダイレクト情報",
+      "history": "リクエスト履歴、ワンクリック復元（ローカル保存）",
+      "proxy": "サーバーサイドプロキシモード：スイッチ一つで CORS 制限をバイパス"
+    },
+    "cors": {
+      "title": "CORS とプロキシ",
+      "text": "デフォルトではブラウザのネイティブ fetch() API を使用します。クロスオリジンリクエストには対象サーバーが適切な CORS ヘッダーを返す必要があります。サーバーが CORS をサポートしていない場合、プロキシスイッチを有効にしてください。リクエストはサーバーサイドプロキシ経由で転送され、CORS 制限を完全にバイパスします。"
+    }
+  }
+}

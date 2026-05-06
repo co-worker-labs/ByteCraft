@@ -1,8 +1,8 @@
 {
   "password": {
-    "title": "Sicherer Zufalls-Passwort-Generator",
+    "title": "Passwort-Generator und Stärke-Prüfer",
     "shortTitle": "Passwort-Generator",
-    "description": "Generieren Sie sofort kryptografisch sichere, zufällige Passwörter. Kostenloser Online-Passwort-Generator mit anpassbarer Länge und Zeichenoptionen."
+    "description": "Generieren Sie kryptografisch sichere Passwörter und prüfen Sie die Passwortstärke sofort. Kostenloses Online-Tool mit anpassbaren Optionen und Echtzeit-Analyse."
   },
   "ascii": {
     "title": "ASCII-Tabelle - Vollständige Zeichenreferenz",
@@ -104,6 +104,11 @@
     "shortTitle": "Text Case Konverter",
     "description": "Text umwandeln zwischen camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, Title Case und mehr. Kostenloser Online-Text-Case-Konverter, 100% clientseitig."
   },
+  "deduplines": {
+    "title": "Doppelte Zeilen Entfernen - Text Online Deduplizieren",
+    "shortTitle": "Zeilen Deduplizieren",
+    "description": "Entfernt doppelte Zeilen aus Text. Optionen für Groß-/Kleinschreibung, Leerzeichen und leere Zeilen. 100% clientseitig."
+  },
   "color": {
     "title": "Farbkonverter & Picker - HEX, RGB, HSL, OKLCH",
     "shortTitle": "Farbkonverter",
@@ -133,6 +138,26 @@
     "title": "Bildkompressor & Formatkonverter - PNG, JPG, WebP",
     "shortTitle": "Bildkompressor",
     "description": "Bilder komprimieren, verkleinern und zwischen PNG-, JPG- und WebP-Formaten konvertieren. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser."
+  },
+  "extractor": {
+    "title": "E-Mail / URL / Telefon-Extraktor — Online-Extraktion",
+    "shortTitle": "E-Mail / URL / Telefon Extraktor",
+    "description": "Extrahieren Sie E-Mails, URLs und Telefonnummern aus beliebigem Text sofort. Kostenloses Online-Extraktionstool, 100% clientseitig."
+  },
+  "wordcounter": {
+    "title": "Wortzähler - Zeichen, Lesezeit, Schlüsselwort-Dichte",
+    "shortTitle": "Wortzähler",
+    "description": "Zählt Wörter, Zeichen, Sätze und Absätze. Schätzt Lese- und Sprechzeit. Analysiert Schlüsselwort-Häufigkeit und -Dichte für SEO. Kostenloses Online-Tool, 100% im Browser."
+  },
+  "sshkey": {
+    "title": "SSH-Schlüsselgenerator - RSA & Ed25519 Schlüsselpaare online erstellen",
+    "shortTitle": "SSH-Schlüsselgenerator",
+    "description": "Erstellen Sie SSH-Schlüsselpaare (RSA, Ed25519) vollständig in Ihrem Browser. Unterstützt Passwort-Verschlüsselung, Fingerabdruck-Anzeige und öffentliche Schlüsselprüfung. Keine Daten werden an Server gesendet."
+  },
+  "httpclient": {
+    "title": "HTTP-Client - Online REST-API-Tester",
+    "shortTitle": "HTTP-Client",
+    "description": "Senden Sie HTTP-Anfragen und testen Sie REST-APIs direkt im Browser. Unterstützt GET, POST, PUT, DELETE mit Headern, Body und Authentifizierung. Kostenlos, keine Daten an Server gesendet."
   },
   "categories": {
     "text": "Textverarbeitung",

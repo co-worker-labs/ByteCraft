@@ -1,8 +1,8 @@
 {
   "password": {
-    "title": "Generador de contraseñas aleatorias seguras",
-    "shortTitle": "Generador de contraseñas",
-    "description": "Genera contraseñas aleatorias criptográficamente seguras al instante. Generador de contraseñas gratuito en línea con longitud y opciones de caracteres personalizables."
+    "title": "Generador de Contraseñas y Comprobador de Fortaleza",
+    "shortTitle": "Generador de Contraseñas",
+    "description": "Genera contraseñas criptográficamente seguras y comprueba su fortaleza al instante. Herramienta online gratuita con opciones personalizables y análisis en tiempo real."
   },
   "ascii": {
     "title": "Tabla ASCII - Referencia completa de caracteres",
@@ -104,6 +104,11 @@
     "shortTitle": "Conversor de mayúsculas/minúsculas",
     "description": "Convierte texto entre camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, Title Case y más. Conversor gratuito en línea, 100% del lado del cliente."
   },
+  "deduplines": {
+    "title": "Eliminar Líneas Duplicadas - Deduplicar Texto Online",
+    "shortTitle": "Deduplicar Líneas",
+    "description": "Elimina líneas duplicadas del texto. Opciones de sensibilidad a mayúsculas, espacios y líneas vacías. 100% del lado del cliente."
+  },
   "color": {
     "title": "Conversor y selector de color - HEX, RGB, HSL, OKLCH",
     "shortTitle": "Conversor de color",
@@ -133,6 +138,26 @@
     "title": "Compresor y conversor de imágenes - PNG, JPG, WebP",
     "shortTitle": "Compresor de imágenes",
     "description": "Comprime, redimensiona y convierte imágenes entre formatos PNG, JPG y WebP. Todo el procesamiento se ejecuta localmente en tu navegador."
+  },
+  "extractor": {
+    "title": "Extractor de Emails, URLs y Teléfonos — Extracción en Línea",
+    "shortTitle": "Extractor Email / URL / Teléfono",
+    "description": "Extrae emails, URLs y números de teléfono de cualquier texto al instante. Herramienta de extracción gratuita, 100% en el navegador."
+  },
+  "wordcounter": {
+    "title": "Contador de Palabras - Caracteres, Tiempo de Lectura, Densidad de Palabras Clave",
+    "shortTitle": "Contador de Palabras",
+    "description": "Cuenta palabras, caracteres, oraciones y párrafos. Estima el tiempo de lectura y habla. Analiza la frecuencia y densidad de palabras clave para SEO. Herramienta gratuita, 100% en el navegador."
+  },
+  "sshkey": {
+    "title": "Generador de Claves SSH - Genera claves RSA y Ed25519 en línea",
+    "shortTitle": "Generador de Claves SSH",
+    "description": "Genera pares de claves SSH (RSA, Ed25519) completamente en tu navegador. Soporta cifrado con frase de contraseña, huella digital e inspección de claves públicas. Sin envío de datos a servidores."
+  },
+  "httpclient": {
+    "title": "Cliente HTTP - Probador de APIs REST en línea",
+    "shortTitle": "Cliente HTTP",
+    "description": "Envía solicitudes HTTP y prueba APIs REST directamente en tu navegador. Soporta GET, POST, PUT, DELETE con cabeceras, cuerpo y autenticación. Gratis, sin enviar datos a servidores."
   },
   "categories": {
     "text": "Procesamiento de texto",

@@ -11,7 +11,9 @@
     "exitFullscreen": "Выйти из полного экрана",
     "searchTools": "Поиск инструментов… (Ctrl+K)",
     "searchToolsHint": "Инструменты (⌘K)",
-    "noMatchingTools": "Инструменты не найдены"
+    "noMatchingTools": "Инструменты не найдены",
+    "quickAccess": "Быстрый доступ",
+    "recentTools": "Недавние"
   },
   "footer": {
     "home": "Главная",
@@ -75,6 +77,8 @@
   "binaryRejected": "Обнаружен двоичный файл. Загрузите текстовый файл",
   "fileLoaded": "Файл загружен",
   "dropActive": "Отпустите для открытия",
+  "loadFile": "Открыть файл",
+  "download": "Скачать",
   "showMore": "Показать больше",
   "showLess": "Показать меньше",
   "algorithms": {

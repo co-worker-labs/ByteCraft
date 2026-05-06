@@ -11,7 +11,9 @@
     "exitFullscreen": "退出全螢幕",
     "searchTools": "搜尋工具… (Ctrl+K)",
     "searchToolsHint": "工具 (⌘K)",
-    "noMatchingTools": "沒有找到符合的工具"
+    "noMatchingTools": "沒有找到符合的工具",
+    "quickAccess": "快速存取",
+    "recentTools": "最近使用"
   },
   "footer": {
     "home": "首頁",
@@ -75,6 +77,8 @@
   "binaryRejected": "偵測到二進位檔案，請上傳文字檔案",
   "fileLoaded": "檔案已載入",
   "dropActive": "放開即可開啟",
+  "loadFile": "開啟檔案",
+  "download": "下載",
   "showMore": "展開更多",
   "showLess": "收起",
   "algorithms": {

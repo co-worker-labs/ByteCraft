@@ -11,7 +11,9 @@
     "exitFullscreen": "Salir de pantalla completa",
     "searchTools": "Buscar herramientas… (Ctrl+K)",
     "searchToolsHint": "Herramientas (⌘K)",
-    "noMatchingTools": "No se encontraron herramientas"
+    "noMatchingTools": "No se encontraron herramientas",
+    "quickAccess": "Acceso rápido",
+    "recentTools": "Recientes"
   },
   "footer": {
     "home": "Inicio",
@@ -75,6 +77,8 @@
   "binaryRejected": "Archivo binario detectado, sube un archivo de texto",
   "fileLoaded": "Archivo cargado",
   "dropActive": "Suelta para abrir",
+  "loadFile": "Abrir archivo",
+  "download": "Descargar",
   "showMore": "Mostrar más",
   "showLess": "Mostrar menos",
   "algorithms": {

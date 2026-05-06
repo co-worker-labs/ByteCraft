@@ -1,9 +1,9 @@
 {
   "password": {
-    "title": "随机密码生成器 - 安全强密码在线生成",
+    "title": "密码生成器 & 强度检测 - 安全密码在线工具",
     "shortTitle": "密码生成器",
-    "description": "生成加密安全的随机密码。在线密码生成器，支持自定义长度和字符类型，完全免费，100%客户端处理。",
-    "searchTerms": "mimashengchengqi mmscq suiji"
+    "description": "生成加密安全的随机密码，实时检测密码强度。免费在线工具，支持自定义选项和 zxcvbn 强度分析。",
+    "searchTerms": "mimashengchengqi mmscq mimaqiangdu mimajiance anquan"
   },
   "ascii": {
     "title": "ASCII 码表 - 完整字符参考",
@@ -125,6 +125,12 @@
     "description": "在 camelCase、PascalCase、snake_case、CONSTANT_CASE、kebab-case、dot.case、Title Case 等 11 种命名格式之间互转。免费在线工具，100% 客户端处理。",
     "searchTerms": "wenbendaxiaoxiezhuanhuan wbdxxzh"
   },
+  "deduplines": {
+    "title": "文本行去重 - 在线去除重复行",
+    "shortTitle": "行去重",
+    "description": "移除文本中的重复行。支持大小写敏感、去除空白、移除空行等选项。100% 客户端处理。",
+    "searchTerms": "quchonghang qrch quchong chongfu wenben"
+  },
   "color": {
     "title": "颜色转换器与选择器 - HEX, RGB, HSL, OKLCH",
     "shortTitle": "颜色转换",
@@ -160,6 +166,30 @@
     "shortTitle": "图片压缩",
     "description": "在线压缩、调整大小、转换图片格式，支持 PNG、JPG、WebP。所有处理在浏览器本地完成，不上传数据。",
     "searchTerms": "tupianyasuo tpyas yasuo webp"
+  },
+  "extractor": {
+    "title": "邮箱 / URL / 电话提取器 — 在线提取邮箱、网址、电话号码",
+    "shortTitle": "邮箱 / URL / 电话提取",
+    "description": "从任意文本中即时提取邮箱、URL 和电话号码。免费在线提取工具，100% 浏览器端处理。",
+    "searchTerms": "youxiangtiqu yxtq url dianhua"
+  },
+  "wordcounter": {
+    "title": "字数统计 - 字符计数、阅读时间、关键词密度",
+    "shortTitle": "字数统计",
+    "description": "统计字数、字符数、句子和段落。估算阅读和朗读时间。分析关键词频率和密度。免费在线字数统计工具，100% 客户端处理。",
+    "searchTerms": "zishutongji zstj guanjianci yuedushijian guanjianmidu"
+  },
+  "sshkey": {
+    "title": "SSH 密钥生成器 - 在线生成 RSA 和 Ed25519 密钥对",
+    "shortTitle": "SSH 密钥生成",
+    "description": "完全在浏览器中生成 SSH 密钥对（RSA、Ed25519）。支持密码短语加密、指纹显示和公钥检查。不向任何服务器发送数据。",
+    "searchTerms": "sshmiyaoshengchengqi sshmyscq miyao gongyao"
+  },
+  "httpclient": {
+    "title": "HTTP 客户端 - 在线 REST API 测试工具",
+    "shortTitle": "HTTP 客户端",
+    "description": "在浏览器中直接发送 HTTP 请求，测试 REST API。支持 GET、POST、PUT、DELETE，可配置请求头、请求体和认证。免费，数据不上传服务器。",
+    "searchTerms": "httpkehuduan hkt rest api"
   },
   "categories": {
     "text": "文本处理",

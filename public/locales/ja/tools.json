@@ -1,9 +1,9 @@
 {
   "password": {
-    "title": "安全なランダムパスワード生成器",
+    "title": "パスワード生成 & 強度チェックツール",
     "shortTitle": "パスワード生成",
-    "description": "暗号論的に安全なランダムパスワードを即座に生成。無料のオンラインパスワード生成器で、長さや文字種を自由にカスタマイズ可能。",
-    "searchTerms": "pasuwaadoseisei pwseisei suiji anzen angou"
+    "description": "暗号論的に安全なパスワードを生成し、強度をリアルタイムでチェック。無料のオンラインツール。zxcvbnによる強度分析。",
+    "searchTerms": "pasuwaadoseisei pws tsuyosa kensa anzen"
   },
   "ascii": {
     "title": "ASCIIテーブル - 完全キャラクターリファレンス",
@@ -125,6 +125,12 @@
     "description": "camelCase、PascalCase、snake_case、CONSTANT_CASE、kebab-case、dot.case、Title Caseなど相互変換。無料オンラインテキストケース変換、100%ブラウザ上で処理。",
     "searchTerms": "tekisutuke-su henkan moji henshu-"
   },
+  "deduplines": {
+    "title": "重複行削除 - テキストの重複行をオンラインで削除",
+    "shortTitle": "重複行削除",
+    "description": "テキストから重複行を削除。大文字小文字区別、前後空白無視、空行削除のオプション付き。100%ブラウザ上で処理。",
+    "searchTerms": "jufukudousakujyo jfkdsk joufuku dyuipuriku hairetsu"
+  },
   "color": {
     "title": "カラー変換＆ピッカー - HEX、RGB、HSL、OKLCH",
     "shortTitle": "カラー変換",
@@ -160,6 +166,30 @@
     "shortTitle": "画像圧縮",
     "description": "画像をPNG、JPG、WebP形式間で圧縮、リサイズ、変換。すべての処理はブラウザ上でローカルに実行。",
     "searchTerms": "gazouasshuku atsushuku rizaizu PNG"
+  },
+  "extractor": {
+    "title": "メール / URL / 電話番号抽出 — オンラインでメール、URL、電話番号を抽出",
+    "shortTitle": "メール / URL / 電話抽出",
+    "description": "テキストからメールアドレス、URL、電話番号を即座に抽出。無料オンライン抽出ツール、100%ブラウザ処理。",
+    "searchTerms": "meeruchuushutsu mrchu url denwa"
+  },
+  "wordcounter": {
+    "title": "文字数カウンター - 文字数、読書時間、キーワード密度",
+    "shortTitle": "文字数カウンター",
+    "description": "単語数、文字数、文、段落を数えます。読書時間と朗読時間を推定します。キーワードの出現頻度と密度を分析します。無料のオンライン文字数カウンター、100%ブラウザ上で処理。",
+    "searchTerms": "mojisukazyou dokushojikan kiwaado"
+  },
+  "sshkey": {
+    "title": "SSH 鍵ジェネレーター - RSA & Ed25519 鍵ペア生成",
+    "shortTitle": "SSH 鍵生成",
+    "description": "ブラウザ内で SSH 鍵ペア（RSA、Ed25519）を生成。パスフレーズ暗号化、フィンガープリント表示、公開鍵検査をサポート。データはサーバーに送信されません。",
+    "searchTerms": "sshkagiseseiseiki sshkgss kagi koukaken"
+  },
+  "httpclient": {
+    "title": "HTTP クライアント - オンライン REST API テスター",
+    "shortTitle": "HTTP クライアント",
+    "description": "ブラウザで直接 HTTP リクエストを送信し、REST API をテスト。GET、POST、PUT、DELETE に対応。ヘッダー、ボディ、認証を設定可能。無料、データはサーバーに送信されません。",
+    "searchTerms": "httpkuraianto hk rest api"
   },
   "categories": {
     "text": "テキスト処理",
