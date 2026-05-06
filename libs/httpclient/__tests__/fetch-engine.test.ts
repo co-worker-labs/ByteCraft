@@ -2,8 +2,8 @@ import { describe, it, expect } from "vitest";
 import {
   detectBodyType,
   parseSetCookieHeaders,
-  buildRequest,
-  parseResponse,
+  buildProxyPayload,
+  parseProxyResponse,
 } from "../fetch-engine";
 import type { RequestConfig } from "../types";
 import { DEFAULT_REQUEST_CONFIG } from "../types";
@@ -49,104 +49,93 @@ describe("detectBodyType", () => {
     expect(detectBodyType("text/plain", "hello")).toBe("text");
   });
 
-  it("falls back to text for unknown Content-Type with string body", () => {
-    expect(detectBodyType("", "hello world")).toBe("text");
+  it("detects JSON from body content when no Content-Type hint", () => {
+    expect(detectBodyType("text/plain", '{"key":"value"}')).toBe("json");
   });
 
-  it("detects JSON body by sniffing when Content-Type is generic", () => {
-    expect(detectBodyType("text/plain", '{"key": "value"}')).toBe("json");
+  it("detects JSON array from body content", () => {
+    expect(detectBodyType("text/plain", "[1,2,3]")).toBe("json");
   });
 
-  it("detects HTML body by sniffing when Content-Type is generic", () => {
-    expect(detectBodyType("", "<!DOCTYPE html><html><body></body></html>")).toBe("html");
+  it("detects HTML from body content starting with <!doctype", () => {
+    expect(detectBodyType("text/plain", "<!DOCTYPE html>")).toBe("html");
   });
 
-  it("detects XML body by sniffing when Content-Type is generic", () => {
-    expect(detectBodyType("", '<?xml version="1.0"?><root/>')).toBe("xml");
+  it("detects HTML from body content starting with <html", () => {
+    expect(detectBodyType("text/plain", "<html><body>")).toBe("html");
+  });
+
+  it("detects XML from body starting with <?xml", () => {
+    expect(detectBodyType("text/plain", '<?xml version="1.0"?>')).toBe("xml");
+  });
+
+  it("returns text for unrecognized content", () => {
+    expect(detectBodyType("application/unknown", "some data")).toBe("text");
+  });
+
+  it("returns text for empty string", () => {
+    expect(detectBodyType("text/plain", "")).toBe("text");
   });
 });
 
 describe("parseSetCookieHeaders", () => {
-  it("returns empty array when no Set-Cookie headers", () => {
-    const headers = new Headers();
-    expect(parseSetCookieHeaders(headers)).toEqual([]);
-  });
-
-  it("parses a simple Set-Cookie header", () => {
-    const headers = new Headers();
-    headers.append("Set-Cookie", "session=abc123");
-    const result = parseSetCookieHeaders(headers);
+  it("parses a simple cookie", () => {
+    const result = parseSetCookieHeaders(["session=abc123"]);
     expect(result).toHaveLength(1);
-    expect(result[0]).toEqual({
-      name: "session",
-      value: "abc123",
-    });
+    expect(result[0].name).toBe("session");
+    expect(result[0].value).toBe("abc123");
   });
 
-  it("parses Set-Cookie with all attributes", () => {
-    const headers = new Headers();
-    headers.append(
-      "Set-Cookie",
-      "token=xyz; Path=/api; Expires=Wed, 09 Jun 2026 10:18:14 GMT; HttpOnly; Secure; SameSite=Strict"
-    );
-    const result = parseSetCookieHeaders(headers);
-    expect(result).toHaveLength(1);
-    expect(result[0]).toEqual({
-      name: "token",
-      value: "xyz",
-      path: "/api",
-      expires: "Wed, 09 Jun 2026 10:18:14 GMT",
-      httpOnly: true,
-      secure: true,
-      sameSite: "Strict",
-    });
-  });
-
-  it("parses multiple Set-Cookie headers", () => {
-    const headers = new Headers();
-    headers.append("Set-Cookie", "a=1");
-    headers.append("Set-Cookie", "b=2; HttpOnly");
-    const result = parseSetCookieHeaders(headers);
-    expect(result).toHaveLength(2);
-    expect(result[0].name).toBe("a");
-    expect(result[1].name).toBe("b");
-    expect(result[1].httpOnly).toBe(true);
-  });
-
-  it("handles cookie value with equals sign", () => {
-    const headers = new Headers();
-    headers.append("Set-Cookie", "data=base64==abc; Path=/");
-    const result = parseSetCookieHeaders(headers);
-    expect(result[0].value).toBe("base64==abc");
+  it("parses cookie with attributes", () => {
+    const result = parseSetCookieHeaders(["sid=xyz; Path=/; HttpOnly; Secure"]);
     expect(result[0].path).toBe("/");
+    expect(result[0].httpOnly).toBe(true);
+    expect(result[0].secure).toBe(true);
   });
 
   it("handles SameSite=Lax", () => {
-    const headers = new Headers();
-    headers.append("Set-Cookie", "sid=123; SameSite=Lax");
-    const result = parseSetCookieHeaders(headers);
+    const result = parseSetCookieHeaders(["sid=123; SameSite=Lax"]);
     expect(result[0].sameSite).toBe("Lax");
   });
 
   it("handles SameSite=None", () => {
-    const headers = new Headers();
-    headers.append("Set-Cookie", "sid=123; SameSite=None");
-    const result = parseSetCookieHeaders(headers);
+    const result = parseSetCookieHeaders(["sid=123; SameSite=None"]);
     expect(result[0].sameSite).toBe("None");
+  });
+
+  it("returns empty array for empty input", () => {
+    expect(parseSetCookieHeaders([])).toEqual([]);
+  });
+
+  it("parses multiple cookies", () => {
+    const result = parseSetCookieHeaders(["a=1", "b=2"]);
+    expect(result).toHaveLength(2);
+  });
+
+  it("parses Expires attribute", () => {
+    const result = parseSetCookieHeaders(["sid=123; Expires=Wed, 09 Jun 2021 10:18:14 GMT"]);
+    expect(result[0].expires).toBe("Wed, 09 Jun 2021 10:18:14 GMT");
+  });
+
+  it("handles cookie with no value", () => {
+    const result = parseSetCookieHeaders(["flag"]);
+    expect(result[0].name).toBe("flag");
+    expect(result[0].value).toBe("");
   });
 });
 
-describe("buildRequest", () => {
+describe("buildProxyPayload", () => {
   const baseConfig: RequestConfig = {
     ...DEFAULT_REQUEST_CONFIG,
     url: "https://api.example.com/users",
   };
 
-  it("builds a basic GET request", () => {
-    const { request, controller } = buildRequest(baseConfig, 30000);
-    expect(request.method).toBe("GET");
-    expect(request.url).toBe("https://api.example.com/users");
-    controller.abort();
+  it("builds a basic GET payload", () => {
+    const payload = buildProxyPayload(baseConfig, 30000);
+    expect(payload.method).toBe("GET");
+    expect(payload.url).toBe("https://api.example.com/users");
+    expect(payload.body).toBeNull();
+    expect(payload.timeout).toBe(30000);
   });
 
   it("merges params into URL query string", () => {
@@ -157,9 +146,8 @@ describe("buildRequest", () => {
         { key: "limit", value: "10", enabled: true },
       ],
     };
-    const { request, controller } = buildRequest(config, null);
-    expect(request.url).toBe("https://api.example.com/users?page=1&limit=10");
-    controller.abort();
+    const payload = buildProxyPayload(config, null);
+    expect(payload.url).toBe("https://api.example.com/users?page=1&limit=10");
   });
 
   it("skips disabled params", () => {
@@ -170,9 +158,8 @@ describe("buildRequest", () => {
         { key: "disabled", value: "x", enabled: false },
       ],
     };
-    const { request, controller } = buildRequest(config, null);
-    expect(request.url).toBe("https://api.example.com/users?page=1");
-    controller.abort();
+    const payload = buildProxyPayload(config, null);
+    expect(payload.url).toBe("https://api.example.com/users?page=1");
   });
 
   it("preserves existing query params in URL", () => {
@@ -181,28 +168,25 @@ describe("buildRequest", () => {
       url: "https://api.example.com/users?existing=yes",
       params: [{ key: "new", value: "1", enabled: true }],
     };
-    const { request, controller } = buildRequest(config, null);
-    expect(request.url).toContain("existing=yes");
-    expect(request.url).toContain("new=1");
-    controller.abort();
+    const payload = buildProxyPayload(config, null);
+    expect(payload.url).toContain("existing=yes");
+    expect(payload.url).toContain("new=1");
   });
 
-  it("adds JSON body with Content-Type header", async () => {
+  it("adds JSON body with Content-Type header", () => {
     const config: RequestConfig = {
       ...baseConfig,
       method: "POST",
       bodyType: "json",
       bodyContent: '{"name":"test"}',
     };
-    const { request, controller } = buildRequest(config, null);
-    expect(request.method).toBe("POST");
-    expect(request.headers.get("Content-Type")).toBe("application/json");
-    const body = await request.text();
-    expect(body).toBe('{"name":"test"}');
-    controller.abort();
+    const payload = buildProxyPayload(config, null);
+    expect(payload.method).toBe("POST");
+    expect(payload.headers["Content-Type"]).toBe("application/json");
+    expect(payload.body).toBe('{"name":"test"}');
   });
 
-  it("adds urlencoded body with Content-Type header", async () => {
+  it("adds urlencoded body with Content-Type header", () => {
     const config: RequestConfig = {
       ...baseConfig,
       method: "POST",
@@ -212,26 +196,21 @@ describe("buildRequest", () => {
         { key: "pass", value: "secret", enabled: true },
       ],
     };
-    const { request, controller } = buildRequest(config, null);
-    expect(request.headers.get("Content-Type")).toBe("application/x-www-form-urlencoded");
-    const body = await request.text();
-    expect(body).toBe("user=john&pass=secret");
-    controller.abort();
+    const payload = buildProxyPayload(config, null);
+    expect(payload.headers["Content-Type"]).toBe("application/x-www-form-urlencoded");
+    expect(payload.body).toBe("user=john&pass=secret");
   });
 
-  it("adds raw body without explicit Content-Type header", async () => {
+  it("adds raw body without explicit Content-Type header", () => {
     const config: RequestConfig = {
       ...baseConfig,
       method: "POST",
       bodyType: "raw",
       bodyContent: "plain text body",
     };
-    const { request, controller } = buildRequest(config, null);
-    const ct = request.headers.get("Content-Type");
-    expect(ct === null || (ct && ct.includes("text/plain"))).toBe(true);
-    const body = await request.text();
-    expect(body).toBe("plain text body");
-    controller.abort();
+    const payload = buildProxyPayload(config, null);
+    expect(payload.body).toBe("plain text body");
+    expect(payload.headers["Content-Type"]).toBeUndefined();
   });
 
   it("adds no body for none type", () => {
@@ -240,9 +219,8 @@ describe("buildRequest", () => {
       method: "GET",
       bodyType: "none",
     };
-    const { request, controller } = buildRequest(config, null);
-    expect(request.body).toBeNull();
-    controller.abort();
+    const payload = buildProxyPayload(config, null);
+    expect(payload.body).toBeNull();
   });
 
   it("adds Bearer auth header", () => {
@@ -251,9 +229,8 @@ describe("buildRequest", () => {
       authType: "bearer",
       bearerToken: "my-token-123",
     };
-    const { request, controller } = buildRequest(config, null);
-    expect(request.headers.get("Authorization")).toBe("Bearer my-token-123");
-    controller.abort();
+    const payload = buildProxyPayload(config, null);
+    expect(payload.headers["Authorization"]).toBe("Bearer my-token-123");
   });
 
   it("adds Basic auth header", () => {
@@ -263,9 +240,8 @@ describe("buildRequest", () => {
       basicUser: "user",
       basicPass: "pass",
     };
-    const { request, controller } = buildRequest(config, null);
-    expect(request.headers.get("Authorization")).toBe(`Basic ${btoa("user:pass")}`);
-    controller.abort();
+    const payload = buildProxyPayload(config, null);
+    expect(payload.headers["Authorization"]).toBe(`Basic ${btoa("user:pass")}`);
   });
 
   it("adds custom headers from config", () => {
@@ -276,10 +252,9 @@ describe("buildRequest", () => {
         { key: "X-Another", value: "value2", enabled: true },
       ],
     };
-    const { request, controller } = buildRequest(config, null);
-    expect(request.headers.get("X-Custom")).toBe("value1");
-    expect(request.headers.get("X-Another")).toBe("value2");
-    controller.abort();
+    const payload = buildProxyPayload(config, null);
+    expect(payload.headers["X-Custom"]).toBe("value1");
+    expect(payload.headers["X-Another"]).toBe("value2");
   });
 
   it("skips disabled custom headers", () => {
@@ -290,75 +265,91 @@ describe("buildRequest", () => {
         { key: "X-Disabled", value: "no", enabled: false },
       ],
     };
-    const { request, controller } = buildRequest(config, null);
-    expect(request.headers.get("X-Enabled")).toBe("yes");
-    expect(request.headers.get("X-Disabled")).toBeNull();
-    controller.abort();
+    const payload = buildProxyPayload(config, null);
+    expect(payload.headers["X-Enabled"]).toBe("yes");
+    expect(payload.headers["X-Disabled"]).toBeUndefined();
   });
 
-  it("creates AbortController with timeout", () => {
-    const { controller } = buildRequest(baseConfig, 5000);
-    expect(controller.signal.aborted).toBe(false);
-    controller.abort();
+  it("sets body to null for GET and HEAD regardless of bodyType", () => {
+    const config: RequestConfig = {
+      ...baseConfig,
+      method: "GET",
+      bodyType: "json",
+      bodyContent: '{"data":1}',
+    };
+    const payload = buildProxyPayload(config, null);
+    expect(payload.body).toBeNull();
   });
 });
 
-describe("parseResponse", () => {
-  it("parses a JSON response", async () => {
-    const raw = new Response('{"status":"ok"}', {
+describe("parseProxyResponse", () => {
+  it("parses a JSON proxy response", () => {
+    const data = {
       status: 200,
       statusText: "OK",
-      headers: { "Content-Type": "application/json" },
-    });
-    const startTime = Date.now() - 50;
-    const result = await parseResponse(raw, startTime);
+      headers: { "content-type": "application/json" },
+      body: '{"status":"ok"}',
+      size: 15,
+      timing: { total: 120 },
+      redirected: false,
+      finalUrl: "https://api.example.com/users",
+    };
+    const result = parseProxyResponse(data, Date.now() - 50);
     expect(result.status).toBe(200);
     expect(result.statusText).toBe("OK");
     expect(result.bodyType).toBe("json");
     expect(result.body).toBe('{"status":"ok"}');
-    expect(result.size).toBe('{"status":"ok"}'.length);
-    expect(result.timing.total).toBeGreaterThanOrEqual(50);
+    expect(result.size).toBe(15);
     expect(result.redirected).toBe(false);
     expect(result.cookies).toEqual([]);
   });
 
-  it("parses response headers into a record", async () => {
-    const raw = new Response("hello", {
+  it("parses response with set-cookie header", () => {
+    const data = {
       status: 200,
-      headers: {
-        "Content-Type": "text/plain",
-        "X-Custom": "value",
-      },
-    });
-    const result = await parseResponse(raw, Date.now());
-    expect(result.headers["content-type"]).toBe("text/plain");
-    expect(result.headers["x-custom"]).toBe("value");
+      statusText: "OK",
+      headers: { "content-type": "text/plain", "set-cookie": "sid=abc; Path=/" },
+      body: "ok",
+      size: 2,
+      timing: { total: 50 },
+      redirected: false,
+      finalUrl: "https://example.com",
+    };
+    const result = parseProxyResponse(data, Date.now());
+    expect(result.cookies).toHaveLength(1);
+    expect(result.cookies[0].name).toBe("sid");
+    expect(result.cookies[0].value).toBe("abc");
+    expect(result.cookies[0].path).toBe("/");
   });
 
-  it("detects HTML response", async () => {
-    const raw = new Response("<html><body>Hello</body></html>", {
+  it("detects HTML response", () => {
+    const data = {
       status: 200,
-      headers: { "Content-Type": "text/html" },
-    });
-    const result = await parseResponse(raw, Date.now());
+      statusText: "OK",
+      headers: { "content-type": "text/html" },
+      body: "<html><body>Hello</body></html>",
+      size: 33,
+      timing: { total: 30 },
+      redirected: false,
+      finalUrl: "https://example.com",
+    };
+    const result = parseProxyResponse(data, Date.now());
     expect(result.bodyType).toBe("html");
   });
 
-  it("stores the final URL and redirect status", async () => {
-    const raw = new Response("ok", {
+  it("records timestamp", () => {
+    const data = {
       status: 200,
-    });
-    Object.defineProperty(raw, "url", { value: "https://example.com/final", writable: false });
-    Object.defineProperty(raw, "redirected", { value: true, writable: false });
-    const result = await parseResponse(raw, Date.now());
-    expect(result.finalUrl).toBe("https://example.com/final");
-    expect(result.redirected).toBe(true);
-  });
-
-  it("records timestamp", async () => {
-    const raw = new Response("ok", { status: 200 });
+      statusText: "OK",
+      headers: {},
+      body: "ok",
+      size: 2,
+      timing: { total: 10 },
+      redirected: false,
+      finalUrl: "https://example.com",
+    };
     const before = Date.now();
-    const result = await parseResponse(raw, Date.now());
+    const result = parseProxyResponse(data, Date.now());
     expect(result.timestamp).toBeGreaterThanOrEqual(before);
   });
 });

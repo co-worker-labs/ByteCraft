@@ -4,7 +4,7 @@ import { useState, useCallback } from "react";
 import type { RequestConfig, ResponseData, RequestError, HistoryEntry, TimingInfo } from "./types";
 import { DEFAULT_REQUEST_CONFIG } from "./types";
 import { STORAGE_KEYS } from "../storage-keys";
-import { buildRequest, parseResponse } from "./fetch-engine";
+import { buildRequest, parseResponse, buildProxyPayload, parseProxyResponse } from "./fetch-engine";
 
 const MAX_HISTORY = 50;
 
@@ -40,6 +40,45 @@ function extractTiming(url: string, startTime: number, endTime: number): TimingI
   return { total };
 }
 
+function addHistoryEntry(
+  cfg: RequestConfig,
+  parsed: ResponseData,
+  setHistory: React.Dispatch<React.SetStateAction<HistoryEntry[]>>
+) {
+  const entry: HistoryEntry = {
+    id: crypto.randomUUID(),
+    request: cfg,
+    responseStatus: parsed.status,
+    responseStatusText: parsed.statusText,
+    createdAt: Date.now(),
+  };
+  setHistory((prev) => {
+    const next = [entry, ...prev].slice(0, MAX_HISTORY);
+    saveHistory(next);
+    return next;
+  });
+}
+
+function classifyError(err: unknown, startTime: number, timeout: number | null): RequestError {
+  const msg = err instanceof Error ? err.message : String(err);
+  const isCors =
+    err instanceof TypeError ||
+    msg.includes("CORS") ||
+    msg.includes("NetworkError") ||
+    msg.includes("Failed to fetch");
+  const isTimeout =
+    err instanceof DOMException &&
+    err.name === "AbortError" &&
+    Date.now() - startTime >= (timeout ?? Infinity) - 500;
+
+  return {
+    message: isTimeout ? "timeout" : isCors ? "cors" : msg,
+    isCors,
+    isTimeout,
+    timestamp: Date.now(),
+  };
+}
+
 export function useHttpClient() {
   const [requestConfig, setRequestConfig] = useState<RequestConfig>(DEFAULT_REQUEST_CONFIG);
   const [response, setResponse] = useState<ResponseData | null>(null);
@@ -60,47 +99,54 @@ export function useHttpClient() {
       const startTime = Date.now();
 
       try {
-        const { request, controller } = buildRequest(cfg, timeout);
-        const fetchResponse = await fetch(request);
-        const endTime = Date.now();
+        if (cfg.useProxy) {
+          const payload = buildProxyPayload(cfg, timeout);
+          const res = await fetch("/api/httpclient-proxy", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+            cache: "no-store",
+          });
 
-        let parsed = await parseResponse(fetchResponse, startTime);
-        const timing = extractTiming(request.url, startTime, endTime);
-        parsed = { ...parsed, timing };
+          const data = await res.json();
 
-        setResponse(parsed);
+          if (data.proxyError) {
+            setError({
+              message: data.isTimeout ? "timeout" : data.error || "proxy error",
+              isCors: false,
+              isTimeout: !!data.isTimeout,
+              timestamp: Date.now(),
+            });
+            return;
+          }
 
-        const entry: HistoryEntry = {
-          id: crypto.randomUUID(),
-          request: cfg,
-          responseStatus: parsed.status,
-          responseStatusText: parsed.statusText,
-          createdAt: Date.now(),
-        };
-        setHistory((prev) => {
-          const next = [entry, ...prev].slice(0, MAX_HISTORY);
-          saveHistory(next);
-          return next;
-        });
+          if (!res.ok && !data.status) {
+            setError({
+              message: data.error || `proxy returned ${res.status}`,
+              isCors: false,
+              isTimeout: false,
+              timestamp: Date.now(),
+            });
+            return;
+          }
+
+          const parsed = parseProxyResponse(data, startTime);
+          setResponse(parsed);
+          addHistoryEntry(cfg, parsed, setHistory);
+        } else {
+          const { request, controller } = buildRequest(cfg, timeout);
+          const fetchResponse = await fetch(request, { cache: "no-store" });
+          const endTime = Date.now();
+
+          let parsed = await parseResponse(fetchResponse, startTime);
+          const timing = extractTiming(request.url, startTime, endTime);
+          parsed = { ...parsed, timing };
+
+          setResponse(parsed);
+          addHistoryEntry(cfg, parsed, setHistory);
+        }
       } catch (err: unknown) {
-        const endTime = Date.now();
-        const msg = err instanceof Error ? err.message : String(err);
-        const isCors =
-          err instanceof TypeError ||
-          msg.includes("CORS") ||
-          msg.includes("NetworkError") ||
-          msg.includes("Failed to fetch");
-        const isTimeout =
-          err instanceof DOMException &&
-          err.name === "AbortError" &&
-          endTime - startTime >= (timeout ?? Infinity) - 500;
-
-        setError({
-          message: isTimeout ? "timeout" : isCors ? "cors" : msg,
-          isCors,
-          isTimeout,
-          timestamp: Date.now(),
-        });
+        setError(classifyError(err, startTime, timeout));
       } finally {
         setLoading(false);
       }

@@ -82,7 +82,7 @@ function formatTiming(ms: number): string {
   return `${(ms / 1000).toFixed(2)}s`;
 }
 
-function RequestPanel() {
+function RequestPanel({ store }: { store: ReturnType<typeof useHttpClient> }) {
   const t = useTranslations("httpclient");
   const {
     requestConfig,
@@ -94,7 +94,7 @@ function RequestPanel() {
     history,
     restoreFromHistory,
     clearHistory,
-  } = useHttpClient();
+  } = store;
 
   function updateConfig(partial: Partial<typeof requestConfig>) {
     setRequestConfig((prev) => ({ ...prev, ...partial }));
@@ -144,6 +144,27 @@ function RequestPanel() {
           placeholder={t("url.placeholder")}
           className="flex-1 min-w-0 bg-bg-input border border-border-default rounded-lg px-3 py-2 text-sm text-fg-primary placeholder:text-fg-muted focus:outline-none focus:border-accent-cyan transition-colors font-mono"
         />
+
+        <button
+          type="button"
+          role="switch"
+          aria-checked={requestConfig.useProxy}
+          onClick={() => updateConfig({ useProxy: !requestConfig.useProxy })}
+          title={t("proxy.tooltip")}
+          className={`shrink-0 flex items-center gap-1.5 px-2.5 py-2 rounded-lg border text-xs font-medium transition-colors cursor-pointer select-none ${
+            requestConfig.useProxy
+              ? "border-accent-cyan text-accent-cyan bg-accent-cyan/10"
+              : "border-border-default text-fg-muted bg-bg-input hover:text-fg-secondary"
+          }`}
+        >
+          <span
+            className="w-2 h-2 rounded-full"
+            style={{
+              backgroundColor: requestConfig.useProxy ? "var(--accent-cyan)" : "var(--fg-muted)",
+            }}
+          />
+          {t("proxy.label")}
+        </button>
 
         <select
           value={timeout ?? ""}
@@ -482,9 +503,9 @@ function HistoryDrawer({
   );
 }
 
-function ResponsePanel() {
+function ResponsePanel({ store }: { store: ReturnType<typeof useHttpClient> }) {
   const t = useTranslations("httpclient");
-  const { response, error, loading, timeout } = useHttpClient();
+  const { response, error, loading, timeout } = store;
   const [bodyView, setBodyView] = useState<"pretty" | "raw">("pretty");
 
   if (loading) {
@@ -784,38 +805,18 @@ function ResponseBodyTab({
   );
 }
 
-function Description() {
+function DescriptionIntro() {
   const t = useTranslations("httpclient");
   const tc = useTranslations("common");
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section id="description" className="py-3">
+    <section className="py-3">
       <div className="relative">
         <div
-          className={`overflow-hidden transition-all duration-300 ${expanded ? "max-h-[800px]" : "max-h-20"}`}
+          className={`overflow-hidden transition-all duration-300 ${expanded ? "max-h-[300px]" : "max-h-20"}`}
         >
           <p className="text-fg-secondary text-sm leading-8 indent-12">{t("description.text")}</p>
-
-          <div className="mt-4">
-            <h3 className="text-sm font-semibold text-fg-primary mb-2">
-              {t("description.features.title")}
-            </h3>
-            <ul className="space-y-1 text-sm text-fg-secondary">
-              <li>• {t("description.features.methods")}</li>
-              <li>• {t("description.features.auth")}</li>
-              <li>• {t("description.features.body")}</li>
-              <li>• {t("description.features.response")}</li>
-              <li>• {t("description.features.history")}</li>
-            </ul>
-          </div>
-
-          <div className="mt-4">
-            <h3 className="text-sm font-semibold text-fg-primary mb-2">
-              {t("description.cors.title")}
-            </h3>
-            <p className="text-sm text-fg-secondary leading-7">{t("description.cors.text")}</p>
-          </div>
         </div>
         {!expanded && (
           <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-bg-base to-transparent pointer-events-none" />
@@ -842,9 +843,37 @@ function Description() {
   );
 }
 
+function DescriptionDetails() {
+  const t = useTranslations("httpclient");
+  return (
+    <section className="py-3">
+      <div className="mt-4">
+        <h3 className="text-sm font-semibold text-fg-primary mb-2">
+          {t("description.features.title")}
+        </h3>
+        <ul className="space-y-1 text-sm text-fg-secondary">
+          <li>• {t("description.features.methods")}</li>
+          <li>• {t("description.features.auth")}</li>
+          <li>• {t("description.features.body")}</li>
+          <li>• {t("description.features.response")}</li>
+          <li>• {t("description.features.history")}</li>
+          <li>• {t("description.features.proxy")}</li>
+        </ul>
+      </div>
+
+      <div className="mt-4">
+        <h3 className="text-sm font-semibold text-fg-primary mb-2">
+          {t("description.cors.title")}
+        </h3>
+        <p className="text-sm text-fg-secondary leading-7">{t("description.cors.text")}</p>
+      </div>
+    </section>
+  );
+}
+
 export default function HttpClientPage() {
   const t = useTranslations("tools");
-  const tc = useTranslations("common");
+  const store = useHttpClient();
 
   return (
     <Layout title={t("httpclient.shortTitle")}>
@@ -860,14 +889,10 @@ export default function HttpClientPage() {
         ]}
       />
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
-        <RequestPanel />
-        <ResponsePanel />
-        <Description />
+        <DescriptionIntro />
+        <RequestPanel store={store} />
+        <ResponsePanel store={store} />
+        <DescriptionDetails />
       </div>
     </Layout>
   );

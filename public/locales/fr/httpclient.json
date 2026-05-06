@@ -2,6 +2,7 @@
   "url": { "placeholder": "https://api.example.com/users" },
   "method": { "label": "Méthode" },
   "timeout": { "label": "Délai d'attente" },
+  "proxy": { "label": "Proxy", "tooltip": "Acheminer les requêtes via le proxy serveur pour contourner les restrictions CORS" },
   "send": "Envoyer",
   "sending": "Envoi en cours...",
   "tabs": { "params": "Paramètres", "headers": "En-têtes", "body": "Corps", "auth": "Authentification" },
@@ -52,18 +53,19 @@
     "ago": { "seconds": "il y a {count}s", "minutes": "il y a {count}min", "hours": "il y a {count}h", "days": "il y a {count}j" }
   },
   "description": {
-    "text": "Un client HTTP léger basé sur le navigateur pour tester les APIs REST. Composez et envoyez des requêtes avec un contrôle total sur la méthode, les en-têtes, le corps et l'authentification, puis inspectez les réponses avec les détails de chronométrage, les en-têtes et les cookies. Toutes les requêtes s'exécutent via fetch() du navigateur, seules les APIs compatibles CORS sont prises en charge. Aucune donnée n'est envoyée à un serveur.",
+    "text": "Un client HTTP léger basé sur le navigateur pour tester les APIs REST. Composez et envoyez des requêtes avec un contrôle total sur la méthode, les en-têtes, le corps et l'authentification, puis inspectez les réponses avec les détails de temps, les en-têtes et les cookies. Les requêtes sont exécutées directement via fetch() du navigateur par défaut. Activez le proxy pour acheminer les requêtes via le proxy serveur, contournant les restrictions CORS. Aucune donnée n'est stockée sur un serveur.",
     "features": {
       "title": "Fonctionnalités",
-      "methods": "Toutes les méthodes HTTP standard : GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
-      "auth": "Authentification : Bearer Token, Authentification Basic",
+      "methods": "Toutes les méthodes HTTP standards : GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
+      "auth": "Authentification : Bearer Token, Basic Auth",
       "body": "Formats de corps : JSON, Form-Data, x-www-form-urlencoded, texte brut",
-      "response": "Inspection de la réponse : corps formaté, en-têtes, cookies, chronométrage, redirections",
-      "history": "Historique des requêtes avec restauration en un clic (stocké localement)"
+      "response": "Inspection des réponses : corps formaté, en-têtes, cookies, temps, redirections",
+      "history": "Historique des requêtes avec restauration en un clic (stocké localement)",
+      "proxy": "Mode proxy serveur : contournez les restrictions CORS en un clic"
     },
     "cors": {
-      "title": "Limitations CORS",
-      "text": "Cet outil utilise l'API fetch() native du navigateur. Les requêtes cross-origin nécessitent que le serveur cible inclue les en-têtes CORS appropriés (Access-Control-Allow-Origin). Si le serveur ne prend pas en charge CORS, la requête échouera avec une erreur CORS. Il s'agit d'une fonctionnalité de sécurité du navigateur qui ne peut être contournée sans serveur proxy."
+      "title": "CORS et Proxy",
+      "text": "Par défaut, cet outil utilise l'API fetch() native du navigateur. Les requêtes entre origines nécessitent que le serveur inclue les en-têtes CORS appropriés. Si le serveur ne prend pas en charge CORS, activez le proxy : les requêtes seront acheminées via le proxy serveur, contournant entièrement les restrictions CORS."
     }
   }
 }

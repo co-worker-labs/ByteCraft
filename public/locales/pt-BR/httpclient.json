@@ -2,6 +2,7 @@
   "url": { "placeholder": "https://api.example.com/users" },
   "method": { "label": "Método" },
   "timeout": { "label": "Tempo limite" },
+  "proxy": { "label": "Proxy", "tooltip": "Enviar requisições através do proxy do servidor para contornar restrições CORS" },
   "send": "Enviar",
   "sending": "Enviando...",
   "tabs": { "params": "Parâmetros", "headers": "Cabeçalhos", "body": "Corpo", "auth": "Autenticação" },
@@ -52,18 +53,19 @@
     "ago": { "seconds": "{count}s atrás", "minutes": "{count}min atrás", "hours": "{count}h atrás", "days": "{count}d atrás" }
   },
   "description": {
-    "text": "Um cliente HTTP leve baseado em navegador para testar APIs REST. Configure e envie requisições com controle total sobre método, cabeçalhos, corpo e autenticação, depois inspecione as respostas com detalhes de tempo, cabeçalhos e cookies. Todas as requisições são executadas via fetch() do navegador, portanto apenas APIs compatíveis com CORS são suportadas. Nenhum dado é enviado a servidores.",
+    "text": "Um cliente HTTP leve baseado no navegador para testar APIs REST. Configure requisições com controle total sobre método, cabeçalhos, corpo e autenticação, depois inspecione as respostas com detalhes de tempo, cabeçalhos e cookies. As requisições são enviadas diretamente via fetch() do navegador por padrão. Ative o proxy para rotear as requisições através do proxy do servidor, contornando as restrições CORS. Nenhum dado é armazenado em qualquer servidor.",
     "features": {
       "title": "Recursos",
       "methods": "Todos os métodos HTTP padrão: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
-      "auth": "Autenticação: Bearer Token, Autenticação Basic",
+      "auth": "Autenticação: Bearer Token, Basic Auth",
       "body": "Formatos de corpo: JSON, Form-Data, x-www-form-urlencoded, texto Raw",
-      "response": "Inspeção de resposta: corpo formatado, cabeçalhos, cookies, tempos, redirecionamentos",
-      "history": "Histórico de requisições com restauração em um clique (armazenado localmente)"
+      "response": "Inspeção de resposta: corpo formatado, cabeçalhos, cookies, tempo, redirecionamentos",
+      "history": "Histórico de requisições com restauração em um clique (armazenado localmente)",
+      "proxy": "Modo proxy do servidor: contorne restrições CORS com um único clique"
     },
     "cors": {
-      "title": "Limitações do CORS",
-      "text": "Esta ferramenta usa a API fetch() nativa do navegador. Requisições de origem cruzada exigem que o servidor de destino inclua cabeçalhos CORS adequados (Access-Control-Allow-Origin). Se o servidor não suportar CORS, a requisição falhará com um erro CORS. Este é um recurso de segurança do navegador e não pode ser contornado sem um servidor proxy."
+      "title": "CORS e Proxy",
+      "text": "Por padrão, esta ferramenta usa a API fetch() nativa do navegador. Requisições entre origens exigem que o servidor inclua os cabeçalhos CORS apropriados. Se o servidor não suportar CORS, ative o proxy: as requisições serão roteadas através do proxy do servidor, contornando completamente as restrições CORS."
     }
   }
 }

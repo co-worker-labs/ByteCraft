@@ -39,6 +39,7 @@ const namespaces = [
   "wordcounter",
   "deduplines",
   "sshkey",
+  "httpclient",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

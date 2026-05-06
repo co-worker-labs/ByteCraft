@@ -2,6 +2,7 @@
   "url": { "placeholder": "https://api.example.com/users" },
   "method": { "label": "메서드" },
   "timeout": { "label": "시간 초과" },
+  "proxy": { "label": "Proxy", "tooltip": "서버 측 프록시를 통해 요청을 전송하여 CORS 제한 우회" },
   "send": "보내기",
   "sending": "전송 중...",
   "tabs": { "params": "매개변수", "headers": "헤더", "body": "본문", "auth": "인증" },
@@ -52,18 +53,19 @@
     "ago": { "seconds": "{count}초 전", "minutes": "{count}분 전", "hours": "{count}시간 전", "days": "{count}일 전" }
   },
   "description": {
-    "text": "브라우저 기반의 가벼운 HTTP 클라이언트로 REST API 테스트에 적합합니다. 메서드, 헤더, 본문, 인증을 자유롭게 설정하여 요청을 보내고, 타이밍, 헤더, 쿠키가 포함된 응답을 확인할 수 있습니다. 모든 요청은 브라우저 fetch()로 실행되므로 CORS를 지원하는 API만 사용할 수 있습니다. 데이터는 서버로 전송되지 않습니다.",
+    "text": "REST API 테스트를 위한 가벼운 브라우저 기반 HTTP 클라이언트입니다. 요청 메서드, 헤더, 본문, 인증 방식을 자유롭게 구성하고, 응답의 타이밍 정보, 헤더, 쿠키를 확인할 수 있습니다. 기본적으로 브라우저 fetch()로 직접 요청을 보냅니다. 프록시 토글을 켜면 서버 측 프록시를 통해 요청이 전달되어 CORS 제한을 우회할 수 있습니다. 데이터는 어떤 서버에도 저장되지 않습니다.",
     "features": {
       "title": "기능",
       "methods": "모든 표준 HTTP 메서드: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
-      "auth": "인증: Bearer Token, Basic 인증",
-      "body": "요청 본문 형식: JSON, 폼 데이터, x-www-form-urlencoded, Raw 텍스트",
+      "auth": "인증 방식: Bearer Token, Basic Auth",
+      "body": "요청 본문 형식: JSON, Form-Data, x-www-form-urlencoded, Raw 텍스트",
       "response": "응답 검사: 포맷된 본문, 헤더, 쿠키, 타이밍, 리다이렉트 정보",
-      "history": "요청 기록을 원클릭으로 복원 (로컬 저장)"
+      "history": "요청 기록, 원클릭 복원 (로컬 저장)",
+      "proxy": "서버 측 프록시 모드: 토글 하나로 CORS 제한 우회"
     },
     "cors": {
-      "title": "CORS 제한",
-      "text": "이 도구는 브라우저 네이티브 fetch() API를 사용합니다. 크로스 오리진 요청을 하려면 대상 서버가 적절한 CORS 헤더(Access-Control-Allow-Origin)를 포함해야 합니다. 서버가 CORS를 지원하지 않으면 CORS 오류로 요청이 실패합니다. 이는 브라우저 보안 기능이며 프록시 서버 없이는 우회할 수 없습니다."
+      "title": "CORS 및 프록시",
+      "text": "기본적으로 브라우저의 네이티브 fetch() API를 사용합니다. 크로스 오리진 요청은 대상 서버가 적절한 CORS 헤더를 반환해야 합니다. 서버가 CORS를 지원하지 않는 경우 프록시 토글을 활성화하세요. 요청이 서버 측 프록시를 통해 전달되어 CORS 제한을 완전히 우회합니다."
     }
   }
 }

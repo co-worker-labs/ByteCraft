@@ -22,6 +22,7 @@ export interface RequestConfig {
   bearerToken: string;
   basicUser: string;
   basicPass: string;
+  useProxy: boolean;
 }
 
 export interface TimingInfo {
@@ -83,6 +84,7 @@ export const DEFAULT_REQUEST_CONFIG: RequestConfig = {
   bearerToken: "",
   basicUser: "",
   basicPass: "",
+  useProxy: false,
 };
 
 export const HTTP_METHODS: HttpMethod[] = [

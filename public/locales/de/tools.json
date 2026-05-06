@@ -139,15 +139,10 @@
     "shortTitle": "Bildkompressor",
     "description": "Bilder komprimieren, verkleinern und zwischen PNG-, JPG- und WebP-Formaten konvertieren. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser."
   },
-  "sshkey": {
-    "title": "SSH-Schlüsselgenerator - RSA & Ed25519 Schlüsselpaare online erstellen",
-    "shortTitle": "SSH-Schlüsselgenerator",
-    "description": "Erstellen Sie SSH-Schlüsselpaare (RSA, Ed25519) vollständig in Ihrem Browser. Unterstützt Passwort-Verschlüsselung, Fingerabdruck-Anzeige und öffentliche Schlüsselprüfung. Keine Daten werden an Server gesendet."
-  },
-  "httpclient": {
-    "title": "HTTP-Client - Online REST-API-Tester",
-    "shortTitle": "HTTP-Client",
-    "description": "Senden Sie HTTP-Anfragen und testen Sie REST-APIs direkt im Browser. Unterstützt GET, POST, PUT, DELETE mit Headern, Body und Authentifizierung. Kostenlos, keine Daten an Server gesendet."
+  "extractor": {
+    "title": "E-Mail / URL / Telefon-Extraktor — Online-Extraktion",
+    "shortTitle": "E-Mail / URL / Telefon Extraktor",
+    "description": "Extrahieren Sie E-Mails, URLs und Telefonnummern aus beliebigem Text sofort. Kostenloses Online-Extraktionstool, 100% clientseitig."
   },
   "wordcounter": {
     "title": "Wortzähler - Zeichen, Lesezeit, Schlüsselwort-Dichte",

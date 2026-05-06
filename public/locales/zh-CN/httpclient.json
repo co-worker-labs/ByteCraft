@@ -2,6 +2,7 @@
   "url": { "placeholder": "https://api.example.com/users" },
   "method": { "label": "请求方法" },
   "timeout": { "label": "超时时间" },
+  "proxy": { "label": "Proxy", "tooltip": "通过本站服务端代理转发请求，绕过 CORS 跨域限制" },
   "send": "发送",
   "sending": "发送中...",
   "tabs": { "params": "参数", "headers": "请求头", "body": "请求体", "auth": "认证" },
@@ -52,18 +53,19 @@
     "ago": { "seconds": "{count} 秒前", "minutes": "{count} 分钟前", "hours": "{count} 小时前", "days": "{count} 天前" }
   },
   "description": {
-    "text": "一个轻量级的浏览器端 HTTP 客户端，用于测试 REST API。可以自由配置请求方法、请求头、请求体和认证方式，发送请求后查看响应的耗时详情、响应头和 Cookie。所有请求通过浏览器 fetch() 执行，因此仅支持允许 CORS 的 API。数据不会发送到任何服务器。",
+    "text": "一个轻量级的浏览器端 HTTP 客户端，用于测试 REST API。可以自由配置请求方法、请求头、请求体和认证方式，发送请求后查看响应的耗时详情、响应头和 Cookie。默认通过浏览器 fetch() 直接发送请求，开启代理开关后可经由服务端代理转发，绕过 CORS 跨域限制。数据不会存储在任何服务器上。",
     "features": {
       "title": "功能特性",
       "methods": "所有标准 HTTP 方法：GET、POST、PUT、PATCH、DELETE、HEAD、OPTIONS",
       "auth": "认证方式：Bearer Token、Basic 认证",
       "body": "请求体格式：JSON、表单数据、x-www-form-urlencoded、原始文本",
       "response": "响应检查：格式化响应体、响应头、Cookie、耗时、重定向信息",
-      "history": "请求历史记录，一键恢复（本地存储）"
+      "history": "请求历史记录，一键恢复（本地存储）",
+      "proxy": "服务端代理模式：一键开关即可绕过 CORS 跨域限制"
     },
     "cors": {
-      "title": "CORS 限制",
-      "text": "本工具使用浏览器原生 fetch() API。跨域请求需要目标服务器包含正确的 CORS 响应头（Access-Control-Allow-Origin）。如果服务器不支持 CORS，请求将因 CORS 错误而失败。这是浏览器安全特性，无法在没有代理服务器的情况下绕过。"
+      "title": "CORS 与代理",
+      "text": "默认情况下，本工具使用浏览器原生 fetch() API。跨域请求需要目标服务器包含正确的 CORS 响应头。如果服务器不支持 CORS，可以开启代理开关——请求将通过服务端代理转发，完全绕过 CORS 限制。"
     }
   }
 }

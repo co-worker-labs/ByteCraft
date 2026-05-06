@@ -2,6 +2,7 @@
   "url": { "placeholder": "https://api.example.com/users" },
   "method": { "label": "メソッド" },
   "timeout": { "label": "タイムアウト" },
+  "proxy": { "label": "Proxy", "tooltip": "サーバーサイドプロキシ経由でリクエストを送信し、CORS 制限をバイパス" },
   "send": "送信",
   "sending": "送信中...",
   "tabs": { "params": "パラメータ", "headers": "ヘッダー", "body": "ボディ", "auth": "認証" },
@@ -52,18 +53,19 @@
     "ago": { "seconds": "{count}秒前", "minutes": "{count}分前", "hours": "{count}時間前", "days": "{count}日前" }
   },
   "description": {
-    "text": "ブラウザベースの軽量 HTTP クライアントで、REST API のテストに最適。メソッド、ヘッダー、ボディ、認証を自由に設定してリクエストを送信し、タイミング、ヘッダー、Cookie を含むレスポンスを確認できます。すべてのリクエストはブラウザの fetch() で実行されるため、CORS 対応の API のみサポートしています。データはサーバーに送信されません。",
+    "text": "REST API テスト用の軽量ブラウザ HTTP クライアント。リクエストメソッド、ヘッダー、ボディ、認証を自由に設定し、レスポンスのタイミング詳細、ヘッダー、Cookie を確認できます。デフォルトではブラウザの fetch() で直接リクエストを送信します。プロキシスイッチを有効にすると、サーバーサイドプロキシ経由でリクエストが転送され、CORS 制限をバイパスできます。データはサーバーに保存されません。",
     "features": {
       "title": "機能",
       "methods": "全標準 HTTP メソッド：GET、POST、PUT、PATCH、DELETE、HEAD、OPTIONS",
-      "auth": "認証：Bearer Token、Basic 認証",
-      "body": "リクエストボディ形式：JSON、フォームデータ、x-www-form-urlencoded、Raw テキスト",
-      "response": "レスポンス検査：整形ボディ、ヘッダー、Cookie、タイミング、リダイレクト情報",
-      "history": "リクエスト履歴をワンクリックで復元（ローカル保存）"
+      "auth": "認証方式：Bearer Token、Basic Auth",
+      "body": "リクエストボディ形式：JSON、Form-Data、x-www-form-urlencoded、Raw テキスト",
+      "response": "レスポンス検査：フォーマット済みボディ、ヘッダー、Cookie、タイミング、リダイレクト情報",
+      "history": "リクエスト履歴、ワンクリック復元（ローカル保存）",
+      "proxy": "サーバーサイドプロキシモード：スイッチ一つで CORS 制限をバイパス"
     },
     "cors": {
-      "title": "CORS の制限",
-      "text": "このツールはブラウザネイティブの fetch() API を使用します。クロスオリジンリクエストには、対象サーバーが適切な CORS ヘッダー（Access-Control-Allow-Origin）を含める必要があります。サーバーが CORS をサポートしていない場合、リクエストは CORS エラーで失敗します。これはブラウザのセキュリティ機能であり、プロキシサーバーなしでは回避できません。"
+      "title": "CORS とプロキシ",
+      "text": "デフォルトではブラウザのネイティブ fetch() API を使用します。クロスオリジンリクエストには対象サーバーが適切な CORS ヘッダーを返す必要があります。サーバーが CORS をサポートしていない場合、プロキシスイッチを有効にしてください。リクエストはサーバーサイドプロキシ経由で転送され、CORS 制限を完全にバイパスします。"
     }
   }
 }

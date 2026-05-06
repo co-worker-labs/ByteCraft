@@ -2,6 +2,7 @@
   "url": { "placeholder": "https://api.example.com/users" },
   "method": { "label": "Methode" },
   "timeout": { "label": "Zeitlimit" },
+  "proxy": { "label": "Proxy", "tooltip": "Anfragen über den serverseitigen Proxy leiten, um CORS-Einschränkungen zu umgehen" },
   "send": "Senden",
   "sending": "Senden...",
   "tabs": { "params": "Parameter", "headers": "Header", "body": "Body", "auth": "Authentifizierung" },
@@ -52,18 +53,19 @@
     "ago": { "seconds": "vor {count}s", "minutes": "vor {count}Min", "hours": "vor {count}Std", "days": "vor {count}T" }
   },
   "description": {
-    "text": "Ein leichtgewichtiger, browserbasierter HTTP-Client zum Testen von REST-APIs. Stellen Sie Anfragen mit voller Kontrolle über Methode, Header, Body und Authentifizierung zusammen und senden Sie diese — dann inspizieren Sie die Antworten mit Timing-Details, Headern und Cookies. Alle Anfragen werden über das browser-native fetch() ausgeführt, daher werden nur CORS-kompatible APIs unterstützt. Keine Daten werden an Server gesendet.",
+    "text": "Ein leichtgewichtiger, browserbasierter HTTP-Client zum Testen von REST-APIs. Stellen Sie Anfragen mit voller Kontrolle über Methode, Header, Body und Authentifizierung zusammen und inspizieren Sie Antworten mit Timing-Details, Headern und Cookies. Anfragen werden standardmäßig direkt über das browser-native fetch() gesendet. Aktivieren Sie den Proxy-Schalter, um Anfragen über den serverseitigen Proxy zu leiten und CORS-Einschränkungen zu umgehen. Es werden keine Daten auf einem Server gespeichert.",
     "features": {
       "title": "Funktionen",
       "methods": "Alle Standard-HTTP-Methoden: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
       "auth": "Authentifizierung: Bearer Token, Basic Auth",
-      "body": "Body-Formate: JSON, Form-Data, x-www-form-urlencoded, Raw-Text",
-      "response": "Antwort-Inspektion: formatierter Body, Header, Cookies, Timing, Weiterleitungs-Info",
-      "history": "Anfrageverlauf mit Ein-Klick-Wiederherstellung (lokal gespeichert)"
+      "body": "Anfragebody-Formate: JSON, Form-Data, x-www-form-urlencoded, Rohtext",
+      "response": "Antwortinspektion: formatierter Body, Header, Cookies, Timing, Weiterleitungsinformationen",
+      "history": "Anfrageverlauf mit Ein-Klick-Wiederherstellung (lokal gespeichert)",
+      "proxy": "Serverseitiger Proxy-Modus: CORS-Einschränkungen mit einem Klick umgehen"
     },
     "cors": {
-      "title": "CORS-Einschränkungen",
-      "text": "Dieses Tool verwendet die native fetch()-API des Browsers. Cross-Origin-Anfragen erfordern, dass der Zielserver entsprechende CORS-Header (Access-Control-Allow-Origin) sendet. Wenn der Server CORS nicht unterstützt, schlägt die Anfrage mit einem CORS-Fehler fehl. Dies ist eine Browsersicherheitsfunktion und kann ohne Proxy-Server nicht umgangen werden."
+      "title": "CORS und Proxy",
+      "text": "Standardmäßig verwendet dieses Tool die native fetch()-API des Browsers. Cross-Origin-Anfragen erfordern, dass der Zielserver die entsprechenden CORS-Header enthält. Wenn der Server CORS nicht unterstützt, aktivieren Sie den Proxy-Schalter: Anfragen werden über den serverseitigen Proxy geleitet und umgehen CORS-Einschränkungen vollständig."
     }
   }
 }

@@ -167,17 +167,11 @@
     "description": "画像をPNG、JPG、WebP形式間で圧縮、リサイズ、変換。すべての処理はブラウザ上でローカルに実行。",
     "searchTerms": "gazouasshuku atsushuku rizaizu PNG"
   },
-  "sshkey": {
-    "title": "SSH 鍵ジェネレーター - RSA & Ed25519 鍵ペア生成",
-    "shortTitle": "SSH 鍵生成",
-    "description": "ブラウザ内で SSH 鍵ペア（RSA、Ed25519）を生成。パスフレーズ暗号化、フィンガープリント表示、公開鍵検査をサポート。データはサーバーに送信されません。",
-    "searchTerms": "sshkagiseseiseiki sshkgss kagi koukaken"
-  },
-  "httpclient": {
-    "title": "HTTP クライアント - オンライン REST API テスター",
-    "shortTitle": "HTTP クライアント",
-    "description": "ブラウザで直接 HTTP リクエストを送信し、REST API をテスト。GET、POST、PUT、DELETE に対応。ヘッダー、ボディ、認証を設定可能。無料、データはサーバーに送信されません。",
-    "searchTerms": "httpkuraianto hk rest api"
+  "extractor": {
+    "title": "メール / URL / 電話番号抽出 — オンラインでメール、URL、電話番号を抽出",
+    "shortTitle": "メール / URL / 電話抽出",
+    "description": "テキストからメールアドレス、URL、電話番号を即座に抽出。無料オンライン抽出ツール、100%ブラウザ処理。",
+    "searchTerms": "meeruchuushutsu mrchu url denwa"
   },
   "wordcounter": {
     "title": "文字数カウンター - 文字数、読書時間、キーワード密度",

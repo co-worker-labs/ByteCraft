@@ -2,6 +2,7 @@
   "url": { "placeholder": "https://api.example.com/users" },
   "method": { "label": "請求方法" },
   "timeout": { "label": "逾時時間" },
+  "proxy": { "label": "Proxy", "tooltip": "透過本站伺服器端代理轉發請求，繞過 CORS 跨域限制" },
   "send": "傳送",
   "sending": "傳送中...",
   "tabs": { "params": "參數", "headers": "請求標頭", "body": "請求主體", "auth": "認證" },
@@ -52,18 +53,19 @@
     "ago": { "seconds": "{count} 秒前", "minutes": "{count} 分鐘前", "hours": "{count} 小時前", "days": "{count} 天前" }
   },
   "description": {
-    "text": "一個輕量級的瀏覽器端 HTTP 用戶端，用於測試 REST API。可以自由配置請求方法、請求標頭、請求主體和認證方式，傳送請求後查看回應的耗時詳情、回應標頭和 Cookie。所有請求透過瀏覽器 fetch() 執行，因此僅支援允許 CORS 的 API。資料不會傳送到任何伺服器。",
+    "text": "一個輕量級的瀏覽器端 HTTP 用戶端，用於測試 REST API。可以自由設定請求方法、請求頭、請求體和認證方式，發送請求後檢視回應的耗時詳情、回應標頭和 Cookie。預設透過瀏覽器 fetch() 直接發送請求，開啟代理開關後可經由伺服器端代理轉發，繞過 CORS 跨域限制。資料不會儲存在任何伺服器上。",
     "features": {
       "title": "功能特性",
       "methods": "所有標準 HTTP 方法：GET、POST、PUT、PATCH、DELETE、HEAD、OPTIONS",
       "auth": "認證方式：Bearer Token、Basic 認證",
-      "body": "請求主體格式：JSON、表單資料、x-www-form-urlencoded、原始文字",
-      "response": "回應檢查：格式化回應主體、回應標頭、Cookie、耗時、重新導向資訊",
-      "history": "請求歷史紀錄，一鍵還原（本機儲存）"
+      "body": "請求體格式：JSON、表單資料、x-www-form-urlencoded、原始文字",
+      "response": "回應檢查：格式化回應體、回應標頭、Cookie、耗時、重導向資訊",
+      "history": "請求歷史記錄，一鍵恢復（本地儲存）",
+      "proxy": "伺服器端代理模式：一鍵開關即可繞過 CORS 跨域限制"
     },
     "cors": {
-      "title": "CORS 限制",
-      "text": "本工具使用瀏覽器原生 fetch() API。跨域請求需要目標伺服器包含正確的 CORS 回應標頭（Access-Control-Allow-Origin）。如果伺服器不支援 CORS，請求將因 CORS 錯誤而失敗。這是瀏覽器安全特性，無法在沒有代理伺服器的情況下繞過。"
+      "title": "CORS 與代理",
+      "text": "預設情況下，本工具使用瀏覽器原生 fetch() API。跨域請求需要目標伺服器包含正確的 CORS 回應標頭。如果伺服器不支援 CORS，可以開啟代理開關——請求將透過伺服器端代理轉發，完全繞過 CORS 限制。"
     }
   }
 }

@@ -53,13 +53,12 @@ export function detectBodyType(contentType: string, body: string | ArrayBuffer):
   return "text";
 }
 
-export function parseSetCookieHeaders(headers: Headers): CookieData[] {
-  const setCookie = headers.getSetCookie?.();
-  if (!setCookie || setCookie.length === 0) {
+export function parseSetCookieHeaders(setCookieHeaders: string[]): CookieData[] {
+  if (!setCookieHeaders || setCookieHeaders.length === 0) {
     return [];
   }
 
-  return setCookie.map((header: string) => {
+  return setCookieHeaders.map((header: string) => {
     const parts = header.split(";").map((p) => p.trim());
     const [nameValue, ...attributes] = parts;
     const eqIndex = nameValue.indexOf("=");
@@ -87,63 +86,6 @@ export function parseSetCookieHeaders(headers: Headers): CookieData[] {
   });
 }
 
-export function buildRequest(
-  config: RequestConfig,
-  timeoutMs: number | null
-): { request: Request; controller: AbortController } {
-  const controller = new AbortController();
-
-  const url = buildUrl(config.url, config.params);
-
-  const headers = new Headers();
-  for (const h of config.headers) {
-    if (h.enabled && h.key) {
-      headers.set(h.key, h.value);
-    }
-  }
-
-  if (config.authType === "bearer" && config.bearerToken) {
-    headers.set("Authorization", `Bearer ${config.bearerToken}`);
-  } else if (config.authType === "basic" && config.basicUser) {
-    headers.set("Authorization", `Basic ${btoa(`${config.basicUser}:${config.basicPass}`)}`);
-  }
-
-  let body: BodyInit | null = null;
-  if (config.bodyType === "json") {
-    headers.set("Content-Type", "application/json");
-    body = config.bodyContent;
-  } else if (config.bodyType === "urlencoded") {
-    headers.set("Content-Type", "application/x-www-form-urlencoded");
-    const enabled = config.formData.filter((p) => p.enabled && p.key);
-    body = enabled
-      .map((p) => `${encodeURIComponent(p.key)}=${encodeURIComponent(p.value)}`)
-      .join("&");
-  } else if (config.bodyType === "form-data") {
-    const fd = new FormData();
-    for (const p of config.formData) {
-      if (p.enabled && p.key) {
-        fd.append(p.key, p.value);
-      }
-    }
-    body = fd;
-  } else if (config.bodyType === "raw") {
-    body = config.bodyContent;
-  }
-
-  const request = new Request(url, {
-    method: config.method,
-    headers,
-    body: config.method === "GET" || config.method === "HEAD" ? null : body,
-    signal: controller.signal,
-  });
-
-  if (timeoutMs !== null) {
-    setTimeout(() => controller.abort(), timeoutMs);
-  }
-
-  return { request, controller };
-}
-
 function buildUrl(baseUrl: string, params: RequestConfig["params"]): string {
   const url = new URL(baseUrl, "http://localhost");
 
@@ -158,6 +100,75 @@ function buildUrl(baseUrl: string, params: RequestConfig["params"]): string {
     return result.replace("http://localhost", "");
   }
   return result;
+}
+
+function buildHeaders(config: RequestConfig): Headers {
+  const headers = new Headers();
+  for (const h of config.headers) {
+    if (h.enabled && h.key) {
+      headers.set(h.key, h.value);
+    }
+  }
+
+  if (config.authType === "bearer" && config.bearerToken) {
+    headers.set("Authorization", `Bearer ${config.bearerToken}`);
+  } else if (config.authType === "basic" && config.basicUser) {
+    headers.set("Authorization", `Basic ${btoa(`${config.basicUser}:${config.basicPass}`)}`);
+  }
+
+  return headers;
+}
+
+function buildBody(config: RequestConfig, headers: Headers): BodyInit | null {
+  if (config.method === "GET" || config.method === "HEAD") return null;
+
+  if (config.bodyType === "json") {
+    headers.set("Content-Type", "application/json");
+    return config.bodyContent;
+  }
+  if (config.bodyType === "urlencoded") {
+    headers.set("Content-Type", "application/x-www-form-urlencoded");
+    return config.formData
+      .filter((p) => p.enabled && p.key)
+      .map((p) => `${encodeURIComponent(p.key)}=${encodeURIComponent(p.value)}`)
+      .join("&");
+  }
+  if (config.bodyType === "form-data") {
+    const fd = new FormData();
+    for (const p of config.formData) {
+      if (p.enabled && p.key) {
+        fd.append(p.key, p.value);
+      }
+    }
+    return fd;
+  }
+  if (config.bodyType === "raw") {
+    return config.bodyContent;
+  }
+  return null;
+}
+
+export function buildRequest(
+  config: RequestConfig,
+  timeoutMs: number | null
+): { request: Request; controller: AbortController } {
+  const controller = new AbortController();
+  const url = buildUrl(config.url, config.params);
+  const headers = buildHeaders(config);
+  const body = buildBody(config, headers);
+
+  const request = new Request(url, {
+    method: config.method,
+    headers,
+    body,
+    signal: controller.signal,
+  });
+
+  if (timeoutMs !== null) {
+    setTimeout(() => controller.abort(), timeoutMs);
+  }
+
+  return { request, controller };
 }
 
 export async function parseResponse(response: Response, startTime: number): Promise<ResponseData> {
@@ -181,6 +192,7 @@ export async function parseResponse(response: Response, startTime: number): Prom
   });
 
   const bodyType = detectBodyType(contentType, body);
+  const setCookie = response.headers.getSetCookie?.() ?? [];
 
   return {
     status: response.status,
@@ -190,7 +202,7 @@ export async function parseResponse(response: Response, startTime: number): Prom
     bodyType,
     size,
     timing: { total: Date.now() - startTime },
-    cookies: parseSetCookieHeaders(response.headers),
+    cookies: parseSetCookieHeaders(setCookie),
     redirected: response.redirected,
     finalUrl: response.url,
     timestamp: Date.now(),
@@ -215,4 +227,88 @@ function bufferToString(buffer: ArrayBuffer): string {
     lines.push(`... (${bytes.length - 4096} more bytes)`);
   }
   return lines.join("\n");
+}
+
+export interface ProxyPayload {
+  url: string;
+  method: string;
+  headers: Record<string, string>;
+  body: string | null;
+  timeout: number | null;
+}
+
+export function buildProxyPayload(config: RequestConfig, timeoutMs: number | null): ProxyPayload {
+  const url = buildUrl(config.url, config.params);
+  const headerRecord: Record<string, string> = {};
+
+  for (const h of config.headers) {
+    if (h.enabled && h.key) {
+      headerRecord[h.key] = h.value;
+    }
+  }
+
+  if (config.authType === "bearer" && config.bearerToken) {
+    headerRecord["Authorization"] = `Bearer ${config.bearerToken}`;
+  } else if (config.authType === "basic" && config.basicUser) {
+    headerRecord["Authorization"] = `Basic ${btoa(`${config.basicUser}:${config.basicPass}`)}`;
+  }
+
+  let body: string | null = null;
+  if (config.bodyType === "json") {
+    headerRecord["Content-Type"] = "application/json";
+    body = config.bodyContent;
+  } else if (config.bodyType === "urlencoded") {
+    headerRecord["Content-Type"] = "application/x-www-form-urlencoded";
+    body = config.formData
+      .filter((p) => p.enabled && p.key)
+      .map((p) => `${encodeURIComponent(p.key)}=${encodeURIComponent(p.value)}`)
+      .join("&");
+  } else if (config.bodyType === "form-data") {
+    const parts = config.formData.filter((p) => p.enabled && p.key);
+    const boundary = "----FormBoundary" + crypto.randomUUID().replace(/-/g, "");
+    headerRecord["Content-Type"] = `multipart/form-data; boundary=${boundary}`;
+    const segments = parts.map(
+      (p) => `--${boundary}\r\nContent-Disposition: form-data; name="${p.key}"\r\n\r\n${p.value}`
+    );
+    segments.push(`--${boundary}--\r\n`);
+    body = segments.join("\r\n");
+  } else if (config.bodyType === "raw") {
+    body = config.bodyContent;
+  }
+
+  if (config.method === "GET" || config.method === "HEAD") {
+    body = null;
+  }
+
+  return { url, method: config.method, headers: headerRecord, body, timeout: timeoutMs };
+}
+
+export function parseProxyResponse(data: Record<string, unknown>, startTime: number): ResponseData {
+  const contentType = (data.headers as Record<string, string>)["content-type"] || "";
+  const body = data.body as string;
+  const bodyType = detectBodyType(contentType, body);
+
+  const setCookieHeaders: string[] = [];
+  for (const [key, value] of Object.entries(data.headers as Record<string, string>)) {
+    if (key.toLowerCase() === "set-cookie") {
+      setCookieHeaders.push(value);
+    }
+  }
+
+  return {
+    status: data.status as number,
+    statusText: data.statusText as string,
+    headers: data.headers as Record<string, string>,
+    body,
+    bodyType,
+    size: data.size as number,
+    timing: {
+      total: Date.now() - startTime,
+      ...(data.timing as { total: number }),
+    },
+    cookies: parseSetCookieHeaders(setCookieHeaders),
+    redirected: data.redirected as boolean,
+    finalUrl: data.finalUrl as string,
+    timestamp: Date.now(),
+  };
 }

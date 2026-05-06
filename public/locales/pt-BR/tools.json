@@ -139,15 +139,10 @@
     "shortTitle": "Compressor de Imagens",
     "description": "Comprima, redimensione e converta imagens entre formatos PNG, JPG e WebP. Todo processamento é local no navegador."
   },
-  "sshkey": {
-    "title": "Gerador de Chaves SSH - Gere chaves RSA e Ed25519 online",
-    "shortTitle": "Gerador de Chaves SSH",
-    "description": "Gere pares de chaves SSH (RSA, Ed25519) inteiramente no seu navegador. Suporta criptografia com senha, exibição de impressão digital e inspeção de chave pública. Nenhum dado é enviado a servidores."
-  },
-  "httpclient": {
-    "title": "Cliente HTTP - Testador de APIs REST Online",
-    "shortTitle": "Cliente HTTP",
-    "description": "Envie requisições HTTP e teste APIs REST diretamente no seu navegador. Suporta GET, POST, PUT, DELETE com cabeçalhos, corpo e autenticação. Gratuito, sem enviar dados para servidores."
+  "extractor": {
+    "title": "Extrator de Emails, URLs e Telefones — Extração Online",
+    "shortTitle": "Extrator Email / URL / Telefone",
+    "description": "Extraia emails, URLs e números de telefone de qualquer texto instantaneamente. Ferramenta de extração gratuita, 100% no navegador."
   },
   "wordcounter": {
     "title": "Contador de Palavras - Caracteres, Tempo de Leitura, Densidade de Palavras-chave",
