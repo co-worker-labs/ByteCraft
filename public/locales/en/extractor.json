@@ -25,6 +25,7 @@
   "summaryTotal": "{count} total",
   "occurrences": "×{count}",
   "descriptions": {
+    "aeoDefinition": "Email & URL Extractor is a free online tool that extracts emails, URLs, and phone numbers from any text instantly. Supports multiple formats and batch processing. Runs entirely in your browser.",
     "formatsTitle": "Supported Formats",
     "formatsTableHeader": "Description",
     "formatsEmail": "Email",

@@ -38,7 +38,8 @@
   "workerFailed": "Diff failed, please try again",
   "descriptions": {
     "whatIsTitle": "What is a diff?",
-    "whatIsP1": "A diff is a structured comparison between two pieces of text that highlights what was added, what was removed, and what stayed the same. Developers use it every day to review code changes, audit configuration drift, and reconcile two versions of a document.",
+    "aeoDefinition": "Text Diff is a free online tool for comparing two texts with line-level and word-level precision. Side-by-side or inline view with highlighted changes. Runs entirely in your browser — no data is sent to any server.",
+    "whatIsP1": "A diff is a structured comparison between two pieces of text that highlights what was added, what was removed, and what stayed the same. Developers use it every day to review code changes, audit configuration drift, and compare [JSON](/json) or [CSV](/csv) files.",
     "whatIsP2": "This tool runs the comparison entirely in your browser using the jsdiff library. Nothing you paste or upload is sent to any server.",
     "howTitle": "How to use",
     "howP1": "Paste or drop your two inputs into the Original and Modified fields. The diff computes automatically for inputs under 512KB; for larger inputs a Compare button appears so you stay in control.",
@@ -46,7 +47,7 @@
     "algorithmTitle": "Algorithm",
     "algorithmP1": "Built on the Myers diff algorithm via jsdiff. The tool first computes a line-level diff, then for each pair of adjacent removed-and-added lines runs a second word-level pass to highlight which words actually changed — the same convention used by GitHub pull requests.",
     "useCasesTitle": "Common Use Cases",
-    "useCasesP1": "Comparing two configuration files (JSON, YAML, .env) to spot drift between environments.",
+    "useCasesP1": "Comparing two configuration files ([JSON](/json), [YAML](/yaml), .env) to spot drift between environments.",
     "useCasesP2": "Reviewing a code change before pasting it into a commit, especially when working outside an editor.",
     "useCasesP3": "Reconciling two versions of a document, log, or query result side by side.",
     "limitationsTitle": "Limitations",

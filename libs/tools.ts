@@ -56,6 +56,15 @@ export interface CategoryGroup {
   tools: string[]; // tool keys in display order
 }
 
+export const CATEGORY_SLUGS: Record<ToolCategory, string> = {
+  text: "text-processing",
+  encoding: "encoding-conversion",
+  security: "security-crypto",
+  generators: "generators",
+  visual: "visual-media",
+  reference: "reference-lookup",
+};
+
 export const TOOL_CATEGORIES: CategoryGroup[] = [
   {
     key: "text",
@@ -167,6 +176,12 @@ export const TOOLS: ToolEntry[] = [
   { key: "wordcounter", path: "/wordcounter", icon: AlignLeft },
   { key: "httpclient", path: "/httpclient", icon: Send },
 ] as const;
+
+export const TOOL_PATHS = new Set(TOOLS.map((t) => t.path));
+
+export function getToolCategory(toolKey: string): ToolCategory | undefined {
+  return TOOL_CATEGORIES.find((c) => c.tools.includes(toolKey))?.key;
+}
 
 export function getToolCards(t: ReturnType<typeof useTranslations>): ToolCard[] {
   return TOOLS.map((tool) => ({

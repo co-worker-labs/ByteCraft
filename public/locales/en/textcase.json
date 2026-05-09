@@ -33,6 +33,7 @@
     "pathCase": "File paths, API routes"
   },
   "descriptions": {
+    "aeoDefinition": "Text Case Converter is a free online tool that converts text between camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, and more. Instant conversion with real-time preview. No data leaves your browser.",
     "faqTitle": "Frequently Asked Questions",
     "faq1Q": "What text case conversions are available?",
     "faq1A": "camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case, Title Case, Sentence case, UPPER CASE, lower case, and more.",

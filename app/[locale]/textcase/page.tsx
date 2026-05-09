@@ -1,9 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import { generatePageMeta } from "../../../libs/seo";
 import { buildToolSchemas } from "../../../components/json-ld";
+import { TOOL_CATEGORIES, CATEGORY_SLUGS } from "../../../libs/tools";
 import TextCasePage from "./textcase-page";
 
 const PATH = "/textcase";
+const TOOL_KEY = "textcase";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -20,10 +22,17 @@ export default async function TextCaseRoute({ params }: { params: Promise<{ loca
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tools" });
   const tx = await getTranslations({ locale, namespace: "textcase" });
+  const tc = await getTranslations({ locale, namespace: "categories" });
+  const category = TOOL_CATEGORIES.find((c) => c.tools.includes(TOOL_KEY))!;
+  const categorySlug = CATEGORY_SLUGS[category.key];
   const schemas = buildToolSchemas({
     name: t("textcase.title"),
-    description: t("textcase.description"),
+    description: tx.has("descriptions.aeoDefinition")
+      ? tx("descriptions.aeoDefinition")
+      : t("textcase.description"),
     path: PATH,
+    categoryName: tc(`${category.key}.shortTitle`),
+    categoryPath: `/${categorySlug}`,
     faqItems: [1, 2, 3].map((i) => ({
       q: tx(`descriptions.faq${i}Q`),
       a: tx(`descriptions.faq${i}A`),

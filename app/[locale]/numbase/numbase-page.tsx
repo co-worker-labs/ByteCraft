@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import Layout from "../../../components/layout";
 import { StyledInput } from "../../../components/ui/input";
 import { CopyButton } from "../../../components/ui/copy-btn";
@@ -266,6 +267,7 @@ function Converter() {
 
 function Description() {
   const t = useTranslations("numbase");
+  const locale = useLocale();
 
   const faqItems = [1, 2, 3].map((i) => ({
     title: t(`descriptions.faq${i}Q`),
@@ -273,9 +275,14 @@ function Description() {
   }));
   return (
     <section className="py-3 space-y-4">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("descriptions.aeoDefinition")}
+      </p>
       <div>
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
-        <p className="text-fg-secondary text-sm leading-relaxed">{t("descriptions.whatIs")}</p>
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {renderLinkedText(t("descriptions.whatIs"), locale)}
+        </p>
       </div>
       <div>
         <h2 className="font-semibold text-fg-primary text-base">
@@ -300,9 +307,14 @@ function Description() {
 
 export default function NumbasePage() {
   const ts = useTranslations("tools");
+  const title = ts("numbase.shortTitle");
 
   return (
-    <Layout title={ts("numbase.shortTitle")}>
+    <Layout
+      title={title}
+      categoryLabel={ts("categories.encoding")}
+      categorySlug="encoding-conversion"
+    >
       <div className="container mx-auto px-4 pt-3 pb-6">
         <Converter />
         <Description />

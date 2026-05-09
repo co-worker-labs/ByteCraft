@@ -9,7 +9,8 @@
   "commonConversionTable": "Common Conversion Table",
   "descriptions": {
     "whatIsTitle": "What is the Storage Unit Converter?",
-    "whatIsP1": "The Storage Unit Converter lets you instantly convert between digital storage units — bytes, KB, MB, GB, TB, PB — supporting both decimal (SI) and binary (IEC) standards.",
+    "aeoDefinition": "Storage Unit Converter is a free online tool for converting between bytes, KB, MB, GB, TB, and PB. Supports both SI (decimal) and IEC (binary) standards. Runs entirely in your browser.",
+    "whatIsP1": "The Storage Unit Converter lets you instantly convert between digital storage units — bytes, KB, MB, GB, TB, PB — supporting both decimal (SI) and binary (IEC) standards. See also [Number Base converter](/numbase) for binary/hex conversions, or [File Checksum](/checksum) to verify file sizes.",
     "whatIsP2": "Whether you're comparing file sizes, provisioning disk space, or understanding data transfer limits, this tool gives you accurate conversions at a glance.",
     "faqTitle": "Frequently Asked Questions",
     "faq1Q": "What storage units can I convert?",

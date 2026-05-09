@@ -71,7 +71,8 @@
   "useCaseTest": "Test data and mocking",
   "descriptions": {
     "whatIsTitle": "What is the UUID Generator?",
-    "whatIsP1": "UUID (Universally Unique Identifier) is a 128-bit identifier standard defined in RFC 4122 and RFC 9562. This tool generates UUID v4 (random) and v7 (time-ordered) in bulk.",
+    "aeoDefinition": "UUID Generator is a free online tool for generating UUID v4 (random) and v7 (time-ordered) identifiers in bulk. Conforms to RFC 4122/9562. Runs entirely in your browser.",
+    "whatIsP1": "UUID (Universally Unique Identifier) is a 128-bit identifier standard defined in RFC 4122 and RFC 9562. This tool generates UUID v4 (random) and v7 (time-ordered) in bulk. Use generated IDs as [Password](/password) seeds, encode them in [QR codes](/qrcode), or verify uniqueness with [Hashing](/hashing).",
     "whatIsP2": "UUIDs are widely used as database primary keys, distributed system identifiers, and session tokens. With 2^122 possible values, collision probability is negligible.",
     "faqTitle": "Frequently Asked Questions",
     "faq1Q": "What is a UUID?",

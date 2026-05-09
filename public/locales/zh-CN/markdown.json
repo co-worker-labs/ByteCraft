@@ -22,7 +22,7 @@
   "split": "分屏",
   "descriptions": {
     "whatIsTitle": "什么是 Markdown？",
-    "whatIsP1": "Markdown 是一种轻量级标记语言，可用简洁可读的语法格式化纯文本。它是 README、文档与笔记的事实标准——易写、易 diff，跨平台渲染一致。",
+    "whatIsP1": "Markdown 是一种轻量级标记语言，可以用简单、可读的语法格式化纯文本。它是 README、文档和笔记的事实标准——易于编写，易于 [对比](/diff)，在各平台渲染效果出色。",
     "howTitle": "如何使用",
     "howP1": "在编辑器中输入或粘贴 Markdown，预览随输入更新。可在编辑、预览、分屏三种模式间切换。可导出 .md、复制渲染后的 HTML、或将预览保存为 PDF / PNG。所有处理均在浏览器中完成。",
     "gfmTitle": "GitHub Flavored Markdown",
@@ -33,6 +33,7 @@
     "faq2Q": "可以将 Markdown 导出为 PDF 吗？",
     "faq2A": "可以。使用导出按钮保存为 PDF 或 PNG。PDF 导出遵循打印样式，输出格式整洁。",
     "faq3Q": "支持哪些 Markdown 扩展？",
-    "faq3A": "GFM 表格、任务列表、删除线、自动链接，以及 TypeScript、Python、Go、Rust、SQL 等 12+ 种编程语言的代码语法高亮。"
+    "faq3A": "GFM 表格、任务列表、删除线、自动链接，以及 TypeScript、Python、Go、Rust、SQL 等 12+ 种编程语言的代码语法高亮。",
+    "aeoDefinition": "Markdown 编辑器是一个免费的在线 Markdown 编写和预览工具，支持 GitHub 风格 Markdown。包含语法高亮、实时预览和 PDF/PNG 导出。完全在浏览器中运行。"
   }
 }

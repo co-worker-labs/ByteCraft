@@ -4,6 +4,7 @@ import { routing } from "./routing";
 const namespaces = [
   "common",
   "tools",
+  "categories",
   "home",
   "password",
   "hashing",

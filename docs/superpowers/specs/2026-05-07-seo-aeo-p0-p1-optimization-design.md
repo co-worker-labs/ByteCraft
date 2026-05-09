@@ -5,19 +5,19 @@
 
 ## Overview
 
-Full implementation of P0 and P1 tasks from the SEO/AEO optimization plan. 7 tasks across 6 independent modules, executed in dependency order.
+Full implementation of P0 and P1 tasks from the SEO/AEO optimization plan. 7 tasks across 6 independent modules, executed in dependency order. The project has **32 tools** in total.
 
 ### Key Decisions
 
-| Decision               | Choice                                                               |
-| ---------------------- | -------------------------------------------------------------------- |
-| Scope                  | P0 all (3 tasks) + P1 all (4 tasks)                                  |
-| Schema injection point | Server-side in `page.tsx`                                            |
-| Related Tools mapping  | Manual configuration table                                           |
-| Privacy Badge style    | Compact Banner (option B)                                            |
-| Related Tools position | Below Description section                                            |
-| Bundle optimization    | Full (dynamic imports + Prism.js on-demand + lucide optimization)    |
-| httpclient migration   | Migrate to new `buildToolSchemas` pattern, remove old JSX components |
+| Decision               | Choice                                                                              |
+| ---------------------- | ----------------------------------------------------------------------------------- |
+| Scope                  | P0 all (3 tasks) + P1 all (4 tasks)                                                 |
+| Schema injection point | Server-side in `page.tsx`                                                           |
+| Related Tools mapping  | Manual configuration table                                                          |
+| Privacy Badge style    | Compact Banner (option B)                                                           |
+| Related Tools position | Below Description section                                                           |
+| Bundle optimization    | Dynamic imports + Prism.js on-demand; lucide icons kept as-is (global shared chunk) |
+| httpclient migration   | Migrate to new `buildToolSchemas` pattern, remove old JSX components                |
 
 ### Implementation Order
 
@@ -81,7 +81,7 @@ FCP improvement 100-300ms. CSS no longer blocks font download.
 
 ### Goal
 
-- All 31 tool pages: `WebApplication` + `SoftwareApplication` + `BreadcrumbList` schema
+- All 32 tool pages: `WebApplication` + `SoftwareApplication` + `BreadcrumbList` schema
 - Pages with FAQ: `FAQPage` schema
 - Pages with step guides: `HowTo` schema
 - Migrate httpclient to new pattern, remove old JSX components
@@ -92,7 +92,7 @@ FCP improvement 100-300ms. CSS no longer blocks font download.
 | --------------------------------------------- | --------------------------------------------------------------------------- |
 | `components/json-ld.tsx`                      | Refactor: add `buildToolSchemas()` pure function, remove old JSX components |
 | `libs/seo.ts`                                 | No change needed (schemas output directly in page.tsx)                      |
-| 31 tool `page.tsx` files                      | Add JSON-LD `<script>` injection                                            |
+| 32 tool `page.tsx` files                      | Add JSON-LD `<script>` injection                                            |
 | `app/[locale]/httpclient/httpclient-page.tsx` | Remove old `WebApplicationJsonLd` / `BreadcrumbJsonLd` usage                |
 
 ### Architecture
@@ -105,11 +105,10 @@ export function buildToolSchemas(options: {
   name: string;
   description: string;
   path: string;
-  locale: string;
   faqItems?: { q: string; a: string }[];
   howToSteps?: { name: string; text: string }[];
 }): object[] {
-  const { name, description, path, locale, faqItems, howToSteps } = options;
+  const { name, description, path, faqItems, howToSteps } = options;
   const url = `${SITE_URL}${path}`;
 
   const schemas: object[] = [];
@@ -180,7 +179,6 @@ export default function ToolRoute() {
     name: t("json.title"),
     description: t("json.description"),
     path: PATH,
-    locale,
   });
 
   return (
@@ -217,17 +215,13 @@ export default function ToolRoute() {
 
 Remove `WebApplicationJsonLd` and `BreadcrumbJsonLd` JSX component imports from `httpclient-page.tsx`. Move schema generation to `httpclient/page.tsx` using `buildToolSchemas`. Delete old JSX component exports from `json-ld.tsx`.
 
-#### dateModified
-
-Use build timestamp: `new Date().toISOString()` at build time, passed via environment variable or computed in `buildToolSchemas`.
-
 ---
 
 ## Module 3: Related Tools Internal Links (P0-2)
 
 ### Goal
 
-Each tool page shows 3-5 semantically related tools below the Description section, enhancing internal link structure.
+Each tool page shows 2-5 semantically related tools below the Description section, enhancing internal link structure.
 
 ### File Changes
 
@@ -235,13 +229,13 @@ Each tool page shows 3-5 semantically related tools below the Description sectio
 | ------------------------------ | ------------------------------------------------------------ |
 | `libs/tools.ts`                | Add `TOOL_RELATIONS: Record<string, string[]>` mapping table |
 | `components/related-tools.tsx` | New component                                                |
-| 31 tool `*-page.tsx` files     | Add `<RelatedTools currentTool="xxx" />` after Description   |
+| 32 tool `*-page.tsx` files     | Add `<RelatedTools currentTool="xxx" />` after Description   |
 
 ### Architecture
 
 #### Mapping table (`libs/tools.ts`)
 
-Manual configuration per tool, 3-5 relations each. Same-category priority + cross-category semantic links. No self-reference.
+Manual configuration per tool, 2-5 relations each. Same-category priority + cross-category semantic links. No self-reference. Minimum 2 relations; tools in larger categories may have up to 5.
 
 ```ts
 export const TOOL_RELATIONS: Record<string, string[]> = {
@@ -287,7 +281,8 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
 
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
-import { TOOLS, TOOL_RELATIONS, getToolIconColor } from "../libs/tools";
+import { TOOLS, TOOL_RELATIONS } from "../libs/tools";
+import { getToolIconColor } from "../libs/tools";
 
 interface RelatedToolsProps {
   currentTool: string;
@@ -299,11 +294,13 @@ export default function RelatedTools({ currentTool }: RelatedToolsProps) {
   const relatedKeys = TOOL_RELATIONS[currentTool];
   if (!relatedKeys || relatedKeys.length === 0) return null;
 
-  const relatedTools = relatedKeys.map((key) => TOOLS.find((t) => t.key === key)).filter(Boolean);
+  const relatedTools = relatedKeys
+    .map((key) => TOOLS.find((tool) => tool.key === key))
+    .filter(Boolean);
 
   // Render: horizontal row of clickable pill/card with icon + name
   // Uses Link for navigation, icon from TOOLS entry, color from getToolIconColor
-  // Locale-aware path prefix
+  // Locale-aware path prefix (useLocale for prefix)
 }
 ```
 
@@ -344,8 +341,8 @@ export default function PrivacyBanner({ variant = "text" }: PrivacyBannerProps) 
   const text = variant === "files" ? tc("alert.filesNotTransferred") : tc("alert.notTransferred");
 
   return (
-    <div className="flex items-center gap-2 border border-accent-cyan/20 bg-accent-cyan-dim/20 rounded-lg p-3 my-4">
-      <Lock size={16} className="text-accent-cyan shrink-0" />
+    <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
+      <Lock size={16} className="text-accent-cyan mt-0.5 shrink-0" />
       <span className="text-sm text-fg-secondary leading-relaxed">{text}</span>
     </div>
   );
@@ -367,13 +364,15 @@ Other 9 locales: translate idiomatically, same meaning.
 
 #### Migration mapping
 
-| Current pattern                                       | New pattern                               |
-| ----------------------------------------------------- | ----------------------------------------- |
-| Inline `<div>` with `tc("alert.notTransferred")`      | `<PrivacyBanner />`                       |
-| Inline `<div>` with `tc("alert.filesNotTransferred")` | `<PrivacyBanner variant="files" />`       |
-| `password-page.tsx` custom banner with Lock icon      | `<PrivacyBanner />` (unified)             |
-| `checksum-page.tsx` purple extra banner               | Keep (functional tip, not privacy signal) |
-| `dbviewer/FileUpload.tsx` inline privacy text         | `<PrivacyBanner variant="files" />`       |
+| Current pattern                                                                  | New pattern                                       |
+| -------------------------------------------------------------------------------- | ------------------------------------------------- |
+| Inline `<div>` with `tc("alert.notTransferred")`                                 | `<PrivacyBanner />`                               |
+| Inline `<div>` with `tc("alert.filesNotTransferred")`                            | `<PrivacyBanner variant="files" />`               |
+| `password-page.tsx` custom banner with Lock + `t("localGenerated")`              | `<PrivacyBanner />` (unified)                     |
+| `uuid-page.tsx` custom banner with Lock + `t("localGenerated")`                  | `<PrivacyBanner />` (unified)                     |
+| `checksum-page.tsx` purple extra banner (`checksumInfo`)                         | Keep (functional tip, not privacy signal)         |
+| `dbviewer/dbviewer-page.tsx` inline privacy text (`tc("alert.notTransferred")`)  | `<PrivacyBanner />`                               |
+| `dbviewer/components/FileUpload.tsx` inline privacy text (`t("upload.privacy")`) | Keep as-is (separate namespace, context-specific) |
 
 ---
 
@@ -390,7 +389,7 @@ Other 9 locales: translate idiomatically, same meaning.
 | File                                   | Change                                           |
 | -------------------------------------- | ------------------------------------------------ |
 | 5 tool `*-page.tsx` files              | Add `Description` component                      |
-| 31 tool translation files (10 locales) | Add FAQ translation keys                         |
+| 32 tool translation files (10 locales) | Add FAQ translation keys                         |
 | `components/json-ld.tsx`               | Add `buildOrganizationSchema()` function         |
 | `app/[locale]/layout.tsx`              | Inject Organization schema                       |
 | Homepage files                         | Add brand description + tool count + FAQ section |
@@ -482,17 +481,16 @@ export function buildOrganizationSchema() {
 
 ### Goal
 
-Full optimization: dynamic imports for large dependencies, on-demand Prism.js language loading, lucide icon optimization.
+Full optimization: dynamic imports for large dependencies, on-demand Prism.js language loading. Lucide icons deferred to measurement phase.
 
 ### File Changes
 
-| File                               | Change                           |
-| ---------------------------------- | -------------------------------- |
-| Pages using `@uiw/react-json-view` | `dynamic()` import               |
-| Pages using `json5`                | `dynamic()` import               |
-| Pages using `rc-slider`            | `dynamic()` import               |
-| Markdown tool Prism.js loading     | On-demand language pack loading  |
-| `libs/tools.ts`                    | Lucide icon loading optimization |
+| File                               | Change                          |
+| ---------------------------------- | ------------------------------- |
+| Pages using `@uiw/react-json-view` | `dynamic()` import              |
+| Pages using `json5`                | `dynamic()` import              |
+| Pages using `rc-slider`            | `dynamic()` import              |
+| Markdown tool Prism.js loading     | On-demand language pack loading |
 
 ### Architecture
 
@@ -518,11 +516,15 @@ const RcSlider = dynamic(() => import("rc-slider"), { ssr: false });
 Target pages:
 
 - `json-page.tsx` — `@uiw/react-json-view` + `json5`
-- `color-page.tsx` — `rc-slider`
+- `yaml-page.tsx` — `json5`
+- `password-page.tsx` — `rc-slider`
+- `uuid-page.tsx` — `rc-slider`
+- `image-page.tsx` — `rc-slider`
+- `qrcode-page.tsx` — `rc-slider`
 
 #### 7b. Prism.js on-demand loading
 
-Replace static imports of 13 language packs with dynamic loading:
+Replace static imports of 12 language packs (4 core + 8 extra) with dynamic loading:
 
 ```ts
 async function loadPrismLanguage(lang: string): Promise<void> {
@@ -537,30 +539,26 @@ async function loadPrismLanguage(lang: string): Promise<void> {
 
 Load only when user selects a specific language in the Markdown tool.
 
-#### 7c. Lucide icon optimization
+#### 7c. Lucide icons — no optimization needed
 
-Current: `libs/tools.ts` statically imports 31 lucide icons, all loaded on homepage.
+**Analysis**: `libs/tools.ts` statically imports 32 lucide icons (~4-6KB gzip). These icons are already loaded on **every page** through the global component chain:
 
-Option: Convert tool cards to lazy-load icons. Since icons are only needed on the homepage card grid, use `next/dynamic` for each icon or use a single SVG sprite.
-
-Approach: Create lightweight icon wrappers that use `dynamic()`:
-
-```tsx
-// libs/tool-icons.tsx
-import dynamic from "next/dynamic";
-
-const icons = {
-  json: dynamic(() => import("lucide-react").then((m) => m.FileJson)),
-  base64: dynamic(() => import("lucide-react").then((m) => m.FileCode)),
-  // ... 31 entries
-};
-
-export function getToolIcon(key: string) {
-  return icons[key];
-}
+```
+Layout → Header → ToolsDrawer → tools.ts → 32 icons
+       → FloatingToolbar → ToolsDrawer → tools.ts → 32 icons
 ```
 
-Update `libs/tools.ts` to use `getToolIcon(key)` instead of direct imports. The `TOOLS` array no longer holds icon references, only keys.
+Since `ToolsDrawer` is a global component rendered via `Header` on every page, the icons are in a shared client chunk that loads unconditionally. There is no opportunity to exclude them from any route.
+
+| Approach                   | Verdict        | Reason                                                                                                                |
+| -------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------- |
+| No optimization (current)  | ✅ **Accept**  | 4-6KB gzip in shared chunk is reasonable for a global search drawer                                                   |
+| `dynamic()` per icon       | ❌ Negative    | 32 micro-chunk requests >> 4-6KB single transfer                                                                      |
+| Extract to `tool-icons.ts` | ❌ No gain     | ToolsDrawer still needs icons, same shared chunk                                                                      |
+| SVG sprite                 | ❌ Low ROI     | 6KB JS → 6KB SVG, same transfer + high maintenance                                                                    |
+| `dynamic()` ToolsDrawer    | ⚠️ Data-driven | Defers ~12KB off critical path, but adds drawer open latency. Only if measurement proves shared chunk is a bottleneck |
+
+**Decision**: Keep current structure. No icon-level changes.
 
 #### 7d. Measurement
 
@@ -569,6 +567,8 @@ Before/after comparison via:
 - `next build` output (bundle size per route)
 - `@next/bundle-analyzer` for chunk visualization
 - Lighthouse score comparison
+
+If measurement shows the shared chunk is a bottleneck for FCP, consider lazy-loading `ToolsDrawer` as a single `dynamic()` import in `Header`. Do NOT optimize at the icon level.
 
 ---
 
@@ -581,9 +581,9 @@ All new UI text goes through next-intl. English first, then translate to 9 other
 ### Testing
 
 - Schema output: Vitest tests for `buildToolSchemas()` verifying correct JSON-LD structure
-- Related Tools: Vitest test for `TOOL_RELATIONS` completeness (every tool has an entry)
-- Privacy Banner: Smoke test for component rendering
-- Bundle: Manual verification via `next build` output
+- Related Tools: Vitest test for `TOOL_RELATIONS` completeness (every tool has an entry, minimum 2 relations per tool)
+- Privacy Banner: Smoke test for component rendering (both variants)
+- Bundle: Manual verification via `next build` output (before/after comparison)
 
 ### Backward Compatibility
 

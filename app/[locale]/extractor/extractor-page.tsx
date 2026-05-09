@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { Copy, FolderOpen, Upload, X } from "lucide-react";
 import Layout from "../../../components/layout";
 import { StyledTextarea, StyledCheckbox } from "../../../components/ui/input";
@@ -309,6 +310,9 @@ function Description() {
   }));
   return (
     <section id="reference" className="mt-6">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("descriptions.aeoDefinition")}
+      </p>
       <div className="flex items-center gap-3 my-6">
         <div className="flex-1 h-px bg-border-default" />
         <span className="font-mono text-xs font-semibold text-fg-muted uppercase tracking-wider">
@@ -378,8 +382,9 @@ function Description() {
 
 export default function ExtractorPage() {
   const t = useTranslations("tools");
+  const title = t("extractor.shortTitle");
   return (
-    <Layout title={t("extractor.shortTitle")}>
+    <Layout title={title} categoryLabel={t("categories.text")} categorySlug="text-processing">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <PrivacyBanner />
         <Conversion />

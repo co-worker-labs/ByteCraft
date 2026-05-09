@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useRef, useEffect, startTransition } from "react";
+import Link from "next/link";
 import Layout from "../../components/layout";
 import { useRouter } from "../../i18n/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import {
   getToolCards,
   getToolIconColor,
@@ -11,6 +12,7 @@ import {
   getToolCardsByKeys,
   TOOL_CATEGORIES,
   QUICK_ACCESS_DEFAULT,
+  CATEGORY_SLUGS,
 } from "../../libs/tools";
 import { searchTools } from "../../libs/tools-search";
 import { Card } from "../../components/ui/card";
@@ -209,11 +211,13 @@ function CategorySections({
   cardMap,
   onToolClick,
   categoryNames,
+  localePrefix,
 }: {
   categories: typeof TOOL_CATEGORIES;
   cardMap: Map<string, ReturnType<typeof getToolCards>[0]>;
   onToolClick: (path: string, key: string) => void;
   categoryNames: Record<string, string>;
+  localePrefix: string;
 }) {
   return (
     <div className="space-y-8">
@@ -223,9 +227,12 @@ function CategorySections({
         return (
           <section key={cat.key}>
             <div className="flex items-center gap-3 mb-3">
-              <span className="text-sm font-medium text-fg-muted uppercase tracking-wider">
+              <Link
+                href={`${localePrefix}/${CATEGORY_SLUGS[cat.key]}`}
+                className="text-sm font-medium text-fg-muted uppercase tracking-wider hover:text-accent-cyan transition-colors"
+              >
                 {categoryNames[cat.key] ?? cat.key}
-              </span>
+              </Link>
               <div className="flex-1 h-px bg-border-default" />
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -316,6 +323,8 @@ export default function HomeClient() {
   const router = useRouter();
   const t = useTranslations("tools");
   const tHome = useTranslations("home");
+  const locale = useLocale();
+  const prefix = locale === "en" ? "" : `/${locale}`;
   const { recentTools, trackUsage } = useRecentTools();
 
   const [query, setQuery] = useState("");
@@ -500,6 +509,7 @@ export default function HomeClient() {
                   cardMap={cardMap}
                   onToolClick={handleToolClick}
                   categoryNames={categoryNames}
+                  localePrefix={prefix}
                 />
               ) : (
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">

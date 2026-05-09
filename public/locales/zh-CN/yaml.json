@@ -17,13 +17,13 @@
   "invalidInput": "输入无效",
   "descriptions": {
     "whatIsTitle": "什么是 YAML？",
-    "whatIsP1": "YAML（YAML Ain't Markup Language）是一种人类可读的数据序列化格式，广泛用于配置文件、数据交换和结构化内容。它使用缩进表示层级结构，对于复杂的嵌套数据比 JSON 更易读。",
+    "whatIsP1": "YAML（YAML 不是标记语言）是一种人类可读的数据序列化格式，常用于配置文件、数据交换和结构化内容。它使用缩进表示结构，比 [JSON](/json) 更易读。",
     "yamlVsJsonTitle": "YAML 与 JSON",
     "yamlVsJsonP1": "YAML 是 JSON 的超集——每个合法的 JSON 文档同时也是合法的 YAML。YAML 增加了注释（#）、多文档支持（---）、锚点和别名（&/*）以及更宽松的语法。JSON 更简洁，被更多编程语言原生支持。",
     "yaml12Title": "YAML 1.2 特性",
     "yaml12P1": "YAML 1.2（2009）是当前规范。主要特性包括：锚点（&）和别名（*）实现内容复用、--- 分隔多文档流、显式类型标签（!!str、!!int、!!seq）以及块/流式标量风格。",
     "useCasesTitle": "使用场景",
-    "useCasesP1": "配置文件（Docker Compose、Kubernetes、CI/CD 流水线）、API 定义（OpenAPI/Swagger）、数据序列化、日志文件格式和跨语言数据交换。",
+    "useCasesP1": "配置文件（Docker Compose、Kubernetes、CI/CD 流水线）、API 定义（OpenAPI/Swagger）、数据序列化、日志文件格式和跨语言数据交换。转换为 [CSV](/csv) 用于电子表格导入，或使用 [文本对比](/diff) 比较版本差异。",
     "limitationsTitle": "局限性",
     "limitationsP1": "多文档 YAML 会转换为 JSON 数组，无法无损地转回多文档 YAML。YAML 的灵活性可能导致歧义——相同的数据可以有多种表示方式。不支持 Tab 缩进（YAML 规范推荐使用空格）。",
     "faqTitle": "常见问题",
@@ -32,6 +32,7 @@
     "faq2Q": "可以将 YAML 转换为 JSON 吗？",
     "faq2A": "可以。此工具支持 YAML 转 JSON 和 JSON 转 YAML，支持多文档 YAML 流（--- 分隔符）。",
     "faq3Q": "支持 YAML 锚点和别名吗？",
-    "faq3A": "解析器支持标准 YAML，包括锚点（&）和别名（*）。合并键（<<:）等复杂特性在适用情况下也受支持。"
+    "faq3A": "解析器支持标准 YAML，包括锚点（&）和别名（*）。合并键（<<:）等复杂特性在适用情况下也受支持。",
+    "aeoDefinition": "YAML 转换器是一个免费的在线 JSON 与 YAML 格式互转工具。支持 YAML 1.2、多文档、锚点和别名。所有处理均在浏览器中完成。"
   }
 }

@@ -92,7 +92,8 @@
   },
   "descriptions": {
     "whatIsTitle": "What is the SQLite Viewer?",
-    "whatIsP1": "The SQLite Viewer lets you open and explore SQLite database files directly in your browser — no server upload required. Run SQL queries, browse tables, and export data as CSV or JSON.",
+    "aeoDefinition": "SQLite Viewer is a free online tool for opening and exploring SQLite database files in your browser. Run SQL queries with autocomplete, browse tables, and export to CSV or JSON. No data leaves your device.",
+    "whatIsP1": "The SQLite Viewer lets you open and explore SQLite database files directly in your browser — no server upload required. Run SQL queries, browse tables, and export data to [CSV](/csv) or [JSON](/json). Powered by sql.js (WebAssembly).",
     "whatIsP2": "Powered by sql.js (SQLite compiled to WebAssembly), it supports autocomplete, query history, pagination, and handles databases up to browser memory limits.",
     "faqTitle": "Frequently Asked Questions",
     "faq1Q": "What databases can I view?",

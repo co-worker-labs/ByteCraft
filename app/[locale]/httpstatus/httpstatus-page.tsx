@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Search, ChevronDown, ChevronUp } from "lucide-react";
 import Layout from "../../../components/layout";
 import { Badge } from "../../../components/ui/badge";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { StyledInput } from "../../../components/ui/input";
 import { useIsMobile } from "../../../hooks/use-is-mobile";
 import { HttpStatusCode, getCategory, getStatusCodes } from "../../../libs/httpstatus";
@@ -236,6 +237,7 @@ function StatusCodeTable() {
 
 function Description() {
   const t = useTranslations("httpstatus");
+  const locale = useLocale();
   const tc = useTranslations("common");
   const [expanded, setExpanded] = useState(false);
 
@@ -245,13 +247,18 @@ function Description() {
   }));
   return (
     <section id="description" className="py-3">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("description.aeoDefinition")}
+      </p>
       <div className="relative">
         <div
           className={`overflow-hidden transition-all duration-300 ${
             expanded ? "max-h-[500px]" : "max-h-20"
           }`}
         >
-          <p className="text-fg-secondary text-sm leading-8 indent-12">{t("description.text")}</p>
+          <p className="text-fg-secondary text-sm leading-8 indent-12">
+            {renderLinkedText(t("description.text"), locale)}
+          </p>
         </div>
         {!expanded && (
           <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-bg-base to-transparent pointer-events-none" />
@@ -290,9 +297,10 @@ function Description() {
 export default function HttpStatusPage() {
   const t = useTranslations("tools");
   const th = useTranslations("httpstatus");
+  const title = t("httpstatus.shortTitle");
 
   return (
-    <Layout title={t("httpstatus.shortTitle")}>
+    <Layout title={title} categoryLabel={t("categories.reference")} categorySlug="reference-lookup">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <Description />
         <RelatedTools currentTool="httpstatus" />

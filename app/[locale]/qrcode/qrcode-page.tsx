@@ -14,7 +14,8 @@ import {
   ChevronDown,
   RotateCcw,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import "rc-slider/assets/index.css";
 
 const Slider = dynamic(() => import("rc-slider"), {
@@ -719,6 +720,7 @@ function StyleConfig({
 
 function Description() {
   const t = useTranslations("qrcode");
+  const locale = useLocale();
 
   const faqItems = [1, 2, 3].map((i) => ({
     title: t(`descriptions.faq${i}Q`),
@@ -726,6 +728,9 @@ function Description() {
   }));
   return (
     <div className="mt-8 space-y-6">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("descriptions.aeoDefinition")}
+      </p>
       <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-4">
         <Info size={18} className="text-accent-purple mt-0.5 shrink-0" />
         <div className="space-y-2">
@@ -911,7 +916,7 @@ export default function QrCodePage() {
   };
 
   return (
-    <Layout title={title}>
+    <Layout title={title} categoryLabel={tTools("categories.generators")} categorySlug="generators">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <PrivacyBanner />
 

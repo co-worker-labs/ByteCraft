@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Search, ChevronDown, ChevronUp } from "lucide-react";
 import Layout from "../../../components/layout";
 import { ControlCode, getControlCodes, getPrintableCharacters } from "../../../libs/ascii";
 import { NeonTabs } from "../../../components/ui/tabs";
 import { Badge } from "../../../components/ui/badge";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { StyledInput } from "../../../components/ui/input";
 import RelatedTools from "../../../components/related-tools";
 import { Accordion } from "../../../components/ui/accordion";
@@ -272,6 +273,7 @@ function PrintableCharacters({ list }: { list: number[] }) {
 
 function Description() {
   const t = useTranslations("ascii");
+  const locale = useLocale();
 
   const faqItems = [1, 2, 3].map((i) => ({
     title: t(`descriptions.faq${i}Q`),
@@ -279,10 +281,13 @@ function Description() {
   }));
   return (
     <section id="description" className="mt-8">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("descriptions.aeoDefinition")}
+      </p>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
           <p>{t("descriptions.whatIsP2")}</p>
         </div>
       </div>
@@ -303,10 +308,15 @@ export default function AsciiPage() {
   const t = useTranslations("tools");
   const ta = useTranslations("ascii");
   const tc = useTranslations("common");
+  const title = t("ascii.shortTitle");
   const [expanded, setExpanded] = useState(false);
   return (
     <>
-      <Layout title={t("ascii.shortTitle")}>
+      <Layout
+        title={title}
+        categoryLabel={t("categories.reference")}
+        categorySlug="reference-lookup"
+      >
         <div className="container mx-auto px-4 pt-3 pb-6">
           <section id="description" className="py-3">
             <div className="relative">

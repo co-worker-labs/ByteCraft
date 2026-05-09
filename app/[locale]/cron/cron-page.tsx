@@ -8,6 +8,7 @@ import { CopyButton } from "../../../components/ui/copy-btn";
 import { StyledSelect } from "../../../components/ui/input";
 import { StyledTextarea } from "../../../components/ui/input";
 import { Badge } from "../../../components/ui/badge";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { showToast } from "../../../libs/toast";
 import { STORAGE_KEYS } from "../../../libs/storage-keys";
 import {
@@ -362,6 +363,7 @@ function FieldCard({
 
 function Description() {
   const t = useTranslations("cron");
+  const locale = useLocale();
 
   const faqItems = [1, 2, 3].map((i) => ({
     title: t(`descriptions.faq${i}Q`),
@@ -369,9 +371,14 @@ function Description() {
   }));
   return (
     <section className="mt-8 space-y-4">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("descriptions.aeoDefinition")}
+      </p>
       <div>
         <h4 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h4>
-        <p className="mt-1 text-fg-secondary text-sm leading-relaxed">{t("descriptions.whatIs")}</p>
+        <p className="mt-1 text-fg-secondary text-sm leading-relaxed">
+          {renderLinkedText(t("descriptions.whatIs"), locale)}
+        </p>
       </div>
       <div>
         <h4 className="font-semibold text-fg-primary text-base">{t("descriptions.dstTitle")}</h4>
@@ -484,7 +491,11 @@ export default function CronPage() {
   }
 
   return (
-    <Layout title={ts("cron.shortTitle")}>
+    <Layout
+      title={ts("cron.shortTitle")}
+      categoryLabel={ts("categories.generators")}
+      categorySlug="generators"
+    >
       <div className="container mx-auto px-4 pt-3 pb-6">
         <ModeSelector mode={mode} onChange={handleModeChange} />
 

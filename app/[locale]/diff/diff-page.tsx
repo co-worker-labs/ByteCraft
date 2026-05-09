@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import Layout from "../../../components/layout";
 import { useIsMobile } from "../../../hooks/use-is-mobile";
 import { showToast } from "../../../libs/toast";
@@ -250,6 +251,7 @@ function DiffPageBody() {
 
 function Description() {
   const t = useTranslations("diff");
+  const locale = useLocale();
 
   const faqItems = [1, 2, 3].map((i) => ({
     title: t(`descriptions.faq${i}Q`),
@@ -257,10 +259,13 @@ function Description() {
   }));
   return (
     <section id="description" className="mt-8">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("descriptions.aeoDefinition")}
+      </p>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
           <p>{t("descriptions.whatIsP2")}</p>
         </div>
       </div>
@@ -284,7 +289,7 @@ function Description() {
           {t("descriptions.useCasesTitle")}
         </h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.useCasesP1")}</p>
+          <p>{renderLinkedText(t("descriptions.useCasesP1"), locale)}</p>
           <p>{t("descriptions.useCasesP2")}</p>
           <p>{t("descriptions.useCasesP3")}</p>
         </div>
@@ -317,7 +322,7 @@ export default function DiffPage() {
   const title = tTools("diff.shortTitle");
 
   return (
-    <Layout title={title}>
+    <Layout title={title} categoryLabel={tTools("categories.text")} categorySlug="text-processing">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <PrivacyBanner />
 

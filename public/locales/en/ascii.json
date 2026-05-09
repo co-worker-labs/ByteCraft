@@ -18,7 +18,8 @@
   "searchPlaceholder": "Search by decimal, hex, or character...",
   "descriptions": {
     "whatIsTitle": "What is the ASCII Table?",
-    "whatIsP1": "ASCII (American Standard Code for Information Interchange) is a character encoding standard that assigns numeric values to letters, digits, punctuation, and control codes. It covers 128 characters from 0 to 127.",
+    "aeoDefinition": "ASCII Table is a free online reference for ASCII characters with hex, octal, decimal, and HTML codes. Includes search, filtering, and conversion tools. Runs entirely in your browser.",
+    "whatIsP1": "ASCII (American Standard Code for Information Interchange) is a character encoding standard that assigns numeric values to letters, digits, punctuation, and control codes. It covers 128 characters from 0 to 127. See [HTML entities](/htmlcode) for web-safe characters, or [Number Base converter](/numbase) for hex/binary conversions.",
     "whatIsP2": "This tool provides a complete interactive ASCII reference table with search, character-to-code conversion, and categorized sections for printable characters and control codes.",
     "faqTitle": "Frequently Asked Questions",
     "faq1Q": "What is ASCII?",

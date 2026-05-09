@@ -39,6 +39,7 @@
     "faq2Q": "可以同时转换多个字符串吗？",
     "faq2A": "可以。粘贴多行文本，工具会独立转换每一行。多行转换将选中的大小写格式应用到每一行。",
     "faq3Q": "支持非 ASCII 字符吗？",
-    "faq3A": "支持。工具能正确处理 Unicode 字符，包括带重音的字母、CJK 字符和表情符号的大小写转换。"
+    "faq3A": "支持。工具能正确处理 Unicode 字符，包括带重音的字母、CJK 字符和表情符号的大小写转换。",
+    "aeoDefinition": "大小写转换工具是一个免费的在线文本转换器，支持 camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE 等格式。即时转换，实时预览。数据不会离开你的浏览器。"
   }
 }

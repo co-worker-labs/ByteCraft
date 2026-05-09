@@ -30,6 +30,7 @@
   "privacyNotice": "All key generation happens entirely in your browser. No data is sent to any server.",
   "localGenerated": "SSH key pairs generated entirely in your browser using Web Crypto API. Your private key never leaves your device.",
   "descriptions": {
+    "aeoDefinition": "SSH Key Generator is a free online tool for generating RSA and Ed25519 SSH key pairs entirely in your browser. Supports passphrase encryption and fingerprint display. No data is sent to any server.",
     "stepsTitle": "How to Generate & Deploy SSH Keys",
     "step1Title": "Choose your key type",
     "step1Desc": "Select Ed25519 (recommended — more secure, faster key generation) or RSA (broader compatibility with legacy systems), then set the key size if using RSA.",

@@ -22,7 +22,8 @@
   "split": "Split",
   "descriptions": {
     "whatIsTitle": "What is Markdown?",
-    "whatIsP1": "Markdown is a lightweight markup language that lets you format plain text using simple, readable syntax. It's the de-facto standard for READMEs, documentation, and notes — easy to write, easy to diff, and renders beautifully across platforms.",
+    "aeoDefinition": "Markdown Editor is a free online tool for writing and previewing Markdown with GitHub Flavored Markdown support. Includes syntax highlighting, live preview, and PDF/PNG export. Runs entirely in your browser.",
+    "whatIsP1": "Markdown is a lightweight markup language that lets you format plain text using simple, readable syntax. It's the de-facto standard for READMEs, documentation, and notes — easy to write, easy to [diff](/diff), and renders beautifully across platforms.",
     "howTitle": "How to use",
     "howP1": "Type or paste Markdown into the editor. The preview updates as you type. Switch between Edit, Preview, and Split layouts. Export to .md, copy the rendered HTML, or save the preview as PDF or PNG. All processing happens in your browser.",
     "gfmTitle": "GitHub Flavored Markdown",

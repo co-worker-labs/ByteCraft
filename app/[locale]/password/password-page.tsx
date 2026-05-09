@@ -31,6 +31,7 @@ import { showToast } from "../../../libs/toast";
 import { STORAGE_KEYS } from "../../../libs/storage-keys";
 import Layout from "../../../components/layout";
 import { useTranslations } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { CopyButton } from "../../../components/ui/copy-btn";
 import { Button } from "../../../components/ui/button";
 import { StyledCheckbox } from "../../../components/ui/input";
@@ -845,6 +846,9 @@ function Description() {
   }));
   return (
     <section id="description" className="mt-8">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("descriptions.aeoDefinition")}
+      </p>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base text-pretty">
           {t("descriptions.stepsTitle")}
@@ -895,7 +899,11 @@ export default function PasswordPage() {
   };
 
   return (
-    <Layout title={title}>
+    <Layout
+      title={title}
+      categoryLabel={tTools("categories.security")}
+      categorySlug="security-crypto"
+    >
       <div className="container mx-auto px-4 pt-3 pb-6">
         <PrivacyBanner />
         <NeonTabs

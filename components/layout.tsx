@@ -41,6 +41,8 @@ export default function Layout({
   bodyClassName,
   bodyStyle,
   hideToolsButton,
+  categoryLabel,
+  categorySlug,
 }: {
   children: ReactNode;
   title?: string;
@@ -52,6 +54,8 @@ export default function Layout({
   bodyClassName?: string;
   bodyStyle?: CSSProperties;
   hideToolsButton?: boolean;
+  categoryLabel?: string;
+  categorySlug?: string;
 }) {
   const [isHidden, setIsHidden] = useState<boolean>(hidden || false);
   const [showBackTop, setShowBackTop] = useState(false);
@@ -97,7 +101,13 @@ export default function Layout({
         className={`min-h-screen flex flex-col ${footerPos === "fixed" ? "pb-5" : ""} ${bodyClassName || ""}`}
         style={bodyStyle}
       >
-        <Header position={headerPos} title={title} hideToolsButton={hideToolsButton} />
+        <Header
+          position={headerPos}
+          title={title}
+          hideToolsButton={hideToolsButton}
+          categoryLabel={categoryLabel}
+          categorySlug={categorySlug}
+        />
 
         {isInFullscreen && <FloatingToolbar />}
 

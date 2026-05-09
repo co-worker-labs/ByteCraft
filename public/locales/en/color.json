@@ -76,7 +76,7 @@
   "description": {
     "title": "About Color Conversion",
     "introTitle": "What is a Color Converter?",
-    "introP1": "A color converter translates the same color across the formats used in web, print, and design — HEX for CSS, RGB/HSL for live tweaking, CMYK for print, LAB/OKLCH for perceptual uniformity.",
+    "introP1": "This color tool converts between 7 color spaces, generates harmonies, checks contrast ratios (WCAG and APCA), simulates color blindness, and extracts palettes from images. See [Number Base converter](/numbase) for hex calculations, or [Image compressor](/image) for image processing.",
     "spacesTitle": "Color Spaces",
     "spaceHex": "HEX — compact 6/8-digit RGB notation. The default for CSS.",
     "spaceRgb": "RGB — additive primaries 0–255. Maps directly to display pixels.",
@@ -98,6 +98,7 @@
     "tipOklch": "Tailwind v4 emits colors in OKLCH for perceptual smoothness — copy the @theme block to align with that workflow."
   },
   "descriptions": {
+    "aeoDefinition": "Color Converter is a free online tool for converting between HEX, RGB, HSL, OKLCH and other color spaces. Includes a visual picker, image palette extraction, WCAG contrast checker, and color-blindness preview. Runs entirely in your browser.",
     "faqTitle": "Frequently Asked Questions",
     "faq1Q": "What is the Color Tool?",
     "faq1A": "The Color Tool is a comprehensive color utility that supports HEX, RGB, HSL, and OKLCH color models with a visual picker, conversions, and contrast checking.",

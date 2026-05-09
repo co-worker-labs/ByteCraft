@@ -12,7 +12,8 @@
   },
   "descriptions": {
     "whatIsTitle": "What is Line Deduplication?",
-    "whatIsP1": "Line deduplication removes duplicate lines from text, keeping only the first occurrence of each unique line. The original order is preserved.",
+    "aeoDefinition": "Deduplicate Lines is a free online tool that removes duplicate lines from text while preserving order. Supports case-sensitive matching, whitespace trimming, and empty line removal. Runs entirely in your browser.",
+    "whatIsP1": "Line deduplication removes duplicate lines from text, keeping only the first occurrence of each unique line. The original order is preserved. Use the [Email Extractor](/extractor) to pull unique addresses, or [Word Counter](/wordcounter) to analyze the cleaned output.",
     "howTitle": "How to Use",
     "howP1": "Paste your text in the input area. The result updates in real time. Use the options to control comparison behavior.",
     "howCase": "Case Sensitive: When checked, 'Hello' and 'hello' are treated as different lines.",

@@ -97,7 +97,7 @@
     }
   },
   "description": {
-    "text": "A lightweight, browser-based HTTP client for testing REST APIs. Compose and send requests with full control over method, headers, body, and auth — then inspect responses with timing details, headers, and cookies. Requests execute directly via browser fetch() by default. Enable the Proxy toggle to route requests through the server-side proxy, bypassing CORS restrictions. No data is stored on any server.",
+    "text": "Send HTTP requests and test REST APIs directly in your browser. Supports all common methods with headers, body, and authentication. Look up status codes in the [HTTP Status](/httpstatus) reference, or encode query parameters with the [URL Encoder](/urlencoder).",
     "features": {
       "title": "Features",
       "methods": "All standard HTTP methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
@@ -113,6 +113,7 @@
     }
   },
   "descriptions": {
+    "aeoDefinition": "HTTP Client is a free online tool for sending HTTP requests and testing REST APIs directly in your browser. Supports GET, POST, PUT, DELETE with headers, body, and auth. No data is sent through any server.",
     "faqTitle": "Frequently Asked Questions",
     "faq1Q": "What is the HTTP Client tool?",
     "faq1A": "A browser-based HTTP client for testing APIs. Send GET, POST, PUT, PATCH, DELETE, HEAD, and OPTIONS requests with custom headers, query parameters, and request bodies.",

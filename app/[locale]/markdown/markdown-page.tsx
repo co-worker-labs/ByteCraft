@@ -3,7 +3,8 @@
 import "../../../styles/prism-theme.css";
 
 import { useEffect, useRef, useState, type ChangeEvent, type DragEvent, type UIEvent } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { Upload, Download, FileDown, FileImage, Printer, Trash2, Columns2 } from "lucide-react";
 import Layout from "../../../components/layout";
 import { Button } from "../../../components/ui/button";
@@ -425,6 +426,7 @@ function MarkdownPageBody() {
 
 function Description() {
   const t = useTranslations("markdown");
+  const locale = useLocale();
 
   const faqItems = [1, 2, 3].map((i) => ({
     title: t(`descriptions.faq${i}Q`),
@@ -432,10 +434,13 @@ function Description() {
   }));
   return (
     <section id="description" className="mt-8">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("descriptions.aeoDefinition")}
+      </p>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
         </div>
       </div>
       <div className="mb-4">
@@ -467,7 +472,7 @@ export default function MarkdownPage() {
   const tTools = useTranslations("tools");
   const title = tTools("markdown.shortTitle");
   return (
-    <Layout title={title}>
+    <Layout title={title} categoryLabel={tTools("categories.text")} categorySlug="text-processing">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <MarkdownPageBody />
         <Description />

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, Fragment } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import {
   Send,
   Clock,
@@ -46,6 +46,7 @@ import { formatBytes } from "../../../utils/storage";
 import RelatedTools from "../../../components/related-tools";
 import { Accordion } from "../../../components/ui/accordion";
 import { CircleHelp } from "lucide-react";
+import { renderLinkedText } from "../../../utils/linked-text";
 
 const METHOD_COLORS: Record<string, string> = {
   GET: "text-green-500",
@@ -814,15 +815,21 @@ function ResponseBodyTab({
 function DescriptionIntro() {
   const t = useTranslations("httpclient");
   const tc = useTranslations("common");
+  const locale = useLocale();
   const [expanded, setExpanded] = useState(false);
 
   return (
     <section className="py-3">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("description.aeoDefinition")}
+      </p>
       <div className="relative">
         <div
           className={`overflow-hidden transition-all duration-300 ${expanded ? "max-h-[300px]" : "max-h-20"}`}
         >
-          <p className="text-fg-secondary text-sm leading-8 indent-12">{t("description.text")}</p>
+          <p className="text-fg-secondary text-sm leading-8 indent-12">
+            {renderLinkedText(t("description.text"), locale)}
+          </p>
         </div>
         {!expanded && (
           <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-bg-base to-transparent pointer-events-none" />
@@ -851,6 +858,7 @@ function DescriptionIntro() {
 
 function DescriptionDetails() {
   const t = useTranslations("httpclient");
+  const locale = useLocale();
 
   const faqItems = [1, 2, 3].map((i) => ({
     title: t(`descriptions.faq${i}Q`),
@@ -876,7 +884,9 @@ function DescriptionDetails() {
         <h3 className="text-sm font-semibold text-fg-primary mb-2">
           {t("description.cors.title")}
         </h3>
-        <p className="text-sm text-fg-secondary leading-7">{t("description.cors.text")}</p>
+        <p className="text-sm text-fg-secondary leading-7">
+          {renderLinkedText(t("description.cors.text"), locale)}
+        </p>
       </div>
       <div className="mt-8">
         <div className="flex items-center gap-2 mb-4">
@@ -893,10 +903,11 @@ function DescriptionDetails() {
 
 export default function HttpClientPage() {
   const t = useTranslations("tools");
+  const title = t("httpclient.shortTitle");
   const store = useHttpClient();
 
   return (
-    <Layout title={t("httpclient.shortTitle")}>
+    <Layout title={title} categoryLabel={t("categories.reference")} categorySlug="reference-lookup">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <DescriptionIntro />
         <RequestPanel store={store} />

@@ -73,6 +73,7 @@
     "tz": "A timestamp itself has no timezone. The human-readable form (e.g. 2024-05-01 00:00:00) depends on which timezone you display it in. This tool always shows both Local and UTC."
   },
   "descriptions": {
+    "aeoDefinition": "Unix Timestamp Converter is a free online tool for converting between Unix timestamps and human-readable dates. Supports seconds and milliseconds with live clock. Runs entirely in your browser.",
     "faqTitle": "Frequently Asked Questions",
     "faq1Q": "What is a Unix timestamp?",
     "faq1A": "A Unix timestamp is the number of seconds (or milliseconds) elapsed since January 1, 1970 UTC (the Unix epoch). It's a universal, timezone-independent way to represent time.",

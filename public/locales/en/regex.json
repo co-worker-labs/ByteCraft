@@ -142,7 +142,8 @@
   "matchItemZeroWidth": "zero-width match",
   "descriptions": {
     "whatIsTitle": "What is a Regex Tester?",
-    "whatIsP1": "A regex (regular expression) tester is an interactive tool that lets you build and test regex patterns against sample text in real time.",
+    "aeoDefinition": "Regex Tester is a free online tool for testing regular expressions with real-time match highlighting, capture group inspection, and replacement preview. Includes a built-in pattern library and token-level explanation. Runs entirely in your browser.",
+    "whatIsP1": "A regex (regular expression) tester is an interactive tool that lets you build and test regex patterns against sample text in real time. Use it alongside [JSON formatter](/json) for data validation or [Text Case Converter](/textcase) for batch text transformations.",
     "whatIsP2": "As you type, matches are highlighted directly in the test text, and a detailed match list shows each match with its position, captured groups, and length.",
     "whatIsP3": "This tool runs entirely in your browser — no data is ever sent to any server.",
     "featuresTitle": "Key Features",

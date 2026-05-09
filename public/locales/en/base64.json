@@ -6,7 +6,8 @@
   "password": "Password",
   "descriptions": {
     "whatIsTitle": "What is Base64 Encoding?",
-    "whatIsP1": "Base64 encoding is a way to convert data (typically binary) into the ASCII character set. It is important to mention here that Base64 is not an encryption or compression technique, although it can sometimes be confused as encryption due to the way it seems to obscure data. In fact, size of a Base64 encoded piece of information is 1.3333 times the actual size of your original data.",
+    "aeoDefinition": "Base64 Encoder/Decoder is a free online tool for encoding and decoding Base64 strings. Supports Basic Authentication headers, multiple charsets, and real-time conversion. All processing runs in your browser.",
+    "whatIsP1": "Base64 encoding is a way to convert data (typically binary) into the ASCII character set. It is important to mention here that Base64 is not an encryption or compression technique, although it can sometimes be confused as encryption due to the way it seems to obscure data. Use [Hashing](/hashing) for cryptographic purposes or [URL Encoder](/urlencoder) for URL-safe strings.",
     "whatIsP2": "Base64 is the most widely used base encoding technique with Base16 and Base32 being the other two commonly used encoding schemes.",
     "whatIsP3": "Base64 encoding is one of the most common ways of converting binary data into plain ASCII text. It is a very useful format for communicating between one or more systems that cannot easily handle binary data, like images in HTML markup or web requests",
     "howTitle": "How Does Base64 Work?",
@@ -22,7 +23,7 @@
     "whyP1": "Sending information in binary format can sometimes be risky since not all applications or network systems can handle raw binary. On the other hand, the ASCII character set is widely known and very simple to handle for most systems.",
     "whyP2": "For instance email servers expect textual data, so ASCII is typically used. Therefore, if you want to send images or any other binary file to an email server you first need to encode it in text-based format, preferably ASCII. This is where Base64 encoding comes extremely handy in converting binary data to the correct formats.",
     "useCasesTitle": "Exploring Common Use Cases for Base64",
-    "useCasesP1": "You can also use Base64 to represent binary data in a way that is compatible with HTML, JavaScript, and CSS. For example, you can embed an image inline in a CSS or JavaScript file using Base64.",
+    "useCasesP1": "You can also use Base64 to represent binary data in a way that is compatible with HTML, JavaScript, and CSS. For example, you can embed an image inline in a CSS or JavaScript file using Base64. The [Cipher](/cipher) tool uses Base64 as the default output format for encrypted text.",
     "useCasesP2": "It is possible to use Base64 to convert input, like form data or JSON, to a string with a reduced character set that is URL-safe. However, due to how certain servers may interpret plus (+) and forward-slash (/) characters, it is recommended to use encodeURIComponent instead.",
     "limitationsTitle": "Understanding the Limitations of Base64",
     "limitationsP1": "Base64 is in no way meant to be a secure encryption method.",

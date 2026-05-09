@@ -399,6 +399,9 @@ function Description() {
   }));
   return (
     <section id="description" className="mt-8">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("descriptions.aeoDefinition")}
+      </p>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base text-pretty">
           {t("descriptions.stepsTitle")}
@@ -433,9 +436,10 @@ function Description() {
 export default function SshKeyPage() {
   const t = useTranslations("sshkey");
   const ts = useTranslations("tools");
+  const title = ts("sshkey.shortTitle");
 
   return (
-    <Layout title={ts("sshkey.shortTitle")}>
+    <Layout title={title} categoryLabel={ts("categories.security")} categorySlug="security-crypto">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <div className="space-y-4">
           <PrivacyBanner />

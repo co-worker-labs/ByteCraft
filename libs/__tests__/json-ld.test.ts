@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { buildToolSchemas } from "../../components/json-ld";
+import { buildToolSchemas, buildCategorySchema } from "../../components/json-ld";
 
 describe("buildToolSchemas", () => {
   const base = {
@@ -91,5 +91,100 @@ describe("buildToolSchemas", () => {
     const schemas = buildToolSchemas(base);
     const webApp = schemas[0] as Record<string, unknown>;
     expect(webApp.url as string).toContain("omnikit.run/json");
+  });
+});
+
+describe("buildToolSchemas — 3-level breadcrumb", () => {
+  const base = {
+    name: "JSON Formatter",
+    description: "Format and validate JSON online",
+    path: "/json",
+    categoryName: "Text Processing",
+    categoryPath: "/text-processing",
+  };
+
+  it("renders 3-level breadcrumb when categoryName + categoryPath provided", () => {
+    const schemas = buildToolSchemas(base);
+    const breadcrumb = schemas[1] as Record<string, unknown>;
+    expect(breadcrumb["@type"]).toBe("BreadcrumbList");
+    const items = breadcrumb.itemListElement as Record<string, unknown>[];
+    expect(items).toHaveLength(3);
+    expect(items[0]).toEqual({
+      "@type": "ListItem",
+      position: 1,
+      name: "OmniKit",
+      item: "https://omnikit.run",
+    });
+    expect(items[1]).toEqual({
+      "@type": "ListItem",
+      position: 2,
+      name: "Text Processing",
+      item: "https://omnikit.run/text-processing",
+    });
+    expect(items[2]).toEqual({
+      "@type": "ListItem",
+      position: 3,
+      name: "JSON Formatter",
+      item: "https://omnikit.run/json",
+    });
+  });
+
+  it("falls back to 2-level when no category info", () => {
+    const schemas = buildToolSchemas({
+      name: "JSON Formatter",
+      description: "Format and validate JSON online",
+      path: "/json",
+    });
+    const breadcrumb = schemas[1] as Record<string, unknown>;
+    const items = breadcrumb.itemListElement as Record<string, unknown>[];
+    expect(items).toHaveLength(2);
+  });
+});
+
+describe("buildCategorySchema", () => {
+  const base = {
+    name: "Text Processing",
+    description: "Free online text processing tools.",
+    path: "/text-processing",
+    tools: [
+      { name: "JSON Formatter", url: "https://omnikit.run/json" },
+      { name: "Regex Tester", url: "https://omnikit.run/regex" },
+    ],
+  };
+
+  it("returns CollectionPage + ItemList + BreadcrumbList schemas", () => {
+    const schemas = buildCategorySchema(base);
+    expect(schemas).toHaveLength(3);
+    expect((schemas[0] as Record<string, unknown>)["@type"]).toBe("CollectionPage");
+    expect((schemas[1] as Record<string, unknown>)["@type"]).toBe("ItemList");
+    expect((schemas[2] as Record<string, unknown>)["@type"]).toBe("BreadcrumbList");
+  });
+
+  it("returns FAQPage when faqItems provided", () => {
+    const schemas = buildCategorySchema({
+      ...base,
+      faqItems: [{ q: "What is this?", a: "A collection" }],
+    });
+    expect(schemas).toHaveLength(4);
+    const faq = schemas[3] as Record<string, unknown>;
+    expect(faq["@type"]).toBe("FAQPage");
+  });
+
+  it("BreadcrumbList is 2-level (OmniKit > Category)", () => {
+    const schemas = buildCategorySchema(base);
+    const breadcrumb = schemas[2] as Record<string, unknown>;
+    const items = breadcrumb.itemListElement as Record<string, unknown>[];
+    expect(items).toHaveLength(2);
+    expect(items[0].name).toBe("OmniKit");
+    expect(items[1].name).toBe("Text Processing");
+  });
+
+  it("ItemList has ordered tools", () => {
+    const schemas = buildCategorySchema(base);
+    const itemList = schemas[1] as Record<string, unknown>;
+    const elements = itemList.itemListElement as Record<string, unknown>[];
+    expect(elements).toHaveLength(2);
+    expect(elements[0].position).toBe(1);
+    expect(elements[1].position).toBe(2);
   });
 });

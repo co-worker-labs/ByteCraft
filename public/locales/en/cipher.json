@@ -9,6 +9,7 @@
   "paddingScheme": "Padding Scheme:",
   "droppedWords": "Dropped words:",
   "descriptions": {
+    "aeoDefinition": "Encrypt/Decrypt is a free online tool for encrypting and decrypting text using AES, DES, Triple DES, Rabbit, RC4, and RC4Drop. All processing runs in your browser — no data is sent to any server.",
     "aesTitle": "AES",
     "aes": "The Advanced Encryption Standard (AES) is a U.S. Federal Information Processing Standard (FIPS). It was selected after a 5-year process where 15 competing designs were evaluated.",
     "desTitle": "DES, Triple DES",

@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState, Fragment } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import Layout from "../../../components/layout";
 import { StyledInput, StyledTextarea } from "../../../components/ui/input";
 import { NeonTabs } from "../../../components/ui/tabs";
@@ -583,6 +584,7 @@ function Conversion() {
 
 function Description() {
   const t = useTranslations("regex");
+  const locale = useLocale();
 
   const CHEATSHEET_SECTIONS = [
     {
@@ -758,12 +760,15 @@ function Description() {
   }));
   return (
     <div className="mt-12 space-y-8 text-fg-secondary text-sm leading-relaxed">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("descriptions.aeoDefinition")}
+      </p>
       {/* What is Regex Tester */}
       <section>
         <h2 className="text-xl font-semibold text-fg-primary mb-3">
           {t("descriptions.whatIsTitle")}
         </h2>
-        <p className="mb-2">{t("descriptions.whatIsP1")}</p>
+        <p className="mb-2">{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
         <p className="mb-2">{t("descriptions.whatIsP2")}</p>
         <p>{t("descriptions.whatIsP3")}</p>
       </section>
@@ -870,7 +875,7 @@ export default function RegexPage() {
   const title = t("regex.shortTitle");
 
   return (
-    <Layout title={title}>
+    <Layout title={title} categoryLabel={t("categories.text")} categorySlug="text-processing">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <PrivacyBanner />
         <Conversion />

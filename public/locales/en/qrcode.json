@@ -93,6 +93,7 @@
   },
   "localGenerated": "Generated entirely in your browser. Your data never leaves your device.",
   "descriptions": {
+    "aeoDefinition": "QR Code Generator is a free online tool for creating QR codes for text, URLs, WiFi, vCard, and more. Supports custom colors, logos, and dot styles with SVG/PNG export. No data is sent to any server.",
     "faqTitle": "Frequently Asked Questions",
     "faq1Q": "What is the QR Code Generator?",
     "faq1A": "A customizable QR code generator that supports text, URLs, WiFi credentials, and vCards. Add logos, change colors, and export as SVG or PNG.",

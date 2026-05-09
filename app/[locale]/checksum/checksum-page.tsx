@@ -527,6 +527,9 @@ function Description() {
   }));
   return (
     <section id="description" className="mt-8">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {tc("descriptions.aeoDefinition")}
+      </p>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{tc("algorithms.md5Title")}</h2>
         <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{tc("algorithms.md5")}</p>
@@ -563,7 +566,11 @@ export default function ChecksumPage() {
   const tc = useTranslations("common");
   const t = useTranslations("tools");
   return (
-    <Layout title={t("checksum.shortTitle")}>
+    <Layout
+      title={t("checksum.shortTitle")}
+      categoryLabel={t("categories.security")}
+      categorySlug="security-crypto"
+    >
       <div className="container mx-auto px-4 pt-3 pb-6">
         <PrivacyBanner variant="files" />
         <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-3 my-4">

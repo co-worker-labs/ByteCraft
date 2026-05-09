@@ -427,6 +427,9 @@ function Description() {
   }));
   return (
     <div className="mt-8 space-y-6">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("description.aeoDefinition")}
+      </p>
       <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-4">
         <Info size={18} className="text-accent-purple mt-0.5 shrink-0" />
         <div className="space-y-2">
@@ -584,7 +587,11 @@ export default function ColorPage() {
   }
 
   return (
-    <Layout title={ts("color.shortTitle")}>
+    <Layout
+      title={ts("color.shortTitle")}
+      categoryLabel={ts("categories.visual")}
+      categorySlug="visual-media"
+    >
       <VisionFilterDefs />
       <div className="container mx-auto px-4 pt-3 pb-6" style={visionFilterStyle(vision)}>
         <PrivacyBanner />

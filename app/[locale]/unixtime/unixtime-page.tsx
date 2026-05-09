@@ -657,6 +657,9 @@ function Description() {
   }));
   return (
     <section className="rounded-lg border border-border-default bg-bg-surface p-5 space-y-3">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("descriptions.aeoDefinition")}
+      </p>
       {items.map(({ titleKey, bodyKey }) => (
         <div key={titleKey}>
           <h3 className="font-mono text-sm font-semibold text-accent-cyan mb-1">{t(titleKey)}</h3>
@@ -679,7 +682,11 @@ function Description() {
 export default function UnixtimePage() {
   const tt = useTranslations("tools");
   return (
-    <Layout title={tt("unixtime.shortTitle")}>
+    <Layout
+      title={tt("unixtime.shortTitle")}
+      categoryLabel={tt("categories.generators")}
+      categorySlug="generators"
+    >
       <div className="container mx-auto px-4 pt-3 pb-6 space-y-4">
         <LiveClock />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

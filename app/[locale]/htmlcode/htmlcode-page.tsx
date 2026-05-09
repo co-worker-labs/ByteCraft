@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { Search, ChevronDown, ChevronUp } from "lucide-react";
 import Layout from "../../../components/layout";
 import {
@@ -367,6 +368,7 @@ function PrintLetters({ list }: { list: CharacterData[] }) {
 
 function Description() {
   const t = useTranslations("htmlcode");
+  const locale = useLocale();
   const tc = useTranslations("common");
   const [expanded, setExpanded] = useState(false);
 
@@ -376,13 +378,18 @@ function Description() {
   }));
   return (
     <section id="description" className="py-3">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("description.aeoDefinition")}
+      </p>
       <div className="relative">
         <div
           className={`overflow-hidden transition-all duration-300 ${
             expanded ? "max-h-[500px]" : "max-h-20"
           }`}
         >
-          <p className="text-fg-secondary text-sm leading-8 indent-12">{t("description.p1")}</p>
+          <p className="text-fg-secondary text-sm leading-8 indent-12">
+            {renderLinkedText(t("description.p1"), locale)}
+          </p>
           <p className="text-fg-secondary text-sm leading-8 indent-12">{t("description.p2")}</p>
           <div className="mt-3">
             <pre className="inline-block border border-border-default rounded-lg py-2 px-5 bg-bg-elevated text-fg-secondary font-mono text-sm">
@@ -427,6 +434,7 @@ function Description() {
 export default function HtmlCodePage() {
   const t = useTranslations("tools");
   const th = useTranslations("htmlcode");
+  const title = t("htmlcode.shortTitle");
 
   const letters = getLetters();
   const punctuations = getPunctuations();
@@ -438,7 +446,7 @@ export default function HtmlCodePage() {
   const pronunciations = getPronunciations();
 
   return (
-    <Layout title={t("htmlcode.shortTitle")}>
+    <Layout title={title} categoryLabel={t("categories.reference")} categorySlug="reference-lookup">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <Description />
         <RelatedTools currentTool="htmlcode" />

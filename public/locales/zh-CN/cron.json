@@ -155,7 +155,7 @@
   },
   "descriptions": {
     "whatIsTitle": "什么是 Cron 表达式？",
-    "whatIs": "Cron 表达式是一串描述计划调度时间的字段。每个字段控制一个时间单位（分、时、日、月、周）。最初来自 Unix cron，语法已由 Spring（增加秒）和 Quartz（增加秒和年，以及特殊字符 L、W、#）扩展。",
+    "whatIs": "Cron 是类 Unix 操作系统中基于时间的作业调度器。Cron 表达式是由五个或六个字段组成的字符串，定义了作业应何时运行。此工具支持 Standard、Spring 和 Quartz 方言。配合 [Unix 时间戳](/unixtime) 转换器进行时间计算。",
     "fieldRefTitle": "字段参考",
     "specialCharsTitle": "特殊字符",
     "modesTitle": "模式",
@@ -167,7 +167,8 @@
     "faq2Q": "支持哪些 Cron 方言？",
     "faq2A": "三种：标准（5 字段）、Spring（6 字段，含秒）和 Quartz（7 字段，含秒和年）。工具会自动检测方言并显示下次运行时间。",
     "faq3Q": "下次运行预测有多准确？",
-    "faq3A": "预测在客户端计算，符合标准 cron 行为。工具显示表达式的接下来 5 次计划执行时间。"
+    "faq3A": "预测在客户端计算，符合标准 cron 行为。工具显示表达式的接下来 5 次计划执行时间。",
+    "aeoDefinition": "Cron 表达式生成器是一个免费的在线 Cron 表达式构建和解析工具。支持 Standard、Spring 和 Quartz 模式，提供人类可读的解释和下次执行时间预览。数据不会离开你的浏览器。"
   },
   "editor": {
     "title": "编辑字段",

@@ -155,7 +155,8 @@
   },
   "descriptions": {
     "whatIsTitle": "What is a Cron Expression?",
-    "whatIs": "A Cron expression is a string of fields that describes a schedule. Each field controls a unit of time (minute, hour, day, month, weekday). Originally from Unix cron, the syntax has been extended by Spring (adds seconds) and Quartz (adds seconds and year, plus special characters L, W, #).",
+    "aeoDefinition": "Cron Expression Generator is a free online tool for building and decoding Cron expressions. Supports Standard, Spring, and Quartz modes with human-readable explanations and next-run preview. No data leaves your browser.",
+    "whatIs": "Cron is a time-based job scheduler in Unix-like operating systems. A Cron expression is a string of five or six fields that defines when a job should run. This tool supports Standard, Spring, and Quartz dialects. Pair it with the [Unix Timestamp](/unixtime) converter for time calculations.",
     "fieldRefTitle": "Field Reference",
     "specialCharsTitle": "Special Characters",
     "modesTitle": "Modes",

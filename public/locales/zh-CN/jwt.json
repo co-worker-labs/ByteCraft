@@ -36,7 +36,7 @@
   },
   "descriptions": {
     "whatIsTitle": "什么是 JWT？",
-    "whatIs": "JWT（JSON Web Token，RFC 7519）是一种开放标准，用于在各方之间以紧凑的 JSON 对象安全地传输信息。它通常用于身份验证和授权。",
+    "whatIs": "JSON Web Token (JWT) 是一种开放标准（RFC 7519），用于在各方之间以 JSON 对象的形式安全传输信息。JWT 常用于 Web 应用程序的身份验证和授权。在此调试令牌，然后使用 [Base64](/base64) 解码验证载荷，或使用 [哈希生成器](/hashing) 检查密钥完整性。",
     "structureTitle": "结构",
     "structure": "JWT 由三部分以点号分隔的 Base64URL 编码组成：头部.载荷.签名。头部指定令牌类型和签名算法。载荷包含声明。签名用于验证完整性。",
     "algorithmsTitle": "支持的算法",
@@ -49,6 +49,7 @@
     "faq2Q": "JWT 适合存储敏感数据吗？",
     "faq2A": "JWT 的负载是 Base64Url 编码的，并非加密——任何人都能读取。永远不要在 JWT 中存储敏感数据，除非使用 JWE（JSON Web Encryption）。此工具完全在浏览器中运行。",
     "faq3Q": "支持哪些 JWT 算法？",
-    "faq3A": "此工具支持 HS256/384/512（HMAC）、RS256/384/512（RSA）、ES256/384/512（ECDSA）和 PS256/384/512（RSA-PSS）用于签名和验证。"
+    "faq3A": "此工具支持 HS256/384/512（HMAC）、RS256/384/512（RSA）、ES256/384/512（ECDSA）和 PS256/384/512（RSA-PSS）用于签名和验证。",
+    "aeoDefinition": "JWT 调试器是一个免费的在线 JSON Web Token 编码、解码和验证工具。支持 HS256、RS256、ES256 等多种算法。所有处理均在浏览器中完成，不会将令牌发送到任何服务器。"
   }
 }

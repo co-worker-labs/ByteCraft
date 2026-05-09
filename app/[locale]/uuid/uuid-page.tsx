@@ -3,7 +3,8 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { RefreshCw, Clipboard, Download, Info } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import "rc-slider/assets/index.css";
 
 const Slider = dynamic(() => import("rc-slider"), {
@@ -32,6 +33,7 @@ import { CircleHelp } from "lucide-react";
 
 function Description() {
   const t = useTranslations("uuid");
+  const locale = useLocale();
 
   const faqItems = [1, 2, 3].map((i) => ({
     title: t(`descriptions.faq${i}Q`),
@@ -39,10 +41,13 @@ function Description() {
   }));
   return (
     <section id="description" className="mt-8">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("descriptions.aeoDefinition")}
+      </p>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
           <p>{t("descriptions.whatIsP2")}</p>
         </div>
       </div>
@@ -205,7 +210,7 @@ export default function UuidPage() {
   const displayed = bytesList.length > 0 ? formatUuid(bytesList[0], format, upper) : "";
 
   return (
-    <Layout title={title}>
+    <Layout title={title} categoryLabel={tTools("categories.generators")} categorySlug="generators">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <PrivacyBanner />
 

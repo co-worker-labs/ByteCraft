@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { routing } from "../i18n/routing";
 import { SITE_URL } from "../libs/site";
-import { TOOLS } from "../libs/tools";
+import { TOOLS, CATEGORY_SLUGS } from "../libs/tools";
 
 function makeAlternates(path: string) {
   const languages: Record<string, string> = {
@@ -41,6 +41,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: "monthly" as const,
         priority: 0.8,
         alternates: makeAlternates(tool.path),
+      });
+    }
+  }
+
+  for (const locale of routing.locales) {
+    const localePrefix = locale === defaultLocale ? "" : `/${locale}`;
+
+    for (const slug of Object.values(CATEGORY_SLUGS)) {
+      const path = `/${slug}`;
+      urls.push({
+        url: `${SITE_URL}${localePrefix}${path}`,
+        lastModified: new Date(),
+        changeFrequency: "weekly",
+        priority: 0.7,
+        alternates: makeAlternates(path),
       });
     }
   }

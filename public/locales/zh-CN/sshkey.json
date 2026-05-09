@@ -47,6 +47,7 @@
     "faq3Q": "如何将 SSH 公钥添加到 GitHub？",
     "faq3A": "进入 Settings → SSH and GPG keys → New SSH key。填写标题，粘贴公钥完整内容（以 ssh-ed25519 或 ssh-rsa 开头的整行），点击 Add SSH key。也可以使用 GitHub CLI：gh ssh-key add ~/.ssh/id_ed25519.pub。",
     "faq4Q": "在浏览器中生成 SSH 密钥安全吗？",
-    "faq4A": "安全。本工具使用 Web Crypto API，提供与 OpenSSL 和 OpenSSH 相同的加密原语。密钥完全在浏览器内存中生成，不会发送到任何服务器。关闭或刷新页面后密钥即丢失，请务必在离开前下载或复制。"
+    "faq4A": "安全。本工具使用 Web Crypto API，提供与 OpenSSL 和 OpenSSH 相同的加密原语。密钥完全在浏览器内存中生成，不会发送到任何服务器。关闭或刷新页面后密钥即丢失，请务必在离开前下载或复制。",
+    "aeoDefinition": "SSH 密钥生成器是一个免费的在线 RSA 和 Ed25519 SSH 密钥对生成工具，完全在浏览器中运行。支持密码短语加密和指纹显示。不会发送任何数据到服务器。"
   }
 }

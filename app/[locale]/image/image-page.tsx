@@ -2,7 +2,8 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import Layout from "../../../components/layout";
 import { showToast } from "../../../libs/toast";
 import { fromEvent } from "file-selector";
@@ -673,6 +674,7 @@ function Conversion() {
 
 function Description() {
   const t = useTranslations("image");
+  const locale = useLocale();
 
   const faqItems = [1, 2, 3].map((i) => ({
     title: t(`descriptions.faq${i}Q`),
@@ -680,9 +682,12 @@ function Description() {
   }));
   return (
     <section className="mt-8">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("descriptions.aeoDefinition")}
+      </p>
       <h2 className="text-sm font-semibold mb-3">{t("descriptions.title")}</h2>
       <div className="space-y-3 text-sm text-fg-secondary leading-relaxed">
-        <p>{t("descriptions.p1")}</p>
+        <p>{renderLinkedText(t("descriptions.p1"), locale)}</p>
         <p>{t("descriptions.p2")}</p>
         <p>{t("descriptions.p3")}</p>
         <p>{t("descriptions.p4")}</p>
@@ -702,8 +707,9 @@ function Description() {
 
 export default function ImagePage() {
   const t = useTranslations("tools");
+  const title = t("image.shortTitle");
   return (
-    <Layout title={t("image.shortTitle")}>
+    <Layout title={title} categoryLabel={t("categories.visual")} categorySlug="visual-media">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <PrivacyBanner />
         <Conversion />

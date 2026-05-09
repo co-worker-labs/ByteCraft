@@ -11,7 +11,8 @@ import {
   Upload,
   X,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 
 import Layout from "../../../components/layout";
 import { CopyButton } from "../../../components/ui/copy-btn";
@@ -642,6 +643,7 @@ function Conversion() {
 
 function Description() {
   const t = useTranslations("csv");
+  const locale = useLocale();
 
   const faqItems = [1, 2, 3].map((i) => ({
     title: t(`descriptions.faq${i}Q`),
@@ -649,10 +651,13 @@ function Description() {
   }));
   return (
     <section id="description" className="mt-8">
+      <p className="text-fg-primary text-sm leading-relaxed font-medium">
+        {t("descriptions.aeoDefinition")}
+      </p>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
         </div>
       </div>
 
@@ -670,7 +675,7 @@ function Description() {
           {t("descriptions.useCasesTitle")}
         </h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.useCasesP1")}</p>
+          <p>{renderLinkedText(t("descriptions.useCasesP1"), locale)}</p>
         </div>
       </div>
 
@@ -702,7 +707,11 @@ export default function CsvPage() {
   const title = t("csv.shortTitle");
 
   return (
-    <Layout title={title}>
+    <Layout
+      title={title}
+      categoryLabel={t("categories.encoding")}
+      categorySlug="encoding-conversion"
+    >
       <div className="container mx-auto px-4 pt-3 pb-6">
         <PrivacyBanner />
 

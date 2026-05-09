@@ -1,9 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import { generatePageMeta } from "../../../libs/seo";
 import { buildToolSchemas } from "../../../components/json-ld";
+import { TOOL_CATEGORIES, CATEGORY_SLUGS } from "../../../libs/tools";
 import DiffPage from "./diff-page";
 
 const PATH = "/diff";
+const TOOL_KEY = "diff";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -20,10 +22,17 @@ export default async function DiffRoute({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tools" });
   const tx = await getTranslations({ locale, namespace: "diff" });
+  const tc = await getTranslations({ locale, namespace: "categories" });
+  const category = TOOL_CATEGORIES.find((c) => c.tools.includes(TOOL_KEY))!;
+  const categorySlug = CATEGORY_SLUGS[category.key];
   const schemas = buildToolSchemas({
     name: t("diff.title"),
-    description: t("diff.description"),
+    description: tx.has("descriptions.aeoDefinition")
+      ? tx("descriptions.aeoDefinition")
+      : t("diff.description"),
     path: PATH,
+    categoryName: tc(`${category.key}.shortTitle`),
+    categoryPath: `/${categorySlug}`,
     faqItems: [1, 2, 3].map((i) => ({
       q: tx(`descriptions.faq${i}Q`),
       a: tx(`descriptions.faq${i}A`),
