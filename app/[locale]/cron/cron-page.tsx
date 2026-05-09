@@ -27,6 +27,8 @@ import {
 } from "../../../libs/cron/main";
 import { FieldEditor } from "./field-editor";
 import RelatedTools from "../../../components/related-tools";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const DEFAULT_EXPRESSIONS: Record<CronMode, string> = {
   standard: "0 9 * * 1-5",
@@ -360,6 +362,11 @@ function FieldCard({
 
 function Description() {
   const t = useTranslations("cron");
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section className="mt-8 space-y-4">
       <div>
@@ -369,6 +376,15 @@ function Description() {
       <div>
         <h4 className="font-semibold text-fg-primary text-base">{t("descriptions.dstTitle")}</h4>
         <p className="mt-1 text-fg-secondary text-sm leading-relaxed">{t("descriptions.dst")}</p>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {t("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
       </div>
     </section>
   );

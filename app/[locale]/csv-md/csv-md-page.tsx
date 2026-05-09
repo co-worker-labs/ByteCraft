@@ -26,6 +26,8 @@ import { csvMdConvert, type ColumnAlignment } from "../../../libs/csv/csv-md-con
 import { csvParse } from "../../../libs/csv/csv-parse";
 import { renderMarkdown } from "../../../libs/markdown/render";
 import RelatedTools from "../../../components/related-tools";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 // --- Types ---
 
@@ -666,6 +668,10 @@ function Conversion() {
 function Description() {
   const t = useTranslations("csv-md");
 
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section id="description" className="mt-8">
       <div className="mb-4">
@@ -691,6 +697,15 @@ function Description() {
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{t("descriptions.limitationsP1")}</p>
         </div>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {t("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
       </div>
     </section>
   );

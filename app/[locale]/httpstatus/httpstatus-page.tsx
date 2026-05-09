@@ -9,6 +9,8 @@ import { StyledInput } from "../../../components/ui/input";
 import { useIsMobile } from "../../../hooks/use-is-mobile";
 import { HttpStatusCode, getCategory, getStatusCodes } from "../../../libs/httpstatus";
 import RelatedTools from "../../../components/related-tools";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const statusCodes = getStatusCodes();
 
@@ -237,6 +239,10 @@ function Description() {
   const tc = useTranslations("common");
   const [expanded, setExpanded] = useState(false);
 
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section id="description" className="py-3">
       <div className="relative">
@@ -268,6 +274,15 @@ function Description() {
           </>
         )}
       </button>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {t("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
     </section>
   );
 }

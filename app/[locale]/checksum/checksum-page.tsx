@@ -16,6 +16,7 @@ import { Plus, X, Play } from "lucide-react";
 import CryptoJS from "crypto-js";
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
+import { CircleHelp } from "lucide-react";
 
 interface HashResult {
   title: string;
@@ -519,6 +520,11 @@ function FileCalculator() {
 
 function Description() {
   const tc = useTranslations("common");
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: tc(`descriptions.faq${i}Q`),
+    content: <p>{tc(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section id="description" className="mt-8">
       <div className="mb-4">
@@ -539,6 +545,15 @@ function Description() {
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{tc("algorithms.sha3Title")}</h2>
         <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{tc("algorithms.sha3")}</p>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {tc("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
       </div>
     </section>
   );

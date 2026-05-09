@@ -8,6 +8,8 @@ import { CopyButton } from "../../../components/ui/copy-btn";
 import { clipInput, detectFormats, convertAll } from "../../../libs/textcase/main";
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const REFERENCE_ROWS: { key: string; example: string }[] = [
   { key: "camelCase", example: "myVariableName" },
@@ -116,6 +118,11 @@ function Conversion() {
 
 function Description() {
   const t = useTranslations("textcase");
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section id="reference" className="mt-6">
       <div className="flex items-center gap-3 my-6">
@@ -160,6 +167,15 @@ function Description() {
             ))}
           </tbody>
         </table>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {t("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
       </div>
     </section>
   );

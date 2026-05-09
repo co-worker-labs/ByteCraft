@@ -27,6 +27,7 @@ import { showToast } from "../../../libs/toast";
 import { Eye, Info, ArrowLeftRight } from "lucide-react";
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
+import { CircleHelp } from "lucide-react";
 
 const TAILWIND_PREFIXES: TailwindPrefix[] = ["bg", "text", "border", "ring"];
 const FORMATS = ["hex", "rgb", "hsl", "hsv", "cmyk", "lab", "oklch"] as const;
@@ -419,6 +420,11 @@ function ContrastTab({ fg, bg, onFgChange, onBgChange }: ContrastTabProps) {
 
 function Description() {
   const t = useTranslations("color.description");
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <div className="mt-8 space-y-6">
       <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-4">
@@ -478,6 +484,15 @@ function Description() {
             <li>{t("tipOklch")}</li>
           </ul>
         </div>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {t("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
       </div>
     </div>
   );

@@ -19,6 +19,8 @@ import {
   getReferenceTable,
 } from "../../../libs/numbase/main";
 import RelatedTools from "../../../components/related-tools";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const PANELS: Array<{ radix: Radix; labelKey: string; prefix: string }> = [
   { radix: 10, labelKey: "decimal", prefix: "DEC" },
@@ -264,6 +266,11 @@ function Converter() {
 
 function Description() {
   const t = useTranslations("numbase");
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section className="py-3 space-y-4">
       <div>
@@ -277,6 +284,15 @@ function Description() {
         <p className="text-fg-secondary text-sm leading-relaxed">
           {t("descriptions.twosComplement")}
         </p>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {t("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
       </div>
     </section>
   );

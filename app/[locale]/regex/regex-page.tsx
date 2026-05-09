@@ -27,6 +27,8 @@ import type { FlagDef } from "../../../libs/regex/types";
 import { showToast } from "../../../libs/toast";
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 // --- Flag Checkboxes ---
 
@@ -750,6 +752,10 @@ function Description() {
     },
   ];
 
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <div className="mt-12 space-y-8 text-fg-secondary text-sm leading-relaxed">
       {/* What is Regex Tester */}
@@ -844,6 +850,15 @@ function Description() {
           <li>{t("descriptions.limitationsP4")}</li>
         </ul>
       </section>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {t("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
     </div>
   );
 }

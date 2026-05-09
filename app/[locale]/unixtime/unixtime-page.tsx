@@ -22,6 +22,8 @@ import {
 } from "../../../libs/unixtime/main";
 import { showToast } from "../../../libs/toast";
 import RelatedTools from "../../../components/related-tools";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const emptySubscribe = () => () => {};
 
@@ -648,6 +650,11 @@ function Description() {
     { titleKey: "y2k38Title", bodyKey: "y2k38" },
     { titleKey: "tzTitle", bodyKey: "tz" },
   ];
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section className="rounded-lg border border-border-default bg-bg-surface p-5 space-y-3">
       {items.map(({ titleKey, bodyKey }) => (
@@ -656,6 +663,15 @@ function Description() {
           <p className="text-sm text-fg-secondary leading-relaxed">{t(bodyKey)}</p>
         </div>
       ))}
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {t("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
     </section>
   );
 }

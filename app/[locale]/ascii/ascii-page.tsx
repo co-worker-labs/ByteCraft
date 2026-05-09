@@ -9,6 +9,8 @@ import { NeonTabs } from "../../../components/ui/tabs";
 import { Badge } from "../../../components/ui/badge";
 import { StyledInput } from "../../../components/ui/input";
 import RelatedTools from "../../../components/related-tools";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const printableCharacters = getPrintableCharacters();
 const controlCodes = getControlCodes();
@@ -270,6 +272,11 @@ function PrintableCharacters({ list }: { list: number[] }) {
 
 function Description() {
   const t = useTranslations("ascii");
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section id="description" className="mt-8">
       <div className="mb-4">
@@ -278,6 +285,15 @@ function Description() {
           <p>{t("descriptions.whatIsP1")}</p>
           <p>{t("descriptions.whatIsP2")}</p>
         </div>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {t("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
       </div>
     </section>
   );
