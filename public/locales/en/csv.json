@@ -32,6 +32,13 @@
     "useCasesTitle": "Use Cases",
     "useCasesP1": "Importing/exporting data between spreadsheets and web APIs, converting API responses to CSV for analysis, preparing data for database bulk import, sharing tabular data in a universally readable format.",
     "limitationsTitle": "Limitations",
-    "limitationsP1": "Nested JSON objects are flattened using dot-notation — the original structure cannot be fully restored. Binary files and Excel (.xlsx) format are not supported."
+    "limitationsP1": "Nested JSON objects are flattened using dot-notation — the original structure cannot be fully restored. Binary files and Excel (.xlsx) format are not supported.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is the CSV Converter?",
+    "faq1A": "A tool to convert CSV data to JSON, Markdown tables, or TSV format and back. It handles quoted fields, custom delimiters, and nested objects.",
+    "faq2Q": "What CSV dialects are supported?",
+    "faq2A": "RFC 4180 standard CSV with customizable delimiters (comma, semicolon, tab, pipe). Quoted fields, escaped quotes, and multiline values are all supported.",
+    "faq3Q": "Can I flatten nested JSON to CSV?",
+    "faq3A": "Yes. The tool can flatten nested JSON objects into dot-notation columns for CSV export, and unflatten them back."
   }
 }

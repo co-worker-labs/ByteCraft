@@ -14,9 +14,26 @@ import { SqlEditor } from "./components/SqlEditor";
 import { ResultTable } from "./components/ResultTable";
 import { StatusOverlay } from "./components/StatusOverlay";
 import { LongTextModal } from "./components/LongTextModal";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
 
 const DEFAULT_SIDEBAR_WIDTH = 256;
 const COLLAPSE_THRESHOLD = 80;
+
+function Description() {
+  const t = useTranslations("dbviewer");
+  return (
+    <section id="description" className="mt-8">
+      <div className="mb-4">
+        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
+        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{t("descriptions.whatIsP2")}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function DbViewerPage() {
   const tTools = useTranslations("tools");
@@ -117,11 +134,7 @@ export default function DbViewerPage() {
   return (
     <Layout title={title}>
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
 
         {!isOpen && !isInitializing && !hasError && !isRunning && (
           <FileUpload onFile={handleFile} disabled={isInitializing} />
@@ -183,6 +196,8 @@ export default function DbViewerPage() {
           open={longText !== null}
           onClose={() => setLongText(null)}
         />
+        <Description />
+        <RelatedTools currentTool="dbviewer" />
       </div>
     </Layout>
   );

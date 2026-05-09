@@ -25,6 +25,13 @@
     "useCasesTitle": "Anwendungsfälle",
     "useCasesP1": "Konfigurationsdateien (Docker Compose, Kubernetes, CI/CD-Pipelines), API-Definitionen (OpenAPI/Swagger), Daten-Serialisierung, Logdatei-Formate und sprachübergreifender Datenaustausch.",
     "limitationsTitle": "Einschränkungen",
-    "limitationsP1": "Multi-Dokument-YAML wird in ein JSON-Array konvertiert und kann nicht zurück in Multi-Dokument-YAML gewandelt werden. YAMLs Flexibilität kann zu Mehrdeutigkeiten führen: Dieselben Daten können auf verschiedene Weise dargestellt werden. Tab-Einrückung wird nicht unterstützt (YAML-Spezifikation empfiehlt Leerzeichen)."
+    "limitationsP1": "Multi-Dokument-YAML wird in ein JSON-Array konvertiert und kann nicht zurück in Multi-Dokument-YAML gewandelt werden. YAMLs Flexibilität kann zu Mehrdeutigkeiten führen: Dieselben Daten können auf verschiedene Weise dargestellt werden. Tab-Einrückung wird nicht unterstützt (YAML-Spezifikation empfiehlt Leerzeichen).",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was ist YAML?",
+    "faq1A": "YAML (YAML Ain't Markup Language) ist ein menschenlesbares Daten-Serialisierungsformat, das häufig für Konfigurationsdateien, CI/CD-Pipelines und Datenaustausch verwendet wird.",
+    "faq2Q": "Kann ich YAML in JSON konvertieren?",
+    "faq2A": "Ja. Dieses Tool unterstützt YAML-zu-JSON- und JSON-zu-YAML-Konvertierung mit Unterstützung für Multi-Dokument-YAML-Streams (--- Trennzeichen).",
+    "faq3Q": "Werden YAML-Anker und Aliase unterstützt?",
+    "faq3A": "Der Parser verarbeitet Standard-YAML einschließlich Anker (&) und Aliase (*). Komplexe Funktionen wie Merge-Keys (<<:) werden unterstützt, wo anwendbar."
   }
 }

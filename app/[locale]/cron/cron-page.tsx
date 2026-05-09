@@ -26,6 +26,7 @@ import {
   type CronFieldValue,
 } from "../../../libs/cron/main";
 import { FieldEditor } from "./field-editor";
+import RelatedTools from "../../../components/related-tools";
 
 const DEFAULT_EXPRESSIONS: Record<CronMode, string> = {
   standard: "0 9 * * 1-5",
@@ -517,6 +518,7 @@ export default function CronPage() {
         />
 
         <Description />
+        <RelatedTools currentTool="cron" />
       </div>
 
       {editingField && (

@@ -34,5 +34,14 @@
     "ipaEntityCode": "Código de entidad AFI",
     "example": "Ejemplo"
   },
-  "searchPlaceholder": "Buscar por carácter, código o descripción..."
+  "searchPlaceholder": "Buscar por carácter, código o descripción...",
+  "descriptions": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué son las entidades de caracteres HTML?",
+    "faq1A": "Las entidades HTML son códigos especiales (como &amp; para &) usados para representar caracteres que tienen significado especial en HTML o no pueden escribirse directamente.",
+    "faq2Q": "¿Cuántas entidades están documentadas?",
+    "faq2A": "La herramienta proporciona una referencia completa de caracteres especiales HTML incluyendo entidades con nombre (&amp;), decimales (&#38;) y hexadecimales (&#x26;).",
+    "faq3Q": "¿Puedo buscar caracteres específicos?",
+    "faq3A": "Sí. Busca por nombre de carácter, nombre de entidad o punto de código para encontrar rápidamente la entidad HTML que necesitas."
+  }
 }

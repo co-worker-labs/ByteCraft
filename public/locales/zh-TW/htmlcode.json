@@ -34,5 +34,14 @@
     "ipaEntityCode": "IPA 實體代碼",
     "example": "範例"
   },
-  "searchPlaceholder": "按字元、代碼或說明搜尋..."
+  "searchPlaceholder": "按字元、代碼或說明搜尋...",
+  "descriptions": {
+    "faqTitle": "常見問題",
+    "faq1Q": "什麼是 HTML 字元實體？",
+    "faq1A": "HTML 實體是特殊代碼（如 &amp; 代表 &），用於表示在 HTML 中有特殊含義或無法直接輸入的字元。",
+    "faq2Q": "收錄了多少實體？",
+    "faq2A": "工具提供完整的 HTML 特殊字元參考，包括命名實體（&amp;）、十進位（&#38;）和十六進位（&#x26;）代碼。",
+    "faq3Q": "可以搜尋特定字元嗎？",
+    "faq3A": "可以。按字元名稱、實體名稱或代碼點搜尋，快速找到你需要的 HTML 實體。"
+  }
 }

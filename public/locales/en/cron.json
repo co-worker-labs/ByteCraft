@@ -5,8 +5,15 @@
     "spring": "Spring (6 fields)",
     "quartz": "Quartz (7 fields)"
   },
-  "tab": { "generate": "Generate", "parse": "Parse" },
-  "timezone": { "label": "Timezone", "local": "Local", "utc": "UTC" },
+  "tab": {
+    "generate": "Generate",
+    "parse": "Parse"
+  },
+  "timezone": {
+    "label": "Timezone",
+    "local": "Local",
+    "utc": "UTC"
+  },
   "field": {
     "second": "Second",
     "minute": "Minute",
@@ -29,11 +36,37 @@
     "lastDayOffset": "Days before last"
   },
   "monthShort": [
-    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
   ],
-  "weekdayShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-  "weekdayLong": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+  "weekdayShort": [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+  ],
+  "weekdayLong": [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ],
   "presets": {
     "everyMinute": "Every minute",
     "every5Minutes": "Every 5 minutes",
@@ -53,8 +86,8 @@
     "everyHourAt": "Every hour at {time}",
     "everySecond": "Every second",
     "atTime": "At {time}",
-        "everyN": "Every {n} minutes",
-        "lastDow": "the last {weekday} of the month",
+    "everyN": "Every {n} minutes",
+    "lastDow": "the last {weekday} of the month",
     "fromTo": "from {from} to {to}",
     "onDays": "on {days}",
     "throughDays": "{from} through {to}",
@@ -66,15 +99,32 @@
     "lastWeekdayOfMonth": "the last weekday of the month",
     "lastDayMinusN": "{n} days before the last day of the month"
   },
-  "ordinal": { "1": "first", "2": "second", "3": "third", "4": "fourth", "5": "fifth" },
+  "ordinal": {
+    "1": "first",
+    "2": "second",
+    "3": "third",
+    "4": "fourth",
+    "5": "fifth"
+  },
   "output": {
     "expression": "Expression",
     "description": "Description",
     "nextExecutions": "Next 5 executions",
-    "header": { "num": "#", "dateTime": "Date & Time", "relative": "Relative" },
-    "relative": { "in": "in {value}", "now": "now", "past": "past" }
+    "header": {
+      "num": "#",
+      "dateTime": "Date & Time",
+      "relative": "Relative"
+    },
+    "relative": {
+      "in": "in {value}",
+      "now": "now",
+      "past": "past"
+    }
   },
-  "share": { "button": "Share link", "copied": "Share link copied" },
+  "share": {
+    "button": "Share link",
+    "copied": "Share link copied"
+  },
   "parse": {
     "placeholder": "Paste or type a Cron expression",
     "showingPrevious": "Showing last valid output"
@@ -110,7 +160,14 @@
     "specialCharsTitle": "Special Characters",
     "modesTitle": "Modes",
     "dstTitle": "Daylight Saving Time",
-    "dst": "When the active timezone observes DST, schedules within the spring-forward gap fire at the next valid time, and schedules within the fall-back overlap fire at the first occurrence. Switch to UTC to avoid DST entirely."
+    "dst": "When the active timezone observes DST, schedules within the spring-forward gap fire at the next valid time, and schedules within the fall-back overlap fire at the first occurrence. Switch to UTC to avoid DST entirely.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is a Cron expression?",
+    "faq1A": "A Cron expression is a string of 5-7 fields that defines a schedule for recurring tasks. It's used by cron daemons, job schedulers, and frameworks like Spring and Quartz.",
+    "faq2Q": "What Cron dialects are supported?",
+    "faq2A": "Three: Standard (5-field), Spring (6-field with seconds), and Quartz (7-field with seconds and year). The tool auto-detects the dialect and shows next run times.",
+    "faq3Q": "How accurate are the next-run predictions?",
+    "faq3A": "Predictions are computed client-side and match standard cron behavior. The tool shows the next 5 scheduled execution times for your expression."
   },
   "editor": {
     "title": "Edit field",

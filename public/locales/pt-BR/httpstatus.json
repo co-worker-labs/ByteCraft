@@ -449,5 +449,14 @@
     "530": {
       "description": "Cloudflare não conseguiu resolver o DNS para o servidor de origem."
     }
+  },
+  "descriptions": {
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "O que são códigos de status HTTP?",
+    "faq1A": "Códigos de status HTTP são números de 3 dígitos retornados por um servidor em resposta a uma requisição do cliente. Indicam se a requisição foi bem-sucedida, redirecionada ou encontrou um erro.",
+    "faq2Q": "Quantos códigos de status estão documentados?",
+    "faq2A": "A ferramenta cobre todos os códigos de status padrão em 5 categorias: 1xx (Informativo), 2xx (Sucesso), 3xx (Redirecionamento), 4xx (Erro do cliente) e 5xx (Erro do servidor).",
+    "faq3Q": "Posso buscar códigos específicos?",
+    "faq3A": "Sim. Busque por número do código, frase ou categoria para encontrar rapidamente o código de status que você precisa."
   }
 }

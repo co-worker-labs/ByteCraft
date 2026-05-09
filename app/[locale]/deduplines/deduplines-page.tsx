@@ -10,6 +10,8 @@ import { showToast } from "../../../libs/toast";
 import { useDropZone } from "../../../hooks/useDropZone";
 import { dedupLines, defaultOptions } from "../../../libs/deduplines/main";
 import type { DedupOptions } from "../../../libs/deduplines/main";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
 
 function downloadText(content: string, filename: string) {
   const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
@@ -227,17 +229,13 @@ function Description() {
 
 export default function DeduplinesPage() {
   const t = useTranslations("tools");
-  const tc = useTranslations("common");
   return (
     <Layout title={t("deduplines.shortTitle")}>
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
         <Conversion />
         <Description />
+        <RelatedTools currentTool="deduplines" />
       </div>
     </Layout>
   );

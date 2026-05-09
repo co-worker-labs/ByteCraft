@@ -52,6 +52,13 @@
     "limitationsTitle": "Einschränkungen",
     "limitationsP1": "Das Tool vergleicht nur Text. Binärdateien werden erkannt und abgelehnt, um ein sinnvolles Ergebnis zu gewährleisten.",
     "limitationsP2": "Eingaben sind auf 5MB pro Seite begrenzt. Eingaben über 512KB werden in einem Hintergrund-Web-Worker verarbeitet; die Seite bleibt responsiv, aber der Diff selbst dauert bei sehr großen Eingaben proportional länger.",
-    "limitationsP3": "Unterschiede in Zeilenenden (CRLF vs. LF) und nachgestellten Leerzeichen werden normalisiert. Sie erscheinen nie als Änderungen."
+    "limitationsP3": "Unterschiede in Zeilenenden (CRLF vs. LF) und nachgestellten Leerzeichen werden normalisiert. Sie erscheinen nie als Änderungen.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was ist ein Text-Diff-Tool?",
+    "faq1A": "Ein Diff-Tool vergleicht zwei Texte und hebt die Unterschiede hervor. Dieses Tool zeigt Ergänzungen, Löschungen und Änderungen auf Wort- oder Zeichenebene.",
+    "faq2Q": "Welche Diff-Modi sind verfügbar?",
+    "faq2A": "Zwei Modi: Nebeneinander (zeigt beide Texte mit hervorgehobenen Unterschieden) und Inline (zeigt zusammengeführte Unterschiede in einer einzigen Ansicht). Beide unterstützen Wortebene-Granularität.",
+    "faq3Q": "Gibt es eine Dateigrößenbeschränkung?",
+    "faq3A": "Die Diff-Berechnung läuft vollständig in Ihrem Browser mit einem Web Worker. Die Leistung hängt von Ihrem Gerät ab, aber Texte bis zu mehreren hundert KB funktionieren reibungslos."
   }
 }

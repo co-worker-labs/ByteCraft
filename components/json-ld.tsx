@@ -1,10 +1,5 @@
 import { SITE_URL } from "../libs/site";
 
-type JsonLdProps = {
-  type: "website" | "webApplication" | "breadcrumb";
-  data?: Record<string, unknown>;
-};
-
 function WebsiteJsonLd() {
   const schema = {
     "@context": "https://schema.org",
@@ -31,16 +26,31 @@ function WebsiteJsonLd() {
   );
 }
 
-function WebApplicationJsonLd({
-  name,
-  description,
-  url,
-}: {
+export function buildOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "OmniKit",
+    url: SITE_URL,
+    logo: `${SITE_URL}/icons/icon-512x512.png`,
+    sameAs: ["https://github.com/nickvore"],
+    description: "A collection of free, browser-based developer tools.",
+  };
+}
+
+export function buildToolSchemas(options: {
   name: string;
   description: string;
-  url: string;
-}) {
-  const schema = {
+  path: string;
+  faqItems?: { q: string; a: string }[];
+  howToSteps?: { name: string; text: string }[];
+}): object[] {
+  const { name, description, path, faqItems, howToSteps } = options;
+  const url = `${SITE_URL}${path}`;
+
+  const schemas: object[] = [];
+
+  schemas.push({
     "@context": "https://schema.org",
     "@type": ["WebApplication", "SoftwareApplication"],
     name,
@@ -48,40 +58,47 @@ function WebApplicationJsonLd({
     url,
     applicationCategory: "DeveloperApplication",
     operatingSystem: "Any",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     browserRequirements: "Requires JavaScript. Requires HTML5.",
-  };
+  });
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-}
-
-function BreadcrumbJsonLd({ items }: { items: { name: string; url: string }[] }) {
-  const schema = {
+  schemas.push({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.name,
-      item: item.url,
-    })),
-  };
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "OmniKit", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name, item: url },
+    ],
+  });
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  if (faqItems && faqItems.length > 0) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      })),
+    });
+  }
+
+  if (howToSteps && howToSteps.length > 0) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      name,
+      description,
+      step: howToSteps.map((step, i) => ({
+        "@type": "HowToStep",
+        position: i + 1,
+        name: step.name,
+        text: step.text,
+      })),
+    });
+  }
+
+  return schemas;
 }
 
-export { WebsiteJsonLd, WebApplicationJsonLd, BreadcrumbJsonLd };
+export { WebsiteJsonLd };

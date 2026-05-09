@@ -14,6 +14,8 @@ import { Button } from "../../../components/ui/button";
 import { Accordion } from "../../../components/ui/accordion";
 import { Plus, X, Play } from "lucide-react";
 import CryptoJS from "crypto-js";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
 
 interface HashResult {
   title: string;
@@ -548,11 +550,7 @@ export default function ChecksumPage() {
   return (
     <Layout title={t("checksum.shortTitle")}>
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.filesNotTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner variant="files" />
         <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-3 my-4">
           <span className="text-sm text-fg-secondary leading-relaxed">
             {tc("alert.checksumInfo")}
@@ -560,6 +558,7 @@ export default function ChecksumPage() {
         </div>
         <FileCalculator />
         <Description />
+        <RelatedTools currentTool="checksum" />
       </div>
     </Layout>
   );

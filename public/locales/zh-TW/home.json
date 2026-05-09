@@ -11,5 +11,16 @@
   "viewGrouped": "分類",
   "viewAll": "全部",
   "clearSearch": "清除搜尋",
-  "quickAccess": "快速存取"
+  "quickAccess": "快速存取",
+  "brandDescription": "OmniKit 是一個包含 32+ 個免費瀏覽器開發者工具的集合。無需註冊，無追蹤 — 所有處理均在瀏覽器中本地完成。",
+  "toolCount": "32+ 個免費開發者工具",
+  "faqTitle": "常見問題",
+  "faq1Q": "OmniKit 是什麼？",
+  "faq1A": "OmniKit 是一個免費的瀏覽器開發者工具集合，包括 JSON 格式化器、Base64 編碼器、密碼產生器、雜湊計算器等。所有工具完全在瀏覽器中執行，不向伺服器傳送任何資料。",
+  "faq2Q": "OmniKit 免費嗎？",
+  "faq2A": "是的，所有工具完全免費，無需註冊。OmniKit 是開源專案，將永遠免費。",
+  "faq3Q": "我的資料安全嗎？",
+  "faq3A": "所有處理完全在瀏覽器中使用用戶端 JavaScript 完成。資料不會傳送到任何伺服器。您的檔案和文字永遠不會離開您的裝置。",
+  "faq4Q": "需要安裝嗎？",
+  "faq4A": "無需安裝。OmniKit 可在任何現代瀏覽器中使用，也可以作為漸進式 Web 應用程式（PWA）安裝以便快速存取。"
 }

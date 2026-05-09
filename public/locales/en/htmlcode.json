@@ -34,5 +34,14 @@
     "ipaEntityCode": "IPA Entity code",
     "example": "Example"
   },
-  "searchPlaceholder": "Search by character, code, or description..."
+  "searchPlaceholder": "Search by character, code, or description...",
+  "descriptions": {
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What are HTML character entities?",
+    "faq1A": "HTML entities are special codes (like &amp; for &) used to represent characters that have special meaning in HTML or cannot be typed directly.",
+    "faq2Q": "How many entities are documented?",
+    "faq2A": "The tool provides a complete reference of HTML special characters including named entities (&amp;), decimal (&#38;), and hexadecimal (&#x26;) codes.",
+    "faq3Q": "Can I search for specific characters?",
+    "faq3A": "Yes. Search by character name, entity name, or code point to quickly find the HTML entity you need."
+  }
 }

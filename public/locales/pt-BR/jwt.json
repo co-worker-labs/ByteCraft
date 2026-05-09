@@ -42,6 +42,13 @@
     "algorithmsTitle": "Algoritmos suportados",
     "algorithms": "HMAC (HS256/384/512), RSA (RS256/384/512), RSA-PSS (PS256/384/512) e ECDSA (ES256/384/512). O algoritmo não assinado `alg=none` é rejeitado por segurança.",
     "keyFormatsTitle": "Formatos de chave aceitos",
-    "keyFormats": "HMAC: qualquer string UTF-8. Assimétrico: apenas PEM — PKCS8 (-----BEGIN PRIVATE KEY-----) para assinatura, SPKI (-----BEGIN PUBLIC KEY-----) para verificação. PKCS1, SEC1, PEM criptografado e certificados X.509 não são aceitos; a ferramenta informará o comando openssl exato para conversão."
+    "keyFormats": "HMAC: qualquer string UTF-8. Assimétrico: apenas PEM — PKCS8 (-----BEGIN PRIVATE KEY-----) para assinatura, SPKI (-----BEGIN PUBLIC KEY-----) para verificação. PKCS1, SEC1, PEM criptografado e certificados X.509 não são aceitos; a ferramenta informará o comando openssl exato para conversão.",
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "O que é um JWT?",
+    "faq1A": "JSON Web Token (JWT) é um padrão aberto (RFC 7519) para transmitir informações com segurança entre partes como um objeto JSON. É comumente usado para autenticação e troca de informações.",
+    "faq2Q": "JWTs são seguros para dados sensíveis?",
+    "faq2A": "Os payloads de JWT são codificados em Base64Url, não criptografados — qualquer pessoa pode lê-los. Nunca armazene dados sensíveis em um JWT a menos que use JWE (JSON Web Encryption). Esta ferramenta roda inteiramente no seu navegador.",
+    "faq3Q": "Quais algoritmos JWT são suportados?",
+    "faq3A": "Esta ferramenta suporta HS256/384/512 (HMAC), RS256/384/512 (RSA), ES256/384/512 (ECDSA) e PS256/384/512 (RSA-PSS) para assinatura e verificação."
   }
 }

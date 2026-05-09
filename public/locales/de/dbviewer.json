@@ -89,5 +89,17 @@
   "status": {
     "engineRestarted": "Datenbank-Engine neu gestartet. Ihre Daten wurden erneut geladen.",
     "abortShortcut": "Esc drücken zum Abbrechen"
+  },
+  "descriptions": {
+    "whatIsTitle": "Was ist der SQLite-Viewer?",
+    "whatIsP1": "Der SQLite-Viewer ermöglicht das Öffnen und Erkunden von SQLite-Datenbankdateien direkt im Browser — ohne Server-Upload. SQL-Abfragen ausführen, Tabellen durchsuchen und Daten als CSV oder JSON exportieren.",
+    "whatIsP2": "Basierend auf sql.js (SQLite als WebAssembly kompiliert) mit Autovervollständigung, Abfrageverlauf, Paginierung und Unterstützung für Datenbanken bis zum Arbeitsspeicherlimit des Browsers.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Welche Datenbanken kann ich anzeigen?",
+    "faq1A": "Das Tool unterstützt SQLite-Datenbankdateien (.db, .sqlite, .sqlite3). Öffnen Sie eine beliebige SQLite-Datei, um Tabellen zu durchsuchen, Abfragen auszuführen und Daten zu exportieren.",
+    "faq2Q": "Wird meine Datenbank auf einen Server hochgeladen?",
+    "faq2A": "Nein. Die Datenbank wird mit sql.js (SQLite kompiliert zu WebAssembly) in den Browser-Speicher geladen. Alle Operationen erfolgen lokal.",
+    "faq3Q": "Welche SQL-Funktionen werden unterstützt?",
+    "faq3A": "Volle SQLite-SQL-Syntax einschließlich SELECT, INSERT, UPDATE, DELETE, JOINs, Unterabfragen, Aggregationen und Transaktionen. Der Editor bietet Autovervollständigung für Tabellen- und Spaltennamen."
   }
 }

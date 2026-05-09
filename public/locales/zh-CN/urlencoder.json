@@ -30,6 +30,13 @@
     "useCasesP3": "使用 fetch 提交表单：当你 POST 一个 Content-Type 为 application/x-www-form-urlencoded 的请求体时，请求体必须按 Form 模式编码。本工具的 Form 模式输出与浏览器发送的字节一致。",
     "limitationsTitle": "局限性",
     "limitationsP1": "URL 编码不是加密。任何人都可以通过一次函数调用解码其输出；绝不要用编码来隐藏秘密。",
-    "limitationsP2": "模式选择很关键。用 Component 模式编码整条 URL 会把它打烂（每个 / 都变成 %2F）。用 Whole URL 模式编码查询值会留下危险的保留字符（值中的 & 仍然会被消费方当成参数分隔符）。不确定时请选 Component。"
+    "limitationsP2": "模式选择很关键。用 Component 模式编码整条 URL 会把它打烂（每个 / 都变成 %2F）。用 Whole URL 模式编码查询值会留下危险的保留字符（值中的 & 仍然会被消费方当成参数分隔符）。不确定时请选 Component。",
+    "faqTitle": "常见问题",
+    "faq1Q": "什么是 URL 编码？",
+    "faq1A": "URL 编码（百分号编码）将字符转换为可在互联网上传输的格式。空格、引号和非 ASCII 等特殊字符被替换为 %XX 序列。",
+    "faq2Q": "有哪些编码模式？",
+    "faq2A": "三种模式：Component（编码所有保留字符）、Whole URL（保留 URL 结构如 ://、?、&）和 Form（空格变为 + 而非 %20）。",
+    "faq3Q": "何时应使用 URL 编码？",
+    "faq3A": "在查询参数中传递数据、在 HTML 中嵌入 URL，或在 API 调用中处理特殊字符时应使用 URL 编码。"
   }
 }

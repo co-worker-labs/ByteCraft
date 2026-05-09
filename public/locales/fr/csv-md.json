@@ -36,6 +36,13 @@
     "useCasesTitle": "Cas d'utilisation",
     "useCasesP1": "Convertir des données de tableur en Markdown pour la documentation, coller du CSV d'une réponse d'API dans un ticket GitHub, générer des tableaux Markdown depuis des exports CSV, ou reconvertir des tableaux Markdown en CSV pour analyse dans un tableur.",
     "limitationsTitle": "Limites",
-    "limitationsP1": "Le formatage Markdown complexe (liens, images, code en ligne) dans les cellules du tableau est préservé comme texte brut. Les cellules multilignes ne sont pas supportées. L'outil ne gère que des données tabulaires simples."
+    "limitationsP1": "Le formatage Markdown complexe (liens, images, code en ligne) dans les cellules du tableau est préservé comme texte brut. Les cellules multilignes ne sont pas supportées. L'outil ne gère que des données tabulaires simples.",
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Qu'est-ce que le convertisseur CSV en Tableau Markdown ?",
+    "faq1A": "Un outil spécialisé qui convertit des données CSV en tableaux Markdown formatés avec options d'alignement, lignes d'en-tête et sortie propre délimitée par des pipes.",
+    "faq2Q": "Puis-je personnaliser l'alignement des colonnes ?",
+    "faq2A": "Oui. Choisissez l'alignement gauche, centre ou droite par colonne. L'outil génère la syntaxe d'alignement Markdown correcte.",
+    "faq3Q": "Prend-il en charge les grands fichiers CSV ?",
+    "faq3A": "Le traitement se fait entièrement dans votre navigateur. Les fichiers de plusieurs Mo fonctionnent bien, limités uniquement par la mémoire de votre appareil."
   }
 }

@@ -42,6 +42,13 @@
     "algorithmsTitle": "支持的算法",
     "algorithms": "HMAC（HS256/384/512）、RSA（RS256/384/512）、RSA-PSS（PS256/384/512）和 ECDSA（ES256/384/512）。不支持未签名的 alg=none。",
     "keyFormatsTitle": "接受的密钥格式",
-    "keyFormats": "HMAC：任意 UTF-8 字符串。非对称：仅支持 PEM 格式——签名使用 PKCS8（-----BEGIN PRIVATE KEY-----），验证使用 SPKI（-----BEGIN PUBLIC KEY-----）。不支持 PKCS1、SEC1、加密 PEM 和 X.509 证书；工具会告诉你具体的 openssl 转换命令。"
+    "keyFormats": "HMAC：任意 UTF-8 字符串。非对称：仅支持 PEM 格式——签名使用 PKCS8（-----BEGIN PRIVATE KEY-----），验证使用 SPKI（-----BEGIN PUBLIC KEY-----）。不支持 PKCS1、SEC1、加密 PEM 和 X.509 证书；工具会告诉你具体的 openssl 转换命令。",
+    "faqTitle": "常见问题",
+    "faq1Q": "什么是 JWT？",
+    "faq1A": "JSON Web Token（JWT）是一种开放标准（RFC 7519），用于在各方之间安全地传输信息。它常用于身份认证和信息交换。",
+    "faq2Q": "JWT 适合存储敏感数据吗？",
+    "faq2A": "JWT 的负载是 Base64Url 编码的，并非加密——任何人都能读取。永远不要在 JWT 中存储敏感数据，除非使用 JWE（JSON Web Encryption）。此工具完全在浏览器中运行。",
+    "faq3Q": "支持哪些 JWT 算法？",
+    "faq3A": "此工具支持 HS256/384/512（HMAC）、RS256/384/512（RSA）、ES256/384/512（ECDSA）和 PS256/384/512（RSA-PSS）用于签名和验证。"
   }
 }

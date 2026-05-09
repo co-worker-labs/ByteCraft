@@ -26,6 +26,13 @@
     "useCasesP2": "Il est possible d'utiliser Base64 pour convertir des entrées, comme des données de formulaire ou du JSON, en une chaîne avec un jeu de caractères réduit compatible avec les URL. Cependant, en raison de la façon dont certains serveurs peuvent interpréter les caractères plus (+) et barre oblique (/), il est recommandé d'utiliser encodeURIComponent à la place.",
     "limitationsTitle": "Limites de Base64",
     "limitationsP1": "Base64 n'est en aucun cas une méthode de chiffrement sécurisée.",
-    "limitationsP2": "Base64 n'est pas non plus une méthode de compression. L'encodage d'une chaîne en Base64 donne généralement un résultat 33 % plus long."
+    "limitationsP2": "Base64 n'est pas non plus une méthode de compression. L'encodage d'une chaîne en Base64 donne généralement un résultat 33 % plus long.",
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Qu'est-ce que l'encodage Base64 ?",
+    "faq1A": "Base64 est un schéma d'encodage binaire-texte qui représente des données binaires en utilisant 64 caractères ASCII (A-Z, a-z, 0-9, +, /). Il est couramment utilisé pour intégrer des données dans les URL, HTML et JSON.",
+    "faq2Q": "Le Base64 est-il un chiffrement ?",
+    "faq2A": "Non. Le Base64 est un encodage, pas un chiffrement. Il ne fournit aucune sécurité — n'importe qui peut le décoder. Utilisez l'outil Chiffrer/Déchiffrer pour une véritable protection des données.",
+    "faq3Q": "L'encodage Base64 augmente-t-il la taille des fichiers ?",
+    "faq3A": "Oui. L'encodage Base64 augmente la taille des données d'environ 33 %. Tous les 3 octets d'entrée deviennent 4 caractères de sortie."
   }
 }

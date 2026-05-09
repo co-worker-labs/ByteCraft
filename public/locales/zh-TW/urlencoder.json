@@ -30,6 +30,13 @@
     "useCasesP3": "使用 fetch 送出表單：當你 POST 一個 Content-Type: application/x-www-form-urlencoded 的請求主體時，主體必須按 Form 模式編碼。本工具的 Form 模式輸出與瀏覽器送出的位元組一致。",
     "limitationsTitle": "局限性",
     "limitationsP1": "URL 編碼不是加密。任何人都能透過一次函式呼叫解碼其輸出；絕不要用編碼來隱藏秘密。",
-    "limitationsP2": "模式選擇很關鍵。用 Component 模式編碼整條 URL 會把它打亂（每個 / 都變成 %2F）。用 Whole URL 模式編碼查詢值會留下危險的保留字元（值中的 & 仍會被消費端當作參數分隔符）。不確定時請選 Component。"
+    "limitationsP2": "模式選擇很關鍵。用 Component 模式編碼整條 URL 會把它打亂（每個 / 都變成 %2F）。用 Whole URL 模式編碼查詢值會留下危險的保留字元（值中的 & 仍會被消費端當作參數分隔符）。不確定時請選 Component。",
+    "faqTitle": "常見問題",
+    "faq1Q": "什麼是 URL 編碼？",
+    "faq1A": "URL 編碼（百分號編碼）將字元轉換為可在網際網路上傳輸的格式。空格、引號和非 ASCII 等特殊字元被替換為 %XX 序列。",
+    "faq2Q": "有哪些編碼模式？",
+    "faq2A": "三種模式：Component（編碼所有保留字元）、Whole URL（保留 URL 結構如 ://、?、&）和 Form（空格變為 + 而非 %20）。",
+    "faq3Q": "何時應使用 URL 編碼？",
+    "faq3A": "在查詢參數中傳遞資料、在 HTML 中嵌入 URL，或在 API 呼叫中處理特殊字元時應使用 URL 編碼。"
   }
 }

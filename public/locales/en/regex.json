@@ -162,7 +162,14 @@
     "limitationsP1": "JavaScript regex only — this tool uses the browser's built-in regex engine. PCRE, Python, and other regex flavors may behave differently.",
     "limitationsP2": "No lookbehind in older browsers — lookbehind assertions (?<=...) require ES2018+. Safari only added support in 2023.",
     "limitationsP3": "Match cap at 1,000 — to keep the UI responsive, only the first 1,000 matches are rendered.",
-    "limitationsP4": "Capturing groups not highlighted in text — groups are shown in the match list, not inline in the highlighted text."
+    "limitationsP4": "Capturing groups not highlighted in text — groups are shown in the match list, not inline in the highlighted text.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is a regular expression?",
+    "faq1A": "A regular expression (regex) is a sequence of characters that defines a search pattern. It's used for string matching, validation, search-and-replace, and text extraction.",
+    "faq2Q": "Can I test regex with flags?",
+    "faq2A": "Yes. This tool supports all standard JavaScript regex flags: g (global), i (case-insensitive), m (multiline), s (dotAll), u (unicode), and y (sticky).",
+    "faq3Q": "What is the Explain mode?",
+    "faq3A": "Explain mode breaks down your regex pattern into human-readable descriptions, showing what each token matches and how quantifiers and groups work."
   },
   "explainGroupNamed": "group: {name}"
 }

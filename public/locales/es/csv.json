@@ -32,6 +32,13 @@
     "useCasesTitle": "Casos de uso",
     "useCasesP1": "Importar/exportar datos entre hojas de cálculo y APIs web, convertir respuestas de API a CSV para análisis, preparar datos para importación masiva a bases de datos, compartir datos tabulares en un formato universalmente legible.",
     "limitationsTitle": "Limitaciones",
-    "limitationsP1": "Los objetos JSON anidados se aplanan con notación de punto; la estructura original no se puede restaurar completamente. No se soportan archivos binarios ni formato Excel (.xlsx)."
+    "limitationsP1": "Los objetos JSON anidados se aplanan con notación de punto; la estructura original no se puede restaurar completamente. No se soportan archivos binarios ni formato Excel (.xlsx).",
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué es el Convertidor CSV?",
+    "faq1A": "Una herramienta para convertir datos CSV a JSON, tablas Markdown o formato TSV y viceversa. Maneja campos entrecomillados, delimitadores personalizados y objetos anidados.",
+    "faq2Q": "¿Qué dialectos CSV son compatibles?",
+    "faq2A": "CSV estándar RFC 4180 con delimitadores personalizables (coma, punto y coma, tabulador, pipe). Campos entrecomillados, comillas escapadas y valores multilínea están soportados.",
+    "faq3Q": "¿Puedo aplanar JSON anidado a CSV?",
+    "faq3A": "Sí. La herramienta puede aplanar objetos JSON anidados en columnas con notación de puntos para exportación CSV, y des-aplanarlos de vuelta."
   }
 }

@@ -89,5 +89,17 @@
   "status": {
     "engineRestarted": "Moteur de base de données redémarré. Vos données ont été rechargées",
     "abortShortcut": "Appuyez sur Échap pour annuler"
+  },
+  "descriptions": {
+    "whatIsTitle": "Qu'est-ce que le Visualiseur SQLite ?",
+    "whatIsP1": "Le Visualiseur SQLite vous permet d'ouvrir et d'explorer des fichiers de bases de données SQLite directement dans votre navigateur, sans aucun upload serveur. Exécutez des requêtes SQL, parcourez les tables et exportez les données en CSV ou JSON.",
+    "whatIsP2": "Basé sur sql.js (SQLite compilé en WebAssembly), il prend en charge l'autocomplétion, l'historique des requêtes, la pagination et gère des bases de données jusqu'aux limites mémoire du navigateur.",
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Quelles bases de données puis-je visualiser ?",
+    "faq1A": "L'outil prend en charge les fichiers de base de données SQLite (.db, .sqlite, .sqlite3). Ouvrez n'importe quel fichier SQLite pour parcourir les tables, exécuter des requêtes et exporter des données.",
+    "faq2Q": "Ma base de données est-elle envoyée à un serveur ?",
+    "faq2A": "Non. La base de données est chargée en mémoire du navigateur en utilisant sql.js (SQLite compilé en WebAssembly). Toutes les opérations se font localement.",
+    "faq3Q": "Quelles fonctionnalités SQL sont prises en charge ?",
+    "faq3A": "Syntaxe SQL complète de SQLite incluant SELECT, INSERT, UPDATE, DELETE, JOINs, sous-requêtes, agrégations et transactions. L'éditeur fournit l'autocomplétion pour les noms de tables et colonnes."
   }
 }

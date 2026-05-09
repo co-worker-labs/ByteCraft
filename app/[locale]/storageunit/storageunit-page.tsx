@@ -14,6 +14,7 @@ import {
 import { StyledInput } from "../../../components/ui/input";
 import { StyledSelect } from "../../../components/ui/input";
 import { StyledCheckbox } from "../../../components/ui/input";
+import RelatedTools from "../../../components/related-tools";
 
 interface ConversionOutput {
   unit: StorageUnitData;
@@ -339,6 +340,21 @@ function MostConversionList() {
   );
 }
 
+function Description() {
+  const t = useTranslations("storageunit");
+  return (
+    <section id="description" className="mt-8">
+      <div className="mb-4">
+        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
+        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{t("descriptions.whatIsP2")}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function StorageUnitPage() {
   const t = useTranslations("tools");
   const ts = useTranslations("storageunit");
@@ -354,6 +370,8 @@ export default function StorageUnitPage() {
           <div className="flex-1 h-px bg-border-default" />
         </div>
         <MostConversionList />
+        <Description />
+        <RelatedTools currentTool="storageunit" />
       </div>
     </Layout>
   );

@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef, type DragEvent } from "react";
 import { stringify, parseAllDocuments } from "yaml";
-import json5 from "json5";
 import { Columns2, ArrowUpDown, Download, FolderOpen, Upload, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -12,6 +11,15 @@ import { Button } from "../../../components/ui/button";
 import { StyledTextarea, StyledCheckbox } from "../../../components/ui/input";
 import { showToast } from "../../../libs/toast";
 import { useIsMobile } from "../../../hooks/use-is-mobile";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
+
+const parseJson5 = async (input: string) => {
+  const { default: JSON5 } = await import("json5");
+  return JSON5.parse(input);
+};
 
 // --- Types ---
 
@@ -28,12 +36,12 @@ const INDENT_SIZES: IndentSize[] = [2, 4, 8];
 // --- Core Logic ---
 
 // Try strict JSON first, fallback to JSON5 (matches JSON tool pattern)
-function tryParseJson(input: string, json5Mode: boolean): unknown {
-  if (json5Mode) return json5.parse(input);
+async function tryParseJson(input: string, json5Mode: boolean): Promise<unknown> {
+  if (json5Mode) return parseJson5(input);
   try {
     return JSON.parse(input);
   } catch {
-    return json5.parse(input);
+    return parseJson5(input);
   }
 }
 
@@ -149,13 +157,13 @@ function Conversion() {
   // --- Validation: 500ms debounce, separate for each side ---
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setTimeout(async () => {
       if (!jsonContent.trim()) {
         setJsonError(null);
         return;
       }
       try {
-        tryParseJson(jsonContent, json5Mode);
+        await tryParseJson(jsonContent, json5Mode);
         setJsonError(null);
       } catch (e) {
         setJsonError(extractError(e));
@@ -185,11 +193,11 @@ function Conversion() {
 
   // --- Conversion Functions ---
 
-  function doJsonToYaml() {
+  async function doJsonToYaml() {
     const input = jsonContent.trim();
     if (!input) return;
     try {
-      const parsed = tryParseJson(input, json5Mode);
+      const parsed = await tryParseJson(input, json5Mode);
       const target = sortKeys ? deepSortKeys(parsed) : parsed;
       const out = stringify(target, { indentSeq: true, lineWidth: 120, indent: indentSize });
       setYamlContent(out);
@@ -602,6 +610,10 @@ function Conversion() {
 function Description() {
   const t = useTranslations("yaml");
 
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section id="description" className="mt-8">
       <div className="mb-4">
@@ -644,6 +656,15 @@ function Description() {
           <p>{t("descriptions.limitationsP1")}</p>
         </div>
       </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {t("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
     </section>
   );
 }
@@ -651,22 +672,17 @@ function Description() {
 // --- Page Export ---
 
 export default function YamlPage() {
-  const tc = useTranslations("common");
   const t = useTranslations("tools");
   const title = t("yaml.shortTitle");
 
   return (
     <Layout title={title}>
       <div className="container mx-auto px-4 pt-3 pb-6">
-        {/* Privacy alert banner */}
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
 
         <Conversion />
         <Description />
+        <RelatedTools currentTool="yaml" />
       </div>
     </Layout>
   );

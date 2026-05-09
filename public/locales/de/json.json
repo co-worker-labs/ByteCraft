@@ -32,6 +32,13 @@
     "limitationsTitle": "Einschränkungen",
     "limitationsP1": "Sehr große JSON-Dateien (>10MB) können den Browser während der Formatierung kurzzeitig blockieren.",
     "limitationsP2": "Zahlen außerhalb des sicheren Ganzzahlbereichs von JavaScript (±2⁵³) können nach dem Durchlauf durch JSON.parse/stringify an Genauigkeit verlieren.",
-    "limitationsP3": "JSON5-Fehlermeldungen enthalten möglicherweise keine genauen Zeilen- und Spaltennummern."
+    "limitationsP3": "JSON5-Fehlermeldungen enthalten möglicherweise keine genauen Zeilen- und Spaltennummern.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was ist JSON-Formatierung?",
+    "faq1A": "JSON-Formatierung wandelt rohes oder minifiziertes JSON in eine lesbare, eingerückte Struktur um. Dieses Tool unterstützt konfigurierbare Einrückung (2, 4, 8 Leerzeichen oder Tabs), Minifizierung und Validierung — einschließlich JSON5-Syntax.",
+    "faq2Q": "Werden meine JSON-Daten an einen Server gesendet?",
+    "faq2A": "Nein. Die gesamte JSON-Formatierung, Validierung und Minifizierung erfolgt vollständig in Ihrem Browser. Ihre Daten verlassen niemals Ihr Gerät.",
+    "faq3Q": "Was ist der Unterschied zwischen JSON und JSON5?",
+    "faq3A": "JSON5 ist eine Obermenge von JSON, die Kommentare, abschließende Kommas, Schlüssel ohne Anführungszeichen und eine flexiblere Syntax unterstützt. Dieses Tool kann sowohl Standard-JSON als auch JSON5 verarbeiten und formatieren."
   }
 }

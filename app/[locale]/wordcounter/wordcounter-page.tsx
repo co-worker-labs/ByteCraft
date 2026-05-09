@@ -17,6 +17,8 @@ import {
   calculateSpeakingTime,
 } from "../../../libs/wordcounter/main";
 import { ENGLISH_STOP_WORDS } from "../../../libs/wordcounter/stop-words";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
 
 function Conversion() {
   const t = useTranslations("wordcounter");
@@ -296,18 +298,30 @@ function Conversion() {
   );
 }
 
+function Description() {
+  const t = useTranslations("wordcounter");
+  return (
+    <section id="description" className="mt-8">
+      <div className="mb-4">
+        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
+        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{t("descriptions.whatIsP2")}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function WordCounterPage() {
   const t = useTranslations("tools");
-  const tc = useTranslations("common");
   return (
     <Layout title={t("wordcounter.shortTitle")}>
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
         <Conversion />
+        <Description />
+        <RelatedTools currentTool="wordcounter" />
       </div>
     </Layout>
   );

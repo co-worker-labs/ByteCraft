@@ -96,5 +96,14 @@
     "tipEyedropper": "Verwenden Sie die Pipette, um eine Farbe von einem beliebigen Pixel auf Ihrem Bildschirm zu wählen (Chromium-Browser).",
     "tipImage": "Ziehen Sie ein Bild in den Palette-Tab, um seine 6 dominierenden Farben über Median-Cut-Quantisierung zu extrahieren.",
     "tipOklch": "Tailwind v4 gibt Farben in OKLCH für wahrnehmungsgerechte Gleichmäßigkeit aus. Kopieren Sie den @theme-Block, um mit diesem Workflow kompatibel zu bleiben."
+  },
+  "descriptions": {
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was ist das Farb-Tool?",
+    "faq1A": "Das Farb-Tool ist ein umfassendes Farbdienstprogramm, das HEX-, RGB-, HSL- und OKLCH-Farbmodelle mit visueller Auswahl, Konvertierungen und Kontrastprüfung unterstützt.",
+    "faq2Q": "Was ist der OKLCH-Farbraum?",
+    "faq2A": "OKLCH ist ein wahrnehmungsgerechter Farbraum, der besser zur menschlichen Sicht passt als HSL oder RGB. Er erzeugt konsistentere Helligkeitsverläufe und barrierefreie Paletten.",
+    "faq3Q": "Kann ich Farben aus einem Bild extrahieren?",
+    "faq3A": "Ja. Ziehen Sie ein beliebiges Bild in den Paletten-Extraktionsbereich, um die dominanten Farben zu erhalten. Sie können auch Farbseh-Schwächen simulieren (Protanopie, Deuteranopie, Tritanopie)."
   }
 }

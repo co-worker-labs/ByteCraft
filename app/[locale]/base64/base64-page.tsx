@@ -13,6 +13,8 @@ import {
 } from "../../../components/ui/input";
 import { Button } from "../../../components/ui/button";
 import { ChevronsDown, ChevronsUp, X } from "lucide-react";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
 
 const BASE64_ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
@@ -346,21 +348,17 @@ function Description() {
 }
 
 export default function Base64Page() {
-  const tc = useTranslations("common");
   const t = useTranslations("tools");
   const title = t("base64.shortTitle");
 
   return (
     <Layout title={title}>
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
 
         <Conversion />
         <Description />
+        <RelatedTools currentTool="base64" />
       </div>
     </Layout>
   );

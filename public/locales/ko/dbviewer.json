@@ -89,5 +89,17 @@
   "status": {
     "engineRestarted": "데이터베이스 엔진이 재시작되었습니다. 데이터를 다시 로드했습니다.",
     "abortShortcut": "Esc를 눌러 중단하세요"
+  },
+  "descriptions": {
+    "whatIsTitle": "SQLite 뷰어란?",
+    "whatIsP1": "SQLite 뷰어를 사용하면 서버에 업로드할 필요 없이 브라우저에서 직접 SQLite 데이터베이스 파일을 열고 탐색할 수 있습니다. SQL 쿼리 실행, 테이블 탐색, CSV/JSON 내보내기를 지원합니다.",
+    "whatIsP2": "sql.js(WebAssembly로 컴파일된 SQLite) 기반으로 자동 완성, 쿼리 기록, 페이지네이션을 지원하며 브라우저 메모리 한도까지 데이터베이스를 처리할 수 있습니다.",
+    "faqTitle": "자주 묻는 질문",
+    "faq1Q": "어떤 데이터베이스를 볼 수 있나요?",
+    "faq1A": "SQLite 데이터베이스 파일(.db, .sqlite, .sqlite3)을 지원합니다. SQLite 파일을 열어 테이블 탐색, 쿼리 실행, 데이터 내보내기가 가능합니다.",
+    "faq2Q": "데이터베이스가 서버에 업로드되나요?",
+    "faq2A": "아니요. 데이터베이스는 sql.js(WebAssembly로 컴파일된 SQLite)를 사용하여 브라우저 메모리에 로드됩니다. 모든 작업은 로컬에서 실행됩니다.",
+    "faq3Q": "어떤 SQL 기능을 지원하나요?",
+    "faq3A": "SQLite의 전체 SQL 구문(SELECT, INSERT, UPDATE, DELETE, JOIN, 서브쿼리, 집계, 트랜잭션)을 지원합니다. 편집기에서 테이블 및 열 이름 자동 완성을 제공합니다."
   }
 }

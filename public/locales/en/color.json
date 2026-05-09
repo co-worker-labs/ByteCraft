@@ -1,5 +1,10 @@
 {
-  "tabs": { "imagePalette": "Extract from Image", "converter": "Converter", "palette": "Palette", "contrast": "Contrast" },
+  "tabs": {
+    "imagePalette": "Extract from Image",
+    "converter": "Converter",
+    "palette": "Palette",
+    "contrast": "Contrast"
+  },
   "vision": {
     "label": "Vision",
     "none": "Normal vision",
@@ -59,7 +64,10 @@
     "suggestionText": "Adjust to {color} to pass {target}",
     "useThis": "Use this"
   },
-  "history": { "recent": "Recent", "clear": "Clear" },
+  "history": {
+    "recent": "Recent",
+    "clear": "Clear"
+  },
   "errors": {
     "invalidColor": "Invalid color value",
     "fileTooLarge": "Image must be smaller than 5MB",
@@ -88,5 +96,14 @@
     "tipEyedropper": "Use the eyedropper to pick a color from any pixel on your screen (Chromium browsers).",
     "tipImage": "Drop an image into the Palette tab to extract its 6 dominant colors via median-cut quantization.",
     "tipOklch": "Tailwind v4 emits colors in OKLCH for perceptual smoothness — copy the @theme block to align with that workflow."
+  },
+  "descriptions": {
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is the Color Tool?",
+    "faq1A": "The Color Tool is a comprehensive color utility that supports HEX, RGB, HSL, and OKLCH color models with a visual picker, conversions, and contrast checking.",
+    "faq2Q": "What is OKLCH color space?",
+    "faq2A": "OKLCH is a perceptually uniform color space that better matches human vision than HSL or RGB. It produces more consistent lightness gradients and accessible palettes.",
+    "faq3Q": "Can I extract colors from an image?",
+    "faq3A": "Yes. Drag and drop any image onto the palette extraction area to get the dominant colors. You can also simulate color vision deficiencies (protanopia, deuteranopia, tritanopia)."
   }
 }

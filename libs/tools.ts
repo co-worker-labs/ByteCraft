@@ -82,6 +82,41 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
 
 export const QUICK_ACCESS_DEFAULT: string[] = ["json", "base64", "jwt", "regex", "diff", "hashing"];
 
+export const TOOL_RELATIONS: Record<string, string[]> = {
+  json: ["csv", "yaml", "diff", "regex"],
+  base64: ["urlencoder", "hashing", "cipher"],
+  jwt: ["base64", "hashing", "password"],
+  regex: ["json", "textcase", "diff"],
+  uuid: ["password", "qrcode", "hashing"],
+  hashing: ["checksum", "cipher", "base64", "jwt"],
+  urlencoder: ["base64", "numbase", "textcase"],
+  unixtime: ["cron", "uuid"],
+  diff: ["json", "regex", "csv"],
+  password: ["jwt", "sshkey", "uuid", "hashing"],
+  sshkey: ["password", "hashing", "jwt"],
+  color: ["image", "numbase"],
+  cron: ["unixtime", "regex"],
+  markdown: ["json", "diff", "htmlcode"],
+  qrcode: ["uuid", "urlencoder", "password"],
+  textcase: ["regex", "extractor", "wordcounter"],
+  deduplines: ["extractor", "textcase", "wordcounter"],
+  csv: ["json", "yaml", "diff"],
+  "csv-md": ["csv", "markdown", "json"],
+  cipher: ["hashing", "base64", "password"],
+  numbase: ["color", "storageunit", "ascii"],
+  dbviewer: ["csv", "json", "yaml"],
+  checksum: ["hashing", "cipher"],
+  storageunit: ["numbase", "checksum"],
+  httpstatus: ["httpclient", "urlencoder"],
+  yaml: ["json", "csv", "markdown"],
+  image: ["color", "qrcode", "checksum"],
+  htmlcode: ["ascii", "httpstatus", "markdown"],
+  ascii: ["htmlcode", "numbase", "httpstatus"],
+  extractor: ["regex", "textcase", "deduplines"],
+  wordcounter: ["textcase", "extractor", "deduplines"],
+  httpclient: ["httpstatus", "urlencoder", "json"],
+};
+
 const PALETTE_SIZE = 20;
 
 function hashCode(str: string): number {

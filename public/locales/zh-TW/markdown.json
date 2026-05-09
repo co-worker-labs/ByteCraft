@@ -26,6 +26,13 @@
     "howTitle": "如何使用",
     "howP1": "在編輯器中輸入或貼上 Markdown，預覽會隨輸入更新。可在編輯、預覽、分割三種模式間切換。可匯出 .md、複製渲染後的 HTML、或將預覽儲存為 PDF / PNG。所有處理皆在瀏覽器中完成。",
     "gfmTitle": "GitHub Flavored Markdown",
-    "gfmP1": "支援表格、任務清單（- [ ] todo）、刪除線、自動連結和 Mermaid 圖表（流程圖、時序圖、類別圖、狀態圖、ER 圖、甘特圖、圓餅圖、Git 圖）。使用 ```mermaid 程式碼區塊。暫不支援數學公式與註腳。"
+    "gfmP1": "支援表格、任務清單（- [ ] todo）、刪除線、自動連結和 Mermaid 圖表（流程圖、時序圖、類別圖、狀態圖、ER 圖、甘特圖、圓餅圖、Git 圖）。使用 ```mermaid 程式碼區塊。暫不支援數學公式與註腳。",
+    "faqTitle": "常見問題",
+    "faq1Q": "什麼是 Markdown 編輯器？",
+    "faq1A": "一個即時 Markdown 編輯器，支援分窗預覽、GFM（GitHub 風格 Markdown）、語法高亮、任務清單和 Mermaid 圖表。",
+    "faq2Q": "可以將 Markdown 匯出為 PDF 嗎？",
+    "faq2A": "可以。使用匯出按鈕儲存為 PDF 或 PNG。PDF 匯出遵循列印樣式，輸出格式整潔。",
+    "faq3Q": "支援哪些 Markdown 擴充功能？",
+    "faq3A": "GFM 表格、任務清單、刪除線、自動連結，以及 TypeScript、Python、Go、Rust、SQL 等 12+ 種程式語言的程式碼語法高亮。"
   }
 }

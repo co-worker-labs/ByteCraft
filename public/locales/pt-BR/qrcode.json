@@ -91,5 +91,14 @@
     "generateFailed": "Falha ao gerar QR Code",
     "libraryLoadFailed": "Falha ao carregar o gerador de QR. Por favor, recarregue a página."
   },
-  "localGenerated": "Gerado inteiramente no seu navegador. Seus dados nunca saem do seu dispositivo."
+  "localGenerated": "Gerado inteiramente no seu navegador. Seus dados nunca saem do seu dispositivo.",
+  "descriptions": {
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "O que é o Gerador de QR Code?",
+    "faq1A": "Um gerador de QR codes customizável que suporta texto, URLs, credenciais WiFi e vCards. Adicione logos, mude cores e exporte como SVG ou PNG.",
+    "faq2Q": "Qual é a capacidade máxima de um QR code?",
+    "faq2A": "A capacidade depende do nível de correção de erros e tipo de dados. Numérico: até 7.089 caracteres. Alfanumérico: até 4.296. Binário: até 2.953 bytes. Kanji: até 1.817 caracteres.",
+    "faq3Q": "Posso adicionar um logo ao meu QR code?",
+    "faq3A": "Sim. Envie uma imagem de logo para colocá-la no centro do QR code. A ferramenta ajusta automaticamente a correção de erros para manter a escaneabilidade."
+  }
 }

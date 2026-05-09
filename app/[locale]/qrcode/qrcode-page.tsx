@@ -1,8 +1,8 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import {
-  Lock,
   Eye,
   EyeOff,
   QrCode,
@@ -16,7 +16,11 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import "rc-slider/assets/index.css";
-import Slider from "rc-slider";
+
+const Slider = dynamic(() => import("rc-slider"), {
+  ssr: false,
+  loading: () => <div className="h-6 w-full animate-pulse bg-bg-input rounded" />,
+});
 import Layout from "../../../components/layout";
 import { Button } from "../../../components/ui/button";
 import {
@@ -46,6 +50,10 @@ import type {
   DotStyle,
   ErrorCorrection,
 } from "../../../libs/qrcode/types";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const CONTENT_TYPES: ContentType[] = ["text", "wifi", "vcard", "email", "sms", "whatsapp"];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -711,6 +719,11 @@ function StyleConfig({
 
 function Description() {
   const t = useTranslations("qrcode");
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <div className="mt-8 space-y-6">
       <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-4">
@@ -750,6 +763,15 @@ function Description() {
             <li>{t("description.tipTest")}</li>
           </ul>
         </div>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {t("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
       </div>
     </div>
   );
@@ -891,10 +913,7 @@ export default function QrCodePage() {
   return (
     <Layout title={title}>
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <Lock size={18} className="text-accent-cyan mt-0.5 shrink-0" />
-          <span className="text-sm text-fg-secondary leading-relaxed">{t("localGenerated")}</span>
-        </div>
+        <PrivacyBanner />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
           <div className="flex flex-col gap-4">
@@ -1003,6 +1022,7 @@ export default function QrCodePage() {
         </div>
 
         <Description />
+        <RelatedTools currentTool="qrcode" />
       </div>
     </Layout>
   );

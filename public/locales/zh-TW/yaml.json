@@ -25,6 +25,13 @@
     "useCasesTitle": "使用場景",
     "useCasesP1": "設定檔（Docker Compose、Kubernetes、CI/CD 管線）、API 定義（OpenAPI/Swagger）、資料序列化、日誌檔案格式和跨語言資料交換。",
     "limitationsTitle": "限制",
-    "limitationsP1": "多文件 YAML 會轉換為 JSON 陣列，無法無損地轉回多文件 YAML。YAML 的靈活性可能導致歧義——相同的資料可以有多種表示方式。不支援 Tab 縮排（YAML 規範推薦使用空格）。"
+    "limitationsP1": "多文件 YAML 會轉換為 JSON 陣列，無法無損地轉回多文件 YAML。YAML 的靈活性可能導致歧義——相同的資料可以有多種表示方式。不支援 Tab 縮排（YAML 規範推薦使用空格）。",
+    "faqTitle": "常見問題",
+    "faq1Q": "什麼是 YAML？",
+    "faq1A": "YAML（YAML Ain't Markup Language）是一種人類可讀的資料序列化格式，常用於設定檔、CI/CD 管線和資料交換。",
+    "faq2Q": "可以將 YAML 轉換為 JSON 嗎？",
+    "faq2A": "可以。此工具支援 YAML 轉 JSON 和 JSON 轉 YAML，支援多文件 YAML 串流（--- 分隔符號）。",
+    "faq3Q": "支援 YAML 錨點和別名嗎？",
+    "faq3A": "解析器支援標準 YAML，包括錨點（&）和別名（*）。合併鍵（<<:）等複雜特性在適用情況下也受支援。"
   }
 }

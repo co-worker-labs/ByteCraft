@@ -25,6 +25,13 @@
     "useCasesTitle": "Use Cases",
     "useCasesP1": "Configuration files (Docker Compose, Kubernetes, CI/CD pipelines), API definitions (OpenAPI/Swagger), data serialization, log file formats, and cross-language data exchange.",
     "limitationsTitle": "Limitations",
-    "limitationsP1": "Multi-document YAML converts to a JSON array and cannot be round-tripped back to multi-document YAML. YAML's flexibility can lead to ambiguity — the same data can be represented in multiple ways. Tab indentation is not supported (YAML spec recommends spaces)."
+    "limitationsP1": "Multi-document YAML converts to a JSON array and cannot be round-tripped back to multi-document YAML. YAML's flexibility can lead to ambiguity — the same data can be represented in multiple ways. Tab indentation is not supported (YAML spec recommends spaces).",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is YAML?",
+    "faq1A": "YAML (YAML Ain't Markup Language) is a human-readable data serialization format commonly used for configuration files, CI/CD pipelines, and data exchange.",
+    "faq2Q": "Can I convert YAML to JSON?",
+    "faq2A": "Yes. This tool supports YAML-to-JSON and JSON-to-YAML conversion with support for multi-document YAML streams (--- separators).",
+    "faq3Q": "Does it support YAML anchors and aliases?",
+    "faq3A": "The parser handles standard YAML including anchors (&) and aliases (*). Complex features like merge keys (<<:) are supported where applicable."
   }
 }

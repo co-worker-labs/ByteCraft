@@ -68,5 +68,17 @@
   "useCaseDist": "分散システムのID",
   "useCaseWeb": "セッションやリソースの識別子",
   "useCaseMq": "メッセージキューのメッセージID",
-  "useCaseTest": "テストデータとモック"
+  "useCaseTest": "テストデータとモック",
+  "descriptions": {
+    "whatIsTitle": "UUIDジェネレーターとは？",
+    "whatIsP1": "UUID（Universally Unique Identifier）は、RFC 4122およびRFC 9562で定義された128ビットの識別子規格です。このツールではUUID v4（ランダム）とv7（時系列順）を一括生成できます。",
+    "whatIsP2": "UUIDはデータベースの主キー、分散システムの識別子、セッショントークンとして広く使われています。2^122通りの値が可能で、衝突の確率は無視できるほど低いです。",
+    "faqTitle": "よくある質問",
+    "faq1Q": "UUIDとは？",
+    "faq1A": "UUID（Universally Unique Identifier）は128ビットの識別子標準です。このツールはv4（ランダム）とv7（時系列順）のUUIDを生成し、中央調整なしで一意性を保証します。",
+    "faq2Q": "一度に何個のUUIDを生成できますか？",
+    "faq2A": "1回のバッチで最大1,000個のUUIDを生成できます。すべての生成はブラウザ上でcrypto.getRandomValues()を使用して行われます。",
+    "faq3Q": "UUID v4とv7のどちらを使うべき？",
+    "faq3A": "汎用的なランダムIDにはv4を使ってください。データベースの主キーや時系列順序が重要な場合はv7を使ってください。v7はソート可能な一意性のためミリ秒タイムスタンププレフィックスを含みます。"
+  }
 }

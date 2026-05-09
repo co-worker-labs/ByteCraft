@@ -25,6 +25,13 @@
     "useCasesTitle": "Casos de uso",
     "useCasesP1": "Archivos de configuración (Docker Compose, Kubernetes, pipelines CI/CD), definiciones de API (OpenAPI/Swagger), serialización de datos, formatos de archivos de log e intercambio de datos entre lenguajes.",
     "limitationsTitle": "Limitaciones",
-    "limitationsP1": "YAML multidocumento se convierte a un array JSON y no se puede hacer round-trip de vuelta a YAML multidocumento. La flexibilidad de YAML puede llevar a ambigüedad: los mismos datos pueden representarse de múltiples formas. La indentación con tabuladores no es compatible (la especificación YAML recomienda espacios)."
+    "limitationsP1": "YAML multidocumento se convierte a un array JSON y no se puede hacer round-trip de vuelta a YAML multidocumento. La flexibilidad de YAML puede llevar a ambigüedad: los mismos datos pueden representarse de múltiples formas. La indentación con tabuladores no es compatible (la especificación YAML recomienda espacios).",
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué es YAML?",
+    "faq1A": "YAML (YAML Ain't Markup Language) es un formato de serialización de datos legible por humanos usado comúnmente para archivos de configuración, pipelines CI/CD e intercambio de datos.",
+    "faq2Q": "¿Puedo convertir YAML a JSON?",
+    "faq2A": "Sí. Esta herramienta soporta conversión YAML a JSON y JSON a YAML con soporte para flujos YAML multidocumento (separadores ---).",
+    "faq3Q": "¿Soporta anclas y alias de YAML?",
+    "faq3A": "El analizador maneja YAML estándar incluyendo anclas (&) y alias (*). Características complejas como claves de fusión (<<:) son soportadas donde sea aplicable."
   }
 }

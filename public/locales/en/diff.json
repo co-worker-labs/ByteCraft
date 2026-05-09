@@ -52,6 +52,13 @@
     "limitationsTitle": "Limitations",
     "limitationsP1": "The tool diffs text only. Binary files are detected and rejected to keep the result meaningful.",
     "limitationsP2": "Inputs are capped at 5MB per side. Inputs above 512KB run in a background Web Worker; the page stays responsive but the diff itself takes proportionally longer for very large inputs.",
-    "limitationsP3": "Differences in line endings (CRLF vs LF) and trailing whitespace are normalized away — they will never appear as changes."
+    "limitationsP3": "Differences in line endings (CRLF vs LF) and trailing whitespace are normalized away — they will never appear as changes.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is a text diff tool?",
+    "faq1A": "A diff tool compares two texts and highlights the differences between them. This tool shows additions, deletions, and modifications at the word or character level.",
+    "faq2Q": "What diff modes are available?",
+    "faq2A": "Two modes: Side-by-side (shows both texts with differences highlighted) and Inline (shows merged differences in a single view). Both support word-level granularity.",
+    "faq3Q": "Is there a file size limit?",
+    "faq3A": "Diff computation runs entirely in your browser using a Web Worker. Performance depends on your device, but texts up to several hundred KB work smoothly."
   }
 }

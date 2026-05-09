@@ -26,6 +26,13 @@
     "useCasesP2": "Base64 可用于将表单数据或 JSON 等输入转换为字符集更精简且 URL 安全的字符串。不过，由于某些服务器可能对加号 (+) 和斜杠 (/) 字符有特殊处理，建议使用 encodeURIComponent 替代。",
     "limitationsTitle": "Base64 的局限性",
     "limitationsP1": "Base64 并非一种安全的加密方式。",
-    "limitationsP2": "Base64 也不是一种压缩方式。将字符串编码为 Base64 通常会使输出长度增加 33%。"
+    "limitationsP2": "Base64 也不是一种压缩方式。将字符串编码为 Base64 通常会使输出长度增加 33%。",
+    "faqTitle": "常见问题",
+    "faq1Q": "什么是 Base64 编码？",
+    "faq1A": "Base64 是一种二进制到文本的编码方案，使用 64 个 ASCII 字符（A-Z、a-z、0-9、+、/）表示二进制数据。常用于在 URL、HTML 和 JSON 中嵌入数据。",
+    "faq2Q": "Base64 是加密吗？",
+    "faq2A": "不是。Base64 是编码而非加密，不提供任何安全性——任何人都可以解码。如需数据保护，请使用加密/解密工具。",
+    "faq3Q": "Base64 编码会增加文件大小吗？",
+    "faq3A": "是的。Base64 编码会使数据大小增加约 33%。每 3 字节输入会变成 4 个字符的输出。"
   }
 }

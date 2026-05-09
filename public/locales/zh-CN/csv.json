@@ -32,6 +32,13 @@
     "useCasesTitle": "使用场景",
     "useCasesP1": "在电子表格和 Web API 之间导入/导出数据，将 API 响应转换为 CSV 进行分析，为数据库批量导入准备数据，以通用可读格式分享表格数据。",
     "limitationsTitle": "限制",
-    "limitationsP1": "嵌套的 JSON 对象会使用点号展平，原始结构无法完全还原。不支持二进制文件和 Excel (.xlsx) 格式。"
+    "limitationsP1": "嵌套的 JSON 对象会使用点号展平，原始结构无法完全还原。不支持二进制文件和 Excel (.xlsx) 格式。",
+    "faqTitle": "常见问题",
+    "faq1Q": "什么是 CSV 转换器？",
+    "faq1A": "一个将 CSV 数据转换为 JSON、Markdown 表格或 TSV 格式（以及反向转换）的工具。支持带引号的字段、自定义分隔符和嵌套对象。",
+    "faq2Q": "支持哪些 CSV 方言？",
+    "faq2A": "RFC 4180 标准 CSV，支持自定义分隔符（逗号、分号、制表符、管道符）。带引号的字段、转义引号和多行值均受支持。",
+    "faq3Q": "可以将嵌套 JSON 扁平化为 CSV 吗？",
+    "faq3A": "可以。工具可以将嵌套 JSON 对象扁平化为点分隔记法的列用于 CSV 导出，也可以将它们还原。"
   }
 }

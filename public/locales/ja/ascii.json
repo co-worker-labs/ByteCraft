@@ -15,5 +15,17 @@
     "glyph": "文字"
   },
   "tip": "💡 行にホバーすると詳細が表示されます。検索バーで10進数、16進数、文字を素早く検索できます。",
-  "searchPlaceholder": "10進数、16進数、文字で検索..."
+  "searchPlaceholder": "10進数、16進数、文字で検索...",
+  "descriptions": {
+    "whatIsTitle": "ASCIIテーブルとは？",
+    "whatIsP1": "ASCII（American Standard Code for Information Interchange）は、英数字、記号、制御コードに数値を割り当てる文字符号化規格です。0〜127の128文字をカバーしています。",
+    "whatIsP2": "このツールは、検索機能、文字とコードの相互変換、表示可能文字と制御コードのカテゴリ分けを備えた完全なインタラクティブASCII参照テーブルを提供します。",
+    "faqTitle": "よくある質問",
+    "faq1Q": "ASCIIとは？",
+    "faq1A": "ASCII（American Standard Code for Information Interchange）は、英字、数字、句読点、制御コードを含む128文字をカバーする7ビット文字エンコーディング標準です。",
+    "faq2Q": "どの制御文字が含まれていますか？",
+    "faq2A": "NUL、TAB、LF、CR、ESC、DELを含む33個の制御コード（0-31および127）すべてが、元のテレタイプ機能の説明付きで収録されています。",
+    "faq3Q": "ASCIIとUnicodeの違いは？",
+    "faq3A": "ASCIIは英語用の128文字をカバーします。Unicodeはこれを拡張してほぼすべての書記体系をカバーする140,000以上の文字を含みます。ASCIIはUnicodeのサブセットです（最初の128コードポイントが一致）。"
+  }
 }

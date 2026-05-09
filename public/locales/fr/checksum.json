@@ -6,5 +6,14 @@
   "selectedFile": "{count} fichier sélectionné",
   "checksumOutput": "Résultat du checksum",
   "algoTip": "Pour les gros fichiers, sélectionnez uniquement les algorithmes nécessaires afin de réduire le temps de traitement.",
-  "calculate": "Calculer"
+  "calculate": "Calculer",
+  "descriptions": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Qu'est-ce qu'un checksum de fichier ?",
+    "faq1A": "Un checksum est une valeur de hachage calculée à partir du contenu d'un fichier. Il est utilisé pour vérifier l'intégrité des fichiers — si un seul octet change, le checksum change complètement.",
+    "faq2Q": "Quels algorithmes de hachage sont disponibles ?",
+    "faq2A": "MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 et CRC32. Plusieurs algorithmes peuvent s'exécuter simultanément sur le même fichier.",
+    "faq3Q": "Y a-t-il une limite de taille de fichier ?",
+    "faq3A": "Pas de limite stricte. L'outil traite les fichiers par morceaux en utilisant l'API File HTML5, prenant en charge des tailles de fichiers illimitées, limitées uniquement par la mémoire de votre appareil."
+  }
 }

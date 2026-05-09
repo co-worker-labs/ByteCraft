@@ -89,5 +89,17 @@
   "status": {
     "engineRestarted": "Database engine restarted — your data was reloaded",
     "abortShortcut": "Press Esc to abort"
+  },
+  "descriptions": {
+    "whatIsTitle": "What is the SQLite Viewer?",
+    "whatIsP1": "The SQLite Viewer lets you open and explore SQLite database files directly in your browser — no server upload required. Run SQL queries, browse tables, and export data as CSV or JSON.",
+    "whatIsP2": "Powered by sql.js (SQLite compiled to WebAssembly), it supports autocomplete, query history, pagination, and handles databases up to browser memory limits.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What databases can I view?",
+    "faq1A": "The tool supports SQLite database files (.db, .sqlite, .sqlite3). Open any SQLite file to browse tables, run queries, and export data.",
+    "faq2Q": "Is my database uploaded to a server?",
+    "faq2A": "No. The database is loaded into browser memory using sql.js (SQLite compiled to WebAssembly). All operations happen locally.",
+    "faq3Q": "What SQL features are supported?",
+    "faq3A": "Full SQLite SQL syntax including SELECT, INSERT, UPDATE, DELETE, JOINs, subqueries, aggregations, and transactions. The editor provides autocomplete for table and column names."
   }
 }

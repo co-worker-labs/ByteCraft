@@ -1,5 +1,10 @@
 {
-  "tabs": { "imagePalette": "이미지에서 추출", "converter": "변환기", "palette": "팔레트", "contrast": "대비" },
+  "tabs": {
+    "imagePalette": "이미지에서 추출",
+    "converter": "변환기",
+    "palette": "팔레트",
+    "contrast": "대비"
+  },
   "vision": {
     "label": "시뮬레이션",
     "none": "정상 시력",
@@ -59,7 +64,10 @@
     "suggestionText": "{color}(으)로 조정하면 {target}을(를) 통과합니다",
     "useThis": "이 색상 사용"
   },
-  "history": { "recent": "최근 색상", "clear": "지우기" },
+  "history": {
+    "recent": "최근 색상",
+    "clear": "지우기"
+  },
   "errors": {
     "invalidColor": "유효하지 않은 색상 값입니다",
     "fileTooLarge": "이미지는 5MB보다 작아야 합니다",
@@ -88,5 +96,14 @@
     "tipEyedropper": "스포이드를 사용해 화면의 어떤 픽셀에서든 색상을 가져올 수 있습니다 (Chromium 브라우저).",
     "tipImage": "팔레트 탭에 이미지를 드롭하면 중앙값 분할 양자화로 6개의 주요 색상을 추출합니다.",
     "tipOklch": "Tailwind v4는 지각적 매끄러움을 위해 OKLCH로 색상을 출력합니다. @theme 블록을 복사해 해당 워크플로에 맞출 수 있습니다."
+  },
+  "descriptions": {
+    "faqTitle": "자주 묻는 질문",
+    "faq1Q": "Color Tool이란?",
+    "faq1A": "Color Tool은 HEX, RGB, HSL, OKLCH 색상 모델을 지원하는 종합 색상 유틸리티로, 시각적 피커, 변환, 대비 검사 기능을 제공합니다.",
+    "faq2Q": "OKLCH 색상 공간이란?",
+    "faq2A": "OKLCH는 HSL이나 RGB보다 사람의 시각에 더 잘 맞는 지각 균일 색상 공간입니다. 더 일관적인 명도 그라데이션과 접근성 높은 팔레트를 생성합니다.",
+    "faq3Q": "이미지에서 색상을 추출할 수 있나요?",
+    "faq3A": "네. 팔레트 추출 영역에 이미지를 드래그 앤 드롭하면 주요 색상을 얻을 수 있습니다. 색각 이상 시뮬레이션(제1, 2, 3색각)도 가능합니다."
   }
 }

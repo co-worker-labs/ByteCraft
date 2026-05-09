@@ -160,7 +160,14 @@
     "specialCharsTitle": "Caracteres especiais",
     "modesTitle": "Modos",
     "dstTitle": "Horário de verão",
-    "dst": "Quando o fuso horário ativo observa horário de verão, agendamentos dentro do intervalo perdido disparam no próximo horário válido, e agendamentos no horário duplicado disparam na primeira ocorrência. Mude para UTC para evitar o horário de verão completamente."
+    "dst": "Quando o fuso horário ativo observa horário de verão, agendamentos dentro do intervalo perdido disparam no próximo horário válido, e agendamentos no horário duplicado disparam na primeira ocorrência. Mude para UTC para evitar o horário de verão completamente.",
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "O que é uma expressão Cron?",
+    "faq1A": "Uma expressão Cron é uma string de 5-7 campos que define um agendamento para tarefas recorrentes. É usada por daemons cron, agendadores de tarefas e frameworks como Spring e Quartz.",
+    "faq2Q": "Quais dialetos Cron são suportados?",
+    "faq2A": "Três: Padrão (5 campos), Spring (6 campos com segundos) e Quartz (7 campos com segundos e ano). A ferramenta detecta automaticamente o dialeto e mostra as próximas execuções.",
+    "faq3Q": "Quão precisas são as previsões de próxima execução?",
+    "faq3A": "As previsões são calculadas no cliente e correspondem ao comportamento padrão do cron. A ferramenta mostra as 5 próximas execuções agendadas para sua expressão."
   },
   "editor": {
     "title": "Editar campo",

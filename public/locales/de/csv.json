@@ -32,6 +32,13 @@
     "useCasesTitle": "Anwendungsfälle",
     "useCasesP1": "Daten zwischen Tabellenkalkulationen und Web-APIs importieren/exportieren, API-Antworten in CSV zur Analyse konvertieren, Daten für den Datenbank-Massenimport aufbereiten, Tabellendaten in einem universell lesbaren Format teilen.",
     "limitationsTitle": "Einschränkungen",
-    "limitationsP1": "Verschachtelte JSON-Objekte werden mittels Dot-Notation vereinfacht. Die ursprüngliche Struktur kann nicht vollständig wiederhergestellt werden. Binärdateien und das Excel-Format (.xlsx) werden nicht unterstützt."
+    "limitationsP1": "Verschachtelte JSON-Objekte werden mittels Dot-Notation vereinfacht. Die ursprüngliche Struktur kann nicht vollständig wiederhergestellt werden. Binärdateien und das Excel-Format (.xlsx) werden nicht unterstützt.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was ist der CSV-Konverter?",
+    "faq1A": "Ein Tool zum Konvertieren von CSV-Daten in JSON, Markdown-Tabellen oder TSV-Format und zurück. Es verarbeitet Felder in Anführungszeichen, benutzerdefinierte Trennzeichen und verschachtelte Objekte.",
+    "faq2Q": "Welche CSV-Dialekte werden unterstützt?",
+    "faq2A": "RFC 4180 Standard-CSV mit anpassbaren Trennzeichen (Komma, Semikolon, Tab, Pipe). Felder in Anführungszeichen, escapierte Anführungszeichen und mehrzeilige Werte werden alle unterstützt.",
+    "faq3Q": "Kann ich verschachteltes JSON zu CSV abflachen?",
+    "faq3A": "Ja. Das Tool kann verschachtelte JSON-Objekte in Dot-Notation-Spalten für den CSV-Export abflachen und wieder zurück."
   }
 }

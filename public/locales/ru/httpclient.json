@@ -1,26 +1,66 @@
 {
-  "url": { "placeholder": "https://api.example.com/users" },
-  "method": { "label": "Метод" },
-  "timeout": { "label": "Таймаут" },
-  "proxy": { "label": "Proxy", "tooltip": "Маршрутизировать запросы через серверный прокси для обхода ограничений CORS" },
+  "url": {
+    "placeholder": "https://api.example.com/users"
+  },
+  "method": {
+    "label": "Метод"
+  },
+  "timeout": {
+    "label": "Таймаут"
+  },
+  "proxy": {
+    "label": "Proxy",
+    "tooltip": "Маршрутизировать запросы через серверный прокси для обхода ограничений CORS"
+  },
   "send": "Отправить",
   "sending": "Отправка...",
-  "tabs": { "params": "Параметры", "headers": "Заголовки", "body": "Тело", "auth": "Аутентификация" },
-  "bodyType": { "none": "нет", "json": "JSON", "form-data": "Form-Data", "urlencoded": "x-www-form-urlencoded", "raw": "Raw" },
-  "authType": { "none": "нет", "bearer": "Bearer Token", "basic": "Basic Auth" },
-  "bearerToken": { "placeholder": "Введите Bearer токен" },
-  "basicAuth": { "username": "Имя пользователя", "password": "Пароль", "usernamePlaceholder": "Имя пользователя", "passwordPlaceholder": "Пароль" },
-  "kv": { "keyPlaceholder": "Ключ", "valuePlaceholder": "Значение" },
+  "tabs": {
+    "params": "Параметры",
+    "headers": "Заголовки",
+    "body": "Тело",
+    "auth": "Аутентификация"
+  },
+  "bodyType": {
+    "none": "нет",
+    "json": "JSON",
+    "form-data": "Form-Data",
+    "urlencoded": "x-www-form-urlencoded",
+    "raw": "Raw"
+  },
+  "authType": {
+    "none": "нет",
+    "bearer": "Bearer Token",
+    "basic": "Basic Auth"
+  },
+  "bearerToken": {
+    "placeholder": "Введите Bearer токен"
+  },
+  "basicAuth": {
+    "username": "Имя пользователя",
+    "password": "Пароль",
+    "usernamePlaceholder": "Имя пользователя",
+    "passwordPlaceholder": "Пароль"
+  },
+  "kv": {
+    "keyPlaceholder": "Ключ",
+    "valuePlaceholder": "Значение"
+  },
   "bodyPlaceholder": "Введите тело запроса...",
   "response": {
     "title": "Ответ",
     "emptyState": "Введите URL и нажмите Отправить",
-    "tabs": { "body": "Тело", "headers": "Заголовки", "cookies": "Cookies", "timing": "Время", "redirects": "Перенаправления" },
+    "tabs": {
+      "body": "Тело",
+      "headers": "Заголовки",
+      "cookies": "Cookies",
+      "timing": "Время",
+      "redirects": "Перенаправления"
+    },
     "status": "Статус",
     "time": "Время",
     "size": "Размер",
     "type": "Тип",
-    "download": "Скачать",
+    "download": "Загрузка",
     "copyBody": "Копировать тело",
     "pretty": "Формат.",
     "raw": "Raw",
@@ -30,7 +70,6 @@
     "cookieNote": "Cookies доступны только для запросов с тем же источником или когда сервер предоставляет Set-Cookie через CORS-заголовки.",
     "timingNote": "Подробное время (TTFB, загрузка) доступно только когда сервер возвращает заголовок Timing-Allow-Origin.",
     "ttfb": "TTFB",
-    "download": "Загрузка",
     "total": "Итого",
     "na": "Н/Д",
     "crossOrigin": "(кросс-домен)",
@@ -50,7 +89,12 @@
     "title": "История",
     "clear": "Очистить историю",
     "empty": "История пуста",
-    "ago": { "seconds": "{count}с назад", "minutes": "{count}мин назад", "hours": "{count}ч назад", "days": "{count}д назад" }
+    "ago": {
+      "seconds": "{count}с назад",
+      "minutes": "{count}мин назад",
+      "hours": "{count}ч назад",
+      "days": "{count}д назад"
+    }
   },
   "description": {
     "text": "Лёгкий браузерный HTTP-клиент для тестирования REST API. Настраивайте запросы с полным контролем метода, заголовков, тела и аутентификации, затем изучайте ответы с таймингом, заголовками и файлами cookie. По умолчанию запросы отправляются напрямую через fetch() браузера. Включите прокси-переключатель, чтобы маршрутизировать запросы через серверный прокси, обходя ограничения CORS. Данные не сохраняются ни на одном сервере.",
@@ -67,5 +111,14 @@
       "title": "CORS и прокси",
       "text": "По умолчанию этот инструмент использует нативный fetch() API браузера. Кросс-доменные запросы требуют, чтобы целевой сервер включал соответствующие CORS-заголовки. Если сервер не поддерживает CORS, включите переключатель прокси: запросы будут маршрутизироваться через серверный прокси, полностью обходя ограничения CORS."
     }
+  },
+  "descriptions": {
+    "faqTitle": "Часто задаваемые вопросы",
+    "faq1Q": "Что такое инструмент HTTP-клиент?",
+    "faq1A": "Браузерный HTTP-клиент для тестирования API. Отправляйте запросы GET, POST, PUT, PATCH, DELETE, HEAD и OPTIONS с пользовательскими заголовками, параметрами запроса и телами запросов.",
+    "faq2Q": "Можно ли использовать аутентификацию?",
+    "faq2A": "Да. Поддерживается Basic Auth, Bearer-токены, API-ключи (заголовок и запрос) и пользовательские заголовки аутентификации. Все учётные данные остаются в вашем браузере.",
+    "faq3Q": "Поддерживается ли история запросов?",
+    "faq3A": "Да. Все запросы сохраняются в локальном хранилище с полными деталями запроса/ответа. Вы можете добавить часто используемые запросы в избранное для быстрого доступа."
   }
 }

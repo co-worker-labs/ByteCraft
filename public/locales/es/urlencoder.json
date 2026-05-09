@@ -30,6 +30,13 @@
     "useCasesP3": "Enviar datos de formulario con fetch: cuando haces POST de un cuerpo con Content-Type: application/x-www-form-urlencoded, el cuerpo debe codificarse con la semántica del modo Formulario. El modo Formulario de esta herramienta produce una salida compatible byte a byte con lo que el navegador envía.",
     "limitationsTitle": "Limitaciones",
     "limitationsP1": "La codificación URL no es cifrado. Cualquiera puede decodificar la salida con una sola llamada a función. Nunca uses codificación para ocultar secretos.",
-    "limitationsP2": "La elección del modo importa. Pasar una URL completa por el modo Componente rompe la URL (cada / se convierte en %2F). Pasar un valor de query por el modo URL completa puede dejar caracteres reservados peligrosos (un & en el valor sigue pareciendo un separador de parámetros). Ante la duda, elige Componente."
+    "limitationsP2": "La elección del modo importa. Pasar una URL completa por el modo Componente rompe la URL (cada / se convierte en %2F). Pasar un valor de query por el modo URL completa puede dejar caracteres reservados peligrosos (un & en el valor sigue pareciendo un separador de parámetros). Ante la duda, elige Componente.",
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué es la codificación URL?",
+    "faq1A": "La codificación URL (codificación porcentual) convierte caracteres en un formato que puede transmitirse por internet. Los caracteres especiales como espacios, comillas y no-ASCII se reemplazan con secuencias %XX.",
+    "faq2Q": "¿Qué modos de codificación están disponibles?",
+    "faq2A": "Tres modos: Componente (codifica todos los caracteres reservados), URL completa (preserva la estructura URL como ://, ?, &) y Formulario (el espacio se convierte en + en vez de %20).",
+    "faq3Q": "¿Cuándo debo usar codificación URL?",
+    "faq3A": "Usa codificación URL al pasar datos en parámetros de consulta, incrustar URLs en HTML o manejar caracteres especiales en llamadas API."
   }
 }

@@ -1,21 +1,61 @@
 {
-  "url": { "placeholder": "https://api.example.com/users" },
-  "method": { "label": "메서드" },
-  "timeout": { "label": "시간 초과" },
-  "proxy": { "label": "Proxy", "tooltip": "서버 측 프록시를 통해 요청을 전송하여 CORS 제한 우회" },
+  "url": {
+    "placeholder": "https://api.example.com/users"
+  },
+  "method": {
+    "label": "메서드"
+  },
+  "timeout": {
+    "label": "시간 초과"
+  },
+  "proxy": {
+    "label": "Proxy",
+    "tooltip": "서버 측 프록시를 통해 요청을 전송하여 CORS 제한 우회"
+  },
   "send": "보내기",
   "sending": "전송 중...",
-  "tabs": { "params": "매개변수", "headers": "헤더", "body": "본문", "auth": "인증" },
-  "bodyType": { "none": "없음", "json": "JSON", "form-data": "폼 데이터", "urlencoded": "x-www-form-urlencoded", "raw": "Raw" },
-  "authType": { "none": "없음", "bearer": "Bearer Token", "basic": "Basic 인증" },
-  "bearerToken": { "placeholder": "Bearer 토큰 입력" },
-  "basicAuth": { "username": "사용자 이름", "password": "비밀번호", "usernamePlaceholder": "사용자 이름", "passwordPlaceholder": "비밀번호" },
-  "kv": { "keyPlaceholder": "키", "valuePlaceholder": "값" },
+  "tabs": {
+    "params": "매개변수",
+    "headers": "헤더",
+    "body": "본문",
+    "auth": "인증"
+  },
+  "bodyType": {
+    "none": "없음",
+    "json": "JSON",
+    "form-data": "폼 데이터",
+    "urlencoded": "x-www-form-urlencoded",
+    "raw": "Raw"
+  },
+  "authType": {
+    "none": "없음",
+    "bearer": "Bearer Token",
+    "basic": "Basic 인증"
+  },
+  "bearerToken": {
+    "placeholder": "Bearer 토큰 입력"
+  },
+  "basicAuth": {
+    "username": "사용자 이름",
+    "password": "비밀번호",
+    "usernamePlaceholder": "사용자 이름",
+    "passwordPlaceholder": "비밀번호"
+  },
+  "kv": {
+    "keyPlaceholder": "키",
+    "valuePlaceholder": "값"
+  },
   "bodyPlaceholder": "요청 본문을 입력하세요...",
   "response": {
     "title": "응답",
     "emptyState": "URL을 입력하고 보내기를 클릭하세요",
-    "tabs": { "body": "본문", "headers": "헤더", "cookies": "Cookies", "timing": "타이밍", "redirects": "리다이렉트" },
+    "tabs": {
+      "body": "본문",
+      "headers": "헤더",
+      "cookies": "Cookies",
+      "timing": "타이밍",
+      "redirects": "리다이렉트"
+    },
     "status": "상태",
     "time": "시간",
     "size": "크기",
@@ -30,7 +70,6 @@
     "cookieNote": "Cookie는 동일 출처 요청이거나 서버가 CORS를 통해 Set-Cookie를 노출하는 경우에만 볼 수 있습니다.",
     "timingNote": "상세 타이밍(TTFB, 다운로드)은 서버가 Timing-Allow-Origin 헤더를 반환할 때만 사용할 수 있습니다.",
     "ttfb": "TTFB",
-    "download": "다운로드",
     "total": "총계",
     "na": "N/A",
     "crossOrigin": "(크로스 오리진)",
@@ -50,7 +89,12 @@
     "title": "기록",
     "clear": "기록 삭제",
     "empty": "기록 없음",
-    "ago": { "seconds": "{count}초 전", "minutes": "{count}분 전", "hours": "{count}시간 전", "days": "{count}일 전" }
+    "ago": {
+      "seconds": "{count}초 전",
+      "minutes": "{count}분 전",
+      "hours": "{count}시간 전",
+      "days": "{count}일 전"
+    }
   },
   "description": {
     "text": "REST API 테스트를 위한 가벼운 브라우저 기반 HTTP 클라이언트입니다. 요청 메서드, 헤더, 본문, 인증 방식을 자유롭게 구성하고, 응답의 타이밍 정보, 헤더, 쿠키를 확인할 수 있습니다. 기본적으로 브라우저 fetch()로 직접 요청을 보냅니다. 프록시 토글을 켜면 서버 측 프록시를 통해 요청이 전달되어 CORS 제한을 우회할 수 있습니다. 데이터는 어떤 서버에도 저장되지 않습니다.",
@@ -67,5 +111,14 @@
       "title": "CORS 및 프록시",
       "text": "기본적으로 브라우저의 네이티브 fetch() API를 사용합니다. 크로스 오리진 요청은 대상 서버가 적절한 CORS 헤더를 반환해야 합니다. 서버가 CORS를 지원하지 않는 경우 프록시 토글을 활성화하세요. 요청이 서버 측 프록시를 통해 전달되어 CORS 제한을 완전히 우회합니다."
     }
+  },
+  "descriptions": {
+    "faqTitle": "자주 묻는 질문",
+    "faq1Q": "HTTP Client 도구란?",
+    "faq1A": "API 테스트용 브라우저 기반 HTTP 클라이언트입니다. 사용자 지정 헤더, 쿼리 매개변수, 요청 본문으로 GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS 요청을 보낼 수 있습니다.",
+    "faq2Q": "인증을 사용할 수 있나요?",
+    "faq2A": "네. Basic Auth, Bearer 토큰, API 키(헤더 및 쿼리), 사용자 지정 인증 헤더를 지원합니다. 모든 자격 증명은 브라우저에만 저장됩니다.",
+    "faq3Q": "요청 기록을 지원하나요?",
+    "faq3A": "네. 모든 요청은 전체 요청/응답 세부 정보와 함께 로컬 스토리지에 저장됩니다. 자주 사용하는 요청을 북마크하여 빠르게 접근할 수 있습니다."
   }
 }

@@ -31,5 +31,14 @@
     "titleCase": "Article / book titles",
     "sentenceCase": "Sentence-leading capitalization",
     "pathCase": "File paths, API routes"
+  },
+  "descriptions": {
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What text case conversions are available?",
+    "faq1A": "camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case, Title Case, Sentence case, UPPER CASE, lower case, and more.",
+    "faq2Q": "Can I convert multiple strings at once?",
+    "faq2A": "Yes. Paste multiple lines and the tool converts each line independently. Multi-line conversion applies the selected case to every line.",
+    "faq3Q": "Does it handle non-ASCII characters?",
+    "faq3A": "Yes. The tool correctly handles Unicode characters including accented letters, CJK characters, and emojis in case conversions."
   }
 }

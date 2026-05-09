@@ -15,9 +15,14 @@ import { MAX_FILE_BYTES } from "../../../libs/file/limits";
 import { isBinaryFile } from "../../../libs/file/binary-sniff";
 import { renderMarkdown } from "../../../libs/markdown/render";
 import { downloadMd, printPdf, exportPng } from "../../../libs/markdown/export";
+import { ensureLanguagesLoaded } from "../../../libs/markdown/highlight";
 import { useIsMobile } from "../../../hooks/use-is-mobile";
 import { EditorView } from "./components/EditorView";
 import { PreviewView } from "./components/PreviewView";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 type EditorMode = "edit" | "preview" | "split";
 
@@ -63,6 +68,10 @@ function MarkdownPageBody() {
   const scrollLockRef = useRef(false);
 
   const isMobile = useIsMobile();
+
+  useEffect(() => {
+    ensureLanguagesLoaded();
+  }, []);
 
   const tooLargeForAuto = markdown.length > AUTO_RENDER_MAX_BYTES;
   const wordCount = markdown.trim() ? markdown.trim().split(/\s+/).length : 0;
@@ -315,13 +324,8 @@ function MarkdownPageBody() {
           </div>
         </div>
       )}
-      <div
-        data-no-print
-        className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4"
-      >
-        <span className="text-sm text-fg-secondary leading-relaxed">
-          {tc("alert.notTransferred")}
-        </span>
+      <div data-no-print>
+        <PrivacyBanner />
       </div>
 
       <div data-no-print className="flex flex-wrap items-center gap-2 my-3">
@@ -421,6 +425,11 @@ function MarkdownPageBody() {
 
 function Description() {
   const t = useTranslations("markdown");
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section id="description" className="mt-8">
       <div className="mb-4">
@@ -441,6 +450,15 @@ function Description() {
           <p>{t("descriptions.gfmP1")}</p>
         </div>
       </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {t("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
     </section>
   );
 }
@@ -453,6 +471,7 @@ export default function MarkdownPage() {
       <div className="container mx-auto px-4 pt-3 pb-6">
         <MarkdownPageBody />
         <Description />
+        <RelatedTools currentTool="markdown" />
       </div>
     </Layout>
   );

@@ -19,6 +19,13 @@
     "whatIsTitle": "Was ist Zahlenbasiskonvertierung?",
     "whatIs": "Zahlenbasiskonvertierung wandelt eine Zahl von einem positionellen Zahlensystem in ein anderes um. Computer verwenden Binär (Basis 2), während Menschen typischerweise mit Dezimal (Basis 10) arbeiten. Hexadezimal (Basis 16) und Oktal (Basis 8) bieten kompakte Darstellungen von Binärdaten, die häufig beim Debuggen, in Netzwerkprotokollen, Farbcodes und Dateiberechtigungen verwendet werden.",
     "twosComplementTitle": "Zweierkomplement",
-    "twosComplement": "Das Zweierkomplement ist die Standardmethode zur Darstellung vorzeichenbehafteter Ganzzahlen im Binärsystem. Das höchstwertige Bit (MSB) dient als Vorzeichenbit: 0 für positiv, 1 für negativ. Um den negativen Wert zu erhalten, invertieren Sie alle Bits und addieren 1. Zum Beispiel wird im 8-Bit-Modus -1 als 11111111 (0xFF) dargestellt."
+    "twosComplement": "Das Zweierkomplement ist die Standardmethode zur Darstellung vorzeichenbehafteter Ganzzahlen im Binärsystem. Das höchstwertige Bit (MSB) dient als Vorzeichenbit: 0 für positiv, 1 für negativ. Um den negativen Wert zu erhalten, invertieren Sie alle Bits und addieren 1. Zum Beispiel wird im 8-Bit-Modus -1 als 11111111 (0xFF) dargestellt.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Welche Zahlensysteme werden unterstützt?",
+    "faq1A": "Binär (Basis 2), Oktal (Basis 8), Dezimal (Basis 10) und Hexadezimal (Basis 16) mit Echtzeit-Konvertierung zwischen allen vieren.",
+    "faq2Q": "Kann ich einzelne Bits bearbeiten?",
+    "faq2A": "Ja. Der Bit-Editor zeigt die Binärdarstellung und ermöglicht das Umschalten einzelner Bits mit sofortiger Aktualisierung aller anderen Basiskonvertierungen.",
+    "faq3Q": "Wird Zweierkomplement unterstützt?",
+    "faq3A": "Ja. Das Tool kann vorzeichenbehaftete Ganzzahlen in Zweierkomplementdarstellung für 8-, 16-, 32- und 64-Bit-Wortgrößen anzeigen."
   }
 }

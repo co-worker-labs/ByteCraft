@@ -162,7 +162,14 @@
     "limitationsP1": "Nur JavaScript-Regex. Dieses Tool verwendet die integrierte Regex-Engine des Browsers. PCRE, Python und andere Regex-Varianten können sich unterschiedlich verhalten.",
     "limitationsP2": "Kein Lookbehind in älteren Browsern. Lookbehind-Assertions (?<=...) erfordern ES2018+. Safari hat die Unterstützung erst 2023 hinzugefügt.",
     "limitationsP3": "Trefferlimit bei 1.000. Um die UI reaktionsfähig zu halten, werden nur die ersten 1.000 Treffer gerendert.",
-    "limitationsP4": "Erfassungsgruppen im Text nicht hervorgehoben. Gruppen werden in der Trefferliste angezeigt, nicht inline im hervorgehobenen Text."
+    "limitationsP4": "Erfassungsgruppen im Text nicht hervorgehoben. Gruppen werden in der Trefferliste angezeigt, nicht inline im hervorgehobenen Text.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was ist ein regulärer Ausdruck?",
+    "faq1A": "Ein regulärer Ausdruck (Regex) ist eine Zeichenfolge, die ein Suchmuster definiert. Er wird für Zeichenfolgenabgleich, Validierung, Suchen-Ersetzen und Textextraktion verwendet.",
+    "faq2Q": "Kann ich Regex mit Flags testen?",
+    "faq2A": "Ja. Dieses Tool unterstützt alle Standard-JavaScript-Regex-Flags: g (global), i (Groß-/Kleinschreibung ignorieren), m (mehrzeilig), s (dotAll), u (unicode) und y (sticky).",
+    "faq3Q": "Was ist der Erklärungsmodus?",
+    "faq3A": "Der Erklärungsmodus zerlegt Ihr Regex-Muster in lesbare Beschreibungen und zeigt, was jedes Token matched und wie Quantifizierer und Gruppen funktionieren."
   },
   "explainGroupNamed": "Gruppe: {name}"
 }

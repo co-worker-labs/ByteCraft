@@ -1,21 +1,28 @@
 import Prism from "prismjs";
 
-// Core langs (javascript, css, markup, clike) are bundled in prism core.
-// We import the component file anyway for explicitness — these are no-ops.
 import "prismjs/components/prism-markup";
 import "prismjs/components/prism-css";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 
-// Extra langs (require explicit import).
-import "prismjs/components/prism-typescript";
-import "prismjs/components/prism-python";
-import "prismjs/components/prism-bash";
-import "prismjs/components/prism-json";
-import "prismjs/components/prism-sql";
-import "prismjs/components/prism-yaml";
-import "prismjs/components/prism-go";
-import "prismjs/components/prism-rust";
+const EXTRA_LANGS = ["typescript", "python", "bash", "json", "sql", "yaml", "go", "rust"];
+
+const loadedLangs = new Set<string>();
+
+export async function loadPrismLanguage(lang: string): Promise<void> {
+  const resolved = LANGUAGE_ALIASES[lang] ?? lang;
+  if (loadedLangs.has(resolved) || Prism.languages[resolved]) return;
+  try {
+    await import(`prismjs/components/prism-${resolved}`);
+    loadedLangs.add(resolved);
+  } catch {
+    // Language not available, fallback to plain text
+  }
+}
+
+export async function ensureLanguagesLoaded(): Promise<void> {
+  await Promise.all(EXTRA_LANGS.map((lang) => loadPrismLanguage(lang)));
+}
 
 const LANGUAGE_ALIASES: Record<string, string> = {
   js: "javascript",

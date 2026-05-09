@@ -1,5 +1,10 @@
 {
-  "tabs": { "imagePalette": "画像から抽出", "converter": "変換", "palette": "パレット", "contrast": "コントラスト" },
+  "tabs": {
+    "imagePalette": "画像から抽出",
+    "converter": "変換",
+    "palette": "パレット",
+    "contrast": "コントラスト"
+  },
   "vision": {
     "label": "色覚",
     "none": "正常な視覚",
@@ -59,7 +64,10 @@
     "suggestionText": "{color}に調整すると{target}に合格します",
     "useThis": "この色を使う"
   },
-  "history": { "recent": "最近使った色", "clear": "クリア" },
+  "history": {
+    "recent": "最近使った色",
+    "clear": "クリア"
+  },
   "errors": {
     "invalidColor": "無効なカラー値です",
     "fileTooLarge": "画像は5MB未満にしてください",
@@ -88,5 +96,14 @@
     "tipEyedropper": "スポイトを使って画面上の任意のピクセルから色を取得できます（Chromium系ブラウザ）。",
     "tipImage": "パレットタブに画像をドロップすると、メディアンカット量子化で6つの主要色を抽出します。",
     "tipOklch": "Tailwind v4は知覚的な滑らかさのためにOKLCHで色を出力します。@themeブロックをコピーしてそのワークフローに合わせられます。"
+  },
+  "descriptions": {
+    "faqTitle": "よくある質問",
+    "faq1Q": "Color Toolとは？",
+    "faq1A": "Color Toolは、HEX、RGB、HSL、OKLCHカラーモデルに対応した包括的なカラーユーティリティで、ビジュアルピッカー、変換、コントラストチェックを備えています。",
+    "faq2Q": "OKLCHカラースペースとは？",
+    "faq2A": "OKLCHはHSLやRGBよりも人間の視覚に近い知覚均等カラースペースです。より一貫性のある明度グラデーションとアクセシビリティの高いパレットを生成します。",
+    "faq3Q": "画像から色を抽出できますか？",
+    "faq3A": "はい。パレット抽出エリアに画像をドラッグ＆ドロップすると主要な色を取得できます。色覚異常のシミュレーション（1型、2型、3型色覚）も可能です。"
   }
 }

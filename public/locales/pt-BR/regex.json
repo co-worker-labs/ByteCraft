@@ -162,7 +162,14 @@
     "limitationsP1": "Apenas regex JavaScript — esta ferramenta usa o mecanismo de regex nativo do navegador. PCRE, Python e outros sabores de regex podem se comportar de forma diferente.",
     "limitationsP2": "Sem lookbehind em navegadores antigos — asserções lookbehind (?<=...) requerem ES2018+. Safari adicionou suporte apenas em 2023.",
     "limitationsP3": "Limite de 1.000 correspondências — para manter a interface responsiva, apenas as primeiras 1.000 correspondências são renderizadas.",
-    "limitationsP4": "Grupos de captura não destacados no texto — grupos são mostrados na lista de correspondências, não inline no texto destacado."
+    "limitationsP4": "Grupos de captura não destacados no texto — grupos são mostrados na lista de correspondências, não inline no texto destacado.",
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "O que é uma expressão regular?",
+    "faq1A": "Uma expressão regular (regex) é uma sequência de caracteres que define um padrão de busca. É usada para correspondência de strings, validação, busca e substituição e extração de texto.",
+    "faq2Q": "Posso testar regex com flags?",
+    "faq2A": "Sim. Esta ferramenta suporta todas as flags padrão de regex do JavaScript: g (global), i (insensível a maiúsculas), m (multiline), s (dotAll), u (unicode) e y (sticky).",
+    "faq3Q": "O que é o modo Explicar?",
+    "faq3A": "O modo Explicar detalha seu padrão regex em descrições legíveis, mostrando o que cada token corresponde e como quantificadores e grupos funcionam."
   },
   "explainGroupNamed": "grupo: {name}"
 }

@@ -34,5 +34,14 @@
     "ipaEntityCode": "Código da entidade IPA",
     "example": "Exemplo"
   },
-  "searchPlaceholder": "Buscar por caractere, código ou descrição..."
+  "searchPlaceholder": "Buscar por caractere, código ou descrição...",
+  "descriptions": {
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "O que são entidades de caracteres HTML?",
+    "faq1A": "Entidades HTML são códigos especiais (como &amp; para &) usados para representar caracteres que têm significado especial em HTML ou não podem ser digitados diretamente.",
+    "faq2Q": "Quantas entidades estão documentadas?",
+    "faq2A": "A ferramenta fornece uma referência completa de caracteres especiais HTML incluindo entidades nomeadas (&amp;), decimais (&#38;) e hexadecimais (&#x26;).",
+    "faq3Q": "Posso buscar caracteres específicos?",
+    "faq3A": "Sim. Busque por nome do caractere, nome da entidade ou ponto de código para encontrar rapidamente a entidade HTML que você precisa."
+  }
 }

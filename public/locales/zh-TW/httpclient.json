@@ -1,21 +1,61 @@
 {
-  "url": { "placeholder": "https://api.example.com/users" },
-  "method": { "label": "請求方法" },
-  "timeout": { "label": "逾時時間" },
-  "proxy": { "label": "Proxy", "tooltip": "透過本站伺服器端代理轉發請求，繞過 CORS 跨域限制" },
+  "url": {
+    "placeholder": "https://api.example.com/users"
+  },
+  "method": {
+    "label": "請求方法"
+  },
+  "timeout": {
+    "label": "逾時時間"
+  },
+  "proxy": {
+    "label": "Proxy",
+    "tooltip": "透過本站伺服器端代理轉發請求，繞過 CORS 跨域限制"
+  },
   "send": "傳送",
   "sending": "傳送中...",
-  "tabs": { "params": "參數", "headers": "請求標頭", "body": "請求主體", "auth": "認證" },
-  "bodyType": { "none": "無", "json": "JSON", "form-data": "表單資料", "urlencoded": "x-www-form-urlencoded", "raw": "原始文字" },
-  "authType": { "none": "無", "bearer": "Bearer Token", "basic": "Basic 認證" },
-  "bearerToken": { "placeholder": "輸入 Bearer Token" },
-  "basicAuth": { "username": "使用者名稱", "password": "密碼", "usernamePlaceholder": "使用者名稱", "passwordPlaceholder": "密碼" },
-  "kv": { "keyPlaceholder": "鍵", "valuePlaceholder": "值" },
+  "tabs": {
+    "params": "參數",
+    "headers": "請求標頭",
+    "body": "請求主體",
+    "auth": "認證"
+  },
+  "bodyType": {
+    "none": "無",
+    "json": "JSON",
+    "form-data": "表單資料",
+    "urlencoded": "x-www-form-urlencoded",
+    "raw": "原始文字"
+  },
+  "authType": {
+    "none": "無",
+    "bearer": "Bearer Token",
+    "basic": "Basic 認證"
+  },
+  "bearerToken": {
+    "placeholder": "輸入 Bearer Token"
+  },
+  "basicAuth": {
+    "username": "使用者名稱",
+    "password": "密碼",
+    "usernamePlaceholder": "使用者名稱",
+    "passwordPlaceholder": "密碼"
+  },
+  "kv": {
+    "keyPlaceholder": "鍵",
+    "valuePlaceholder": "值"
+  },
   "bodyPlaceholder": "輸入請求主體...",
   "response": {
     "title": "回應",
     "emptyState": "輸入 URL 並點擊傳送開始測試",
-    "tabs": { "body": "回應主體", "headers": "回應標頭", "cookies": "Cookies", "timing": "耗時", "redirects": "重新導向" },
+    "tabs": {
+      "body": "回應主體",
+      "headers": "回應標頭",
+      "cookies": "Cookies",
+      "timing": "耗時",
+      "redirects": "重新導向"
+    },
     "status": "狀態",
     "time": "耗時",
     "size": "大小",
@@ -30,7 +70,6 @@
     "cookieNote": "Cookie 僅在同源請求或伺服器透過 CORS 暴露 Set-Cookie 時可見。",
     "timingNote": "詳細耗時（TTFB、下載）僅在伺服器回傳 Timing-Allow-Origin 標頭時可用。",
     "ttfb": "首字元組時間",
-    "download": "下載",
     "total": "總計",
     "na": "不適用",
     "crossOrigin": "（跨域）",
@@ -50,7 +89,12 @@
     "title": "歷史紀錄",
     "clear": "清空歷史",
     "empty": "暫無歷史紀錄",
-    "ago": { "seconds": "{count} 秒前", "minutes": "{count} 分鐘前", "hours": "{count} 小時前", "days": "{count} 天前" }
+    "ago": {
+      "seconds": "{count} 秒前",
+      "minutes": "{count} 分鐘前",
+      "hours": "{count} 小時前",
+      "days": "{count} 天前"
+    }
   },
   "description": {
     "text": "一個輕量級的瀏覽器端 HTTP 用戶端，用於測試 REST API。可以自由設定請求方法、請求頭、請求體和認證方式，發送請求後檢視回應的耗時詳情、回應標頭和 Cookie。預設透過瀏覽器 fetch() 直接發送請求，開啟代理開關後可經由伺服器端代理轉發，繞過 CORS 跨域限制。資料不會儲存在任何伺服器上。",
@@ -67,5 +111,14 @@
       "title": "CORS 與代理",
       "text": "預設情況下，本工具使用瀏覽器原生 fetch() API。跨域請求需要目標伺服器包含正確的 CORS 回應標頭。如果伺服器不支援 CORS，可以開啟代理開關——請求將透過伺服器端代理轉發，完全繞過 CORS 限制。"
     }
+  },
+  "descriptions": {
+    "faqTitle": "常見問題",
+    "faq1Q": "什麼是 HTTP 用戶端工具？",
+    "faq1A": "一個基於瀏覽器的 HTTP 用戶端，用於測試 API。支援 GET、POST、PUT、PATCH、DELETE、HEAD 和 OPTIONS 請求，可自訂請求標頭、查詢參數和請求主體。",
+    "faq2Q": "可以使用身份驗證嗎？",
+    "faq2A": "可以。支援 Basic Auth、Bearer Token、API 金鑰（請求標頭和查詢參數）和自訂驗證標頭。所有憑證保留在你的瀏覽器中。",
+    "faq3Q": "支援請求歷史嗎？",
+    "faq3A": "支援。所有請求都儲存到本機儲存空間，包含完整的請求/回應詳情。你可以將常用請求加入書籤以便快速存取。"
   }
 }

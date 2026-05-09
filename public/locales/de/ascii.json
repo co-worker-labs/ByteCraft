@@ -15,5 +15,17 @@
     "glyph": "Zeichen"
   },
   "tip": "💡 Fahren Sie mit der Maus über eine Zeile für Details. Nutzen Sie die Suchleiste, um Zeichen schnell nach Dezimal-, Hex-Wert oder Glyph zu finden.",
-  "searchPlaceholder": "Suche nach Dezimal, Hex oder Zeichen..."
+  "searchPlaceholder": "Suche nach Dezimal, Hex oder Zeichen...",
+  "descriptions": {
+    "whatIsTitle": "Was ist die ASCII-Tabelle?",
+    "whatIsP1": "ASCII (American Standard Code for Information Interchange) ist ein Zeichencodierungsstandard, der Buchstaben, Ziffern, Satzzeichen und Steuerzeichen numerische Werte zuweist. Er umfasst 128 Zeichen von 0 bis 127.",
+    "whatIsP2": "Dieses Tool bietet eine vollständige interaktive ASCII-Referenztabelle mit Suche, Zeichen-Code-Konvertierung und kategorisierten Bereichen für druckbare Zeichen und Steuercodes.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was ist ASCII?",
+    "faq1A": "ASCII (American Standard Code for Information Interchange) ist ein 7-Bit-Zeichenkodierungsstandard, der 128 Zeichen abdeckt: englische Buchstaben, Ziffern, Interpunktion und Steuerzeichen.",
+    "faq2Q": "Welche Steuerzeichen sind enthalten?",
+    "faq2A": "Alle 33 Steuercodes (0-31 und 127) einschließlich NUL, TAB, LF, CR, ESC und DEL mit Beschreibungen ihrer ursprünglichen Fernschreiber-Funktionen.",
+    "faq3Q": "Wie unterscheidet sich ASCII von Unicode?",
+    "faq3A": "ASCII deckt 128 Zeichen für Englisch ab. Unicode erweitert dies auf über 140.000 Zeichen, die praktisch alle Schriftsysteme abdecken. ASCII ist eine Teilmenge von Unicode (die ersten 128 Codepunkte stimmen überein)."
+  }
 }

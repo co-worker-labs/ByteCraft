@@ -6,5 +6,17 @@
   "conversionOutput": "Résultat de la conversion",
   "measurement": "Mesure",
   "conversionCol": "Conversion",
-  "commonConversionTable": "Table de conversion courante"
+  "commonConversionTable": "Table de conversion courante",
+  "descriptions": {
+    "whatIsTitle": "Qu'est-ce que le Convertisseur d'Unités de Stockage ?",
+    "whatIsP1": "Le Convertisseur d'Unités de Stockage permet de convertir instantanément entre les unités de stockage numérique — octets, Ko, Mo, Go, To, Po — en prenant en charge les normes décimale (SI) et binaire (IEC).",
+    "whatIsP2": "Que vous compariez des tailles de fichiers, provisionniez de l'espace disque ou cherchiez à comprendre les limites de transfert de données, cet outil vous offre des conversions précises en un coup d'œil.",
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Quelles unités de stockage puis-je convertir ?",
+    "faq1A": "Bits, Octets, Ko, Mo, Go, To et Po. L'outil prend en charge la norme décimale (1 Ko = 1000 octets) et binaire (1 Kio = 1024 octets).",
+    "faq2Q": "Pourquoi y a-t-il deux normes de conversion ?",
+    "faq2A": "La décimale (SI) utilise les puissances de 1000 et est utilisée par les fabricants de stockage. La binaire (IEC) utilise les puissances de 1024 et est ce que les systèmes d'exploitation rapportent typiquement.",
+    "faq3Q": "Quelle est la différence entre Ko et Kio ?",
+    "faq3A": "Ko (kilooctet) = 1000 octets. Kio (kibioctet) = 1024 octets. L'IEC a introduit Kio/Mio/Gio pour lever l'ambiguïté, mais Ko/Mo/Go sont encore couramment utilisés pour les deux."
+  }
 }

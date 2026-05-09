@@ -52,6 +52,13 @@
     "limitationsTitle": "Limitaciones",
     "limitationsP1": "La herramienta solo compara texto. Los archivos binarios se detectan y rechazan para mantener el resultado significativo.",
     "limitationsP2": "Las entradas están limitadas a 5MB por lado. Las entradas superiores a 512KB se ejecutan en un Web Worker en segundo plano; la página permanece responsiva pero el diff tarda proporcionalmente más para entradas muy grandes.",
-    "limitationsP3": "Las diferencias en finales de línea (CRLF vs LF) y espacios en blanco finales se normalizan automáticamente, nunca aparecerán como cambios."
+    "limitationsP3": "Las diferencias en finales de línea (CRLF vs LF) y espacios en blanco finales se normalizan automáticamente, nunca aparecerán como cambios.",
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué es una herramienta de diff de texto?",
+    "faq1A": "Una herramienta de diff compara dos textos y resalta las diferencias entre ellos. Esta herramienta muestra adiciones, eliminaciones y modificaciones a nivel de palabra o carácter.",
+    "faq2Q": "¿Qué modos de diff están disponibles?",
+    "faq2A": "Dos modos: Lado a lado (muestra ambos textos con diferencias resaltadas) y En línea (muestra diferencias fusionadas en una sola vista). Ambos soportan granularidad a nivel de palabra.",
+    "faq3Q": "¿Hay un límite de tamaño de archivo?",
+    "faq3A": "El cálculo de diff se ejecuta completamente en tu navegador usando un Web Worker. El rendimiento depende de tu dispositivo, pero textos de hasta varios cientos de KB funcionan sin problemas."
   }
 }

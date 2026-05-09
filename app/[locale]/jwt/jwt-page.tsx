@@ -1,9 +1,14 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Eraser } from "lucide-react";
-import JsonView from "@uiw/react-json-view";
+
+const JsonView = dynamic(() => import("@uiw/react-json-view"), {
+  ssr: false,
+  loading: () => <div className="h-48 animate-pulse bg-bg-input rounded" />,
+});
 import Layout from "../../../components/layout";
 import { NeonTabs } from "../../../components/ui/tabs";
 import { StyledTextarea, StyledSelect } from "../../../components/ui/input";
@@ -21,6 +26,10 @@ import {
   type JwtAlgorithm,
   type VerifyResult,
 } from "../../../libs/jwt/main";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const DEFAULT_ALGORITHM: JwtAlgorithm = "HS256";
 const DEFAULT_HEADER = '{"alg": "HS256", "typ": "JWT"}';
@@ -447,6 +456,11 @@ function EncodeTab() {
 
 function Description() {
   const t = useTranslations("jwt");
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section className="mt-8 space-y-4">
       <div>
@@ -477,6 +491,15 @@ function Description() {
           {t("descriptions.keyFormats")}
         </p>
       </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {t("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
     </section>
   );
 }
@@ -486,7 +509,6 @@ function Description() {
 export default function JwtPage() {
   const t = useTranslations("jwt");
   const ts = useTranslations("tools");
-  const tc = useTranslations("common");
 
   // Decode state
   const [token, setToken] = useState("");
@@ -528,11 +550,7 @@ export default function JwtPage() {
   return (
     <Layout title={ts("jwt.shortTitle")}>
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
 
         <NeonTabs
           tabs={[
@@ -557,6 +575,7 @@ export default function JwtPage() {
         />
 
         <Description />
+        <RelatedTools currentTool="jwt" />
       </div>
     </Layout>
   );

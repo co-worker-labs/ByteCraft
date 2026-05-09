@@ -27,8 +27,8 @@
     "backHome": "返回首页"
   },
   "alert": {
-    "notTransferred": "* 您的内容不会传输到服务器，所有计算均在浏览器中直接完成",
-    "filesNotTransferred": "* 您选择的文件不会传输到服务器，所有计算均在浏览器中直接完成",
+    "notTransferred": "数据不发送至服务器 — 所有处理均在浏览器中完成",
+    "filesNotTransferred": "文件保留在本地 — 所有处理均在浏览器中完成",
     "checksumInfo": "这是一个基于 HTML5 的在线校验工具，支持不限数量的文件和不限大小的文件。",
     "invalidCipher": "无效的密文、密码或设置"
   },

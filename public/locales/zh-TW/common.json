@@ -27,8 +27,8 @@
     "backHome": "返回首頁"
   },
   "alert": {
-    "notTransferred": "* 您的內容不會傳送至伺服器。所有計算皆在瀏覽器中直接執行",
-    "filesNotTransferred": "* 您選取的檔案不會傳送至伺服器。所有計算皆在瀏覽器中直接執行",
+    "notTransferred": "資料不傳送至伺服器 — 所有處理均在瀏覽器中完成",
+    "filesNotTransferred": "檔案保留在本機 — 所有處理均在瀏覽器中完成",
     "checksumInfo": "此為 HTML5 線上檔案校驗碼工具，支援不限數量的檔案及不限大小的檔案。",
     "invalidCipher": "無效的密文、密碼短語或設定"
   },

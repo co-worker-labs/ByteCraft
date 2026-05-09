@@ -14,6 +14,8 @@ import {
 import { Button } from "../../../components/ui/button";
 import { ChevronsDown, ChevronsUp, X } from "lucide-react";
 import CryptoJS from "crypto-js";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
 
 type Algorithms = "AES" | "DES" | "Triple DES" | "Rabbit" | "RC4" | "RC4Drop";
 type BlockMode = "CBC" | "CFB" | "CTR" | "OFB" | "ECB";
@@ -475,18 +477,14 @@ function Description() {
 }
 
 export default function CipherPage() {
-  const tc = useTranslations("common");
   const t = useTranslations("tools");
   return (
     <Layout title={t("cipher.shortTitle")}>
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
         <Conversion />
         <Description />
+        <RelatedTools currentTool="cipher" />
       </div>
     </Layout>
   );

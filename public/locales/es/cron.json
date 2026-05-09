@@ -5,8 +5,15 @@
     "spring": "Spring (6 campos)",
     "quartz": "Quartz (7 campos)"
   },
-  "tab": { "generate": "Generar", "parse": "Analizar" },
-  "timezone": { "label": "Zona horaria", "local": "Local", "utc": "UTC" },
+  "tab": {
+    "generate": "Generar",
+    "parse": "Analizar"
+  },
+  "timezone": {
+    "label": "Zona horaria",
+    "local": "Local",
+    "utc": "UTC"
+  },
   "field": {
     "second": "Segundo",
     "minute": "Minuto",
@@ -29,11 +36,37 @@
     "lastDayOffset": "Días antes del último"
   },
   "monthShort": [
-    "Ene", "Feb", "Mar", "Abr", "May", "Jun",
-    "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"
+    "Ene",
+    "Feb",
+    "Mar",
+    "Abr",
+    "May",
+    "Jun",
+    "Jul",
+    "Ago",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dic"
   ],
-  "weekdayShort": ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
-  "weekdayLong": ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+  "weekdayShort": [
+    "Dom",
+    "Lun",
+    "Mar",
+    "Mié",
+    "Jue",
+    "Vie",
+    "Sáb"
+  ],
+  "weekdayLong": [
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes",
+    "Sábado"
+  ],
   "presets": {
     "everyMinute": "Cada minuto",
     "every5Minutes": "Cada 5 minutos",
@@ -66,15 +99,32 @@
     "lastWeekdayOfMonth": "el último día laborable del mes",
     "lastDayMinusN": "{n} días antes del último día del mes"
   },
-  "ordinal": { "1": "primer", "2": "segundo", "3": "tercer", "4": "cuarto", "5": "quinto" },
+  "ordinal": {
+    "1": "primer",
+    "2": "segundo",
+    "3": "tercer",
+    "4": "cuarto",
+    "5": "quinto"
+  },
   "output": {
     "expression": "Expresión",
     "description": "Descripción",
     "nextExecutions": "Próximas 5 ejecuciones",
-    "header": { "num": "#", "dateTime": "Fecha y hora", "relative": "Relativo" },
-    "relative": { "in": "en {value}", "now": "ahora", "past": "pasado" }
+    "header": {
+      "num": "#",
+      "dateTime": "Fecha y hora",
+      "relative": "Relativo"
+    },
+    "relative": {
+      "in": "en {value}",
+      "now": "ahora",
+      "past": "pasado"
+    }
   },
-  "share": { "button": "Compartir enlace", "copied": "Enlace copiado" },
+  "share": {
+    "button": "Compartir enlace",
+    "copied": "Enlace copiado"
+  },
   "parse": {
     "placeholder": "Pega o escribe una expresión Cron",
     "showingPrevious": "Mostrando el último resultado válido"
@@ -110,7 +160,14 @@
     "specialCharsTitle": "Caracteres especiales",
     "modesTitle": "Modos",
     "dstTitle": "Horario de verano (DST)",
-    "dst": "Cuando la zona horaria activa observa el horario de verano, las programaciones dentro del salto de primavera se ejecutan en el siguiente momento válido, y las programaciones dentro del solapamiento de otoño se ejecutan en la primera ocurrencia. Cambia a UTC para evitar el DST por completo."
+    "dst": "Cuando la zona horaria activa observa el horario de verano, las programaciones dentro del salto de primavera se ejecutan en el siguiente momento válido, y las programaciones dentro del solapamiento de otoño se ejecutan en la primera ocurrencia. Cambia a UTC para evitar el DST por completo.",
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué es una expresión Cron?",
+    "faq1A": "Una expresión Cron es una cadena de 5-7 campos que define un horario para tareas recurrentes. Se usa por demonios cron, planificadores de tareas y frameworks como Spring y Quartz.",
+    "faq2Q": "¿Qué dialectos Cron son compatibles?",
+    "faq2A": "Tres: Estándar (5 campos), Spring (6 campos con segundos) y Quartz (7 campos con segundos y año). La herramienta detecta automáticamente el dialecto y muestra las próximas ejecuciones.",
+    "faq3Q": "¿Qué tan precisas son las predicciones de próxima ejecución?",
+    "faq3A": "Las predicciones se calculan del lado del cliente y coinciden con el comportamiento estándar de cron. La herramienta muestra las 5 próximas ejecuciones programadas para tu expresión."
   },
   "editor": {
     "title": "Editar campo",

@@ -68,5 +68,17 @@
   "useCaseDist": "分散式系統 ID",
   "useCaseWeb": "連線或資源識別符",
   "useCaseMq": "訊息佇列訊息 ID",
-  "useCaseTest": "測試資料和模擬"
+  "useCaseTest": "測試資料和模擬",
+  "descriptions": {
+    "whatIsTitle": "什麼是 UUID 產生器？",
+    "whatIsP1": "UUID（通用唯一識別符）是由 RFC 4122 和 RFC 9562 定義的 128 位元識別符標準。本工具支援批量產生 UUID v4（隨機）和 v7（時間排序）。",
+    "whatIsP2": "UUID 被廣泛用作資料庫主鍵、分散式系統識別符和連線令牌。擁有 2^122 種可能的取值，碰撞機率微乎其微。",
+    "faqTitle": "常見問題",
+    "faq1Q": "什麼是 UUID？",
+    "faq1A": "UUID（通用唯一識別碼）是一種 128 位元識別碼標準。此工具產生 v4（隨機）和 v7（時間排序）UUID，無需中心協調即可保證唯一性。",
+    "faq2Q": "一次可以產生多少個 UUID？",
+    "faq2A": "一次最多可產生 1,000 個 UUID。所有產生在瀏覽器中使用 crypto.getRandomValues() 完成。",
+    "faq3Q": "應該使用 UUID v4 還是 v7？",
+    "faq3A": "通用隨機 ID 使用 v4。資料庫主鍵或需要時間排序的場景使用 v7——v7 包含毫秒級時間戳前綴，支援有序唯一性。"
+  }
 }

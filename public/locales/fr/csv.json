@@ -32,6 +32,13 @@
     "useCasesTitle": "Cas d'utilisation",
     "useCasesP1": "Importer/exporter des données entre tableurs et API web, convertir des réponses d'API en CSV pour analyse, préparer des données pour l'import en masse en base de données, partager des données tabulaires dans un format universellement lisible.",
     "limitationsTitle": "Limites",
-    "limitationsP1": "Les objets JSON imbriqués sont aplatis en notation pointée. La structure d'origine ne peut pas être entièrement restaurée. Les fichiers binaires et le format Excel (.xlsx) ne sont pas supportés."
+    "limitationsP1": "Les objets JSON imbriqués sont aplatis en notation pointée. La structure d'origine ne peut pas être entièrement restaurée. Les fichiers binaires et le format Excel (.xlsx) ne sont pas supportés.",
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Qu'est-ce que le Convertisseur CSV ?",
+    "faq1A": "Un outil pour convertir des données CSV en JSON, tableaux Markdown ou format TSV et inversement. Il gère les champs entre guillemets, les délimiteurs personnalisés et les objets imbriqués.",
+    "faq2Q": "Quels dialectes CSV sont pris en charge ?",
+    "faq2A": "CSV standard RFC 4180 avec délimiteurs personnalisables (virgule, point-virgule, tabulation, pipe). Les champs entre guillemets, guillemets échappés et valeurs multilignes sont tous pris en charge.",
+    "faq3Q": "Puis-je aplatir du JSON imbriqué en CSV ?",
+    "faq3A": "Oui. L'outil peut aplatir les objets JSON imbriqués en colonnes avec notation par points pour l'export CSV, et les dés-aplatir en retour."
   }
 }

@@ -31,5 +31,14 @@
     "titleCase": "Títulos de artigos e livros",
     "sentenceCase": "Capitalização no início de frases",
     "pathCase": "Caminhos de arquivo, rotas de API"
+  },
+  "descriptions": {
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "Quais conversões de maiúsculas/minúsculas estão disponíveis?",
+    "faq1A": "camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case, Title Case, Sentence case, UPPER CASE, lower case e mais.",
+    "faq2Q": "Posso converter múltiplas strings de uma vez?",
+    "faq2A": "Sim. Cole múltiplas linhas e a ferramenta converte cada linha independentemente. A conversão multilinha aplica a capitalização selecionada a cada linha.",
+    "faq3Q": "Lida com caracteres não-ASCII?",
+    "faq3A": "Sim. A ferramenta lida corretamente com caracteres Unicode incluindo letras acentuadas, caracteres CJK e emojis nas conversões de maiúsculas/minúsculas."
   }
 }

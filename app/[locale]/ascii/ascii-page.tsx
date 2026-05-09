@@ -8,6 +8,7 @@ import { ControlCode, getControlCodes, getPrintableCharacters } from "../../../l
 import { NeonTabs } from "../../../components/ui/tabs";
 import { Badge } from "../../../components/ui/badge";
 import { StyledInput } from "../../../components/ui/input";
+import RelatedTools from "../../../components/related-tools";
 
 const printableCharacters = getPrintableCharacters();
 const controlCodes = getControlCodes();
@@ -267,6 +268,21 @@ function PrintableCharacters({ list }: { list: number[] }) {
   );
 }
 
+function Description() {
+  const t = useTranslations("ascii");
+  return (
+    <section id="description" className="mt-8">
+      <div className="mb-4">
+        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
+        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{t("descriptions.whatIsP2")}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function AsciiPage() {
   const t = useTranslations("tools");
   const ta = useTranslations("ascii");
@@ -330,6 +346,8 @@ export default function AsciiPage() {
               ]}
             />
           </section>
+          <Description />
+          <RelatedTools currentTool="ascii" />
         </div>
       </Layout>
     </>

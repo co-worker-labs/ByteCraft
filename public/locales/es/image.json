@@ -28,6 +28,13 @@
     "p1": "Comprime, redimensiona y convierte imágenes directamente en tu navegador. No se sube ningún dato, todo el procesamiento es local.",
     "p2": "Soporta PNG, JPG y WebP como formatos de salida. WebP ofrece la mejor tasa de compresión para imágenes web.",
     "p3": "Usa el control deslizante de calidad para equilibrar el tamaño del archivo y la calidad de imagen. Menor calidad significa archivos más pequeños.",
-    "p4": "Copiar al portapapeles convierte la imagen a formato PNG independientemente del formato de salida seleccionado."
+    "p4": "Copiar al portapapeles convierte la imagen a formato PNG independientemente del formato de salida seleccionado.",
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué puedo hacer con la herramienta de Imagen?",
+    "faq1A": "Redimensionar, comprimir y convertir imágenes directamente en tu navegador. Soporta formatos JPEG, PNG, WebP y BMP con calidad y dimensiones ajustables.",
+    "faq2Q": "¿Se suben mis imágenes a un servidor?",
+    "faq2A": "No. Todo el procesamiento de imágenes se realiza en tu navegador usando la API Canvas. Tus imágenes nunca salen de tu dispositivo.",
+    "faq3Q": "¿Qué formatos de imagen son compatibles?",
+    "faq3A": "Entrada: JPEG, PNG, WebP, BMP, GIF. Salida: JPEG, PNG, WebP. Puedes convertir entre formatos mientras ajustas la calidad."
   }
 }

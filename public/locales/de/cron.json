@@ -160,7 +160,14 @@
     "specialCharsTitle": "Sonderzeichen",
     "modesTitle": "Modi",
     "dstTitle": "Sommerzeitumstellung",
-    "dst": "Wenn die aktive Zeitzone Sommerzeit (DST) beobachtet, werden Zeitpläne innerhalb der Vorstell-Lücke zur nächsten gültigen Zeit ausgelöst, und Zeitpläne innerhalb der Rückstell-Überschneidung beim ersten Auftreten. Wechseln Sie zu UTC, um DST vollständig zu vermeiden."
+    "dst": "Wenn die aktive Zeitzone Sommerzeit (DST) beobachtet, werden Zeitpläne innerhalb der Vorstell-Lücke zur nächsten gültigen Zeit ausgelöst, und Zeitpläne innerhalb der Rückstell-Überschneidung beim ersten Auftreten. Wechseln Sie zu UTC, um DST vollständig zu vermeiden.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was ist ein Cron-Ausdruck?",
+    "faq1A": "Ein Cron-Ausdruck ist eine Zeichenfolge aus 5-7 Feldern, die einen Zeitplan für wiederkehrende Aufgaben definiert. Er wird von Cron-Daemons, Auftragsplanern und Frameworks wie Spring und Quartz verwendet.",
+    "faq2Q": "Welche Cron-Dialekte werden unterstützt?",
+    "faq2A": "Drei: Standard (5 Felder), Spring (6 Felder mit Sekunden) und Quartz (7 Felder mit Sekunden und Jahr). Das Tool erkennt den Dialekt automatisch und zeigt die nächsten Ausführungszeiten.",
+    "faq3Q": "Wie genau sind die Vorhersagen der nächsten Ausführung?",
+    "faq3A": "Die Vorhersagen werden clientseitig berechnet und entsprechen dem Standard-Cron-Verhalten. Das Tool zeigt die 5 nächsten geplanten Ausführungszeiten für Ihren Ausdruck."
   },
   "editor": {
     "title": "Feld bearbeiten",

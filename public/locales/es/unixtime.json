@@ -71,5 +71,14 @@
     "y2k38": "Los sistemas que almacenan segundos Unix en un entero de 32 bits con signo se desbordan el 2038-01-19 03:14:07 UTC. Los sistemas modernos de 64 bits no están afectados.",
     "tzTitle": "Zonas horarias",
     "tz": "Un timestamp en sí no tiene zona horaria. La forma legible (ej. 2024-05-01 00:00:00) depende de la zona horaria en la que lo muestres. Esta herramienta siempre muestra Local y UTC."
+  },
+  "descriptions": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué es una marca de tiempo Unix?",
+    "faq1A": "Una marca de tiempo Unix es el número de segundos (o milisegundos) transcurridos desde el 1 de enero de 1970 UTC (la época Unix). Es una forma universal e independiente de zona horaria de representar el tiempo.",
+    "faq2Q": "¿Esta herramienta maneja zonas horarias?",
+    "faq2A": "Sí. La herramienta muestra tanto UTC como tu zona horaria local. Puedes convertir marcas de tiempo a fechas en cualquiera de las zonas horarias.",
+    "faq3Q": "¿Cuál es el rango de marcas de tiempo Unix?",
+    "faq3A": "Los enteros con signo de 32 bits estándar soportan marcas de tiempo hasta el 19 de enero de 2038 (el problema del año 2038). Esta herramienta soporta un rango mucho mayor usando el objeto Date de JavaScript."
   }
 }

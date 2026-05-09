@@ -22,6 +22,8 @@ import { useIsMobile } from "../../../hooks/use-is-mobile";
 import { useDropZone } from "../../../hooks/useDropZone";
 import { convert } from "../../../libs/csv/convert";
 import { csvParse } from "../../../libs/csv/csv-parse";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
 
 // --- Types ---
 
@@ -681,22 +683,17 @@ function Description() {
 // --- Page Export ---
 
 export default function CsvPage() {
-  const tc = useTranslations("common");
   const t = useTranslations("tools");
   const title = t("csv.shortTitle");
 
   return (
     <Layout title={title}>
       <div className="container mx-auto px-4 pt-3 pb-6">
-        {/* Privacy alert banner */}
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
 
         <Conversion />
         <Description />
+        <RelatedTools currentTool="csv" />
       </div>
     </Layout>
   );

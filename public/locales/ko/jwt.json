@@ -42,6 +42,13 @@
     "algorithmsTitle": "지원 알고리즘",
     "algorithms": "HMAC(HS256/384/512), RSA(RS256/384/512), RSA-PSS(PS256/384/512), ECDSA(ES256/384/512). 안전을 위해 서명되지 않은 `alg=none`은 거부됩니다.",
     "keyFormatsTitle": "허용 키 형식",
-    "keyFormats": "HMAC: 모든 UTF-8 문자열. 비대칭: PEM만 지원. 서명은 PKCS8(-----BEGIN PRIVATE KEY-----), 검증은 SPKI(-----BEGIN PUBLIC KEY-----). PKCS1, SEC1, 암호화된 PEM, X.509 인증서는 허용되지 않으며, 변환에 필요한 정확한 openssl 명령어를 알려줍니다."
+    "keyFormats": "HMAC: 모든 UTF-8 문자열. 비대칭: PEM만 지원. 서명은 PKCS8(-----BEGIN PRIVATE KEY-----), 검증은 SPKI(-----BEGIN PUBLIC KEY-----). PKCS1, SEC1, 암호화된 PEM, X.509 인증서는 허용되지 않으며, 변환에 필요한 정확한 openssl 명령어를 알려줍니다.",
+    "faqTitle": "자주 묻는 질문",
+    "faq1Q": "JWT란?",
+    "faq1A": "JSON Web Token(JWT)은 JSON 객체로 당사자 간에 정보를 안전하게 전송하기 위한 개방형 표준(RFC 7519)입니다. 인증 및 정보 교환에 자주 사용됩니다.",
+    "faq2Q": "JWT는 민감한 데이터에 안전한가요?",
+    "faq2A": "JWT 페이로드는 Base64Url로 인코딩될 뿐 암호화되지 않아 누구나 읽을 수 있습니다. JWE(JSON Web Encryption)를 사용하지 않는 한 민감한 데이터를 JWT에 저장하지 마세요. 이 도구는 브라우저에서 완전히 실행됩니다.",
+    "faq3Q": "어떤 JWT 알고리즘을 지원하나요?",
+    "faq3A": "이 도구는 HS256/384/512(HMAC), RS256/384/512(RSA), ES256/384/512(ECDSA), PS256/384/512(RSA-PSS) 서명 및 검증을 지원합니다."
   }
 }

@@ -28,5 +28,17 @@
   "timeMinUnit": "min",
   "timeSecUnit": "sec",
   "timeHourFormat": "{hours}h {minutes}m",
-  "timeMinFormat": "{minutes} min {seconds} sec"
+  "timeMinFormat": "{minutes} min {seconds} sec",
+  "descriptions": {
+    "whatIsTitle": "What is the Word Counter?",
+    "whatIsP1": "The Word Counter is a free online tool that provides real-time text analysis including word count, character count, sentence count, paragraph count, and reading time estimation.",
+    "whatIsP2": "It also supports CJK (Chinese, Japanese, Korean) character counting, keyword frequency analysis, and custom keyword tracking — making it ideal for writers, students, and translators.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "How does the word count work?",
+    "faq1A": "The tool splits text by whitespace and counts tokens. For CJK text (Chinese, Japanese, Korean), it counts individual characters separately.",
+    "faq2Q": "What metrics are shown?",
+    "faq2A": "Words, characters, characters without spaces, sentences, paragraphs, CJK characters, reading time, and speaking time — all updated in real-time as you type.",
+    "faq3Q": "Can I track specific keywords?",
+    "faq3A": "Yes. Add custom keywords to track their frequency and count across your text. The Keywords tab shows the top words and 2-word phrases."
+  }
 }

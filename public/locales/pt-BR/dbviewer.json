@@ -89,5 +89,17 @@
   "status": {
     "engineRestarted": "Mecanismo do banco de dados reiniciado — seus dados foram recarregados",
     "abortShortcut": "Pressione Esc para abortar"
+  },
+  "descriptions": {
+    "whatIsTitle": "O que é o Visualizador de SQLite?",
+    "whatIsP1": "O Visualizador de SQLite permite abrir e explorar arquivos de banco de dados SQLite diretamente no navegador, sem upload para servidor. Execute consultas SQL, navegue pelas tabelas e exporte dados como CSV ou JSON.",
+    "whatIsP2": "Baseado em sql.js (SQLite compilado para WebAssembly), suporta autocompletar, histórico de consultas, paginação e manipula bancos de dados até o limite de memória do navegador.",
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "Quais bancos de dados posso visualizar?",
+    "faq1A": "A ferramenta suporta arquivos de banco de dados SQLite (.db, .sqlite, .sqlite3). Abra qualquer arquivo SQLite para navegar tabelas, executar consultas e exportar dados.",
+    "faq2Q": "Meu banco de dados é enviado a um servidor?",
+    "faq2A": "Não. O banco de dados é carregado na memória do navegador usando sql.js (SQLite compilado para WebAssembly). Todas as operações acontecem localmente.",
+    "faq3Q": "Quais recursos SQL são suportados?",
+    "faq3A": "Sintaxe SQL completa do SQLite incluindo SELECT, INSERT, UPDATE, DELETE, JOINs, subconsultas, agregações e transações. O editor fornece autocomplete para nomes de tabelas e colunas."
   }
 }

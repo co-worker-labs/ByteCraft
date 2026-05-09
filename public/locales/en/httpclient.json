@@ -70,7 +70,6 @@
     "cookieNote": "Cookies are only visible for same-origin requests or when the server exposes Set-Cookie via CORS headers.",
     "timingNote": "Detailed timing (TTFB, Download) is only available when the server returns Timing-Allow-Origin header.",
     "ttfb": "TTFB",
-    "download": "Download",
     "total": "Total",
     "na": "N/A",
     "crossOrigin": "(cross-origin)",
@@ -112,5 +111,14 @@
       "title": "CORS & Proxy",
       "text": "By default, this tool uses the browser's native fetch() API. Cross-origin requests require the target server to include appropriate CORS headers. If a server does not support CORS, enable the Proxy toggle — requests will be routed through the server-side proxy, bypassing CORS restrictions entirely."
     }
+  },
+  "descriptions": {
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is the HTTP Client tool?",
+    "faq1A": "A browser-based HTTP client for testing APIs. Send GET, POST, PUT, PATCH, DELETE, HEAD, and OPTIONS requests with custom headers, query parameters, and request bodies.",
+    "faq2Q": "Can I use authentication?",
+    "faq2A": "Yes. Supports Basic Auth, Bearer tokens, API keys (header and query), and custom authentication headers. All credentials stay in your browser.",
+    "faq3Q": "Does it support request history?",
+    "faq3A": "Yes. All requests are saved to local storage with full request/response details. You can bookmark frequently used requests for quick access."
   }
 }

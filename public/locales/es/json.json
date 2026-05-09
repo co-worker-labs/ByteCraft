@@ -32,6 +32,13 @@
     "limitationsTitle": "Limitaciones",
     "limitationsP1": "Archivos JSON muy grandes (>10MB) pueden causar que el navegador se pause brevemente durante el formateo.",
     "limitationsP2": "Los números más allá del rango de enteros seguros de JavaScript (±2⁵³) pueden perder precisión tras pasar por JSON.parse/stringify.",
-    "limitationsP3": "Los mensajes de error de JSON5 pueden no incluir números exactos de línea y columna."
+    "limitationsP3": "Los mensajes de error de JSON5 pueden no incluir números exactos de línea y columna.",
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué es el formateo JSON?",
+    "faq1A": "El formateo JSON transforma JSON crudo o minificado en una estructura legible con sangría. Esta herramienta soporta sangría configurable (2, 4, 8 espacios o tabulaciones), minificación y validación, incluyendo sintaxis JSON5.",
+    "faq2Q": "¿Se envían mis datos JSON a un servidor?",
+    "faq2A": "No. Todo el formateo, validación y minificación de JSON se realiza completamente en tu navegador. Tus datos nunca salen de tu dispositivo.",
+    "faq3Q": "¿Cuál es la diferencia entre JSON y JSON5?",
+    "faq3A": "JSON5 es un superconjunto de JSON que soporta comentarios, comas finales, claves sin comillas y sintaxis más flexible. Esta herramienta puede analizar y formatear tanto JSON estándar como JSON5."
   }
 }

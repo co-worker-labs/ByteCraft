@@ -449,5 +449,14 @@
     "530": {
       "description": "Cloudflare konnte den DNS für den Ursprungsserver nicht auflösen."
     }
+  },
+  "descriptions": {
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was sind HTTP-Statuscodes?",
+    "faq1A": "HTTP-Statuscodes sind 3-stellige Zahlen, die von einem Server als Antwort auf eine Client-Anfrage zurückgegeben werden. Sie zeigen an, ob die Anfrage erfolgreich war, weitergeleitet wurde oder ein Fehler aufgetreten ist.",
+    "faq2Q": "Wie viele Statuscodes sind dokumentiert?",
+    "faq2A": "Das Tool deckt alle Standard-Statuscodes in 5 Kategorien ab: 1xx (Information), 2xx (Erfolg), 3xx (Umleitung), 4xx (Client-Fehler) und 5xx (Server-Fehler).",
+    "faq3Q": "Kann ich nach bestimmten Codes suchen?",
+    "faq3A": "Ja. Suchen Sie nach Codenummer, Phrase oder Kategorie, um schnell den gewünschten Statuscode zu finden."
   }
 }

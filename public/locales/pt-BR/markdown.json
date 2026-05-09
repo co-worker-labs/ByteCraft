@@ -26,6 +26,13 @@
     "howTitle": "Como usar",
     "howP1": "Digite ou cole Markdown no editor. A prévia atualiza conforme você digita. Alterne entre layouts Editar, Prévia e Dividido. Exporte para .md, copie o HTML renderizado ou salve a prévia como PDF ou PNG. Todo processamento acontece no seu navegador.",
     "gfmTitle": "GitHub Flavored Markdown",
-    "gfmP1": "Suporta tabelas, listas de tarefas (- [ ] tarefa), tachado, autolinks e diagramas Mermaid (fluxograma, sequência, classe, estado, ER, Gantt, pizza, git graph). Use blocos de código ```mermaid. Matemática e notas de rodapé estão fora do escopo."
+    "gfmP1": "Suporta tabelas, listas de tarefas (- [ ] tarefa), tachado, autolinks e diagramas Mermaid (fluxograma, sequência, classe, estado, ER, Gantt, pizza, git graph). Use blocos de código ```mermaid. Matemática e notas de rodapé estão fora do escopo.",
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "O que é o Editor Markdown?",
+    "faq1A": "Um editor Markdown ao vivo com visualização em painel dividido, suportando GFM (GitHub Flavored Markdown), destaque de sintaxe, listas de tarefas e diagramas Mermaid.",
+    "faq2Q": "Posso exportar Markdown para PDF?",
+    "faq2A": "Sim. Use os botões de exportação para salvar como PDF ou PNG. A exportação PDF respeita os estilos de impressão para uma saída limpa e formatada.",
+    "faq3Q": "Quais extensões Markdown são suportadas?",
+    "faq3A": "Tabelas GFM, listas de tarefas, tachado, autolinks e destaque de sintaxe de código para mais de 12 linguagens de programação incluindo TypeScript, Python, Go, Rust e SQL."
   }
 }

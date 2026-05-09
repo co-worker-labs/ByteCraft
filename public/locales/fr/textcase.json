@@ -31,5 +31,14 @@
     "titleCase": "Titres d'articles / livres",
     "sentenceCase": "Capitalisation en début de phrase",
     "pathCase": "Chemins de fichiers, routes d'API"
+  },
+  "descriptions": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Quelles conversions de casse sont disponibles ?",
+    "faq1A": "camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case, Title Case, Sentence case, UPPER CASE, lower case et plus encore.",
+    "faq2Q": "Puis-je convertir plusieurs chaînes à la fois ?",
+    "faq2A": "Oui. Collez plusieurs lignes et l'outil convertit chaque ligne indépendamment. La conversion multiligne applique la casse sélectionnée à chaque ligne.",
+    "faq3Q": "Gère-t-il les caractères non-ASCII ?",
+    "faq3A": "Oui. L'outil gère correctement les caractères Unicode y compris les lettres accentuées, les caractères CJK et les emojis dans les conversions de casse."
   }
 }

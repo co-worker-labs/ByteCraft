@@ -1,5 +1,10 @@
 {
-  "tabs": { "imagePalette": "从图片提取", "converter": "转换", "palette": "配色", "contrast": "对比度" },
+  "tabs": {
+    "imagePalette": "从图片提取",
+    "converter": "转换",
+    "palette": "配色",
+    "contrast": "对比度"
+  },
   "vision": {
     "label": "色觉",
     "none": "正常视觉",
@@ -59,7 +64,10 @@
     "suggestionText": "调整为 {color} 即可通过 {target}",
     "useThis": "采用"
   },
-  "history": { "recent": "最近", "clear": "清空" },
+  "history": {
+    "recent": "最近",
+    "clear": "清空"
+  },
   "errors": {
     "invalidColor": "无效的颜色值",
     "fileTooLarge": "图片必须小于 5MB",
@@ -88,5 +96,14 @@
     "tipEyedropper": "使用屏幕吸管从任意像素拾取颜色（仅 Chromium 浏览器）。",
     "tipImage": "在配色页拖入图片，通过中位切分量化提取 6 个主色。",
     "tipOklch": "Tailwind v4 默认输出 OKLCH 颜色以保证感知平滑 — 复制 @theme 块以匹配该工作流。"
+  },
+  "descriptions": {
+    "faqTitle": "常见问题",
+    "faq1Q": "什么是颜色工具？",
+    "faq1A": "颜色工具是一个综合颜色实用程序，支持 HEX、RGB、HSL 和 OKLCH 颜色模型，提供可视化拾色器、格式转换和对比度检查。",
+    "faq2Q": "什么是 OKLCH 颜色空间？",
+    "faq2A": "OKLCH 是一种感知均匀的颜色空间，比 HSL 或 RGB 更好地匹配人类视觉。它能产生更一致的亮度梯度和无障碍调色板。",
+    "faq3Q": "可以从图片中提取颜色吗？",
+    "faq3A": "可以。将图片拖放到调色板提取区域即可获取主要颜色。还可以模拟色觉缺陷（红色盲、绿色盲、蓝色盲）。"
   }
 }

@@ -71,5 +71,14 @@
     "y2k38": "Systems that store Unix seconds in a signed 32-bit integer overflow on 2038-01-19 03:14:07 UTC. Modern 64-bit systems are not affected.",
     "tzTitle": "Timezones",
     "tz": "A timestamp itself has no timezone. The human-readable form (e.g. 2024-05-01 00:00:00) depends on which timezone you display it in. This tool always shows both Local and UTC."
+  },
+  "descriptions": {
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is a Unix timestamp?",
+    "faq1A": "A Unix timestamp is the number of seconds (or milliseconds) elapsed since January 1, 1970 UTC (the Unix epoch). It's a universal, timezone-independent way to represent time.",
+    "faq2Q": "Does this tool handle timezones?",
+    "faq2A": "Yes. The tool shows both UTC and your local timezone. You can convert timestamps to dates in either timezone.",
+    "faq3Q": "What is the Unix timestamp range?",
+    "faq3A": "Standard 32-bit signed integers support timestamps up to January 19, 2038 (the Year 2038 problem). This tool supports a much wider range using JavaScript's Date object."
   }
 }

@@ -19,6 +19,8 @@ import type { DiffRowData } from "../../../libs/diff/types";
 import { DiffInput } from "./components/DiffInput";
 import { DiffToolbar, type DiffOptions, type LayoutMode } from "./components/DiffToolbar";
 import { DiffViewer, type ViewMode, type ViewerState } from "./components/DiffViewer";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
 
 const DEFAULT_OPTIONS: DiffOptions = {
   ignoreWhitespace: false,
@@ -295,21 +297,17 @@ function Description() {
 }
 
 export default function DiffPage() {
-  const tc = useTranslations("common");
   const tTools = useTranslations("tools");
   const title = tTools("diff.shortTitle");
 
   return (
     <Layout title={title}>
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
 
         <DiffPageBody />
         <Description />
+        <RelatedTools currentTool="diff" />
       </div>
     </Layout>
   );

@@ -42,6 +42,13 @@
     "algorithmsTitle": "支援的演算法",
     "algorithms": "HMAC（HS256/384/512）、RSA（RS256/384/512）、RSA-PSS（PS256/384/512）和 ECDSA（ES256/384/512）。不支援未簽章的 alg=none。",
     "keyFormatsTitle": "接受的密鑰格式",
-    "keyFormats": "HMAC：任意 UTF-8 字串。非對稱：僅支援 PEM 格式——簽章使用 PKCS8（-----BEGIN PRIVATE KEY-----），驗證使用 SPKI（-----BEGIN PUBLIC KEY-----）。不支援 PKCS1、SEC1、加密 PEM 和 X.509 憑證；工具會告訴你具體的 openssl 轉換命令。"
+    "keyFormats": "HMAC：任意 UTF-8 字串。非對稱：僅支援 PEM 格式——簽章使用 PKCS8（-----BEGIN PRIVATE KEY-----），驗證使用 SPKI（-----BEGIN PUBLIC KEY-----）。不支援 PKCS1、SEC1、加密 PEM 和 X.509 憑證；工具會告訴你具體的 openssl 轉換命令。",
+    "faqTitle": "常見問題",
+    "faq1Q": "什麼是 JWT？",
+    "faq1A": "JSON Web Token（JWT）是一種開放標準（RFC 7519），用於在各方之間安全地傳輸資訊。它常用於身份驗證和資訊交換。",
+    "faq2Q": "JWT 適合儲存敏感資料嗎？",
+    "faq2A": "JWT 的負載是 Base64Url 編碼的，並非加密——任何人都能讀取。絕對不要在 JWT 中儲存敏感資料，除非使用 JWE（JSON Web Encryption）。此工具完全在瀏覽器中執行。",
+    "faq3Q": "支援哪些 JWT 演算法？",
+    "faq3A": "此工具支援 HS256/384/512（HMAC）、RS256/384/512（RSA）、ES256/384/512（ECDSA）和 PS256/384/512（RSA-PSS）用於簽章和驗證。"
   }
 }

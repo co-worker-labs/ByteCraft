@@ -18,6 +18,7 @@ import {
   bitsToValue,
   getReferenceTable,
 } from "../../../libs/numbase/main";
+import RelatedTools from "../../../components/related-tools";
 
 const PANELS: Array<{ radix: Radix; labelKey: string; prefix: string }> = [
   { radix: 10, labelKey: "decimal", prefix: "DEC" },
@@ -289,6 +290,7 @@ export default function NumbasePage() {
       <div className="container mx-auto px-4 pt-3 pb-6">
         <Converter />
         <Description />
+        <RelatedTools currentTool="numbase" />
         <ReferenceTable />
       </div>
     </Layout>

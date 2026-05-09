@@ -32,6 +32,13 @@
     "useCasesTitle": "使用場景",
     "useCasesP1": "在試算表和 Web API 之間匯入/匯出資料，將 API 回應轉換為 CSV 進行分析，為資料庫批量匯入準備資料，以通用可讀格式分享表格資料。",
     "limitationsTitle": "限制",
-    "limitationsP1": "巢狀的 JSON 物件會使用點號展平，原始結構無法完全還原。不支援二進位檔案和 Excel (.xlsx) 格式。"
+    "limitationsP1": "巢狀的 JSON 物件會使用點號展平，原始結構無法完全還原。不支援二進位檔案和 Excel (.xlsx) 格式。",
+    "faqTitle": "常見問題",
+    "faq1Q": "什麼是 CSV 轉換器？",
+    "faq1A": "一個將 CSV 資料轉換為 JSON、Markdown 表格或 TSV 格式（以及反向轉換）的工具。支援帶引號的欄位、自訂分隔符號和巢狀物件。",
+    "faq2Q": "支援哪些 CSV 方言？",
+    "faq2A": "RFC 4180 標準 CSV，支援自訂分隔符號（逗號、分號、Tab、管線符）。帶引號的欄位、跳脫引號和多行值均受支援。",
+    "faq3Q": "可以將巢狀 JSON 扁平化為 CSV 嗎？",
+    "faq3A": "可以。工具可以將巢狀 JSON 物件扁平化為點分隔記法的欄位用於 CSV 匯出，也可以將它們還原。"
   }
 }

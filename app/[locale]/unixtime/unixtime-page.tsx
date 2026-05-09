@@ -21,6 +21,7 @@ import {
   type Preset,
 } from "../../../libs/unixtime/main";
 import { showToast } from "../../../libs/toast";
+import RelatedTools from "../../../components/related-tools";
 
 const emptySubscribe = () => () => {};
 
@@ -670,6 +671,7 @@ export default function UnixtimePage() {
           <DateToTimestamp />
         </div>
         <Description />
+        <RelatedTools currentTool="unixtime" />
       </div>
     </Layout>
   );

@@ -1,7 +1,20 @@
 {
   "shortTitle": "Generador de QR",
   "title": "Generador de QR - Herramienta gratuita en línea",
-  "description": "Genera códigos QR con estilo para texto, URLs, WiFi, vCard, email y SMS. Colores personalizados, logos y estilos de puntos. 100% del lado del cliente.",
+  "description": {
+    "title": "Sobre los códigos QR",
+    "intro": "Los códigos QR codifican texto en una matriz 2D que las cámaras de los teléfonos pueden decodificar. Una mayor corrección de errores los hace legibles incluso cuando están parcialmente oscurecidos (por un logo, suciedad o daño).",
+    "ecTitle": "Niveles de corrección de errores",
+    "ecL": "L: recupera ~7% de daño. El más pequeño, sin logo.",
+    "ecM": "M: recupera ~15%. Adecuado para impresiones limpias.",
+    "ecQ": "Q: recupera ~25%. Predeterminado; robusto y soporta logos pequeños.",
+    "ecH": "H: recupera ~30%. Requerido para logos de tamaño considerable.",
+    "tipsTitle": "Consejos",
+    "tipMargin": "Siempre mantén un margen (zona tranquila) de al menos 4 módulos. Los escáneres lo necesitan para detectar el código.",
+    "tipContrast": "El alto contraste entre primer plano y fondo es esencial. Evita pares de bajo contraste.",
+    "tipLogo": "Si insertas un logo, usa corrección de errores H y mantén el tamaño del logo ≤ 30% del QR.",
+    "tipTest": "Siempre prueba el QR generado con la cámara real de un teléfono antes de imprimir o compartir ampliamente."
+  },
   "contentTypes": {
     "text": "Texto / URL",
     "wifi": "WiFi",
@@ -67,20 +80,6 @@
   "preview": {
     "empty": "Completa los campos requeridos para generar un código QR"
   },
-  "description": {
-    "title": "Sobre los códigos QR",
-    "intro": "Los códigos QR codifican texto en una matriz 2D que las cámaras de los teléfonos pueden decodificar. Una mayor corrección de errores los hace legibles incluso cuando están parcialmente oscurecidos (por un logo, suciedad o daño).",
-    "ecTitle": "Niveles de corrección de errores",
-    "ecL": "L: recupera ~7% de daño. El más pequeño, sin logo.",
-    "ecM": "M: recupera ~15%. Adecuado para impresiones limpias.",
-    "ecQ": "Q: recupera ~25%. Predeterminado; robusto y soporta logos pequeños.",
-    "ecH": "H: recupera ~30%. Requerido para logos de tamaño considerable.",
-    "tipsTitle": "Consejos",
-    "tipMargin": "Siempre mantén un margen (zona tranquila) de al menos 4 módulos. Los escáneres lo necesitan para detectar el código.",
-    "tipContrast": "El alto contraste entre primer plano y fondo es esencial. Evita pares de bajo contraste.",
-    "tipLogo": "Si insertas un logo, usa corrección de errores H y mantén el tamaño del logo ≤ 30% del QR.",
-    "tipTest": "Siempre prueba el QR generado con la cámara real de un teléfono antes de imprimir o compartir ampliamente."
-  },
   "errors": {
     "contentTooLong": "El contenido es demasiado largo para la codificación QR",
     "contentNearLimit": "El contenido se acerca al límite de capacidad del QR",
@@ -92,5 +91,14 @@
     "generateFailed": "Error al generar el código QR",
     "libraryLoadFailed": "Error al cargar el generador de QR. Por favor recarga la página."
   },
-  "localGenerated": "Generado completamente en tu navegador. Tus datos nunca salen de tu dispositivo."
+  "localGenerated": "Generado completamente en tu navegador. Tus datos nunca salen de tu dispositivo.",
+  "descriptions": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué es el Generador de QR?",
+    "faq1A": "Un generador de códigos QR personalizable que soporta texto, URLs, credenciales WiFi y vCards. Añade logos, cambia colores y exporta como SVG o PNG.",
+    "faq2Q": "¿Cuál es la capacidad máxima de un código QR?",
+    "faq2A": "La capacidad depende del nivel de corrección de errores y tipo de datos. Numérico: hasta 7.089 caracteres. Alfanumérico: hasta 4.296. Binario: hasta 2.953 bytes. Kanji: hasta 1.817 caracteres.",
+    "faq3Q": "¿Puedo añadir un logo a mi código QR?",
+    "faq3A": "Sí. Sube una imagen de logo para colocarla en el centro del código QR. La herramienta ajusta automáticamente la corrección de errores para mantener la escaneabilidad."
+  }
 }

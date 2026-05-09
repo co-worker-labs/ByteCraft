@@ -6,5 +6,17 @@
   "conversionOutput": "Resultado de la conversión",
   "measurement": "Medida",
   "conversionCol": "Conversión",
-  "commonConversionTable": "Tabla de conversiones comunes"
+  "commonConversionTable": "Tabla de conversiones comunes",
+  "descriptions": {
+    "whatIsTitle": "¿Qué es el Conversor de Unidades de Almacenamiento?",
+    "whatIsP1": "El Conversor de Unidades de Almacenamiento permite convertir instantáneamente entre unidades de almacenamiento digital — bytes, KB, MB, GB, TB, PB — soportando los estándares decimal (SI) y binario (IEC).",
+    "whatIsP2": "Ya sea que compares tamaños de archivo, provisiones espacio en disco o comprendas límites de transferencia de datos, esta herramienta te ofrece conversiones precisas de un vistazo.",
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué unidades de almacenamiento puedo convertir?",
+    "faq1A": "Bits, Bytes, KB, MB, GB, TB y PB. La herramienta soporta tanto el estándar decimal (1 KB = 1000 bytes) como el binario (1 KiB = 1024 bytes).",
+    "faq2Q": "¿Por qué hay dos estándares de conversión?",
+    "faq2A": "El decimal (SI) usa potencias de 1000 y es usado por los fabricantes de almacenamiento. El binario (IEC) usa potencias de 1024 y es lo que los sistemas operativos típicamente reportan.",
+    "faq3Q": "¿Cuál es la diferencia entre KB y KiB?",
+    "faq3A": "KB (kilobyte) = 1000 bytes. KiB (kibibyte) = 1024 bytes. La IEC introdujo KiB/MiB/GiB para desambiguar, pero KB/MB/GB se siguen usando comúnmente para ambos."
+  }
 }

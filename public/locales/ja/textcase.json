@@ -31,5 +31,14 @@
     "titleCase": "記事や書籍のタイトル",
     "sentenceCase": "文頭の大文字化",
     "pathCase": "ファイルパス、APIルート"
+  },
+  "descriptions": {
+    "faqTitle": "よくある質問",
+    "faq1Q": "どのテキストケース変換が利用可能？",
+    "faq1A": "camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE、dot.case、path/case、Title Case、Sentence case、UPPER CASE、lower caseなど。",
+    "faq2Q": "複数の文字列を一度に変換できますか？",
+    "faq2A": "はい。複数行を貼り付けると、ツールが各行を独立して変換します。複数行変換では選択したケースがすべての行に適用されます。",
+    "faq3Q": "非ASCII文字に対応していますか？",
+    "faq3A": "はい。このツールはアクセント付き文字、CJK文字、絵文字などのUnicode文字をケース変換で正しく処理します。"
   }
 }

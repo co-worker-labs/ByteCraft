@@ -26,6 +26,13 @@
     "useCasesP2": "It is possible to use Base64 to convert input, like form data or JSON, to a string with a reduced character set that is URL-safe. However, due to how certain servers may interpret plus (+) and forward-slash (/) characters, it is recommended to use encodeURIComponent instead.",
     "limitationsTitle": "Understanding the Limitations of Base64",
     "limitationsP1": "Base64 is in no way meant to be a secure encryption method.",
-    "limitationsP2": "Base64 is also not a compression method. Encoding a string to Base64 typically results in 33% longer output."
+    "limitationsP2": "Base64 is also not a compression method. Encoding a string to Base64 typically results in 33% longer output.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is Base64 encoding?",
+    "faq1A": "Base64 is a binary-to-text encoding scheme that represents binary data using 64 ASCII characters (A-Z, a-z, 0-9, +, /). It's commonly used to embed data in URLs, HTML, and JSON.",
+    "faq2Q": "Is Base64 encryption?",
+    "faq2A": "No. Base64 is encoding, not encryption. It provides no security — anyone can decode it. Use the Encrypt/Decrypt tool for actual data protection.",
+    "faq3Q": "Does Base64 encoding increase file size?",
+    "faq3A": "Yes. Base64 encoding increases data size by approximately 33%. Every 3 bytes of input become 4 characters of output."
   }
 }

@@ -36,6 +36,13 @@
     "useCasesTitle": "使用场景",
     "useCasesP1": "将电子表格数据转换为 Markdown 用于文档编写，将 CSV 数据粘贴到 GitHub issues 中，从 CSV 导出生成 Markdown 表格，以及将 Markdown 表格转回 CSV 进行分析。",
     "limitationsTitle": "限制",
-    "limitationsP1": "表格单元格中的复杂 Markdown 格式（链接、图片、行内代码）会保留为原始文本。不支持多行单元格。仅支持扁平表格数据。"
+    "limitationsP1": "表格单元格中的复杂 Markdown 格式（链接、图片、行内代码）会保留为原始文本。不支持多行单元格。仅支持扁平表格数据。",
+    "faqTitle": "常见问题",
+    "faq1Q": "什么是 CSV 转 Markdown 表格转换器？",
+    "faq1A": "一个专用工具，将 CSV 数据转换为格式化的 Markdown 表格，支持对齐选项、标题行和整洁的管道符分隔输出。",
+    "faq2Q": "可以自定义列对齐方式吗？",
+    "faq2A": "可以。选择每列左对齐、居中或右对齐，工具会生成正确的 Markdown 对齐语法。",
+    "faq3Q": "支持大型 CSV 文件吗？",
+    "faq3A": "处理完全在浏览器中进行。几 MB 以内的文件都能正常工作，仅受设备内存限制。"
   }
 }

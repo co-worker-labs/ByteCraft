@@ -449,5 +449,14 @@
     "530": {
       "description": "Cloudflare could not resolve the DNS for the origin server."
     }
+  },
+  "descriptions": {
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What are HTTP status codes?",
+    "faq1A": "HTTP status codes are 3-digit numbers returned by a server in response to a client request. They indicate whether the request was successful, redirected, or encountered an error.",
+    "faq2Q": "How many status codes are documented?",
+    "faq2A": "The tool covers all standard status codes across 5 categories: 1xx (Informational), 2xx (Success), 3xx (Redirection), 4xx (Client Error), and 5xx (Server Error).",
+    "faq3Q": "Can I search for specific codes?",
+    "faq3A": "Yes. Search by code number, phrase, or category to quickly find the status code you need."
   }
 }

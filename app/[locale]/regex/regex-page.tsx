@@ -25,6 +25,8 @@ import type {
 } from "../../../libs/regex/main";
 import type { FlagDef } from "../../../libs/regex/types";
 import { showToast } from "../../../libs/toast";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
 
 // --- Flag Checkboxes ---
 
@@ -61,19 +63,6 @@ function ErrorCaret({ offset }: { offset: number }) {
       style={{ paddingLeft: `${offset * 0.6}em` }}
     >
       ^
-    </div>
-  );
-}
-
-// --- Privacy Banner ---
-
-function PrivacyBanner() {
-  const tc = useTranslations("common");
-  return (
-    <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-      <span className="text-sm text-fg-secondary leading-relaxed">
-        {tc("alert.notTransferred")}
-      </span>
     </div>
   );
 }
@@ -871,6 +860,7 @@ export default function RegexPage() {
         <PrivacyBanner />
         <Conversion />
         <Description />
+        <RelatedTools currentTool="regex" />
       </div>
     </Layout>
   );

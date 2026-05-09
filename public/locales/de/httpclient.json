@@ -1,26 +1,66 @@
 {
-  "url": { "placeholder": "https://api.example.com/users" },
-  "method": { "label": "Methode" },
-  "timeout": { "label": "Zeitlimit" },
-  "proxy": { "label": "Proxy", "tooltip": "Anfragen über den serverseitigen Proxy leiten, um CORS-Einschränkungen zu umgehen" },
+  "url": {
+    "placeholder": "https://api.example.com/users"
+  },
+  "method": {
+    "label": "Methode"
+  },
+  "timeout": {
+    "label": "Zeitlimit"
+  },
+  "proxy": {
+    "label": "Proxy",
+    "tooltip": "Anfragen über den serverseitigen Proxy leiten, um CORS-Einschränkungen zu umgehen"
+  },
   "send": "Senden",
   "sending": "Senden...",
-  "tabs": { "params": "Parameter", "headers": "Header", "body": "Body", "auth": "Authentifizierung" },
-  "bodyType": { "none": "keiner", "json": "JSON", "form-data": "Form-Data", "urlencoded": "x-www-form-urlencoded", "raw": "Raw" },
-  "authType": { "none": "keine", "bearer": "Bearer Token", "basic": "Basic Auth" },
-  "bearerToken": { "placeholder": "Bearer-Token eingeben" },
-  "basicAuth": { "username": "Benutzername", "password": "Passwort", "usernamePlaceholder": "Benutzername", "passwordPlaceholder": "Passwort" },
-  "kv": { "keyPlaceholder": "Schlüssel", "valuePlaceholder": "Wert" },
+  "tabs": {
+    "params": "Parameter",
+    "headers": "Header",
+    "body": "Body",
+    "auth": "Authentifizierung"
+  },
+  "bodyType": {
+    "none": "keiner",
+    "json": "JSON",
+    "form-data": "Form-Data",
+    "urlencoded": "x-www-form-urlencoded",
+    "raw": "Raw"
+  },
+  "authType": {
+    "none": "keine",
+    "bearer": "Bearer Token",
+    "basic": "Basic Auth"
+  },
+  "bearerToken": {
+    "placeholder": "Bearer-Token eingeben"
+  },
+  "basicAuth": {
+    "username": "Benutzername",
+    "password": "Passwort",
+    "usernamePlaceholder": "Benutzername",
+    "passwordPlaceholder": "Passwort"
+  },
+  "kv": {
+    "keyPlaceholder": "Schlüssel",
+    "valuePlaceholder": "Wert"
+  },
   "bodyPlaceholder": "Request-Body eingeben...",
   "response": {
     "title": "Antwort",
     "emptyState": "URL eingeben und auf Senden klicken",
-    "tabs": { "body": "Body", "headers": "Header", "cookies": "Cookies", "timing": "Zeitmessung", "redirects": "Weiterleitungen" },
+    "tabs": {
+      "body": "Body",
+      "headers": "Header",
+      "cookies": "Cookies",
+      "timing": "Zeitmessung",
+      "redirects": "Weiterleitungen"
+    },
     "status": "Status",
     "time": "Zeit",
     "size": "Größe",
     "type": "Typ",
-    "download": "Herunterladen",
+    "download": "Download",
     "copyBody": "Body kopieren",
     "pretty": "Formatiert",
     "raw": "Raw",
@@ -30,7 +70,6 @@
     "cookieNote": "Cookies sind nur bei Same-Origin-Anfragen sichtbar oder wenn der Server Set-Cookie über CORS-Header freigibt.",
     "timingNote": "Detaillierte Zeitmessung (TTFB, Download) ist nur verfügbar, wenn der Server den Timing-Allow-Origin-Header zurückgibt.",
     "ttfb": "TTFB",
-    "download": "Download",
     "total": "Gesamt",
     "na": "N/A",
     "crossOrigin": "(Cross-Origin)",
@@ -50,7 +89,12 @@
     "title": "Verlauf",
     "clear": "Verlauf löschen",
     "empty": "Kein Verlauf",
-    "ago": { "seconds": "vor {count}s", "minutes": "vor {count}Min", "hours": "vor {count}Std", "days": "vor {count}T" }
+    "ago": {
+      "seconds": "vor {count}s",
+      "minutes": "vor {count}Min",
+      "hours": "vor {count}Std",
+      "days": "vor {count}T"
+    }
   },
   "description": {
     "text": "Ein leichtgewichtiger, browserbasierter HTTP-Client zum Testen von REST-APIs. Stellen Sie Anfragen mit voller Kontrolle über Methode, Header, Body und Authentifizierung zusammen und inspizieren Sie Antworten mit Timing-Details, Headern und Cookies. Anfragen werden standardmäßig direkt über das browser-native fetch() gesendet. Aktivieren Sie den Proxy-Schalter, um Anfragen über den serverseitigen Proxy zu leiten und CORS-Einschränkungen zu umgehen. Es werden keine Daten auf einem Server gespeichert.",
@@ -67,5 +111,14 @@
       "title": "CORS und Proxy",
       "text": "Standardmäßig verwendet dieses Tool die native fetch()-API des Browsers. Cross-Origin-Anfragen erfordern, dass der Zielserver die entsprechenden CORS-Header enthält. Wenn der Server CORS nicht unterstützt, aktivieren Sie den Proxy-Schalter: Anfragen werden über den serverseitigen Proxy geleitet und umgehen CORS-Einschränkungen vollständig."
     }
+  },
+  "descriptions": {
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was ist das HTTP-Client-Tool?",
+    "faq1A": "Ein browserbasierter HTTP-Client zum Testen von APIs. Senden Sie GET-, POST-, PUT-, PATCH-, DELETE-, HEAD- und OPTIONS-Anfragen mit benutzerdefinierten Headern, Abfrageparametern und Anfragekörpern.",
+    "faq2Q": "Kann ich Authentifizierung verwenden?",
+    "faq2A": "Ja. Unterstützt Basic Auth, Bearer-Token, API-Schlüssel (Header und Query) und benutzerdefinierte Authentifizierungs-Header. Alle Anmeldeinformationen bleiben in Ihrem Browser.",
+    "faq3Q": "Wird der Anfrageverlauf unterstützt?",
+    "faq3A": "Ja. Alle Anfragen werden mit vollständigen Anfrage-/Antwortdetails im lokalen Speicher gespeichert. Sie können häufig verwendete Anfragen für schnellen Zugriff als Favorit markieren."
   }
 }

@@ -34,5 +34,14 @@
     "ipaEntityCode": "Code d'entité API",
     "example": "Exemple"
   },
-  "searchPlaceholder": "Rechercher par caractère, code ou description…"
+  "searchPlaceholder": "Rechercher par caractère, code ou description…",
+  "descriptions": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Que sont les entités de caractères HTML ?",
+    "faq1A": "Les entités HTML sont des codes spéciaux (comme &amp; pour &) utilisés pour représenter des caractères qui ont une signification spéciale en HTML ou ne peuvent pas être saisis directement.",
+    "faq2Q": "Combien d'entités sont documentées ?",
+    "faq2A": "L'outil fournit une référence complète des caractères spéciaux HTML incluant les entités nommées (&amp;), décimales (&#38;) et hexadécimales (&#x26;).",
+    "faq3Q": "Puis-je rechercher des caractères spécifiques ?",
+    "faq3A": "Oui. Recherchez par nom de caractère, nom d'entité ou point de code pour trouver rapidement l'entité HTML dont vous avez besoin."
+  }
 }

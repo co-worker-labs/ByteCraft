@@ -14,8 +14,9 @@ import {
 } from "../../libs/tools";
 import { searchTools } from "../../libs/tools-search";
 import { Card } from "../../components/ui/card";
+import { Accordion } from "../../components/ui/accordion";
 import { useRecentTools } from "../../hooks/use-recent-tools";
-import { Search, X, LayoutGrid, Grid3X3 } from "lucide-react";
+import { Search, X, LayoutGrid, Grid3X3, CircleHelp } from "lucide-react";
 
 type ViewMode = "grouped" | "all";
 
@@ -515,6 +516,30 @@ export default function HomeClient() {
           </>
         )}
       </section>
+
+      {!isSearching && (
+        <>
+          <section className="mx-auto mt-16 max-w-3xl text-center">
+            <h2 className="text-lg font-semibold text-fg-primary">{tHome("toolCount")}</h2>
+            <p className="mt-3 text-sm leading-relaxed text-fg-secondary">
+              {tHome("brandDescription")}
+            </p>
+          </section>
+
+          <section className="mx-auto mt-12 max-w-3xl pb-12">
+            <div className="mb-4 flex items-center gap-2">
+              <CircleHelp size={16} className="shrink-0 text-accent-cyan" aria-hidden="true" />
+              <h2 className="text-base font-semibold text-fg-primary">{tHome("faqTitle")}</h2>
+            </div>
+            <Accordion
+              items={[1, 2, 3, 4].map((i) => ({
+                title: tHome(`faq${i}Q`),
+                content: <p>{tHome(`faq${i}A`)}</p>,
+              }))}
+            />
+          </section>
+        </>
+      )}
     </Layout>
   );
 }

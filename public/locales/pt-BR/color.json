@@ -96,5 +96,14 @@
     "tipEyedropper": "Use o conta-gotas para pegar a cor de qualquer pixel na sua tela (navegadores Chromium).",
     "tipImage": "Solte uma imagem na aba Paleta para extrair suas 6 cores dominantes via quantização median-cut.",
     "tipOklch": "O Tailwind v4 emite cores em OKLCH para suavidade perceptual — copie o bloco @theme para alinhar com esse fluxo."
+  },
+  "descriptions": {
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "O que é a ferramenta de Cores?",
+    "faq1A": "A ferramenta de Cores é um utilitário abrangente que suporta modelos de cor HEX, RGB, HSL e OKLCH com seletor visual, conversões e verificação de contraste.",
+    "faq2Q": "O que é o espaço de cor OKLCH?",
+    "faq2A": "OKLCH é um espaço de cor perceptualmente uniforme que corresponde melhor à visão humana que HSL ou RGB. Produz gradientes de luminosidade mais consistentes e paletas acessíveis.",
+    "faq3Q": "Posso extrair cores de uma imagem?",
+    "faq3A": "Sim. Arraste e solte qualquer imagem na área de extração de paleta para obter as cores dominantes. Você também pode simular deficiências de visão de cores (protanopia, deuteranopia, tritanopia)."
   }
 }

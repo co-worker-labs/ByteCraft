@@ -18,6 +18,7 @@ import {
 } from "../../../libs/htmlcode";
 import { NeonTabs } from "../../../components/ui/tabs";
 import { StyledInput } from "../../../components/ui/input";
+import RelatedTools from "../../../components/related-tools";
 
 function printEntityName(code: string | undefined) {
   if (code && code.startsWith("&")) {
@@ -425,6 +426,7 @@ export default function HtmlCodePage() {
     <Layout title={t("htmlcode.shortTitle")}>
       <div className="container mx-auto px-4 pt-3 pb-6">
         <Description />
+        <RelatedTools currentTool="htmlcode" />
         <section>
           <NeonTabs
             tabs={[

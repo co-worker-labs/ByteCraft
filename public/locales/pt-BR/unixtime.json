@@ -71,5 +71,14 @@
     "y2k38": "Sistemas que armazenam segundos Unix em um inteiro de 32 bits com sinal transbordam em 2038-01-19 03:14:07 UTC. Sistemas modernos de 64 bits não são afetados.",
     "tzTitle": "Fusos horários",
     "tz": "Um timestamp em si não tem fuso horário. A forma legível (ex: 2024-05-01 00:00:00) depende de qual fuso horário você o exibe. Esta ferramenta sempre mostra Local e UTC."
+  },
+  "descriptions": {
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "O que é um timestamp Unix?",
+    "faq1A": "Um timestamp Unix é o número de segundos (ou milissegundos) decorridos desde 1 de janeiro de 1970 UTC (a época Unix). É uma forma universal e independente de fuso horário de representar tempo.",
+    "faq2Q": "Esta ferramenta lida com fusos horários?",
+    "faq2A": "Sim. A ferramenta mostra tanto UTC quanto seu fuso horário local. Você pode converter timestamps para datas em qualquer fuso horário.",
+    "faq3Q": "Qual é o intervalo de timestamps Unix?",
+    "faq3A": "Inteiros com sinal de 32 bits padrão suportam timestamps até 19 de janeiro de 2038 (o problema do ano 2038). Esta ferramenta suporta um intervalo muito maior usando o objeto Date do JavaScript."
   }
 }

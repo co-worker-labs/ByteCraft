@@ -32,6 +32,13 @@
     "limitationsTitle": "局限性",
     "limitationsP1": "非常大的 JSON 檔案（>10MB）可能導致瀏覽器短暫停頓。",
     "limitationsP2": "超出 JavaScript 安全整數範圍（±2⁵³）的數字在經過 JSON.parse/stringify 往返後可能遺失精度。",
-    "limitationsP3": "JSON5 錯誤訊息可能不包含精確的行號和列號。"
+    "limitationsP3": "JSON5 錯誤訊息可能不包含精確的行號和列號。",
+    "faqTitle": "常見問題",
+    "faq1Q": "什麼是 JSON 格式化？",
+    "faq1A": "JSON 格式化將原始或壓縮的 JSON 轉換為可讀的縮排結構。此工具支援可設定縮排（2、4、8 個空格或 Tab）、壓縮和驗證，包括 JSON5 語法。",
+    "faq2Q": "我的 JSON 資料會傳送到伺服器嗎？",
+    "faq2A": "不會。所有 JSON 格式化、驗證和壓縮都在瀏覽器中完成，資料不會離開你的裝置。",
+    "faq3Q": "JSON 和 JSON5 有什麼區別？",
+    "faq3A": "JSON5 是 JSON 的超集合，支援註解、尾隨逗號、無引號鍵名和更寬鬆的語法。此工具可以解析和格式化標準 JSON 和 JSON5。"
   }
 }

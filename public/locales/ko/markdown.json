@@ -26,6 +26,13 @@
     "howTitle": "사용 방법",
     "howP1": "에디터에 Markdown을 입력하거나 붙여넣으세요. 입력하면서 미리보기가 업데이트됩니다. 편집, 미리보기, 분할 레이아웃을 전환할 수 있습니다. .md로 내보내거나, 렌더링된 HTML을 복사하거나, 미리보기를 PDF나 PNG로 저장할 수 있습니다. 모든 처리는 브라우저에서 이루어집니다.",
     "gfmTitle": "GitHub Flavored Markdown",
-    "gfmP1": "테이블, 작업 목록(- [ ] todo), 취소선, 자동 링크, Mermaid 다이어그램(순서도, 시퀀스, 클래스, 상태, ER, 간트, 파이, git 그래프)을 지원합니다. ```mermaid 코드 블록을 사용하세요. 수식과 각주는 범위 밖입니다."
+    "gfmP1": "테이블, 작업 목록(- [ ] todo), 취소선, 자동 링크, Mermaid 다이어그램(순서도, 시퀀스, 클래스, 상태, ER, 간트, 파이, git 그래프)을 지원합니다. ```mermaid 코드 블록을 사용하세요. 수식과 각주는 범위 밖입니다.",
+    "faqTitle": "자주 묻는 질문",
+    "faq1Q": "Markdown 편집기란?",
+    "faq1A": "분할 창 미리보기가 있는 실시간 Markdown 편집기입니다. GFM(GitHub Flavored Markdown), 구문 강조, 작업 목록, Mermaid 다이어그램을 지원합니다.",
+    "faq2Q": "Markdown을 PDF로 내보낼 수 있나요?",
+    "faq2A": "네. 내보내기 버튼을 사용하여 PDF 또는 PNG로 저장할 수 있습니다. PDF 내보내기는 인쇄 스타일을 적용하여 깔끔하게 포맷된 출력을 생성합니다.",
+    "faq3Q": "어떤 Markdown 확장을 지원하나요?",
+    "faq3A": "GFM 테이블, 작업 목록, 취소선, 자동 링크, TypeScript, Python, Go, Rust, SQL 등 12개 이상의 프로그래밍 언어에 대한 코드 구문 강조를 지원합니다."
   }
 }

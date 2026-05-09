@@ -71,5 +71,14 @@
     "y2k38": "Systeme, die Unix-Sekunden als vorzeichenbehaftete 32-Bit-Ganzzahl speichern, laufen am 2038-01-19 03:14:07 UTC über. Moderne 64-Bit-Systeme sind nicht betroffen.",
     "tzTitle": "Zeitzonen",
     "tz": "Ein Timestamp selbst hat keine Zeitzone. Die lesbare Form (z.B. 2024-05-01 00:00:00) hängt davon ab, in welcher Zeitzone Sie ihn anzeigen. Dieses Tool zeigt immer sowohl Lokal als auch UTC an."
+  },
+  "descriptions": {
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was ist ein Unix-Zeitstempel?",
+    "faq1A": "Ein Unix-Zeitstempel ist die Anzahl der Sekunden (oder Millisekunden) seit dem 1. Januar 1970 UTC (der Unix-Epoche). Er ist eine universelle, zeitzonenunabhängige Art, Zeit darzustellen.",
+    "faq2Q": "Verarbeitet dieses Tool Zeitzonen?",
+    "faq2A": "Ja. Das Tool zeigt sowohl UTC als auch Ihre lokale Zeitzone an. Sie können Zeitstempel in beiden Zeitzonen in Daten umwandeln.",
+    "faq3Q": "Was ist der Bereich der Unix-Zeitstempel?",
+    "faq3A": "Standardmäßige 32-Bit-Signed-Integers unterstützen Zeitstempel bis zum 19. Januar 2038 (das Jahr-2038-Problem). Dieses Tool unterstützt einen viel größeren Bereich mit dem Date-Objekt von JavaScript."
   }
 }

@@ -68,5 +68,17 @@
   "useCaseDist": "Distributed system IDs",
   "useCaseWeb": "Session or resource identifiers",
   "useCaseMq": "Message queue message IDs",
-  "useCaseTest": "Test data and mocking"
+  "useCaseTest": "Test data and mocking",
+  "descriptions": {
+    "whatIsTitle": "What is the UUID Generator?",
+    "whatIsP1": "UUID (Universally Unique Identifier) is a 128-bit identifier standard defined in RFC 4122 and RFC 9562. This tool generates UUID v4 (random) and v7 (time-ordered) in bulk.",
+    "whatIsP2": "UUIDs are widely used as database primary keys, distributed system identifiers, and session tokens. With 2^122 possible values, collision probability is negligible.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is a UUID?",
+    "faq1A": "UUID (Universally Unique Identifier) is a 128-bit identifier standard. This tool generates v4 (random) and v7 (time-ordered) UUIDs that are unique without central coordination.",
+    "faq2Q": "How many UUIDs can I generate at once?",
+    "faq2A": "You can generate up to 1,000 UUIDs in a single batch. All generation happens in your browser using crypto.getRandomValues().",
+    "faq3Q": "Should I use UUID v4 or v7?",
+    "faq3A": "Use v4 for general-purpose random IDs. Use v7 for database primary keys or when time-ordering matters — v7 includes a millisecond timestamp prefix for sortable uniqueness."
+  }
 }

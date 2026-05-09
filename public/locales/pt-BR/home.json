@@ -11,5 +11,16 @@
   "viewGrouped": "Agrupadas",
   "viewAll": "Todas",
   "clearSearch": "Limpar busca",
-  "quickAccess": "Acesso rápido"
+  "quickAccess": "Acesso rápido",
+  "brandDescription": "OmniKit é uma coleção de mais de 32 ferramentas gratuitas para desenvolvedores baseadas no navegador. Sem cadastro, sem rastreamento — todo o processamento acontece localmente no seu navegador.",
+  "toolCount": "Mais de 32 ferramentas gratuitas",
+  "faqTitle": "Perguntas frequentes",
+  "faq1Q": "O que é o OmniKit?",
+  "faq1A": "OmniKit é uma coleção gratuita de ferramentas para desenvolvedores baseadas no navegador, incluindo formatador JSON, codificador Base64, gerador de senhas, calculadora de hash e mais. Todas as ferramentas rodam inteiramente no seu navegador sem enviar dados para servidores.",
+  "faq2Q": "O OmniKit é gratuito?",
+  "faq2A": "Sim, todas as ferramentas são completamente gratuitas e não exigem cadastro. OmniKit é código aberto e continuará gratuito para sempre.",
+  "faq3Q": "Meus dados estão seguros?",
+  "faq3A": "Todo o processamento acontece inteiramente no seu navegador usando JavaScript do lado do cliente. Nenhum dado é enviado a qualquer servidor. Seus arquivos e textos nunca saem do seu dispositivo.",
+  "faq4Q": "Preciso instalar algo?",
+  "faq4A": "Não é necessário instalar nada. OmniKit funciona em qualquer navegador moderno e pode ser instalado como um Progressive Web App (PWA) para acesso rápido."
 }

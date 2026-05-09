@@ -15,5 +15,17 @@
     "glyph": "Glyphe"
   },
   "tip": "💡 Survolez une ligne pour voir les détails. Utilisez la barre de recherche pour trouver rapidement un caractère par sa valeur décimale, hexadécimale ou son glyphe.",
-  "searchPlaceholder": "Rechercher par décimal, hex ou caractère..."
+  "searchPlaceholder": "Rechercher par décimal, hex ou caractère...",
+  "descriptions": {
+    "whatIsTitle": "Qu'est-ce que la Table ASCII ?",
+    "whatIsP1": "ASCII (American Standard Code for Information Interchange) est une norme d'encodage de caractères qui associe des valeurs numériques aux lettres, chiffres, signes de ponctuation et codes de contrôle. Elle couvre 128 caractères, de 0 à 127.",
+    "whatIsP2": "Cet outil fournit une table de référence ASCII interactive et complète, avec recherche, conversion caractère/code et des sections organisées pour les caractères imprimables et les codes de contrôle.",
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Qu'est-ce que ASCII ?",
+    "faq1A": "ASCII (American Standard Code for Information Interchange) est une norme d'encodage de caractères 7 bits couvrant 128 caractères : lettres anglaises, chiffres, ponctuation et codes de contrôle.",
+    "faq2Q": "Quels caractères de contrôle sont inclus ?",
+    "faq2A": "Les 33 codes de contrôle (0-31 et 127) incluant NUL, TAB, LF, CR, ESC et DEL, avec les descriptions de leurs fonctions originales de téléscripteur.",
+    "faq3Q": "En quoi ASCII diffère-t-il d'Unicode ?",
+    "faq3A": "ASCII couvre 128 caractères pour l'anglais. Unicode étend cela à plus de 140 000 caractères couvrant pratiquement tous les systèmes d'écriture. ASCII est un sous-ensemble d'Unicode (les 128 premiers points de code correspondent)."
+  }
 }

@@ -36,6 +36,13 @@
     "useCasesTitle": "Anwendungsfälle",
     "useCasesP1": "Tabellenkalkulationsdaten in Markdown für Dokumentation umwandeln, CSV aus API-Antworten in GitHub-Issues einfügen, Markdown-Tabellen aus CSV-Exporten generieren und Markdown-Tabellen zurück in CSV für die Tabellenkalkulationsanalyse konvertieren.",
     "limitationsTitle": "Einschränkungen",
-    "limitationsP1": "Komplexe Markdown-Formatierung (Links, Bilder, Inline-Code) in Tabellenzellen wird als Rohtext beibehalten. Mehrzeilige Zellen werden nicht unterstützt. Das Tool verarbeitet nur flache Tabellendaten."
+    "limitationsP1": "Komplexe Markdown-Formatierung (Links, Bilder, Inline-Code) in Tabellenzellen wird als Rohtext beibehalten. Mehrzeilige Zellen werden nicht unterstützt. Das Tool verarbeitet nur flache Tabellendaten.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was ist der CSV-zu-Markdown-Tabellen-Konverter?",
+    "faq1A": "Ein spezialisiertes Tool, das CSV-Daten in formatierte Markdown-Tabellen mit Ausrichtungsoptionen, Kopfzeilen und sauberer Pipe-delimiterter Ausgabe konvertiert.",
+    "faq2Q": "Kann ich die Spaltenausrichtung anpassen?",
+    "faq2A": "Ja. Wählen Sie links-, zentriert- oder rechtsbündig pro Spalte. Das Tool generiert die korrekte Markdown-Ausrichtungssyntax.",
+    "faq3Q": "Werden große CSV-Dateien unterstützt?",
+    "faq3A": "Die Verarbeitung erfolgt vollständig in Ihrem Browser. Dateien bis mehrere MB funktionieren gut, begrenzt nur durch den Arbeitsspeicher Ihres Geräts."
   }
 }

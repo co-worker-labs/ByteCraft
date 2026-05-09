@@ -1,7 +1,12 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import "rc-slider/assets/index.css";
-import Slider from "rc-slider";
+
+const Slider = dynamic(() => import("rc-slider"), {
+  ssr: false,
+  loading: () => <div className="h-6 w-full animate-pulse bg-bg-input rounded" />,
+});
 import { ChangeEvent, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import {
   memorable_capitalize_checked,
@@ -41,11 +46,12 @@ import {
   BookmarkPlus,
   Eye,
   EyeOff,
-  Lock,
   KeyRound,
   ShieldCheck,
   CircleHelp,
 } from "lucide-react";
+import PrivacyBanner from "../../../components/privacy-banner";
+import RelatedTools from "../../../components/related-tools";
 
 const default_type = "Random";
 
@@ -891,10 +897,7 @@ export default function PasswordPage() {
   return (
     <Layout title={title}>
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 mb-4">
-          <Lock size={18} className="text-accent-cyan mt-0.5 shrink-0" />
-          <span className="text-sm text-fg-secondary leading-relaxed">{t("localGenerated")}</span>
-        </div>
+        <PrivacyBanner />
         <NeonTabs
           selectedIndex={activeTab}
           onChange={setActiveTab}
@@ -942,6 +945,7 @@ export default function PasswordPage() {
           }}
         />
         <Description />
+        <RelatedTools currentTool="password" />
       </div>
     </Layout>
   );

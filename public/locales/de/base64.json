@@ -26,6 +26,13 @@
     "useCasesP2": "Es ist möglich, Base64 zu verwenden, um Eingaben wie Formulardaten oder JSON in eine Zeichenfolge mit einem reduzierten, URL-sicheren Zeichensatz umzuwandeln. Aufgrund der Art und Weise, wie bestimmte Server die Zeichen Plus (+) und Schrägstrich (/) interpretieren können, wird jedoch empfohlen, stattdessen encodeURIComponent zu verwenden.",
     "limitationsTitle": "Einschränkungen von Base64",
     "limitationsP1": "Base64 ist keinesfalls als sichere Verschlüsselungsmethode gedacht.",
-    "limitationsP2": "Base64 ist auch keine Kompressionsmethode. Die Kodierung einer Zeichenfolge in Base64 führt typischerweise zu einer um 33% längeren Ausgabe."
+    "limitationsP2": "Base64 ist auch keine Kompressionsmethode. Die Kodierung einer Zeichenfolge in Base64 führt typischerweise zu einer um 33% längeren Ausgabe.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was ist Base64-Kodierung?",
+    "faq1A": "Base64 ist ein Binär-zu-Text-Kodierungsschema, das Binärdaten mit 64 ASCII-Zeichen (A-Z, a-z, 0-9, +, /) darstellt. Es wird häufig verwendet, um Daten in URLs, HTML und JSON einzubetten.",
+    "faq2Q": "Ist Base64 Verschlüsselung?",
+    "faq2A": "Nein. Base64 ist Kodierung, keine Verschlüsselung. Es bietet keine Sicherheit — jeder kann es dekodieren. Verwenden Sie das Verschlüsselungs-/Entschlüsselungs-Tool für echten Datenschutz.",
+    "faq3Q": "Vergrößert Base64-Kodierung die Dateigröße?",
+    "faq3A": "Ja. Base64-Kodierung vergrößert die Datengröße um大约 33 %. Jeweils 3 Byte Eingabe werden zu 4 Zeichen Ausgabe."
   }
 }

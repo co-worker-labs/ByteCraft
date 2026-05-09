@@ -449,5 +449,14 @@
     "530": {
       "description": "Cloudflare no pudo resolver el DNS para el servidor de origen."
     }
+  },
+  "descriptions": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué son los códigos de estado HTTP?",
+    "faq1A": "Los códigos de estado HTTP son números de 3 dígitos devueltos por un servidor en respuesta a una petición del cliente. Indican si la petición fue exitosa, redirigida o encontró un error.",
+    "faq2Q": "¿Cuántos códigos de estado están documentados?",
+    "faq2A": "La herramienta cubre todos los códigos de estado estándar en 5 categorías: 1xx (Informativo), 2xx (Éxito), 3xx (Redirección), 4xx (Error del cliente) y 5xx (Error del servidor).",
+    "faq3Q": "¿Puedo buscar códigos específicos?",
+    "faq3A": "Sí. Busca por número de código, frase o categoría para encontrar rápidamente el código de estado que necesitas."
   }
 }

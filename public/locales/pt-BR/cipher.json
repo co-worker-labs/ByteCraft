@@ -19,6 +19,13 @@
     "rc4Title": "RC4, RC4Drop",
     "rc4": "RC4 é uma cifra de fluxo amplamente usada. É utilizada em protocolos populares como SSL e WEP. Embora notável pela simplicidade e velocidade, o histórico do algoritmo não inspira confiança em sua segurança.",
     "rc4drop": "Foi descoberto que os primeiros bytes do fluxo de chaves são fortemente não aleatórios e vazam informações sobre a chave. Podemos nos defender desse ataque descartando a porção inicial do fluxo. Esse algoritmo modificado é tradicionalmente chamado RC4-drop.",
-    "rc4dropConfig": "Por padrão, 192 palavras (768 bytes) são descartadas, mas você pode configurar o algoritmo para descartar qualquer número de palavras."
+    "rc4dropConfig": "Por padrão, 192 palavras (768 bytes) são descartadas, mas você pode configurar o algoritmo para descartar qualquer número de palavras.",
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "Quais algoritmos de criptografia são suportados?",
+    "faq1A": "AES, DES, Triple DES (3DES), Rabbit, RC4 e RC4Drop usando CryptoJS. AES-256 é recomendado para requisitos de segurança modernos.",
+    "faq2Q": "Meus dados são enviados a um servidor durante a criptografia?",
+    "faq2A": "Não. Toda criptografia e descriptografia acontece inteiramente no seu navegador usando a biblioteca CryptoJS. Seus dados e senha nunca saem do seu dispositivo.",
+    "faq3Q": "Qual a diferença entre AES e DES?",
+    "faq3A": "AES suporta chaves de 128/192/256 bits e é o padrão moderno. DES usa chaves de 56 bits e é considerado inseguro. Sempre prefira AES para novas aplicações."
   }
 }

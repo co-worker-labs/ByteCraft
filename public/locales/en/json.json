@@ -32,6 +32,13 @@
     "limitationsTitle": "Limitations",
     "limitationsP1": "Very large JSON files (>10MB) may cause the browser to pause briefly during formatting.",
     "limitationsP2": "Numbers beyond JavaScript's safe integer range (±2⁵³) may lose precision after round-tripping through JSON.parse/stringify.",
-    "limitationsP3": "JSON5 error messages may not include exact line and column numbers."
+    "limitationsP3": "JSON5 error messages may not include exact line and column numbers.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is JSON formatting?",
+    "faq1A": "JSON formatting transforms raw or minified JSON into a readable, indented structure. This tool supports configurable indentation (2, 4, 8 spaces or tabs), minification, and validation — including JSON5 syntax.",
+    "faq2Q": "Is my JSON data sent to a server?",
+    "faq2A": "No. All JSON formatting, validation, and minification happens entirely in your browser. Your data never leaves your device.",
+    "faq3Q": "What is the difference between JSON and JSON5?",
+    "faq3A": "JSON5 is a superset of JSON that supports comments, trailing commas, unquoted keys, and more relaxed syntax. This tool can parse and format both standard JSON and JSON5."
   }
 }

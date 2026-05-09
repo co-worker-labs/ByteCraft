@@ -1,5 +1,10 @@
 {
-  "tabs": { "imagePalette": "Extraire d'une image", "converter": "Convertisseur", "palette": "Palette", "contrast": "Contraste" },
+  "tabs": {
+    "imagePalette": "Extraire d'une image",
+    "converter": "Convertisseur",
+    "palette": "Palette",
+    "contrast": "Contraste"
+  },
   "vision": {
     "label": "Vision",
     "none": "Vision normale",
@@ -59,7 +64,10 @@
     "suggestionText": "Ajustez à {color} pour passer {target}",
     "useThis": "Utiliser cette couleur"
   },
-  "history": { "recent": "Récentes", "clear": "Effacer" },
+  "history": {
+    "recent": "Récentes",
+    "clear": "Effacer"
+  },
   "errors": {
     "invalidColor": "Valeur de couleur invalide",
     "fileTooLarge": "L'image doit faire moins de 5 Mo",
@@ -88,5 +96,14 @@
     "tipEyedropper": "Utilisez la pipette pour prélever une couleur depuis n'importe quel pixel de votre écran (navigateurs Chromium).",
     "tipImage": "Déposez une image dans l'onglet Palette pour extraire ses 6 couleurs dominantes par quantification median-cut.",
     "tipOklch": "Tailwind v4 génère les couleurs en OKLCH pour une fluidité perceptuelle. Copiez le bloc @theme pour vous aligner sur ce flux de travail."
+  },
+  "descriptions": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Qu'est-ce que l'outil Couleur ?",
+    "faq1A": "L'outil Couleur est un utilitaire complet qui prend en charge les modèles de couleur HEX, RGB, HSL et OKLCH avec un sélecteur visuel, des conversions et une vérification du contraste.",
+    "faq2Q": "Qu'est-ce que l'espace colorimétrique OKLCH ?",
+    "faq2A": "OKLCH est un espace colorimétrique perceptuellement uniforme qui correspond mieux à la vision humaine que HSL ou RGB. Il produit des dégradés de luminosité plus cohérents et des palettes accessibles.",
+    "faq3Q": "Puis-je extraire les couleurs d'une image ?",
+    "faq3A": "Oui. Glissez-déposez n'importe quelle image dans la zone d'extraction de palette pour obtenir les couleurs dominantes. Vous pouvez aussi simuler les déficiences de vision des couleurs (protanopie, deutéranopie, tritanopie)."
   }
 }

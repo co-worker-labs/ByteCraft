@@ -27,8 +27,8 @@
     "backHome": "Volver al inicio"
   },
   "alert": {
-    "notTransferred": "* Tu contenido no se transfiere al servidor. Todos los cálculos se realizan directamente en el navegador.",
-    "filesNotTransferred": "* Los archivos seleccionados no se transfieren al servidor. Todos los cálculos se realizan directamente en el navegador.",
+    "notTransferred": "No se envían datos a servidores — Todo el procesamiento se realiza en tu navegador",
+    "filesNotTransferred": "Tus archivos permanecen locales — Todo el procesamiento se realiza en tu navegador",
     "checksumInfo": "Checksum de archivos HTML5 en línea. Soporta cantidad ilimitada de archivos y tamaño ilimitado.",
     "invalidCipher": "Texto cifrado, frase de contraseña o configuración no válidos"
   },

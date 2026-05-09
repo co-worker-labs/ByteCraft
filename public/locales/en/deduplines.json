@@ -21,6 +21,13 @@
     "useCasesTitle": "Common Use Cases",
     "useCasesP1": "Removing duplicate entries from log files.",
     "useCasesP2": "Cleaning up configuration files with repeated directives.",
-    "useCasesP3": "Deduplicating rows in CSV data before processing."
+    "useCasesP3": "Deduplicating rows in CSV data before processing.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What does the Deduplicate Lines tool do?",
+    "faq1A": "It removes duplicate lines from your text while offering options to preserve or remove empty lines, trim whitespace, and sort the output.",
+    "faq2Q": "Is the deduplication case-sensitive?",
+    "faq2A": "By default, yes. You can toggle case-insensitive mode to treat 'Hello' and 'hello' as duplicates.",
+    "faq3Q": "Can I see what was removed?",
+    "faq3A": "The tool shows the cleaned output and the count of duplicates removed. You can compare input and output to verify the results."
   }
 }

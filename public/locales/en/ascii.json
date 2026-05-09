@@ -15,5 +15,17 @@
     "glyph": "Glyph"
   },
   "tip": "💡 Hover over any row for details. Use the search bar to quickly find characters by decimal, hex, or glyph.",
-  "searchPlaceholder": "Search by decimal, hex, or character..."
+  "searchPlaceholder": "Search by decimal, hex, or character...",
+  "descriptions": {
+    "whatIsTitle": "What is the ASCII Table?",
+    "whatIsP1": "ASCII (American Standard Code for Information Interchange) is a character encoding standard that assigns numeric values to letters, digits, punctuation, and control codes. It covers 128 characters from 0 to 127.",
+    "whatIsP2": "This tool provides a complete interactive ASCII reference table with search, character-to-code conversion, and categorized sections for printable characters and control codes.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is ASCII?",
+    "faq1A": "ASCII (American Standard Code for Information Interchange) is a 7-bit character encoding standard covering 128 characters: English letters, digits, punctuation, and control codes.",
+    "faq2Q": "What control characters are included?",
+    "faq2A": "All 33 control codes (0-31 and 127) including NUL, TAB, LF, CR, ESC, and DEL, with descriptions of their original teletype functions.",
+    "faq3Q": "How is ASCII different from Unicode?",
+    "faq3A": "ASCII covers 128 characters for English. Unicode extends this to over 140,000 characters covering virtually all writing systems. ASCII is a subset of Unicode (the first 128 code points match)."
+  }
 }

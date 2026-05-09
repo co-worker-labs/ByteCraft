@@ -1,5 +1,10 @@
 {
-  "tabs": { "imagePalette": "Extraer de imagen", "converter": "Conversor", "palette": "Paleta", "contrast": "Contraste" },
+  "tabs": {
+    "imagePalette": "Extraer de imagen",
+    "converter": "Conversor",
+    "palette": "Paleta",
+    "contrast": "Contraste"
+  },
   "vision": {
     "label": "Visión",
     "none": "Visión normal",
@@ -59,7 +64,10 @@
     "suggestionText": "Ajusta a {color} para pasar {target}",
     "useThis": "Usar este"
   },
-  "history": { "recent": "Recientes", "clear": "Limpiar" },
+  "history": {
+    "recent": "Recientes",
+    "clear": "Limpiar"
+  },
   "errors": {
     "invalidColor": "Valor de color no válido",
     "fileTooLarge": "La imagen debe ser menor a 5MB",
@@ -88,5 +96,14 @@
     "tipEyedropper": "Usa el cuentagotas para seleccionar un color de cualquier píxel de tu pantalla (navegadores Chromium).",
     "tipImage": "Suelta una imagen en la pestaña Paleta para extraer sus 6 colores dominantes mediante cuantización por corte mediano.",
     "tipOklch": "Tailwind v4 emite colores en OKLCH para suavidad perceptual. Copia el bloque @theme para alinearte con ese flujo de trabajo."
+  },
+  "descriptions": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué es la herramienta de Color?",
+    "faq1A": "La herramienta de Color es una utilidad completa que soporta modelos de color HEX, RGB, HSL y OKLCH con selector visual, conversiones y verificación de contraste.",
+    "faq2Q": "¿Qué es el espacio de color OKLCH?",
+    "faq2A": "OKLCH es un espacio de color perceptualmente uniforme que coincide mejor con la visión humana que HSL o RGB. Produce gradientes de luminosidad más consistentes y paletas accesibles.",
+    "faq3Q": "¿Puedo extraer colores de una imagen?",
+    "faq3A": "Sí. Arrastra y suelta cualquier imagen en el área de extracción de paleta para obtener los colores dominantes. También puedes simular deficiencias de visión de color (protanopia, deuteranopia, tritanopia)."
   }
 }

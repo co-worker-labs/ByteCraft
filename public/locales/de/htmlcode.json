@@ -34,5 +34,14 @@
     "ipaEntityCode": "IPA-Entity-Code",
     "example": "Beispiel"
   },
-  "searchPlaceholder": "Suche nach Zeichen, Code oder Beschreibung..."
+  "searchPlaceholder": "Suche nach Zeichen, Code oder Beschreibung...",
+  "descriptions": {
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was sind HTML-Zeichenentitäten?",
+    "faq1A": "HTML-Entitäten sind spezielle Codes (wie &amp; für &), die Zeichen darstellen, die in HTML eine besondere Bedeutung haben oder nicht direkt eingegeben werden können.",
+    "faq2Q": "Wie viele Entitäten sind dokumentiert?",
+    "faq2A": "Das Tool bietet eine vollständige Referenz der HTML-Sonderzeichen einschließlich benannter Entitäten (&amp;), dezimaler (&#38;) und hexadezimaler (&#x26;) Codes.",
+    "faq3Q": "Kann ich nach bestimmten Zeichen suchen?",
+    "faq3A": "Ja. Suchen Sie nach Zeichenname, Entitätsname oder Codepunkt, um schnell die gewünschte HTML-Entität zu finden."
+  }
 }

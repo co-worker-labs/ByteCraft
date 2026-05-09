@@ -68,5 +68,17 @@
   "useCaseDist": "分布式系统 ID",
   "useCaseWeb": "会话或资源标识符",
   "useCaseMq": "消息队列消息 ID",
-  "useCaseTest": "测试数据和模拟"
+  "useCaseTest": "测试数据和模拟",
+  "descriptions": {
+    "whatIsTitle": "什么是 UUID 生成器？",
+    "whatIsP1": "UUID（通用唯一标识符）是由 RFC 4122 和 RFC 9562 定义的 128 位标识符标准。本工具支持批量生成 UUID v4（随机）和 v7（时间排序）。",
+    "whatIsP2": "UUID 被广泛用作数据库主键、分布式系统标识符和会话令牌。拥有 2^122 种可能的取值，碰撞概率可忽略不计。",
+    "faqTitle": "常见问题",
+    "faq1Q": "什么是 UUID？",
+    "faq1A": "UUID（通用唯一标识符）是一种 128 位标识符标准。此工具生成 v4（随机）和 v7（时间有序）UUID，无需中心协调即可保证唯一性。",
+    "faq2Q": "一次可以生成多少个 UUID？",
+    "faq2A": "一次最多可生成 1,000 个 UUID。所有生成在浏览器中使用 crypto.getRandomValues() 完成。",
+    "faq3Q": "应该使用 UUID v4 还是 v7？",
+    "faq3A": "通用随机 ID 使用 v4。数据库主键或需要时间排序的场景使用 v7——v7 包含毫秒级时间戳前缀，支持有序唯一性。"
+  }
 }

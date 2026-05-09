@@ -5,8 +5,15 @@
     "spring": "Spring (6 champs)",
     "quartz": "Quartz (7 champs)"
   },
-  "tab": { "generate": "Générer", "parse": "Analyser" },
-  "timezone": { "label": "Fuseau horaire", "local": "Local", "utc": "UTC" },
+  "tab": {
+    "generate": "Générer",
+    "parse": "Analyser"
+  },
+  "timezone": {
+    "label": "Fuseau horaire",
+    "local": "Local",
+    "utc": "UTC"
+  },
   "field": {
     "second": "Seconde",
     "minute": "Minute",
@@ -29,11 +36,37 @@
     "lastDayOffset": "Jours avant le dernier"
   },
   "monthShort": [
-    "Jan", "Fév", "Mar", "Avr", "Mai", "Jun",
-    "Jul", "Aoû", "Sep", "Oct", "Nov", "Déc"
+    "Jan",
+    "Fév",
+    "Mar",
+    "Avr",
+    "Mai",
+    "Jun",
+    "Jul",
+    "Aoû",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Déc"
   ],
-  "weekdayShort": ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"],
-  "weekdayLong": ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"],
+  "weekdayShort": [
+    "Dim",
+    "Lun",
+    "Mar",
+    "Mer",
+    "Jeu",
+    "Ven",
+    "Sam"
+  ],
+  "weekdayLong": [
+    "Dimanche",
+    "Lundi",
+    "Mardi",
+    "Mercredi",
+    "Jeudi",
+    "Vendredi",
+    "Samedi"
+  ],
   "presets": {
     "everyMinute": "Chaque minute",
     "every5Minutes": "Toutes les 5 minutes",
@@ -66,15 +99,32 @@
     "lastWeekdayOfMonth": "le dernier jour de semaine du mois",
     "lastDayMinusN": "{n} jours avant le dernier jour du mois"
   },
-  "ordinal": { "1": "premier", "2": "deuxième", "3": "troisième", "4": "quatrième", "5": "cinquième" },
+  "ordinal": {
+    "1": "premier",
+    "2": "deuxième",
+    "3": "troisième",
+    "4": "quatrième",
+    "5": "cinquième"
+  },
   "output": {
     "expression": "Expression",
     "description": "Description",
     "nextExecutions": "5 prochaines exécutions",
-    "header": { "num": "N°", "dateTime": "Date et heure", "relative": "Relatif" },
-    "relative": { "in": "dans {value}", "now": "maintenant", "past": "passé" }
+    "header": {
+      "num": "N°",
+      "dateTime": "Date et heure",
+      "relative": "Relatif"
+    },
+    "relative": {
+      "in": "dans {value}",
+      "now": "maintenant",
+      "past": "passé"
+    }
   },
-  "share": { "button": "Partager le lien", "copied": "Lien de partage copié" },
+  "share": {
+    "button": "Partager le lien",
+    "copied": "Lien de partage copié"
+  },
   "parse": {
     "placeholder": "Collez ou saisissez une expression Cron",
     "showingPrevious": "Affichage du dernier résultat valide"
@@ -110,7 +160,14 @@
     "specialCharsTitle": "Caractères spéciaux",
     "modesTitle": "Modes",
     "dstTitle": "Heure d'été / heure d'hiver",
-    "dst": "Quand le fuseau horaire actif observe l'heure d'été, les planifications dans le créneau de passage à l'heure d'été se déclenchent à la prochaine heure valide, et les planifications dans le créneau de retour à l'heure d'hiver se déclenchent à la première occurrence. Passez en UTC pour éviter l'heure d'été."
+    "dst": "Quand le fuseau horaire actif observe l'heure d'été, les planifications dans le créneau de passage à l'heure d'été se déclenchent à la prochaine heure valide, et les planifications dans le créneau de retour à l'heure d'hiver se déclenchent à la première occurrence. Passez en UTC pour éviter l'heure d'été.",
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Qu'est-ce qu'une expression Cron ?",
+    "faq1A": "Une expression Cron est une chaîne de 5 à 7 champs qui définit un planning pour des tâches récurrentes. Elle est utilisée par les démons cron, les planificateurs de tâches et les frameworks comme Spring et Quartz.",
+    "faq2Q": "Quels dialectes Cron sont pris en charge ?",
+    "faq2A": "Trois : Standard (5 champs), Spring (6 champs avec secondes) et Quartz (7 champs avec secondes et année). L'outil détecte automatiquement le dialecte et affiche les prochaines exécutions.",
+    "faq3Q": "Quelle est la précision des prédictions de prochaine exécution ?",
+    "faq3A": "Les prédictions sont calculées côté client et correspondent au comportement standard de cron. L'outil affiche les 5 prochaines exécutions planifiées pour votre expression."
   },
   "editor": {
     "title": "Modifier le champ",

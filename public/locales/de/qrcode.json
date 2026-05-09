@@ -91,5 +91,14 @@
     "generateFailed": "QR-Code-Generierung fehlgeschlagen",
     "libraryLoadFailed": "QR-Generator konnte nicht geladen werden. Bitte laden Sie die Seite neu."
   },
-  "localGenerated": "Vollständig in Ihrem Browser generiert. Ihre Daten verlassen niemals Ihr Gerät."
+  "localGenerated": "Vollständig in Ihrem Browser generiert. Ihre Daten verlassen niemals Ihr Gerät.",
+  "descriptions": {
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was ist der QR-Code-Generator?",
+    "faq1A": "Ein anpassbarer QR-Code-Generator, der Text, URLs, WiFi-Zugangsdaten und vCards unterstützt. Logo hinzufügen, Farben ändern und als SVG oder PNG exportieren.",
+    "faq2Q": "Was ist die maximale QR-Code-Kapazität?",
+    "faq2A": "Die Kapazität hängt vom Fehlerkorrektur-Level und Datentyp ab. Numerisch: bis zu 7.089 Zeichen. Alphanumerisch: bis zu 4.296. Binär: bis zu 2.953 Bytes. Kanji: bis zu 1.817 Zeichen.",
+    "faq3Q": "Kann ich ein Logo zu meinem QR-Code hinzufügen?",
+    "faq3A": "Ja. Laden Sie ein Logo-Bild hoch, um es in der Mitte des QR-Codes zu platzieren. Das Tool passt die Fehlerkorrektur automatisch an, um die Scannbarkeit zu erhalten."
+  }
 }

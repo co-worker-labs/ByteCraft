@@ -36,6 +36,13 @@
     "useCasesTitle": "Use Cases",
     "useCasesP1": "Converting spreadsheet data to Markdown for documentation, pasting API response CSV into GitHub issues, generating Markdown tables from CSV exports, and converting Markdown tables back to CSV for spreadsheet analysis.",
     "limitationsTitle": "Limitations",
-    "limitationsP1": "Complex Markdown formatting (links, images, inline code) in table cells is preserved as raw text. Multi-line cells are not supported. The tool handles flat tabular data only."
+    "limitationsP1": "Complex Markdown formatting (links, images, inline code) in table cells is preserved as raw text. Multi-line cells are not supported. The tool handles flat tabular data only.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is the CSV to Markdown Table converter?",
+    "faq1A": "A specialized tool that converts CSV data into formatted Markdown tables with alignment options, header rows, and clean pipe-delimited output.",
+    "faq2Q": "Can I customize column alignment?",
+    "faq2A": "Yes. Choose left, center, or right alignment per column. The tool generates the correct Markdown alignment syntax.",
+    "faq3Q": "Does it support large CSV files?",
+    "faq3A": "Processing happens entirely in your browser. Files up to several MB work well, limited only by your device's memory."
   }
 }

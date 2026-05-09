@@ -26,6 +26,13 @@
     "howTitle": "Verwendung",
     "howP1": "Geben Sie Markdown in den Editor ein oder fügen Sie es ein. Die Vorschau aktualisiert sich beim Tippen. Wechseln Sie zwischen Bearbeiten-, Vorschau- und Geteilt-Layouts. Exportieren Sie als .md, kopieren Sie das gerenderte HTML oder speichern Sie die Vorschau als PDF oder PNG. Die gesamte Verarbeitung erfolgt in Ihrem Browser.",
     "gfmTitle": "GitHub Flavored Markdown",
-    "gfmP1": "Unterstützt Tabellen, Aufgabenlisten (- [ ] todo), Durchstreichungen, Autolinks und Mermaid-Diagramme (Flussdiagramm, Sequenz, Klasse, Zustand, ER, Gantt, Kreis, Git-Graph). Verwenden Sie ```mermaid-Codeblöcke. Mathematik und Fußnoten sind nicht im Umfang enthalten."
+    "gfmP1": "Unterstützt Tabellen, Aufgabenlisten (- [ ] todo), Durchstreichungen, Autolinks und Mermaid-Diagramme (Flussdiagramm, Sequenz, Klasse, Zustand, ER, Gantt, Kreis, Git-Graph). Verwenden Sie ```mermaid-Codeblöcke. Mathematik und Fußnoten sind nicht im Umfang enthalten.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Was ist der Markdown-Editor?",
+    "faq1A": "Ein Live-Markdown-Editor mit geteilter Vorschau, der GFM (GitHub Flavored Markdown), Syntaxhervorhebung, Aufgabenlisten und Mermaid-Diagramme unterstützt.",
+    "faq2Q": "Kann ich Markdown als PDF exportieren?",
+    "faq2A": "Ja. Verwenden Sie die Export-Schaltflächen, um als PDF oder PNG zu speichern. Der PDF-Export berücksichtigt Druckstile für eine saubere, formatierte Ausgabe.",
+    "faq3Q": "Welche Markdown-Erweiterungen werden unterstützt?",
+    "faq3A": "GFM-Tabellen, Aufgabenlisten, Durchgestrichen, Auto-Links und Code-Syntaxhervorhebung für 12+ Programmiersprachen einschließlich TypeScript, Python, Go, Rust und SQL."
   }
 }

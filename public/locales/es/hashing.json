@@ -3,6 +3,13 @@
   "pasteToCompare": "Pegar para comparar",
   "descriptions": {
     "hmacTitle": "HMAC",
-    "hmac": "Los códigos de autenticación de mensajes con clave hash (HMAC) son un mecanismo de autenticación de mensajes que usa funciones hash criptográficas."
+    "hmac": "Los códigos de autenticación de mensajes con clave hash (HMAC) son un mecanismo de autenticación de mensajes que usa funciones hash criptográficas.",
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Qué es el hash criptográfico?",
+    "faq1A": "El hash criptográfico convierte datos de entrada en una huella digital de tamaño fijo (hash). La misma entrada siempre produce el mismo hash, pero un pequeño cambio altera completamente la salida.",
+    "faq2Q": "¿Qué algoritmos de hash son compatibles?",
+    "faq2A": "Esta herramienta soporta MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3-224/256/384/512, Keccak-224/256/384/512 y RIPEMD-160. También están disponibles variantes HMAC.",
+    "faq3Q": "¿Es lo mismo hash que cifrado?",
+    "faq3A": "No. El hash es unidireccional — no puedes revertir un hash a la entrada original. El cifrado es bidireccional. El hash se usa para verificación, no para confidencialidad."
   }
 }

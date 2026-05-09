@@ -30,6 +30,13 @@
     "useCasesP3": "Submitting form data with fetch: when you POST a body with Content-Type: application/x-www-form-urlencoded, the body must be encoded with Form mode semantics. This tool's Form mode produces output byte-compatible with what the browser sends.",
     "limitationsTitle": "Limitations",
     "limitationsP1": "URL encoding is not encryption. Anyone can decode the output with a single function call; never use encoding to hide secrets.",
-    "limitationsP2": "Choice of mode matters. Running a whole URL through Component mode breaks the URL (every / becomes %2F). Running a query value through Whole URL mode can leave reserved characters dangerous (an & in the value still looks like a parameter separator). When in doubt, pick Component."
+    "limitationsP2": "Choice of mode matters. Running a whole URL through Component mode breaks the URL (every / becomes %2F). Running a query value through Whole URL mode can leave reserved characters dangerous (an & in the value still looks like a parameter separator). When in doubt, pick Component.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is URL encoding?",
+    "faq1A": "URL encoding (percent-encoding) converts characters into a format that can be transmitted over the internet. Special characters like spaces, quotes, and non-ASCII are replaced with %XX sequences.",
+    "faq2Q": "What encoding modes are available?",
+    "faq2A": "Three modes: Component (encodes all reserved characters), Whole URL (preserves URL structure like ://, ?, &), and Form (space becomes + instead of %20).",
+    "faq3Q": "When should I use URL encoding?",
+    "faq3A": "Use URL encoding when passing data in query parameters, embedding URLs in HTML, or handling special characters in API calls."
   }
 }

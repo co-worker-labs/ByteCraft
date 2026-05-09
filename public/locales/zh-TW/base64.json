@@ -26,6 +26,13 @@
     "useCasesP2": "可以使用 Base64 將表單資料或 JSON 等輸入轉換為字元集更精簡且 URL 安全的字串。不過，由於某些伺服器可能會對加號（+）和斜線（/）字元有特殊解讀，建議使用 encodeURIComponent 替代。",
     "limitationsTitle": "了解 Base64 的限制",
     "limitationsP1": "Base64 絕不是一種安全的加密方式。",
-    "limitationsP2": "Base64 也不是壓縮方式。將字串編碼為 Base64 通常會使輸出長度增加 33%。"
+    "limitationsP2": "Base64 也不是壓縮方式。將字串編碼為 Base64 通常會使輸出長度增加 33%。",
+    "faqTitle": "常見問題",
+    "faq1Q": "什麼是 Base64 編碼？",
+    "faq1A": "Base64 是一種二進位到文字的編碼方案，使用 64 個 ASCII 字元（A-Z、a-z、0-9、+、/）表示二進位資料。常用於在 URL、HTML 和 JSON 中嵌入資料。",
+    "faq2Q": "Base64 是加密嗎？",
+    "faq2A": "不是。Base64 是編碼而非加密，不提供任何安全性——任何人都可以解碼。如需資料保護，請使用加密/解密工具。",
+    "faq3Q": "Base64 編碼會增加檔案大小嗎？",
+    "faq3A": "是的。Base64 編碼會使資料大小增加約 33%。每 3 位元組輸入會變成 4 個字元的輸出。"
   }
 }

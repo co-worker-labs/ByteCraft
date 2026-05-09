@@ -25,6 +25,8 @@ import { VISION_MODES, visionFilterStyle, type VisionMode } from "../../../libs/
 import { STORAGE_KEYS } from "../../../libs/storage-keys";
 import { showToast } from "../../../libs/toast";
 import { Eye, Info, ArrowLeftRight } from "lucide-react";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
 
 const TAILWIND_PREFIXES: TailwindPrefix[] = ["bg", "text", "border", "ring"];
 const FORMATS = ["hex", "rgb", "hsl", "hsv", "cmyk", "lab", "oklch"] as const;
@@ -533,7 +535,6 @@ function ImagePaletteSection({
 
 export default function ColorPage() {
   const ts = useTranslations("tools");
-  const tc = useTranslations("common");
   const tTabs = useTranslations("color.tabs");
 
   const [color, setColor] = useState("#06d6a0");
@@ -571,11 +572,7 @@ export default function ColorPage() {
     <Layout title={ts("color.shortTitle")}>
       <VisionFilterDefs />
       <div className="container mx-auto px-4 pt-3 pb-6" style={visionFilterStyle(vision)}>
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
 
         <VisionToggle value={vision} onChange={setVision} />
 
@@ -617,6 +614,7 @@ export default function ColorPage() {
         />
 
         <Description />
+        <RelatedTools currentTool="color" />
       </div>
       <ColorHistoryBar history={history} onSelect={setColor} onClear={clearHistory} />
     </Layout>

@@ -36,6 +36,13 @@
     "useCasesTitle": "Casos de uso",
     "useCasesP1": "Converter dados de planilha para Markdown em documentação, colar CSV de resposta de API em issues do GitHub, gerar tabelas Markdown a partir de exportações CSV e converter tabelas Markdown de volta para CSV para análise em planilha.",
     "limitationsTitle": "Limitações",
-    "limitationsP1": "Formatação Markdown complexa (links, imagens, código inline) em células é preservada como texto puro. Células com múltiplas linhas não são suportadas. A ferramenta lida apenas com dados tabulares simples."
+    "limitationsP1": "Formatação Markdown complexa (links, imagens, código inline) em células é preservada como texto puro. Células com múltiplas linhas não são suportadas. A ferramenta lida apenas com dados tabulares simples.",
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "O que é o conversor CSV para Tabela Markdown?",
+    "faq1A": "Uma ferramenta especializada que converte dados CSV em tabelas Markdown formatadas com opções de alinhamento, linhas de cabeçalho e saída limpa delimitada por pipes.",
+    "faq2Q": "Posso personalizar o alinhamento de colunas?",
+    "faq2A": "Sim. Escolha alinhamento esquerdo, centro ou direito por coluna. A ferramenta gera a sintaxe de alinhamento Markdown correta.",
+    "faq3Q": "Suporta arquivos CSV grandes?",
+    "faq3A": "O processamento acontece inteiramente no seu navegador. Arquivos de até vários MB funcionam bem, limitados apenas pela memória do seu dispositivo."
   }
 }

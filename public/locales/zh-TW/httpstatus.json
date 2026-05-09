@@ -320,8 +320,32 @@
     "431": {
       "description": "伺服器不願處理請求，因為其標頭欄位過大。"
     },
+    "440": {
+      "description": "用戶端的工作階段已過期。"
+    },
+    "444": {
+      "description": "Nginx 關閉連線，未向用戶端傳送任何回應。"
+    },
+    "449": {
+      "description": "在執行適當操作後應重試請求。"
+    },
     "451": {
       "description": "伺服器因法律要求而拒絕存取該資源。"
+    },
+    "494": {
+      "description": "Nginx 因請求標頭過大而拒絕請求。"
+    },
+    "495": {
+      "description": "Nginx 用戶端 SSL 憑證驗證錯誤。"
+    },
+    "496": {
+      "description": "Nginx 用戶端未提供 SSL 憑證。"
+    },
+    "497": {
+      "description": "Nginx 用戶端將 HTTP 請求傳送至 HTTPS 連接埠。"
+    },
+    "499": {
+      "description": "Nginx 用戶端在伺服器傳送回應之前關閉了連線。"
     },
     "500": {
       "description": "伺服器遇到了不知道如何處理的情況。",
@@ -392,24 +416,6 @@
     "511": {
       "description": "用戶端需要通過驗證以取得網路存取權限。"
     },
-    "444": {
-      "description": "Nginx 關閉連線，未向用戶端傳送任何回應。"
-    },
-    "494": {
-      "description": "Nginx 因請求標頭過大而拒絕請求。"
-    },
-    "495": {
-      "description": "Nginx 用戶端 SSL 憑證驗證錯誤。"
-    },
-    "496": {
-      "description": "Nginx 用戶端未提供 SSL 憑證。"
-    },
-    "497": {
-      "description": "Nginx 用戶端將 HTTP 請求傳送至 HTTPS 連接埠。"
-    },
-    "499": {
-      "description": "Nginx 用戶端在伺服器傳送回應之前關閉了連線。"
-    },
     "520": {
       "description": "來源伺服器傳回未預期或未知的錯誤。"
     },
@@ -442,12 +448,15 @@
     },
     "530": {
       "description": "Cloudflare 無法解析來源伺服器的 DNS。"
-    },
-    "440": {
-      "description": "用戶端的工作階段已過期。"
-    },
-    "449": {
-      "description": "在執行適當操作後應重試請求。"
     }
+  },
+  "descriptions": {
+    "faqTitle": "常見問題",
+    "faq1Q": "什麼是 HTTP 狀態碼？",
+    "faq1A": "HTTP 狀態碼是伺服器回應用戶端請求時回傳的 3 位數字，指示請求是否成功、被重導向或遇到錯誤。",
+    "faq2Q": "收錄了多少狀態碼？",
+    "faq2A": "工具涵蓋 5 個類別下的所有標準狀態碼：1xx（資訊）、2xx（成功）、3xx（重新導向）、4xx（用戶端錯誤）和 5xx（伺服器錯誤）。",
+    "faq3Q": "可以搜尋特定狀態碼嗎？",
+    "faq3A": "可以。按代碼編號、短語或類別搜尋，快速找到你需要的狀態碼。"
   }
 }

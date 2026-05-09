@@ -26,6 +26,13 @@
     "useCasesP2": "É possível usar Base64 para converter dados de formulário ou JSON em uma string com um conjunto reduzido de caracteres seguro para URLs. No entanto, devido à forma como certos servidores podem interpretar os caracteres + e /, recomenda-se usar encodeURIComponent.",
     "limitationsTitle": "Limitações do Base64",
     "limitationsP1": "Base64 não é, de forma alguma, um método seguro de criptografia.",
-    "limitationsP2": "Base64 também não é um método de compressão. Codificar uma string em Base64 geralmente resulta em uma saída 33% maior."
+    "limitationsP2": "Base64 também não é um método de compressão. Codificar uma string em Base64 geralmente resulta em uma saída 33% maior.",
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "O que é codificação Base64?",
+    "faq1A": "Base64 é um esquema de codificação de binário para texto que representa dados binários usando 64 caracteres ASCII (A-Z, a-z, 0-9, +, /). É comumente usado para incorporar dados em URLs, HTML e JSON.",
+    "faq2Q": "Base64 é criptografia?",
+    "faq2A": "Não. Base64 é codificação, não criptografia. Não fornece segurança — qualquer pessoa pode decodificá-lo. Use a ferramenta de Criptografia/Descriptografia para proteção real de dados.",
+    "faq3Q": "A codificação Base64 aumenta o tamanho do arquivo?",
+    "faq3A": "Sim. A codificação Base64 aumenta o tamanho dos dados em aproximadamente 33%. A cada 3 bytes de entrada se tornam 4 caracteres de saída."
   }
 }

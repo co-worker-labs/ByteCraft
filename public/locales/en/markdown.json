@@ -26,6 +26,13 @@
     "howTitle": "How to use",
     "howP1": "Type or paste Markdown into the editor. The preview updates as you type. Switch between Edit, Preview, and Split layouts. Export to .md, copy the rendered HTML, or save the preview as PDF or PNG. All processing happens in your browser.",
     "gfmTitle": "GitHub Flavored Markdown",
-    "gfmP1": "Supports tables, task lists (- [ ] todo), strikethrough, autolinks, and Mermaid diagrams (flowchart, sequence, class, state, ER, Gantt, pie, git graph). Use ```mermaid code blocks. Math and footnotes are out of scope."
+    "gfmP1": "Supports tables, task lists (- [ ] todo), strikethrough, autolinks, and Mermaid diagrams (flowchart, sequence, class, state, ER, Gantt, pie, git graph). Use ```mermaid code blocks. Math and footnotes are out of scope.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What is the Markdown Editor?",
+    "faq1A": "A live Markdown editor with split-pane preview, supporting GFM (GitHub Flavored Markdown), syntax highlighting, task lists, and Mermaid diagrams.",
+    "faq2Q": "Can I export Markdown to PDF?",
+    "faq2A": "Yes. Use the export buttons to save as PDF or PNG. The PDF export respects print styles for clean, formatted output.",
+    "faq3Q": "What Markdown extensions are supported?",
+    "faq3A": "GFM tables, task lists, strikethrough, autolinks, and code syntax highlighting for 12+ programming languages including TypeScript, Python, Go, Rust, and SQL."
   }
 }

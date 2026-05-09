@@ -1,5 +1,10 @@
 {
-  "tabs": { "imagePalette": "從圖片擷取", "converter": "轉換", "palette": "配色", "contrast": "對比度" },
+  "tabs": {
+    "imagePalette": "從圖片擷取",
+    "converter": "轉換",
+    "palette": "配色",
+    "contrast": "對比度"
+  },
   "vision": {
     "label": "色覺",
     "none": "正常視覺",
@@ -59,7 +64,10 @@
     "suggestionText": "調整為 {color} 即可通過 {target}",
     "useThis": "採用"
   },
-  "history": { "recent": "最近", "clear": "清除" },
+  "history": {
+    "recent": "最近",
+    "clear": "清除"
+  },
   "errors": {
     "invalidColor": "無效的顏色值",
     "fileTooLarge": "圖片必須小於 5MB",
@@ -88,5 +96,14 @@
     "tipEyedropper": "使用螢幕滴管從任意像素拾取顏色（僅 Chromium 瀏覽器）。",
     "tipImage": "在配色分頁拖入圖片，透過中位切分量化擷取 6 個主色。",
     "tipOklch": "Tailwind v4 預設輸出 OKLCH 顏色以保證感知平滑 — 複製 @theme 區塊以對齊該工作流。"
+  },
+  "descriptions": {
+    "faqTitle": "常見問題",
+    "faq1Q": "什麼是顏色工具？",
+    "faq1A": "顏色工具是一個綜合顏色工具程式，支援 HEX、RGB、HSL 和 OKLCH 顏色模型，提供視覺化拾色器、格式轉換和對比度檢查。",
+    "faq2Q": "什麼是 OKLCH 顏色空間？",
+    "faq2A": "OKLCH 是一種感知均勻的顏色空間，比 HSL 或 RGB 更好地匹配人類視覺。它能產生更一致的亮度梯度和無障礙調色盤。",
+    "faq3Q": "可以從圖片中提取顏色嗎？",
+    "faq3A": "可以。將圖片拖放到調色盤提取區域即可取得主要顏色。還可以模擬色覺缺陷（紅色盲、綠色盲、藍色盲）。"
   }
 }

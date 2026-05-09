@@ -89,5 +89,17 @@
   "status": {
     "engineRestarted": "資料庫引擎已重啟 — 資料已重新載入",
     "abortShortcut": "按 Esc 中止"
+  },
+  "descriptions": {
+    "whatIsTitle": "什麼是 SQLite 檢視器？",
+    "whatIsP1": "SQLite 檢視器讓你直接在瀏覽器中開啟並瀏覽 SQLite 資料庫檔案，無需上傳到伺服器。支援執行 SQL 查詢、瀏覽資料表，並將資料匯出為 CSV 或 JSON。",
+    "whatIsP2": "基於 sql.js（SQLite 編譯為 WebAssembly）建構，支援自動補全、查詢歷史、分頁瀏覽，可處理瀏覽器記憶體限制內的資料庫。",
+    "faqTitle": "常見問題",
+    "faq1Q": "可以檢視哪些資料庫？",
+    "faq1A": "工具支援 SQLite 資料庫檔案（.db、.sqlite、.sqlite3）。開啟任何 SQLite 檔案即可瀏覽資料表、執行查詢和匯出資料。",
+    "faq2Q": "資料庫會上傳到伺服器嗎？",
+    "faq2A": "不會。資料庫使用 sql.js（編譯為 WebAssembly 的 SQLite）載入到瀏覽器記憶體中，所有操作在本機完成。",
+    "faq3Q": "支援哪些 SQL 功能？",
+    "faq3A": "完整的 SQLite SQL 語法，包括 SELECT、INSERT、UPDATE、DELETE、JOIN、子查詢、聚合和交易。編輯器提供資料表和欄位名稱的自動補全。"
   }
 }

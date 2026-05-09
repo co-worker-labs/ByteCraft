@@ -1,12 +1,17 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import Layout from "../../../components/layout";
 import { showToast } from "../../../libs/toast";
 import { fromEvent } from "file-selector";
 import "rc-slider/assets/index.css";
-import Slider from "rc-slider";
+
+const Slider = dynamic(() => import("rc-slider"), {
+  ssr: false,
+  loading: () => <div className="h-6 w-full animate-pulse bg-bg-input rounded" />,
+});
 import { Download, Clipboard, RefreshCw, ImageIcon, ImagePlus, ArrowLeftRight } from "lucide-react";
 import { StyledSelect, StyledInput, StyledCheckbox } from "../../../components/ui/input";
 import { Button } from "../../../components/ui/button";
@@ -14,6 +19,10 @@ import { encode } from "../../../libs/image/encode";
 import { calculateDimensions } from "../../../libs/image/resize";
 import { getSupportedEncodeFormats } from "../../../libs/image/format-support";
 import type { OutputFormat, ResizeMode } from "../../../libs/image/types";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const FORMAT_OPTIONS: { value: OutputFormat; label: string }[] = [
   { value: "png", label: "PNG" },
@@ -664,6 +673,11 @@ function Conversion() {
 
 function Description() {
   const t = useTranslations("image");
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section className="mt-8">
       <h2 className="text-sm font-semibold mb-3">{t("descriptions.title")}</h2>
@@ -673,23 +687,28 @@ function Description() {
         <p>{t("descriptions.p3")}</p>
         <p>{t("descriptions.p4")}</p>
       </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {t("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
     </section>
   );
 }
 
 export default function ImagePage() {
   const t = useTranslations("tools");
-  const tc = useTranslations("common");
   return (
     <Layout title={t("image.shortTitle")}>
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
         <Conversion />
         <Description />
+        <RelatedTools currentTool="image" />
       </div>
     </Layout>
   );

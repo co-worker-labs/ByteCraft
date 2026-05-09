@@ -14,6 +14,8 @@ import { STORAGE_KEYS } from "../../../libs/storage-keys";
 import { generateKeyPair, parsePublicKey } from "../../../libs/sshkey/main";
 import type { SshKeyResult, PublicKeyInfo } from "../../../libs/sshkey/main";
 import { useDropZone } from "../../../hooks/useDropZone";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
 
 type KeyType = "rsa" | "ed25519";
 
@@ -436,7 +438,7 @@ export default function SshKeyPage() {
     <Layout title={ts("sshkey.shortTitle")}>
       <div className="container mx-auto px-4 pt-3 pb-6">
         <div className="space-y-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">{t("localGenerated")}</span>
+          <PrivacyBanner />
 
           <NeonTabs
             tabs={[
@@ -446,6 +448,7 @@ export default function SshKeyPage() {
           />
           <div className="w-full h-px bg-border-default mt-8" />
           <Description />
+          <RelatedTools currentTool="sshkey" />
         </div>
       </div>
     </Layout>

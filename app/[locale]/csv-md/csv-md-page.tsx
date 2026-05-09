@@ -25,6 +25,7 @@ import { showToast } from "../../../libs/toast";
 import { csvMdConvert, type ColumnAlignment } from "../../../libs/csv/csv-md-convert";
 import { csvParse } from "../../../libs/csv/csv-parse";
 import { renderMarkdown } from "../../../libs/markdown/render";
+import RelatedTools from "../../../components/related-tools";
 
 // --- Types ---
 
@@ -705,6 +706,7 @@ export default function CsvMdPage() {
       <div className="container mx-auto px-4 pt-3 pb-6">
         <Conversion />
         <Description />
+        <RelatedTools currentTool="csv-md" />
       </div>
     </Layout>
   );

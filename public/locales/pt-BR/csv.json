@@ -32,6 +32,13 @@
     "useCasesTitle": "Casos de uso",
     "useCasesP1": "Importar/exportar dados entre planilhas e APIs web, converter respostas de API para CSV para análise, preparar dados para importação em lote no banco de dados, compartilhar dados tabulares em formato universalmente legível.",
     "limitationsTitle": "Limitações",
-    "limitationsP1": "Objetos JSON aninhados são achatados com notação de ponto — a estrutura original não pode ser totalmente restaurada. Arquivos binários e formato Excel (.xlsx) não são suportados."
+    "limitationsP1": "Objetos JSON aninhados são achatados com notação de ponto — a estrutura original não pode ser totalmente restaurada. Arquivos binários e formato Excel (.xlsx) não são suportados.",
+    "faqTitle": "Perguntas frequentes",
+    "faq1Q": "O que é o Conversor CSV?",
+    "faq1A": "Uma ferramenta para converter dados CSV para JSON, tabelas Markdown ou formato TSV e vice-versa. Lida com campos entre aspas, delimitadores personalizados e objetos aninhados.",
+    "faq2Q": "Quais dialetos CSV são suportados?",
+    "faq2A": "CSV padrão RFC 4180 com delimitadores personalizáveis (vírgula, ponto e vírgula, tab, pipe). Campos entre aspas, aspas escapadas e valores multilinha são todos suportados.",
+    "faq3Q": "Posso achatar JSON aninhado para CSV?",
+    "faq3A": "Sim. A ferramenta pode achatar objetos JSON aninhados em colunas com notação de ponto para exportação CSV, e desachatar de volta."
   }
 }
