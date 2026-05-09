@@ -33,12 +33,10 @@
     "pathCase": "檔案路徑、API 路由"
   },
   "descriptions": {
-    "faqTitle": "常見問題",
+    "aeoDefinition": "文字大小寫轉換器是一款免費的線上工具，用於在 camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE 等格式之間轉換。即時轉換並提供即時預覽。資料不會離開你的瀏覽器。",
     "faq1Q": "支援哪些文字大小寫轉換？",
     "faq1A": "camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE、dot.case、path/case、Title Case、Sentence case、UPPER CASE、lower case 等。",
     "faq2Q": "可以同時轉換多個字串嗎？",
-    "faq2A": "可以。貼上多行文字，工具會獨立轉換每一行。多行轉換將選取的大小寫格式套用到每一行。",
-    "faq3Q": "支援非 ASCII 字元嗎？",
-    "faq3A": "支援。工具能正確處理 Unicode 字元，包括帶重音符號的字母、CJK 字元和表情符號的大小寫轉換。"
+    "faq2A": "可以。貼上多行文字，工具會獨立轉換每一行。多行轉換將選取的大小寫格式套用到每一行。"
   }
 }

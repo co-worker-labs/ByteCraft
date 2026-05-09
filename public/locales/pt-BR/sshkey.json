@@ -1,7 +1,6 @@
 {
   "tabGenerate": "Gerar",
   "tabInspect": "Inspecionar chave pública",
-  "keyType": "Tipo de chave",
   "rsaBits": "Tamanho da chave",
   "comment": "Comentário",
   "passphrase": "Frase-senha",
@@ -16,19 +15,12 @@
   "fingerprint": "Impressão digital",
   "randomart": "Randomart",
   "quickDeploy": "Implantação rápida",
-  "deployTarget": "user@host",
   "downloadPrivate": "Baixar chave privada",
   "downloadPublic": "Baixar chave pública",
-  "copyPrivate": "Copiar chave privada",
-  "copyPublic": "Copiar chave pública",
-  "copyFingerprint": "Copiar impressão digital",
   "inspectPlaceholder": "Cole uma chave pública aqui (ex. ssh-ed25519 AAAA...)",
   "inspectKeyType": "Tipo de chave",
   "inspectBits": "Tamanho da chave",
   "inspectComment": "Comentário",
-  "inspectInvalid": "Formato de chave pública inválido. Apenas ssh-rsa e ssh-ed25519 são suportados.",
-  "privacyNotice": "Toda a geração de chaves acontece inteiramente no seu navegador. Nenhum dado é enviado a servidores.",
-  "localGenerated": "Pares de chaves SSH gerados inteiramente no seu navegador usando Web Crypto API. Sua chave privada nunca sai do seu dispositivo.",
   "descriptions": {
     "stepsTitle": "Como gerar e implantar chaves SSH",
     "step1Title": "Escolha o tipo de chave",
@@ -39,7 +31,6 @@
     "step3Desc": "Copie o conteúdo da chave pública. Ele está pronto para ser colado em servidores destino, plataformas Git (GitHub, GitLab, Bitbucket) ou provedores de nuvem.",
     "step4Title": "Implante no servidor",
     "step4Desc": "Use ssh-copy-id -i ~/.ssh/id_ed25519.pub user@host ou adicione manualmente a chave pública ao arquivo ~/.ssh/authorized_keys na máquina destino.",
-    "faqTitle": "Perguntas frequentes",
     "faq1Q": "Ed25519 vs RSA: Qual tipo de chave SSH devo usar?",
     "faq1A": "Ed25519 é recomendado para a maioria dos casos. Oferece segurança de 128 bits (equivalente ao RSA 3072), produz chaves mais curtas e gera assinaturas muito mais rápido. RSA 4096 só é necessário para compatibilidade com sistemas antigos que não suportam Ed25519. GitHub, GitLab e todos os principais provedores de nuvem suportam Ed25519.",
     "faq2Q": "Preciso de uma frase-senha para minha chave SSH?",
@@ -47,6 +38,7 @@
     "faq3Q": "Como adiciono minha chave SSH ao GitHub?",
     "faq3A": "Vá em Settings → SSH and GPG keys → New SSH key. Dê um título descritivo, cole o conteúdo completo da sua chave pública (a linha inteira começando com ssh-ed25519 ou ssh-rsa) e clique em Add SSH key. Alternativamente, use a CLI do GitHub: gh ssh-key add ~/.ssh/id_ed25519.pub.",
     "faq4Q": "É seguro gerar chaves SSH no navegador?",
-    "faq4A": "Sim. Esta ferramenta usa a Web Crypto API, que fornece as mesmas primitivas criptográficas usadas pelo OpenSSL e OpenSSH. A geração de chaves ocorre inteiramente na memória do navegador — nenhum dado é enviado a qualquer servidor. As chaves geradas são perdidas ao fechar ou atualizar a página, portanto baixe ou copie antes de sair."
+    "faq4A": "Sim. Esta ferramenta usa a Web Crypto API, que fornece as mesmas primitivas criptográficas usadas pelo OpenSSL e OpenSSH. A geração de chaves ocorre inteiramente na memória do navegador — nenhum dado é enviado a qualquer servidor. As chaves geradas são perdidas ao fechar ou atualizar a página, portanto baixe ou copie antes de sair.",
+    "aeoDefinition": "O Gerador de Chaves SSH é uma ferramenta online gratuita para gerar pares de chaves SSH RSA e Ed25519 inteiramente no seu navegador. Suporta criptografia por passphrase e exibição de fingerprint. Nenhum dado é enviado para qualquer servidor."
   }
 }

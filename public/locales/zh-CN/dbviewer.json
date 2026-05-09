@@ -6,32 +6,22 @@
     "releaseToLoad": "释放以加载",
     "unsupported": "不支持的文件类型",
     "tooLarge": "文件超过 200 MB 限制。",
-    "invalidHeader": "不是有效的 SQLite 数据库文件。",
     "engineFailed": "无法加载 SQLite 引擎，请检查网络或刷新页面。",
     "initializing": "正在初始化引擎…",
-    "reading": "正在读取文件… {loaded} / {total}",
     "privacy": "所有数据在浏览器本地处理"
   },
   "info": {
-    "tables": "{count, plural, =1 {1 张表} other {# 张表}}",
-    "views": "{count, plural, =1 {1 个视图} other {# 个视图}}",
-    "indexes": "{count, plural, =1 {1 个索引} other {# 个索引}}",
-    "triggers": "{count, plural, =1 {1 个触发器} other {# 个触发器}}",
     "close": "关闭"
   },
   "sidebar": {
-    "search": "搜索…",
     "tables": "表",
     "views": "视图",
     "indexes": "索引",
     "triggers": "触发器",
-    "showSystem": "显示系统表",
-    "noResults": "无匹配",
     "collapse": "收起侧栏",
     "expand": "展开侧栏"
   },
   "schema": {
-    "columns": "列",
     "foreignKeys": "外键",
     "indexes": "索引",
     "rowCount": "行数：{count}",
@@ -40,13 +30,7 @@
     "type": "类型",
     "nullable": "可空",
     "default": "默认值",
-    "pk": "主键",
-    "from": "来源",
-    "to": "目标",
-    "onDelete": "ON DELETE",
-    "onUpdate": "ON UPDATE",
-    "unique": "唯一",
-    "trigger": "触发器 SQL"
+    "pk": "主键"
   },
   "editor": {
     "run": "运行",
@@ -54,10 +38,8 @@
     "format": "格式化",
     "compress": "压缩",
     "clear": "清空",
-    "history": "历史",
     "noHistory": "暂无查询记录",
-    "clearHistory": "清除历史",
-    "placeholder": "-- 在此编写 SELECT 查询。Ctrl/Cmd+Enter 运行。"
+    "clearHistory": "清除历史"
   },
   "result": {
     "running": "正在执行查询…",
@@ -71,30 +53,20 @@
     "exportJson": "导出 JSON",
     "empty": "无结果",
     "tabName": "结果 {n}",
-    "errorTab": "错误",
-    "rejectedReadonly": "仅允许只读语句（收到：{keyword}）。",
-    "rejectedPragma": "PRAGMA \"{name}\" 不在只读白名单中。",
-    "rejectedCte": "检测到数据修改 CTE，已拒绝。",
     "exportConfirm": "结果尚未全部加载。导出当前 {loaded} 行，还是先加载全部？",
     "exportLoaded": "导出当前行",
     "exportLoadAll": "先加载全部"
   },
   "cell": {
-    "null": "NULL",
     "empty": "(空)",
     "blob": "BLOB · {bytes} B",
-    "expandLong": "展开全文",
-    "copyLong": "复制"
+    "expandLong": "展开全文"
   },
-  "status": {
-    "engineRestarted": "数据库引擎已重启 — 数据已重新加载",
-    "abortShortcut": "按 Esc 中止"
-  },
+  "status": {},
   "descriptions": {
     "whatIsTitle": "什么是 SQLite 查看器？",
     "whatIsP1": "SQLite 浏览器让你可以直接在浏览器中打开和浏览 SQLite 数据库文件——无需上传到服务器。执行 SQL 查询、浏览表结构，并将数据导出为 [CSV](/csv) 或 [JSON](/json)。基于 sql.js（WebAssembly）。",
     "whatIsP2": "基于 sql.js（SQLite 编译为 WebAssembly）构建，支持自动补全、查询历史、分页浏览，可处理浏览器内存限制内的数据库。",
-    "faqTitle": "常见问题",
     "faq1Q": "可以查看哪些数据库？",
     "faq1A": "工具支持 SQLite 数据库文件（.db、.sqlite、.sqlite3）。打开任何 SQLite 文件即可浏览表、运行查询和导出数据。",
     "faq2Q": "数据库会上传到服务器吗？",

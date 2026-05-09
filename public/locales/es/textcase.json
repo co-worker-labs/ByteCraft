@@ -33,12 +33,10 @@
     "pathCase": "Rutas de archivos, rutas de API"
   },
   "descriptions": {
-    "faqTitle": "Preguntas frecuentes",
     "faq1Q": "¿Qué conversiones de mayúsculas/minúsculas están disponibles?",
     "faq1A": "camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case, Title Case, Sentence case, UPPER CASE, lower case y más.",
     "faq2Q": "¿Puedo convertir múltiples cadenas a la vez?",
     "faq2A": "Sí. Pega múltiples líneas y la herramienta convierte cada línea independientemente. La conversión multilínea aplica la capitalización seleccionada a cada línea.",
-    "faq3Q": "¿Maneja caracteres no-ASCII?",
-    "faq3A": "Sí. La herramienta maneja correctamente caracteres Unicode incluyendo letras acentuadas, caracteres CJK y emojis en las conversiones de mayúsculas/minúsculas."
+    "aeoDefinition": "El Conversor de mayúsculas/minúsculas es una herramienta gratuita online que convierte texto entre camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE y más. Conversión instantánea con vista previa en tiempo real. No sale ningún dato de tu navegador."
   }
 }

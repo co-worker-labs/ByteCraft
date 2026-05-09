@@ -2,14 +2,12 @@
   "passphrasePlaceholder": "在此貼上或輸入 HMAC 的密鑰短語",
   "pasteToCompare": "貼上以比較",
   "descriptions": {
+    "aeoDefinition": "雜湊產生器是一款免費的線上工具，用於產生 MD5、SHA-1、SHA-256、SHA-512、SHA3、Keccak 和 RIPEMD-160 雜湊值。支援 HMAC 和檔案雜湊。不會將任何資料傳送到伺服器。",
     "hmacTitle": "HMAC",
     "hmac": "金鑰雜湊訊息認證碼（HMAC）是一種使用密碼學雜湊函式進行訊息認證的機制。",
-    "faqTitle": "常見問題",
     "faq1Q": "什麼是加密雜湊？",
     "faq1A": "加密雜湊將輸入資料轉換為固定大小的指紋（雜湊值）。相同輸入始終產生相同雜湊，但即使微小變化也會完全改變輸出。",
     "faq2Q": "支援哪些雜湊演算法？",
-    "faq2A": "此工具支援 MD5、SHA-1、SHA-224、SHA-256、SHA-384、SHA-512、SHA3-224/256/384/512、Keccak-224/256/384/512 和 RIPEMD-160，也支援 HMAC 變體。",
-    "faq3Q": "雜湊和加密一樣嗎？",
-    "faq3A": "不一樣。雜湊是單向的——無法從雜湊值反推原始輸入。加密是雙向的。雜湊用於驗證，而非保密。"
+    "faq2A": "此工具支援 MD5、SHA-1、SHA-224、SHA-256、SHA-384、SHA-512、SHA3-224/256/384/512、Keccak-224/256/384/512 和 RIPEMD-160，也支援 HMAC 變體。"
   }
 }

@@ -6,14 +6,15 @@
   "uploadFile": "Upload file",
   "formatJson": "Format JSON",
   "formatJsonInvalid": "Not valid JSON: {message}",
+  "tooLarge": "File is too large to compare",
+  "binaryRejected": "Binary files are not supported",
   "swap": "Text Swap",
   "copyDiff": "Copy Diff",
   "compare": "Compare",
   "view": {
     "label": "View",
     "sideBySide": "Side by side",
-    "inline": "Inline",
-    "stacked": "Stacked"
+    "inline": "Inline"
   },
   "layout": {
     "label": "Layout",
@@ -46,20 +47,13 @@
     "howP2": "Toggle between side-by-side and inline views, ignore whitespace or case when needed, and use Format JSON to normalize JSON inputs before comparing.",
     "algorithmTitle": "Algorithm",
     "algorithmP1": "Built on the Myers diff algorithm via jsdiff. The tool first computes a line-level diff, then for each pair of adjacent removed-and-added lines runs a second word-level pass to highlight which words actually changed — the same convention used by GitHub pull requests.",
-    "useCasesTitle": "Common Use Cases",
     "useCasesP1": "Comparing two configuration files ([JSON](/json), [YAML](/yaml), .env) to spot drift between environments.",
     "useCasesP2": "Reviewing a code change before pasting it into a commit, especially when working outside an editor.",
     "useCasesP3": "Reconciling two versions of a document, log, or query result side by side.",
-    "limitationsTitle": "Limitations",
     "limitationsP1": "The tool diffs text only. Binary files are detected and rejected to keep the result meaningful.",
     "limitationsP2": "Inputs are capped at 5MB per side. Inputs above 512KB run in a background Web Worker; the page stays responsive but the diff itself takes proportionally longer for very large inputs.",
     "limitationsP3": "Differences in line endings (CRLF vs LF) and trailing whitespace are normalized away — they will never appear as changes.",
-    "faqTitle": "Frequently Asked Questions",
-    "faq1Q": "What is a text diff tool?",
-    "faq1A": "A diff tool compares two texts and highlights the differences between them. This tool shows additions, deletions, and modifications at the word or character level.",
-    "faq2Q": "What diff modes are available?",
-    "faq2A": "Two modes: Side-by-side (shows both texts with differences highlighted) and Inline (shows merged differences in a single view). Both support word-level granularity.",
-    "faq3Q": "Is there a file size limit?",
-    "faq3A": "Diff computation runs entirely in your browser using a Web Worker. Performance depends on your device, but texts up to several hundred KB work smoothly."
+    "faq1Q": "Is there a file size limit?",
+    "faq1A": "Diff computation runs entirely in your browser using a Web Worker. Inputs up to 5MB per side are accepted; texts up to a few MB diff smoothly. Performance depends on your device."
   }
 }

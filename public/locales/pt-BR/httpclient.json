@@ -2,12 +2,6 @@
   "url": {
     "placeholder": "https://api.example.com/users"
   },
-  "method": {
-    "label": "Método"
-  },
-  "timeout": {
-    "label": "Tempo limite"
-  },
   "proxy": {
     "label": "Proxy",
     "tooltip": "Enviar requisições através do proxy do servidor para contornar restrições CORS"
@@ -36,8 +30,6 @@
     "placeholder": "Insira o token Bearer"
   },
   "basicAuth": {
-    "username": "Usuário",
-    "password": "Senha",
     "usernamePlaceholder": "Usuário",
     "passwordPlaceholder": "Senha"
   },
@@ -47,7 +39,6 @@
   },
   "bodyPlaceholder": "Insira o corpo da requisição...",
   "response": {
-    "title": "Resposta",
     "emptyState": "Insira uma URL e clique em Enviar para começar",
     "tabs": {
       "body": "Corpo",
@@ -56,10 +47,6 @@
       "timing": "Tempos",
       "redirects": "Redirecionamentos"
     },
-    "status": "Status",
-    "time": "Tempo",
-    "size": "Tamanho",
-    "type": "Tipo",
     "download": "Download",
     "copyBody": "Copiar corpo",
     "pretty": "Formatado",
@@ -71,8 +58,6 @@
     "timingNote": "Tempos detalhados (TTFB, download) só estão disponíveis quando o servidor retorna o cabeçalho Timing-Allow-Origin.",
     "ttfb": "TTFB",
     "total": "Total",
-    "na": "N/A",
-    "crossOrigin": "(origem cruzada)",
     "redirectOccurred": "Ocorreu um redirecionamento",
     "noRedirect": "Sem redirecionamentos",
     "finalUrl": "URL final",
@@ -81,7 +66,6 @@
   },
   "error": {
     "cors": "A política CORS bloqueou esta requisição. A API de destino não permite requisições de origem cruzada de navegadores.",
-    "network": "Erro de rede",
     "timeout": "A requisição excedeu o tempo limite de {timeout}s.",
     "generic": "Falha na requisição"
   },
@@ -96,29 +80,27 @@
       "days": "{count}d atrás"
     }
   },
-  "description": {
-    "text": "Um cliente HTTP leve baseado no navegador para testar APIs REST. Configure requisições com controle total sobre método, cabeçalhos, corpo e autenticação, depois inspecione as respostas com detalhes de tempo, cabeçalhos e cookies. As requisições são enviadas diretamente via fetch() do navegador por padrão. Ative o proxy para rotear as requisições através do proxy do servidor, contornando as restrições CORS. Nenhum dado é armazenado em qualquer servidor.",
-    "features": {
-      "title": "Recursos",
-      "methods": "Todos os métodos HTTP padrão: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
-      "auth": "Autenticação: Bearer Token, Basic Auth",
-      "body": "Formatos de corpo: JSON, Form-Data, x-www-form-urlencoded, texto Raw",
-      "response": "Inspeção de resposta: corpo formatado, cabeçalhos, cookies, tempo, redirecionamentos",
-      "history": "Histórico de requisições com restauração em um clique (armazenado localmente)",
-      "proxy": "Modo proxy do servidor: contorne restrições CORS com um único clique"
-    },
-    "cors": {
-      "title": "CORS e Proxy",
-      "text": "Por padrão, esta ferramenta usa a API fetch() nativa do navegador. Requisições entre origens exigem que o servidor inclua os cabeçalhos CORS apropriados. Se o servidor não suportar CORS, ative o proxy: as requisições serão roteadas através do proxy do servidor, contornando completamente as restrições CORS."
-    }
-  },
   "descriptions": {
-    "faqTitle": "Perguntas frequentes",
     "faq1Q": "O que é a ferramenta HTTP Client?",
     "faq1A": "Um cliente HTTP baseado em navegador para testar APIs. Envie requisições GET, POST, PUT, PATCH, DELETE, HEAD e OPTIONS com headers personalizados, parâmetros de consulta e corpos de requisição.",
     "faq2Q": "Posso usar autenticação?",
     "faq2A": "Sim. Suporta Basic Auth, tokens Bearer, chaves de API (header e query) e headers de autenticação personalizados. Todas as credenciais ficam no seu navegador.",
     "faq3Q": "Suporta histórico de requisições?",
-    "faq3A": "Sim. Todas as requisições são salvas no armazenamento local com detalhes completos de requisição/resposta. Você pode favoritar requisições usadas frequentemente para acesso rápido."
+    "faq3A": "Sim. Todas as requisições são salvas no armazenamento local com detalhes completos de requisição/resposta. Você pode favoritar requisições usadas frequentemente para acesso rápido.",
+    "text": "Envie requisições HTTP e teste APIs REST diretamente no seu navegador. Suporta todos os métodos comuns com cabeçalhos, corpo e autenticação. Consulte códigos de status na referência de [Status HTTP](/httpstatus), ou codifique parâmetros de consulta com o [Codificador de URL](/urlencoder).",
+    "features": {
+      "title": "Funcionalidades",
+      "methods": "Todos os métodos HTTP padrão: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
+      "auth": "Autenticação: Bearer Token, Basic Auth",
+      "body": "Formatos de corpo da requisição: JSON, Form-Data, x-www-form-urlencoded, Texto raw",
+      "response": "Inspeção da resposta: corpo formatado, cabeçalhos, cookies, tempos, info de redirecionamento",
+      "history": "Histórico de requisições com restauração em um clique (armazenado localmente)",
+      "proxy": "Modo proxy no servidor: contorne restrições CORS com um único toggle"
+    },
+    "cors": {
+      "title": "CORS e Proxy",
+      "text": "Por padrão, esta ferramenta usa a API fetch() nativa do navegador. Requisições de origem cruzada exigem que o servidor de destino inclua cabeçalhos CORS apropriados. Se um servidor não suporta CORS, ative o toggle Proxy — as requisições serão roteadas pelo proxy do servidor, contornando as restrições CORS completamente."
+    },
+    "aeoDefinition": "O HTTP Client é uma ferramenta online gratuita para enviar requisições HTTP e testar APIs REST diretamente no seu navegador. Suporta GET, POST, PUT, DELETE com cabeçalhos, corpo e autenticação. Todas as requisições rodam localmente por padrão; proxy opcional no servidor para contorno de CORS."
   }
 }

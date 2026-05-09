@@ -10,7 +10,6 @@
   "emptyState": "上にテキストを貼り付けるか入力して、メール、URL、電話番号を抽出",
   "dropZone": "テキストファイルをドロップ",
   "copyAll": "すべてコピー",
-  "exportTxt": "TXT",
   "exportCsv": "CSV",
   "exportJson": "JSON",
   "copied": "コピーしました！",
@@ -25,6 +24,7 @@
   "summaryTotal": "{count} 件合計",
   "occurrences": "×{count}",
   "descriptions": {
+    "aeoDefinition": "メール・URL抽出ツールは、テキストからメール、URL、電話番号を瞬時に抽出できる無料オンラインツールです。複数フォーマットとバッチ処理に対応。ブラウザ上で完全に動作します。",
     "formatsTitle": "対応フォーマット",
     "formatsTableHeader": "説明",
     "formatsEmail": "メール",
@@ -38,7 +38,6 @@
     "tip2": "チップボタンで各タイプのオン/オフを切り替え",
     "tip3": "デフォルトで重複排除；「重複を表示」で全一致を表示",
     "tip4": "電話番号は7桁以上の数字を含む必要があります",
-    "faqTitle": "よくある質問",
     "faq1Q": "Text Extractorは何をしますか？",
     "faq1A": "正規表現ベースのエクストラクタを使用して、テキストから特定のパターンを抽出します：メール、URL、IPアドレス、電話番号、数字、カスタムパターン。",
     "faq2Q": "カスタム抽出パターンを定義できますか？",

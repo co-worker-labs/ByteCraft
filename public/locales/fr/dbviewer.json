@@ -6,32 +6,22 @@
     "releaseToLoad": "Relâchez pour charger",
     "unsupported": "Type de fichier non supporté",
     "tooLarge": "Le fichier dépasse la limite de 200 Mo.",
-    "invalidHeader": "Fichier SQLite invalide.",
     "engineFailed": "Impossible de charger le moteur SQLite. Vérifiez votre connexion ou rechargez la page.",
     "initializing": "Initialisation du moteur…",
-    "reading": "Lecture du fichier… {loaded} / {total}",
     "privacy": "Toutes les données sont traitées localement dans votre navigateur"
   },
   "info": {
-    "tables": "{count, plural, =1 {1 table} other {# tables}}",
-    "views": "{count, plural, =1 {1 vue} other {# vues}}",
-    "indexes": "{count, plural, =1 {1 index} other {# index}}",
-    "triggers": "{count, plural, =1 {1 déclencheur} other {# déclencheurs}}",
     "close": "Fermer"
   },
   "sidebar": {
-    "search": "Rechercher…",
     "tables": "TABLES",
     "views": "VUES",
     "indexes": "INDEX",
     "triggers": "DÉCLENCHEURS",
-    "showSystem": "Afficher système",
-    "noResults": "Aucun résultat",
     "collapse": "Réduire le panneau",
     "expand": "Développer le panneau"
   },
   "schema": {
-    "columns": "Colonnes",
     "foreignKeys": "Clés étrangères",
     "indexes": "Index",
     "rowCount": "Lignes : {count}",
@@ -40,13 +30,7 @@
     "type": "Type",
     "nullable": "Nullable",
     "default": "Par défaut",
-    "pk": "CP",
-    "from": "De",
-    "to": "Vers",
-    "onDelete": "ON DELETE",
-    "onUpdate": "ON UPDATE",
-    "unique": "Unique",
-    "trigger": "SQL du déclencheur"
+    "pk": "CP"
   },
   "editor": {
     "run": "Exécuter",
@@ -54,10 +38,8 @@
     "format": "Formater",
     "compress": "Compresser",
     "clear": "Effacer",
-    "history": "Historique",
     "noHistory": "Aucune requête",
-    "clearHistory": "Effacer l'historique",
-    "placeholder": "-- Écrivez vos requêtes SELECT ici. Ctrl/Cmd+Entrée pour exécuter."
+    "clearHistory": "Effacer l'historique"
   },
   "result": {
     "running": "Exécution de la requête…",
@@ -71,35 +53,26 @@
     "exportJson": "Exporter en JSON",
     "empty": "Aucun résultat",
     "tabName": "Résultat {n}",
-    "errorTab": "Erreur",
-    "rejectedReadonly": "Seules les requêtes en lecture seule sont autorisées (trouvé : {keyword}).",
-    "rejectedPragma": "PRAGMA « {name} » n'est pas dans la liste blanche en lecture seule.",
-    "rejectedCte": "CTE modifiant des données détectée ; rejetée.",
     "exportConfirm": "Le curseur n'a pas fini. Exporter les {loaded} lignes actuelles, ou tout charger d'abord ?",
     "exportLoaded": "Exporter les lignes actuelles",
     "exportLoadAll": "Tout charger puis exporter"
   },
   "cell": {
-    "null": "NULL",
     "empty": "(vide)",
     "blob": "BLOB · {bytes} o",
-    "expandLong": "Afficher le texte complet",
-    "copyLong": "Copier"
+    "expandLong": "Afficher le texte complet"
   },
-  "status": {
-    "engineRestarted": "Moteur de base de données redémarré. Vos données ont été rechargées",
-    "abortShortcut": "Appuyez sur Échap pour annuler"
-  },
+  "status": {},
   "descriptions": {
     "whatIsTitle": "Qu'est-ce que le Visualiseur SQLite ?",
     "whatIsP1": "Le Visualiseur SQLite vous permet d'ouvrir et d'explorer des fichiers de bases de données SQLite directement dans votre navigateur, sans aucun upload serveur. Exécutez des requêtes SQL, parcourez les tables et exportez les données en CSV ou JSON.",
     "whatIsP2": "Basé sur sql.js (SQLite compilé en WebAssembly), il prend en charge l'autocomplétion, l'historique des requêtes, la pagination et gère des bases de données jusqu'aux limites mémoire du navigateur.",
-    "faqTitle": "Questions fréquentes",
     "faq1Q": "Quelles bases de données puis-je visualiser ?",
     "faq1A": "L'outil prend en charge les fichiers de base de données SQLite (.db, .sqlite, .sqlite3). Ouvrez n'importe quel fichier SQLite pour parcourir les tables, exécuter des requêtes et exporter des données.",
     "faq2Q": "Ma base de données est-elle envoyée à un serveur ?",
     "faq2A": "Non. La base de données est chargée en mémoire du navigateur en utilisant sql.js (SQLite compilé en WebAssembly). Toutes les opérations se font localement.",
     "faq3Q": "Quelles fonctionnalités SQL sont prises en charge ?",
-    "faq3A": "Syntaxe SQL complète de SQLite incluant SELECT, INSERT, UPDATE, DELETE, JOINs, sous-requêtes, agrégations et transactions. L'éditeur fournit l'autocomplétion pour les noms de tables et colonnes."
+    "faq3A": "Syntaxe SQL complète de SQLite incluant SELECT, INSERT, UPDATE, DELETE, JOINs, sous-requêtes, agrégations et transactions. L'éditeur fournit l'autocomplétion pour les noms de tables et colonnes.",
+    "aeoDefinition": "La Visionneuse SQLite est un outil gratuit en ligne pour ouvrir et explorer des fichiers de base de données SQLite dans votre navigateur. Exécutez des requêtes SQL avec auto-complétion, parcourez les tables et exportez en CSV ou JSON. Aucune donnée ne quitte votre appareil."
   }
 }

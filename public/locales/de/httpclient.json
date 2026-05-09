@@ -2,12 +2,6 @@
   "url": {
     "placeholder": "https://api.example.com/users"
   },
-  "method": {
-    "label": "Methode"
-  },
-  "timeout": {
-    "label": "Zeitlimit"
-  },
   "proxy": {
     "label": "Proxy",
     "tooltip": "Anfragen über den serverseitigen Proxy leiten, um CORS-Einschränkungen zu umgehen"
@@ -36,8 +30,6 @@
     "placeholder": "Bearer-Token eingeben"
   },
   "basicAuth": {
-    "username": "Benutzername",
-    "password": "Passwort",
     "usernamePlaceholder": "Benutzername",
     "passwordPlaceholder": "Passwort"
   },
@@ -47,7 +39,6 @@
   },
   "bodyPlaceholder": "Request-Body eingeben...",
   "response": {
-    "title": "Antwort",
     "emptyState": "URL eingeben und auf Senden klicken",
     "tabs": {
       "body": "Body",
@@ -56,10 +47,6 @@
       "timing": "Zeitmessung",
       "redirects": "Weiterleitungen"
     },
-    "status": "Status",
-    "time": "Zeit",
-    "size": "Größe",
-    "type": "Typ",
     "download": "Download",
     "copyBody": "Body kopieren",
     "pretty": "Formatiert",
@@ -71,8 +58,6 @@
     "timingNote": "Detaillierte Zeitmessung (TTFB, Download) ist nur verfügbar, wenn der Server den Timing-Allow-Origin-Header zurückgibt.",
     "ttfb": "TTFB",
     "total": "Gesamt",
-    "na": "N/A",
-    "crossOrigin": "(Cross-Origin)",
     "redirectOccurred": "Eine Weiterleitung hat stattgefunden",
     "noRedirect": "Keine Weiterleitungen",
     "finalUrl": "Endgültige URL",
@@ -81,7 +66,6 @@
   },
   "error": {
     "cors": "Die CORS-Richtlinie hat diese Anfrage blockiert. Die Ziel-API erlaubt keine Cross-Origin-Anfragen aus Browsern.",
-    "network": "Netzwerkfehler",
     "timeout": "Zeitlimit nach {timeout}s überschritten.",
     "generic": "Anfrage fehlgeschlagen"
   },
@@ -96,24 +80,22 @@
       "days": "vor {count}T"
     }
   },
-  "description": {
-    "text": "Ein leichtgewichtiger, browserbasierter HTTP-Client zum Testen von REST-APIs. Stellen Sie Anfragen mit voller Kontrolle über Methode, Header, Body und Authentifizierung zusammen und inspizieren Sie Antworten mit Timing-Details, Headern und Cookies. Anfragen werden standardmäßig direkt über das browser-native fetch() gesendet. Aktivieren Sie den Proxy-Schalter, um Anfragen über den serverseitigen Proxy zu leiten und CORS-Einschränkungen zu umgehen. Es werden keine Daten auf einem Server gespeichert.",
+  "descriptions": {
+    "text": "Senden Sie HTTP-Anfragen und testen Sie REST-APIs direkt in Ihrem Browser. Unterstützt alle gängigen Methoden mit Headern, Body und Authentifizierung. Schlagen Sie Statuscodes in der [HTTP-Status](/httpstatus)-Referenz nach oder kodieren Sie Abfrageparameter mit dem [URL-Kodierer](/urlencoder).",
     "features": {
       "title": "Funktionen",
       "methods": "Alle Standard-HTTP-Methoden: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
       "auth": "Authentifizierung: Bearer Token, Basic Auth",
-      "body": "Anfragebody-Formate: JSON, Form-Data, x-www-form-urlencoded, Rohtext",
-      "response": "Antwortinspektion: formatierter Body, Header, Cookies, Timing, Weiterleitungsinformationen",
-      "history": "Anfrageverlauf mit Ein-Klick-Wiederherstellung (lokal gespeichert)",
-      "proxy": "Serverseitiger Proxy-Modus: CORS-Einschränkungen mit einem Klick umgehen"
+      "body": "Anfrage-Body-Formate: JSON, Form-Data, x-www-form-urlencoded, Rohtext",
+      "response": "Antwort-Inspektion: formatierter Body, Header, Cookies, Zeitmessung, Weiterleitungsinfos",
+      "history": "Anfrageverlauf mit einem Klick wiederherstellen (lokal gespeichert)",
+      "proxy": "Serverseitiger Proxy-Modus: CORS-Einschränkungen mit einem Schalter umgehen"
     },
     "cors": {
-      "title": "CORS und Proxy",
-      "text": "Standardmäßig verwendet dieses Tool die native fetch()-API des Browsers. Cross-Origin-Anfragen erfordern, dass der Zielserver die entsprechenden CORS-Header enthält. Wenn der Server CORS nicht unterstützt, aktivieren Sie den Proxy-Schalter: Anfragen werden über den serverseitigen Proxy geleitet und umgehen CORS-Einschränkungen vollständig."
-    }
-  },
-  "descriptions": {
-    "faqTitle": "Häufig gestellte Fragen",
+      "title": "CORS & Proxy",
+      "text": "Standardmäßig verwendet dieses Tool die native fetch()-API des Browsers. Cross-Origin-Anfragen erfordern, dass der Zielserver entsprechende CORS-Header sendet. Wenn ein Server CORS nicht unterstützt, aktivieren Sie den Proxy-Schalter — Anfragen werden dann über den serverseitigen Proxy geleitet und umgehen CORS-Einschränkungen vollständig."
+    },
+    "aeoDefinition": "Der HTTP-Client ist ein kostenloses Online-Tool zum Senden von HTTP-Anfragen und Testen von REST-APIs direkt in Ihrem Browser. Unterstützt GET, POST, PUT, DELETE mit Headern, Body und Authentifizierung. Alle Anfragen laufen standardmäßig lokal; optionaler serverseitiger Proxy für CORS-Umgehung.",
     "faq1Q": "Was ist das HTTP-Client-Tool?",
     "faq1A": "Ein browserbasierter HTTP-Client zum Testen von APIs. Senden Sie GET-, POST-, PUT-, PATCH-, DELETE-, HEAD- und OPTIONS-Anfragen mit benutzerdefinierten Headern, Abfrageparametern und Anfragekörpern.",
     "faq2Q": "Kann ich Authentifizierung verwenden?",

@@ -1,15 +1,10 @@
 {
-  "tabConverter": "Convertisseur",
-  "tabReference": "Référence",
   "bitWidth": "Largeur de bits",
   "decimal": "Décimal",
   "hexadecimal": "Hexadécimal",
   "octal": "Octal",
   "binary": "Binaire",
   "asciiChar": "ASCII",
-  "unicodePoint": "Unicode",
-  "invalidInput": "Entrée invalide",
-  "overflowWarning": "La valeur dépasse la largeur de bits",
   "referenceTitle": "Référence des bases (0-15)",
   "refDec": "DÉC",
   "refHex": "HEX",
@@ -20,12 +15,8 @@
     "whatIs": "La conversion de base numérique transforme un nombre d'un système de numération positionnel à un autre. Les ordinateurs utilisent le binaire (base 2), tandis que les humains travaillent généralement en décimal (base 10). L'hexadécimal (base 16) et l'octal (base 8) offrent des représentations compactes des données binaires, couramment utilisées dans le débogage, les protocoles réseau, les codes couleur et les permissions de fichiers.",
     "twosComplementTitle": "Complément à deux",
     "twosComplement": "Le complément à deux est la méthode standard pour représenter les entiers signés en binaire. Le bit de poids fort (MSB) sert de bit de signe : 0 pour positif, 1 pour négatif. Pour obtenir la valeur négative, inversez tous les bits et ajoutez 1. Par exemple, en mode 8 bits, -1 est représenté par 11111111 (0xFF).",
-    "faqTitle": "Questions fréquentes",
     "faq1Q": "Quelles bases numériques sont prises en charge ?",
     "faq1A": "Binaire (base 2), Octal (base 8), Décimal (base 10) et Hexadécimal (base 16) avec conversion en temps réel entre les quatre.",
-    "faq2Q": "Puis-je modifier des bits individuels ?",
-    "faq2A": "Oui. L'éditeur de bits affiche la représentation binaire et vous permet de basculer des bits individuels, mettant à jour instantanément toutes les autres conversions de base.",
-    "faq3Q": "Prend-il en charge le complément à deux ?",
-    "faq3A": "Oui. L'outil peut afficher les entiers signés en représentation en complément à deux pour des tailles de mot de 8, 16, 32 et 64 bits."
+    "aeoDefinition": "Le Convertisseur de base numérique est un outil gratuit en ligne pour convertir des nombres entre binaire, octal, décimal et hexadécimal. Prend en charge le complément à deux sur 8/16/32/64 bits et un éditeur de bits visuel. Fonctionne entièrement dans votre navigateur."
   }
 }

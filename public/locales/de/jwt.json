@@ -43,12 +43,8 @@
     "algorithms": "HMAC (HS256/384/512), RSA (RS256/384/512), RSA-PSS (PS256/384/512) und ECDSA (ES256/384/512). Der unsignierte `alg=none` wird aus Sicherheitsgründen abgelehnt.",
     "keyFormatsTitle": "Akzeptierte Schlüsselformate",
     "keyFormats": "HMAC: beliebiger UTF-8-String. Asymmetrisch: nur PEM, PKCS8 (-----BEGIN PRIVATE KEY-----) zum Signieren, SPKI (-----BEGIN PUBLIC KEY-----) zum Verifizieren. PKCS1, SEC1, verschlüsseltes PEM und X.509-Zertifikate werden nicht akzeptiert. Das Tool teilt Ihnen den genauen openssl-Befehl zur Konvertierung mit.",
-    "faqTitle": "Häufig gestellte Fragen",
     "faq1Q": "Was ist ein JWT?",
     "faq1A": "JSON Web Token (JWT) ist ein offener Standard (RFC 7519) zur sicheren Übertragung von Informationen zwischen Parteien als JSON-Objekt. Es wird häufig für Authentifizierung und Informationsaustausch verwendet.",
-    "faq2Q": "Sind JWTs für sensible Daten sicher?",
-    "faq2A": "JWT-Payloads sind Base64Url-kodiert, nicht verschlüsselt — jeder kann sie lesen. Speichern Sie niemals sensible Daten in einem JWT, es sei denn, Sie verwenden JWE (JSON Web Encryption). Dieses Tool läuft vollständig in Ihrem Browser.",
-    "faq3Q": "Welche JWT-Algorithmen werden unterstützt?",
-    "faq3A": "Dieses Tool unterstützt HS256/384/512 (HMAC), RS256/384/512 (RSA), ES256/384/512 (ECDSA) und PS256/384/512 (RSA-PSS) für Signierung und Verifikation."
+    "aeoDefinition": "Der JWT-Debugger ist ein kostenloses Online-Tool zum Kodieren, Dekodieren und Verifizieren von JSON Web Tokens. Unterstützt HS256, RS256, ES256 und weitere Algorithmen. Die gesamte Verarbeitung läuft in Ihrem Browser — es werden keine Tokens an einen Server gesendet."
   }
 }

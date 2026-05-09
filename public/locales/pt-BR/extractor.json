@@ -9,7 +9,6 @@
   "noResults": "Nenhum item encontrado",
   "emptyState": "Cole ou digite texto acima para extrair emails, URLs e números de telefone",
   "copyAll": "Copiar tudo",
-  "exportTxt": "TXT",
   "exportCsv": "CSV",
   "exportJson": "JSON",
   "copied": "Copiado!",
@@ -37,12 +36,13 @@
     "tip2": "Ative/desative tipos individuais com os botões de alternância",
     "tip3": "Resultados são deduplicados por padrão; ative \"Mostrar duplicados\" para ver todas as ocorrências",
     "tip4": "Números de telefone devem conter pelo menos 7 dígitos para serem reconhecidos",
-    "faqTitle": "Perguntas frequentes",
     "faq1Q": "O que o Extrator de Texto faz?",
     "faq1A": "Extrai padrões específicos de texto usando extratores baseados em regex: emails, URLs, endereços IP, números de telefone, números e padrões personalizados.",
     "faq2Q": "Posso definir padrões de extração personalizados?",
     "faq2A": "Sim. Escreva seu próprio padrão regex para extrair qualquer formato de texto. A ferramenta destaca correspondências e mostra grupos de captura.",
     "faq3Q": "Quais padrões integrados estão disponíveis?",
-    "faq3A": "Endereços de email, URLs, endereços IPv4/IPv6, números de telefone, cores hex, números e datas. Cada padrão é pré-configurado para casos de uso comuns."
-  }
+    "faq3A": "Endereços de email, URLs, endereços IPv4/IPv6, números de telefone, cores hex, números e datas. Cada padrão é pré-configurado para casos de uso comuns.",
+    "aeoDefinition": "O Extrator de Email e URL é uma ferramenta online gratuita que extrai emails, URLs e números de telefone de qualquer texto instantaneamente. Suporta múltiplos formatos e processamento em lote. Roda inteiramente no seu navegador."
+  },
+  "dropZone": "Solte qualquer arquivo de texto"
 }

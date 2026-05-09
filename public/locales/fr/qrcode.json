@@ -1,20 +1,4 @@
 {
-  "shortTitle": "Générateur de QR Code",
-  "title": "Générateur de QR Code - Outil gratuit en ligne",
-  "description": {
-    "title": "À propos des QR codes",
-    "intro": "Les QR codes encodent du texte dans une matrice 2D que les caméras de smartphone peuvent décoder. Un niveau de correction d'erreur plus élevé les rend lisibles même en cas d'occultation partielle (par un logo, de la saleté ou des dommages).",
-    "ecTitle": "Niveaux de correction d'erreur",
-    "ecL": "L, récupère environ 7 % de dommages. Le plus petit, pas de logo.",
-    "ecM": "M, récupère environ 15 %. Adapté aux impressions propres.",
-    "ecQ": "Q, récupère environ 25 %. Par défaut ; robuste et supporte les petits logos.",
-    "ecH": "H, récupère environ 30 %. Requis pour les logos de taille importante.",
-    "tipsTitle": "Astuces",
-    "tipMargin": "Conservez toujours une marge (zone de silence) d'au moins 4 modules. Les scanners en ont besoin pour détecter le code.",
-    "tipContrast": "Un contraste élevé entre le premier plan et l'arrière-plan est essentiel. Évitez les paires à faible contraste.",
-    "tipLogo": "Si vous intégrez un logo, utilisez la correction d'erreur H et gardez la taille du logo à 30 % maximum du QR code.",
-    "tipTest": "Testez toujours le QR code généré avec une vraie caméra de téléphone avant de l'imprimer ou de le diffuser largement."
-  },
   "contentTypes": {
     "text": "Texte / URL",
     "wifi": "WiFi",
@@ -87,18 +71,24 @@
     "logoTooLarge": "Le fichier logo doit faire moins de 2 Mo",
     "logoNotImage": "Veuillez charger une image PNG, JPG, SVG ou WebP",
     "ecBumpedForLogo": "Correction d'erreur élevée à H pour une lecture fiable avec le logo",
-    "ecLowWithLogo": "Une correction d'erreur basse avec un logo peut empêcher la lecture",
     "generateFailed": "Échec de la génération du QR code",
     "libraryLoadFailed": "Échec du chargement du générateur QR. Veuillez recharger la page."
   },
-  "localGenerated": "Généré entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil.",
   "descriptions": {
-    "faqTitle": "Questions fréquentes",
+    "title": "À propos des QR codes",
+    "intro": "Les QR codes encodent du texte en une matrice 2D que les caméras de smartphone peuvent décoder. Une correction d'erreur plus élevée les rend lisibles même partiellement masqués (par un logo, de la saleté ou des dommages).",
+    "ecTitle": "Niveaux de correction d'erreur",
+    "ecL": "L — récupère environ 7 % de dommages. Le plus petit, pas de logo.",
+    "ecM": "M — récupère environ 15 %. Adapté aux impressions propres.",
+    "ecQ": "Q — récupère environ 25 %. Par défaut ; robuste et supporte les petits logos.",
+    "ecH": "H — récupère environ 30 %. Requis pour les logos de taille importante.",
+    "tipsTitle": "Conseils",
+    "tipMargin": "Conservez toujours une marge (zone de silence) d'au moins 4 modules — les lecteurs en ont besoin pour détecter le code.",
+    "tipContrast": "Un contraste élevé entre le premier plan et l'arrière-plan est essentiel. Évitez les paires à faible contraste.",
+    "tipLogo": "Si vous intégrez un logo, utilisez la correction d'erreur H et gardez la taille du logo à 30 % maximum du QR code.",
+    "tipTest": "Testez toujours le QR code généré avec une vraie caméra de téléphone avant de l'imprimer ou de le diffuser largement.",
+    "aeoDefinition": "Le Générateur de QR Code est un outil gratuit en ligne pour créer des QR codes pour du texte, des URL, du WiFi, des vCards et plus encore. Prend en charge les couleurs personnalisées, les logos et les styles de points avec export SVG/PNG. Aucune donnée n'est envoyée à un serveur.",
     "faq1Q": "Qu'est-ce que le Générateur de QR Code ?",
-    "faq1A": "Un générateur de QR codes personnalisable prenant en charge le texte, les URL, les identifiants WiFi et les vCards. Ajoutez des logos, changez les couleurs et exportez en SVG ou PNG.",
-    "faq2Q": "Quelle est la capacité maximale d'un QR code ?",
-    "faq2A": "La capacité dépend du niveau de correction d'erreurs et du type de données. Numérique : jusqu'à 7 089 caractères. Alphanumérique : jusqu'à 4 296. Binaire : jusqu'à 2 953 octets. Kanji : jusqu'à 1 817 caractères.",
-    "faq3Q": "Puis-je ajouter un logo à mon QR code ?",
-    "faq3A": "Oui. Téléchargez une image de logo pour la placer au centre du QR code. L'outil ajuste automatiquement la correction d'erreurs pour maintenir la lisibilité."
+    "faq1A": "Un générateur de QR codes personnalisable prenant en charge le texte, les URL, les identifiants WiFi et les vCards. Ajoutez des logos, changez les couleurs et exportez en SVG ou PNG."
   }
 }

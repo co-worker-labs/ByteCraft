@@ -1,7 +1,4 @@
 {
-  "description": {
-    "text": "Référence complète des codes d'état HTTP couvrant tous les codes officiels de l'IANA issus de la RFC 9110 et des spécifications associées, y compris WebDAV (RFC 4918), les codes supplémentaires (RFC 6585), la redirection permanente 308 (RFC 7538), le code 451 indisponible pour raisons légales (RFC 7725) et les Early Hints (RFC 8297). Inclut également les extensions non officielles de Nginx, Cloudflare et IIS. Chaque code affiche sa description, sa référence RFC, et les codes les plus courants incluent des scénarios d'utilisation et des causes fréquentes pour faciliter le dépannage."
-  },
   "tip": "Survolez une ligne sur ordinateur ou appuyez sur mobile pour voir les détails d'utilisation et les causes fréquentes.",
   "searchPlaceholder": "Rechercher par code, nom ou description…",
   "noResults": "Aucun résultat trouvé",
@@ -451,12 +448,11 @@
     }
   },
   "descriptions": {
-    "faqTitle": "Questions fréquentes",
+    "text": "Une référence complète des codes de statut HTTP avec descriptions, catégories et liens vers les spécifications RFC. Couvre tous les codes enregistrés par l'IANA ainsi que les codes non officiels courants. Testez les APIs avec le [Client HTTP](/httpclient) ou encodez les URL avec l'[Encodeur d'URL](/urlencoder).",
+    "aeoDefinition": "Les Codes de statut HTTP sont une référence gratuite en ligne de tous les codes de statut HTTP avec descriptions, catégories et liens RFC. Couvre les codes officiels de l'IANA et les codes non officiels courants.",
     "faq1Q": "Que sont les codes de statut HTTP ?",
     "faq1A": "Les codes de statut HTTP sont des nombres à 3 chiffres renvoyés par un serveur en réponse à une requête client. Ils indiquent si la requête a réussi, été redirigée ou a rencontré une erreur.",
     "faq2Q": "Combien de codes de statut sont documentés ?",
-    "faq2A": "L'outil couvre tous les codes de statut standard dans 5 catégories : 1xx (Informationnel), 2xx (Succès), 3xx (Redirection), 4xx (Erreur client) et 5xx (Erreur serveur).",
-    "faq3Q": "Puis-je rechercher des codes spécifiques ?",
-    "faq3A": "Oui. Recherchez par numéro de code, phrase ou catégorie pour trouver rapidement le code de statut dont vous avez besoin."
+    "faq2A": "L'outil couvre tous les codes de statut standard dans 5 catégories : 1xx (Informationnel), 2xx (Succès), 3xx (Redirection), 4xx (Erreur client) et 5xx (Erreur serveur)."
   }
 }

@@ -207,7 +207,7 @@ function Conversion() {
     } catch (e) {
       if (e instanceof SyntaxError || (e && typeof e === "object" && "message" in e)) {
         setJsonError(extractError(e));
-        showToast(t("invalidInput"), "danger", 3000);
+        showToast(tc("invalidInput"), "danger", 3000);
       }
     }
   }
@@ -227,7 +227,7 @@ function Conversion() {
     } catch (e) {
       if (e && typeof e === "object" && "message" in e) {
         setYamlError(extractError(e));
-        showToast(t("invalidInput"), "danger", 3000);
+        showToast(tc("invalidInput"), "danger", 3000);
       }
     }
   }
@@ -321,7 +321,7 @@ function Conversion() {
             onClick={() => jsonFileRef.current?.click()}
           >
             <FolderOpen size={12} />
-            {t("loadFile")}
+            {tc("loadFile")}
           </button>
           <button
             type="button"
@@ -330,7 +330,7 @@ function Conversion() {
             onClick={() => downloadFile(jsonContent, "data.json")}
           >
             <Download size={12} />
-            {t("download")}
+            {tc("download")}
           </button>
           <button
             type="button"
@@ -468,7 +468,7 @@ function Conversion() {
             onClick={() => yamlFileRef.current?.click()}
           >
             <FolderOpen size={12} />
-            {t("loadFile")}
+            {tc("loadFile")}
           </button>
           <button
             type="button"
@@ -477,7 +477,7 @@ function Conversion() {
             onClick={() => downloadFile(yamlContent, "data.yaml")}
           >
             <Download size={12} />
-            {t("download")}
+            {tc("download")}
           </button>
           <button
             type="button"
@@ -542,7 +542,7 @@ function Conversion() {
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-4 rounded-full bg-accent-purple" />
             <span className="font-mono text-xs font-semibold text-fg-muted uppercase tracking-wider">
-              {t("advancedSettings")}
+              {tc("advancedSettings")}
             </span>
           </div>
           {!isMobile && (
@@ -570,10 +570,10 @@ function Conversion() {
         <div className="w-full h-px bg-border-default" />
         <div className="flex flex-wrap items-center gap-6 px-3 mt-4">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-sm font-medium text-fg-secondary">{t("indent")}</span>
+            <span className="font-mono text-sm font-medium text-fg-secondary">{tc("indent")}</span>
             <div
               role="radiogroup"
-              aria-label={t("indent")}
+              aria-label={tc("indent")}
               className="inline-flex rounded-full border border-border-default p-0.5 text-xs font-mono font-semibold"
             >
               {INDENT_SIZES.map((n) => (
@@ -610,6 +610,7 @@ function Conversion() {
 
 function Description() {
   const t = useTranslations("yaml");
+  const tc = useTranslations("common");
   const locale = useLocale();
 
   const faqItems = [1, 2, 3].map((i) => ({
@@ -618,9 +619,11 @@ function Description() {
   }));
   return (
     <section id="description" className="mt-8">
-      <p className="text-fg-primary text-sm leading-relaxed font-medium">
-        {t("descriptions.aeoDefinition")}
-      </p>
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
@@ -646,7 +649,7 @@ function Description() {
 
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">
-          {t("descriptions.useCasesTitle")}
+          {tc("descriptions.useCasesTitle")}
         </h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{renderLinkedText(t("descriptions.useCasesP1"), locale)}</p>
@@ -655,7 +658,7 @@ function Description() {
 
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">
-          {t("descriptions.limitationsTitle")}
+          {tc("descriptions.limitationsTitle")}
         </h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{t("descriptions.limitationsP1")}</p>
@@ -665,7 +668,7 @@ function Description() {
         <div className="flex items-center gap-2 mb-4">
           <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
           <h2 className="font-semibold text-fg-primary text-base text-pretty">
-            {t("descriptions.faqTitle")}
+            {tc("descriptions.faqTitle")}
           </h2>
         </div>
         <Accordion items={faqItems} />

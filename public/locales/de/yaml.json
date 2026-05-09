@@ -1,20 +1,15 @@
 {
   "jsonPlaceholder": "JSON hier einfügen oder eingeben...",
   "yamlPlaceholder": "YAML hier einfügen oder eingeben...",
-  "loadFile": "Laden",
-  "download": "Herunterladen",
-  "advancedSettings": "Erweiterte Einstellungen",
   "layoutHorizontal": "Seite",
   "layoutVertical": "Stapel",
   "jsonToYaml": "JSON → YAML",
   "yamlToJson": "JSON ← YAML",
   "json5": "JSON5",
-  "indent": "Einrückung",
   "sortKeys": "Schlüssel sortieren",
   "dropZone": ".json-, .yaml- oder .yml-Datei ablegen",
   "convertedToYaml": "In YAML konvertiert",
   "convertedToJson": "In JSON konvertiert",
-  "invalidInput": "Ungültige Eingabe",
   "descriptions": {
     "whatIsTitle": "Was ist YAML?",
     "whatIsP1": "YAML (YAML Ain't Markup Language) ist ein menschenlesbares Daten-Serialisierungsformat, das häufig für Konfigurationsdateien, Datenaustausch und strukturierte Inhalte verwendet wird. Es nutzt Einrückungen zur Darstellung von Strukturen und ist dadurch besser lesbar als JSON für komplexe verschachtelte Daten.",
@@ -22,16 +17,14 @@
     "yamlVsJsonP1": "YAML ist eine Obermenge von JSON. Jedes gültige JSON-Dokument ist auch gültiges YAML. YAML fügt Kommentare (#), Multi-Dokument-Unterstützung (---), Anker & Aliase (&/*) und eine lockerere Syntax hinzu. JSON ist einfacher und wird von mehr Programmiersprachen unterstützt.",
     "yaml12Title": "YAML 1.2 Funktionen",
     "yaml12P1": "YAML 1.2 (2009) ist die aktuelle Spezifikation. Wichtige Funktionen: Anker (&) und Aliase (*) für DRY-Inhalte, Multi-Dokument-Streams getrennt durch ---, explizite Typ-Tags (!!str, !!int, !!seq) und Block-/Fluss-Skalarstile.",
-    "useCasesTitle": "Anwendungsfälle",
     "useCasesP1": "Konfigurationsdateien (Docker Compose, Kubernetes, CI/CD-Pipelines), API-Definitionen (OpenAPI/Swagger), Daten-Serialisierung, Logdatei-Formate und sprachübergreifender Datenaustausch.",
-    "limitationsTitle": "Einschränkungen",
     "limitationsP1": "Multi-Dokument-YAML wird in ein JSON-Array konvertiert und kann nicht zurück in Multi-Dokument-YAML gewandelt werden. YAMLs Flexibilität kann zu Mehrdeutigkeiten führen: Dieselben Daten können auf verschiedene Weise dargestellt werden. Tab-Einrückung wird nicht unterstützt (YAML-Spezifikation empfiehlt Leerzeichen).",
-    "faqTitle": "Häufig gestellte Fragen",
     "faq1Q": "Was ist YAML?",
     "faq1A": "YAML (YAML Ain't Markup Language) ist ein menschenlesbares Daten-Serialisierungsformat, das häufig für Konfigurationsdateien, CI/CD-Pipelines und Datenaustausch verwendet wird.",
     "faq2Q": "Kann ich YAML in JSON konvertieren?",
     "faq2A": "Ja. Dieses Tool unterstützt YAML-zu-JSON- und JSON-zu-YAML-Konvertierung mit Unterstützung für Multi-Dokument-YAML-Streams (--- Trennzeichen).",
     "faq3Q": "Werden YAML-Anker und Aliase unterstützt?",
-    "faq3A": "Der Parser verarbeitet Standard-YAML einschließlich Anker (&) und Aliase (*). Komplexe Funktionen wie Merge-Keys (<<:) werden unterstützt, wo anwendbar."
+    "faq3A": "Der Parser verarbeitet Standard-YAML einschließlich Anker (&) und Aliase (*). Komplexe Funktionen wie Merge-Keys (<<:) werden unterstützt, wo anwendbar.",
+    "aeoDefinition": "Der YAML-Konverter ist ein kostenloses Online-Tool zur Konvertierung zwischen JSON- und YAML-Formaten. Unterstützt YAML 1.2, Multi-Dokument, Anchors und Aliases. Die gesamte Verarbeitung läuft in Ihrem Browser."
   }
 }

@@ -33,7 +33,7 @@ export default async function PasswordRoute({ params }: { params: Promise<{ loca
     path: PATH,
     categoryName: tc(`${category.key}.shortTitle`),
     categoryPath: `/${categorySlug}`,
-    faqItems: [1, 2, 3, 4, 5].map((i) => ({
+    faqItems: [1, 2, 3].map((i) => ({
       q: tp(`descriptions.faq${i}Q`),
       a: tp(`descriptions.faq${i}A`),
     })),

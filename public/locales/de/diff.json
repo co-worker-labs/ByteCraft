@@ -6,14 +6,15 @@
   "uploadFile": "Datei hochladen",
   "formatJson": "JSON formatieren",
   "formatJsonInvalid": "Kein gültiges JSON: {message}",
+  "tooLarge": "Datei ist zu groß für den Vergleich",
+  "binaryRejected": "Binärdateien werden nicht unterstützt",
   "swap": "Texte tauschen",
   "copyDiff": "Diff kopieren",
   "compare": "Vergleichen",
   "view": {
     "label": "Ansicht",
     "sideBySide": "Nebeneinander",
-    "inline": "Inline",
-    "stacked": "Übereinander"
+    "inline": "Inline"
   },
   "layout": {
     "label": "Layout",
@@ -38,6 +39,7 @@
   "workerFailed": "Diff fehlgeschlagen, bitte versuchen Sie es erneut",
   "descriptions": {
     "whatIsTitle": "Was ist ein Diff?",
+    "aeoDefinition": "Text-Diff ist ein kostenloses Online-Tool zum Vergleichen von zwei Texten mit Zeilen- und Worthpräzision. Neben- oder Inline-Ansicht mit hervorgehobenen Änderungen. Läuft vollständig in Ihrem Browser — es werden keine Daten an einen Server gesendet.",
     "whatIsP1": "Ein Diff ist ein strukturierter Vergleich zwischen zwei Texten, der zeigt, was hinzugefügt, was entfernt und was beibehalten wurde. Entwickler nutzen es täglich, um Codeänderungen zu überprüfen, Konfigurationsabweichungen zu analysieren und zwei Versionen eines Dokuments abzugleichen.",
     "whatIsP2": "Dieses Tool führt den Vergleich vollständig in Ihrem Browser mit der jsdiff-Bibliothek durch. Nichts, was Sie einfügen oder hochladen, wird an einen Server gesendet.",
     "howTitle": "Verwendung",
@@ -45,20 +47,13 @@
     "howP2": "Wechseln Sie zwischen nebeneinander- und Inline-Ansicht, ignorieren Sie Leerzeichen oder Groß-/Kleinschreibung bei Bedarf, und nutzen Sie JSON formatieren, um JSON-Eingaben vor dem Vergleich zu normalisieren.",
     "algorithmTitle": "Algorithmus",
     "algorithmP1": "Basiert auf dem Myers-Diff-Algorithmus über jsdiff. Das Tool berechnet zunächst einen zeilenbasierten Diff und führt dann für jedes Paar benachbarter entfernter und hinzugefügter Zeilen einen zweiten wortbasierten Durchlauf durch, um zu zeigen, welche Wörter sich tatsächlich geändert haben. Die gleiche Konvention wie bei GitHub-Pull-Requests.",
-    "useCasesTitle": "Gängige Anwendungsfälle",
     "useCasesP1": "Vergleich von zwei Konfigurationsdateien (JSON, YAML, .env), um Abweichungen zwischen Umgebungen zu erkennen.",
     "useCasesP2": "Überprüfung einer Codeänderung vor dem Committen, besonders wenn Sie außerhalb eines Editors arbeiten.",
     "useCasesP3": "Abgleich von zwei Versionen eines Dokuments, Logs oder Abfrageergebnisses Seite an Seite.",
-    "limitationsTitle": "Einschränkungen",
     "limitationsP1": "Das Tool vergleicht nur Text. Binärdateien werden erkannt und abgelehnt, um ein sinnvolles Ergebnis zu gewährleisten.",
     "limitationsP2": "Eingaben sind auf 5MB pro Seite begrenzt. Eingaben über 512KB werden in einem Hintergrund-Web-Worker verarbeitet; die Seite bleibt responsiv, aber der Diff selbst dauert bei sehr großen Eingaben proportional länger.",
     "limitationsP3": "Unterschiede in Zeilenenden (CRLF vs. LF) und nachgestellten Leerzeichen werden normalisiert. Sie erscheinen nie als Änderungen.",
-    "faqTitle": "Häufig gestellte Fragen",
     "faq1Q": "Was ist ein Text-Diff-Tool?",
-    "faq1A": "Ein Diff-Tool vergleicht zwei Texte und hebt die Unterschiede hervor. Dieses Tool zeigt Ergänzungen, Löschungen und Änderungen auf Wort- oder Zeichenebene.",
-    "faq2Q": "Welche Diff-Modi sind verfügbar?",
-    "faq2A": "Zwei Modi: Nebeneinander (zeigt beide Texte mit hervorgehobenen Unterschieden) und Inline (zeigt zusammengeführte Unterschiede in einer einzigen Ansicht). Beide unterstützen Wortebene-Granularität.",
-    "faq3Q": "Gibt es eine Dateigrößenbeschränkung?",
-    "faq3A": "Die Diff-Berechnung läuft vollständig in Ihrem Browser mit einem Web Worker. Die Leistung hängt von Ihrem Gerät ab, aber Texte bis zu mehreren hundert KB funktionieren reibungslos."
+    "faq1A": "Ein Diff-Tool vergleicht zwei Texte und hebt die Unterschiede hervor. Dieses Tool zeigt Ergänzungen, Löschungen und Änderungen auf Wort- oder Zeichenebene."
   }
 }

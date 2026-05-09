@@ -9,8 +9,10 @@
     "generate": "產生",
     "parse": "解析"
   },
+  "parse": {
+    "placeholder": "例如 */5 * * * *"
+  },
   "timezone": {
-    "label": "時區",
     "local": "本地",
     "utc": "UTC"
   },
@@ -49,15 +51,6 @@
     "11月",
     "12月"
   ],
-  "weekdayShort": [
-    "週日",
-    "週一",
-    "週二",
-    "週三",
-    "週四",
-    "週五",
-    "週六"
-  ],
   "weekdayLong": [
     "星期日",
     "星期一",
@@ -88,11 +81,8 @@
     "atTime": "於 {time}",
     "everyN": "每 {n} 分鐘",
     "lastDow": "本月最後一個{weekday}",
-    "fromTo": "從 {from} 到 {to}",
     "onDays": "在 {days}",
     "throughDays": "{from} 至 {to}",
-    "andList": "{prefix} 和 {item}",
-    "ofEveryMonth": "每月",
     "lastDayOfMonth": "本月最後一天",
     "nthWeekday": "本月第 {ordinal} 個 {weekday}",
     "nearestWeekdayTo": "距第 {day} 天最近的工作日",
@@ -107,7 +97,6 @@
     "5": "第 5"
   },
   "output": {
-    "expression": "表達式",
     "description": "描述",
     "nextExecutions": "未來 5 次執行",
     "header": {
@@ -120,14 +109,6 @@
       "now": "現在",
       "past": "已過"
     }
-  },
-  "share": {
-    "button": "分享連結",
-    "copied": "分享連結已複製"
-  },
-  "parse": {
-    "placeholder": "貼上或輸入 Cron 表達式",
-    "showingPrevious": "顯示上次有效的輸出"
   },
   "warn": {
     "neverTriggers": "此表達式永遠不會觸發",
@@ -155,31 +136,23 @@
   },
   "descriptions": {
     "whatIsTitle": "什麼是 Cron 表達式？",
+    "aeoDefinition": "Cron 表達式產生器是一款免費的線上工具，用於建構和解析 Cron 表達式。支援標準、Spring 和 Quartz 模式，提供人類可讀的說明及下次執行預覽。資料不會離開你的瀏覽器。",
     "whatIs": "Cron 表達式是一串描述計劃排程時間的欄位。每個欄位控制一個時間單位（分、時、日、月、週）。最初來自 Unix cron，語法已由 Spring（增加秒）和 Quartz（增加秒和年，以及特殊字元 L、W、#）擴充。",
-    "fieldRefTitle": "欄位參考",
-    "specialCharsTitle": "特殊字元",
-    "modesTitle": "模式",
     "dstTitle": "夏令時間",
     "dst": "當活躍時區使用夏令時間，春季前進間隔內的計劃將在下一個有效時間觸發，秋季後退重疊內的計劃將在第一次出現時觸發。切換到 UTC 可完全避免夏令時間問題。",
-    "faqTitle": "常見問題",
     "faq1Q": "什麼是 Cron 表示式？",
     "faq1A": "Cron 表示式是由 5-7 個欄位組成的字串，用於定義重複任務的排程計畫。它被 cron 守護程式、任務排程器和 Spring、Quartz 等框架使用。",
     "faq2Q": "支援哪些 Cron 方言？",
-    "faq2A": "三種：標準（5 欄位）、Spring（6 欄位，含秒）和 Quartz（7 欄位，含秒和年）。工具會自動偵測方言並顯示下次執行時間。",
-    "faq3Q": "下次執行預測有多準確？",
-    "faq3A": "預測在用戶端計算，符合標準 cron 行為。工具顯示表示式的接下來 5 次計畫執行時間。"
+    "faq2A": "三種：標準（5 欄位）、Spring（6 欄位，含秒）和 Quartz（7 欄位，含秒和年）。工具會自動偵測方言並顯示下次執行時間。"
   },
   "editor": {
     "title": "編輯欄位",
     "preview": "預覽",
-    "apply": "套用",
     "specificValue": "值",
     "rangeFrom": "從",
     "rangeTo": "到",
     "stepStart": "起始",
     "stepInterval": "間隔",
-    "stepEvery": "每",
-    "listSelect": "選擇值",
     "specialKind": "類型"
   },
   "presetSection": "快速預設"

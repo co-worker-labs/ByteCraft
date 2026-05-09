@@ -4,7 +4,6 @@
   "inputPlaceholder": "Cole ou digite seu JSON aqui",
   "format": "Formatar",
   "compress": "Comprimir",
-  "indent": "Indentação",
   "useTab": "Usar Tab",
   "sortKeys": "Ordenar chaves",
   "json5": "JSON5",
@@ -14,7 +13,6 @@
   "relaxedParse": "Análise JSON5 relaxada aplicada",
   "filled": "Preenchido na entrada",
   "invalid": "JSON inválido",
-  "dropActive": "Solte para abrir",
   "dropZone": "Solte um arquivo JSON aqui",
   "descriptions": {
     "whatIsTitle": "O que é formatação JSON?",
@@ -24,21 +22,17 @@
     "json5Title": "O que é JSON5?",
     "json5P1": "JSON5 é um superconjunto do JSON que adiciona recursos amigáveis: comentários (// e /* */), vírgulas trailing, strings com aspas simples, chaves de objeto sem aspas, números hexadecimais (0xFF) e valores especiais como NaN e Infinity. Foi criado para tornar o JSON mais fácil de escrever à mão, especialmente para arquivos de configuração.",
     "json5P2": "Ative o modo JSON5 para analisar entrada relaxada diretamente. Quando o modo JSON5 está desativado, Formatar e Comprimir automaticamente usam análise JSON5 se a análise JSON estrita falhar — você verá uma notificação quando isso acontecer. A saída é sempre JSON padrão.",
-    "useCasesTitle": "Casos de uso comuns",
     "useCasesP1": "Formatar respostas de API: cole uma resposta bruta e a formate para entender a estrutura dos dados.",
     "useCasesP2": "Minificar arquivos de configuração: comprima o JSON antes de implantar em produção para reduzir o tamanho.",
     "useCasesP3": "Corrigir JSON editado à mão: cole JSON com vírgulas trailing ou comentários, ative o modo JSON5 e obtenha saída JSON padrão limpa.",
     "useCasesP4": "Ordenar chaves de objetos: ordenar chaves alfabeticamente para saída de diff consistente ao versionar arquivos JSON.",
-    "limitationsTitle": "Limitações",
     "limitationsP1": "Arquivos JSON muito grandes (>10MB) podem causar uma breve pausa no navegador durante a formatação.",
     "limitationsP2": "Números além do intervalo seguro de inteiros JavaScript (±2⁵³) podem perder precisão após passar por JSON.parse/stringify.",
     "limitationsP3": "Mensagens de erro do JSON5 podem não incluir linha e coluna exatas.",
-    "faqTitle": "Perguntas frequentes",
     "faq1Q": "O que é formatação JSON?",
     "faq1A": "A formatação JSON transforma JSON bruto ou minificado em uma estrutura legível com recuo. Esta ferramenta suporta recuo configurável (2, 4, 8 espaços ou tabs), minificação e validação, incluindo sintaxe JSON5.",
     "faq2Q": "Meus dados JSON são enviados a um servidor?",
     "faq2A": "Não. Toda formatação, validação e minificação de JSON acontece inteiramente no seu navegador. Seus dados nunca saem do seu dispositivo.",
-    "faq3Q": "Qual a diferença entre JSON e JSON5?",
-    "faq3A": "JSON5 é um superconjunto do JSON que suporta comentários, vírgulas finais, chaves sem aspas e sintaxe mais flexível. Esta ferramenta pode analisar e formatar tanto JSON padrão quanto JSON5."
+    "aeoDefinition": "O Formatador JSON é uma ferramenta online gratuita que formata, valida e minifica dados JSON instantaneamente no seu navegador. Suporta JSON5, indentação configurável e ordenação de chaves. Nenhum dado é enviado para qualquer servidor."
   }
 }

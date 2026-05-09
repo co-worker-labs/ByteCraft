@@ -24,7 +24,6 @@
   "keywordExists": "Esta palavra-chave já existe",
   "keywordRemoved": "Palavra-chave removida",
   "timeLessThan": "< 1 {unit}",
-  "timeHourUnit": "h",
   "timeMinUnit": "min",
   "timeSecUnit": "seg",
   "timeHourFormat": "{hours}h {minutes}min",
@@ -33,12 +32,12 @@
     "whatIsTitle": "O que é o Contador de Palavras?",
     "whatIsP1": "O Contador de Palavras é uma ferramenta online gratuita que fornece análise de texto em tempo real, incluindo contagem de palavras, caracteres, frases, parágrafos e estimativa de tempo de leitura.",
     "whatIsP2": "Também suporta contagem de caracteres CJK (chinês, japonês, coreano), análise de frequência de palavras-chave e rastreamento personalizado — ideal para escritores, estudantes e tradutores.",
-    "faqTitle": "Perguntas frequentes",
     "faq1Q": "Como funciona a contagem de palavras?",
     "faq1A": "A ferramenta divide o texto por espaços em branco e conta tokens. Para texto CJK (chinês, japonês, coreano), conta caracteres individuais separadamente.",
     "faq2Q": "Quais métricas são mostradas?",
     "faq2A": "Palavras, caracteres, caracteres sem espaços, sentenças, parágrafos, caracteres CJK, tempo de leitura e tempo de fala — tudo atualizado em tempo real enquanto você digita.",
     "faq3Q": "Posso rastrear palavras-chave específicas?",
-    "faq3A": "Sim. Adicione palavras-chave personalizadas para rastrear sua frequência e contagem no seu texto. A aba Palavras-chave mostra as principais palavras e frases de 2 palavras."
+    "faq3A": "Sim. Adicione palavras-chave personalizadas para rastrear sua frequência e contagem no seu texto. A aba Palavras-chave mostra as principais palavras e frases de 2 palavras.",
+    "aeoDefinition": "O Contador de Palavras é uma ferramenta online gratuita para análise de texto em tempo real, incluindo contagem de palavras, caracteres, sentenças, tempo de leitura e densidade de palavras-chave. Suporta texto CJK. Nenhum dado é enviado para qualquer servidor."
   }
 }

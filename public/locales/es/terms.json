@@ -2,15 +2,12 @@
   "title": "Términos de Servicio",
   "metaDescription": "Términos de Servicio de OmniKit. Lee los términos y condiciones para usar nuestras herramientas gratuitas en línea para desarrolladores.",
   "lastUpdated": "Última actualización: 23 de abril de 2026",
-
   "overviewTitle": "Descripción general",
   "overviewP1": "Bienvenido a OmniKit (\"nosotros\", \"nuestro\" o \"a\"), operador de este sitio web (el \"Sitio\"). OmniKit es una colección gratuita y de código abierto de herramientas de desarrollador basadas en el navegador diseñadas para ayudarte con las tareas de desarrollo cotidianas.",
   "overviewP2": "Estos Términos de Servicio (\"Términos\") rigen tu acceso y uso del Sitio y de todas las herramientas, características y servicios proporcionados a través de él (colectivamente, los \"Servicios\"). Al acceder o usar el Sitio, aceptas quedar vinculado por estos Términos.",
-
   "acceptanceTitle": "Aceptación de los términos",
   "acceptanceP1": "Al acceder o usar cualquier parte del Sitio, reconoces que has leído, entendido y aceptas quedar vinculado por estos Términos. Si no estás de acuerdo con todos estos Términos, no debes acceder ni usar el Sitio.",
   "acceptanceP2": "Declaras que tienes al menos 13 años de edad, o la edad de mayoría de edad legal en tu jurisdicción, la que sea mayor. Si eres menor de la edad requerida, solo puedes usar el Sitio bajo la supervisión de un padre o tutor legal que acepte quedar vinculado por estos Términos.",
-
   "servicesTitle": "Descripción de los servicios",
   "servicesP1": "OmniKit proporciona un conjunto de herramientas gratuitas para desarrolladores basadas en el navegador. Todo el procesamiento se realiza localmente en tu navegador web. No se transmiten datos a nuestros servidores. Nuestras herramientas actuales incluyen:",
   "servicesList1": [
@@ -24,7 +21,6 @@
     "Conversión de unidades de almacenamiento: Convierte entre byte, kilobyte, megabyte, terabyte, petabyte y más"
   ],
   "servicesP2": "Podemos añadir, modificar o eliminar herramientas en cualquier momento sin previo aviso.",
-
   "conductTitle": "Conducta del usuario",
   "conductP1": "Aceptas no hacer un uso indebido del Sitio ni de sus Servicios. Las actividades prohibidas incluyen, entre otras:",
   "conductList1": [
@@ -36,24 +32,19 @@
     "Copiar, reproducir o redistribuir el diseño, código o contenido del Sitio sin permiso escrito previo"
   ],
   "conductP2": "Nos reservamos el derecho de restringir o bloquear el acceso a cualquier usuario que viole estos Términos a nuestra entera discreción.",
-
   "ipTitle": "Propiedad intelectual",
   "ipP1": "El Sitio, incluyendo su contenido original, características, funcionalidad y diseño, es propiedad de OmniKit y está protegido por leyes internacionales de derechos de autor, marcas comerciales y otras leyes de propiedad intelectual.",
   "ipP2": "No puedes reproducir, distribuir, modificar, crear obras derivadas, mostrar públicamente ni explotar ningún contenido del Sitio sin nuestro consentimiento expreso por escrito. Las herramientas se proporcionan para tu uso personal y comercial, pero el Sitio en sí y su código fuente siguen siendo de nuestra propiedad.",
-
   "advertisingTitle": "Publicidad",
   "advertisingP1": "OmniKit es un servicio gratuito financiado por publicidad. Podemos mostrar anuncios en el Sitio proporcionados por redes publicitarias de terceros. Estos socios pueden usar cookies y tecnologías de seguimiento similares para recopilar información sobre tu actividad de navegación en diferentes sitios web.",
   "advertisingP2": "Al usar el Sitio, reconoces y aceptas la visualización de anuncios y el uso de tecnologías de seguimiento por nuestros socios publicitarios como se describe en nuestra Política de Privacidad. Puedes excluirte de la publicidad personalizada a través de la configuración de tu navegador o visitando las páginas de exclusión de las respectivas redes publicitarias.",
   "advertisingP3": "No somos responsables del contenido, exactitud o prácticas de los anuncios mostrados en el Sitio. Las interacciones con anunciantes son exclusivamente entre tú y el anunciante.",
-
   "disclaimerTitle": "Descargos de responsabilidad y limitación de responsabilidad",
   "disclaimerP1": "Los Servicios se proporcionan \"tal cual\" y \"según disponibilidad\" sin garantías de ningún tipo, ya sean expresas o implícitas, incluyendo pero no limitado a garantías implícitas de comerciabilidad, idoneidad para un propósito particular y no infracción.",
   "disclaimerP2": "No garantizamos que el Sitio sea ininterrumpido, seguro o esté libre de errores. Los resultados producidos por nuestras herramientas se proporcionan solo con fines informativos. Debes verificar independientemente cualquier resultado antes de confiar en ellos para aplicaciones sensibles a la seguridad o de misión crítica.",
   "disclaimerP3": "En la máxima medida permitida por la ley, OmniKit no será responsable de ningún daño indirecto, incidental, especial, consecuencial o punitivo, incluyendo pero no limitado a pérdida de datos, beneficios o buena voluntad, derivados del uso o incapacidad de usar el Sitio o los Servicios.",
-
   "changesTitle": "Cambios a los términos",
   "changesP1": "Nos reservamos el derecho de actualizar o modificar estos Términos en cualquier momento. Los cambios se publicarán en esta página con una fecha de \"Última actualización\" revisada. Tu uso continuado del Sitio después de cualquier cambio constituye la aceptación de los Términos revisados. Te recomendamos revisar esta página periódicamente.",
-
   "contactTitle": "Contáctanos",
   "contactP1": "Si tienes alguna pregunta sobre estos Términos, por favor contáctanos."
 }

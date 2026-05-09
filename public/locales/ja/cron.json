@@ -9,8 +9,10 @@
     "generate": "生成",
     "parse": "解析"
   },
+  "parse": {
+    "placeholder": "例: */5 * * * *"
+  },
   "timezone": {
-    "label": "タイムゾーン",
     "local": "ローカル",
     "utc": "UTC"
   },
@@ -49,15 +51,6 @@
     "11月",
     "12月"
   ],
-  "weekdayShort": [
-    "日",
-    "月",
-    "火",
-    "水",
-    "木",
-    "金",
-    "土"
-  ],
   "weekdayLong": [
     "日曜日",
     "月曜日",
@@ -88,11 +81,8 @@
     "atTime": "{time}",
     "everyN": "{n}分ごと",
     "lastDow": "月の最後の{weekday}",
-    "fromTo": "{from}から{to}まで",
     "onDays": "{days}",
     "throughDays": "{from}から{to}まで",
-    "andList": "{prefix}と{item}",
-    "ofEveryMonth": "毎月",
     "lastDayOfMonth": "月の最終日",
     "nthWeekday": "月の第{ordinal} {weekday}",
     "nearestWeekdayTo": "{day}日以降の最も近い平日",
@@ -107,7 +97,6 @@
     "5": "第5"
   },
   "output": {
-    "expression": "式",
     "description": "説明",
     "nextExecutions": "次回5回の実行時刻",
     "header": {
@@ -120,14 +109,6 @@
       "now": "今",
       "past": "過去"
     }
-  },
-  "share": {
-    "button": "リンクを共有",
-    "copied": "共有リンクをコピーしました"
-  },
-  "parse": {
-    "placeholder": "Cron式を貼り付けまたは入力",
-    "showingPrevious": "最後の有効な結果を表示中"
   },
   "warn": {
     "neverTriggers": "この式は実行されません",
@@ -154,32 +135,24 @@
     "nthOnNonDow": "「#」は曜日フィールドでのみ使用可能です"
   },
   "descriptions": {
+    "aeoDefinition": "Cron式ジェネレーターは、Cron式の構築と解析ができる無料オンラインツールです。Standard、Spring、Quartzモードに対応し、人間が読める説明と次回実行プレビューを表示。データがブラウザの外に出ることはありません。",
     "whatIsTitle": "Cron式とは？",
     "whatIs": "Cron式はスケジュールを記述する文字列です。各フィールドが時間の単位（分、時、日、月、曜日）を制御します。Unixのcronに由来し、Spring（秒を追加）やQuartz（秒と年を追加、L、W、#などの特殊文字）に拡張されています。",
-    "fieldRefTitle": "フィールドリファレンス",
-    "specialCharsTitle": "特殊文字",
-    "modesTitle": "モード",
     "dstTitle": "サマータイム",
     "dst": "アクティブなタイムゾーンがサマータイムを導入している場合、春の進む期間内のスケジュールは次の有効な時刻に実行され、秋の戻る重複期間内のスケジュールは最初の発生時に実行されます。UTCに切り替えるとサマータイムの影響を完全に回避できます。",
-    "faqTitle": "よくある質問",
     "faq1Q": "Cron式とは？",
     "faq1A": "Cron式は5〜7個のフィールドからなる文字列で、繰り返しタスクのスケジュールを定義します。cronデーモン、ジョブスケジューラー、SpringやQuartzなどのフレームワークで使用されます。",
     "faq2Q": "どのCron方言に対応していますか？",
-    "faq2A": "3種類：Standard（5フィールド）、Spring（秒付き6フィールド）、Quartz（秒と年付き7フィールド）。ツールが方言を自動検出し、次回実行時刻を表示します。",
-    "faq3Q": "次回実行予測の精度は？",
-    "faq3A": "予測はクライアント側で計算され、標準的なcronの動作と一致します。ツールは指定した式の次回5回の実行時刻を表示します。"
+    "faq2A": "3種類：Standard（5フィールド）、Spring（秒付き6フィールド）、Quartz（秒と年付き7フィールド）。ツールが方言を自動検出し、次回実行時刻を表示します。"
   },
   "editor": {
     "title": "フィールドを編集",
     "preview": "プレビュー",
-    "apply": "適用",
     "specificValue": "値",
     "rangeFrom": "開始",
     "rangeTo": "終了",
     "stepStart": "開始",
     "stepInterval": "間隔",
-    "stepEvery": "毎",
-    "listSelect": "値を選択",
     "specialKind": "種類"
   },
   "presetSection": "クイックプリセット"

@@ -1,8 +1,4 @@
 {
-  "description": {
-    "p1": "De nombreux caractères, symboles et icônes spéciaux peuvent être utilisés dans le contenu d'un site web, mais ils ne s'affichent pas toujours correctement. Pour garantir un affichage fiable, il faut utiliser les codes HTML. Chaque caractère, symbole et icône possède son propre code HTML qu'il suffit d'insérer dans votre HTML. Nous avons créé une liste complète de tous les codes HTML pour les différents caractères, symboles et icônes. Vous pouvez facilement copier ces codes HTML et les coller dans votre code pour qu'ils s'affichent correctement. Lorsque c'est possible, nous avons indiqué le code HTML nommé (nom d'entité), le code numérique (numéro d'entité) et le code hexadécimal pour que vous trouviez toujours le bon code.",
-    "p2": "Avant d'utiliser l'un des codes ci-dessous sur votre site, assurez-vous que votre document HTML utilise le bon encodage pour garantir l'affichage correct des caractères spéciaux. Pour cela, vérifiez que votre HTML utilise le jeu de caractères Unicode. Ce jeu de caractères doit être défini dans la section head de votre document HTML à l'aide d'une balise meta avec l'attribut charset et la valeur UTF-8. Copiez et collez simplement la balise meta suivante dans votre section head et tous les caractères ci-dessous s'afficheront parfaitement."
-  },
   "tabs": {
     "letters": "Lettres",
     "punctuation": "Ponctuation",
@@ -36,12 +32,12 @@
   },
   "searchPlaceholder": "Rechercher par caractère, code ou description…",
   "descriptions": {
-    "faqTitle": "Questions fréquentes",
+    "p1": "Les entités HTML sont des codes spéciaux utilisés pour représenter les caractères réservés en HTML. Par exemple, &lt; pour <, &amp; pour & et &quot; pour \". Consultez la [Table ASCII](/ascii) pour les codes de caractères, ou les [Codes de statut HTTP](/httpstatus) pour les références de réponses web.",
+    "p2": "Avant d'utiliser l'un des codes ci-dessous sur votre site, assurez-vous que votre document HTML utilise le bon encodage afin que les codes HTML et les caractères spéciaux s'affichent correctement. Pour cela, vérifiez que votre HTML utilise le jeu de caractères Unicode. Ce jeu de caractères doit être défini dans la section head de votre document HTML via une balise meta avec l'attribut charset et la valeur UTF-8. Copiez et collez simplement la balise meta suivante dans votre section head et tous les caractères HTML ci-dessous s'afficheront parfaitement.",
+    "aeoDefinition": "L'Encodeur d'entités HTML est un outil gratuit en ligne pour encoder et décoder les caractères spéciaux et entités HTML. Référence complète avec entités numériques et nommées. Fonctionne entièrement dans votre navigateur.",
     "faq1Q": "Que sont les entités de caractères HTML ?",
     "faq1A": "Les entités HTML sont des codes spéciaux (comme &amp; pour &) utilisés pour représenter des caractères qui ont une signification spéciale en HTML ou ne peuvent pas être saisis directement.",
     "faq2Q": "Combien d'entités sont documentées ?",
-    "faq2A": "L'outil fournit une référence complète des caractères spéciaux HTML incluant les entités nommées (&amp;), décimales (&#38;) et hexadécimales (&#x26;).",
-    "faq3Q": "Puis-je rechercher des caractères spécifiques ?",
-    "faq3A": "Oui. Recherchez par nom de caractère, nom d'entité ou point de code pour trouver rapidement l'entité HTML dont vous avez besoin."
+    "faq2A": "L'outil fournit une référence complète des caractères spéciaux HTML incluant les entités nommées (&amp;), décimales (&#38;) et hexadécimales (&#x26;)."
   }
 }

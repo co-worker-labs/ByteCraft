@@ -3,17 +3,14 @@
   "deselect": "取消選取 ({count})",
   "noFileChosen": "未選取檔案",
   "selectedFiles": "已選取 {count} 個{files}",
-  "selectedFile": "已選取 {count} 個檔案",
   "checksumOutput": "校驗碼結果",
   "algoTip": "處理大檔案時，請僅勾選所需的演算法以減少計算耗時。",
   "calculate": "開始計算",
   "descriptions": {
-    "faqTitle": "常見問題",
+    "aeoDefinition": "檔案校驗碼是一款免費的線上工具，用於計算任何檔案的 MD5、SHA-1、SHA-256 和 SHA-512 校驗碼。支援無限檔案大小，100% 在瀏覽器中處理。",
     "faq1Q": "什麼是檔案校驗碼？",
     "faq1A": "校驗碼是根據檔案內容計算的雜湊值，用於驗證檔案完整性——即使一個位元組發生變化，校驗碼也會完全改變。",
     "faq2Q": "有哪些雜湊演算法可用？",
-    "faq2A": "MD5、SHA-1、SHA-256、SHA-384、SHA-512、SHA3-256、SHA3-512 和 CRC32。可同時對同一檔案執行多種演算法。",
-    "faq3Q": "有檔案大小限制嗎？",
-    "faq3A": "沒有硬性限制。工具使用 HTML5 File API 分塊處理檔案，支援無限大小的檔案，僅受裝置記憶體限制。"
+    "faq2A": "MD5、SHA-1、SHA-256、SHA-384、SHA-512、SHA3-256、SHA3-512 和 CRC32。可同時對同一檔案執行多種演算法。"
   }
 }

@@ -419,17 +419,13 @@ function ContrastTab({ fg, bg, onFgChange, onBgChange }: ContrastTabProps) {
 }
 
 function Description() {
-  const t = useTranslations("color.description");
+  const t = useTranslations("color.descriptions");
 
-  const faqItems = [1, 2, 3].map((i) => ({
-    title: t(`descriptions.faq${i}Q`),
-    content: <p>{t(`descriptions.faq${i}A`)}</p>,
-  }));
   return (
     <div className="mt-8 space-y-6">
-      <p className="text-fg-primary text-sm leading-relaxed font-medium">
-        {t("description.aeoDefinition")}
-      </p>
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">{t("aeoDefinition")}</p>
+      </div>
       <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-4">
         <Info size={18} className="text-accent-purple mt-0.5 shrink-0" />
         <div className="space-y-2">
@@ -488,14 +484,9 @@ function Description() {
           </ul>
         </div>
       </div>
-      <div className="mt-8">
-        <div className="flex items-center gap-2 mb-4">
-          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
-          <h2 className="font-semibold text-fg-primary text-base text-pretty">
-            {t("descriptions.faqTitle")}
-          </h2>
-        </div>
-        <Accordion items={faqItems} />
+      <div>
+        <h2 className="font-semibold text-fg-primary text-base">{t("faq3Q")}</h2>
+        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{t("faq3A")}</p>
       </div>
     </div>
   );

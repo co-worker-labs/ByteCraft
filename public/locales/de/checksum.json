@@ -3,17 +3,14 @@
   "deselect": "Abwählen ({count})",
   "noFileChosen": "Keine Datei ausgewählt",
   "selectedFiles": "{count} {files} ausgewählt",
-  "selectedFile": "{count} Datei ausgewählt",
   "checksumOutput": "Prüfsummen-Ausgabe",
   "algoTip": "Bei großen Dateien wählen Sie nur die benötigten Algorithmen, um die Verarbeitungszeit zu verkürzen.",
   "calculate": "Berechnen",
   "descriptions": {
-    "faqTitle": "Häufig gestellte Fragen",
     "faq1Q": "Was ist eine Datei-Prüfsumme?",
     "faq1A": "Eine Prüfsumme ist ein Hash-Wert, der aus dem Dateiinhalt berechnet wird. Sie wird zur Überprüfung der Dateiintegrität verwendet — wenn sich ein einziges Byte ändert, ändert sich die Prüfsumme vollständig.",
     "faq2Q": "Welche Hash-Algorithmen sind verfügbar?",
     "faq2A": "MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 und CRC32. Mehrere Algorithmen können gleichzeitig für dieselbe Datei ausgeführt werden.",
-    "faq3Q": "Gibt es eine Dateigrößenbeschränkung?",
-    "faq3A": "Kein festes Limit. Das Tool verarbeitet Dateien in Blöcken mit der HTML5 File API und unterstützt unbegrenzte Dateigrößen, begrenzt nur durch den Arbeitsspeicher Ihres Geräts."
+    "aeoDefinition": "Die Datei-Prüfsumme ist ein kostenloses Online-Tool zur Berechnung von MD5-, SHA-1-, SHA-256- und SHA-512-Prüfsummen für beliebige Dateien. Unterstützt unbegrenzte Dateigröße mit 100% clientseitiger Verarbeitung."
   }
 }

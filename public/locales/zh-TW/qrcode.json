@@ -1,20 +1,4 @@
 {
-  "shortTitle": "QR Code 產生器",
-  "title": "QR Code 產生器 - 免費線上工具",
-  "description": {
-    "title": "關於 QR Code",
-    "intro": "QR Code 將文字編碼為二維矩陣，可被智慧型手機鏡頭解碼。較高的錯誤修正等級讓 QR Code 即使部分被遮蔽（Logo、污漬或損壞）也能掃描。",
-    "ecTitle": "錯誤修正等級",
-    "ecL": "L —— 可修復約 7% 損壞。最小，不支援 Logo。",
-    "ecM": "M —— 可修復約 15%。適合乾淨列印。",
-    "ecQ": "Q —— 可修復約 25%。預設值；穩健，支援小 Logo。",
-    "ecH": "H —— 可修復約 30%。嵌入較大 Logo 時必備。",
-    "tipsTitle": "建議",
-    "tipMargin": "請保留至少 4 個模組的邊距（靜默區）—— 掃描器需要它來辨識 QR Code。",
-    "tipContrast": "前景色與背景色之間的高對比至關重要。避免低對比的搭配。",
-    "tipLogo": "如果嵌入 Logo，請使用 H 級錯誤修正，並將 Logo 尺寸控制在 QR Code 的 30% 以內。",
-    "tipTest": "廣泛列印或分享前，請務必使用真實手機鏡頭測試產生的 QR Code。"
-  },
   "contentTypes": {
     "text": "文字 / URL",
     "wifi": "WiFi",
@@ -87,18 +71,24 @@
     "logoTooLarge": "Logo 檔案必須小於 2MB",
     "logoNotImage": "請上傳 PNG、JPG、SVG 或 WebP 圖片",
     "ecBumpedForLogo": "已將錯誤修正等級提升至 H，以確保帶 Logo 的 QR Code 可被可靠掃描",
-    "ecLowWithLogo": "錯誤修正等級過低可能導致帶 Logo 的 QR Code 無法掃描",
     "generateFailed": "產生 QR Code 失敗",
     "libraryLoadFailed": "QR Code 產生器載入失敗，請重新整理頁面。"
   },
-  "localGenerated": "完全在您的瀏覽器中產生，資料永不離開您的裝置。",
   "descriptions": {
-    "faqTitle": "常見問題",
+    "title": "關於 QR Code",
+    "intro": "QR Code 將文字編碼為二維矩陣，智慧型手機相機可以解碼。較高的錯誤修正等級使其在部分遮蔽（如嵌入 Logo、污損或損壞）的情況下仍可讀取。",
+    "ecTitle": "錯誤修正等級",
+    "ecL": "L — 修復約 7% 損壞。最小尺寸，不適合嵌入 Logo。",
+    "ecM": "M — 修復約 15%。適合乾淨的列印品。",
+    "ecQ": "Q — 修復約 25%。預設等級；穩健且支援小型 Logo。",
+    "ecH": "H — 修復約 30%。嵌入較大 Logo 時必須使用。",
+    "tipsTitle": "提示",
+    "tipMargin": "始終保持至少 4 個模組的邊距（靜默區）——掃描器需要它來偵測 QR Code。",
+    "tipContrast": "前景色與背景色之間的高對比度至關重要。避免使用低對比的配色。",
+    "tipLogo": "嵌入 Logo 時，請使用錯誤修正等級 H，並將 Logo 尺寸控制在 QR Code 的 30% 以內。",
+    "tipTest": "在大量列印或分享之前，務必使用真實手機相機測試產生的 QR Code。",
+    "aeoDefinition": "QR Code 產生器是一款免費的線上工具，用於建立文字、URL、WiFi、名片等內容的 QR Code。支援自訂顏色、Logo 和點樣式，可匯出 SVG/PNG。不會將任何資料傳送到伺服器。",
     "faq1Q": "什麼是 QR Code 產生器？",
-    "faq1A": "一個可自訂的 QR Code 產生器，支援文字、URL、WiFi 憑證和 vCard。可新增 Logo、變更顏色，並匯出為 SVG 或 PNG。",
-    "faq2Q": "QR Code 的最大容量是多少？",
-    "faq2A": "容量取決於糾錯級別和資料類型。數字：最多 7,089 個字元。字母數字：最多 4,296 個。二進位：最多 2,953 位元組。漢字：最多 1,817 個字元。",
-    "faq3Q": "可以在 QR Code 中新增 Logo 嗎？",
-    "faq3A": "可以。上傳 Logo 圖片放置在 QR Code 中心，工具會自動調整糾錯級別以保持可掃描性。"
+    "faq1A": "一個可自訂的 QR Code 產生器，支援文字、URL、WiFi 憑證和 vCard。可新增 Logo、變更顏色，並匯出為 SVG 或 PNG。"
   }
 }

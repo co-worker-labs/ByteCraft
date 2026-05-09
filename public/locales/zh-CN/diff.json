@@ -6,14 +6,15 @@
   "uploadFile": "上传文件",
   "formatJson": "格式化 JSON",
   "formatJsonInvalid": "不是有效的 JSON：{message}",
+  "tooLarge": "文件过大，无法比较",
+  "binaryRejected": "不支持二进制文件",
   "swap": "文本交换",
   "copyDiff": "复制差异",
   "compare": "比较",
   "view": {
     "label": "视图",
     "sideBySide": "并排视图",
-    "inline": "行内视图",
-    "stacked": "堆叠视图"
+    "inline": "行内视图"
   },
   "layout": {
     "label": "布局",
@@ -45,21 +46,14 @@
     "howP2": "在并排视图和行内视图之间切换，按需开启「忽略空白」或「忽略大小写」，并使用「格式化 JSON」在比较前规范化 JSON 输入。",
     "algorithmTitle": "算法",
     "algorithmP1": "基于 jsdiff 提供的 Myers 差异算法。工具先计算行级差异，再对每一对相邻的删除/新增行执行词级二次比对，以高亮出真正变化的词 —— 这与 GitHub Pull Request 使用的惯例一致。",
-    "useCasesTitle": "常见用例",
     "useCasesP1": "比较两个配置文件（[JSON](/json)、[YAML](/yaml)、.env），发现环境间的差异。",
     "useCasesP2": "在提交前回顾一次代码改动，尤其是在编辑器之外粘贴代码时。",
     "useCasesP3": "并排比对文档、日志或查询结果的两个版本。",
-    "limitationsTitle": "局限性",
     "limitationsP1": "本工具仅处理文本。二进制文件会被识别并拒绝，以保证比较结果有意义。",
     "limitationsP2": "每侧输入上限 5MB。超过 512KB 的输入会在后台 Web Worker 中计算；页面保持响应，但超大输入的计算本身会按比例变慢。",
     "limitationsP3": "行尾差异（CRLF 与 LF）和行尾空白会被统一归一化处理，永远不会作为差异出现。",
-    "faqTitle": "常见问题",
     "faq1Q": "什么是文本差异工具？",
     "faq1A": "差异工具比较两段文本并高亮显示它们之间的不同。此工具以单词或字符级别展示新增、删除和修改内容。",
-    "faq2Q": "有哪些差异模式？",
-    "faq2A": "两种模式：并排视图（显示两段文本并高亮差异）和内联视图（在单个视图中显示合并的差异）。两种模式都支持单词级别的粒度。",
-    "faq3Q": "有文件大小限制吗？",
-    "faq3A": "差异计算完全在浏览器中使用 Web Worker 运行。性能取决于设备，但几百 KB 以内的文本都能流畅运行。",
     "aeoDefinition": "文本对比工具是一个免费的在线文本比较工具，支持行级和词级精确对比。并排或内联视图，变更高亮显示。完全在浏览器中运行，不会发送任何数据到服务器。"
   }
 }

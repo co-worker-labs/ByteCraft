@@ -3,8 +3,7 @@
     "title": "Aktueller Unix-Timestamp",
     "pause": "Pausieren",
     "resume": "Fortsetzen",
-    "localLabel": "Lokal",
-    "utcLabel": "UTC"
+    "localLabel": "Lokal"
   },
   "tsToDate": {
     "title": "Timestamp → Datum/Uhrzeit",
@@ -14,7 +13,6 @@
     "unitMilliseconds": "Millisekunden",
     "inputLabel": "Eingabe",
     "inputPlaceholder": "z.B. 1714521600",
-    "paste": "Einfügen",
     "clear": "Leeren",
     "quickLegend": "Schnell",
     "now": "Jetzt",
@@ -22,9 +20,7 @@
     "todayUtc": "Heute 00:00 UTC",
     "rows": {
       "local": "Lokal",
-      "utc": "UTC",
       "iso": "ISO 8601",
-      "sql": "SQL",
       "rfc": "RFC 2822",
       "dayWeek": "Tag / Woche",
       "relative": "Relativ",
@@ -43,7 +39,6 @@
     "msLabel": "Millisekunden (optional)",
     "tzLegend": "Zeitzone",
     "tzLocal": "Lokal",
-    "tzUtc": "UTC",
     "rows": {
       "seconds": "Sekunden",
       "milliseconds": "Millisekunden"
@@ -54,26 +49,23 @@
     "negative": "Negative Timestamps werden nicht unterstützt",
     "tooLong": "Zu lang. Scheint Mikrosekunden zu sein. Auf 13 Stellen kürzen.",
     "secondsTooLarge": "Wert zu groß für Sekunden. Auf Millisekunden umschalten?",
-    "outOfRange": "Außerhalb des unterstützten Bereichs (1970-01-01 bis 9999-12-31)",
-    "pasteFailed": "Einfügen nicht verfügbar. Verwenden Sie Strg+V / ⌘V stattdessen."
+    "outOfRange": "Außerhalb des unterstützten Bereichs (1970-01-01 bis 9999-12-31)"
   },
   "toast": {
     "paused": "Pausiert",
     "resumed": "Fortgesetzt",
     "applied": "Angewendet"
   },
-  "description": {
-    "whatIsTitle": "Was ist ein Unix-Timestamp?",
-    "whatIs": "Ein Unix-Timestamp ist die Anzahl der Sekunden seit 1970-01-01T00:00:00Z (der Unix-Epoche). Er ist zeitzonenunabhängig. Dieselbe Zahl bezieht sich immer auf denselben Zeitpunkt, unabhängig davon, wo Sie sich befinden.",
+  "descriptions": {
+    "whatIsTitle": "Was ist ein Unix-Zeitstempel?",
+    "whatIs": "Ein Unix-Zeitstempel ist die Anzahl der Sekunden seit dem 1970-01-01T00:00:00Z (der Unix-Epoche). Er ist zeitzonenunabhängig — dieselbe Zahl bezieht sich immer auf denselben Zeitpunkt, unabhängig davon, wo Sie sich befinden.",
     "secMsTitle": "Sekunden vs. Millisekunden",
     "secMs": "Die meisten Unix-Tools und Logdateien verwenden Sekunden (heute 10 Stellen). JavaScripts Date.getTime(), Javas System.currentTimeMillis() und viele Web-APIs verwenden Millisekunden (heute 13 Stellen).",
     "y2k38Title": "Das Jahr-2038-Problem",
-    "y2k38": "Systeme, die Unix-Sekunden als vorzeichenbehaftete 32-Bit-Ganzzahl speichern, laufen am 2038-01-19 03:14:07 UTC über. Moderne 64-Bit-Systeme sind nicht betroffen.",
+    "y2k38": "Systeme, die Unix-Sekunden in einem vorzeichenbehafteten 32-Bit-Integer speichern, laufen am 2038-01-19 03:14:07 UTC über. Moderne 64-Bit-Systeme sind nicht betroffen.",
     "tzTitle": "Zeitzonen",
-    "tz": "Ein Timestamp selbst hat keine Zeitzone. Die lesbare Form (z.B. 2024-05-01 00:00:00) hängt davon ab, in welcher Zeitzone Sie ihn anzeigen. Dieses Tool zeigt immer sowohl Lokal als auch UTC an."
-  },
-  "descriptions": {
-    "faqTitle": "Häufig gestellte Fragen",
+    "tz": "Ein Zeitstempel selbst hat keine Zeitzone. Die menschenlesbare Form (z. B. 2024-05-01 00:00:00) hängt davon ab, in welcher Zeitzone Sie ihn anzeigen. Dieses Tool zeigt immer sowohl Lokal als auch UTC an.",
+    "aeoDefinition": "Der Unix-Timestamp-Konverter ist ein kostenloses Online-Tool zur Umwandlung zwischen Unix-Zeitstempeln und menschenlesbaren Daten. Unterstützt Sekunden und Millisekunden mit Live-Uhr. Läuft vollständig in Ihrem Browser.",
     "faq1Q": "Was ist ein Unix-Zeitstempel?",
     "faq1A": "Ein Unix-Zeitstempel ist die Anzahl der Sekunden (oder Millisekunden) seit dem 1. Januar 1970 UTC (der Unix-Epoche). Er ist eine universelle, zeitzonenunabhängige Art, Zeit darzustellen.",
     "faq2Q": "Verarbeitet dieses Tool Zeitzonen?",

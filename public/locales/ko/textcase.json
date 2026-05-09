@@ -33,12 +33,10 @@
     "pathCase": "파일 경로, API 라우트"
   },
   "descriptions": {
-    "faqTitle": "자주 묻는 질문",
     "faq1Q": "어떤 텍스트 케이스 변환이 가능한가요?",
     "faq1A": "camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case, Title Case, Sentence case, UPPER CASE, lower case 등.",
     "faq2Q": "여러 문자열을 한 번에 변환할 수 있나요?",
     "faq2A": "네. 여러 줄을 붙여넣으면 도구가 각 줄을 독립적으로 변환합니다. 여러 줄 변환은 선택한 케이스를 모든 줄에 적용합니다.",
-    "faq3Q": "비 ASCII 문자도 처리되나요?",
-    "faq3A": "네. 이 도구는 악센트 문자, CJK 문자, 이모지 등 유니코드 문자를 케이스 변환에서 올바르게 처리합니다."
+    "aeoDefinition": "텍스트 케이스 변환기는 camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE 등으로 텍스트를 변환하는 무료 온라인 도구입니다. 실시간 미리보기와 함께 즉시 변환됩니다. 브라우저에서만 실행됩니다."
   }
 }

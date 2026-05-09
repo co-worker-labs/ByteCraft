@@ -10,7 +10,6 @@
   "emptyState": "Paste or type text above to extract emails, URLs, and phone numbers",
   "dropZone": "Drop any text file",
   "copyAll": "Copy All",
-  "exportTxt": "TXT",
   "exportCsv": "CSV",
   "exportJson": "JSON",
   "copied": "Copied!",
@@ -39,12 +38,11 @@
     "tip2": "Toggle individual types on/off with the chip buttons",
     "tip3": "Results are deduplicated by default; enable \"Show duplicates\" to see all occurrences",
     "tip4": "Phone numbers must contain at least 7 digits to be recognized",
-    "faqTitle": "Frequently Asked Questions",
     "faq1Q": "What does the Text Extractor do?",
-    "faq1A": "Extracts specific patterns from text using regex-based extractors: emails, URLs, IP addresses, phone numbers, numbers, and custom patterns.",
+    "faq1A": "Extracts specific patterns from text: emails, URLs, and phone numbers. Results are deduplicated by default and can be exported as TXT, CSV, or JSON.",
     "faq2Q": "Can I define custom extraction patterns?",
-    "faq2A": "Yes. Write your own regex pattern to extract any text format. The tool highlights matches and shows capture groups.",
+    "faq2A": "Toggle the Email, URL, and Phone chip buttons to include or exclude each type. All matches are found in a single pass.",
     "faq3Q": "What built-in patterns are available?",
-    "faq3A": "Email addresses, URLs, IPv4/IPv6 addresses, phone numbers, hex colors, numbers, and dates. Each pattern is pre-configured for common use cases."
+    "faq3A": "Email addresses (supports +tags and subdomains), URLs (http/https with paths, queries, and fragments), and international phone numbers (at least 7 digits). Each type can be toggled independently."
   }
 }

@@ -37,7 +37,7 @@ export default async function StorageUnitRoute({
     path: PATH,
     categoryName: tc(`${category.key}.shortTitle`),
     categoryPath: `/${categorySlug}`,
-    faqItems: [1, 2, 3].map((i) => ({
+    faqItems: [1, 2].map((i) => ({
       q: tx(`descriptions.faq${i}Q`),
       a: tx(`descriptions.faq${i}A`),
     })),

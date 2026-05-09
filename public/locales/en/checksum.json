@@ -3,18 +3,14 @@
   "deselect": "Deselect ({count})",
   "noFileChosen": "No file chosen",
   "selectedFiles": "Selected {count} {files}",
-  "selectedFile": "Selected {count} file",
   "checksumOutput": "Checksum Output",
   "algoTip": "For large files, select only the algorithms you need to reduce processing time.",
   "calculate": "Calculate",
   "descriptions": {
     "aeoDefinition": "File Checksum is a free online tool for calculating MD5, SHA-1, SHA-256, and SHA-512 checksums for any file. Supports unlimited file size with 100% client-side processing.",
-    "faqTitle": "Frequently Asked Questions",
     "faq1Q": "What is a file checksum?",
     "faq1A": "A checksum is a hash value computed from file contents. It's used to verify file integrity — if even one byte changes, the checksum changes completely.",
-    "faq2Q": "What hash algorithms are available?",
-    "faq2A": "MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512, and CRC32. Multiple algorithms can run simultaneously on the same file.",
-    "faq3Q": "Is there a file size limit?",
-    "faq3A": "No hard limit. The tool processes files in chunks using the HTML5 File API, supporting unlimited file sizes limited only by your device's memory."
+    "faq2Q": "Is there a file size limit?",
+    "faq2A": "No hard limit. The tool processes files in chunks using the HTML5 File API, supporting unlimited file sizes limited only by your device's memory."
   }
 }

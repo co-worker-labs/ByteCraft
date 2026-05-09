@@ -6,32 +6,22 @@
     "releaseToLoad": "Losladen zum Laden",
     "unsupported": "Nicht unterstützter Dateityp",
     "tooLarge": "Datei überschreitet das 200-MB-Limit.",
-    "invalidHeader": "Keine gültige SQLite-Datenbankdatei.",
     "engineFailed": "SQLite-Engine konnte nicht geladen werden. Netzwerk prüfen oder Seite neu laden.",
     "initializing": "Engine wird initialisiert…",
-    "reading": "Datei wird gelesen… {loaded} / {total}",
     "privacy": "Alle Daten werden lokal in Ihrem Browser verarbeitet"
   },
   "info": {
-    "tables": "{count, plural, =1 {1 Tabelle} other {# Tabellen}}",
-    "views": "{count, plural, =1 {1 Sicht} other {# Sichten}}",
-    "indexes": "{count, plural, =1 {1 Index} other {# Indizes}}",
-    "triggers": "{count, plural, =1 {1 Trigger} other {# Trigger}}",
     "close": "Schließen"
   },
   "sidebar": {
-    "search": "Suchen…",
     "tables": "TABELLEN",
     "views": "SICHTEN",
     "indexes": "INDIZES",
     "triggers": "TRIGGER",
-    "showSystem": "System anzeigen",
-    "noResults": "Keine Treffer",
     "collapse": "Seitenleiste einklappen",
     "expand": "Seitenleiste ausklappen"
   },
   "schema": {
-    "columns": "Spalten",
     "foreignKeys": "Fremdschlüssel",
     "indexes": "Indizes",
     "rowCount": "Zeilen: {count}",
@@ -40,13 +30,7 @@
     "type": "Typ",
     "nullable": "Nullable",
     "default": "Standard",
-    "pk": "PK",
-    "from": "Von",
-    "to": "Nach",
-    "onDelete": "ON DELETE",
-    "onUpdate": "ON UPDATE",
-    "unique": "Eindeutig",
-    "trigger": "Trigger-SQL"
+    "pk": "PK"
   },
   "editor": {
     "run": "Ausführen",
@@ -54,10 +38,8 @@
     "format": "Formatieren",
     "compress": "Komprimieren",
     "clear": "Leeren",
-    "history": "Verlauf",
     "noHistory": "Noch keine Abfragen",
-    "clearHistory": "Verlauf leeren",
-    "placeholder": "-- SELECT-Abfragen hier schreiben. Strg/Cmd+Enter zum Ausführen."
+    "clearHistory": "Verlauf leeren"
   },
   "result": {
     "running": "Abfrage wird ausgeführt…",
@@ -71,35 +53,26 @@
     "exportJson": "JSON exportieren",
     "empty": "Keine Ergebnisse",
     "tabName": "Ergebnis {n}",
-    "errorTab": "Fehler",
-    "rejectedReadonly": "Nur Lese-Anweisungen sind erlaubt (erhalten: {keyword}).",
-    "rejectedPragma": "PRAGMA „{name}“ ist nicht in der Lese-Whitelist.",
-    "rejectedCte": "Datenmodifizierende CTE erkannt; abgelehnt.",
     "exportConfirm": "Cursor ist noch nicht fertig. Aktuelle {loaded} Zeilen exportieren, oder erst alle laden?",
     "exportLoaded": "Aktuelle Zeilen exportieren",
     "exportLoadAll": "Alle laden, dann exportieren"
   },
   "cell": {
-    "null": "NULL",
     "empty": "(leer)",
     "blob": "BLOB · {bytes} B",
-    "expandLong": "Volltext anzeigen",
-    "copyLong": "Kopieren"
+    "expandLong": "Volltext anzeigen"
   },
-  "status": {
-    "engineRestarted": "Datenbank-Engine neu gestartet. Ihre Daten wurden erneut geladen.",
-    "abortShortcut": "Esc drücken zum Abbrechen"
-  },
+  "status": {},
   "descriptions": {
     "whatIsTitle": "Was ist der SQLite-Viewer?",
     "whatIsP1": "Der SQLite-Viewer ermöglicht das Öffnen und Erkunden von SQLite-Datenbankdateien direkt im Browser — ohne Server-Upload. SQL-Abfragen ausführen, Tabellen durchsuchen und Daten als CSV oder JSON exportieren.",
     "whatIsP2": "Basierend auf sql.js (SQLite als WebAssembly kompiliert) mit Autovervollständigung, Abfrageverlauf, Paginierung und Unterstützung für Datenbanken bis zum Arbeitsspeicherlimit des Browsers.",
-    "faqTitle": "Häufig gestellte Fragen",
     "faq1Q": "Welche Datenbanken kann ich anzeigen?",
     "faq1A": "Das Tool unterstützt SQLite-Datenbankdateien (.db, .sqlite, .sqlite3). Öffnen Sie eine beliebige SQLite-Datei, um Tabellen zu durchsuchen, Abfragen auszuführen und Daten zu exportieren.",
     "faq2Q": "Wird meine Datenbank auf einen Server hochgeladen?",
     "faq2A": "Nein. Die Datenbank wird mit sql.js (SQLite kompiliert zu WebAssembly) in den Browser-Speicher geladen. Alle Operationen erfolgen lokal.",
     "faq3Q": "Welche SQL-Funktionen werden unterstützt?",
-    "faq3A": "Volle SQLite-SQL-Syntax einschließlich SELECT, INSERT, UPDATE, DELETE, JOINs, Unterabfragen, Aggregationen und Transaktionen. Der Editor bietet Autovervollständigung für Tabellen- und Spaltennamen."
+    "faq3A": "Volle SQLite-SQL-Syntax einschließlich SELECT, INSERT, UPDATE, DELETE, JOINs, Unterabfragen, Aggregationen und Transaktionen. Der Editor bietet Autovervollständigung für Tabellen- und Spaltennamen.",
+    "aeoDefinition": "Der SQLite-Viewer ist ein kostenloses Online-Tool zum Öffnen und Erkunden von SQLite-Datenbankdateien in Ihrem Browser. SQL-Abfragen mit Autovervollständigung ausführen, Tabellen durchsuchen und als CSV oder JSON exportieren. Keine Daten verlassen Ihr Gerät."
   }
 }

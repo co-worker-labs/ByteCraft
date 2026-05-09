@@ -21,18 +21,14 @@
     "whyTitle": "¿Por qué usar codificación Base64?",
     "whyP1": "Enviar información en formato binario a veces puede ser riesgoso ya que no todas las aplicaciones o sistemas de red pueden manejar datos binarios en crudo. Por otro lado, el conjunto de caracteres ASCII es ampliamente conocido y muy fácil de manejar para la mayoría de los sistemas.",
     "whyP2": "Por ejemplo, los servidores de correo electrónico esperan datos textuales, así que normalmente se usa ASCII. Por lo tanto, si quieres enviar imágenes o cualquier otro archivo binario a un servidor de correo, primero necesitas codificarlo en un formato basado en texto, preferiblemente ASCII. Aquí es donde la codificación Base64 resulta extremadamente útil para convertir datos binarios a los formatos correctos.",
-    "useCasesTitle": "Casos de uso comunes de Base64",
     "useCasesP1": "También puedes usar Base64 para representar datos binarios de forma compatible con HTML, JavaScript y CSS. Por ejemplo, puedes insertar una imagen directamente en un archivo CSS o JavaScript usando Base64.",
     "useCasesP2": "Es posible usar Base64 para convertir una entrada, como datos de formulario o JSON, en una cadena con un conjunto de caracteres reducido que sea segura para URLs. Sin embargo, debido a cómo ciertos servidores pueden interpretar los caracteres de suma (+) y barra (/), se recomienda usar encodeURIComponent en su lugar.",
-    "limitationsTitle": "Limitaciones de Base64",
     "limitationsP1": "Base64 no pretende ser un método de cifrado seguro.",
     "limitationsP2": "Base64 tampoco es un método de compresión. Codificar una cadena a Base64 suele producir un resultado un 33% más largo.",
-    "faqTitle": "Preguntas frecuentes",
     "faq1Q": "¿Qué es la codificación Base64?",
     "faq1A": "Base64 es un esquema de codificación de binario a texto que representa datos binarios usando 64 caracteres ASCII (A-Z, a-z, 0-9, +, /). Se usa comúnmente para incrustar datos en URLs, HTML y JSON.",
     "faq2Q": "¿Es Base64 un cifrado?",
     "faq2A": "No. Base64 es codificación, no cifrado. No proporciona seguridad — cualquiera puede decodificarlo. Usa la herramienta de Cifrado/Descifrado para protección real de datos.",
-    "faq3Q": "¿La codificación Base64 aumenta el tamaño del archivo?",
-    "faq3A": "Sí. La codificación Base64 aumenta el tamaño de los datos aproximadamente un 33%. Cada 3 bytes de entrada se convierten en 4 caracteres de salida."
+    "aeoDefinition": "El Codificador/Decodificador Base64 es una herramienta gratuita online para codificar y decodificar cadenas Base64. Soporta cabeceras de autenticación Basic, múltiples juegos de caracteres y conversión en tiempo real. Todo el procesamiento se ejecuta en tu navegador."
   }
 }

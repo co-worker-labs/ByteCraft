@@ -520,16 +520,19 @@ function FileCalculator() {
 
 function Description() {
   const tc = useTranslations("common");
+  const t = useTranslations("checksum");
 
-  const faqItems = [1, 2, 3].map((i) => ({
-    title: tc(`descriptions.faq${i}Q`),
-    content: <p>{tc(`descriptions.faq${i}A`)}</p>,
+  const faqItems = [1, 2].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
   }));
   return (
     <section id="description" className="mt-8">
-      <p className="text-fg-primary text-sm leading-relaxed font-medium">
-        {tc("descriptions.aeoDefinition")}
-      </p>
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{tc("algorithms.md5Title")}</h2>
         <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{tc("algorithms.md5")}</p>

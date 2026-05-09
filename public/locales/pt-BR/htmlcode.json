@@ -1,8 +1,4 @@
 {
-  "description": {
-    "p1": "Existem muitas letras, caracteres, caracteres especiais, símbolos e ícones que você pode querer usar no conteúdo do seu site, mas quando usa, eles não são exibidos corretamente. Para garantir que sejam exibidos corretamente, você precisa usar códigos HTML. Cada letra, caractere, símbolo e ícone tem seu próprio código HTML que basta colocar no seu HTML. Criamos uma lista completa de todos os códigos HTML para os diversos caracteres, caracteres especiais, letras, símbolos e ícones. Você pode copiar facilmente esses códigos HTML e colá-los no seu HTML para que apareçam corretamente no conteúdo do seu site. Quando disponível, adicionamos o código HTML amigável (nome da entidade), o código HTML numérico (número da entidade) e o código HEX para que você sempre encontre o código certo que precisa.",
-    "p2": "Antes de usar um dos códigos abaixo no seu site, certifique-se de que seu documento HTML usa a codificação correta para garantir que os códigos HTML sejam exibidos adequadamente. Para isso, você deve usar o conjunto de caracteres Unicode. Este conjunto deve ser definido na seção head do seu documento HTML usando uma meta tag com o atributo charset e o valor UTF-8. Basta copiar e colar a seguinte meta tag na seção head e todos os caracteres HTML abaixo serão exibidos perfeitamente."
-  },
   "tabs": {
     "letters": "Letras",
     "punctuation": "Pontuação",
@@ -36,12 +32,12 @@
   },
   "searchPlaceholder": "Buscar por caractere, código ou descrição...",
   "descriptions": {
-    "faqTitle": "Perguntas frequentes",
     "faq1Q": "O que são entidades de caracteres HTML?",
     "faq1A": "Entidades HTML são códigos especiais (como &amp; para &) usados para representar caracteres que têm significado especial em HTML ou não podem ser digitados diretamente.",
     "faq2Q": "Quantas entidades estão documentadas?",
     "faq2A": "A ferramenta fornece uma referência completa de caracteres especiais HTML incluindo entidades nomeadas (&amp;), decimais (&#38;) e hexadecimais (&#x26;).",
-    "faq3Q": "Posso buscar caracteres específicos?",
-    "faq3A": "Sim. Busque por nome do caractere, nome da entidade ou ponto de código para encontrar rapidamente a entidade HTML que você precisa."
+    "p1": "Entidades HTML são códigos especiais usados para representar caracteres reservados em HTML. Por exemplo, &lt; para <, &amp; para &, e &quot; para \". Veja a [Tabela ASCII](/ascii) para códigos de caracteres, ou [Códigos de status HTTP](/httpstatus) para referências de respostas web.",
+    "p2": "Antes de usar um dos códigos abaixo no seu site, certifique-se de que seu documento HTML usa a codificação correta para garantir que os códigos HTML e caracteres especiais sejam exibidos corretamente. Para isso, utilize o conjunto de caracteres Unicode, que deve ser definido na seção head do seu documento HTML usando uma meta tag com o atributo charset e o valor UTF-8. Basta copiar e colar a meta tag abaixo na seção head e todos os caracteres HTML serão exibidos perfeitamente.",
+    "aeoDefinition": "O Codificador de Entidades HTML é uma ferramenta online gratuita para codificar e decodificar caracteres especiais e entidades HTML. Referência completa com entidades numéricas e nomeadas. Roda inteiramente no seu navegador."
   }
 }

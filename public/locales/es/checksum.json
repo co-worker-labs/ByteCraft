@@ -3,17 +3,14 @@
   "deselect": "Deseleccionar ({count})",
   "noFileChosen": "Ningún archivo seleccionado",
   "selectedFiles": "{count} archivos seleccionados",
-  "selectedFile": "{count} archivo seleccionado",
   "checksumOutput": "Resultado del checksum",
   "algoTip": "Para archivos grandes, selecciona solo los algoritmos que necesites para reducir el tiempo de procesamiento.",
   "calculate": "Calcular",
   "descriptions": {
-    "faqTitle": "Preguntas frecuentes",
     "faq1Q": "¿Qué es un checksum de archivo?",
     "faq1A": "Un checksum es un valor hash calculado a partir del contenido de un archivo. Se usa para verificar la integridad de archivos — si cambia un solo byte, el checksum cambia completamente.",
     "faq2Q": "¿Qué algoritmos de hash están disponibles?",
     "faq2A": "MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 y CRC32. Múltiples algoritmos pueden ejecutarse simultáneamente sobre el mismo archivo.",
-    "faq3Q": "¿Hay un límite de tamaño de archivo?",
-    "faq3A": "Sin límite fijo. La herramienta procesa archivos en fragmentos usando la API File de HTML5, soportando tamaños de archivo ilimitados limitados solo por la memoria de tu dispositivo."
+    "aeoDefinition": "El Checksum de archivos es una herramienta gratuita online para calcular checksums MD5, SHA-1, SHA-256 y SHA-512 de cualquier archivo. Soporta tamaño de archivo ilimitado con procesamiento 100% del lado del cliente."
   }
 }

@@ -77,7 +77,7 @@
   "binaryRejected": "バイナリファイルが検出されました。テキストファイルをアップロードしてください",
   "fileLoaded": "ファイルを読み込みました",
   "dropActive": "ドロップして開く",
-  "loadFile": "ファイルを開く",
+  "loadFile": "読み込み",
   "download": "ダウンロード",
   "showMore": "もっと見る",
   "showLess": "閉じる",
@@ -91,5 +91,13 @@
     "sha2extra": "SHA-512はSHA-256と基本的に同じですが、32ビットではなく64ビットワードで動作します。",
     "sha3Title": "SHA-3",
     "sha3": "SHA-3は、64の設計案が評価された5年間の新しい暗号ハッシュアルゴリズム選定コンペティションの勝者です。"
-  }
+  },
+  "descriptions": {
+    "faqTitle": "よくある質問",
+    "limitationsTitle": "制限事項",
+    "useCasesTitle": "よくあるユースケース"
+  },
+  "advancedSettings": "詳細設定",
+  "invalidInput": "無効な入力",
+  "indent": "インデント"
 }

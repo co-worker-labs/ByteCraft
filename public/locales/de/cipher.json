@@ -20,12 +20,8 @@
     "rc4": "RC4 ist eine weit verbreitete Stromchiffre. Sie wird in gängigen Protokollen wie SSL und WEP verwendet. Obwohl der Algorithmus für seine Einfachheit und Geschwindigkeit bemerkenswert ist, inspiriert seine Geschichte kein Vertrauen in die Sicherheit.",
     "rc4drop": "Es wurde festgestellt, dass die ersten Bytes des Schlüsselstroms stark nicht zufällig sind und Informationen über den Schlüssel preisgeben. Sie können sich gegen diesen Angriff verteidigen, indem Sie den anfänglichen Teil des Schlüsselstroms verwerfen. Dieser modifizierte Algorithmus wird traditionell RC4-drop genannt.",
     "rc4dropConfig": "Standardmäßig werden 192 Wörter (768 Bytes) verworfen, aber Sie können den Algorithmus so konfigurieren, dass eine beliebige Anzahl von Wörtern verworfen wird.",
-    "faqTitle": "Häufig gestellte Fragen",
     "faq1Q": "Welche Verschlüsselungsalgorithmen werden unterstützt?",
     "faq1A": "AES, DES, Triple DES (3DES), Rabbit, RC4 und RC4Drop — mit CryptoJS. AES-256 wird für moderne Sicherheitsanforderungen empfohlen.",
-    "faq2Q": "Werden meine Daten während der Verschlüsselung an einen Server gesendet?",
-    "faq2A": "Nein. Die gesamte Ver- und Entschlüsselung erfolgt vollständig in Ihrem Browser mit der CryptoJS-Bibliothek. Ihre Daten und Ihr Passphrase verlassen niemals Ihr Gerät.",
-    "faq3Q": "Was ist der Unterschied zwischen AES und DES?",
-    "faq3A": "AES unterstützt 128/192/256-Bit-Schlüssel und ist der moderne Standard. DES verwendet 56-Bit-Schlüssel und gilt als unsicher. Bevorzugen Sie immer AES für neue Anwendungen."
+    "aeoDefinition": "Ver-/Entschlüsseln ist ein kostenloses Online-Tool zum Ver- und Entschlüsseln von Text mit AES, DES, Triple DES, Rabbit, RC4 und RC4Drop. Die gesamte Verarbeitung läuft in Ihrem Browser — es werden keine Daten an einen Server gesendet."
   }
 }

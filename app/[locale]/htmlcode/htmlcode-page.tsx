@@ -366,21 +366,14 @@ function PrintLetters({ list }: { list: CharacterData[] }) {
   );
 }
 
-function Description() {
+function TopDescription() {
   const t = useTranslations("htmlcode");
   const locale = useLocale();
   const tc = useTranslations("common");
   const [expanded, setExpanded] = useState(false);
 
-  const faqItems = [1, 2, 3].map((i) => ({
-    title: t(`descriptions.faq${i}Q`),
-    content: <p>{t(`descriptions.faq${i}A`)}</p>,
-  }));
   return (
-    <section id="description" className="py-3">
-      <p className="text-fg-primary text-sm leading-relaxed font-medium">
-        {t("description.aeoDefinition")}
-      </p>
+    <section className="pb-3">
       <div className="relative">
         <div
           className={`overflow-hidden transition-all duration-300 ${
@@ -388,9 +381,9 @@ function Description() {
           }`}
         >
           <p className="text-fg-secondary text-sm leading-8 indent-12">
-            {renderLinkedText(t("description.p1"), locale)}
+            {renderLinkedText(t("descriptions.p1"), locale)}
           </p>
-          <p className="text-fg-secondary text-sm leading-8 indent-12">{t("description.p2")}</p>
+          <p className="text-fg-secondary text-sm leading-8 indent-12">{t("descriptions.p2")}</p>
           <div className="mt-3">
             <pre className="inline-block border border-border-default rounded-lg py-2 px-5 bg-bg-elevated text-fg-secondary font-mono text-sm">
               &lt;meta charset=&quot;utf-8&quot; &gt;
@@ -418,11 +411,31 @@ function Description() {
           </>
         )}
       </button>
+    </section>
+  );
+}
+
+function BottomDescription() {
+  const t = useTranslations("htmlcode");
+  const tc = useTranslations("common");
+
+  const faqItems = [1, 2].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
+
+  return (
+    <section id="description" className="py-3">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="mt-8">
         <div className="flex items-center gap-2 mb-4">
           <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
           <h2 className="font-semibold text-fg-primary text-base text-pretty">
-            {t("descriptions.faqTitle")}
+            {tc("descriptions.faqTitle")}
           </h2>
         </div>
         <Accordion items={faqItems} />
@@ -448,8 +461,7 @@ export default function HtmlCodePage() {
   return (
     <Layout title={title} categoryLabel={t("categories.reference")} categorySlug="reference-lookup">
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <Description />
-        <RelatedTools currentTool="htmlcode" />
+        <TopDescription />
         <section>
           <NeonTabs
             tabs={[
@@ -507,6 +519,8 @@ export default function HtmlCodePage() {
             ]}
           />
         </section>
+        <BottomDescription />
+        <RelatedTools currentTool="htmlcode" />
       </div>
     </Layout>
   );

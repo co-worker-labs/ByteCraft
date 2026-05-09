@@ -77,7 +77,7 @@
   "binaryRejected": "Fichier binaire détecté, veuillez charger un fichier texte",
   "fileLoaded": "Fichier chargé",
   "dropActive": "Relâchez pour ouvrir",
-  "loadFile": "Ouvrir un fichier",
+  "loadFile": "Charger",
   "download": "Télécharger",
   "showMore": "Afficher plus",
   "showLess": "Afficher moins",
@@ -91,5 +91,13 @@
     "sha2extra": "SHA-512 est très similaire à SHA-256, mais opère sur des mots de 64 bits au lieu de 32.",
     "sha3Title": "SHA-3",
     "sha3": "SHA-3 est le lauréat d'une compétition de cinq ans pour sélectionner un nouvel algorithme de hachage cryptographique, où 64 propositions ont été évaluées."
-  }
+  },
+  "descriptions": {
+    "faqTitle": "Questions fréquentes",
+    "limitationsTitle": "Limites",
+    "useCasesTitle": "Cas d'utilisation courants"
+  },
+  "advancedSettings": "Paramètres avancés",
+  "invalidInput": "Entrée invalide",
+  "indent": "Indentation"
 }

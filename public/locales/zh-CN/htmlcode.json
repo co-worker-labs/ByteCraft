@@ -1,8 +1,4 @@
 {
-  "description": {
-    "p1": "HTML 实体是用于表示 HTML 中保留字符的特殊代码。例如，&lt; 表示 <，&amp; 表示 &，&quot; 表示 \"。参见 [ASCII 表](/ascii) 了解字符编码，或使用 [HTTP 状态码](/httpstatus) 了解 Web 响应参考。",
-    "p2": "在网站中使用以下代码之前，请确保你的 HTML 文档使用了正确的编码，以保证 HTML 代码和 HTML 特殊字符能够正确显示。要确保 HTML 使用正确的编码，应使用 Unicode 字符集。该 Unicode 字符集必须在 HTML 文档的 head 部分设置。具体做法是使用带有 charset 属性且值为 UTF-8 的 meta 标签。只需将以下 meta 标签复制粘贴到你的 head 部分，所有 HTML 字符就能完美显示。"
-  },
   "tabs": {
     "letters": "字母",
     "punctuation": "标点符号",
@@ -36,13 +32,12 @@
   },
   "searchPlaceholder": "按字符、编码或描述搜索...",
   "descriptions": {
-    "faqTitle": "常见问题",
+    "p1": "HTML 实体是用于表示 HTML 中保留字符的特殊代码。例如，&lt; 表示 <，&amp; 表示 &，&quot; 表示 \"。参见 [ASCII 表](/ascii) 了解字符编码，或参见 [HTTP 状态码](/httpstatus) 了解 Web 响应参考。",
+    "p2": "在网页中使用以下代码之前，请确保 HTML 文档使用了正确的编码，以保证 HTML 代码和特殊字符能正确显示。为确保编码正确，应使用 Unicode 字符集，并在 HTML 文档的 \u003chead> 部分通过带有 charset 属性且值为 UTF-8 的 meta 标签来声明。只需将以下 meta 标签复制到 \u003chead> 部分，所有 HTML 字符就能完美显示。",
     "faq1Q": "什么是 HTML 字符实体？",
     "faq1A": "HTML 实体是特殊代码（如 &amp; 代表 &），用于表示在 HTML 中有特殊含义或无法直接输入的字符。",
     "faq2Q": "收录了多少实体？",
     "faq2A": "工具提供完整的 HTML 特殊字符参考，包括命名实体（&amp;）、十进制（&#38;）和十六进制（&#x26;）代码。",
-    "faq3Q": "可以搜索特定字符吗？",
-    "faq3A": "可以。按字符名称、实体名称或代码点搜索，快速找到你需要的 HTML 实体。",
     "aeoDefinition": "HTML 实体编码器是一个免费的在线 HTML 特殊字符和实体编码解码工具。包含完整的数字和命名实体参考。完全在浏览器中运行。"
   }
 }

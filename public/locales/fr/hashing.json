@@ -4,12 +4,10 @@
   "descriptions": {
     "hmacTitle": "HMAC",
     "hmac": "HMAC (Hash-based Message Authentication Code) est un mécanisme d'authentification de messages utilisant des fonctions de hachage cryptographiques.",
-    "faqTitle": "Questions fréquentes",
     "faq1Q": "Qu'est-ce que le hachage cryptographique ?",
     "faq1A": "Le hachage cryptographique convertit des données d'entrée en une empreinte de taille fixe (hash). La même entrée produit toujours le même hash, mais un petit changement modifie complètement la sortie.",
     "faq2Q": "Quels algorithmes de hachage sont pris en charge ?",
     "faq2A": "Cet outil prend en charge MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3-224/256/384/512, Keccak-224/256/384/512 et RIPEMD-160. Les variantes HMAC sont également disponibles.",
-    "faq3Q": "Le hachage est-il identique au chiffrement ?",
-    "faq3A": "Non. Le hachage est à sens unique — vous ne pouvez pas inverser un hash vers l'entrée originale. Le chiffrement est bidirectionnel. Le hachage est utilisé pour la vérification, pas pour la confidentialité."
+    "aeoDefinition": "Le Générateur de hachages est un outil gratuit en ligne pour générer des hachages MD5, SHA-1, SHA-256, SHA-512, SHA3, Keccak et RIPEMD-160. Prend en charge HMAC et le hachage de fichiers. Aucune donnée n'est envoyée à un serveur."
   }
 }

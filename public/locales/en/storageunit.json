@@ -3,7 +3,6 @@
   "decimal": "Decimal",
   "binary": "Binary",
   "bit": "Bit",
-  "conversionOutput": "Conversion Output",
   "measurement": "Measurement",
   "conversionCol": "Conversion",
   "commonConversionTable": "Common Conversion Table",
@@ -12,12 +11,9 @@
     "aeoDefinition": "Storage Unit Converter is a free online tool for converting between bytes, KB, MB, GB, TB, and PB. Supports both SI (decimal) and IEC (binary) standards. Runs entirely in your browser.",
     "whatIsP1": "The Storage Unit Converter lets you instantly convert between digital storage units — bytes, KB, MB, GB, TB, PB — supporting both decimal (SI) and binary (IEC) standards. See also [Number Base converter](/numbase) for binary/hex conversions, or [File Checksum](/checksum) to verify file sizes.",
     "whatIsP2": "Whether you're comparing file sizes, provisioning disk space, or understanding data transfer limits, this tool gives you accurate conversions at a glance.",
-    "faqTitle": "Frequently Asked Questions",
-    "faq1Q": "What storage units can I convert?",
-    "faq1A": "Bits, Bytes, KB, MB, GB, TB, and PB. The tool supports both decimal (1 KB = 1000 bytes) and binary (1 KiB = 1024 bytes) standards.",
-    "faq2Q": "Why are there two conversion standards?",
-    "faq2A": "Decimal (SI) uses powers of 1000 and is used by storage manufacturers. Binary (IEC) uses powers of 1024 and is what operating systems typically report.",
-    "faq3Q": "What is the difference between KB and KiB?",
-    "faq3A": "KB (kilobyte) = 1000 bytes. KiB (kibibyte) = 1024 bytes. The IEC introduced KiB/MiB/GiB to disambiguate, but KB/MB/GB are still commonly used for both."
+    "faq1Q": "Why are there two conversion standards?",
+    "faq1A": "Decimal (SI) uses powers of 1000 and is used by storage manufacturers. Binary (IEC) uses powers of 1024 and is what operating systems typically report.",
+    "faq2Q": "What is the difference between KB and KiB?",
+    "faq2A": "KB (kilobyte) = 1000 bytes. KiB (kibibyte) = 1024 bytes. The IEC introduced KiB/MiB/GiB to disambiguate, but KB/MB/GB are still commonly used for both."
   }
 }

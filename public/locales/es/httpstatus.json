@@ -1,7 +1,4 @@
 {
-  "description": {
-    "text": "Referencia completa de códigos de estado HTTP que cubre todos los códigos oficiales de IANA desde el RFC 9110 y especificaciones relacionadas, incluyendo WebDAV (RFC 4918), códigos de estado HTTP adicionales (RFC 6585), 308 Permanent Redirect (RFC 7538), 451 Unavailable For Legal Reasons (RFC 7725) y Early Hints (RFC 8297). También incluye extensiones no oficiales de Nginx, Cloudflare e IIS. Cada código muestra su descripción, referencia RFC, y los códigos más usados incluyen escenarios de uso y causas comunes para facilitar la resolución de problemas."
-  },
   "tip": "Pasa el cursor sobre cualquier fila en escritorio o toca en móvil para ver detalles de uso y causas comunes.",
   "searchPlaceholder": "Buscar por código, nombre o descripción...",
   "noResults": "No se encontraron resultados",
@@ -451,12 +448,11 @@
     }
   },
   "descriptions": {
-    "faqTitle": "Preguntas frecuentes",
+    "text": "Una referencia completa de códigos de estado HTTP con descripciones, categorías y enlaces a especificaciones RFC. Cubre todos los códigos registrados por IANA más códigos no oficiales comunes. Prueba APIs con el [Cliente HTTP](/httpclient), o codifica URLs con el [Codificador de URL](/urlencoder).",
+    "aeoDefinition": "Los Códigos de estado HTTP son una referencia gratuita online de todos los códigos de estado HTTP con descripciones, categorías y enlaces RFC. Cubre códigos oficiales de IANA y códigos no oficiales comunes.",
     "faq1Q": "¿Qué son los códigos de estado HTTP?",
     "faq1A": "Los códigos de estado HTTP son números de 3 dígitos devueltos por un servidor en respuesta a una petición del cliente. Indican si la petición fue exitosa, redirigida o encontró un error.",
     "faq2Q": "¿Cuántos códigos de estado están documentados?",
-    "faq2A": "La herramienta cubre todos los códigos de estado estándar en 5 categorías: 1xx (Informativo), 2xx (Éxito), 3xx (Redirección), 4xx (Error del cliente) y 5xx (Error del servidor).",
-    "faq3Q": "¿Puedo buscar códigos específicos?",
-    "faq3A": "Sí. Busca por número de código, frase o categoría para encontrar rápidamente el código de estado que necesitas."
+    "faq2A": "La herramienta cubre todos los códigos de estado estándar en 5 categorías: 1xx (Informativo), 2xx (Éxito), 3xx (Redirección), 4xx (Error del cliente) y 5xx (Error del servidor)."
   }
 }

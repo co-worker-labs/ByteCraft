@@ -1,7 +1,4 @@
 {
-  "description": {
-    "text": "A complete reference of HTTP status codes with descriptions, categories, and RFC specification links. Covers all IANA-registered codes plus common unofficial codes. Test APIs with the [HTTP Client](/httpclient), or encode URLs with the [URL Encoder](/urlencoder)."
-  },
   "tip": "Hover over any row on desktop or tap on mobile to see usage details and common causes.",
   "searchPlaceholder": "Search by code, name, or description...",
   "noResults": "No results found",
@@ -451,13 +448,11 @@
     }
   },
   "descriptions": {
+    "text": "A complete reference of HTTP status codes with descriptions, categories, and RFC specification links. Covers all IANA-registered codes plus common unofficial codes. Test APIs with the [HTTP Client](/httpclient), or encode URLs with the [URL Encoder](/urlencoder).",
     "aeoDefinition": "HTTP Status Codes is a free online reference for all HTTP status codes with descriptions, categories, and RFC links. Covers official IANA codes and common unofficial codes.",
-    "faqTitle": "Frequently Asked Questions",
-    "faq1Q": "What are HTTP status codes?",
-    "faq1A": "HTTP status codes are 3-digit numbers returned by a server in response to a client request. They indicate whether the request was successful, redirected, or encountered an error.",
-    "faq2Q": "How many status codes are documented?",
-    "faq2A": "The tool covers all standard status codes across 5 categories: 1xx (Informational), 2xx (Success), 3xx (Redirection), 4xx (Client Error), and 5xx (Server Error).",
-    "faq3Q": "Can I search for specific codes?",
-    "faq3A": "Yes. Search by code number, phrase, or category to quickly find the status code you need."
+    "faq1Q": "How many status codes are documented?",
+    "faq1A": "The tool covers all standard status codes across 5 categories: 1xx (Informational), 2xx (Success), 3xx (Redirection), 4xx (Client Error), and 5xx (Server Error).",
+    "faq2Q": "Can I search for specific codes?",
+    "faq2A": "Yes. Search by code number, phrase, or category to quickly find the status code you need."
   }
 }

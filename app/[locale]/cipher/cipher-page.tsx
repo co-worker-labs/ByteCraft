@@ -448,15 +448,13 @@ function Conversion() {
 function Description() {
   const t = useTranslations("cipher");
 
-  const faqItems = [1, 2, 3].map((i) => ({
-    title: t(`descriptions.faq${i}Q`),
-    content: <p>{t(`descriptions.faq${i}A`)}</p>,
-  }));
   return (
     <section id="description" className="mt-8">
-      <p className="text-fg-primary text-sm leading-relaxed font-medium">
-        {t("descriptions.aeoDefinition")}
-      </p>
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.aesTitle")}</h2>
         <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{t("descriptions.aes")}</p>
@@ -482,14 +480,9 @@ function Description() {
           {t("descriptions.rc4dropConfig")}
         </p>
       </div>
-      <div className="mt-8">
-        <div className="flex items-center gap-2 mb-4">
-          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
-          <h2 className="font-semibold text-fg-primary text-base text-pretty">
-            {t("descriptions.faqTitle")}
-          </h2>
-        </div>
-        <Accordion items={faqItems} />
+      <div className="mb-4">
+        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.faq1Q")}</h2>
+        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{t("descriptions.faq1A")}</p>
       </div>
     </section>
   );

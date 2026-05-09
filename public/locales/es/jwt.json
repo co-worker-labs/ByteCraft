@@ -43,12 +43,8 @@
     "algorithms": "HMAC (HS256/384/512), RSA (RS256/384/512), RSA-PSS (PS256/384/512) y ECDSA (ES256/384/512. El algoritmo sin firmar `alg=none` se rechaza por seguridad.",
     "keyFormatsTitle": "Formatos de clave aceptados",
     "keyFormats": "HMAC: cualquier cadena UTF-8. Asimétrico: solo PEM, PKCS8 (-----BEGIN PRIVATE KEY-----) para firmar, SPKI (-----BEGIN PUBLIC KEY-----) para verificar. PKCS1, SEC1, PEM cifrado y certificados X.509 no se aceptan; la herramienta te indicará el comando openssl exacto para convertirlos.",
-    "faqTitle": "Preguntas frecuentes",
     "faq1Q": "¿Qué es un JWT?",
     "faq1A": "JSON Web Token (JWT) es un estándar abierto (RFC 7519) para transmitir información de forma segura entre partes como un objeto JSON. Se usa comúnmente para autenticación e intercambio de información.",
-    "faq2Q": "¿Son seguros los JWT para datos sensibles?",
-    "faq2A": "Los payloads de JWT están codificados en Base64Url, no cifrados — cualquiera puede leerlos. Nunca almacenes datos sensibles en un JWT a menos que uses JWE (JSON Web Encryption). Esta herramienta se ejecuta completamente en tu navegador.",
-    "faq3Q": "¿Qué algoritmos JWT son compatibles?",
-    "faq3A": "Esta herramienta soporta HS256/384/512 (HMAC), RS256/384/512 (RSA), ES256/384/512 (ECDSA) y PS256/384/512 (RSA-PSS) para firma y verificación."
+    "aeoDefinition": "El Depurador de JWT es una herramienta gratuita online para codificar, decodificar y verificar JSON Web Tokens. Soporta HS256, RS256, ES256 y más algoritmos. Todo el procesamiento se ejecuta en tu navegador — no se envían tokens a ningún servidor."
   }
 }

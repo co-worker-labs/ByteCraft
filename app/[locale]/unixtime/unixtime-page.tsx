@@ -640,41 +640,40 @@ function DateToTimestamp() {
 }
 
 function Description() {
-  const t = useTranslations("unixtime.description");
+  const t = useTranslations("unixtime");
+  const tc = useTranslations("common");
+
   const items: {
-    titleKey: "whatIsTitle" | "secMsTitle" | "y2k38Title" | "tzTitle";
-    bodyKey: "whatIs" | "secMs" | "y2k38" | "tz";
+    titleKey:
+      | "descriptions.whatIsTitle"
+      | "descriptions.secMsTitle"
+      | "descriptions.y2k38Title"
+      | "descriptions.tzTitle";
+    bodyKey:
+      | "descriptions.whatIs"
+      | "descriptions.secMs"
+      | "descriptions.y2k38"
+      | "descriptions.tz";
   }[] = [
-    { titleKey: "whatIsTitle", bodyKey: "whatIs" },
-    { titleKey: "secMsTitle", bodyKey: "secMs" },
-    { titleKey: "y2k38Title", bodyKey: "y2k38" },
-    { titleKey: "tzTitle", bodyKey: "tz" },
+    { titleKey: "descriptions.whatIsTitle", bodyKey: "descriptions.whatIs" },
+    { titleKey: "descriptions.secMsTitle", bodyKey: "descriptions.secMs" },
+    { titleKey: "descriptions.y2k38Title", bodyKey: "descriptions.y2k38" },
+    { titleKey: "descriptions.tzTitle", bodyKey: "descriptions.tz" },
   ];
 
-  const faqItems = [1, 2, 3].map((i) => ({
-    title: t(`descriptions.faq${i}Q`),
-    content: <p>{t(`descriptions.faq${i}A`)}</p>,
-  }));
   return (
     <section className="rounded-lg border border-border-default bg-bg-surface p-5 space-y-3">
-      <p className="text-fg-primary text-sm leading-relaxed font-medium">
-        {t("descriptions.aeoDefinition")}
-      </p>
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       {items.map(({ titleKey, bodyKey }) => (
         <div key={titleKey}>
           <h3 className="font-mono text-sm font-semibold text-accent-cyan mb-1">{t(titleKey)}</h3>
           <p className="text-sm text-fg-secondary leading-relaxed">{t(bodyKey)}</p>
         </div>
       ))}
-      <div className="mt-8">
-        <div className="flex items-center gap-2 mb-4">
-          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
-          <h2 className="font-semibold text-fg-primary text-base text-pretty">
-            {t("descriptions.faqTitle")}
-          </h2>
-        </div>
-        <Accordion items={faqItems} />
-      </div>
     </section>
   );
 }

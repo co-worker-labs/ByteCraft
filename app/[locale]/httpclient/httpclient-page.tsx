@@ -820,15 +820,17 @@ function DescriptionIntro() {
 
   return (
     <section className="py-3">
-      <p className="text-fg-primary text-sm leading-relaxed font-medium">
-        {t("description.aeoDefinition")}
-      </p>
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="relative">
         <div
           className={`overflow-hidden transition-all duration-300 ${expanded ? "max-h-[300px]" : "max-h-20"}`}
         >
           <p className="text-fg-secondary text-sm leading-8 indent-12">
-            {renderLinkedText(t("description.text"), locale)}
+            {renderLinkedText(t("descriptions.text"), locale)}
           </p>
         </div>
         {!expanded && (
@@ -858,6 +860,7 @@ function DescriptionIntro() {
 
 function DescriptionDetails() {
   const t = useTranslations("httpclient");
+  const tc = useTranslations("common");
   const locale = useLocale();
 
   const faqItems = [1, 2, 3].map((i) => ({
@@ -868,31 +871,31 @@ function DescriptionDetails() {
     <section className="py-3">
       <div className="mt-4">
         <h3 className="text-sm font-semibold text-fg-primary mb-2">
-          {t("description.features.title")}
+          {t("descriptions.features.title")}
         </h3>
         <ul className="space-y-1 text-sm text-fg-secondary">
-          <li>• {t("description.features.methods")}</li>
-          <li>• {t("description.features.auth")}</li>
-          <li>• {t("description.features.body")}</li>
-          <li>• {t("description.features.response")}</li>
-          <li>• {t("description.features.history")}</li>
-          <li>• {t("description.features.proxy")}</li>
+          <li>• {t("descriptions.features.methods")}</li>
+          <li>• {t("descriptions.features.auth")}</li>
+          <li>• {t("descriptions.features.body")}</li>
+          <li>• {t("descriptions.features.response")}</li>
+          <li>• {t("descriptions.features.history")}</li>
+          <li>• {t("descriptions.features.proxy")}</li>
         </ul>
       </div>
 
       <div className="mt-4">
         <h3 className="text-sm font-semibold text-fg-primary mb-2">
-          {t("description.cors.title")}
+          {t("descriptions.cors.title")}
         </h3>
         <p className="text-sm text-fg-secondary leading-7">
-          {renderLinkedText(t("description.cors.text"), locale)}
+          {renderLinkedText(t("descriptions.cors.text"), locale)}
         </p>
       </div>
       <div className="mt-8">
         <div className="flex items-center gap-2 mb-4">
           <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
           <h2 className="font-semibold text-fg-primary text-base text-pretty">
-            {t("descriptions.faqTitle")}
+            {tc("descriptions.faqTitle")}
           </h2>
         </div>
         <Accordion items={faqItems} />

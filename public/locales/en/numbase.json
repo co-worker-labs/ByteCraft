@@ -1,15 +1,10 @@
 {
-  "tabConverter": "Converter",
-  "tabReference": "Reference",
   "bitWidth": "Bit Width",
   "decimal": "Decimal",
   "hexadecimal": "Hexadecimal",
   "octal": "Octal",
   "binary": "Binary",
   "asciiChar": "ASCII",
-  "unicodePoint": "Unicode",
-  "invalidInput": "Invalid input",
-  "overflowWarning": "Value exceeds bit width",
   "referenceTitle": "Base Reference (0-15)",
   "refDec": "DEC",
   "refHex": "HEX",
@@ -21,12 +16,7 @@
     "whatIs": "This tool converts numbers between binary (base 2), octal (base 8), decimal (base 10), and hexadecimal (base 16) in real time. It also supports 8/16/32/64-bit two's complement representation with a visual bit editor. Related: [Color converter](/color) for hex color codes, [Storage unit converter](/storageunit) for byte calculations.",
     "twosComplementTitle": "Two's Complement",
     "twosComplement": "Two's complement is the standard way to represent signed integers in binary. The most significant bit (MSB) acts as the sign bit: 0 for positive, 1 for negative. To get the negative value, invert all bits and add 1. For example, in 8-bit mode, -1 is represented as 11111111 (0xFF).",
-    "faqTitle": "Frequently Asked Questions",
-    "faq1Q": "What number bases are supported?",
-    "faq1A": "Binary (base 2), Octal (base 8), Decimal (base 10), and Hexadecimal (base 16) with real-time conversion across all four.",
-    "faq2Q": "Can I edit individual bits?",
-    "faq2A": "Yes. The bit editor shows the binary representation and lets you toggle individual bits, instantly updating all other base conversions.",
-    "faq3Q": "Does it support two's complement?",
-    "faq3A": "Yes. The tool can display signed integers in two's complement representation for 8-bit, 16-bit, 32-bit, and 64-bit word sizes."
+    "faq1Q": "Can I edit individual bits?",
+    "faq1A": "Yes. The bit editor shows the binary representation and lets you toggle individual bits, instantly updating all other base conversions."
   }
 }

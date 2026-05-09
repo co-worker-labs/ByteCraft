@@ -4,7 +4,6 @@
   "inputPlaceholder": "在此粘贴或输入 JSON",
   "format": "格式化",
   "compress": "压缩",
-  "indent": "缩进",
   "useTab": "使用制表符",
   "sortKeys": "键排序",
   "json5": "JSON5",
@@ -14,7 +13,6 @@
   "relaxedParse": "已使用 JSON5 宽松解析",
   "filled": "已填入输入",
   "invalid": "无效 JSON",
-  "dropActive": "松手即可打开",
   "dropZone": "将 JSON 文件拖放到此处",
   "descriptions": {
     "whatIsTitle": "什么是 JSON 格式化？",
@@ -24,22 +22,17 @@
     "json5Title": "什么是 JSON5？",
     "json5P1": "JSON5 是 JSON 的超集，增加了人性化特性：注释（// 和 /* */）、尾随逗号、单引号字符串、无引号键名、十六进制数字（0xFF）以及 NaN 和 Infinity 等特殊值。它的设计目标是让手工编写 JSON 更加容易——尤其适合配置文件。",
     "json5P2": "开启 JSON5 模式后直接解析宽松输入。当 JSON5 关闭时，如果严格 JSON 解析失败，格式化和压缩会自动降级使用 JSON5 解析——你会看到相应提示。输出始终为标准 JSON。",
-    "useCasesTitle": "常见使用场景",
     "useCasesP1": "格式化 API 响应：粘贴原始 API 响应并美化输出，理解数据结构。",
     "useCasesP2": "压缩配置文件：部署到生产前压缩 JSON 以减小文件大小。使用 [文本对比](/diff) 验证压缩后的输出与原始内容一致。",
     "useCasesP3": "修复手动编辑的 JSON：粘贴带尾随逗号或注释的 JSON，开启 JSON5 模式，获取干净的标准 JSON 输出。",
     "useCasesP4": "对键排序：按字母顺序排序键名，在版本控制 JSON 文件时获得一致的差异输出。",
-    "limitationsTitle": "局限性",
     "limitationsP1": "非常大的 JSON 文件（>10MB）可能导致浏览器短暂停顿。",
     "limitationsP2": "超出 JavaScript 安全整数范围（±2⁵³）的数字在经过 JSON.parse/stringify 往返后可能丢失精度。",
     "limitationsP3": "JSON5 错误消息可能不包含精确的行号和列号。",
-    "faqTitle": "常见问题",
     "faq1Q": "什么是 JSON 格式化？",
     "faq1A": "JSON 格式化将原始或压缩的 JSON 转换为可读的缩进结构。此工具支持可配置缩进（2、4、8 个空格或制表符）、压缩和验证，包括 JSON5 语法。",
     "faq2Q": "我的 JSON 数据会发送到服务器吗？",
     "faq2A": "不会。所有 JSON 格式化、验证和压缩都在浏览器中完成，数据不会离开你的设备。",
-    "faq3Q": "JSON 和 JSON5 有什么区别？",
-    "faq3A": "JSON5 是 JSON 的超集，支持注释、尾随逗号、无引号键名和更宽松的语法。此工具可以解析和格式化标准 JSON 和 JSON5。",
     "aeoDefinition": "JSON 格式化工具是一个免费的在线 JSON 处理器，可以在浏览器中即时格式化、验证和压缩 JSON 数据。支持 JSON5、可配置缩进和键排序。所有操作均在本地完成，不会上传任何数据。"
   }
 }

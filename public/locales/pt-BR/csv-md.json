@@ -1,20 +1,13 @@
 {
   "csvPlaceholder": "Cole ou digite CSV aqui...",
   "mdPlaceholder": "Cole ou digite a tabela Markdown aqui...",
-  "loadFile": "Carregar",
-  "download": "Baixar",
   "csvToMd": "CSV → MD",
   "mdToCsv": "CSV ← MD",
   "dropZoneCsv": "Solte arquivo .csv, .tsv ou .txt",
   "dropZoneMd": "Solte arquivo .md ou .txt",
-  "convertedToMd": "Convertido para Markdown",
-  "convertedToCsv": "Convertido para CSV",
-  "invalidInput": "Entrada inválida",
   "preview": "Prévia CSV",
   "showingRows": "Exibindo {shown} de {total} linhas",
   "rows": "{count} linhas",
-  "noData": "Sem dados",
-  "advancedSettings": "Configurações avançadas",
   "delimiter": "Delimitador",
   "delimiterComma": "Vírgula",
   "delimiterTab": "Tab",
@@ -33,16 +26,14 @@
   "descriptions": {
     "whatIsTitle": "CSV ↔ Tabela Markdown",
     "whatIsP1": "Converta entre formatos CSV (Comma-Separated Values) e tabela Markdown. CSV é o padrão para troca de dados em planilhas, enquanto tabelas Markdown são comumente usadas em documentação, arquivos README e issues no GitHub.",
-    "useCasesTitle": "Casos de uso",
     "useCasesP1": "Converter dados de planilha para Markdown em documentação, colar CSV de resposta de API em issues do GitHub, gerar tabelas Markdown a partir de exportações CSV e converter tabelas Markdown de volta para CSV para análise em planilha.",
-    "limitationsTitle": "Limitações",
     "limitationsP1": "Formatação Markdown complexa (links, imagens, código inline) em células é preservada como texto puro. Células com múltiplas linhas não são suportadas. A ferramenta lida apenas com dados tabulares simples.",
-    "faqTitle": "Perguntas frequentes",
     "faq1Q": "O que é o conversor CSV para Tabela Markdown?",
     "faq1A": "Uma ferramenta especializada que converte dados CSV em tabelas Markdown formatadas com opções de alinhamento, linhas de cabeçalho e saída limpa delimitada por pipes.",
     "faq2Q": "Posso personalizar o alinhamento de colunas?",
     "faq2A": "Sim. Escolha alinhamento esquerdo, centro ou direito por coluna. A ferramenta gera a sintaxe de alinhamento Markdown correta.",
     "faq3Q": "Suporta arquivos CSV grandes?",
-    "faq3A": "O processamento acontece inteiramente no seu navegador. Arquivos de até vários MB funcionam bem, limitados apenas pela memória do seu dispositivo."
+    "faq3A": "O processamento acontece inteiramente no seu navegador. Arquivos de até vários MB funcionam bem, limitados apenas pela memória do seu dispositivo.",
+    "aeoDefinition": "O Conversor de CSV ↔ Tabela Markdown é uma ferramenta online gratuita para converter entre formatos CSV e tabela Markdown. Conversão bidirecional em tempo real. Roda inteiramente no seu navegador."
   }
 }

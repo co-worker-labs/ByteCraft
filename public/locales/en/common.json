@@ -27,13 +27,13 @@
     "backHome": "Back to Home"
   },
   "alert": {
-    "notTransferred": "No data sent to servers — All processing happens in your browser",
-    "filesNotTransferred": "Your files stay local — All processing happens in your browser",
-    "checksumInfo": "This is html5 file online checksum, which supports an unlimited number of files and unlimited file size.",
+    "notTransferred": "All processing happens locally in your browser — nothing is sent to any server",
+    "filesNotTransferred": "Your files never leave your device — all processing is done locally",
+    "checksumInfo": "Calculate file checksums using the HTML5 File API — supports unlimited files with no size limit.",
     "invalidCipher": "Invalid ciphertext, passphrase or settings"
   },
   "comingSoon": "Coming Soon",
-  "goto": "Goto",
+  "goto": "Go to",
   "clear": "Clear",
   "reset": "Reset",
   "clearAll": "Clear All",
@@ -77,10 +77,17 @@
   "binaryRejected": "Binary file detected, please upload a text file",
   "fileLoaded": "File loaded",
   "dropActive": "Release to open",
-  "loadFile": "Open file",
+  "advancedSettings": "Advanced Settings",
+  "invalidInput": "Invalid input",
+  "loadFile": "Load",
   "download": "Download",
   "showMore": "Show more",
   "showLess": "Show less",
+  "descriptions": {
+    "faqTitle": "Frequently Asked Questions",
+    "limitationsTitle": "Limitations",
+    "useCasesTitle": "Common Use Cases"
+  },
   "algorithms": {
     "md5Title": "MD5",
     "md5": "MD5 is a widely used hash function. It's been used in a variety of security applications and is also commonly used to check the integrity of files. Though, MD5 is not collision resistant, and it isn't suitable for applications like SSL certificates or digital signatures that rely on this property.",
@@ -91,5 +98,6 @@
     "sha2extra": "SHA-512 is largely identical to SHA-256 but operates on 64-bit words rather than 32.",
     "sha3Title": "SHA-3",
     "sha3": "SHA-3 is the winner of a five-year competition to select a new cryptographic hash algorithm where 64 competing designs were evaluated."
-  }
+  },
+  "indent": "Indent"
 }

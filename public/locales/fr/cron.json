@@ -9,8 +9,10 @@
     "generate": "Générer",
     "parse": "Analyser"
   },
+  "parse": {
+    "placeholder": "ex. */5 * * * *"
+  },
   "timezone": {
-    "label": "Fuseau horaire",
     "local": "Local",
     "utc": "UTC"
   },
@@ -49,15 +51,6 @@
     "Nov",
     "Déc"
   ],
-  "weekdayShort": [
-    "Dim",
-    "Lun",
-    "Mar",
-    "Mer",
-    "Jeu",
-    "Ven",
-    "Sam"
-  ],
   "weekdayLong": [
     "Dimanche",
     "Lundi",
@@ -88,11 +81,8 @@
     "atTime": "À {time}",
     "everyN": "Toutes les {n} minutes",
     "lastDow": "le dernier {weekday} du mois",
-    "fromTo": "de {from} à {to}",
     "onDays": "le {days}",
     "throughDays": "du {from} au {to}",
-    "andList": "{prefix} et {item}",
-    "ofEveryMonth": "de chaque mois",
     "lastDayOfMonth": "le dernier jour du mois",
     "nthWeekday": "le {ordinal} {weekday} du mois",
     "nearestWeekdayTo": "le jour de semaine le plus proche du jour {day}",
@@ -107,7 +97,6 @@
     "5": "cinquième"
   },
   "output": {
-    "expression": "Expression",
     "description": "Description",
     "nextExecutions": "5 prochaines exécutions",
     "header": {
@@ -120,14 +109,6 @@
       "now": "maintenant",
       "past": "passé"
     }
-  },
-  "share": {
-    "button": "Partager le lien",
-    "copied": "Lien de partage copié"
-  },
-  "parse": {
-    "placeholder": "Collez ou saisissez une expression Cron",
-    "showingPrevious": "Affichage du dernier résultat valide"
   },
   "warn": {
     "neverTriggers": "Cette expression ne se déclenchera jamais",
@@ -156,30 +137,22 @@
   "descriptions": {
     "whatIsTitle": "Qu'est-ce qu'une expression Cron ?",
     "whatIs": "Une expression Cron est une chaîne de champs qui décrit une planification. Chaque champ contrôle une unité de temps (minute, heure, jour, mois, jour de semaine). Issue à l'origine du cron d'Unix, la syntaxe a été étendue par Spring (ajoute les secondes) et Quartz (ajoute les secondes et l'année, plus les caractères spéciaux L, W, #).",
-    "fieldRefTitle": "Référence des champs",
-    "specialCharsTitle": "Caractères spéciaux",
-    "modesTitle": "Modes",
     "dstTitle": "Heure d'été / heure d'hiver",
     "dst": "Quand le fuseau horaire actif observe l'heure d'été, les planifications dans le créneau de passage à l'heure d'été se déclenchent à la prochaine heure valide, et les planifications dans le créneau de retour à l'heure d'hiver se déclenchent à la première occurrence. Passez en UTC pour éviter l'heure d'été.",
-    "faqTitle": "Questions fréquentes",
     "faq1Q": "Qu'est-ce qu'une expression Cron ?",
     "faq1A": "Une expression Cron est une chaîne de 5 à 7 champs qui définit un planning pour des tâches récurrentes. Elle est utilisée par les démons cron, les planificateurs de tâches et les frameworks comme Spring et Quartz.",
     "faq2Q": "Quels dialectes Cron sont pris en charge ?",
     "faq2A": "Trois : Standard (5 champs), Spring (6 champs avec secondes) et Quartz (7 champs avec secondes et année). L'outil détecte automatiquement le dialecte et affiche les prochaines exécutions.",
-    "faq3Q": "Quelle est la précision des prédictions de prochaine exécution ?",
-    "faq3A": "Les prédictions sont calculées côté client et correspondent au comportement standard de cron. L'outil affiche les 5 prochaines exécutions planifiées pour votre expression."
+    "aeoDefinition": "Le Générateur d'expressions Cron est un outil gratuit en ligne pour construire et décoder des expressions Cron. Prend en charge les modes Standard, Spring et Quartz avec explications lisibles et aperçu des prochaines exécutions. Aucune donnée ne quitte votre navigateur."
   },
   "editor": {
     "title": "Modifier le champ",
     "preview": "Aperçu",
-    "apply": "Appliquer",
     "specificValue": "Valeur",
     "rangeFrom": "De",
     "rangeTo": "À",
     "stepStart": "Début",
     "stepInterval": "Intervalle",
-    "stepEvery": "Tous les",
-    "listSelect": "Sélectionner les valeurs",
     "specialKind": "Type"
   },
   "presetSection": "Préréglages rapides"

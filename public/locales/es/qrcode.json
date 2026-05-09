@@ -1,20 +1,4 @@
 {
-  "shortTitle": "Generador de QR",
-  "title": "Generador de QR - Herramienta gratuita en línea",
-  "description": {
-    "title": "Sobre los códigos QR",
-    "intro": "Los códigos QR codifican texto en una matriz 2D que las cámaras de los teléfonos pueden decodificar. Una mayor corrección de errores los hace legibles incluso cuando están parcialmente oscurecidos (por un logo, suciedad o daño).",
-    "ecTitle": "Niveles de corrección de errores",
-    "ecL": "L: recupera ~7% de daño. El más pequeño, sin logo.",
-    "ecM": "M: recupera ~15%. Adecuado para impresiones limpias.",
-    "ecQ": "Q: recupera ~25%. Predeterminado; robusto y soporta logos pequeños.",
-    "ecH": "H: recupera ~30%. Requerido para logos de tamaño considerable.",
-    "tipsTitle": "Consejos",
-    "tipMargin": "Siempre mantén un margen (zona tranquila) de al menos 4 módulos. Los escáneres lo necesitan para detectar el código.",
-    "tipContrast": "El alto contraste entre primer plano y fondo es esencial. Evita pares de bajo contraste.",
-    "tipLogo": "Si insertas un logo, usa corrección de errores H y mantén el tamaño del logo ≤ 30% del QR.",
-    "tipTest": "Siempre prueba el QR generado con la cámara real de un teléfono antes de imprimir o compartir ampliamente."
-  },
   "contentTypes": {
     "text": "Texto / URL",
     "wifi": "WiFi",
@@ -87,18 +71,24 @@
     "logoTooLarge": "El archivo del logo debe ser menor a 2MB",
     "logoNotImage": "Sube una imagen PNG, JPG, SVG o WebP",
     "ecBumpedForLogo": "Corrección de errores elevada a H para escaneo fiable con logo",
-    "ecLowWithLogo": "Corrección de errores baja con un logo puede impedir el escaneo",
     "generateFailed": "Error al generar el código QR",
     "libraryLoadFailed": "Error al cargar el generador de QR. Por favor recarga la página."
   },
-  "localGenerated": "Generado completamente en tu navegador. Tus datos nunca salen de tu dispositivo.",
   "descriptions": {
-    "faqTitle": "Preguntas frecuentes",
+    "title": "Sobre los códigos QR",
+    "intro": "Los códigos QR codifican texto en una matriz 2D que las cámaras de los smartphones pueden decodificar. Una corrección de errores más alta los hace legibles incluso cuando están parcialmente ocultos (por un logo, suciedad o daño).",
+    "ecTitle": "Niveles de corrección de errores",
+    "ecL": "L — recupera ~7% de daño. El más pequeño, sin logo.",
+    "ecM": "M — recupera ~15%. Adecuado para impresiones limpias.",
+    "ecQ": "Q — recupera ~25%. Por defecto; robusto y soporta logos pequeños.",
+    "ecH": "H — recupera ~30%. Requerido para logos grandes.",
+    "tipsTitle": "Consejos",
+    "tipMargin": "Siempre mantén un margen (zona tranquila) de al menos 4 módulos — los escáneres lo necesitan para detectar el código.",
+    "tipContrast": "El alto contraste entre primer plano y fondo es esencial. Evita pares de bajo contraste.",
+    "tipLogo": "Si insertas un logo, usa corrección de errores H y mantén el tamaño del logo ≤ 30% del QR.",
+    "tipTest": "Siempre prueba el QR generado con la cámara real de un teléfono antes de imprimir o compartir ampliamente.",
+    "aeoDefinition": "El Generador de códigos QR es una herramienta gratuita online para crear códigos QR para texto, URLs, WiFi, vCard y más. Soporta colores personalizados, logos y estilos de puntos con exportación SVG/PNG. No se envían datos a ningún servidor.",
     "faq1Q": "¿Qué es el Generador de QR?",
-    "faq1A": "Un generador de códigos QR personalizable que soporta texto, URLs, credenciales WiFi y vCards. Añade logos, cambia colores y exporta como SVG o PNG.",
-    "faq2Q": "¿Cuál es la capacidad máxima de un código QR?",
-    "faq2A": "La capacidad depende del nivel de corrección de errores y tipo de datos. Numérico: hasta 7.089 caracteres. Alfanumérico: hasta 4.296. Binario: hasta 2.953 bytes. Kanji: hasta 1.817 caracteres.",
-    "faq3Q": "¿Puedo añadir un logo a mi código QR?",
-    "faq3A": "Sí. Sube una imagen de logo para colocarla en el centro del código QR. La herramienta ajusta automáticamente la corrección de errores para mantener la escaneabilidad."
+    "faq1A": "Un generador de códigos QR personalizable que soporta texto, URLs, credenciales WiFi y vCards. Añade logos, cambia colores y exporta como SVG o PNG."
   }
 }

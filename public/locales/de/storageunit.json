@@ -3,7 +3,6 @@
   "decimal": "Dezimal",
   "binary": "Binär",
   "bit": "Bit",
-  "conversionOutput": "Konvertierungsergebnis",
   "measurement": "Maßeinheit",
   "conversionCol": "Konvertierung",
   "commonConversionTable": "Allgemeine Konvertierungstabelle",
@@ -11,12 +10,10 @@
     "whatIsTitle": "Was ist der Speichereinheiten-Rechner?",
     "whatIsP1": "Der Speichereinheiten-Rechner ermöglicht die sofortige Umrechnung zwischen digitalen Speichereinheiten — Bytes, KB, MB, GB, TB, PB — und unterstützt sowohl Dezimal (SI) als auch Binär (IEC) Standards.",
     "whatIsP2": "Egal ob Sie Dateigrößen vergleichen, Speicherplatz planen oder Datenübertragungslimits verstehen möchten — dieses Tool liefert präzise Umrechnungen auf einen Blick.",
-    "faqTitle": "Häufig gestellte Fragen",
     "faq1Q": "Welche Speichereinheiten kann ich konvertieren?",
     "faq1A": "Bits, Bytes, KB, MB, GB, TB und PB. Das Tool unterstützt sowohl den Dezimalstandard (1 KB = 1000 Bytes) als auch den Binärstandard (1 KiB = 1024 Bytes).",
     "faq2Q": "Warum gibt es zwei Konvertierungsstandards?",
     "faq2A": "Dezimal (SI) verwendet Potenzen von 1000 und wird von Speicherherstellern verwendet. Binär (IEC) verwendet Potenzen von 1024 und wird typischerweise von Betriebssystemen angezeigt.",
-    "faq3Q": "Was ist der Unterschied zwischen KB und KiB?",
-    "faq3A": "KB (Kilobyte) = 1000 Bytes. KiB (Kibibyte) = 1024 Bytes. Die IEC führte KiB/MiB/GiB zur Unterscheidung ein, aber KB/MB/GB werden noch häufig für beide verwendet."
+    "aeoDefinition": "Der Speichereinheitenkonverter ist ein kostenloses Online-Tool zur Umrechnung zwischen Bytes, KB, MB, GB, TB und PB. Unterstützt sowohl SI- (dezimal) als auch IEC- (binär) Standards. Läuft vollständig in Ihrem Browser."
   }
 }

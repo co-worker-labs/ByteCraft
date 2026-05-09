@@ -1,8 +1,4 @@
 {
-  "description": {
-    "p1": "HTML entities are special codes used to represent reserved characters in HTML. For example, &lt; for <, &amp; for &, and &quot; for \". See the [ASCII table](/ascii) for character codes, or [HTTP status codes](/httpstatus) for web response references.",
-    "p2": "Before you use one of the below codes on your website, make sure your HTML document uses the correct encoding so you are sure that the HTML codes and HTML special codes are displayed properly. To make sure your HTML uses the correct encoding, you should make sure that you use the Unicode character set. This Unicode character set must be set in the head section of your HTML document. This is done by using a meta with the charset attribute and the value UTF-8. Just copy and paste the following meta into your head section and all the below HTML characters will be displayed perfectly so you're good to go."
-  },
   "tabs": {
     "letters": "Letters",
     "punctuation": "Punctuation",
@@ -36,13 +32,12 @@
   },
   "searchPlaceholder": "Search by character, code, or description...",
   "descriptions": {
+    "p1": "HTML entities are special codes used to represent reserved characters in HTML. For example, &lt; for <, &amp; for &, and &quot; for \". See the [ASCII table](/ascii) for character codes, or [HTTP status codes](/httpstatus) for web response references.",
+    "p2": "Before you use one of the below codes on your website, make sure your HTML document uses the correct encoding so you are sure that the HTML codes and HTML special codes are displayed properly. To make sure your HTML uses the correct encoding, you should make sure that you use the Unicode character set. This Unicode character set must be set in the head section of your HTML document. This is done by using a meta with the charset attribute and the value UTF-8. Just copy and paste the following meta into your head section and all the below HTML characters will be displayed perfectly so you're good to go.",
     "aeoDefinition": "HTML Entity Encoder is a free online tool for encoding and decoding HTML special characters and entities. Complete reference with numeric and named entities. Runs entirely in your browser.",
-    "faqTitle": "Frequently Asked Questions",
-    "faq1Q": "What are HTML character entities?",
-    "faq1A": "HTML entities are special codes (like &amp; for &) used to represent characters that have special meaning in HTML or cannot be typed directly.",
-    "faq2Q": "How many entities are documented?",
-    "faq2A": "The tool provides a complete reference of HTML special characters including named entities (&amp;), decimal (&#38;), and hexadecimal (&#x26;) codes.",
-    "faq3Q": "Can I search for specific characters?",
-    "faq3A": "Yes. Search by character name, entity name, or code point to quickly find the HTML entity you need."
+    "faq1Q": "How many entities are documented?",
+    "faq1A": "The tool provides a complete reference of HTML special characters including named entities (&amp;), decimal (&#38;), and hexadecimal (&#x26;) codes.",
+    "faq2Q": "Can I search for specific characters?",
+    "faq2A": "Yes. Search by character name, entity name, or code point to quickly find the HTML entity you need."
   }
 }

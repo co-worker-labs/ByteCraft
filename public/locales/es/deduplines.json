@@ -18,16 +18,15 @@
     "howCase": "Distinguir mayúsculas: Al marcar, 'Hola' y 'hola' se tratan como líneas diferentes.",
     "howTrim": "Ignorar espacios: Al marcar, los espacios al inicio y final se ignoran durante la comparación.",
     "howEmpty": "Eliminar líneas vacías: Al marcar, las líneas vacías y las que solo contienen espacios se eliminan.",
-    "useCasesTitle": "Casos de uso comunes",
     "useCasesP1": "Eliminar entradas duplicadas en archivos de registro.",
     "useCasesP2": "Limpiar archivos de configuración con directivas repetidas.",
     "useCasesP3": "Deduplicar filas en datos CSV antes de procesarlos.",
-    "faqTitle": "Preguntas frecuentes",
     "faq1Q": "¿Qué hace la herramienta Deduplicar Líneas?",
     "faq1A": "Elimina líneas duplicadas de tu texto ofreciendo opciones para preservar o eliminar líneas vacías, recortar espacios en blanco y ordenar la salida.",
     "faq2Q": "¿La deduplicación distingue mayúsculas de minúsculas?",
     "faq2A": "Por defecto, sí. Puedes activar el modo insensible a mayúsculas para tratar 'Hola' y 'hola' como duplicados.",
     "faq3Q": "¿Puedo ver qué se eliminó?",
-    "faq3A": "La herramienta muestra la salida limpia y el conteo de duplicados eliminados. Puedes comparar la entrada y salida para verificar los resultados."
+    "faq3A": "La herramienta muestra la salida limpia y el conteo de duplicados eliminados. Puedes comparar la entrada y salida para verificar los resultados.",
+    "aeoDefinition": "El Eliminador de líneas duplicadas es una herramienta gratuita online que elimina las líneas duplicadas del texto preservando el orden. Soporta coincidencia sensible a mayúsculas, recorte de espacios y eliminación de líneas vacías. Se ejecuta completamente en tu navegador."
   }
 }

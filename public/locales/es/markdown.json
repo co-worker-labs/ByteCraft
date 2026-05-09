@@ -3,10 +3,7 @@
   "preview": "Vista previa",
   "placeholder": "Escribe o pega tu Markdown aquí...",
   "emptyPreview": "Nada que previsualizar",
-  "loadFile": "Cargar",
   "downloadFile": "Descargar",
-  "copyHtml": "Copiar HTML",
-  "copiedHtml": "HTML copiado al portapapeles",
   "exportLabel": "Exportar",
   "exportPdf": "Exportar PDF",
   "exportPng": "Exportar PNG",
@@ -27,12 +24,8 @@
     "howP1": "Escribe o pega Markdown en el editor. La vista previa se actualiza mientras escribes. Cambia entre los diseños Editar, Vista previa y Dividido. Exporta a .md, copia el HTML renderizado, o guarda la vista previa como PDF o PNG. Todo el procesamiento ocurre en tu navegador.",
     "gfmTitle": "GitHub Flavored Markdown",
     "gfmP1": "Soporta tablas, listas de tareas (- [ ] pendiente), tachado, enlaces automáticos y diagramas Mermaid (flowchart, secuencia, clase, estado, ER, Gantt, pie, git graph). Usa bloques de código ```mermaid. Matemáticas y notas al pie están fuera del alcance.",
-    "faqTitle": "Preguntas frecuentes",
     "faq1Q": "¿Qué es el Editor Markdown?",
     "faq1A": "Un editor Markdown en vivo con vista previa en panel dividido, que soporta GFM (GitHub Flavored Markdown), resaltado de sintaxis, listas de tareas y diagramas Mermaid.",
-    "faq2Q": "¿Puedo exportar Markdown a PDF?",
-    "faq2A": "Sí. Usa los botones de exportación para guardar como PDF o PNG. La exportación PDF respeta los estilos de impresión para una salida limpia y formateada.",
-    "faq3Q": "¿Qué extensiones Markdown son compatibles?",
-    "faq3A": "Tablas GFM, listas de tareas, tachado, autolinks y resaltado de sintaxis de código para más de 12 lenguajes de programación incluyendo TypeScript, Python, Go, Rust y SQL."
+    "aeoDefinition": "El Editor de Markdown es una herramienta gratuita online para escribir y previsualizar Markdown con soporte para GitHub Flavored Markdown. Incluye resaltado de sintaxis, vista previa en vivo y exportación a PDF/PNG. Se ejecuta completamente en tu navegador."
   }
 }

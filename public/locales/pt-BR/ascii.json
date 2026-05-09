@@ -1,9 +1,6 @@
 {
   "printableCharacters": "Caracteres imprimíveis",
   "controlCodeCharts": "Tabelas de códigos de controle",
-  "description": {
-    "text": "ASCII significa American Standard Code for Information Interchange (Código Padrão Americano para Intercâmbio de Informações). Computadores só entendem números, então um código ASCII é a representação numérica de um caractere como 'a' ou '@' ou de alguma ação. O ASCII foi desenvolvido há muito tempo e hoje os caracteres não imprimíveis raramente são usados para seu propósito original. Abaixo está a tabela de caracteres ASCII, que inclui descrições dos primeiros 32 caracteres não imprimíveis. O ASCII foi originalmente projetado para teletipos, então algumas descrições são um pouco obscuras. Se alguém pede seu currículo em formato ASCII, isso significa que querem texto puro sem formatação como negrito, sublinhado ou tabulações — o formato bruto que qualquer computador entende. Geralmente isso facilita a importação do arquivo em outros aplicativos. O Bloco de Notas cria texto ASCII, ou no MS Word você pode salvar como 'somente texto'."
-  },
   "tableHeaders": {
     "decimal": "Decimal",
     "binary": "Binário",
@@ -20,12 +17,11 @@
     "whatIsTitle": "O que é a Tabela ASCII?",
     "whatIsP1": "ASCII (American Standard Code for Information Interchange) é um padrão de codificação de caracteres que atribui valores numéricos a letras, dígitos, pontuação e códigos de controle. Abrange 128 caracteres, de 0 a 127.",
     "whatIsP2": "Esta ferramenta fornece uma tabela de referência ASCII interativa e completa, com busca, conversão entre caracteres e códigos, e seções categorizadas para caracteres imprimíveis e códigos de controle.",
-    "faqTitle": "Perguntas frequentes",
     "faq1Q": "O que é ASCII?",
     "faq1A": "ASCII (American Standard Code for Information Interchange) é um padrão de codificação de caracteres de 7 bits cobrindo 128 caracteres: letras inglesas, dígitos, pontuação e códigos de controle.",
     "faq2Q": "Quais caracteres de controle estão incluídos?",
     "faq2A": "Todos os 33 códigos de controle (0-31 e 127) incluindo NUL, TAB, LF, CR, ESC e DEL, com descrições de suas funções originais de teletipo.",
-    "faq3Q": "Como ASCII difere de Unicode?",
-    "faq3A": "ASCII cobre 128 caracteres para inglês. Unicode estende isso para mais de 140.000 caracteres cobrindo praticamente todos os sistemas de escrita. ASCII é um subconjunto de Unicode (os primeiros 128 pontos de código coincidem)."
+    "text": "ASCII significa American Standard Code for Information Interchange (Código Padrão Americano para Intercâmbio de Informações). Computadores só conseguem entender números, então um código ASCII é a representação numérica de um caractere como \"a\" ou \"@\" ou de alguma ação. O ASCII foi desenvolvido há muito tempo e hoje os caracteres não imprimíveis raramente são usados para seu propósito original. Abaixo está a tabela de caracteres ASCII, que inclui descrições dos primeiros 32 caracteres não imprimíveis. O ASCII foi originalmente projetado para uso com teletipos, então as descrições são um tanto quanto obscuras. Se alguém diz que quer seu currículo em formato ASCII, isso significa que querem texto puro sem formatação como tabs, negrito ou sublinhado — o formato bruto que qualquer computador consegue entender. Isso geralmente é para que possam importar o arquivo em seus próprios aplicativos sem problemas. O Bloco de Notas cria texto ASCII, ou no MS Word você pode salvar um arquivo como \"somente texto\".",
+    "aeoDefinition": "A Tabela ASCII é uma referência online gratuita de caracteres ASCII com códigos hexadecimais, octais, decimais e HTML. Inclui busca, filtragem e ferramentas de conversão. Roda inteiramente no seu navegador."
   }
 }

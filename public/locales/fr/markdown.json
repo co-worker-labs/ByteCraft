@@ -3,10 +3,7 @@
   "preview": "Aperçu",
   "placeholder": "Écrivez ou collez votre Markdown ici…",
   "emptyPreview": "Rien à prévisualiser",
-  "loadFile": "Charger",
   "downloadFile": "Télécharger",
-  "copyHtml": "Copier le HTML",
-  "copiedHtml": "HTML copié dans le presse-papiers",
   "exportLabel": "Exporter",
   "exportPdf": "Exporter en PDF",
   "exportPng": "Exporter en PNG",
@@ -27,12 +24,8 @@
     "howP1": "Saisissez ou collez du Markdown dans l'éditeur. L'aperçu se met à jour en temps réel. Basculez entre les dispositions Éditer, Aperçu et Split. Exportez en .md, copiez le HTML rendu, ou enregistrez l'aperçu en PDF ou PNG. Tout le traitement se fait dans votre navigateur.",
     "gfmTitle": "GitHub Flavored Markdown",
     "gfmP1": "Supporte les tableaux, les listes de tâches (- [ ] todo), le texte barré, les liens automatiques et les diagrammes Mermaid (flowchart, sequence, class, state, ER, Gantt, pie, git graph). Utilisez des blocs de code ```mermaid. Les mathématiques et les notes de bas de page ne sont pas incluses.",
-    "faqTitle": "Questions fréquentes",
     "faq1Q": "Qu'est-ce que l'Éditeur Markdown ?",
     "faq1A": "Un éditeur Markdown en direct avec aperçu en volet divisé, prenant en charge GFM (GitHub Flavored Markdown), la coloration syntaxique, les listes de tâches et les diagrammes Mermaid.",
-    "faq2Q": "Puis-je exporter le Markdown en PDF ?",
-    "faq2A": "Oui. Utilisez les boutons d'exportation pour sauvegarder en PDF ou PNG. L'export PDF respecte les styles d'impression pour une sortie propre et formatée.",
-    "faq3Q": "Quelles extensions Markdown sont prises en charge ?",
-    "faq3A": "Tableaux GFM, listes de tâches, barré, liens automatiques et coloration syntaxique du code pour plus de 12 langages de programmation dont TypeScript, Python, Go, Rust et SQL."
+    "aeoDefinition": "L'Éditeur Markdown est un outil gratuit en ligne pour écrire et prévisualiser du Markdown avec support de GitHub Flavored Markdown. Inclut la coloration syntaxique, l'aperçu en direct et l'export PDF/PNG. Fonctionne entièrement dans votre navigateur."
   }
 }

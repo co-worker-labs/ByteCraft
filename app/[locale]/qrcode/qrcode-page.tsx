@@ -720,22 +720,20 @@ function StyleConfig({
 
 function Description() {
   const t = useTranslations("qrcode");
-  const locale = useLocale();
+  const tc = useTranslations("common");
 
-  const faqItems = [1, 2, 3].map((i) => ({
-    title: t(`descriptions.faq${i}Q`),
-    content: <p>{t(`descriptions.faq${i}A`)}</p>,
-  }));
   return (
     <div className="mt-8 space-y-6">
-      <p className="text-fg-primary text-sm leading-relaxed font-medium">
-        {t("descriptions.aeoDefinition")}
-      </p>
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-4">
         <Info size={18} className="text-accent-purple mt-0.5 shrink-0" />
         <div className="space-y-2">
-          <h3 className="text-sm font-semibold text-fg-primary">{t("description.title")}</h3>
-          <p className="text-sm text-fg-secondary leading-relaxed">{t("description.intro")}</p>
+          <h3 className="text-sm font-semibold text-fg-primary">{t("descriptions.title")}</h3>
+          <p className="text-sm text-fg-secondary leading-relaxed">{t("descriptions.intro")}</p>
         </div>
       </div>
 
@@ -743,7 +741,7 @@ function Description() {
         <div className="flex items-center gap-2 mb-3">
           <span className="w-1.5 h-4 rounded-full bg-accent-cyan" />
           <span className="font-mono text-xs font-semibold text-fg-muted uppercase tracking-wider">
-            {t("description.ecTitle")}
+            {t("descriptions.ecTitle")}
           </span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -752,7 +750,7 @@ function Description() {
               key={k}
               className="rounded-lg border border-border-default bg-bg-elevated/30 p-3 text-sm text-fg-secondary leading-relaxed"
             >
-              {t(`description.${k}`)}
+              {t(`descriptions.${k}`)}
             </div>
           ))}
         </div>
@@ -760,23 +758,18 @@ function Description() {
 
       <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-4">
         <div className="space-y-2 text-sm text-fg-secondary leading-relaxed">
-          <h3 className="text-sm font-semibold text-fg-primary">{t("description.tipsTitle")}</h3>
+          <h3 className="text-sm font-semibold text-fg-primary">{t("descriptions.tipsTitle")}</h3>
           <ul className="list-disc pl-5 space-y-1">
-            <li>{t("description.tipMargin")}</li>
-            <li>{t("description.tipContrast")}</li>
-            <li>{t("description.tipLogo")}</li>
-            <li>{t("description.tipTest")}</li>
+            <li>{t("descriptions.tipMargin")}</li>
+            <li>{t("descriptions.tipContrast")}</li>
+            <li>{t("descriptions.tipLogo")}</li>
+            <li>{t("descriptions.tipTest")}</li>
           </ul>
         </div>
       </div>
-      <div className="mt-8">
-        <div className="flex items-center gap-2 mb-4">
-          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
-          <h2 className="font-semibold text-fg-primary text-base text-pretty">
-            {t("descriptions.faqTitle")}
-          </h2>
-        </div>
-        <Accordion items={faqItems} />
+      <div>
+        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.faq1Q")}</h2>
+        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{t("descriptions.faq1A")}</p>
       </div>
     </div>
   );

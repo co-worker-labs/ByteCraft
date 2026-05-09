@@ -12,7 +12,6 @@
   "width": "Breite",
   "height": "Höhe",
   "keepAspectRatio": "Seitenverhältnis beibehalten",
-  "download": "Herunterladen",
   "copyToClipboard": "In Zwischenablage kopieren",
   "copiedToClipboard": "Als PNG in die Zwischenablage kopiert",
   "reselect": "Neu auswählen",
@@ -29,12 +28,12 @@
     "p2": "Unterstützt PNG-, JPG- und WebP-Ausgabeformate. WebP bietet das beste Komprimierungsverhältnis für Web-Bilder.",
     "p3": "Verwenden Sie den Qualitätsregler, um Dateigröße und Bildqualität abzuwägen. Niedrigere Qualität bedeutet kleinere Dateien.",
     "p4": "Das Kopieren in die Zwischenablage konvertiert das Bild unabhängig vom gewählten Ausgabeformat in das PNG-Format.",
-    "faqTitle": "Häufig gestellte Fragen",
     "faq1Q": "Was kann ich mit dem Bild-Tool tun?",
     "faq1A": "Bilder direkt in Ihrem Browser skalieren, komprimieren und konvertieren. Unterstützt JPEG-, PNG-, WebP- und BMP-Formate mit einstellbarer Qualität und Abmessungen.",
     "faq2Q": "Werden meine Bilder auf einen Server hochgeladen?",
     "faq2A": "Nein. Die gesamte Bildverarbeitung erfolgt in Ihrem Browser mit der Canvas API. Ihre Bilder verlassen niemals Ihr Gerät.",
     "faq3Q": "Welche Bildformate werden unterstützt?",
-    "faq3A": "Eingabe: JPEG, PNG, WebP, BMP, GIF. Ausgabe: JPEG, PNG, WebP. Sie können zwischen Formaten konvertieren und gleichzeitig die Qualität anpassen."
+    "faq3A": "Eingabe: JPEG, PNG, WebP, BMP, GIF. Ausgabe: JPEG, PNG, WebP. Sie können zwischen Formaten konvertieren und gleichzeitig die Qualität anpassen.",
+    "aeoDefinition": "Der Bildkompressor ist ein kostenloses Online-Tool zum Komprimieren, Skalieren und Konvertieren von Bildern zwischen PNG-, JPG- und WebP-Formaten. Die gesamte Verarbeitung läuft lokal in Ihrem Browser."
   }
 }

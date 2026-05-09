@@ -1,17 +1,13 @@
 {
-  "generatedTitle": "Seu UUID",
   "version": "Versão",
   "quantity": "Quantidade",
   "namespace": "Namespace",
   "namespaceCustom": "Personalizado",
-  "namespaceCustomPlaceholder": "Digite um UUID",
-  "namespaceInvalid": "UUID de namespace inválido",
   "invalidNamespace": "UUID de namespace inválido",
   "namespaceDNS": "DNS (nomes de domínio)",
   "namespaceURL": "URL (endereços web)",
   "namespaceOID": "OID (identificadores de objeto ISO)",
   "namespaceX500": "X.500 (caminhos de diretório)",
-  "namespaceCUSTOM": "UUID de namespace personalizado",
   "namespaceDesc": "Um namespace é um UUID fixo que atua como identificador raiz. v3/v5 usam namespace + nome para gerar UUIDs determinísticos. Mesmo namespace + mesmo nome sempre produz o mesmo resultado.",
   "name": "Nome",
   "namePlaceholder": "Digite um nome para gerar...",
@@ -20,11 +16,6 @@
   "formatNoHyphens": "Sem hifens",
   "formatBraces": "Com chaves",
   "uppercase": "Maiúsculas",
-  "copyAll": "Copiar tudo",
-  "download": "Baixar .txt",
-  "localGenerated": "Gerado inteiramente no seu navegador. Seus dados nunca saem do seu dispositivo.",
-  "securityTip": "Para chaves primárias de banco de dados, prefira v7 (ordenável, amigável a índices). Para IDs aleatórios de uso geral, use v4.",
-  "unsupportedBrowser": "Seu navegador não suporta geração segura de números aleatórios.",
   "downloadFilename": "uuids.txt",
   "waitingForName": "Digite um nome para gerar...",
   "whatIsUuid": "O que é um UUID?",
@@ -32,7 +23,6 @@
   "uuidStructure": "Estrutura do UUID",
   "uuidStructureDesc": "Um UUID é escrito como 32 dígitos hexadecimais separados por hifens em 5 grupos: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. A variante da versão é codificada em posições específicas de bits.",
   "versionCompare": "Comparação de versões",
-  "versionTip": "Clique em uma versão para saber mais",
   "v1": {
     "name": "v1 — Timestamp + MAC",
     "desc": "Combina timestamp e endereço MAC da máquina. Mais antigo, previsível, expõe o endereço MAC.",
@@ -73,12 +63,10 @@
     "whatIsTitle": "O que é o Gerador de UUID?",
     "whatIsP1": "UUID (Identificador Único Universal) é um padrão de identificador de 128 bits definido na RFC 4122 e RFC 9562. Esta ferramenta gera UUID v4 (aleatório) e v7 (ordenado por tempo) em lote.",
     "whatIsP2": "UUIDs são amplamente utilizados como chaves primárias de banco de dados, identificadores em sistemas distribuídos e tokens de sessão. Com 2^122 valores possíveis, a probabilidade de colisão é desprezível.",
-    "faqTitle": "Perguntas frequentes",
     "faq1Q": "O que é um UUID?",
     "faq1A": "UUID (Identificador Universalmente Único) é um padrão de identificador de 128 bits. Esta ferramenta gera UUIDs v4 (aleatórios) e v7 (ordenados por tempo) que são únicos sem coordenação central.",
     "faq2Q": "Quantos UUIDs posso gerar de uma vez?",
     "faq2A": "Você pode gerar até 1.000 UUIDs em um único lote. Toda geração acontece no seu navegador usando crypto.getRandomValues().",
-    "faq3Q": "Devo usar UUID v4 ou v7?",
-    "faq3A": "Use v4 para IDs aleatórios de propósito geral. Use v7 para chaves primárias de banco de dados ou quando a ordenação temporal importa — v7 inclui um prefixo de timestamp em milissegundos para unicidade ordenável."
+    "aeoDefinition": "O Gerador de UUID é uma ferramenta online gratuita para gerar UUIDs v1, v3, v4, v5 e v7 em lote. Está em conformidade com RFC 4122/9562. Roda inteiramente no seu navegador."
   }
 }

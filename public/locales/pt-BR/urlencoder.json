@@ -24,19 +24,17 @@
     "tableUrl": "URL inteira",
     "tableForm": "Formulário",
     "tableNote": "Componente codifica tudo exceto o conjunto não reservado A–Z a–z 0–9 - _ . ! ~ * ' ( ). URL inteira adicionalmente preserva o conjunto estrutural ; , / ? : @ & = + $ # !. Formulário codifica o mesmo conjunto que Componente mais ! ' ( ) ~ (mas não *), transforma espaço em + em vez de %20, e normaliza \\n / \\r / \\r\\n para \\r\\n (codificado como %0D%0A) — correspondendo ao que o navegador envia para uma submissão application/x-www-form-urlencoded.",
-    "useCasesTitle": "Casos de uso comuns",
     "useCasesP1": "Construindo query strings seguras programaticamente: ao construir URLs como /search?q=[valor] manualmente, passe o valor pelo modo Componente para que caracteres como & ou = dentro do valor não corrompam a URL ao redor.",
     "useCasesP2": "Incorporando uma URL dentro de outra: ao passar uma URL como parâmetro de outra (por exemplo, uma URL de redirecionamento OAuth), você deve codificar a URL interna com modo Componente — não URL inteira — para que / : ? & dentro da URL interna não sejam interpretados como estrutura da URL externa.",
     "useCasesP3": "Enviando dados de formulário com fetch: ao fazer POST de um corpo com Content-Type: application/x-www-form-urlencoded, o corpo deve ser codificado com semântica do modo Formulário. Este modo produz saída byte-compatível com o que o navegador envia.",
-    "limitationsTitle": "Limitações",
     "limitationsP1": "Codificação de URL não é criptografia. Qualquer pessoa pode decodificar a saída com uma única chamada de função; nunca use codificação para esconder segredos.",
     "limitationsP2": "A escolha do modo importa. Passar uma URL inteira pelo modo Componente quebra a URL (toda / vira %2F). Passar um valor de query pelo modo URL inteira pode deixar caracteres reservados perigosos (um & no valor ainda parece um separador de parâmetro). Na dúvida, escolha Componente.",
-    "faqTitle": "Perguntas frequentes",
     "faq1Q": "O que é codificação URL?",
     "faq1A": "Codificação URL (codificação por porcentagem) converte caracteres em um formato que pode ser transmitido pela internet. Caracteres especiais como espaços, aspas e não-ASCII são substituídos por sequências %XX.",
     "faq2Q": "Quais modos de codificação estão disponíveis?",
     "faq2A": "Três modos: Componente (codifica todos os caracteres reservados), URL Completa (preserva a estrutura da URL como ://, ?, &) e Formulário (espaço vira + em vez de %20).",
     "faq3Q": "Quando devo usar codificação URL?",
-    "faq3A": "Use codificação URL ao passar dados em parâmetros de consulta, incorporar URLs em HTML ou lidar com caracteres especiais em chamadas de API."
+    "faq3A": "Use codificação URL ao passar dados em parâmetros de consulta, incorporar URLs em HTML ou lidar com caracteres especiais em chamadas de API.",
+    "aeoDefinition": "O Codificador/Decodificador de URL é uma ferramenta online gratuita para codificar e decodificar strings de URL. Suporta modos de codificação Component, URL Completa e Form. Roda inteiramente no seu navegador — nenhum dado é enviado para qualquer servidor."
   }
 }

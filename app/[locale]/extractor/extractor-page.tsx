@@ -303,6 +303,7 @@ function Conversion() {
 
 function Description() {
   const t = useTranslations("extractor");
+  const tc = useTranslations("common");
 
   const faqItems = [1, 2, 3].map((i) => ({
     title: t(`descriptions.faq${i}Q`),
@@ -310,9 +311,11 @@ function Description() {
   }));
   return (
     <section id="reference" className="mt-6">
-      <p className="text-fg-primary text-sm leading-relaxed font-medium">
-        {t("descriptions.aeoDefinition")}
-      </p>
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="flex items-center gap-3 my-6">
         <div className="flex-1 h-px bg-border-default" />
         <span className="font-mono text-xs font-semibold text-fg-muted uppercase tracking-wider">
@@ -371,7 +374,7 @@ function Description() {
         <div className="flex items-center gap-2 mb-4">
           <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
           <h2 className="font-semibold text-fg-primary text-base text-pretty">
-            {t("descriptions.faqTitle")}
+            {tc("descriptions.faqTitle")}
           </h2>
         </div>
         <Accordion items={faqItems} />
