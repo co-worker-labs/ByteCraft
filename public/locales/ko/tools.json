@@ -180,6 +180,12 @@
     "description": "단어 수, 문자 수, 문장 및 단락을 계산합니다. 읽기 및 말하기 시간을 추정합니다. 키워드 빈도와 밀도를 분석합니다. 무료 온라인 단어 카운터, 100% 클라이언트 처리.",
     "searchTerms": "geulsujatonggye gstj teukseongeo dokseo sigan"
   },
+  "tokencounter": {
+    "title": "Token 카운터 - OpenAI GPT 토큰 수 계산 & BPE 시각화",
+    "shortTitle": "Token 카운터",
+    "description": "o200k_base 인코딩으로 OpenAI GPT 토큰 수를 계산합니다. 실시간 BPE 토큰화 시각화. GPT-4o, GPT-4.1, o1, o3, o4-mini, GPT-5 지원.",
+    "searchTerms": "tokenkaunteo teokt BPE bunseok"
+  },
   "sshkey": {
     "title": "SSH 키 생성기 - RSA & Ed25519 키 쌍 생성",
     "shortTitle": "SSH 키 생성기",

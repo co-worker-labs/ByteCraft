@@ -76,6 +76,7 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
       "textcase",
       "extractor",
       "wordcounter",
+      "tokencounter",
       "deduplines",
     ],
   },
@@ -122,7 +123,8 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   htmlcode: ["ascii", "httpstatus", "markdown"],
   ascii: ["htmlcode", "numbase", "httpstatus"],
   extractor: ["regex", "textcase", "deduplines"],
-  wordcounter: ["textcase", "extractor", "deduplines"],
+  wordcounter: ["textcase", "extractor", "deduplines", "tokencounter"],
+  tokencounter: ["wordcounter", "regex", "textcase"],
   httpclient: ["httpstatus", "urlencoder", "json"],
 };
 
@@ -175,6 +177,7 @@ export const TOOLS: ToolEntry[] = [
   { key: "extractor", path: "/extractor", icon: Search },
   { key: "wordcounter", path: "/wordcounter", icon: AlignLeft },
   { key: "httpclient", path: "/httpclient", icon: Send },
+  { key: "tokencounter", path: "/token-counter", icon: Hash },
 ] as const;
 
 export const TOOL_PATHS = new Set(TOOLS.map((t) => t.path));
