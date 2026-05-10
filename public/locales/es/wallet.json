@@ -1,0 +1,60 @@
+{
+  "mnemonicLabel": "Frase mnemónica",
+  "mnemonicPlaceholder": "Introduce tu frase mnemónica BIP39 (12/15/18/21/24 palabras)",
+  "generate": "Generar",
+  "wordCount12": "12 palabras",
+  "wordCount24": "24 palabras",
+  "passphraseToggle": "Contraseña (BIP39)",
+  "passphrasePlaceholder": "Contraseña opcional (25ª palabra)",
+  "validation": {
+    "invalidLength": "Longitud de frase mnemónica inválida (debe tener 12, 15, 18, 21 o 24 palabras)",
+    "invalidWords": "Palabras inválidas en la posición: {positions}",
+    "invalidChecksum": "Checksum inválido"
+  },
+  "pathEditor": {
+    "label": "Ruta de derivación",
+    "purpose": "Propósito",
+    "coinType": "Tipo de moneda",
+    "account": "Cuenta",
+    "change": "Cambio",
+    "addressCount": "Cantidad de direcciones",
+    "allHardenedWarning": "Las cadenas ed25519 requieren que todos los segmentos de ruta sean endurecidos"
+  },
+  "chainSelection": {
+    "label": "Seleccionar cadenas",
+    "groupSecp256k1": "secp256k1",
+    "groupEd25519": "ed25519"
+  },
+  "results": {
+    "index": "#",
+    "address": "Dirección",
+    "publicKey": "Clave pública",
+    "privateKey": "Clave privada",
+    "show": "Mostrar",
+    "hide": "Ocultar",
+    "copy": "Copiar",
+    "pathUsed": "Ruta utilizada",
+    "expand": "Expandir",
+    "collapse": "Colapsar",
+    "noMnemonic": "Introduce o genera una frase mnemónica para derivar direcciones"
+  },
+  "descriptions": {
+    "aeoDefinition": "El generador de carteras HD es una herramienta gratuita para generar frases mnemónicas BIP39 y derivar direcciones de criptomonedas en múltiples blockchains. Compatible con EVM, Bitcoin, Solana, Tron y Cosmos. Todo el procesamiento se realiza en tu navegador.",
+    "whatIsTitle": "¿Qué es una cartera HD?",
+    "whatIs": "Una cartera HD (Jerárquica Determinista) genera todas las claves privadas desde una única semilla maestra usando una estructura de árbol. Esto significa que solo necesitas respaldar una frase mnemónica para recuperar todas las direcciones.",
+    "bip39Title": "Frase mnemónica BIP39",
+    "bip39": "BIP39 define cómo representar una semilla aleatoria como una lista de palabras legibles (12 o 24 palabras). La frase mnemónica es la copia de seguridad de tu cartera. Guárdala de forma segura y nunca la compartas.",
+    "bip32Title": "Derivación de claves BIP32",
+    "bip32": "BIP32 especifica cómo derivar un árbol de pares de claves desde una semilla maestra. Cada nodo se direcciona mediante una ruta de derivación como m/44'/60'/0'/0/0.",
+    "bip44Title": "BIP44 Multi-cuenta",
+    "bip44": "BIP44 define una estructura de ruta estándar: m / purpose' / coin_type' / account' / change / address_index. Cada blockchain tiene un coin_type registrado (ej. 60 para Ethereum, 0 para Bitcoin).",
+    "securityTitle": "Aviso de seguridad",
+    "security": "Esta herramienta es solo con fines educativos y de desarrollo. Nunca uses una frase mnemónica generada en el navegador para fondos reales. Usa una cartera hardware para producción.",
+    "faq1Q": "¿Qué es una contraseña BIP39?",
+    "faq1A": "También llamada la «25ª palabra», una contraseña BIP39 añade seguridad adicional a tu frase mnemónica. La misma frase mnemónica con diferentes contraseñas produce carteras completamente diferentes. Si usas una contraseña, debes recordarla para recuperar tu cartera.",
+    "faq2Q": "¿Por qué las rutas de Solana requieren todos los segmentos endurecidos?",
+    "faq2A": "Solana usa la curva ed25519 mediante SLIP-0010, que solo admite derivación endurecida. La derivación no endurecida no es posible con claves ed25519.",
+    "faq3Q": "¿Cuál es la diferencia entre direcciones Bitcoin Legacy, SegWit y Taproot?",
+    "faq3A": "Legacy (P2PKH, empieza por 1) es el formato original. SegWit (P2WPKH, bc1q) usa codificación Bech32 con comisiones más bajas. Taproot (P2TR, bc1p) es el formato más reciente con privacidad mejorada."
+  }
+}

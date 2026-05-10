@@ -1,0 +1,60 @@
+{
+  "mnemonicLabel": "Mnemonische Phrase",
+  "mnemonicPlaceholder": "Geben Sie Ihre BIP39-mnemonische Phrase ein (12/15/18/21/24 Wörter)",
+  "generate": "Generieren",
+  "wordCount12": "12 Wörter",
+  "wordCount24": "24 Wörter",
+  "passphraseToggle": "Passphrase (BIP39)",
+  "passphrasePlaceholder": "Optionale Passphrase (25. Wort)",
+  "validation": {
+    "invalidLength": "Ungültige Länge der mnemonischen Phrase (muss 12, 15, 18, 21 oder 24 Wörter haben)",
+    "invalidWords": "Ungültige Wörter an Position: {positions}",
+    "invalidChecksum": "Ungültige Prüfsumme"
+  },
+  "pathEditor": {
+    "label": "Ableitungspfad",
+    "purpose": "Zweck",
+    "coinType": "Coin-Typ",
+    "account": "Konto",
+    "change": "Wechsel",
+    "addressCount": "Anzahl der Adressen",
+    "allHardenedWarning": "ed25519-Blockchains erfordern, dass alle Pfadsegmente gehärtet sind"
+  },
+  "chainSelection": {
+    "label": "Blockchains auswählen",
+    "groupSecp256k1": "secp256k1",
+    "groupEd25519": "ed25519"
+  },
+  "results": {
+    "index": "#",
+    "address": "Adresse",
+    "publicKey": "Öffentlicher Schlüssel",
+    "privateKey": "Privater Schlüssel",
+    "show": "Anzeigen",
+    "hide": "Verbergen",
+    "copy": "Kopieren",
+    "pathUsed": "Verwendeter Pfad",
+    "expand": "Aufklappen",
+    "collapse": "Zuklappen",
+    "noMnemonic": "Geben Sie eine mnemonische Phrase ein oder generieren Sie eine, um Adressen abzuleiten"
+  },
+  "descriptions": {
+    "aeoDefinition": "Der HD-Wallet-Generator ist ein kostenloses Online-Tool zum Generieren von BIP39-mnemonischen Phrasen und Ableiten von Kryptowährungsadressen über mehrere Blockchains. Unterstützt EVM, Bitcoin, Solana, Tron und Cosmos. Die gesamte Verarbeitung erfolgt in Ihrem Browser.",
+    "whatIsTitle": "Was ist ein HD-Wallet?",
+    "whatIs": "Ein HD-Wallet (Hierarchisch Deterministisch) generiert alle privaten Schlüssel aus einem einzigen Master-Seed mithilfe einer Baumstruktur. Das bedeutet, Sie müssen nur eine mnemonische Phrase sichern, um alle Adressen wiederherzustellen.",
+    "bip39Title": "BIP39 Mnemonische Phrase",
+    "bip39": "BIP39 definiert, wie ein zufälliger Seed als Liste lesbarer Wörter (12 oder 24 Wörter) dargestellt wird. Die mnemonische Phrase ist das Backup Ihres Wallets. Bewahren Sie sie sicher auf und teilen Sie sie nie.",
+    "bip32Title": "BIP32 HD-Schlüsselableitung",
+    "bip32": "BIP32 spezifiziert, wie ein Baum von Schlüsselpaaren aus einem Master-Seed abgeleitet wird. Jeder Knoten wird durch einen Ableitungspfad wie m/44'/60'/0'/0/0 adressiert.",
+    "bip44Title": "BIP44 Multi-Konto",
+    "bip44": "BIP44 definiert eine Standardpfadstruktur: m / purpose' / coin_type' / account' / change / address_index. Jede Blockchain hat einen registrierten coin_type (z.B. 60 für Ethereum, 0 für Bitcoin).",
+    "securityTitle": "Sicherheitshinweis",
+    "security": "Dieses Tool dient nur Bildungs- und Entwicklungszwecken. Verwenden Sie niemals eine im Browser generierte mnemonische Phrase für echte Guthaben. Verwenden Sie ein Hardware-Wallet für den produktiven Einsatz.",
+    "faq1Q": "Was ist eine BIP39-Passphrase?",
+    "faq1A": "Auch als 25. Wort bezeichnet, fügt eine BIP39-Passphrase Ihrer mnemonischen Phrase zusätzliche Sicherheit hinzu. Dieselbe mnemonische Phrase mit unterschiedlichen Passphrasen erzeugt völlig unterschiedliche Wallets.",
+    "faq2Q": "Warum erfordern Solana-Pfade alle gehärteten Segmente?",
+    "faq2A": "Solana verwendet die ed25519-Kurve über SLIP-0010, das nur gehärtete Ableitung unterstützt. Nicht-gehärtete Ableitung ist mit ed25519-Schlüsseln nicht möglich.",
+    "faq3Q": "Was ist der Unterschied zwischen Bitcoin Legacy-, SegWit- und Taproot-Adressen?",
+    "faq3A": "Legacy (P2PKH, beginnt mit 1) ist das ursprüngliche Format. SegWit (P2WPKH, bc1q) verwendet Bech32-Kodierung mit niedrigeren Gebühren. Taproot (P2TR, bc1p) ist das neueste Format mit verbessertem Datenschutz."
+  }
+}

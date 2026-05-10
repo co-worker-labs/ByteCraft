@@ -198,6 +198,12 @@
     "description": "브라우저에서 직접 HTTP 요청을 보내 REST API를 테스트하세요. GET, POST, PUT, DELETE 지원. 헤더, 본문, 인증 설정 가능. 무료, 서버에 데이터 전송 없음.",
     "searchTerms": "httpkeulaieondu hk rest api"
   },
+  "wallet": {
+    "title": "HD 지갑 생성기 - BIP39 니모닉 & 멀티체인 주소 파생",
+    "shortTitle": "HD 지갑",
+    "description": "BIP39 니모닉 구문을 생성하고 EVM, Bitcoin, Solana, Tron, Cosmos 체인의 암호화폐 주소를 파생합니다. 무료 온라인 HD 지갑 도구. 100% 브라우저 처리.",
+    "searchTerms": "hdjibsaengseonggi nimonic paesaeng"
+  },
   "categories": {
     "text": "텍스트 처리",
     "encoding": "인코딩 & 변환",

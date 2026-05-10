@@ -1,0 +1,60 @@
+{
+  "mnemonicLabel": "Mnemonic Phrase",
+  "mnemonicPlaceholder": "Enter your BIP39 mnemonic phrase (12/15/18/21/24 words)",
+  "generate": "Generate",
+  "wordCount12": "12 words",
+  "wordCount24": "24 words",
+  "passphraseToggle": "Passphrase (BIP39)",
+  "passphrasePlaceholder": "Optional passphrase (25th word)",
+  "validation": {
+    "invalidLength": "Invalid mnemonic length (must be 12, 15, 18, 21, or 24 words)",
+    "invalidWords": "Unknown word(s) at position(s): {positions}",
+    "invalidChecksum": "Invalid checksum"
+  },
+  "pathEditor": {
+    "label": "Derivation Path",
+    "purpose": "Purpose",
+    "coinType": "Coin Type",
+    "account": "Account",
+    "change": "Change",
+    "addressCount": "Address Count",
+    "allHardenedWarning": "ed25519 chains require all path segments to be hardened"
+  },
+  "chainSelection": {
+    "label": "Select Chains",
+    "groupSecp256k1": "secp256k1",
+    "groupEd25519": "ed25519"
+  },
+  "results": {
+    "index": "#",
+    "address": "Address",
+    "publicKey": "Public Key",
+    "privateKey": "Private Key",
+    "show": "Show",
+    "hide": "Hide",
+    "copy": "Copy",
+    "pathUsed": "Path used",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "noMnemonic": "Enter or generate a mnemonic to derive addresses"
+  },
+  "descriptions": {
+    "aeoDefinition": "HD Wallet Generator is a free online tool for generating BIP39 mnemonic phrases and deriving cryptocurrency addresses across multiple blockchains. Supports EVM, Bitcoin, Solana, Tron, and Cosmos chains. All computation runs entirely in your browser — no data is sent to any server.",
+    "whatIsTitle": "What is an HD Wallet?",
+    "whatIs": "An HD (Hierarchical Deterministic) Wallet generates all private keys from a single master seed using a tree structure. This means you only need to back up one mnemonic phrase to recover all addresses across all derived paths.",
+    "bip39Title": "BIP39 Mnemonic",
+    "bip39": "BIP39 defines how to represent a random seed as a list of human-readable words (12 or 24 words). The mnemonic phrase is the backup of your wallet — store it securely and never share it.",
+    "bip32Title": "BIP32 HD Key Derivation",
+    "bip32": "BIP32 specifies how to derive a tree of keypairs from a master seed. Each node in the tree is addressed by a derivation path like m/44'/60'/0'/0/0.",
+    "bip44Title": "BIP44 Multi-Account",
+    "bip44": "BIP44 defines a standard path structure: m / purpose' / coin_type' / account' / change / address_index. Each blockchain has a registered coin_type (e.g. 60 for Ethereum, 0 for Bitcoin).",
+    "securityTitle": "Security Notice",
+    "security": "This tool is for educational and development purposes only. Never use a mnemonic generated in a browser-based tool for real funds. Use a hardware wallet for production use.",
+    "faq1Q": "What is a BIP39 passphrase?",
+    "faq1A": "Also called the '25th word', a BIP39 passphrase is an optional additional word that adds extra security to your mnemonic. The same mnemonic with different passphrases produces completely different wallets. If you use a passphrase, you must remember it to recover your wallet.",
+    "faq2Q": "Why do Solana paths require all hardened segments?",
+    "faq2A": "Solana uses the ed25519 curve via SLIP-0010, which only supports hardened derivation. Non-hardened derivation is not possible with ed25519 keys, so all path segments must include the ' (hardened) suffix.",
+    "faq3Q": "What is the difference between Legacy, SegWit, and Taproot Bitcoin addresses?",
+    "faq3A": "Legacy (P2PKH, starts with 1) is the original format. SegWit (P2WPKH, starts with bc1q) uses Bech32 encoding for lower fees. Taproot (P2TR, starts with bc1p) is the newest format with enhanced privacy and smart contract capabilities."
+  }
+}

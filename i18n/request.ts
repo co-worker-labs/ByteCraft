@@ -42,6 +42,7 @@ const namespaces = [
   "sshkey",
   "httpclient",
   "token-counter",
+  "wallet",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

@@ -20,6 +20,7 @@ export default defineConfig({
       "libs/token-counter/**/*.test.ts",
       "libs/sshkey/**/*.test.ts",
       "libs/httpclient/**/*.test.ts",
+      "libs/wallet/**/*.test.ts",
       "libs/__tests__/*.test.ts",
       "utils/__tests__/*.test.{ts,tsx}",
       "hooks/**/*.test.ts",

@@ -33,6 +33,7 @@ import {
   AlignLeft,
   Terminal,
   Send,
+  Wallet,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -84,7 +85,10 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
     key: "encoding",
     tools: ["base64", "urlencoder", "csv", "csv-md", "numbase", "yaml", "storageunit"],
   },
-  { key: "security", tools: ["jwt", "hashing", "password", "sshkey", "cipher", "checksum"] },
+  {
+    key: "security",
+    tools: ["jwt", "hashing", "password", "sshkey", "wallet", "cipher", "checksum"],
+  },
   { key: "generators", tools: ["uuid", "cron", "unixtime", "qrcode"] },
   { key: "visual", tools: ["color", "image"] },
   { key: "reference", tools: ["httpstatus", "httpclient", "dbviewer", "ascii", "htmlcode"] },
@@ -103,7 +107,8 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   unixtime: ["cron", "uuid"],
   diff: ["json", "regex", "csv"],
   password: ["jwt", "sshkey", "uuid", "hashing"],
-  sshkey: ["password", "hashing", "jwt"],
+  wallet: ["sshkey", "password", "hashing", "jwt"],
+  sshkey: ["password", "hashing", "jwt", "wallet"],
   color: ["image", "numbase"],
   cron: ["unixtime", "regex"],
   markdown: ["json", "diff", "htmlcode"],
@@ -178,6 +183,7 @@ export const TOOLS: ToolEntry[] = [
   { key: "wordcounter", path: "/wordcounter", icon: AlignLeft },
   { key: "httpclient", path: "/httpclient", icon: Send },
   { key: "tokencounter", path: "/token-counter", icon: Hash },
+  { key: "wallet", path: "/wallet", icon: Wallet },
 ] as const;
 
 export const TOOL_PATHS = new Set(TOOLS.map((t) => t.path));

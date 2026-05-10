@@ -1,0 +1,60 @@
+{
+  "mnemonicLabel": "助记词",
+  "mnemonicPlaceholder": "输入 BIP39 助记词（12/15/18/21/24 个英文单词）",
+  "generate": "生成",
+  "wordCount12": "12 个单词",
+  "wordCount24": "24 个单词",
+  "passphraseToggle": "密码短语（BIP39）",
+  "passphrasePlaceholder": "可选密码短语（第 25 个词）",
+  "validation": {
+    "invalidLength": "助记词长度无效（必须是 12、15、18、21 或 24 个单词）",
+    "invalidWords": "以下位置存在无效单词：{positions}",
+    "invalidChecksum": "校验和不正确"
+  },
+  "pathEditor": {
+    "label": "派生路径",
+    "purpose": "用途",
+    "coinType": "币种类型",
+    "account": "账户",
+    "change": "找零",
+    "addressCount": "地址数量",
+    "allHardenedWarning": "ed25519 链要求所有路径段都必须为强化派生"
+  },
+  "chainSelection": {
+    "label": "选择链",
+    "groupSecp256k1": "secp256k1",
+    "groupEd25519": "ed25519"
+  },
+  "results": {
+    "index": "#",
+    "address": "地址",
+    "publicKey": "公钥",
+    "privateKey": "私钥",
+    "show": "显示",
+    "hide": "隐藏",
+    "copy": "复制",
+    "pathUsed": "使用路径",
+    "expand": "展开",
+    "collapse": "收起",
+    "noMnemonic": "输入或生成助记词以派生地址"
+  },
+  "descriptions": {
+    "aeoDefinition": "HD 钱包生成器是一款免费的在线工具，用于生成 BIP39 助记词并在多条区块链上派生加密货币地址。支持 EVM、Bitcoin、Solana、Tron 和 Cosmos 生态。所有计算完全在浏览器端进行，不会向任何服务器发送数据。",
+    "whatIsTitle": "什么是 HD 钱包？",
+    "whatIs": "HD（分层确定性）钱包使用树形结构从单个主种子生成所有私钥。这意味着你只需备份一个助记词即可恢复所有派生路径下的所有地址。",
+    "bip39Title": "BIP39 助记词",
+    "bip39": "BIP39 定义了如何将随机种子表示为人类可读的单词列表（12 或 24 个单词）。助记词是钱包的备份——请安全存储，切勿分享。",
+    "bip32Title": "BIP32 HD 密钥派生",
+    "bip32": "BIP32 规定了如何从主种子派生密钥对树。树中的每个节点通过派生路径寻址，如 m/44'/60'/0'/0/0。",
+    "bip44Title": "BIP44 多账户",
+    "bip44": "BIP44 定义了标准路径结构：m / purpose' / coin_type' / account' / change / address_index。每条区块链都有注册的 coin_type（例如以太坊为 60，比特币为 0）。",
+    "securityTitle": "安全提示",
+    "security": "本工具仅供教育和开发目的。请勿在浏览器生成的助记词中存储真实资金。生产环境请使用硬件钱包。",
+    "faq1Q": "什么是 BIP39 密码短语？",
+    "faq1A": "BIP39 密码短语也被称为「第 25 个词」，是为助记词增加额外安全性的可选项。相同的助记词搭配不同的密码短语会产生完全不同的钱包。如果使用了密码短语，恢复钱包时必须记住它。",
+    "faq2Q": "为什么 Solana 路径要求所有段都是强化派生？",
+    "faq2A": "Solana 通过 SLIP-0010 使用 ed25519 曲线，该标准仅支持强化派生。ed25519 密钥无法进行非强化派生，因此所有路径段必须包含 '（强化）后缀。",
+    "faq3Q": "比特币 Legacy、SegWit 和 Taproot 地址有什么区别？",
+    "faq3A": "Legacy（P2PKH，以 1 开头）是最初的格式。SegWit（P2WPKH，以 bc1q 开头）使用 Bech32 编码，手续费更低。Taproot（P2TR，以 bc1p 开头）是最新的格式，提供更强的隐私和智能合约功能。"
+  }
+}

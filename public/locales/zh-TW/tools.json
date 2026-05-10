@@ -198,6 +198,12 @@
     "description": "在瀏覽器中直接傳送 HTTP 請求，測試 REST API。支援 GET、POST、PUT、DELETE，可設定請求標頭、請求主體和認證。免費，資料不上傳伺服器。",
     "searchTerms": "httpkehuduan hkt rest api"
   },
+  "wallet": {
+    "title": "HD 錢包產生器 - BIP39 助記詞 & 多鏈地址衍生",
+    "shortTitle": "HD 錢包",
+    "description": "產生 BIP39 助記詞，為 EVM、Bitcoin、Solana、Tron、Cosmos 等多鏈衍生加密貨幣地址。免費線上 HD 錢包工具，100% 瀏覽器端處理。",
+    "searchTerms": "hdaqianbaoshengchengqi hdqbzhujici paisheng"
+  },
   "categories": {
     "text": "文本處理",
     "encoding": "編碼轉換",

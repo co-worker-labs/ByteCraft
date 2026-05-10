@@ -1,0 +1,60 @@
+{
+  "mnemonicLabel": "ニーモニックフレーズ",
+  "mnemonicPlaceholder": "BIP39 ニーモニックを入力（12/15/18/21/24 語）",
+  "generate": "生成",
+  "wordCount12": "12 語",
+  "wordCount24": "24 語",
+  "passphraseToggle": "パスフレーズ（BIP39）",
+  "passphrasePlaceholder": "オプションのパスフレーズ（25番目の単語）",
+  "validation": {
+    "invalidLength": "ニーモニックの長さが無効です（12、15、18、21、または 24 語である必要があります）",
+    "invalidWords": "次の位置に無効な単語があります：{positions}",
+    "invalidChecksum": "チェックサムが正しくありません"
+  },
+  "pathEditor": {
+    "label": "導出パス",
+    "purpose": "Purpose",
+    "coinType": "Coin Type",
+    "account": "アカウント",
+    "change": "チェンジ",
+    "addressCount": "アドレス数",
+    "allHardenedWarning": "ed25519 チェーンではすべてのパスセグメントをハードened導出にする必要があります"
+  },
+  "chainSelection": {
+    "label": "チェーン選択",
+    "groupSecp256k1": "secp256k1",
+    "groupEd25519": "ed25519"
+  },
+  "results": {
+    "index": "#",
+    "address": "アドレス",
+    "publicKey": "公開鍵",
+    "privateKey": "秘密鍵",
+    "show": "表示",
+    "hide": "非表示",
+    "copy": "コピー",
+    "pathUsed": "使用パス",
+    "expand": "展開",
+    "collapse": "折りたたむ",
+    "noMnemonic": "ニーモニックを入力または生成してアドレスを導出してください"
+  },
+  "descriptions": {
+    "aeoDefinition": "HD ウォレットジェネレーターは、BIP39 ニーモニックフレーズを生成し、複数のブロックチェーンで暗号通貨アドレスを導出する無料のオンラインツールです。EVM、Bitcoin、Solana、Tron、Cosmos チェーンに対応。すべての計算はブラウザ内で完結し、サーバーにデータを送信しません。",
+    "whatIsTitle": "HD ウォレットとは？",
+    "whatIs": "HD（階層的決定性）ウォレットは、ツリー構造を使用して単一のマスターシードからすべての秘密鍵を生成します。つまり、1つのニーモニックフレーズをバックアップするだけで、すべての導出パスのすべてのアドレスを復元できます。",
+    "bip39Title": "BIP39 ニーモニック",
+    "bip39": "BIP39 は、ランダムシードを人間が読める単語リスト（12または24語）として表現する方法を定義しています。ニーモニックフレーズはウォレットのバックアップです。安全に保管し、決して共有しないでください。",
+    "bip32Title": "BIP32 HD キー導出",
+    "bip32": "BIP32 は、マスターシードからキーペアのツリーを導出する方法を規定しています。ツリーの各ノードは m/44'/60'/0'/0/0 のような導出パスでアドレス指定されます。",
+    "bip44Title": "BIP44 マルチアカウント",
+    "bip44": "BIP44 は標準パス構造を定義します：m / purpose' / coin_type' / account' / change / address_index。各ブロックチェーンには登録された coin_type があります（例：Ethereum は 60、Bitcoin は 0）。",
+    "securityTitle": "セキュリティに関する注意",
+    "security": "このツールは教育・開発目的のみです。ブラウザで生成されたニーモニックを実際の資金に使用しないでください。本番環境ではハードウェアウォレットを使用してください。",
+    "faq1Q": "BIP39 パスフレーズとは何ですか？",
+    "faq1A": "BIP39 パスフレーズは「25番目の単語」とも呼ばれ、ニーモニックに追加のセキュリティを加えるオプションです。同じニーモニックでもパスフレーズが異なると、全く異なるウォレットが生成されます。パスフレーズを使用する場合は、ウォレットの復元に必要です。",
+    "faq2Q": "なぜ Solana のパスはすべてハードenedセグメントを要求するのですか？",
+    "faq2A": "Solana は SLIP-0010 を通じて ed25519 曲線を使用しており、この標準はハードened導出のみをサポートしています。ed25519 キーでは非ハードened導出が不可能なため、すべてのパスセグメントに '（ハードened）サフィックスを含める必要があります。",
+    "faq3Q": "Bitcoin の Legacy、SegWit、Taproot アドレスの違いは何ですか？",
+    "faq3A": "Legacy（P2PKH、1 で始まる）は元のフォーマットです。SegWit（P2WPKH、bc1q で始まる）は Bech32 エンコーディングを使用し、手数料が低くなります。Taproot（P2TR、bc1p で始まる）は最新のフォーマットで、プライバシーとスマートコントラクト機能が強化されています。"
+  }
+}
