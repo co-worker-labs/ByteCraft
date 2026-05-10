@@ -26,6 +26,11 @@
     "message": "您访问的页面不存在。",
     "backHome": "返回首页"
   },
+  "offline": {
+    "title": "网络已断开",
+    "message": "您的网络连接似乎已中断。OmniKit 完全在浏览器中运行，之前访问过的页面仍可正常使用。",
+    "reload": "重试"
+  },
   "alert": {
     "notTransferred": "数据不发送至服务器 — 所有处理均在浏览器中完成",
     "filesNotTransferred": "文件保留在本地 — 所有处理均在浏览器中完成",

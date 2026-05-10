@@ -26,6 +26,11 @@
     "message": "您造訪的頁面不存在。",
     "backHome": "返回首頁"
   },
+  "offline": {
+    "title": "網路已斷開",
+    "message": "您的網路連線似乎已中斷。OmniKit 完全在瀏覽器中運作，之前造訪過的頁面仍可正常使用。",
+    "reload": "重試"
+  },
   "alert": {
     "notTransferred": "資料不傳送至伺服器 — 所有處理均在瀏覽器中完成",
     "filesNotTransferred": "檔案保留在本機 — 所有處理均在瀏覽器中完成",

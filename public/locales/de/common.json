@@ -26,6 +26,11 @@
     "message": "Die gesuchte Seite existiert nicht.",
     "backHome": "Zurück zur Startseite"
   },
+  "offline": {
+    "title": "Offline",
+    "message": "Ihre Internetverbindung scheint unterbrochen zu sein. OmniKit läuft vollständig im Browser — bereits besuchte Seiten sind weiterhin verfügbar.",
+    "reload": "Erneut versuchen"
+  },
   "alert": {
     "notTransferred": "Keine Daten an Server gesendet — Alle Verarbeitung erfolgt im Browser",
     "filesNotTransferred": "Ihre Dateien bleiben lokal — Alle Verarbeitung erfolgt im Browser",

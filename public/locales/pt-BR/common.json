@@ -26,6 +26,11 @@
     "message": "A página que você procura não existe.",
     "backHome": "Voltar ao início"
   },
+  "offline": {
+    "title": "Sem conexão",
+    "message": "Parece que você perdeu sua conexão com a Internet. O OmniKit funciona inteiramente no seu navegador — as páginas já visitadas continuam disponíveis.",
+    "reload": "Tentar novamente"
+  },
   "alert": {
     "notTransferred": "Nenhum dado é enviado a servidores — Todo o processamento ocorre no seu navegador",
     "filesNotTransferred": "Seus arquivos ficam locais — Todo o processamento ocorre no seu navegador",
