@@ -1,7 +1,4 @@
 {
-  "description": {
-    "text": "Vollständige HTTP-Statuscode-Referenz, die alle offiziellen IANA-Codes aus RFC 9110 und verwandten Spezifikationen abdeckt, einschließlich WebDAV (RFC 4918), zusätzliche HTTP-Statuscodes (RFC 6585), 308 Permanent Redirect (RFC 7538), 451 Unavailable For Legal Reasons (RFC 7725) und Early Hints (RFC 8297). Enthält auch inoffizielle Plattform-Erweiterungen von Nginx, Cloudflare und IIS. Jeder Code zeigt seine Beschreibung, RFC-Referenz und gängige Codes enthalten Anwendungsszenarien und häufige Ursachen für die schnelle Fehlerbehebung."
-  },
   "tip": "Fahren Sie auf dem Desktop mit der Maus über eine Zeile oder tippen Sie auf Mobilgeräten, um Nutzungsdetails und häufige Ursachen zu sehen.",
   "searchPlaceholder": "Suche nach Code, Name oder Beschreibung...",
   "noResults": "Keine Ergebnisse gefunden",
@@ -449,5 +446,13 @@
     "530": {
       "description": "Cloudflare konnte den DNS für den Ursprungsserver nicht auflösen."
     }
+  },
+  "descriptions": {
+    "text": "Eine vollständige Referenz der HTTP-Statuscodes mit Beschreibungen, Kategorien und RFC-Spezifikationslinks. Abdeckung aller IANA-registrierten Codes sowie gängiger inoffizieller Codes. Testen Sie APIs mit dem [HTTP-Client](/httpclient) oder kodieren Sie URLs mit dem [URL-Kodierer](/urlencoder).",
+    "aeoDefinition": "HTTP-Statuscodes ist ein kostenloses Online-Nachschlagewerk für alle HTTP-Statuscodes mit Beschreibungen, Kategorien und RFC-Links. Abdeckung offizieller IANA-Codes und gängiger inoffizieller Codes.",
+    "faq1Q": "Was sind HTTP-Statuscodes?",
+    "faq1A": "HTTP-Statuscodes sind 3-stellige Zahlen, die von einem Server als Antwort auf eine Client-Anfrage zurückgegeben werden. Sie zeigen an, ob die Anfrage erfolgreich war, weitergeleitet wurde oder ein Fehler aufgetreten ist.",
+    "faq2Q": "Wie viele Statuscodes sind dokumentiert?",
+    "faq2A": "Das Tool deckt alle Standard-Statuscodes in 5 Kategorien ab: 1xx (Information), 2xx (Erfolg), 3xx (Umleitung), 4xx (Client-Fehler) und 5xx (Server-Fehler)."
   }
 }

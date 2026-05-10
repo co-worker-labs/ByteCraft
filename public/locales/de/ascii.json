@@ -1,9 +1,6 @@
 {
   "printableCharacters": "Druckbare Zeichen",
   "controlCodeCharts": "Steuerzeichen-Übersicht",
-  "description": {
-    "text": "ASCII steht für American Standard Code for Information Interchange. Computer können nur Zahlen verstehen, daher ist ein ASCII-Code die numerische Darstellung eines Zeichens wie 'a' oder '@' oder einer bestimmten Aktion. ASCII wurde vor langer Zeit entwickelt, und die nicht druckbaren Zeichen werden heute kaum noch für ihren ursprünglichen Zweck verwendet. Unten finden Sie die ASCII-Zeichentabelle mit Beschreibungen der ersten 32 nicht druckbaren Zeichen. ASCII wurde ursprünglich für Fernschreiber entwickelt, daher sind einige Beschreibungen etwas unklar. Wenn jemand Ihren Lebenslauf im ASCII-Format haben möchte, bedeutet das einfach, dass er reinen Text ohne Formatierung wie Tabulatoren, Fettdruck oder Unterstreichungen möchte, das Rohformat, das jeder Computer verstehen kann. Meistens geht es darum, die Datei problemlos in eigene Anwendungen importieren zu können. Notepad.exe erzeugt ASCII-Text, oder in MS Word können Sie eine Datei als 'nur Text' speichern."
-  },
   "tableHeaders": {
     "decimal": "Dezimal",
     "binary": "Binär",
@@ -15,5 +12,16 @@
     "glyph": "Zeichen"
   },
   "tip": "💡 Fahren Sie mit der Maus über eine Zeile für Details. Nutzen Sie die Suchleiste, um Zeichen schnell nach Dezimal-, Hex-Wert oder Glyph zu finden.",
-  "searchPlaceholder": "Suche nach Dezimal, Hex oder Zeichen..."
+  "searchPlaceholder": "Suche nach Dezimal, Hex oder Zeichen...",
+  "descriptions": {
+    "text": "ASCII steht für American Standard Code for Information Interchange. Computer können nur Zahlen verstehen, daher ist ein ASCII-Code die numerische Darstellung eines Zeichens wie 'a' oder '@' oder einer bestimmten Aktion. ASCII wurde vor langer Zeit entwickelt, und die nicht-druckbaren Zeichen werden heute selten für ihren ursprünglichen Zweck verwendet. Unten finden Sie die ASCII-Zeichentabelle mit Beschreibungen der ersten 32 nicht-druckbaren Zeichen. ASCII wurde eigentlich für die Nutzung mit Fernschreibern entwickelt, daher sind die Beschreibungen etwas unklar. Wenn jemand Ihren Lebenslauf im ASCII-Format haben möchte, bedeutet das lediglich, dass er 'reinen' Text ohne Formatierung wie Tabulatoren, Fettdruck oder Unterstreichungen möchte — das Rohformat, das jeder Computer verstehen kann. Dies ist meistens der Fall, damit die Datei problemlos in eigene Anwendungen importiert werden kann. Notepad.exe erstellt ASCII-Text, oder in MS Word können Sie eine Datei als 'Nur Text' speichern.",
+    "whatIsTitle": "Was ist die ASCII-Tabelle?",
+    "aeoDefinition": "Die ASCII-Tabelle ist ein kostenloses Online-Nachschlagewerk für ASCII-Zeichen mit Hex-, Oktal-, Dezimal- und HTML-Codes. Enthält Suche, Filterung und Konvertierungstools. Läuft vollständig in Ihrem Browser.",
+    "whatIsP1": "ASCII (American Standard Code for Information Interchange) ist ein Zeichencodierungsstandard, der Buchstaben, Ziffern, Satzzeichen und Steuerzeichen numerische Werte zuweist. Er umfasst 128 Zeichen von 0 bis 127. Siehe [HTML-Entitäten](/htmlcode) für websichere Zeichen oder [Zahlenbasen-Konverter](/numbase) für Hex-/Binär-Umrechnungen.",
+    "whatIsP2": "Dieses Tool bietet eine vollständige interaktive ASCII-Referenztabelle mit Suche, Zeichen-Code-Konvertierung und kategorisierten Bereichen für druckbare Zeichen und Steuercodes.",
+    "faq1Q": "Was ist ASCII?",
+    "faq1A": "ASCII (American Standard Code for Information Interchange) ist ein 7-Bit-Zeichenkodierungsstandard, der 128 Zeichen abdeckt: englische Buchstaben, Ziffern, Interpunktion und Steuerzeichen.",
+    "faq2Q": "Welche Steuerzeichen sind enthalten?",
+    "faq2A": "Alle 33 Steuercodes (0-31 und 127) einschließlich NUL, TAB, LF, CR, ESC und DEL mit Beschreibungen ihrer ursprünglichen Fernschreiber-Funktionen."
+  }
 }

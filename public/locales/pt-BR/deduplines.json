@@ -18,9 +18,15 @@
     "howCase": "Diferenciar maiúsculas: Quando marcado, 'Olá' e 'olá' são tratados como linhas diferentes.",
     "howTrim": "Ignorar espaços: Quando marcado, espaços no início e fim são ignorados durante a comparação.",
     "howEmpty": "Remover linhas vazias: Quando marcado, linhas vazias e com apenas espaços são removidas.",
-    "useCasesTitle": "Casos de uso comuns",
     "useCasesP1": "Remover entradas duplicadas em arquivos de log.",
     "useCasesP2": "Limpar arquivos de configuração com diretivas repetidas.",
-    "useCasesP3": "Deduplicar linhas em dados CSV antes do processamento."
+    "useCasesP3": "Deduplicar linhas em dados CSV antes do processamento.",
+    "faq1Q": "O que a ferramenta Deduplicar Linhas faz?",
+    "faq1A": "Remove linhas duplicadas do seu texto oferecendo opções para preservar ou remover linhas vazias, cortar espaços em branco e ordenar a saída.",
+    "faq2Q": "A deduplicação diferencia maiúsculas de minúsculas?",
+    "faq2A": "Por padrão, sim. Você pode ativar o modo insensível a maiúsculas para tratar 'Olá' e 'olá' como duplicados.",
+    "faq3Q": "Posso ver o que foi removido?",
+    "faq3A": "A ferramenta mostra a saída limpa e a contagem de duplicados removidos. Você pode comparar entrada e saída para verificar os resultados.",
+    "aeoDefinition": "O Deduplicador de Linhas é uma ferramenta online gratuita que remove linhas duplicadas de texto preservando a ordem. Suporta correspondência sensível a maiúsculas, remoção de espaços e remoção de linhas vazias. Roda inteiramente no seu navegador."
   }
 }

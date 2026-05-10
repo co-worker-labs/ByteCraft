@@ -4,10 +4,15 @@ import { useState } from "react";
 import { CopyButton } from "../../../components/ui/copy-btn";
 import Layout from "../../../components/layout";
 import { showToast } from "../../../libs/toast";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { StyledTextarea, StyledCheckbox } from "../../../components/ui/input";
 import { Button } from "../../../components/ui/button";
 import { ChevronsDown, ChevronsUp, X } from "lucide-react";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 function encodeComponent(input: string): string {
   return encodeURIComponent(input);
@@ -264,12 +269,20 @@ function Conversion() {
 
 function Description() {
   const t = useTranslations("urlencoder");
+  const tc = useTranslations("common");
+  const locale = useLocale();
+
   return (
     <section id="description" className="mt-8">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
           <p>{t("descriptions.whatIsP2")}</p>
         </div>
       </div>
@@ -324,7 +337,7 @@ function Description() {
 
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">
-          {t("descriptions.useCasesTitle")}
+          {tc("descriptions.useCasesTitle")}
         </h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{t("descriptions.useCasesP1")}</p>
@@ -335,7 +348,7 @@ function Description() {
 
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">
-          {t("descriptions.limitationsTitle")}
+          {tc("descriptions.limitationsTitle")}
         </h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{t("descriptions.limitationsP1")}</p>
@@ -347,21 +360,21 @@ function Description() {
 }
 
 export default function UrlencoderPage() {
-  const tc = useTranslations("common");
   const t = useTranslations("tools");
   const title = t("urlencoder.shortTitle");
 
   return (
-    <Layout title={title}>
+    <Layout
+      title={title}
+      categoryLabel={t("categories.encoding")}
+      categorySlug="encoding-conversion"
+    >
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
 
         <Conversion />
         <Description />
+        <RelatedTools currentTool="urlencoder" />
       </div>
     </Layout>
   );

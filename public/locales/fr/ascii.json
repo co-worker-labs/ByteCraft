@@ -1,9 +1,6 @@
 {
   "printableCharacters": "Caractères imprimables",
   "controlCodeCharts": "Tableaux des codes de contrôle",
-  "description": {
-    "text": "ASCII signifie American Standard Code for Information Interchange. Les ordinateurs ne comprennent que les nombres, donc un code ASCII est la représentation numérique d'un caractère comme « a » ou « @ », ou d'une action. ASCII a été développé il y a longtemps et les caractères non imprimables sont rarement utilisés pour leur fonction d'origine. Ci-dessous se trouve la table de caractères ASCII, qui inclut les descriptions des 32 premiers caractères non imprimables. ASCII a été conçu à l'origine pour les téléscripteurs, les descriptions sont donc parfois obscures. Si quelqu'un vous demande votre CV au format ASCII, cela signifie simplement qu'il veut du texte brut sans mise en forme (pas de tabulations, pas de gras, pas de souligné), le format brut que tout ordinateur peut comprendre. Cela lui permet d'importer facilement le fichier dans ses propres applications. Le Bloc-notes crée du texte ASCII, et dans MS Word vous pouvez enregistrer un fichier en « texte seulement »."
-  },
   "tableHeaders": {
     "decimal": "Décimal",
     "binary": "Binaire",
@@ -15,5 +12,16 @@
     "glyph": "Glyphe"
   },
   "tip": "💡 Survolez une ligne pour voir les détails. Utilisez la barre de recherche pour trouver rapidement un caractère par sa valeur décimale, hexadécimale ou son glyphe.",
-  "searchPlaceholder": "Rechercher par décimal, hex ou caractère..."
+  "searchPlaceholder": "Rechercher par décimal, hex ou caractère...",
+  "descriptions": {
+    "whatIsTitle": "Qu'est-ce que la Table ASCII ?",
+    "whatIsP1": "ASCII (American Standard Code for Information Interchange) est une norme d'encodage de caractères qui associe des valeurs numériques aux lettres, chiffres, signes de ponctuation et codes de contrôle. Elle couvre 128 caractères, de 0 à 127.",
+    "whatIsP2": "Cet outil fournit une table de référence ASCII interactive et complète, avec recherche, conversion caractère/code et des sections organisées pour les caractères imprimables et les codes de contrôle.",
+    "faq1Q": "Qu'est-ce que ASCII ?",
+    "faq1A": "ASCII (American Standard Code for Information Interchange) est une norme d'encodage de caractères 7 bits couvrant 128 caractères : lettres anglaises, chiffres, ponctuation et codes de contrôle.",
+    "faq2Q": "Quels caractères de contrôle sont inclus ?",
+    "faq2A": "Les 33 codes de contrôle (0-31 et 127) incluant NUL, TAB, LF, CR, ESC et DEL, avec les descriptions de leurs fonctions originales de téléscripteur.",
+    "text": "ASCII signifie American Standard Code for Information Interchange (Code américain normalisé pour l'échange d'information). Les ordinateurs ne comprennent que les nombres, un code ASCII est donc la représentation numérique d'un caractère tel que « a » ou « @ » ou d'une action quelconque. ASCII a été développé il y a longtemps et les caractères non imprimables sont rarement utilisés pour leur fonction d'origine. Vous trouverez ci-dessous la table de caractères ASCII, incluant les descriptions des 32 premiers caractères non imprimables. ASCII a en réalité été conçu pour les téléscripteurs, les descriptions sont donc parfois obscures. Si quelqu'un vous demande votre CV au format ASCII, cela signifie simplement du texte brut sans mise en forme (pas de tabulations, gras ou souligné) — le format brut que tout ordinateur peut comprendre. C'est généralement pour pouvoir importer facilement le fichier dans leurs propres applications. Le Bloc-notes crée du texte ASCII, et dans MS Word vous pouvez enregistrer un fichier en « texte seulement ».",
+    "aeoDefinition": "La Table ASCII est un outil gratuit en ligne de référence pour les caractères ASCII avec codes hexadécimaux, octaux, décimaux et HTML. Inclut recherche, filtrage et outils de conversion. Fonctionne entièrement dans votre navigateur."
+  }
 }

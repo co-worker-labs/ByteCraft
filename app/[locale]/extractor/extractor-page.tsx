@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { Copy, FolderOpen, Upload, X } from "lucide-react";
 import Layout from "../../../components/layout";
 import { StyledTextarea, StyledCheckbox } from "../../../components/ui/input";
@@ -10,6 +11,10 @@ import { Button } from "../../../components/ui/button";
 import { showToast } from "../../../libs/toast";
 import { useDropZone } from "../../../hooks/useDropZone";
 import { extract, type ExtractorType, type ExtractionResult } from "../../../libs/extractor/main";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const TYPE_COLORS: Record<ExtractorType, string> = {
   email: "bg-[#06d6a0]/15 text-[#06d6a0] border-[#06d6a0]/30",
@@ -298,8 +303,19 @@ function Conversion() {
 
 function Description() {
   const t = useTranslations("extractor");
+  const tc = useTranslations("common");
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section id="reference" className="mt-6">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="flex items-center gap-3 my-6">
         <div className="flex-1 h-px bg-border-default" />
         <span className="font-mono text-xs font-semibold text-fg-muted uppercase tracking-wider">
@@ -354,23 +370,29 @@ function Description() {
           <li>• {t("descriptions.tip4")}</li>
         </ul>
       </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {tc("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
     </section>
   );
 }
 
 export default function ExtractorPage() {
   const t = useTranslations("tools");
-  const tc = useTranslations("common");
+  const title = t("extractor.shortTitle");
   return (
-    <Layout title={t("extractor.shortTitle")}>
+    <Layout title={title} categoryLabel={t("categories.text")} categorySlug="text-processing">
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
         <Conversion />
         <Description />
+        <RelatedTools currentTool="extractor" />
       </div>
     </Layout>
   );

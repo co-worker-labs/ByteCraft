@@ -1,8 +1,8 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import {
-  Lock,
   Eye,
   EyeOff,
   QrCode,
@@ -14,9 +14,14 @@ import {
   ChevronDown,
   RotateCcw,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import "rc-slider/assets/index.css";
-import Slider from "rc-slider";
+
+const Slider = dynamic(() => import("rc-slider"), {
+  ssr: false,
+  loading: () => <div className="h-6 w-full animate-pulse bg-bg-input rounded" />,
+});
 import Layout from "../../../components/layout";
 import { Button } from "../../../components/ui/button";
 import {
@@ -46,6 +51,10 @@ import type {
   DotStyle,
   ErrorCorrection,
 } from "../../../libs/qrcode/types";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const CONTENT_TYPES: ContentType[] = ["text", "wifi", "vcard", "email", "sms", "whatsapp"];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -711,13 +720,20 @@ function StyleConfig({
 
 function Description() {
   const t = useTranslations("qrcode");
+  const tc = useTranslations("common");
+
   return (
     <div className="mt-8 space-y-6">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-4">
         <Info size={18} className="text-accent-purple mt-0.5 shrink-0" />
         <div className="space-y-2">
-          <h3 className="text-sm font-semibold text-fg-primary">{t("description.title")}</h3>
-          <p className="text-sm text-fg-secondary leading-relaxed">{t("description.intro")}</p>
+          <h3 className="text-sm font-semibold text-fg-primary">{t("descriptions.title")}</h3>
+          <p className="text-sm text-fg-secondary leading-relaxed">{t("descriptions.intro")}</p>
         </div>
       </div>
 
@@ -725,7 +741,7 @@ function Description() {
         <div className="flex items-center gap-2 mb-3">
           <span className="w-1.5 h-4 rounded-full bg-accent-cyan" />
           <span className="font-mono text-xs font-semibold text-fg-muted uppercase tracking-wider">
-            {t("description.ecTitle")}
+            {t("descriptions.ecTitle")}
           </span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -734,7 +750,7 @@ function Description() {
               key={k}
               className="rounded-lg border border-border-default bg-bg-elevated/30 p-3 text-sm text-fg-secondary leading-relaxed"
             >
-              {t(`description.${k}`)}
+              {t(`descriptions.${k}`)}
             </div>
           ))}
         </div>
@@ -742,14 +758,18 @@ function Description() {
 
       <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-4">
         <div className="space-y-2 text-sm text-fg-secondary leading-relaxed">
-          <h3 className="text-sm font-semibold text-fg-primary">{t("description.tipsTitle")}</h3>
+          <h3 className="text-sm font-semibold text-fg-primary">{t("descriptions.tipsTitle")}</h3>
           <ul className="list-disc pl-5 space-y-1">
-            <li>{t("description.tipMargin")}</li>
-            <li>{t("description.tipContrast")}</li>
-            <li>{t("description.tipLogo")}</li>
-            <li>{t("description.tipTest")}</li>
+            <li>{t("descriptions.tipMargin")}</li>
+            <li>{t("descriptions.tipContrast")}</li>
+            <li>{t("descriptions.tipLogo")}</li>
+            <li>{t("descriptions.tipTest")}</li>
           </ul>
         </div>
+      </div>
+      <div>
+        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.faq1Q")}</h2>
+        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{t("descriptions.faq1A")}</p>
       </div>
     </div>
   );
@@ -889,12 +909,9 @@ export default function QrCodePage() {
   };
 
   return (
-    <Layout title={title}>
+    <Layout title={title} categoryLabel={tTools("categories.generators")} categorySlug="generators">
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <Lock size={18} className="text-accent-cyan mt-0.5 shrink-0" />
-          <span className="text-sm text-fg-secondary leading-relaxed">{t("localGenerated")}</span>
-        </div>
+        <PrivacyBanner />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
           <div className="flex flex-col gap-4">
@@ -1003,6 +1020,7 @@ export default function QrCodePage() {
         </div>
 
         <Description />
+        <RelatedTools currentTool="qrcode" />
       </div>
     </Layout>
   );

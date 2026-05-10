@@ -1,7 +1,4 @@
 {
-  "description": {
-    "text": "Complete HTTP status code reference covering all IANA official codes from RFC 9110 and related specifications — including WebDAV (RFC 4918), additional HTTP status codes (RFC 6585), 308 Permanent Redirect (RFC 7538), 451 Unavailable For Legal Reasons (RFC 7725), and Early Hints (RFC 8297). Also includes unofficial platform extensions from Nginx, Cloudflare, and IIS. Each code shows its description, RFC reference, and commonly used codes include usage scenarios and common causes for quick troubleshooting."
-  },
   "tip": "Hover over any row on desktop or tap on mobile to see usage details and common causes.",
   "searchPlaceholder": "Search by code, name, or description...",
   "noResults": "No results found",
@@ -449,5 +446,13 @@
     "530": {
       "description": "Cloudflare could not resolve the DNS for the origin server."
     }
+  },
+  "descriptions": {
+    "text": "A complete reference of HTTP status codes with descriptions, categories, and RFC specification links. Covers all IANA-registered codes plus common unofficial codes. Test APIs with the [HTTP Client](/httpclient), or encode URLs with the [URL Encoder](/urlencoder).",
+    "aeoDefinition": "HTTP Status Codes is a free online reference for all HTTP status codes with descriptions, categories, and RFC links. Covers official IANA codes and common unofficial codes.",
+    "faq1Q": "How many status codes are documented?",
+    "faq1A": "The tool covers all standard status codes across 5 categories: 1xx (Informational), 2xx (Success), 3xx (Redirection), 4xx (Client Error), and 5xx (Server Error).",
+    "faq2Q": "Can I search for specific codes?",
+    "faq2A": "Yes. Search by code number, phrase, or category to quickly find the status code you need."
   }
 }

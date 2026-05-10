@@ -3,8 +3,14 @@
   "deselect": "Désélectionner ({count})",
   "noFileChosen": "Aucun fichier choisi",
   "selectedFiles": "{count} fichiers sélectionnés",
-  "selectedFile": "{count} fichier sélectionné",
   "checksumOutput": "Résultat du checksum",
   "algoTip": "Pour les gros fichiers, sélectionnez uniquement les algorithmes nécessaires afin de réduire le temps de traitement.",
-  "calculate": "Calculer"
+  "calculate": "Calculer",
+  "descriptions": {
+    "faq1Q": "Qu'est-ce qu'un checksum de fichier ?",
+    "faq1A": "Un checksum est une valeur de hachage calculée à partir du contenu d'un fichier. Il est utilisé pour vérifier l'intégrité des fichiers — si un seul octet change, le checksum change complètement.",
+    "faq2Q": "Quels algorithmes de hachage sont disponibles ?",
+    "faq2A": "MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 et CRC32. Plusieurs algorithmes peuvent s'exécuter simultanément sur le même fichier.",
+    "aeoDefinition": "La Somme de contrôle de fichier est un outil gratuit en ligne pour calculer les sommes de contrôle MD5, SHA-1, SHA-256 et SHA-512 de n'importe quel fichier. Prend en charge les fichiers de taille illimitée avec un traitement 100% côté client."
+  }
 }

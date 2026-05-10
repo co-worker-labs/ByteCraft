@@ -3,6 +3,11 @@
   "pasteToCompare": "Zum Vergleichen einfügen",
   "descriptions": {
     "hmacTitle": "HMAC",
-    "hmac": "HMAC (Hash-based Message Authentication Code) ist ein Mechanismus zur Nachrichtenauthentifizierung unter Verwendung kryptografischer Hash-Funktionen."
+    "hmac": "HMAC (Hash-based Message Authentication Code) ist ein Mechanismus zur Nachrichtenauthentifizierung unter Verwendung kryptografischer Hash-Funktionen.",
+    "faq1Q": "Was ist kryptografisches Hashing?",
+    "faq1A": "Kryptografisches Hashing wandelt Eingabedaten in einen Fingerabdruck fester Größe (Hash) um. Dieselbe Eingabe erzeugt immer denselben Hash, aber eine winzige Änderung verändert die Ausgabe vollständig.",
+    "faq2Q": "Welche Hash-Algorithmen werden unterstützt?",
+    "faq2A": "Dieses Tool unterstützt MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3-224/256/384/512, Keccak-224/256/384/512 und RIPEMD-160. HMAC-Varianten sind ebenfalls verfügbar.",
+    "aeoDefinition": "Der Hash-Generator ist ein kostenloses Online-Tool zum Erzeugen von MD5-, SHA-1-, SHA-256-, SHA-512-, SHA3-, Keccak- und RIPEMD-160-Hashes. Unterstützt HMAC und Datei-Hashing. Es werden keine Daten an einen Server gesendet."
   }
 }

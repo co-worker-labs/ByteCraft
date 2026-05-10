@@ -1,9 +1,6 @@
 {
   "printableCharacters": "Caracteres imprimibles",
   "controlCodeCharts": "Tabla de códigos de control",
-  "description": {
-    "text": "ASCII significa American Standard Code for Information Interchange (Código Estadounidense Estándar para el Intercambio de Información). Las computadoras solo entienden números, así que un código ASCII es la representación numérica de un carácter como 'a' o '@' o de alguna acción. ASCII se desarrolló hace mucho tiempo y los caracteres no imprimibles rara vez se usan para su propósito original. A continuación se muestra la tabla de caracteres ASCII, que incluye descripciones de los primeros 32 caracteres no imprimibles. ASCII se diseñó originalmente para su uso con teletipos, por lo que las descripciones pueden resultar algo oscuras. Si alguien te pide tu CV en formato ASCII, significa que quieren texto sin formato, sin negritas, subrayados ni tabulaciones, en el formato crudo que cualquier computadora puede entender. Suele ser para que puedan importar el archivo a sus propias aplicaciones sin problemas. El Bloc de notas crea texto ASCII, o en MS Word puedes guardar un archivo como 'solo texto'."
-  },
   "tableHeaders": {
     "decimal": "Decimal",
     "binary": "Binario",
@@ -15,5 +12,16 @@
     "glyph": "Glifo"
   },
   "tip": "💡 Pasa el cursor sobre cualquier fila para ver los detalles. Usa la barra de búsqueda para encontrar caracteres rápidamente por decimal, hex o glifo.",
-  "searchPlaceholder": "Buscar por decimal, hex o carácter..."
+  "searchPlaceholder": "Buscar por decimal, hex o carácter...",
+  "descriptions": {
+    "text": "ASCII significa American Standard Code for Information Interchange. Las computadoras solo pueden entender números, por lo que un código ASCII es la representación numérica de un carácter como 'a' o '@' o una acción de algún tipo. ASCII se desarrolló hace mucho tiempo y ahora los caracteres no imprimibles rara vez se usan para su propósito original. A continuación se muestra la tabla de caracteres ASCII, que incluye descripciones de los primeros 32 caracteres no imprimibles. ASCII fue diseñado originalmente para su uso con teletipos, por lo que las descripciones son algo oscuras. Si alguien dice que quiere tu CV en formato ASCII, significa que quieren texto sin formato, sin negritas ni subrayados, el formato original que cualquier computadora puede entender. Esto suele ser para importar el archivo fácilmente a sus propias aplicaciones. El Bloc de notas crea texto ASCII, o en MS Word puedes guardar un archivo como 'solo texto'.",
+    "whatIsTitle": "¿Qué es la Tabla ASCII?",
+    "aeoDefinition": "La Tabla ASCII es una referencia gratuita online de caracteres ASCII con códigos hexadecimales, octales, decimales y HTML. Incluye búsqueda, filtrado y herramientas de conversión. Se ejecuta completamente en tu navegador.",
+    "whatIsP1": "ASCII (American Standard Code for Information Interchange) es un estándar de codificación de caracteres que asigna valores numéricos a letras, dígitos, signos de puntuación y códigos de control. Abarca 128 caracteres, del 0 al 127. Consulta las [Entidades HTML](/htmlcode) para caracteres web-safe, o el [Conversor de base numérica](/numbase) para conversiones hex/binarias.",
+    "whatIsP2": "Esta herramienta ofrece una tabla de referencia ASCII interactiva y completa, con búsqueda, conversión entre caracteres y códigos, y secciones organizadas para caracteres imprimibles y códigos de control.",
+    "faq1Q": "¿Qué es ASCII?",
+    "faq1A": "ASCII (American Standard Code for Information Interchange) es un estándar de codificación de caracteres de 7 bits que cubre 128 caracteres: letras inglesas, dígitos, puntuación y códigos de control.",
+    "faq2Q": "¿Qué caracteres de control están incluidos?",
+    "faq2A": "Los 33 códigos de control (0-31 y 127) incluyendo NUL, TAB, LF, CR, ESC y DEL, con descripciones de sus funciones originales de teletipo."
+  }
 }

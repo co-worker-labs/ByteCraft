@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, Fragment } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import {
   Send,
   Clock,
@@ -14,7 +14,12 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import { Dialog, Transition } from "@headlessui/react";
-import JsonView from "@uiw/react-json-view";
+import dynamic from "next/dynamic";
+
+const JsonView = dynamic(() => import("@uiw/react-json-view"), {
+  ssr: false,
+  loading: () => <div className="h-48 animate-pulse bg-bg-input rounded" />,
+});
 import Layout from "../../../components/layout";
 import { NeonTabs } from "../../../components/ui/tabs";
 import { Button } from "../../../components/ui/button";
@@ -38,8 +43,10 @@ import {
 } from "../../../libs/httpclient/types";
 import { useIsMobile } from "../../../hooks/use-is-mobile";
 import { formatBytes } from "../../../utils/storage";
-import { WebApplicationJsonLd, BreadcrumbJsonLd } from "../../../components/json-ld";
-import { SITE_URL } from "../../../libs/site";
+import RelatedTools from "../../../components/related-tools";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
+import { renderLinkedText } from "../../../utils/linked-text";
 
 const METHOD_COLORS: Record<string, string> = {
   GET: "text-green-500",
@@ -808,15 +815,23 @@ function ResponseBodyTab({
 function DescriptionIntro() {
   const t = useTranslations("httpclient");
   const tc = useTranslations("common");
+  const locale = useLocale();
   const [expanded, setExpanded] = useState(false);
 
   return (
     <section className="py-3">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="relative">
         <div
           className={`overflow-hidden transition-all duration-300 ${expanded ? "max-h-[300px]" : "max-h-20"}`}
         >
-          <p className="text-fg-secondary text-sm leading-8 indent-12">{t("description.text")}</p>
+          <p className="text-fg-secondary text-sm leading-8 indent-12">
+            {renderLinkedText(t("descriptions.text"), locale)}
+          </p>
         </div>
         {!expanded && (
           <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-bg-base to-transparent pointer-events-none" />
@@ -845,27 +860,45 @@ function DescriptionIntro() {
 
 function DescriptionDetails() {
   const t = useTranslations("httpclient");
+  const tc = useTranslations("common");
+  const locale = useLocale();
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section className="py-3">
       <div className="mt-4">
         <h3 className="text-sm font-semibold text-fg-primary mb-2">
-          {t("description.features.title")}
+          {t("descriptions.features.title")}
         </h3>
         <ul className="space-y-1 text-sm text-fg-secondary">
-          <li>• {t("description.features.methods")}</li>
-          <li>• {t("description.features.auth")}</li>
-          <li>• {t("description.features.body")}</li>
-          <li>• {t("description.features.response")}</li>
-          <li>• {t("description.features.history")}</li>
-          <li>• {t("description.features.proxy")}</li>
+          <li>• {t("descriptions.features.methods")}</li>
+          <li>• {t("descriptions.features.auth")}</li>
+          <li>• {t("descriptions.features.body")}</li>
+          <li>• {t("descriptions.features.response")}</li>
+          <li>• {t("descriptions.features.history")}</li>
+          <li>• {t("descriptions.features.proxy")}</li>
         </ul>
       </div>
 
       <div className="mt-4">
         <h3 className="text-sm font-semibold text-fg-primary mb-2">
-          {t("description.cors.title")}
+          {t("descriptions.cors.title")}
         </h3>
-        <p className="text-sm text-fg-secondary leading-7">{t("description.cors.text")}</p>
+        <p className="text-sm text-fg-secondary leading-7">
+          {renderLinkedText(t("descriptions.cors.text"), locale)}
+        </p>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {tc("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
       </div>
     </section>
   );
@@ -873,26 +906,17 @@ function DescriptionDetails() {
 
 export default function HttpClientPage() {
   const t = useTranslations("tools");
+  const title = t("httpclient.shortTitle");
   const store = useHttpClient();
 
   return (
-    <Layout title={t("httpclient.shortTitle")}>
-      <WebApplicationJsonLd
-        name={t("httpclient.title")}
-        description={t("httpclient.description")}
-        url={`${SITE_URL}/httpclient`}
-      />
-      <BreadcrumbJsonLd
-        items={[
-          { name: "OmniKit", url: SITE_URL },
-          { name: t("httpclient.shortTitle"), url: `${SITE_URL}/httpclient` },
-        ]}
-      />
+    <Layout title={title} categoryLabel={t("categories.reference")} categorySlug="reference-lookup">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <DescriptionIntro />
         <RequestPanel store={store} />
         <ResponsePanel store={store} />
         <DescriptionDetails />
+        <RelatedTools currentTool="httpclient" />
       </div>
     </Layout>
   );

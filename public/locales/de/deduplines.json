@@ -18,9 +18,15 @@
     "howCase": "Groß-/Kleinschreibung: Wenn aktiviert, werden 'Hallo' und 'hallo' als unterschiedliche Zeilen behandelt.",
     "howTrim": "Leerzeichen ignorieren: Wenn aktiviert, werden führende und nachfolgende Leerzeichen beim Vergleich ignoriert.",
     "howEmpty": "Leere Zeilen entfernen: Wenn aktiviert, werden leere Zeilen und Zeilen mit nur Leerzeichen entfernt.",
-    "useCasesTitle": "Häufige Anwendungsfälle",
     "useCasesP1": "Entfernen doppelter Einträge aus Protokolldateien.",
     "useCasesP2": "Bereinigen von Konfigurationsdateien mit wiederholten Direktiven.",
-    "useCasesP3": "Deduplizierung von Zeilen in CSV-Daten vor der Verarbeitung."
+    "useCasesP3": "Deduplizierung von Zeilen in CSV-Daten vor der Verarbeitung.",
+    "faq1Q": "Was macht das Zeilen-Deduplizierungs-Tool?",
+    "faq1A": "Es entfernt doppelte Zeilen aus Ihrem Text und bietet Optionen zum Beibehalten oder Entfernen leerer Zeilen, zum Trimmen von Leerzeichen und zum Sortieren der Ausgabe.",
+    "faq2Q": "Ist die Deduplizierung Groß-/Kleinschreibung-sensitiv?",
+    "faq2A": "Standardmäßig ja. Sie können den Modus ohne Groß-/Kleinschreibungsunterscheidung aktivieren, um 'Hallo' und 'hallo' als Duplikate zu behandeln.",
+    "faq3Q": "Kann ich sehen, was entfernt wurde?",
+    "faq3A": "Das Tool zeigt die bereinigte Ausgabe und die Anzahl der entfernten Duplikate. Sie können Ein- und Ausgabe vergleichen, um die Ergebnisse zu überprüfen.",
+    "aeoDefinition": "Die Zeilendeduplizierung ist ein kostenloses Online-Tool, das doppelte Zeilen aus Text entfernt, während die Reihenfolge erhalten bleibt. Unterstützt groß-/kleinsensitive Erkennung, Leerzeichen-Trimming und Entfernung leerer Zeilen. Läuft vollständig in Ihrem Browser."
   }
 }

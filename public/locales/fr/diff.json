@@ -12,8 +12,7 @@
   "view": {
     "label": "Vue",
     "sideBySide": "Côte à côte",
-    "inline": "En ligne",
-    "stacked": "Empilé"
+    "inline": "En ligne"
   },
   "layout": {
     "label": "Disposition",
@@ -45,13 +44,16 @@
     "howP2": "Basculez entre les vues côte à côte et en ligne, ignorez les espaces ou la casse si nécessaire, et utilisez Formater le JSON pour normaliser les entrées JSON avant comparaison.",
     "algorithmTitle": "Algorithme",
     "algorithmP1": "Basé sur l'algorithme de diff de Myers via jsdiff. L'outil calcule d'abord un diff au niveau des lignes, puis pour chaque paire de lignes supprimées/ajoutées adjacentes, effectue un second passage au niveau des mots pour mettre en évidence les mots réellement modifiés, la même convention utilisée par les pull requests GitHub.",
-    "useCasesTitle": "Cas d'utilisation courants",
     "useCasesP1": "Comparer deux fichiers de configuration (JSON, YAML, .env) pour repérer les écarts entre environnements.",
     "useCasesP2": "Relire une modification de code avant de la committer, surtout quand on travaille hors éditeur.",
     "useCasesP3": "Réconcilier deux versions d'un document, d'un journal ou d'un résultat de requête côte à côte.",
-    "limitationsTitle": "Limites",
     "limitationsP1": "L'outil ne compare que du texte. Les fichiers binaires sont détectés et rejetés pour garder un résultat pertinent.",
     "limitationsP2": "Les entrées sont limitées à 5 Mo par côté. Au-delà de 512 Ko, le diff s'exécute dans un Web Worker en arrière-plan. La page reste réactive mais le diff prend proportionnellement plus de temps pour les très grosses entrées.",
-    "limitationsP3": "Les différences de fins de ligne (CRLF vs LF) et les espaces de fin de ligne sont normalisées. Elles n'apparaîtront jamais comme des changements."
-  }
+    "limitationsP3": "Les différences de fins de ligne (CRLF vs LF) et les espaces de fin de ligne sont normalisées. Elles n'apparaîtront jamais comme des changements.",
+    "faq1Q": "Qu'est-ce qu'un outil de diff de texte ?",
+    "faq1A": "Un outil de diff compare deux textes et met en évidence les différences. Cet outil montre les ajouts, suppressions et modifications au niveau du mot ou du caractère.",
+    "aeoDefinition": "Text Diff est un outil gratuit en ligne pour comparer deux textes avec une précision au niveau des lignes et des mots. Vue côte à côte ou en ligne avec les changements mis en évidence. Fonctionne entièrement dans votre navigateur — aucune donnée n'est envoyée à un serveur."
+  },
+  "tooLarge": "Le fichier est trop volumineux pour être comparé",
+  "binaryRejected": "Les fichiers binaires ne sont pas supportés"
 }

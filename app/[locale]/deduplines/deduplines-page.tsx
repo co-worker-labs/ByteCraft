@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { Clipboard, ClipboardCheck, FolderOpen, Upload, X, Download } from "lucide-react";
 import Layout from "../../../components/layout";
 import { StyledCheckbox } from "../../../components/ui/input";
@@ -10,6 +11,10 @@ import { showToast } from "../../../libs/toast";
 import { useDropZone } from "../../../hooks/useDropZone";
 import { dedupLines, defaultOptions } from "../../../libs/deduplines/main";
 import type { DedupOptions } from "../../../libs/deduplines/main";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 function downloadText(content: string, filename: string) {
   const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
@@ -192,12 +197,24 @@ function Conversion() {
 
 function Description() {
   const t = useTranslations("deduplines");
+  const tc = useTranslations("common");
+  const locale = useLocale();
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section id="description" className="mt-8">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
         </div>
       </div>
 
@@ -213,7 +230,7 @@ function Description() {
 
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">
-          {t("descriptions.useCasesTitle")}
+          {tc("descriptions.useCasesTitle")}
         </h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{t("descriptions.useCasesP1")}</p>
@@ -221,23 +238,29 @@ function Description() {
           <p>{t("descriptions.useCasesP3")}</p>
         </div>
       </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {tc("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
     </section>
   );
 }
 
 export default function DeduplinesPage() {
   const t = useTranslations("tools");
-  const tc = useTranslations("common");
+  const title = t("deduplines.shortTitle");
   return (
-    <Layout title={t("deduplines.shortTitle")}>
+    <Layout title={title} categoryLabel={t("categories.text")} categorySlug="text-processing">
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
         <Conversion />
         <Description />
+        <RelatedTools currentTool="deduplines" />
       </div>
     </Layout>
   );

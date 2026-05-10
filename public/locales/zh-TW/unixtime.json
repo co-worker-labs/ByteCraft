@@ -3,8 +3,7 @@
     "title": "目前 Unix 時間戳",
     "pause": "暫停",
     "resume": "恢復",
-    "localLabel": "本地",
-    "utcLabel": "UTC"
+    "localLabel": "本地"
   },
   "tsToDate": {
     "title": "時間戳 → 日期時間",
@@ -14,7 +13,6 @@
     "unitMilliseconds": "毫秒",
     "inputLabel": "輸入",
     "inputPlaceholder": "例如 1714521600",
-    "paste": "貼上",
     "clear": "清除",
     "quickLegend": "快捷",
     "now": "現在",
@@ -22,9 +20,7 @@
     "todayUtc": "今日 00:00（UTC）",
     "rows": {
       "local": "本地時間",
-      "utc": "UTC 時間",
       "iso": "ISO 8601",
-      "sql": "SQL",
       "rfc": "RFC 2822",
       "dayWeek": "星期 / 週數",
       "relative": "相對時間",
@@ -43,7 +39,6 @@
     "msLabel": "毫秒（可選）",
     "tzLegend": "時區",
     "tzLocal": "本地",
-    "tzUtc": "UTC",
     "rows": {
       "seconds": "秒級時間戳",
       "milliseconds": "毫秒級時間戳"
@@ -54,22 +49,28 @@
     "negative": "不支援負數時間戳",
     "tooLong": "位數過長 — 看起來像微秒，請截斷到 13 位",
     "secondsTooLarge": "數值過大，秒級無法表示。切換到毫秒？",
-    "outOfRange": "超出支援範圍（1970-01-01 至 9999-12-31）",
-    "pasteFailed": "貼上不可用 — 請使用 Ctrl+V / ⌘V"
+    "outOfRange": "超出支援範圍（1970-01-01 至 9999-12-31）"
   },
   "toast": {
     "paused": "已暫停",
     "resumed": "已恢復",
     "applied": "已套用"
   },
-  "description": {
+  "descriptions": {
     "whatIsTitle": "什麼是 Unix 時間戳？",
-    "whatIs": "Unix 時間戳是自 1970-01-01T00:00:00Z（Unix 紀元）以來經過的秒數。它與時區無關 — 同一個數字在世界任何地方都指向同一個時間點。",
-    "secMsTitle": "秒 vs 毫秒",
-    "secMs": "大多數 Unix 工具與日誌使用秒（目前 10 位）。JavaScript 的 Date.getTime()、Java 的 System.currentTimeMillis() 以及許多 Web API 使用毫秒（目前 13 位）。",
+    "whatIs": "Unix 時間戳是自 1970-01-01T00:00:00Z（Unix 紀元）以來經過的秒數。它與時區無關——同一個數字始終指向同一個時間點，無論你身在何處。",
+    "secMsTitle": "秒與毫秒",
+    "secMs": "大多數 Unix 工具和日誌檔案使用秒（目前為 10 位數）。JavaScript 的 Date.getTime()、Java 的 System.currentTimeMillis() 以及許多 Web API 使用毫秒（目前為 13 位數）。",
     "y2k38Title": "2038 年問題",
-    "y2k38": "把 Unix 秒存進 32 位元有符號整數的系統會在 2038-01-19 03:14:07 UTC 溢位。現代 64 位元系統不受影響。",
+    "y2k38": "將 Unix 秒數以有號 32 位元整數儲存的系統，會在 2038-01-19 03:14:07 UTC 溢位。現代 64 位元系統不受影響。",
     "tzTitle": "時區",
-    "tz": "時間戳本身沒有時區。人類可讀格式（如 2024-05-01 00:00:00）取決於顯示時使用的時區。本工具同時顯示本地與 UTC。"
+    "tz": "時間戳本身沒有時區。人類可讀的形式（如 2024-05-01 00:00:00）取決於你在哪個時區顯示它。此工具始終同時顯示本地時間和 UTC。",
+    "aeoDefinition": "Unix 時間戳轉換器是一款免費的線上工具，用於在 Unix 時間戳和人類可讀日期之間轉換。支援秒和毫秒，內建即時時鐘。所有操作完全在瀏覽器中執行。",
+    "faq1Q": "什麼是 Unix 時間戳？",
+    "faq1A": "Unix 時間戳是自 1970 年 1 月 1 日 UTC（Unix 紀元）以來經過的秒數（或毫秒數）。它是一種通用的、與時區無關的時間表示方式。",
+    "faq2Q": "此工具支援時區嗎？",
+    "faq2A": "支援。工具同時顯示 UTC 和你的本地時區，可以在任一時區中將時間戳轉換為日期。",
+    "faq3Q": "Unix 時間戳的範圍是多少？",
+    "faq3A": "標準 32 位元有符號整數支援到 2038 年 1 月 19 日的時間戳（2038 年問題）。此工具使用 JavaScript 的 Date 物件，支援更寬的範圍。"
   }
 }

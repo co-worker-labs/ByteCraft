@@ -9,7 +9,6 @@
   "noResults": "Aucun élément trouvé",
   "emptyState": "Collez ou saisissez du texte ci-dessus pour extraire les emails, URLs et numéros de téléphone",
   "copyAll": "Tout copier",
-  "exportTxt": "TXT",
   "exportCsv": "CSV",
   "exportJson": "JSON",
   "copied": "Copié !",
@@ -36,6 +35,14 @@
     "tip1": "L'extraction est permissive, pas une validation — toutes les correspondances plausibles sont retournées",
     "tip2": "Activez/désactivez les types individuels avec les boutons de bascule",
     "tip3": "Les résultats sont dédupliqués par défaut ; activez \"Afficher les doublons\" pour voir toutes les occurrences",
-    "tip4": "Les numéros de téléphone doivent contenir au moins 7 chiffres pour être reconnus"
-  }
+    "tip4": "Les numéros de téléphone doivent contenir au moins 7 chiffres pour être reconnus",
+    "faq1Q": "Que fait l'Extracteur de texte ?",
+    "faq1A": "Extrait des motifs spécifiques du texte en utilisant des extracteurs basés sur les regex : emails, URL, adresses IP, numéros de téléphone, nombres et motifs personnalisés.",
+    "faq2Q": "Puis-je définir des motifs d'extraction personnalisés ?",
+    "faq2A": "Oui. Écrivez votre propre motif regex pour extraire n'importe quel format de texte. L'outil surligne les correspondances et affiche les groupes de capture.",
+    "faq3Q": "Quels motifs intégrés sont disponibles ?",
+    "faq3A": "Adresses email, URL, adresses IPv4/IPv6, numéros de téléphone, couleurs hex, nombres et dates. Chaque motif est préconfiguré pour les cas d'utilisation courants.",
+    "aeoDefinition": "L'Extracteur d'emails et d'URL est un outil gratuit en ligne qui extrait les emails, URL et numéros de téléphone de n'importe quel texte instantanément. Prend en charge plusieurs formats et le traitement par lots. Fonctionne entièrement dans votre navigateur."
+  },
+  "dropZone": "Déposez un fichier texte"
 }

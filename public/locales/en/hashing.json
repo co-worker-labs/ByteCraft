@@ -2,7 +2,12 @@
   "passphrasePlaceholder": "Paste or type the secret passphrase for HMAC here",
   "pasteToCompare": "Paste to compare",
   "descriptions": {
+    "aeoDefinition": "Hash Generator is a free online tool for generating MD5, SHA-1, SHA-256, SHA-512, SHA3, Keccak, and RIPEMD-160 hashes. Supports HMAC and file hashing. No data is sent to any server.",
     "hmacTitle": "HMAC",
-    "hmac": "Keyed-hash message authentication codes (HMAC) is a mechanism for message authentication using cryptographic hash functions."
+    "hmac": "Keyed-hash message authentication codes (HMAC) is a mechanism for message authentication using cryptographic hash functions.",
+    "faq1Q": "What is cryptographic hashing?",
+    "faq1A": "Cryptographic hashing converts input data into a fixed-size fingerprint (hash). The same input always produces the same hash, but even a tiny change completely alters the output.",
+    "faq2Q": "Is hashing the same as encryption?",
+    "faq2A": "No. Hashing is one-way — you cannot reverse a hash back to the original input. Encryption is two-way. Hashing is used for verification, not confidentiality."
   }
 }

@@ -36,12 +36,15 @@
   },
   "descriptions": {
     "whatIsTitle": "什么是 JWT？",
-    "whatIs": "JWT（JSON Web Token，RFC 7519）是一种开放标准，用于在各方之间以紧凑的 JSON 对象安全地传输信息。它通常用于身份验证和授权。",
+    "whatIs": "JSON Web Token (JWT) 是一种开放标准（RFC 7519），用于在各方之间以 JSON 对象的形式安全传输信息。JWT 常用于 Web 应用程序的身份验证和授权。在此调试令牌，然后使用 [Base64](/base64) 解码验证载荷，或使用 [哈希生成器](/hashing) 检查密钥完整性。",
     "structureTitle": "结构",
     "structure": "JWT 由三部分以点号分隔的 Base64URL 编码组成：头部.载荷.签名。头部指定令牌类型和签名算法。载荷包含声明。签名用于验证完整性。",
     "algorithmsTitle": "支持的算法",
     "algorithms": "HMAC（HS256/384/512）、RSA（RS256/384/512）、RSA-PSS（PS256/384/512）和 ECDSA（ES256/384/512）。不支持未签名的 alg=none。",
     "keyFormatsTitle": "接受的密钥格式",
-    "keyFormats": "HMAC：任意 UTF-8 字符串。非对称：仅支持 PEM 格式——签名使用 PKCS8（-----BEGIN PRIVATE KEY-----），验证使用 SPKI（-----BEGIN PUBLIC KEY-----）。不支持 PKCS1、SEC1、加密 PEM 和 X.509 证书；工具会告诉你具体的 openssl 转换命令。"
+    "keyFormats": "HMAC：任意 UTF-8 字符串。非对称：仅支持 PEM 格式——签名使用 PKCS8（-----BEGIN PRIVATE KEY-----），验证使用 SPKI（-----BEGIN PUBLIC KEY-----）。不支持 PKCS1、SEC1、加密 PEM 和 X.509 证书；工具会告诉你具体的 openssl 转换命令。",
+    "faq1Q": "什么是 JWT？",
+    "faq1A": "JSON Web Token（JWT）是一种开放标准（RFC 7519），用于在各方之间安全地传输信息。它常用于身份认证和信息交换。",
+    "aeoDefinition": "JWT 调试器是一个免费的在线 JSON Web Token 编码、解码和验证工具。支持 HS256、RS256、ES256 等多种算法。所有处理均在浏览器中完成，不会将令牌发送到任何服务器。"
   }
 }

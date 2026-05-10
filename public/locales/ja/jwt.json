@@ -35,6 +35,7 @@
     "algNoneRejected": "alg=noneは拒否されました。このトークンは署名されておらず、検証は意味を持ちません"
   },
   "descriptions": {
+    "aeoDefinition": "JWTデバッガーは、JSON Web Tokenのエンコード、デコード、検証ができる無料オンラインツールです。HS256、RS256、ES256など多数のアルゴリズムに対応。すべての処理はブラウザ上で実行され、トークンがサーバーに送信されることはありません。",
     "whatIsTitle": "JWTとは？",
     "whatIs": "JWT（JSON Web Token、RFC 7519）は、パーティ間で情報を安全に伝送するためのオープンスタンダードです。コンパクトなJSONオブジェクトとして表現され、認証や認可によく使われます。",
     "structureTitle": "構造",
@@ -42,6 +43,8 @@
     "algorithmsTitle": "対応アルゴリズム",
     "algorithms": "HMAC（HS256/384/512）、RSA（RS256/384/512）、RSA-PSS（PS256/384/512）、ECDSA（ES256/384/512）。安全性のため、未署名のalg=noneは拒否されます。",
     "keyFormatsTitle": "対応鍵形式",
-    "keyFormats": "HMAC: 任意のUTF-8文字列。非対称: PEMのみ。署名にはPKCS8（-----BEGIN PRIVATE KEY-----）、検証にはSPKI（-----BEGIN PUBLIC KEY-----）。PKCS1、SEC1、暗号化PEM、X.509証明書は受け付けません。ツールが変換用のopensslコマンドを教えてくれます。"
+    "keyFormats": "HMAC: 任意のUTF-8文字列。非対称: PEMのみ。署名にはPKCS8（-----BEGIN PRIVATE KEY-----）、検証にはSPKI（-----BEGIN PUBLIC KEY-----）。PKCS1、SEC1、暗号化PEM、X.509証明書は受け付けません。ツールが変換用のopensslコマンドを教えてくれます。",
+    "faq1Q": "JWTとは？",
+    "faq1A": "JSON Web Token（JWT）は、JSONオブジェクトとしてパーティ間で情報を安全に送信するためのオープン標準（RFC 7519）です。認証や情報交換によく使われます。"
   }
 }

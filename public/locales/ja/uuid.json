@@ -1,17 +1,13 @@
 {
-  "generatedTitle": "生成されたUUID",
   "version": "バージョン",
   "quantity": "数量",
   "namespace": "ネームスペース",
   "namespaceCustom": "カスタム",
-  "namespaceCustomPlaceholder": "UUIDを入力",
-  "namespaceInvalid": "無効なネームスペースUUID",
   "invalidNamespace": "無効なネームスペースUUID",
   "namespaceDNS": "DNS（ドメイン名）",
   "namespaceURL": "URL（Webアドレス）",
   "namespaceOID": "OID（ISOオブジェクト識別子）",
   "namespaceX500": "X.500（ディレクトリパス）",
-  "namespaceCUSTOM": "カスタムネームスペースUUID",
   "namespaceDesc": "ネームスペースはルート識別子として機能する固定UUIDです。v3/v5はネームスペース + 名前を使って決定論的なUUIDを生成します。同じネームスペース + 同じ名前は常に同じ結果を生成します。",
   "name": "名前",
   "namePlaceholder": "生成する名前を入力...",
@@ -20,11 +16,6 @@
   "formatNoHyphens": "ハイフンなし",
   "formatBraces": "波括弧",
   "uppercase": "大文字",
-  "copyAll": "すべてコピー",
-  "download": ".txtをダウンロード",
-  "localGenerated": "ブラウザ上で完全に生成されます。データがデバイスの外に出ることはありません。",
-  "securityTip": "データベースの主キーにはv7（ソート可能、インデックスフレンドリー）を推奨。一般的なランダムIDにはv4を使ってください。",
-  "unsupportedBrowser": "お使いのブラウザは安全な乱数生成をサポートしていません。",
   "downloadFilename": "uuids.txt",
   "waitingForName": "生成するには名前を入力してください...",
   "whatIsUuid": "UUIDとは？",
@@ -32,7 +23,6 @@
   "uuidStructure": "UUIDの構造",
   "uuidStructureDesc": "UUIDは32桁の16進数をハイフンで5つのグループに区切って表記します: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx。バージョンとバリアントは特定のビット位置にエンコードされています。",
   "versionCompare": "バージョン比較",
-  "versionTip": "バージョンをクリックして詳細を確認",
   "v1": {
     "name": "v1 - タイムスタンプ + MAC",
     "desc": "タイムスタンプとホストマシンのMACアドレスを組み合わせます。古い方式で予測可能、MACアドレスを露出します。",
@@ -68,5 +58,15 @@
   "useCaseDist": "分散システムのID",
   "useCaseWeb": "セッションやリソースの識別子",
   "useCaseMq": "メッセージキューのメッセージID",
-  "useCaseTest": "テストデータとモック"
+  "useCaseTest": "テストデータとモック",
+  "descriptions": {
+    "aeoDefinition": "UUIDジェネレーターは、v1、v3、v4、v5、v7のUUIDを一括生成できる無料オンラインツールです。RFC 4122/9562に準拠。ブラウザ上で完全に動作します。",
+    "whatIsTitle": "UUIDジェネレーターとは？",
+    "whatIsP1": "UUID（Universally Unique Identifier）は、RFC 4122およびRFC 9562で定義された128ビットの識別子規格です。このツールではUUID v4（ランダム）とv7（時系列順）を一括生成できます。",
+    "whatIsP2": "UUIDはデータベースの主キー、分散システムの識別子、セッショントークンとして広く使われています。2^122通りの値が可能で、衝突の確率は無視できるほど低いです。",
+    "faq1Q": "UUIDとは？",
+    "faq1A": "UUID（Universally Unique Identifier）は128ビットの識別子標準です。このツールはv4（ランダム）とv7（時系列順）のUUIDを生成し、中央調整なしで一意性を保証します。",
+    "faq2Q": "一度に何個のUUIDを生成できますか？",
+    "faq2A": "1回のバッチで最大1,000個のUUIDを生成できます。すべての生成はブラウザ上でcrypto.getRandomValues()を使用して行われます。"
+  }
 }

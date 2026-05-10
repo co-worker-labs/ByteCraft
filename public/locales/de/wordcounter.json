@@ -24,9 +24,20 @@
   "keywordExists": "Dieses Schlüsselwort existiert bereits",
   "keywordRemoved": "Schlüsselwort entfernt",
   "timeLessThan": "< 1 {unit}",
-  "timeHourUnit": "Std.",
   "timeMinUnit": "Min.",
   "timeSecUnit": "Sek.",
   "timeHourFormat": "{hours} Std. {minutes} Min.",
-  "timeMinFormat": "{minutes} Min. {seconds} Sek."
+  "timeMinFormat": "{minutes} Min. {seconds} Sek.",
+  "descriptions": {
+    "whatIsTitle": "Was ist der Wortzähler?",
+    "whatIsP1": "Der Wortzähler ist ein kostenloses Online-Tool zur Echtzeitanalyse von Texten — inklusive Wort-, Zeichen-, Satz- und Absatzzählung sowie Lesedauer-Schätzung.",
+    "whatIsP2": "Er unterstützt auch CJK-Zeichen (Chinesisch, Japanisch, Koreanisch), Keyword-Häufigkeitsanalyse und benutzerdefiniertes Tracking — ideal für Autoren, Studierende und Übersetzer.",
+    "faq1Q": "Wie funktioniert die Wortzählung?",
+    "faq1A": "Das Tool teilt Text an Leerzeichen und zählt Tokens. Für CJK-Text (Chinesisch, Japanisch, Koreanisch) werden einzelne Zeichen separat gezählt.",
+    "faq2Q": "Welche Metriken werden angezeigt?",
+    "faq2A": "Wörter, Zeichen, Zeichen ohne Leerzeichen, Sätze, Absätze, CJK-Zeichen, Lesezeit und Sprechzeit — alle in Echtzeit aktualisiert während Sie tippen.",
+    "faq3Q": "Kann ich bestimmte Schlüsselwörter verfolgen?",
+    "faq3A": "Ja. Fügen Sie benutzerdefinierte Schlüsselwörter hinzu, um ihre Häufigkeit und Anzahl in Ihrem Text zu verfolgen. Der Schlüsselwörter-Tab zeigt die häufigsten Wörter und 2-Wort-Phrasen.",
+    "aeoDefinition": "Der Wortzähler ist ein kostenloses Online-Tool zur Echtzeit-Textanalyse einschließlich Wortanzahl, Zeichenanzahl, Satzanzahl, Lesezeit und Keyword-Dichte. Unterstützt CJK-Text. Es werden keine Daten an einen Server gesendet."
+  }
 }

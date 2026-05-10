@@ -1,17 +1,13 @@
 {
-  "generatedTitle": "Votre UUID",
   "version": "Version",
   "quantity": "Quantité",
   "namespace": "Espace de noms",
   "namespaceCustom": "Personnalisé",
-  "namespaceCustomPlaceholder": "Entrez un UUID",
-  "namespaceInvalid": "UUID d'espace de noms invalide",
   "invalidNamespace": "UUID d'espace de noms invalide",
   "namespaceDNS": "DNS (noms de domaine)",
   "namespaceURL": "URL (adresses web)",
   "namespaceOID": "OID (identifiants d'objets ISO)",
   "namespaceX500": "X.500 (chemins d'annuaire)",
-  "namespaceCUSTOM": "UUID d'espace de noms personnalisé",
   "namespaceDesc": "Un espace de noms est un UUID fixe qui sert d'identifiant racine. Les versions v3/v5 utilisent l'espace de noms + le nom pour générer des UUID déterministes. Même espace de noms + même nom produit toujours le même résultat.",
   "name": "Nom",
   "namePlaceholder": "Entrez un nom à générer…",
@@ -20,11 +16,6 @@
   "formatNoHyphens": "Sans tirets",
   "formatBraces": "Accolades",
   "uppercase": "Majuscules",
-  "copyAll": "Tout copier",
-  "download": "Télécharger .txt",
-  "localGenerated": "Généré entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil.",
-  "securityTip": "Pour les clés primaires de base de données, préférez v7 (triable, adapté aux index). Pour des identifiants aléatoires généralistes, utilisez v4.",
-  "unsupportedBrowser": "Votre navigateur ne supporte pas la génération aléatoire sécurisée.",
   "downloadFilename": "uuids.txt",
   "waitingForName": "Entrez un nom pour générer…",
   "whatIsUuid": "Qu'est-ce qu'un UUID ?",
@@ -32,7 +23,6 @@
   "uuidStructure": "Structure d'un UUID",
   "uuidStructureDesc": "Un UUID s'écrit sous la forme de 32 chiffres hexadécimaux séparés par des tirets en 5 groupes : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. La variante de version est encodée dans des positions de bits spécifiques.",
   "versionCompare": "Comparaison des versions",
-  "versionTip": "Cliquez sur une version pour en savoir plus",
   "v1": {
     "name": "v1 — Horodatage + MAC",
     "desc": "Combine l'horodatage et l'adresse MAC de la machine hôte. Plus ancien, prévisible, expose l'adresse MAC.",
@@ -68,5 +58,15 @@
   "useCaseDist": "Identifiants de systèmes distribués",
   "useCaseWeb": "Identifiants de session ou de ressource",
   "useCaseMq": "Identifiants de messages dans les files d'attente",
-  "useCaseTest": "Données de test et simulations"
+  "useCaseTest": "Données de test et simulations",
+  "descriptions": {
+    "whatIsTitle": "Qu'est-ce que le Générateur d'UUID ?",
+    "whatIsP1": "UUID (Universally Unique Identifier) est un standard d'identifiant 128 bits défini dans les RFC 4122 et 9562. Cet outil génère des UUID v4 (aléatoires) et v7 (ordonnés dans le temps) en lot.",
+    "whatIsP2": "Les UUID sont largement utilisés comme clés primaires de bases de données, identifiants de systèmes distribués et jetons de session. Avec 2^122 valeurs possibles, la probabilité de collision est négligeable.",
+    "faq1Q": "Qu'est-ce qu'un UUID ?",
+    "faq1A": "UUID (Identifiant Universellement Unique) est une norme d'identifiant de 128 bits. Cet outil génère des UUID v4 (aléatoires) et v7 (ordonnés dans le temps) qui sont uniques sans coordination centrale.",
+    "faq2Q": "Combien d'UUID puis-je générer à la fois ?",
+    "faq2A": "Vous pouvez générer jusqu'à 1 000 UUID en un seul lot. Toute la génération se fait dans votre navigateur en utilisant crypto.getRandomValues().",
+    "aeoDefinition": "Le Générateur d'UUID est un outil gratuit en ligne pour générer des UUID v1, v3, v4, v5 et v7 en lot. Conforme à la RFC 4122/9562. Fonctionne entièrement dans votre navigateur."
+  }
 }

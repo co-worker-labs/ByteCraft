@@ -1,13 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Search, ChevronDown, ChevronUp } from "lucide-react";
 import Layout from "../../../components/layout";
 import { ControlCode, getControlCodes, getPrintableCharacters } from "../../../libs/ascii";
 import { NeonTabs } from "../../../components/ui/tabs";
 import { Badge } from "../../../components/ui/badge";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { StyledInput } from "../../../components/ui/input";
+import RelatedTools from "../../../components/related-tools";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const printableCharacters = getPrintableCharacters();
 const controlCodes = getControlCodes();
@@ -267,14 +271,55 @@ function PrintableCharacters({ list }: { list: number[] }) {
   );
 }
 
+function Description() {
+  const t = useTranslations("ascii");
+  const tc = useTranslations("common");
+  const locale = useLocale();
+
+  const faqItems = [1, 2].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
+  return (
+    <section id="description" className="mt-8">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
+      <div className="mb-4">
+        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
+        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
+          <p>{t("descriptions.whatIsP2")}</p>
+        </div>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {tc("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
+    </section>
+  );
+}
+
 export default function AsciiPage() {
   const t = useTranslations("tools");
   const ta = useTranslations("ascii");
   const tc = useTranslations("common");
+  const title = t("ascii.shortTitle");
   const [expanded, setExpanded] = useState(false);
   return (
     <>
-      <Layout title={t("ascii.shortTitle")}>
+      <Layout
+        title={title}
+        categoryLabel={t("categories.reference")}
+        categorySlug="reference-lookup"
+      >
         <div className="container mx-auto px-4 pt-3 pb-6">
           <section id="description" className="py-3">
             <div className="relative">
@@ -284,7 +329,7 @@ export default function AsciiPage() {
                 }`}
               >
                 <p className="text-fg-secondary text-sm leading-8 indent-12">
-                  {ta("description.text")}
+                  {ta("descriptions.text")}
                 </p>
               </div>
               {!expanded && (
@@ -330,6 +375,8 @@ export default function AsciiPage() {
               ]}
             />
           </section>
+          <Description />
+          <RelatedTools currentTool="ascii" />
         </div>
       </Layout>
     </>

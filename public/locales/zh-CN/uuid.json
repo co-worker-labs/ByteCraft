@@ -1,17 +1,13 @@
 {
-  "generatedTitle": "您的 UUID",
   "version": "版本",
   "quantity": "数量",
   "namespace": "命名空间",
   "namespaceCustom": "自定义",
-  "namespaceCustomPlaceholder": "输入 UUID",
-  "namespaceInvalid": "无效的命名空间 UUID",
   "invalidNamespace": "无效的命名空间 UUID",
   "namespaceDNS": "DNS（域名）",
   "namespaceURL": "URL（网页地址）",
   "namespaceOID": "OID（ISO 对象标识符）",
   "namespaceX500": "X.500（目录路径）",
-  "namespaceCUSTOM": "自定义命名空间 UUID",
   "namespaceDesc": "命名空间是一个固定的 UUID，用作根标识符。v3/v5 使用命名空间 + 名称生成确定性 UUID。相同的命名空间 + 相同的名称始终产生相同的输出。",
   "name": "名称",
   "namePlaceholder": "输入名称以生成...",
@@ -20,11 +16,6 @@
   "formatNoHyphens": "无连字符",
   "formatBraces": "大括号",
   "uppercase": "大写",
-  "copyAll": "全部复制",
-  "download": "下载 .txt",
-  "localGenerated": "完全在您的浏览器中生成。数据从不离开您的设备。",
-  "securityTip": "作为数据库主键时，推荐 v7（可排序，索引友好）。通用随机 ID 使用 v4。",
-  "unsupportedBrowser": "您的浏览器不支持安全的随机生成。",
   "downloadFilename": "uuids.txt",
   "waitingForName": "输入名称以生成...",
   "whatIsUuid": "什么是 UUID？",
@@ -32,7 +23,6 @@
   "uuidStructure": "UUID 结构",
   "uuidStructureDesc": "UUID 格式为 32 位十六进制数字，用连字符分为 5 组：xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx。版本和变体编码在特定位上。",
   "versionCompare": "版本对比",
-  "versionTip": "点击版本了解更多",
   "v1": {
     "name": "v1 — 时间戳 + MAC 地址",
     "desc": "结合时间戳和主机 MAC 地址生成。较老，可预测，会暴露 MAC 地址。",
@@ -68,5 +58,15 @@
   "useCaseDist": "分布式系统 ID",
   "useCaseWeb": "会话或资源标识符",
   "useCaseMq": "消息队列消息 ID",
-  "useCaseTest": "测试数据和模拟"
+  "useCaseTest": "测试数据和模拟",
+  "descriptions": {
+    "whatIsTitle": "什么是 UUID 生成器？",
+    "whatIsP1": "UUID（通用唯一标识符）是 RFC 4122 和 RFC 9562 定义的 128 位标识符标准。此工具批量生成 UUID v4（随机）和 v7（时间排序）。将生成的 ID 用作 [密码生成器](/password) 的种子，编码到 [二维码](/qrcode) 中，或使用 [哈希生成器](/hashing) 验证唯一性。",
+    "whatIsP2": "UUID 被广泛用作数据库主键、分布式系统标识符和会话令牌。拥有 2^122 种可能的取值，碰撞概率可忽略不计。",
+    "faq1Q": "什么是 UUID？",
+    "faq1A": "UUID（通用唯一标识符）是一种 128 位标识符标准。此工具生成 v4（随机）和 v7（时间有序）UUID，无需中心协调即可保证唯一性。",
+    "faq2Q": "一次可以生成多少个 UUID？",
+    "faq2A": "一次最多可生成 1,000 个 UUID。所有生成在浏览器中使用 crypto.getRandomValues() 完成。",
+    "aeoDefinition": "UUID 生成器是一个免费的在线 UUID v4（随机）和 v7（时间排序）批量生成工具。符合 RFC 4122/9562 标准。完全在浏览器中运行。"
+  }
 }

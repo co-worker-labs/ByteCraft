@@ -12,7 +12,6 @@
   "width": "Largura",
   "height": "Altura",
   "keepAspectRatio": "Manter proporção",
-  "download": "Baixar",
   "copyToClipboard": "Copiar para área de transferência",
   "copiedToClipboard": "Copiado para área de transferência como PNG",
   "reselect": "Selecionar novamente",
@@ -28,6 +27,13 @@
     "p1": "Comprima, redimensione e converta imagens diretamente no seu navegador. Nenhum dado é enviado — todo processamento é local.",
     "p2": "Suporta formatos de saída PNG, JPG e WebP. WebP oferece a melhor taxa de compressão para imagens web.",
     "p3": "Use o controle de qualidade para equilibrar tamanho do arquivo e qualidade da imagem. Qualidade menor significa arquivos menores.",
-    "p4": "Copiar para área de transferência converte a imagem para PNG, independentemente do formato de saída selecionado."
+    "p4": "Copiar para área de transferência converte a imagem para PNG, independentemente do formato de saída selecionado.",
+    "faq1Q": "O que posso fazer com a ferramenta de Imagem?",
+    "faq1A": "Redimensione, comprima e converta imagens diretamente no seu navegador. Suporta formatos JPEG, PNG, WebP e BMP com qualidade e dimensões ajustáveis.",
+    "faq2Q": "Minhas imagens são enviadas a um servidor?",
+    "faq2A": "Não. Todo processamento de imagens acontece no seu navegador usando a API Canvas. Suas imagens nunca saem do seu dispositivo.",
+    "faq3Q": "Quais formatos de imagem são suportados?",
+    "faq3A": "Entrada: JPEG, PNG, WebP, BMP, GIF. Saída: JPEG, PNG, WebP. Você pode converter entre formatos enquanto ajusta a qualidade.",
+    "aeoDefinition": "O Compressor de Imagens é uma ferramenta online gratuita para comprimir, redimensionar e converter imagens entre formatos PNG, JPG e WebP. Todo o processamento roda localmente no seu navegador."
   }
 }

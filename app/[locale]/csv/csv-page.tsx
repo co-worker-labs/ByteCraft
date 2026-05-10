@@ -11,7 +11,8 @@ import {
   Upload,
   X,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 
 import Layout from "../../../components/layout";
 import { CopyButton } from "../../../components/ui/copy-btn";
@@ -22,6 +23,10 @@ import { useIsMobile } from "../../../hooks/use-is-mobile";
 import { useDropZone } from "../../../hooks/useDropZone";
 import { convert } from "../../../libs/csv/convert";
 import { csvParse } from "../../../libs/csv/csv-parse";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 // --- Types ---
 
@@ -225,7 +230,7 @@ function Conversion() {
     const result = convert(input, "json", "csv", { delimiter });
     if (result.error) {
       setJsonError({ message: result.error });
-      showToast(t("invalidInput"), "danger", 3000);
+      showToast(tc("invalidInput"), "danger", 3000);
       return;
     }
     setCsvContent(result.output);
@@ -239,7 +244,7 @@ function Conversion() {
     const result = convert(input, "csv", "json", { indent: indentSize, unflatten: nestedJson });
     if (result.error) {
       setCsvError({ message: result.error });
-      showToast(t("invalidInput"), "danger", 3000);
+      showToast(tc("invalidInput"), "danger", 3000);
       return;
     }
     setJsonContent(result.output);
@@ -329,7 +334,7 @@ function Conversion() {
             onClick={() => downloadFile(jsonContent, "data.json")}
           >
             <Download size={12} />
-            {t("download")}
+            {tc("download")}
           </button>
           <button
             type="button"
@@ -474,7 +479,7 @@ function Conversion() {
             onClick={() => downloadFile(csvContent, "data.csv")}
           >
             <Download size={12} />
-            {t("download")}
+            {tc("download")}
           </button>
           <button
             type="button"
@@ -537,7 +542,7 @@ function Conversion() {
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-4 rounded-full bg-accent-purple" />
             <span className="font-mono text-xs font-semibold text-fg-muted uppercase tracking-wider">
-              {t("advancedSettings")}
+              {tc("advancedSettings")}
             </span>
           </div>
           {!isMobile && (
@@ -566,10 +571,10 @@ function Conversion() {
         <div className="flex flex-wrap items-center gap-6 px-3 mt-4">
           {/* Indent size */}
           <div className="flex items-center gap-2">
-            <span className="font-mono text-sm font-medium text-fg-secondary">{t("indent")}</span>
+            <span className="font-mono text-sm font-medium text-fg-secondary">{tc("indent")}</span>
             <div
               role="radiogroup"
-              aria-label={t("indent")}
+              aria-label={tc("indent")}
               className="inline-flex rounded-full border border-border-default p-0.5 text-xs font-mono font-semibold"
             >
               {INDENT_SIZES.map((n) => (
@@ -638,13 +643,24 @@ function Conversion() {
 
 function Description() {
   const t = useTranslations("csv");
+  const tc = useTranslations("common");
+  const locale = useLocale();
 
+  const faqItems = [1, 2].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section id="description" className="mt-8">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
         </div>
       </div>
 
@@ -659,20 +675,29 @@ function Description() {
 
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">
-          {t("descriptions.useCasesTitle")}
+          {tc("descriptions.useCasesTitle")}
         </h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.useCasesP1")}</p>
+          <p>{renderLinkedText(t("descriptions.useCasesP1"), locale)}</p>
         </div>
       </div>
 
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">
-          {t("descriptions.limitationsTitle")}
+          {tc("descriptions.limitationsTitle")}
         </h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{t("descriptions.limitationsP1")}</p>
         </div>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {tc("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
       </div>
     </section>
   );
@@ -681,22 +706,21 @@ function Description() {
 // --- Page Export ---
 
 export default function CsvPage() {
-  const tc = useTranslations("common");
   const t = useTranslations("tools");
   const title = t("csv.shortTitle");
 
   return (
-    <Layout title={title}>
+    <Layout
+      title={title}
+      categoryLabel={t("categories.encoding")}
+      categorySlug="encoding-conversion"
+    >
       <div className="container mx-auto px-4 pt-3 pb-6">
-        {/* Privacy alert banner */}
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
 
         <Conversion />
         <Description />
+        <RelatedTools currentTool="csv" />
       </div>
     </Layout>
   );

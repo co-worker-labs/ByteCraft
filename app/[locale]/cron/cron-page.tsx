@@ -8,6 +8,7 @@ import { CopyButton } from "../../../components/ui/copy-btn";
 import { StyledSelect } from "../../../components/ui/input";
 import { StyledTextarea } from "../../../components/ui/input";
 import { Badge } from "../../../components/ui/badge";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { showToast } from "../../../libs/toast";
 import { STORAGE_KEYS } from "../../../libs/storage-keys";
 import {
@@ -26,6 +27,9 @@ import {
   type CronFieldValue,
 } from "../../../libs/cron/main";
 import { FieldEditor } from "./field-editor";
+import RelatedTools from "../../../components/related-tools";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const DEFAULT_EXPRESSIONS: Record<CronMode, string> = {
   standard: "0 9 * * 1-5",
@@ -359,15 +363,38 @@ function FieldCard({
 
 function Description() {
   const t = useTranslations("cron");
+  const tc = useTranslations("common");
+  const locale = useLocale();
+
+  const faqItems = [1, 2].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section className="mt-8 space-y-4">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div>
         <h4 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h4>
-        <p className="mt-1 text-fg-secondary text-sm leading-relaxed">{t("descriptions.whatIs")}</p>
+        <p className="mt-1 text-fg-secondary text-sm leading-relaxed">
+          {renderLinkedText(t("descriptions.whatIs"), locale)}
+        </p>
       </div>
       <div>
         <h4 className="font-semibold text-fg-primary text-base">{t("descriptions.dstTitle")}</h4>
         <p className="mt-1 text-fg-secondary text-sm leading-relaxed">{t("descriptions.dst")}</p>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {tc("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
       </div>
     </section>
   );
@@ -467,7 +494,11 @@ export default function CronPage() {
   }
 
   return (
-    <Layout title={ts("cron.shortTitle")}>
+    <Layout
+      title={ts("cron.shortTitle")}
+      categoryLabel={ts("categories.generators")}
+      categorySlug="generators"
+    >
       <div className="container mx-auto px-4 pt-3 pb-6">
         <ModeSelector mode={mode} onChange={handleModeChange} />
 
@@ -517,6 +548,7 @@ export default function CronPage() {
         />
 
         <Description />
+        <RelatedTools currentTool="cron" />
       </div>
 
       {editingField && (

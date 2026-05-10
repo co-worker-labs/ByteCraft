@@ -1,7 +1,4 @@
 {
-  "description": {
-    "text": "完整的 HTTP 状态码参考，涵盖 RFC 9110 及相关规范中所有 IANA 官方状态码——包括 WebDAV（RFC 4918）、附加 HTTP 状态码（RFC 6585）、308 永久重定向（RFC 7538）、451 因法律原因不可用（RFC 7725）以及早期提示（RFC 8297）。同时包含 Nginx、Cloudflare 和 IIS 的非官方平台扩展。每个状态码都显示其描述和 RFC 参考，常用状态码还包括使用场景和常见原因，便于快速排查问题。"
-  },
   "tip": "桌面端悬停或移动端点击任意行，可查看使用详情和常见原因。",
   "searchPlaceholder": "按状态码、名称或描述搜索...",
   "noResults": "未找到结果",
@@ -323,14 +320,14 @@
     "440": {
       "description": "客户端会话已过期。"
     },
+    "444": {
+      "description": "Nginx 关闭连接，不向客户端发送任何响应。"
+    },
     "449": {
       "description": "应在执行相应操作后重试请求。"
     },
     "451": {
       "description": "服务器因法律要求而拒绝提供该资源的访问。"
-    },
-    "444": {
-      "description": "Nginx 关闭连接，不向客户端发送任何响应。"
     },
     "494": {
       "description": "Nginx 因请求头过大而拒绝请求。"
@@ -449,5 +446,13 @@
     "530": {
       "description": "Cloudflare 无法解析源服务器的 DNS。"
     }
+  },
+  "descriptions": {
+    "text": "完整的 HTTP 状态码参考，包含描述、分类和 RFC 规范链接。覆盖所有 IANA 注册代码及常见非官方代码。使用 [HTTP 客户端](/httpclient) 测试 API，或使用 [URL 编码器](/urlencoder) 编码 URL。",
+    "aeoDefinition": "HTTP 状态码参考是一个免费的在线 HTTP 状态码完整参考，包含描述、分类和 RFC 链接。覆盖 IANA 官方代码和常见非官方代码。",
+    "faq1Q": "什么是 HTTP 状态码？",
+    "faq1A": "HTTP 状态码是服务器响应客户端请求时返回的 3 位数字，指示请求是否成功、被重定向或遇到错误。",
+    "faq2Q": "收录了多少状态码？",
+    "faq2A": "工具涵盖 5 个类别下的所有标准状态码：1xx（信息）、2xx（成功）、3xx（重定向）、4xx（客户端错误）和 5xx（服务器错误）。"
   }
 }

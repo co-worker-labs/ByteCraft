@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import Layout from "../../../components/layout";
 import { StyledInput } from "../../../components/ui/input";
 import { CopyButton } from "../../../components/ui/copy-btn";
@@ -18,6 +19,9 @@ import {
   bitsToValue,
   getReferenceTable,
 } from "../../../libs/numbase/main";
+import RelatedTools from "../../../components/related-tools";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const PANELS: Array<{ radix: Radix; labelKey: string; prefix: string }> = [
   { radix: 10, labelKey: "decimal", prefix: "DEC" },
@@ -193,6 +197,7 @@ function ReferenceTable() {
 
 function Converter() {
   const t = useTranslations("numbase");
+  const tc = useTranslations("common");
   const [value, setValue] = useState<bigint>(DEFAULT_VALUE);
   const [bitWidth, setBitWidth] = useState<BitWidth>(DEFAULT_BIT_WIDTH);
   const [activeError, setActiveError] = useState<{
@@ -210,7 +215,7 @@ function Converter() {
 
     const result = parseInput(trimmed, radix, bitWidth);
     if (result.error) {
-      setActiveError({ radix, message: t("invalidInput") });
+      setActiveError({ radix, message: tc("invalidInput") });
       return;
     }
 
@@ -263,11 +268,20 @@ function Converter() {
 
 function Description() {
   const t = useTranslations("numbase");
+  const locale = useLocale();
+
   return (
     <section className="py-3 space-y-4">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div>
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
-        <p className="text-fg-secondary text-sm leading-relaxed">{t("descriptions.whatIs")}</p>
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {renderLinkedText(t("descriptions.whatIs"), locale)}
+        </p>
       </div>
       <div>
         <h2 className="font-semibold text-fg-primary text-base">
@@ -277,18 +291,28 @@ function Description() {
           {t("descriptions.twosComplement")}
         </p>
       </div>
+      <div>
+        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.faq1Q")}</h2>
+        <p className="text-fg-secondary text-sm leading-relaxed">{t("descriptions.faq1A")}</p>
+      </div>
     </section>
   );
 }
 
 export default function NumbasePage() {
   const ts = useTranslations("tools");
+  const title = ts("numbase.shortTitle");
 
   return (
-    <Layout title={ts("numbase.shortTitle")}>
+    <Layout
+      title={title}
+      categoryLabel={ts("categories.encoding")}
+      categorySlug="encoding-conversion"
+    >
       <div className="container mx-auto px-4 pt-3 pb-6">
         <Converter />
         <Description />
+        <RelatedTools currentTool="numbase" />
         <ReferenceTable />
       </div>
     </Layout>

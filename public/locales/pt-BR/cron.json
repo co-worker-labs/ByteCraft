@@ -9,8 +9,10 @@
     "generate": "Gerar",
     "parse": "Analisar"
   },
+  "parse": {
+    "placeholder": "ex. */5 * * * *"
+  },
   "timezone": {
-    "label": "Fuso horário",
     "local": "Local",
     "utc": "UTC"
   },
@@ -49,15 +51,6 @@
     "Nov",
     "Dez"
   ],
-  "weekdayShort": [
-    "Dom",
-    "Seg",
-    "Ter",
-    "Qua",
-    "Qui",
-    "Sex",
-    "Sáb"
-  ],
   "weekdayLong": [
     "Domingo",
     "Segunda-feira",
@@ -88,11 +81,8 @@
     "atTime": "Às {time}",
     "everyN": "A cada {n} minutos",
     "lastDow": "o último {weekday} do mês",
-    "fromTo": "de {from} a {to}",
     "onDays": "em {days}",
     "throughDays": "{from} a {to}",
-    "andList": "{prefix} e {item}",
-    "ofEveryMonth": "de cada mês",
     "lastDayOfMonth": "o último dia do mês",
     "nthWeekday": "o {ordinal} {weekday} do mês",
     "nearestWeekdayTo": "o dia útil mais próximo do dia {day}",
@@ -107,7 +97,6 @@
     "5": "quinto"
   },
   "output": {
-    "expression": "Expressão",
     "description": "Descrição",
     "nextExecutions": "Próximas 5 execuções",
     "header": {
@@ -120,14 +109,6 @@
       "now": "agora",
       "past": "passado"
     }
-  },
-  "share": {
-    "button": "Compartilhar link",
-    "copied": "Link de compartilhamento copiado"
-  },
-  "parse": {
-    "placeholder": "Cole ou digite uma expressão Cron",
-    "showingPrevious": "Exibindo o último resultado válido"
   },
   "warn": {
     "neverTriggers": "Esta expressão nunca será executada",
@@ -156,23 +137,22 @@
   "descriptions": {
     "whatIsTitle": "O que é uma expressão Cron?",
     "whatIs": "Uma expressão Cron é uma string de campos que descreve um agendamento. Cada campo controla uma unidade de tempo (minuto, hora, dia, mês, dia da semana). Original do Unix cron, a sintaxe foi estendida pelo Spring (adiciona segundos) e Quartz (adiciona segundos e ano, além dos caracteres especiais L, W, #).",
-    "fieldRefTitle": "Referência de campos",
-    "specialCharsTitle": "Caracteres especiais",
-    "modesTitle": "Modos",
     "dstTitle": "Horário de verão",
-    "dst": "Quando o fuso horário ativo observa horário de verão, agendamentos dentro do intervalo perdido disparam no próximo horário válido, e agendamentos no horário duplicado disparam na primeira ocorrência. Mude para UTC para evitar o horário de verão completamente."
+    "dst": "Quando o fuso horário ativo observa horário de verão, agendamentos dentro do intervalo perdido disparam no próximo horário válido, e agendamentos no horário duplicado disparam na primeira ocorrência. Mude para UTC para evitar o horário de verão completamente.",
+    "faq1Q": "O que é uma expressão Cron?",
+    "faq1A": "Uma expressão Cron é uma string de 5-7 campos que define um agendamento para tarefas recorrentes. É usada por daemons cron, agendadores de tarefas e frameworks como Spring e Quartz.",
+    "faq2Q": "Quais dialetos Cron são suportados?",
+    "faq2A": "Três: Padrão (5 campos), Spring (6 campos com segundos) e Quartz (7 campos com segundos e ano). A ferramenta detecta automaticamente o dialeto e mostra as próximas execuções.",
+    "aeoDefinition": "O Gerador de Expressões Cron é uma ferramenta online gratuita para construir e decodificar expressões Cron. Suporta modos Standard, Spring e Quartz com explicações legíveis e pré-visualização da próxima execução. Nenhum dado sai do seu navegador."
   },
   "editor": {
     "title": "Editar campo",
     "preview": "Prévia",
-    "apply": "Aplicar",
     "specificValue": "Valor",
     "rangeFrom": "De",
     "rangeTo": "Até",
     "stepStart": "Início",
     "stepInterval": "Intervalo",
-    "stepEvery": "Cada",
-    "listSelect": "Selecionar valores",
     "specialKind": "Tipo"
   },
   "presetSection": "Presets rápidos"

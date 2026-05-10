@@ -8,8 +8,8 @@
   "resultsCountAll": "{total} elementos encontrados",
   "noResults": "No se encontraron elementos",
   "emptyState": "Pegue o escriba texto arriba para extraer emails, URLs y números de teléfono",
+  "dropZone": "Suelta cualquier archivo de texto",
   "copyAll": "Copiar todo",
-  "exportTxt": "TXT",
   "exportCsv": "CSV",
   "exportJson": "JSON",
   "copied": "¡Copiado!",
@@ -24,6 +24,7 @@
   "summaryTotal": "{count} total",
   "occurrences": "×{count}",
   "descriptions": {
+    "aeoDefinition": "El Extractor de emails y URLs es una herramienta gratuita online que extrae emails, URLs y números de teléfono de cualquier texto al instante. Soporta múltiples formatos y procesamiento por lotes. Se ejecuta completamente en tu navegador.",
     "formatsTitle": "Formatos compatibles",
     "formatsTableHeader": "Descripción",
     "formatsEmail": "Email",
@@ -36,6 +37,12 @@
     "tip1": "La extracción es permisiva, no validación — se devuelven todas las coincidencias plausibles",
     "tip2": "Active/desactive tipos individuales con los botones de alternancia",
     "tip3": "Los resultados se deduplican por defecto; active \"Mostrar duplicados\" para ver todas las ocurrencias",
-    "tip4": "Los números de teléfono deben contener al menos 7 dígitos para ser reconocidos"
+    "tip4": "Los números de teléfono deben contener al menos 7 dígitos para ser reconocidos",
+    "faq1Q": "¿Qué hace el Extractor de Texto?",
+    "faq1A": "Extrae patrones específicos de texto usando extractores basados en regex: emails, URLs, direcciones IP, números de teléfono, números y patrones personalizados.",
+    "faq2Q": "¿Puedo definir patrones de extracción personalizados?",
+    "faq2A": "Sí. Escribe tu propio patrón regex para extraer cualquier formato de texto. La herramienta resalta coincidencias y muestra grupos de captura.",
+    "faq3Q": "¿Qué patrones integrados están disponibles?",
+    "faq3A": "Direcciones de email, URLs, direcciones IPv4/IPv6, números de teléfono, colores hex, números y fechas. Cada patrón está preconfigurado para casos de uso comunes."
   }
 }

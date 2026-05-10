@@ -1,10 +1,20 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useState, useEffect, useRef, type DragEvent } from "react";
-import json5 from "json5";
-import JsonView from "@uiw/react-json-view";
+
+const parseJson5 = async (input: string) => {
+  const { default: JSON5 } = await import("json5");
+  return JSON5.parse(input);
+};
+
+const JsonView = dynamic(() => import("@uiw/react-json-view"), {
+  ssr: false,
+  loading: () => <div className="h-48 animate-pulse bg-bg-input rounded" />,
+});
 import { IndentIncrease, Minimize2, Upload, X } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 
 import Layout from "../../../components/layout";
 import { CopyButton } from "../../../components/ui/copy-btn";
@@ -12,6 +22,10 @@ import { Button } from "../../../components/ui/button";
 import { StyledTextarea } from "../../../components/ui/input";
 import { showToast } from "../../../libs/toast";
 import { omniKitJsonTheme } from "../../../libs/json-view-theme";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 type IndentSize = 2 | 4 | 8;
 
@@ -28,14 +42,14 @@ type ParseResult = {
 
 const INDENT_SIZES: IndentSize[] = [2, 4, 8];
 
-function tryParse(input: string, json5Mode: boolean): ParseResult {
+async function tryParse(input: string, json5Mode: boolean): Promise<ParseResult> {
   if (json5Mode) {
-    return { value: json5.parse(input), usedRelaxed: true };
+    return { value: await parseJson5(input), usedRelaxed: true };
   }
   try {
     return { value: JSON.parse(input), usedRelaxed: false };
   } catch {
-    return { value: json5.parse(input), usedRelaxed: true };
+    return { value: await parseJson5(input), usedRelaxed: true };
   }
 }
 
@@ -89,14 +103,14 @@ function Conversion() {
 
   // Deferred validation — 500ms debounce with cleanup
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setTimeout(async () => {
       if (!rawContent.trim()) {
         setError(null);
         return;
       }
       try {
         if (json5Mode) {
-          json5.parse(rawContent);
+          await parseJson5(rawContent);
         } else {
           JSON.parse(rawContent);
         }
@@ -117,11 +131,11 @@ function Conversion() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [indentSize, useTab, sortKeys]);
 
-  function doFormat() {
+  async function doFormat() {
     const input = rawContent.trim();
     if (!input) return;
     try {
-      const { value, usedRelaxed } = tryParse(input, json5Mode);
+      const { value, usedRelaxed } = await tryParse(input, json5Mode);
       const indent = useTab ? "\t" : indentSize;
       const out = stringify(value, sortKeys, indent);
       setOutputContent(out);
@@ -140,11 +154,11 @@ function Conversion() {
     }
   }
 
-  function doCompress() {
+  async function doCompress() {
     const input = rawContent.trim();
     if (!input) return;
     try {
-      const { value, usedRelaxed } = tryParse(input, json5Mode);
+      const { value, usedRelaxed } = await tryParse(input, json5Mode);
       const target = sortKeys ? deepSortKeys(value) : value;
       const out = JSON.stringify(target);
       setOutputContent(out);
@@ -298,10 +312,10 @@ function Conversion() {
       <div className="mt-4 flex flex-wrap items-center gap-4">
         {/* Indent + Tab pill group */}
         <div className="flex items-center gap-2">
-          <span className="font-mono text-xs font-semibold text-fg-muted">{t("indent")}</span>
+          <span className="font-mono text-xs font-semibold text-fg-muted">{tc("indent")}</span>
           <div
             role="radiogroup"
-            aria-label={t("indent")}
+            aria-label={tc("indent")}
             className="inline-flex rounded-full border border-border-default overflow-hidden"
           >
             {INDENT_SIZES.map((n) => (
@@ -466,13 +480,20 @@ function Conversion() {
 
 function Description() {
   const t = useTranslations("json");
+  const tc = useTranslations("common");
+  const locale = useLocale();
 
   return (
     <section id="description" className="mt-8">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
           <p>{t("descriptions.whatIsP2")}</p>
           <p>{t("descriptions.whatIsP3")}</p>
         </div>
@@ -488,11 +509,11 @@ function Description() {
 
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">
-          {t("descriptions.useCasesTitle")}
+          {tc("descriptions.useCasesTitle")}
         </h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{t("descriptions.useCasesP1")}</p>
-          <p>{t("descriptions.useCasesP2")}</p>
+          <p>{renderLinkedText(t("descriptions.useCasesP2"), locale)}</p>
           <p>{t("descriptions.useCasesP3")}</p>
           <p>{t("descriptions.useCasesP4")}</p>
         </div>
@@ -500,7 +521,7 @@ function Description() {
 
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">
-          {t("descriptions.limitationsTitle")}
+          {tc("descriptions.limitationsTitle")}
         </h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{t("descriptions.limitationsP1")}</p>
@@ -513,21 +534,17 @@ function Description() {
 }
 
 export default function JsonPage() {
-  const tc = useTranslations("common");
   const t = useTranslations("tools");
   const title = t("json.shortTitle");
 
   return (
-    <Layout title={title}>
+    <Layout title={title} categoryLabel={t("categories.text")} categorySlug="text-processing">
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
 
         <Conversion />
         <Description />
+        <RelatedTools currentTool="json" />
       </div>
     </Layout>
   );

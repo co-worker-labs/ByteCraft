@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import Layout from "../../../components/layout";
 import { useIsMobile } from "../../../hooks/use-is-mobile";
 import { showToast } from "../../../libs/toast";
@@ -19,6 +20,10 @@ import type { DiffRowData } from "../../../libs/diff/types";
 import { DiffInput } from "./components/DiffInput";
 import { DiffToolbar, type DiffOptions, type LayoutMode } from "./components/DiffToolbar";
 import { DiffViewer, type ViewMode, type ViewerState } from "./components/DiffViewer";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const DEFAULT_OPTIONS: DiffOptions = {
   ignoreWhitespace: false,
@@ -246,12 +251,20 @@ function DiffPageBody() {
 
 function Description() {
   const t = useTranslations("diff");
+  const tc = useTranslations("common");
+  const locale = useLocale();
+
   return (
     <section id="description" className="mt-8">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
           <p>{t("descriptions.whatIsP2")}</p>
         </div>
       </div>
@@ -272,17 +285,17 @@ function Description() {
       </div>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">
-          {t("descriptions.useCasesTitle")}
+          {tc("descriptions.useCasesTitle")}
         </h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.useCasesP1")}</p>
+          <p>{renderLinkedText(t("descriptions.useCasesP1"), locale)}</p>
           <p>{t("descriptions.useCasesP2")}</p>
           <p>{t("descriptions.useCasesP3")}</p>
         </div>
       </div>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">
-          {t("descriptions.limitationsTitle")}
+          {tc("descriptions.limitationsTitle")}
         </h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
           <p>{t("descriptions.limitationsP1")}</p>
@@ -290,26 +303,26 @@ function Description() {
           <p>{t("descriptions.limitationsP3")}</p>
         </div>
       </div>
+      <div className="mb-4">
+        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.faq1Q")}</h2>
+        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{t("descriptions.faq1A")}</p>
+      </div>
     </section>
   );
 }
 
 export default function DiffPage() {
-  const tc = useTranslations("common");
   const tTools = useTranslations("tools");
   const title = tTools("diff.shortTitle");
 
   return (
-    <Layout title={title}>
+    <Layout title={title} categoryLabel={tTools("categories.text")} categorySlug="text-processing">
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
 
         <DiffPageBody />
         <Description />
+        <RelatedTools currentTool="diff" />
       </div>
     </Layout>
   );

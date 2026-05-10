@@ -36,12 +36,15 @@
   },
   "descriptions": {
     "whatIsTitle": "什麼是 JWT？",
+    "aeoDefinition": "JWT 除錯器是一款免費的線上工具，用於編碼、解碼和驗證 JSON Web Token。支援 HS256、RS256、ES256 等多種演算法。所有處理完全在瀏覽器中執行——權杖不會傳送到任何伺服器。",
     "whatIs": "JWT（JSON Web Token，RFC 7519）是一種開放標準，用於在各方之間以緊湊的 JSON 物件安全地傳輸資訊。它通常用於身分驗證和授權。",
     "structureTitle": "結構",
     "structure": "JWT 由三部分以點號分隔的 Base64URL 編碼組成：標頭.承載.簽章。標頭指定權杖類型和簽章演算法。承載包含聲明。簽章用於驗證完整性。",
     "algorithmsTitle": "支援的演算法",
     "algorithms": "HMAC（HS256/384/512）、RSA（RS256/384/512）、RSA-PSS（PS256/384/512）和 ECDSA（ES256/384/512）。不支援未簽章的 alg=none。",
     "keyFormatsTitle": "接受的密鑰格式",
-    "keyFormats": "HMAC：任意 UTF-8 字串。非對稱：僅支援 PEM 格式——簽章使用 PKCS8（-----BEGIN PRIVATE KEY-----），驗證使用 SPKI（-----BEGIN PUBLIC KEY-----）。不支援 PKCS1、SEC1、加密 PEM 和 X.509 憑證；工具會告訴你具體的 openssl 轉換命令。"
+    "keyFormats": "HMAC：任意 UTF-8 字串。非對稱：僅支援 PEM 格式——簽章使用 PKCS8（-----BEGIN PRIVATE KEY-----），驗證使用 SPKI（-----BEGIN PUBLIC KEY-----）。不支援 PKCS1、SEC1、加密 PEM 和 X.509 憑證；工具會告訴你具體的 openssl 轉換命令。",
+    "faq1Q": "什麼是 JWT？",
+    "faq1A": "JSON Web Token（JWT）是一種開放標準（RFC 7519），用於在各方之間安全地傳輸資訊。它常用於身份驗證和資訊交換。"
   }
 }

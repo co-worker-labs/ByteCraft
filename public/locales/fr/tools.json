@@ -1,4 +1,5 @@
 {
+  "relatedTools": "Outils associés",
   "password": {
     "title": "Générateur de Mots de Passe et Vérificateur de Robustesse",
     "shortTitle": "Générateur de Mots de Passe",

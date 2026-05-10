@@ -1,7 +1,6 @@
 {
   "tabGenerate": "생성",
   "tabInspect": "공개 키 검사",
-  "keyType": "키 유형",
   "rsaBits": "키 길이",
   "comment": "주석",
   "passphrase": "암호",
@@ -16,19 +15,12 @@
   "fingerprint": "핑거프린트",
   "randomart": "랜덤아트",
   "quickDeploy": "빠른 배포",
-  "deployTarget": "user@host",
   "downloadPrivate": "개인 키 다운로드",
   "downloadPublic": "공개 키 다운로드",
-  "copyPrivate": "개인 키 복사",
-  "copyPublic": "공개 키 복사",
-  "copyFingerprint": "핑거프린트 복사",
   "inspectPlaceholder": "공개 키를 여기에 붙여넣으세요 (예: ssh-ed25519 AAAA...)",
   "inspectKeyType": "키 유형",
   "inspectBits": "키 길이",
   "inspectComment": "주석",
-  "inspectInvalid": "잘못된 공개 키 형식입니다. ssh-rsa와 ssh-ed25519만 지원됩니다.",
-  "privacyNotice": "모든 키 생성은 브라우저에서 수행됩니다. 어떤 데이터도 서버로 전송되지 않습니다.",
-  "localGenerated": "Web Crypto API를 사용하여 브라우저에서 SSH 키 쌍을 생성합니다. 개인 키는 기기를 떠나지 않습니다.",
   "descriptions": {
     "stepsTitle": "SSH 키 생성 및 배포 방법",
     "step1Title": "키 유형 선택",
@@ -39,7 +31,6 @@
     "step3Desc": "공개 키 내용을 복사합니다. 대상 서버, Git 플랫폼(GitHub, GitLab, Bitbucket) 또는 클라우드 제공업체에 바로 붙여넣을 수 있습니다.",
     "step4Title": "서버에 배포",
     "step4Desc": "ssh-copy-id -i ~/.ssh/id_ed25519.pub user@host 명령을 실행하거나, 대상 머신의 ~/.ssh/authorized_keys에 공개 키를 수동으로 추가합니다.",
-    "faqTitle": "자주 묻는 질문",
     "faq1Q": "Ed25519과 RSA 중 어떤 것을 사용해야 하나요?",
     "faq1A": "대부분의 경우 Ed25519을 권장합니다. 128비트 보안 수준(RSA 3072와 동등)을 제공하고, 키가 더 짧으며, 서명 속도도 빠릅니다. RSA 4096은 Ed25519을 지원하지 않는 구형 시스템이나 서비스와의 호환성이 필요한 경우에만 사용합니다. GitHub, GitLab 및 주요 클라우드 제공업체는 모두 Ed25519을 지원합니다.",
     "faq2Q": "SSH 키에 암호문을 설정해야 하나요?",
@@ -47,6 +38,7 @@
     "faq3Q": "SSH 공개 키를 GitHub에 추가하려면?",
     "faq3A": "Settings → SSH and GPG keys → New SSH key로 이동합니다. 설명용 제목을 입력하고, 공개 키 내용(ssh-ed25519 또는 ssh-rsa로 시작하는 전체 행)을 붙여넣은 후 Add SSH key를 클릭합니다. GitHub CLI를 사용하면 gh ssh-key add ~/.ssh/id_ed25519.pub 명령도 가능합니다.",
     "faq4Q": "브라우저에서 SSH 키를 생성하는 것은 안전한가요?",
-    "faq4A": "안전합니다. 이 도구는 Web Crypto API를 사용하며, OpenSSL 및 OpenSSH와 동일한 암호화 프리미티브를 제공합니다. 키 생성은 브라우저 메모리 내에서 완전히 이루어지며, 어떤 서버에도 데이터가 전송되지 않습니다. 페이지를 닫거나 새로고침하면 키가 삭제되므로, 떠나기 전에 반드시 다운로드하거나 복사하세요."
+    "faq4A": "안전합니다. 이 도구는 Web Crypto API를 사용하며, OpenSSL 및 OpenSSH와 동일한 암호화 프리미티브를 제공합니다. 키 생성은 브라우저 메모리 내에서 완전히 이루어지며, 어떤 서버에도 데이터가 전송되지 않습니다. 페이지를 닫거나 새로고침하면 키가 삭제되므로, 떠나기 전에 반드시 다운로드하거나 복사하세요.",
+    "aeoDefinition": "SSH 키 생성기는 브라우저에서 RSA 및 Ed25519 SSH 키 쌍을 생성하는 무료 온라인 도구입니다. 암호문 암호화와 핑거프린트 표시를 지원하며, 어떤 데이터도 서버로 전송되지 않습니다."
   }
 }

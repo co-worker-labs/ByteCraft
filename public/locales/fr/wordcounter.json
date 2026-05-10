@@ -24,9 +24,20 @@
   "keywordExists": "Ce mot-clé existe déjà",
   "keywordRemoved": "Mot-clé supprimé",
   "timeLessThan": "< 1 {unit}",
-  "timeHourUnit": "h",
   "timeMinUnit": "min",
   "timeSecUnit": "s",
   "timeHourFormat": "{hours}h {minutes}min",
-  "timeMinFormat": "{minutes} min {seconds} s"
+  "timeMinFormat": "{minutes} min {seconds} s",
+  "descriptions": {
+    "whatIsTitle": "Qu'est-ce que le Compteur de Mots ?",
+    "whatIsP1": "Le Compteur de Mots est un outil en ligne gratuit qui analyse votre texte en temps réel : nombre de mots, de caractères, de phrases, de paragraphes et estimation du temps de lecture.",
+    "whatIsP2": "Il prend également en charge le comptage des caractères CJK (chinois, japonais, coréen), l'analyse de fréquence des mots-clés et le suivi personnalisé — idéal pour les rédacteurs, étudiants et traducteurs.",
+    "faq1Q": "Comment fonctionne le comptage de mots ?",
+    "faq1A": "L'outil divise le texte par les espaces et compte les tokens. Pour le texte CJK (chinois, japonais, coréen), il compte les caractères individuels séparément.",
+    "faq2Q": "Quelles métriques sont affichées ?",
+    "faq2A": "Mots, caractères, caractères sans espaces, phrases, paragraphes, caractères CJK, temps de lecture et temps de parole — tout mis à jour en temps réel pendant que vous tapez.",
+    "faq3Q": "Puis-je suivre des mots-clés spécifiques ?",
+    "faq3A": "Oui. Ajoutez des mots-clés personnalisés pour suivre leur fréquence et leur nombre dans votre texte. L'onglet Mots-clés affiche les mots principaux et les phrases de 2 mots.",
+    "aeoDefinition": "Le Compteur de mots est un outil gratuit en ligne d'analyse de texte en temps réel incluant le comptage de mots, de caractères, de phrases, le temps de lecture et la densité de mots-clés. Prend en charge le texte CJC. Aucune donnée n'est envoyée à un serveur."
+  }
 }

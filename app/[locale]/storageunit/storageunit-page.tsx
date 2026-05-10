@@ -1,7 +1,8 @@
 "use client";
 
 import { ChangeEvent, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { CopyButton } from "../../../components/ui/copy-btn";
 import Layout from "../../../components/layout";
 import { showToast } from "../../../libs/toast";
@@ -14,6 +15,9 @@ import {
 import { StyledInput } from "../../../components/ui/input";
 import { StyledSelect } from "../../../components/ui/input";
 import { StyledCheckbox } from "../../../components/ui/input";
+import RelatedTools from "../../../components/related-tools";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 interface ConversionOutput {
   unit: StorageUnitData;
@@ -339,11 +343,52 @@ function MostConversionList() {
   );
 }
 
+function Description() {
+  const t = useTranslations("storageunit");
+  const tc = useTranslations("common");
+  const locale = useLocale();
+
+  const faqItems = [1, 2].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
+  return (
+    <section id="description" className="mt-8">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
+      <div className="mb-4">
+        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
+        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
+          <p>{t("descriptions.whatIsP2")}</p>
+        </div>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {tc("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
+    </section>
+  );
+}
+
 export default function StorageUnitPage() {
   const t = useTranslations("tools");
   const ts = useTranslations("storageunit");
+  const title = t("storageunit.shortTitle");
   return (
-    <Layout title={t("storageunit.shortTitle")}>
+    <Layout
+      title={title}
+      categoryLabel={t("categories.encoding")}
+      categorySlug="encoding-conversion"
+    >
       <div className="container mx-auto px-4 pt-3 pb-6">
         <Conversion />
         <div className="flex items-center gap-3 my-6">
@@ -354,6 +399,8 @@ export default function StorageUnitPage() {
           <div className="flex-1 h-px bg-border-default" />
         </div>
         <MostConversionList />
+        <Description />
+        <RelatedTools currentTool="storageunit" />
       </div>
     </Layout>
   );

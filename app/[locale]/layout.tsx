@@ -13,8 +13,23 @@ import type { Theme } from "../../libs/theme";
 import { SITE_URL } from "../../libs/site";
 import { SerwistProvider } from "../serwist";
 import { IOSSplashLinks } from "../../components/ios-splash-links";
-import { WebsiteJsonLd } from "../../components/json-ld";
+import { WebsiteJsonLd, buildOrganizationSchema } from "../../components/json-ld";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
 
 type Props = {
   children: ReactNode;
@@ -76,7 +91,11 @@ export default async function LocaleLayout({ children, params }: Props) {
   const initialTheme: Theme = themeCookie === "dark" ? "dark" : "light";
 
   return (
-    <html lang={locale} className={initialTheme === "dark" ? "dark" : ""} suppressHydrationWarning>
+    <html
+      lang={locale}
+      className={`${inter.variable} ${jetbrainsMono.variable}${initialTheme === "dark" ? " dark" : ""}`}
+      suppressHydrationWarning
+    >
       <head>
         <link rel="manifest" href={`/${locale}/manifest.webmanifest`} />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
@@ -86,6 +105,10 @@ export default async function LocaleLayout({ children, params }: Props) {
         <meta name="apple-mobile-web-app-title" content="OmniKit" />
         <IOSSplashLinks />
         <WebsiteJsonLd />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(buildOrganizationSchema()) }}
+        />
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>

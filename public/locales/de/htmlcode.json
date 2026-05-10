@@ -1,8 +1,4 @@
 {
-  "description": {
-    "p1": "Es gibt viele verschiedene Buchstaben, Zeichen, Sonderzeichen, Symbole und Icons, die Sie im Inhalt Ihrer Website verwenden möchten, die aber bei der Verwendung nicht wie erwartet angezeigt werden. Um sicherzustellen, dass sie korrekt angezeigt werden, müssen Sie HTML-Codes verwenden. Jeder einzelne Buchstabe, jedes Zeichen, Symbol und Icon hat seinen eigenen HTML-Code, den Sie einfach in Ihr HTML einfügen müssen. Wir haben eine vollständige Liste aller HTML-Codes für die verschiedenen Zeichen, Sonderzeichen, Buchstaben, Symbole und Icons erstellt. Sie können diese HTML-Codes einfach kopieren und in Ihr HTML einfügen, damit sie korrekt innerhalb der Inhalte Ihrer Website angezeigt werden. Wo verfügbar, haben wir den benutzerfreundlichen HTML-Code (Entity-Name), den numerischen HTML-Code (Entity-Nummer) und den HEX-Code hinzugefügt, damit Sie immer den richtigen Code finden.",
-    "p2": "Bevor Sie einen der untenstehenden Codes auf Ihrer Website verwenden, stellen Sie sicher, dass Ihr HTML-Dokument die richtige Kodierung verwendet, damit die HTML-Codes und HTML-Sonderzeichen korrekt angezeigt werden. Um sicherzustellen, dass Ihr HTML die richtige Kodierung verwendet, sollten Sie den Unicode-Zeichensatz verwenden. Dieser Unicode-Zeichensatz muss im Head-Bereich Ihres HTML-Dokuments festgelegt werden. Dies geschieht durch die Verwendung eines Meta-Tags mit dem charset-Attribut und dem Wert UTF-8. Kopieren Sie einfach das folgende Meta-Tag in Ihren Head-Bereich und alle untenstehenden HTML-Zeichen werden perfekt angezeigt."
-  },
   "tabs": {
     "letters": "Buchstaben",
     "punctuation": "Satzzeichen",
@@ -34,5 +30,14 @@
     "ipaEntityCode": "IPA-Entity-Code",
     "example": "Beispiel"
   },
-  "searchPlaceholder": "Suche nach Zeichen, Code oder Beschreibung..."
+  "searchPlaceholder": "Suche nach Zeichen, Code oder Beschreibung...",
+  "descriptions": {
+    "p1": "HTML-Entitäten sind spezielle Codes zur Darstellung reservierter Zeichen in HTML. Zum Beispiel &lt; für <, &amp; für & und &quot; für \". Siehe die [ASCII-Tabelle](/ascii) für Zeichencodes oder [HTTP-Statuscodes](/httpstatus) für Webantwort-Referenzen.",
+    "p2": "Bevor Sie einen der untenstehenden Codes auf Ihrer Website verwenden, stellen Sie sicher, dass Ihr HTML-Dokument die richtige Zeichenkodierung verwendet, damit die HTML-Codes und HTML-Sonderzeichen korrekt angezeigt werden. Um sicherzustellen, dass Ihr HTML die richtige Kodierung verwendet, sollten Sie den Unicode-Zeichensatz verwenden. Dieser muss im Head-Bereich Ihres HTML-Dokuments gesetzt werden. Verwenden Sie dazu ein meta-Tag mit dem charset-Attribut und dem Wert UTF-8. Kopieren Sie einfach das folgende meta-Tag in Ihren Head-Bereich und alle untenstehenden HTML-Zeichen werden perfekt angezeigt.",
+    "aeoDefinition": "Der HTML-Entity-Kodierer ist ein kostenloses Online-Tool zum Kodieren und Dekodieren von HTML-Sonderzeichen und Entitäten. Vollständige Referenz mit numerischen und benannten Entitäten. Läuft vollständig in Ihrem Browser.",
+    "faq1Q": "Was sind HTML-Zeichenentitäten?",
+    "faq1A": "HTML-Entitäten sind spezielle Codes (wie &amp; für &), die Zeichen darstellen, die in HTML eine besondere Bedeutung haben oder nicht direkt eingegeben werden können.",
+    "faq2Q": "Wie viele Entitäten sind dokumentiert?",
+    "faq2A": "Das Tool bietet eine vollständige Referenz der HTML-Sonderzeichen einschließlich benannter Entitäten (&amp;), dezimaler (&#38;) und hexadezimaler (&#x26;) Codes."
+  }
 }

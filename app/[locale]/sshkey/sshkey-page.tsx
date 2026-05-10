@@ -14,6 +14,8 @@ import { STORAGE_KEYS } from "../../../libs/storage-keys";
 import { generateKeyPair, parsePublicKey } from "../../../libs/sshkey/main";
 import type { SshKeyResult, PublicKeyInfo } from "../../../libs/sshkey/main";
 import { useDropZone } from "../../../hooks/useDropZone";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
 
 type KeyType = "rsa" | "ed25519";
 
@@ -387,6 +389,7 @@ function InspectPanel() {
 
 function Description() {
   const t = useTranslations("sshkey");
+  const tc = useTranslations("common");
   const steps = [1, 2, 3, 4].map((i) => ({
     title: t(`descriptions.step${i}Title`),
     desc: t(`descriptions.step${i}Desc`),
@@ -397,6 +400,11 @@ function Description() {
   }));
   return (
     <section id="description" className="mt-8">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base text-pretty">
           {t("descriptions.stepsTitle")}
@@ -419,7 +427,7 @@ function Description() {
         <div className="flex items-center gap-2 mb-4">
           <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
           <h2 className="font-semibold text-fg-primary text-base text-pretty">
-            {t("descriptions.faqTitle")}
+            {tc("descriptions.faqTitle")}
           </h2>
         </div>
         <Accordion items={faqItems} />
@@ -431,12 +439,13 @@ function Description() {
 export default function SshKeyPage() {
   const t = useTranslations("sshkey");
   const ts = useTranslations("tools");
+  const title = ts("sshkey.shortTitle");
 
   return (
-    <Layout title={ts("sshkey.shortTitle")}>
+    <Layout title={title} categoryLabel={ts("categories.security")} categorySlug="security-crypto">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <div className="space-y-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">{t("localGenerated")}</span>
+          <PrivacyBanner />
 
           <NeonTabs
             tabs={[
@@ -446,6 +455,7 @@ export default function SshKeyPage() {
           />
           <div className="w-full h-px bg-border-default mt-8" />
           <Description />
+          <RelatedTools currentTool="sshkey" />
         </div>
       </div>
     </Layout>

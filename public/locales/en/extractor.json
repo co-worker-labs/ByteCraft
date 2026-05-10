@@ -10,7 +10,6 @@
   "emptyState": "Paste or type text above to extract emails, URLs, and phone numbers",
   "dropZone": "Drop any text file",
   "copyAll": "Copy All",
-  "exportTxt": "TXT",
   "exportCsv": "CSV",
   "exportJson": "JSON",
   "copied": "Copied!",
@@ -25,6 +24,7 @@
   "summaryTotal": "{count} total",
   "occurrences": "×{count}",
   "descriptions": {
+    "aeoDefinition": "Email & URL Extractor is a free online tool that extracts emails, URLs, and phone numbers from any text instantly. Supports multiple formats and batch processing. Runs entirely in your browser.",
     "formatsTitle": "Supported Formats",
     "formatsTableHeader": "Description",
     "formatsEmail": "Email",
@@ -37,6 +37,12 @@
     "tip1": "Extraction is permissive, not validation — all plausible matches are returned",
     "tip2": "Toggle individual types on/off with the chip buttons",
     "tip3": "Results are deduplicated by default; enable \"Show duplicates\" to see all occurrences",
-    "tip4": "Phone numbers must contain at least 7 digits to be recognized"
+    "tip4": "Phone numbers must contain at least 7 digits to be recognized",
+    "faq1Q": "What does the Text Extractor do?",
+    "faq1A": "Extracts specific patterns from text: emails, URLs, and phone numbers. Results are deduplicated by default and can be exported as TXT, CSV, or JSON.",
+    "faq2Q": "Can I define custom extraction patterns?",
+    "faq2A": "Toggle the Email, URL, and Phone chip buttons to include or exclude each type. All matches are found in a single pass.",
+    "faq3Q": "What built-in patterns are available?",
+    "faq3A": "Email addresses (supports +tags and subdomains), URLs (http/https with paths, queries, and fragments), and international phone numbers (at least 7 digits). Each type can be toggled independently."
   }
 }

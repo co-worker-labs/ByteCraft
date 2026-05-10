@@ -31,5 +31,12 @@
     "titleCase": "文章 / 书籍标题",
     "sentenceCase": "句首大写",
     "pathCase": "文件路径、API 路由"
+  },
+  "descriptions": {
+    "faq1Q": "支持哪些文本大小写转换？",
+    "faq1A": "camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE、dot.case、path/case、Title Case、Sentence case、UPPER CASE、lower case 等。",
+    "faq2Q": "可以同时转换多个字符串吗？",
+    "faq2A": "可以。粘贴多行文本，工具会独立转换每一行。多行转换将选中的大小写格式应用到每一行。",
+    "aeoDefinition": "大小写转换工具是一个免费的在线文本转换器，支持 camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE 等格式。即时转换，实时预览。数据不会离开你的浏览器。"
   }
 }

@@ -42,6 +42,9 @@
     "algorithmsTitle": "Algorithmes supportés",
     "algorithms": "HMAC (HS256/384/512), RSA (RS256/384/512), RSA-PSS (PS256/384/512) et ECDSA (ES256/384/512). Le mode non signé `alg=none` est rejeté pour des raisons de sécurité.",
     "keyFormatsTitle": "Formats de clés acceptés",
-    "keyFormats": "HMAC : toute chaîne UTF-8. Asymétrique : PEM uniquement. PKCS8 (-----BEGIN PRIVATE KEY-----) pour la signature, SPKI (-----BEGIN PUBLIC KEY-----) pour la vérification. Les formats PKCS1, SEC1, PEM chiffré et les certificats X.509 ne sont pas acceptés. L'outil vous indiquera la commande openssl exacte pour les convertir."
+    "keyFormats": "HMAC : toute chaîne UTF-8. Asymétrique : PEM uniquement. PKCS8 (-----BEGIN PRIVATE KEY-----) pour la signature, SPKI (-----BEGIN PUBLIC KEY-----) pour la vérification. Les formats PKCS1, SEC1, PEM chiffré et les certificats X.509 ne sont pas acceptés. L'outil vous indiquera la commande openssl exacte pour les convertir.",
+    "faq1Q": "Qu'est-ce qu'un JWT ?",
+    "faq1A": "JSON Web Token (JWT) est une norme ouverte (RFC 7519) pour transmettre securely des informations entre des parties sous forme d'objet JSON. Il est couramment utilisé pour l'authentification et l'échange d'informations.",
+    "aeoDefinition": "Le Débogueur JWT est un outil gratuit en ligne pour encoder, décoder et vérifier des JSON Web Tokens. Prend en charge HS256, RS256, ES256 et d'autres algorithmes. Tout le traitement s'exécute dans votre navigateur — aucun token n'est envoyé à un serveur."
   }
 }

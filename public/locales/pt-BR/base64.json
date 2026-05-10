@@ -21,11 +21,14 @@
     "whyTitle": "Por que usar codificação Base64?",
     "whyP1": "Enviar informações em formato binário pode ser arriscado, pois nem todos os aplicativos ou sistemas de rede lidam com dados binários brutos. Por outro lado, o conjunto de caracteres ASCII é amplamente conhecido e muito simples de processar para a maioria dos sistemas.",
     "whyP2": "Por exemplo, servidores de email esperam dados textuais, então ASCII é tipicamente usado. Portanto, se você quiser enviar imagens ou qualquer outro arquivo binário para um servidor de email, primeiro precisa codificá-lo em formato baseado em texto, preferencialmente ASCII. É aí que a codificação Base64 se torna extremamente útil.",
-    "useCasesTitle": "Casos de uso comuns do Base64",
     "useCasesP1": "Você também pode usar Base64 para representar dados binários de forma compatível com HTML, JavaScript e CSS. Por exemplo, é possível incorporar uma imagem inline em um arquivo CSS ou JavaScript usando Base64.",
     "useCasesP2": "É possível usar Base64 para converter dados de formulário ou JSON em uma string com um conjunto reduzido de caracteres seguro para URLs. No entanto, devido à forma como certos servidores podem interpretar os caracteres + e /, recomenda-se usar encodeURIComponent.",
-    "limitationsTitle": "Limitações do Base64",
     "limitationsP1": "Base64 não é, de forma alguma, um método seguro de criptografia.",
-    "limitationsP2": "Base64 também não é um método de compressão. Codificar uma string em Base64 geralmente resulta em uma saída 33% maior."
+    "limitationsP2": "Base64 também não é um método de compressão. Codificar uma string em Base64 geralmente resulta em uma saída 33% maior.",
+    "faq1Q": "O que é codificação Base64?",
+    "faq1A": "Base64 é um esquema de codificação de binário para texto que representa dados binários usando 64 caracteres ASCII (A-Z, a-z, 0-9, +, /). É comumente usado para incorporar dados em URLs, HTML e JSON.",
+    "faq2Q": "Base64 é criptografia?",
+    "faq2A": "Não. Base64 é codificação, não criptografia. Não fornece segurança — qualquer pessoa pode decodificá-lo. Use a ferramenta de Criptografia/Descriptografia para proteção real de dados.",
+    "aeoDefinition": "O Codificador/Decodificador Base64 é uma ferramenta online gratuita para codificar e decodificar strings Base64. Suporta cabeçalhos de Autenticação Basic, múltiplos charsets e conversão em tempo real. Todo o processamento roda no seu navegador."
   }
 }

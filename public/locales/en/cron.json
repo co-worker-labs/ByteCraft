@@ -5,8 +5,17 @@
     "spring": "Spring (6 fields)",
     "quartz": "Quartz (7 fields)"
   },
-  "tab": { "generate": "Generate", "parse": "Parse" },
-  "timezone": { "label": "Timezone", "local": "Local", "utc": "UTC" },
+  "tab": {
+    "generate": "Generate",
+    "parse": "Parse"
+  },
+  "parse": {
+    "placeholder": "e.g. */5 * * * *"
+  },
+  "timezone": {
+    "local": "Local",
+    "utc": "UTC"
+  },
   "field": {
     "second": "Second",
     "minute": "Minute",
@@ -29,11 +38,28 @@
     "lastDayOffset": "Days before last"
   },
   "monthShort": [
-    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
   ],
-  "weekdayShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-  "weekdayLong": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+  "weekdayLong": [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ],
   "presets": {
     "everyMinute": "Every minute",
     "every5Minutes": "Every 5 minutes",
@@ -53,31 +79,36 @@
     "everyHourAt": "Every hour at {time}",
     "everySecond": "Every second",
     "atTime": "At {time}",
-        "everyN": "Every {n} minutes",
-        "lastDow": "the last {weekday} of the month",
-    "fromTo": "from {from} to {to}",
+    "everyN": "Every {n} minutes",
+    "lastDow": "the last {weekday} of the month",
     "onDays": "on {days}",
     "throughDays": "{from} through {to}",
-    "andList": "{prefix} and {item}",
-    "ofEveryMonth": "of every month",
     "lastDayOfMonth": "the last day of the month",
     "nthWeekday": "the {ordinal} {weekday} of the month",
     "nearestWeekdayTo": "the nearest weekday to day {day}",
     "lastWeekdayOfMonth": "the last weekday of the month",
     "lastDayMinusN": "{n} days before the last day of the month"
   },
-  "ordinal": { "1": "first", "2": "second", "3": "third", "4": "fourth", "5": "fifth" },
+  "ordinal": {
+    "1": "first",
+    "2": "second",
+    "3": "third",
+    "4": "fourth",
+    "5": "fifth"
+  },
   "output": {
-    "expression": "Expression",
     "description": "Description",
     "nextExecutions": "Next 5 executions",
-    "header": { "num": "#", "dateTime": "Date & Time", "relative": "Relative" },
-    "relative": { "in": "in {value}", "now": "now", "past": "past" }
-  },
-  "share": { "button": "Share link", "copied": "Share link copied" },
-  "parse": {
-    "placeholder": "Paste or type a Cron expression",
-    "showingPrevious": "Showing last valid output"
+    "header": {
+      "num": "#",
+      "dateTime": "Date & Time",
+      "relative": "Relative"
+    },
+    "relative": {
+      "in": "in {value}",
+      "now": "now",
+      "past": "past"
+    }
   },
   "warn": {
     "neverTriggers": "This expression will never trigger",
@@ -105,24 +136,23 @@
   },
   "descriptions": {
     "whatIsTitle": "What is a Cron Expression?",
-    "whatIs": "A Cron expression is a string of fields that describes a schedule. Each field controls a unit of time (minute, hour, day, month, weekday). Originally from Unix cron, the syntax has been extended by Spring (adds seconds) and Quartz (adds seconds and year, plus special characters L, W, #).",
-    "fieldRefTitle": "Field Reference",
-    "specialCharsTitle": "Special Characters",
-    "modesTitle": "Modes",
+    "aeoDefinition": "Cron Expression Generator is a free online tool for building and decoding Cron expressions. Supports Standard, Spring, and Quartz modes with human-readable explanations and next-run preview. No data leaves your browser.",
+    "whatIs": "Cron is a time-based job scheduler in Unix-like operating systems. A Cron expression is a string of five or six fields that defines when a job should run. This tool supports Standard, Spring, and Quartz dialects. Pair it with the [Unix Timestamp](/unixtime) converter for time calculations.",
     "dstTitle": "Daylight Saving Time",
-    "dst": "When the active timezone observes DST, schedules within the spring-forward gap fire at the next valid time, and schedules within the fall-back overlap fire at the first occurrence. Switch to UTC to avoid DST entirely."
+    "dst": "When the active timezone observes DST, schedules within the spring-forward gap fire at the next valid time, and schedules within the fall-back overlap fire at the first occurrence. Switch to UTC to avoid DST entirely.",
+    "faq1Q": "What Cron dialects are supported?",
+    "faq1A": "Three: Standard (5-field), Spring (6-field with seconds), and Quartz (7-field with seconds and year). The tool auto-detects the dialect and shows next run times.",
+    "faq2Q": "How accurate are the next-run predictions?",
+    "faq2A": "Predictions are computed client-side and match standard cron behavior. The tool shows the next 5 scheduled execution times for your expression."
   },
   "editor": {
     "title": "Edit field",
     "preview": "Preview",
-    "apply": "Apply",
     "specificValue": "Value",
     "rangeFrom": "From",
     "rangeTo": "To",
     "stepStart": "Start",
     "stepInterval": "Interval",
-    "stepEvery": "Every",
-    "listSelect": "Select values",
     "specialKind": "Kind"
   },
   "presetSection": "Quick presets"

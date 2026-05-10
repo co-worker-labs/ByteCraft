@@ -2,11 +2,9 @@
   "title": "Politique de confidentialité",
   "metaDescription": "Politique de confidentialité d'OmniKit. Découvrez comment nous protégeons vos données avec un traitement 100% côté client et aucune transmission de données au serveur.",
   "lastUpdated": "Dernière mise à jour : 23 avril 2026",
-
   "privacyStatementTitle": "Déclaration de confidentialité",
   "privacyStatementP1": "La présente Politique de confidentialité décrit la façon dont OmniKit (« nous », « notre ») collecte, utilise et partage les informations lorsque vous visitez notre site web (le « Site »). Nous nous engageons à protéger votre vie privée et à faire preuve de transparence concernant nos pratiques de données.",
   "privacyStatementP2": "En utilisant le Site, vous acceptez les pratiques en matière de données décrites dans la présente politique.",
-
   "infoCollectTitle": "Informations que nous collectons",
   "infoCollectP1": "Nous collectons une quantité limitée d'informations pour faire fonctionner et améliorer notre Site. Les informations que nous pouvons collecter incluent :",
   "infoCollectList1": [
@@ -15,7 +13,6 @@
     "Données de cookies : nous utilisons des cookies et des technologies de suivi similaires pour améliorer votre expérience et soutenir nos partenaires publicitaires."
   ],
   "infoCollectP2": "Important : tous les outils pour développeurs d'OmniKit fonctionnent entièrement dans votre navigateur. Le texte que vous encodez, décodez, hachez, chiffrez ou traitez de toute autre manière n'est jamais transmis à nos serveurs ni à aucun serveur tiers.",
-
   "infoUseTitle": "Comment nous utilisons vos informations",
   "infoUseP1": "Nous utilisons les informations collectées aux fins suivantes :",
   "infoUseList1": [
@@ -25,7 +22,6 @@
     "Conformité : respecter les obligations légales applicables."
   ],
   "infoUseP2": "Nous ne vendons pas vos informations personnelles à des tiers.",
-
   "cookiesTitle": "Cookies et technologies de suivi",
   "cookiesP1": "Le Site utilise des cookies et des technologies similaires aux fins suivantes :",
   "cookiesList1": [
@@ -34,7 +30,6 @@
     "Cookies publicitaires : utilisés par nos partenaires publicitaires pour diffuser des publicités pertinentes et mesurer leur efficacité."
   ],
   "cookiesP2": "Vous pouvez gérer vos préférences de cookies via les paramètres de votre navigateur. La désactivation de certains cookies peut affecter votre expérience sur le Site. Pour plus d'informations sur les cookies, visitez www.allaboutcookies.org.",
-
   "advertisingTitle": "Publicité",
   "advertisingP1": "OmniKit est un service gratuit soutenu par la publicité. Nous collaborons avec des réseaux publicitaires tiers qui peuvent collecter des informations sur votre activité de navigation sur plusieurs sites web afin d'afficher des publicités personnalisées.",
   "advertisingP2": "Ces partenaires peuvent utiliser des technologies telles que les cookies, les pixels espions et les balises web pour collecter des données de navigation à des fins de ciblage et de mesure publicitaire. Les informations collectées sont généralement anonymes et ne vous identifient pas personnellement.",
@@ -46,15 +41,12 @@
     "L'European Interactive Digital Advertising Alliance : youronlinechoices.com"
   ],
   "advertisingNote": "Remarque : refuser la publicité personnalisée ne signifie pas que vous ne verrez plus de publicités, mais que les publicités affichées seront moins pertinentes par rapport à vos centres d'intérêt.",
-
   "thirdPartyTitle": "Services tiers",
   "thirdPartyP1": "Nous utilisons Google Analytics pour collecter et analyser les données d'utilisation du Site. Google Analytics collecte des informations telles que la fréquence des visites, les pages consultées et les sites visités avant d'arriver sur le Site. Vous pouvez en savoir plus sur les pratiques de confidentialité de Google sur google.com/intl/en/policies/privacy et vous désinscrire de Google Analytics sur tools.google.com/dlpage/gaoptout.",
   "thirdPartyP2": "Nous pouvons utiliser des services tiers supplémentaires pour la publicité, l'analyse ou les fonctionnalités du Site. Chaque service tiers a sa propre politique de confidentialité que nous vous encourageons à consulter.",
-
   "dataSecurityTitle": "Sécurité des données",
   "dataSecurityP1": "Tous les outils pour développeurs d'OmniKit traitent les données entièrement dans votre navigateur via JavaScript côté client. Vos données, y compris le texte, les fichiers et les opérations cryptographiques, ne quittent jamais votre appareil. Nous n'avons pas accès aux données que vous traitez avec nos outils et ne les stockons pas.",
   "dataSecurityP2": "Nous mettons en œuvre des mesures de sécurité raisonnables pour protéger le Site et son infrastructure. Cependant, aucune méthode de transmission ou de stockage électronique n'est sûre à 100 % et nous ne pouvons pas garantir une sécurité absolue.",
-
   "yourRightsTitle": "Vos droits",
   "yourRightsP1": "Selon votre lieu de résidence, vous pouvez bénéficier de certains droits concernant vos informations personnelles :",
   "yourRightsList1": [
@@ -65,19 +57,14 @@
     "Portabilité des données : dans certaines juridictions, vous avez le droit de recevoir vos informations personnelles dans un format structuré et lisible par machine."
   ],
   "yourRightsP2": "Pour exercer l'un de ces droits, veuillez nous contacter. Nous répondrons à votre demande conformément aux lois applicables.",
-
   "dataRetentionTitle": "Conservation des données",
   "dataRetentionP1": "Nous ne conservons les données analytiques et publicitaires que le temps nécessaire pour atteindre les objectifs décrits dans la présente politique, ou selon les exigences légales. Les données traitées par nos outils pour développeurs ne sont jamais stockées par nos soins et n'existent que temporairement dans votre session de navigation.",
-
   "childrenTitle": "Confidentialité des enfants",
   "childrenP1": "Le Site ne s'adresse pas aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans. Si vous pensez que nous avons collecté par inadvertance des informations auprès d'un enfant de moins de 13 ans, veuillez nous contacter et nous prendrons des mesures pour supprimer ces informations rapidement.",
-
   "changesTitle": "Modifications de la présente politique",
   "changesP1": "Nous pouvons mettre à jour la présente Politique de confidentialité de temps à autre pour refléter les changements dans nos pratiques, la technologie ou les exigences légales. Nous publierons la politique mise à jour sur cette page avec une date de « Dernière mise à jour » révisée. Votre utilisation continue du Site après tout changement constitue une acceptation de la politique mise à jour.",
-
   "linksTitle": "Liens vers d'autres sites",
   "linksP1": "Le Site peut contenir des liens vers des sites web ou services tiers. Nous ne sommes pas responsables des pratiques de confidentialité ou du contenu de ces sites externes. Nous vous encourageons à consulter les politiques de confidentialité de tout site tiers que vous visitez.",
-
   "contactTitle": "Nous contacter",
   "contactP1": "Si vous avez des questions ou des préoccupations concernant la présente Politique de confidentialité ou nos pratiques de données, veuillez nous contacter."
 }

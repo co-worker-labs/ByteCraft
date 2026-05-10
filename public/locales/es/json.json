@@ -4,7 +4,6 @@
   "inputPlaceholder": "Pega o escribe tu JSON aquí",
   "format": "Formatear",
   "compress": "Comprimir",
-  "indent": "Sangría",
   "useTab": "Usar tabuladores",
   "sortKeys": "Ordenar claves",
   "json5": "JSON5",
@@ -14,7 +13,6 @@
   "relaxedParse": "Análisis relajado de JSON5 aplicado",
   "filled": "Rellenado en la entrada",
   "invalid": "JSON no válido",
-  "dropActive": "Suelta para abrir",
   "dropZone": "Suelta un archivo JSON aquí",
   "descriptions": {
     "whatIsTitle": "¿Qué es el formateo JSON?",
@@ -24,14 +22,17 @@
     "json5Title": "¿Qué es JSON5?",
     "json5P1": "JSON5 es un superconjunto de JSON que añade características amigables para humanos: comentarios (// y /* */), comas finales, cadenas con comillas simples, claves de objeto sin comillas, números hexadecimales (0xFF) y valores especiales como NaN e Infinity. Fue creado para hacer JSON más fácil de escribir a mano, especialmente para archivos de configuración.",
     "json5P2": "Activa el modo JSON5 para analizar entradas relajadas directamente. Cuando el modo JSON5 está desactivado, Formatear y Comprimir recurren automáticamente al análisis JSON5 si el análisis JSON estricto falla. Verás una notificación cuando esto ocurra. La salida siempre es JSON estándar.",
-    "useCasesTitle": "Casos de uso comunes",
     "useCasesP1": "Formatear respuestas de API: pega una respuesta de API en crudo y pretty-print para entender la estructura de datos.",
     "useCasesP2": "Minificar archivos de configuración: comprime JSON antes de desplegar a producción para reducir el tamaño del archivo.",
     "useCasesP3": "Corregir JSON editado a mano: pega JSON con comas finales o comentarios, activa JSON5 y obtén una salida JSON estándar limpia.",
     "useCasesP4": "Ordenar claves de objeto: ordena alfabéticamente las claves para obtener una salida diff consistente al controlar versiones de archivos JSON.",
-    "limitationsTitle": "Limitaciones",
     "limitationsP1": "Archivos JSON muy grandes (>10MB) pueden causar que el navegador se pause brevemente durante el formateo.",
     "limitationsP2": "Los números más allá del rango de enteros seguros de JavaScript (±2⁵³) pueden perder precisión tras pasar por JSON.parse/stringify.",
-    "limitationsP3": "Los mensajes de error de JSON5 pueden no incluir números exactos de línea y columna."
+    "limitationsP3": "Los mensajes de error de JSON5 pueden no incluir números exactos de línea y columna.",
+    "faq1Q": "¿Qué es el formateo JSON?",
+    "faq1A": "El formateo JSON transforma JSON crudo o minificado en una estructura legible con sangría. Esta herramienta soporta sangría configurable (2, 4, 8 espacios o tabulaciones), minificación y validación, incluyendo sintaxis JSON5.",
+    "faq2Q": "¿Se envían mis datos JSON a un servidor?",
+    "faq2A": "No. Todo el formateo, validación y minificación de JSON se realiza completamente en tu navegador. Tus datos nunca salen de tu dispositivo.",
+    "aeoDefinition": "El Formateador de JSON es una herramienta gratuita online que formatea, valida y minimiza datos JSON al instante en tu navegador. Soporta JSON5, indentación configurable y ordenamiento de claves. No se envían datos a ningún servidor."
   }
 }

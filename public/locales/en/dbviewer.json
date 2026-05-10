@@ -6,32 +6,22 @@
     "releaseToLoad": "Release to load",
     "unsupported": "Unsupported file type",
     "tooLarge": "File exceeds 200 MB limit.",
-    "invalidHeader": "Not a valid SQLite database file.",
     "engineFailed": "Could not load SQLite engine. Check network or reload.",
     "initializing": "Initializing engine…",
-    "reading": "Reading file… {loaded} / {total}",
     "privacy": "All data processed locally in your browser"
   },
   "info": {
-    "tables": "{count, plural, =1 {1 table} other {# tables}}",
-    "views": "{count, plural, =1 {1 view} other {# views}}",
-    "indexes": "{count, plural, =1 {1 index} other {# indexes}}",
-    "triggers": "{count, plural, =1 {1 trigger} other {# triggers}}",
     "close": "Close"
   },
   "sidebar": {
-    "search": "Search…",
     "tables": "TABLES",
     "views": "VIEWS",
     "indexes": "INDEXES",
     "triggers": "TRIGGERS",
-    "showSystem": "Show system",
-    "noResults": "No matches",
     "collapse": "Collapse sidebar",
     "expand": "Expand sidebar"
   },
   "schema": {
-    "columns": "Columns",
     "foreignKeys": "Foreign keys",
     "indexes": "Indexes",
     "rowCount": "Rows: {count}",
@@ -40,13 +30,7 @@
     "type": "Type",
     "nullable": "Nullable",
     "default": "Default",
-    "pk": "PK",
-    "from": "From",
-    "to": "To",
-    "onDelete": "ON DELETE",
-    "onUpdate": "ON UPDATE",
-    "unique": "Unique",
-    "trigger": "Trigger SQL"
+    "pk": "PK"
   },
   "editor": {
     "run": "Run",
@@ -54,10 +38,8 @@
     "format": "Format",
     "compress": "Compress",
     "clear": "Clear",
-    "history": "History",
     "noHistory": "No queries yet",
-    "clearHistory": "Clear history",
-    "placeholder": "-- Write SELECT queries here. Ctrl/Cmd+Enter to run."
+    "clearHistory": "Clear history"
   },
   "result": {
     "running": "Running query…",
@@ -71,23 +53,26 @@
     "exportJson": "Export JSON",
     "empty": "No results",
     "tabName": "Result {n}",
-    "errorTab": "Error",
-    "rejectedReadonly": "Only read-only statements are allowed (got: {keyword}).",
-    "rejectedPragma": "PRAGMA \"{name}\" is not in the read-only whitelist.",
-    "rejectedCte": "Data-modifying CTE detected; rejected.",
     "exportConfirm": "Cursor is not done. Export current {loaded} rows, or load all first?",
     "exportLoaded": "Export current rows",
     "exportLoadAll": "Load all then export"
   },
   "cell": {
-    "null": "NULL",
     "empty": "(empty)",
     "blob": "BLOB · {bytes} B",
-    "expandLong": "Show full text",
-    "copyLong": "Copy"
+    "expandLong": "Show full text"
   },
-  "status": {
-    "engineRestarted": "Database engine restarted — your data was reloaded",
-    "abortShortcut": "Press Esc to abort"
+  "status": {},
+  "descriptions": {
+    "whatIsTitle": "What is the SQLite Viewer?",
+    "aeoDefinition": "SQLite Viewer is a free online tool for opening and exploring SQLite database files in your browser. Run SQL queries with autocomplete, browse tables, and export to CSV or JSON. No data leaves your device.",
+    "whatIsP1": "The SQLite Viewer lets you open and explore SQLite database files directly in your browser — no server upload required. Run SQL queries, browse tables, and export data to [CSV](/csv) or [JSON](/json). Powered by sql.js (WebAssembly).",
+    "whatIsP2": "Powered by sql.js (SQLite compiled to WebAssembly), it supports autocomplete, query history, pagination, and handles databases up to browser memory limits.",
+    "faq1Q": "What databases can I view?",
+    "faq1A": "The tool supports SQLite database files (.db, .sqlite, .sqlite3). Open any SQLite file to browse tables, run queries, and export data.",
+    "faq2Q": "Is my database uploaded to a server?",
+    "faq2A": "No. The database is loaded into browser memory using sql.js (SQLite compiled to WebAssembly). All operations happen locally.",
+    "faq3Q": "What SQL features are supported?",
+    "faq3A": "Full read-only SQLite SQL syntax including SELECT, JOINs, subqueries, aggregations, EXPLAIN, and PRAGMA. Write operations (INSERT, UPDATE, DELETE, DDL) are rejected for safety. The editor provides autocomplete for table and column names."
   }
 }

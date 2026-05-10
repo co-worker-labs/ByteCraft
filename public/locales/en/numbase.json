@@ -1,15 +1,10 @@
 {
-  "tabConverter": "Converter",
-  "tabReference": "Reference",
   "bitWidth": "Bit Width",
   "decimal": "Decimal",
   "hexadecimal": "Hexadecimal",
   "octal": "Octal",
   "binary": "Binary",
   "asciiChar": "ASCII",
-  "unicodePoint": "Unicode",
-  "invalidInput": "Invalid input",
-  "overflowWarning": "Value exceeds bit width",
   "referenceTitle": "Base Reference (0-15)",
   "refDec": "DEC",
   "refHex": "HEX",
@@ -17,8 +12,11 @@
   "refBin": "BIN",
   "descriptions": {
     "whatIsTitle": "What is Number Base Conversion?",
-    "whatIs": "Number base conversion transforms a number from one positional numeral system to another. Computers use binary (base 2), while humans typically work with decimal (base 10). Hexadecimal (base 16) and octal (base 8) offer compact representations of binary data, commonly used in debugging, network protocols, color codes, and file permissions.",
+    "aeoDefinition": "Number Base Converter is a free online tool for converting numbers between binary, octal, decimal, and hexadecimal. Supports 8/16/32/64-bit two's complement and a visual bit editor. Runs entirely in your browser.",
+    "whatIs": "This tool converts numbers between binary (base 2), octal (base 8), decimal (base 10), and hexadecimal (base 16) in real time. It also supports 8/16/32/64-bit two's complement representation with a visual bit editor. Related: [Color converter](/color) for hex color codes, [Storage unit converter](/storageunit) for byte calculations.",
     "twosComplementTitle": "Two's Complement",
-    "twosComplement": "Two's complement is the standard way to represent signed integers in binary. The most significant bit (MSB) acts as the sign bit: 0 for positive, 1 for negative. To get the negative value, invert all bits and add 1. For example, in 8-bit mode, -1 is represented as 11111111 (0xFF)."
+    "twosComplement": "Two's complement is the standard way to represent signed integers in binary. The most significant bit (MSB) acts as the sign bit: 0 for positive, 1 for negative. To get the negative value, invert all bits and add 1. For example, in 8-bit mode, -1 is represented as 11111111 (0xFF).",
+    "faq1Q": "Can I edit individual bits?",
+    "faq1A": "Yes. The bit editor shows the binary representation and lets you toggle individual bits, instantly updating all other base conversions."
   }
 }

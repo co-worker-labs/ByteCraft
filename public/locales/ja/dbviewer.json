@@ -6,32 +6,22 @@
     "releaseToLoad": "ドロップして読み込み",
     "unsupported": "サポートされていないファイル形式",
     "tooLarge": "ファイルが200MBの制限を超えています。",
-    "invalidHeader": "有効なSQLiteデータベースファイルではありません。",
     "engineFailed": "SQLiteエンジンを読み込めませんでした。ネットワークを確認するか、ページを再読み込みしてください。",
     "initializing": "エンジンを初期化中…",
-    "reading": "ファイル読み込み中… {loaded} / {total}",
     "privacy": "すべてのデータはブラウザ上でローカルに処理されます"
   },
   "info": {
-    "tables": "{count, plural, =1 {1テーブル} other {#テーブル}}",
-    "views": "{count, plural, =1 {1ビュー} other {#ビュー}}",
-    "indexes": "{count, plural, =1 {1インデックス} other {#インデックス}}",
-    "triggers": "{count, plural, =1 {1トリガー} other {#トリガー}}",
     "close": "閉じる"
   },
   "sidebar": {
-    "search": "検索…",
     "tables": "テーブル",
     "views": "ビュー",
     "indexes": "インデックス",
     "triggers": "トリガー",
-    "showSystem": "システムを表示",
-    "noResults": "一致なし",
     "collapse": "サイドバーを折りたたむ",
     "expand": "サイドバーを展開"
   },
   "schema": {
-    "columns": "カラム",
     "foreignKeys": "外部キー",
     "indexes": "インデックス",
     "rowCount": "行数: {count}",
@@ -40,13 +30,7 @@
     "type": "型",
     "nullable": "Null可",
     "default": "デフォルト",
-    "pk": "PK",
-    "from": "参照元",
-    "to": "参照先",
-    "onDelete": "ON DELETE",
-    "onUpdate": "ON UPDATE",
-    "unique": "ユニーク",
-    "trigger": "トリガーSQL"
+    "pk": "PK"
   },
   "editor": {
     "run": "実行",
@@ -54,10 +38,8 @@
     "format": "フォーマット",
     "compress": "圧縮",
     "clear": "クリア",
-    "history": "履歴",
     "noHistory": "まだクエリがありません",
-    "clearHistory": "履歴をクリア",
-    "placeholder": "-- ここにSELECTクエリを入力。Ctrl/Cmd+Enterで実行。"
+    "clearHistory": "履歴をクリア"
   },
   "result": {
     "running": "クエリを実行中…",
@@ -71,23 +53,26 @@
     "exportJson": "JSONエクスポート",
     "empty": "結果なし",
     "tabName": "結果 {n}",
-    "errorTab": "エラー",
-    "rejectedReadonly": "読み取り専用ステートメントのみ許可されています（検出: {keyword}）。",
-    "rejectedPragma": "PRAGMA「{name}」は読み取り専用ホワイトリストにありません。",
-    "rejectedCte": "データ変更CTEが検出されました。拒否しました。",
     "exportConfirm": "カーソルが完了していません。現在の{loaded}行をエクスポートしますか？それともすべて読み込みますか？",
     "exportLoaded": "現在の行をエクスポート",
     "exportLoadAll": "すべて読み込んでからエクスポート"
   },
   "cell": {
-    "null": "NULL",
     "empty": "（空）",
     "blob": "BLOB · {bytes} B",
-    "expandLong": "全文を表示",
-    "copyLong": "コピー"
+    "expandLong": "全文を表示"
   },
-  "status": {
-    "engineRestarted": "データベースエンジンを再起動しました。データは再読み込みされています",
-    "abortShortcut": "Escキーで中止"
+  "status": {},
+  "descriptions": {
+    "aeoDefinition": "SQLiteビューアーは、ブラウザ上でSQLiteデータベースファイルを開いて操作できる無料オンラインツールです。オートコンプリート付きSQLクエリ、テーブル閲覧、CSV/JSONエクスポートに対応。データがデバイスの外に出ることはありません。",
+    "whatIsTitle": "SQLiteビューアーとは？",
+    "whatIsP1": "SQLiteビューアーを使えば、サーバーにアップロードせずにブラウザ上でSQLiteデータベースファイルを直接開いて操作できます。SQLクエリの実行、テーブルの参照、CSVやJSONでのエクスポートが可能です。",
+    "whatIsP2": "sql.js（SQLiteをWebAssemblyにコンパイルしたもの）で動作し、オートコンプリート、クエリ履歴、ページネーションをサポートし、ブラウザのメモリ上限までデータベースを扱えます。",
+    "faq1Q": "どのデータベースを閲覧できますか？",
+    "faq1A": "SQLiteデータベースファイル（.db、.sqlite、.sqlite3）に対応しています。SQLiteファイルを開いてテーブルの閲覧、クエリの実行、データのエクスポートが可能です。",
+    "faq2Q": "データベースはサーバーにアップロードされますか？",
+    "faq2A": "いいえ。データベースはsql.js（WebAssemblyにコンパイルされたSQLite）を使用してブラウザのメモリに読み込まれます。すべての操作はローカルで実行されます。",
+    "faq3Q": "どのSQL機能に対応していますか？",
+    "faq3A": "SQLiteの完全なSQL構文（SELECT、INSERT、UPDATE、DELETE、JOIN、サブクエリ、集計、トランザクション）に対応。エディタはテーブル名と列名のオートコンプリートを提供します。"
   }
 }

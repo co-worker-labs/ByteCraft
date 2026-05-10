@@ -2,12 +2,6 @@
   "url": {
     "placeholder": "https://api.example.com/users"
   },
-  "method": {
-    "label": "Method"
-  },
-  "timeout": {
-    "label": "Timeout"
-  },
   "proxy": {
     "label": "Proxy",
     "tooltip": "Route requests through server-side proxy to bypass CORS restrictions"
@@ -36,8 +30,6 @@
     "placeholder": "Enter Bearer token"
   },
   "basicAuth": {
-    "username": "Username",
-    "password": "Password",
     "usernamePlaceholder": "Username",
     "passwordPlaceholder": "Password"
   },
@@ -47,7 +39,6 @@
   },
   "bodyPlaceholder": "Enter request body...",
   "response": {
-    "title": "Response",
     "emptyState": "Enter a URL and click Send to get started",
     "tabs": {
       "body": "Body",
@@ -56,10 +47,6 @@
       "timing": "Timing",
       "redirects": "Redirects"
     },
-    "status": "Status",
-    "time": "Time",
-    "size": "Size",
-    "type": "Type",
     "download": "Download",
     "copyBody": "Copy Body",
     "pretty": "Pretty",
@@ -70,10 +57,7 @@
     "cookieNote": "Cookies are only visible for same-origin requests or when the server exposes Set-Cookie via CORS headers.",
     "timingNote": "Detailed timing (TTFB, Download) is only available when the server returns Timing-Allow-Origin header.",
     "ttfb": "TTFB",
-    "download": "Download",
     "total": "Total",
-    "na": "N/A",
-    "crossOrigin": "(cross-origin)",
     "redirectOccurred": "A redirect occurred",
     "noRedirect": "No redirects",
     "finalUrl": "Final URL",
@@ -82,7 +66,6 @@
   },
   "error": {
     "cors": "CORS policy blocked this request. The target API does not allow cross-origin requests from browsers.",
-    "network": "Network error",
     "timeout": "Request timed out after {timeout}s.",
     "generic": "Request failed"
   },
@@ -97,8 +80,8 @@
       "days": "{count}d ago"
     }
   },
-  "description": {
-    "text": "A lightweight, browser-based HTTP client for testing REST APIs. Compose and send requests with full control over method, headers, body, and auth — then inspect responses with timing details, headers, and cookies. Requests execute directly via browser fetch() by default. Enable the Proxy toggle to route requests through the server-side proxy, bypassing CORS restrictions. No data is stored on any server.",
+  "descriptions": {
+    "text": "Send HTTP requests and test REST APIs directly in your browser. Supports all common methods with headers, body, and authentication. Look up status codes in the [HTTP Status](/httpstatus) reference, or encode query parameters with the [URL Encoder](/urlencoder).",
     "features": {
       "title": "Features",
       "methods": "All standard HTTP methods: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
@@ -111,6 +94,13 @@
     "cors": {
       "title": "CORS & Proxy",
       "text": "By default, this tool uses the browser's native fetch() API. Cross-origin requests require the target server to include appropriate CORS headers. If a server does not support CORS, enable the Proxy toggle — requests will be routed through the server-side proxy, bypassing CORS restrictions entirely."
-    }
+    },
+    "aeoDefinition": "HTTP Client is a free online tool for sending HTTP requests and testing REST APIs directly in your browser. Supports GET, POST, PUT, DELETE with headers, body, and auth. All requests run locally by default; optional server-side proxy for CORS bypass.",
+    "faq1Q": "What is the HTTP Client tool?",
+    "faq1A": "A browser-based HTTP client for testing APIs. Send GET, POST, PUT, PATCH, DELETE, HEAD, and OPTIONS requests with custom headers, query parameters, and request bodies.",
+    "faq2Q": "Can I use authentication?",
+    "faq2A": "Yes. Supports Basic Auth, Bearer tokens, API keys (header and query), and custom authentication headers. All credentials stay in your browser.",
+    "faq3Q": "Does it support request history?",
+    "faq3A": "Yes. All requests are saved to local storage with full request/response details. You can bookmark frequently used requests for quick access."
   }
 }

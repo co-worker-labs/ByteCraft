@@ -1,0 +1,64 @@
+{
+  "text": {
+    "title": "Ferramentas de Processamento de Texto - JSON, Regex, Diff e mais | OmniKit",
+    "shortTitle": "Processamento de Texto",
+    "description": "Ferramentas online gratuitas de processamento de texto para desenvolvedores. Formate JSON, teste regex, compare diffs, converta cases e mais. Todas as ferramentas rodam 100% no seu navegador.",
+    "intro": "Um conjunto de 8 ferramentas de processamento de texto projetadas para desenvolvedores que trabalham diariamente com texto estruturado e não estruturado. Formate e valide JSON, teste expressões regulares com correspondência em tempo real, compare diferenças de texto, escreva Markdown com pré-visualização ao vivo, converta cases de texto, extraia emails e URLs, conte palavras e caracteres, e remova linhas duplicadas — tudo sem enviar dados para qualquer servidor.",
+    "faq1Q": "Quais ferramentas de processamento de texto o OmniKit oferece?",
+    "faq1A": "O OmniKit fornece 8 ferramentas de processamento de texto: Formatador JSON (com suporte a JSON5), Testador de Regex, Diff de Texto, Editor Markdown, Conversor de Case de Texto, Extrator de Email e URL, Contador de Palavras e Deduplicador de Linhas.",
+    "faq2Q": "Essas ferramentas de processamento de texto são gratuitas?",
+    "faq2A": "Sim, todas as ferramentas de processamento de texto do OmniKit são completamente gratuitas e rodam inteiramente no seu navegador. Nenhum dado é enviado para qualquer servidor.",
+    "faq3Q": "Posso usar essas ferramentas com arquivos grandes?",
+    "faq3A": "Sim. A maioria das ferramentas suporta arquivos de até vários MB. O Formatador JSON, Diff e Editor Markdown usam Web Workers para performance suave com entradas grandes."
+  },
+  "encoding": {
+    "title": "Ferramentas de Codificação e Conversão - Base64, URL, CSV, YAML | OmniKit",
+    "shortTitle": "Codificação e Conversão",
+    "description": "Ferramentas online gratuitas de codificação e conversão para desenvolvedores. Codificar/decodificar Base64, codificar/decodificar URL, conversão CSV, conversão YAML, conversão de base numérica e mais. 100% no lado do cliente.",
+    "intro": "7 ferramentas de codificação e conversão que cobrem as necessidades mais comuns de transformação de dados. Codifique e decodifique strings Base64, codifique parâmetros URL, converta entre JSON e CSV ou YAML, transforme bases numéricas e converta unidades de armazenamento. Todas as operações rodam localmente no seu navegador — sem uploads para servidores.",
+    "faq1Q": "Quais ferramentas de codificação o OmniKit oferece?",
+    "faq1A": "O OmniKit oferece 7 ferramentas de codificação e conversão: Codificador/Decodificador Base64, Codificador/Decodificador de URL, Conversor JSON/CSV, Conversor CSV/Tabela Markdown, Conversor de Base Numérica, Conversor JSON/YAML e Conversor de Unidades de Armazenamento.",
+    "faq2Q": "As conversões de codificação são precisas?",
+    "faq2A": "Sim. Todas as conversões seguem suas respectivas especificações RFC (RFC 4648 para Base64, RFC 3986 para codificação URL) e produzem saída compatível com os padrões."
+  },
+  "security": {
+    "title": "Ferramentas de Segurança e Criptografia - JWT, Hashing, Criptografia | OmniKit",
+    "shortTitle": "Segurança e Cripto",
+    "description": "Ferramentas online gratuitas de segurança e criptografia para desenvolvedores. Depure tokens JWT, gere hashes, crie senhas seguras, gere chaves SSH, criptografe texto e calcule checksums de arquivos. 100% no lado do cliente.",
+    "intro": "6 ferramentas de segurança e criptografia para desenvolvedores. Depure e verifique tokens JWT, gere hashes MD5/SHA, crie senhas criptograficamente seguras, gere pares de chaves SSH, criptografe e descriptografe texto com AES/DES/RC4 e calcule checksums de arquivos. Todas as operações criptográficas rodam inteiramente no seu navegador — seus dados nunca saem do seu dispositivo.",
+    "faq1Q": "As ferramentas de segurança são seguras para usar com dados sensíveis?",
+    "faq1A": "Sim. Todas as ferramentas de segurança rodam 100% no lado do cliente usando bibliotecas criptográficas JavaScript. Nenhum dado é transmitido para qualquer servidor. Você pode verificar isso consultando o código-fonte aberto.",
+    "faq2Q": "Quais algoritmos de criptografia são suportados?",
+    "faq2A": "A ferramenta de Criptografia/Descriptografia suporta AES-256, DES, Triple DES, Rabbit, RC4 e RC4Drop. O Gerador de Hash suporta MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3, Keccak e RIPEMD-160."
+  },
+  "generators": {
+    "title": "Ferramentas Geradoras - UUID, Cron, Timestamp, QR Code | OmniKit",
+    "shortTitle": "Geradores",
+    "description": "Ferramentas online gratuitas de geração para desenvolvedores. Gere UUIDs, construa expressões Cron, converta timestamps Unix e crie QR Codes. Todas as ferramentas rodam 100% no seu navegador.",
+    "intro": "4 ferramentas geradoras que ajudam você a criar artefatos comuns de desenvolvimento. Gere identificadores UUID v4 e v7, construa e decodifique expressões Cron com pré-visualização da próxima execução, converta timestamps Unix e gere QR Codes estilizados para texto, URLs, WiFi e mais. Tudo roda localmente no seu navegador.",
+    "faq1Q": "O que posso gerar com o OmniKit?",
+    "faq1A": "O OmniKit fornece 4 ferramentas geradoras: Gerador de UUID (v4/v7), Gerador de Expressões Cron, Conversor de Timestamp Unix e Gerador de QR Code com estilo personalizado.",
+    "faq2Q": "Os UUIDs gerados são únicos?",
+    "faq2A": "Sim. UUID v4 usa números aleatórios criptograficamente seguros, e UUID v7 combina timestamp com aleatoriedade. Ambos estão em conformidade com RFC 4122/9562."
+  },
+  "visual": {
+    "title": "Ferramentas Visuais e de Mídia - Conversor de Cores, Compressor de Imagens | OmniKit",
+    "shortTitle": "Visual e Mídia",
+    "description": "Ferramentas online gratuitas visuais e de mídia para desenvolvedores. Converta cores entre HEX/RGB/HSL/OKLCH, extraia paletas de imagens, comprima e converta imagens. 100% no lado do cliente.",
+    "intro": "2 ferramentas visuais e de mídia para fluxos de trabalho de design e imagens. O Conversor de Cores suporta 7 espaços de cor (HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH) com seletor visual, extração de paleta de imagens, verificação de contraste WCAG e simulação de daltonismo. O Compressor de Imagens suporta conversão entre PNG, JPG e WebP com suporte a redimensionamento. Todo o processamento roda localmente.",
+    "faq1Q": "Quais espaços de cor são suportados?",
+    "faq1A": "O Conversor de Cores suporta HEX, RGB, HSL, HSV, CMYK, LAB e OKLCH com conversão bidirecional e comparação visual.",
+    "faq2Q": "Existe limite de tamanho de arquivo para compressão de imagens?",
+    "faq2A": "Não. A compressão de imagens roda inteiramente no seu navegador usando Canvas API, então não há limite de tamanho de arquivo no servidor. Imagens muito grandes podem ser mais lentas para processar."
+  },
+  "reference": {
+    "title": "Ferramentas de Referência e Consulta - HTTP Status, ASCII, Códigos HTML | OmniKit",
+    "shortTitle": "Referência e Consulta",
+    "description": "Ferramentas online gratuitas de referência e consulta para desenvolvedores. Códigos de status HTTP, tabela ASCII, entidades HTML, visualizador SQLite e cliente HTTP. Todas as ferramentas rodam 100% no seu navegador.",
+    "intro": "5 ferramentas de referência e consulta para consultas rápidas de desenvolvimento. Navegue por códigos de status HTTP com referências RFC, consulte códigos de caracteres ASCII, codifique entidades HTML, explore bancos de dados SQLite com editor SQL e teste APIs REST com o cliente HTTP. Todas as ferramentas são gratuitas e rodam inteiramente no seu navegador.",
+    "faq1Q": "Quais ferramentas de referência o OmniKit oferece?",
+    "faq1A": "O OmniKit oferece 5 ferramentas de referência: referência de Códigos de Status HTTP, Cliente HTTP para teste de APIs, Visualizador de Banco de Dados SQLite, Tabela ASCII e Codificador de Entidades HTML.",
+    "faq2Q": "Posso executar consultas SQL no Visualizador de DB?",
+    "faq2A": "Sim. O Visualizador SQLite suporta consultas SQL somente leitura com autocompletar, histórico de consultas, paginação e exportação para CSV ou JSON — tudo rodando localmente no seu navegador via WebAssembly."
+  }
+}

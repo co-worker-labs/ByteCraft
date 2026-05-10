@@ -1,20 +1,4 @@
 {
-  "shortTitle": "QR-Code-Generator",
-  "title": "QR-Code-Generator - Kostenloses Online-Tool",
-  "description": {
-    "title": "Über QR-Codes",
-    "intro": "QR-Codes kodieren Text in eine 2D-Matrix, die Smartphone-Kameras dekodieren können. Höhere Fehlerkorrektur macht sie selbst bei teilweiser Beschädigung (durch ein Logo, Schmutz oder Beschädigung) lesbar.",
-    "ecTitle": "Fehlerkorrektur-Stufen",
-    "ecL": "L, stellt ca. 7% Schaden wieder her. Kleinste Größe, kein Logo.",
-    "ecM": "M, stellt ca. 15% wieder her. Geeignet für saubere Ausdrucke.",
-    "ecQ": "Q, stellt ca. 25% wieder her. Standard; robust und unterstützt kleine Logos.",
-    "ecH": "H, stellt ca. 30% wieder her. Erforderlich für größere Logos.",
-    "tipsTitle": "Tipps",
-    "tipMargin": "Behalten Sie immer einen Rand (Ruhezone) von mindestens 4 Modulen. Scanner benötigen ihn zur Erkennung des Codes.",
-    "tipContrast": "Hoher Kontrast zwischen Vorder- und Hintergrund ist unerlässlich. Vermeiden Sie kontrastarme Farbkombinationen.",
-    "tipLogo": "Wenn Sie ein Logo einbetten, verwenden Sie Fehlerkorrektur H und halten Sie die Logogröße bei maximal 30% des QR-Codes.",
-    "tipTest": "Testen Sie den generierten QR-Code immer mit einer echten Smartphone-Kamera, bevor Sie ihn drucken oder weit verbreiten."
-  },
   "contentTypes": {
     "text": "Text / URL",
     "wifi": "WiFi",
@@ -87,9 +71,24 @@
     "logoTooLarge": "Logo-Datei muss kleiner als 2MB sein",
     "logoNotImage": "Bitte laden Sie ein PNG-, JPG-, SVG- oder WebP-Bild hoch",
     "ecBumpedForLogo": "Fehlerkorrektur wurde auf H erhöht für zuverlässiges Scannen mit Logo",
-    "ecLowWithLogo": "Niedrige Fehlerkorrektur mit Logo kann das Scannen verhindern",
     "generateFailed": "QR-Code-Generierung fehlgeschlagen",
     "libraryLoadFailed": "QR-Generator konnte nicht geladen werden. Bitte laden Sie die Seite neu."
   },
-  "localGenerated": "Vollständig in Ihrem Browser generiert. Ihre Daten verlassen niemals Ihr Gerät."
+  "descriptions": {
+    "title": "Über QR-Codes",
+    "intro": "QR-Codes kodieren Text in eine 2D-Matrix, die Smartphone-Kameras dekodieren können. Höhere Fehlerkorrektur macht sie selbst bei teilweiser Verdeckung (durch ein Logo, Schmutz oder Beschädigung) lesbar.",
+    "ecTitle": "Fehlerkorrektur-Stufen",
+    "ecL": "L — stellt ~7% Schaden wieder her. Kleinste Stufe, kein Logo.",
+    "ecM": "M — stellt ~15% wieder her. Geeignet für saubere Ausdrucke.",
+    "ecQ": "Q — stellt ~25% wieder her. Standard; robust und unterstützt kleine Logos.",
+    "ecH": "H — stellt ~30% wieder her. Erforderlich für größere Logos.",
+    "tipsTitle": "Tipps",
+    "tipMargin": "Halten Sie immer einen Rand (Ruhezone) von mindestens 4 Modulen frei — Scanner benötigen ihn zur Code-Erkennung.",
+    "tipContrast": "Ein hoher Kontrast zwischen Vorder- und Hintergrund ist entscheidend. Vermeiden Sie kontrastarme Kombinationen.",
+    "tipLogo": "Wenn Sie ein Logo einbetten, verwenden Sie Fehlerkorrektur H und halten Sie die Logogröße ≤ 30% des QR-Codes.",
+    "tipTest": "Testen Sie den generierten QR-Code immer mit einer echten Handykamera, bevor Sie ihn drucken oder weit verbreiten.",
+    "aeoDefinition": "Der QR-Code-Generator ist ein kostenloses Online-Tool zum Erstellen von QR-Codes für Text, URLs, WiFi, vCard und mehr. Unterstützt benutzerdefinierte Farben, Logos und Punktstile mit SVG/PNG-Export. Es werden keine Daten an einen Server gesendet.",
+    "faq1Q": "Was ist der QR-Code-Generator?",
+    "faq1A": "Ein anpassbarer QR-Code-Generator, der Text, URLs, WiFi-Zugangsdaten und vCards unterstützt. Logo hinzufügen, Farben ändern und als SVG oder PNG exportieren."
+  }
 }

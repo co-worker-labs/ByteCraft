@@ -1,15 +1,10 @@
 {
-  "tabConverter": "Conversor",
-  "tabReference": "Referencia",
   "bitWidth": "Ancho de bits",
   "decimal": "Decimal",
   "hexadecimal": "Hexadecimal",
   "octal": "Octal",
   "binary": "Binario",
   "asciiChar": "ASCII",
-  "unicodePoint": "Unicode",
-  "invalidInput": "Entrada no válida",
-  "overflowWarning": "El valor excede el ancho de bits",
   "referenceTitle": "Referencia de bases (0-15)",
   "refDec": "DEC",
   "refHex": "HEX",
@@ -19,6 +14,9 @@
     "whatIsTitle": "¿Qué es la conversión de base numérica?",
     "whatIs": "La conversión de base numérica transforma un número de un sistema de numeración posicional a otro. Las computadoras usan binario (base 2), mientras que los humanos normalmente trabajan con decimal (base 10). Hexadecimal (base 16) y octal (base 8) ofrecen representaciones compactas de datos binarios, comúnmente usadas en depuración, protocolos de red, códigos de color y permisos de archivos.",
     "twosComplementTitle": "Complemento a dos",
-    "twosComplement": "El complemento a dos es la forma estándar de representar enteros con signo en binario. El bit más significativo (MSB) actúa como bit de signo: 0 para positivo, 1 para negativo. Para obtener el valor negativo, invierte todos los bits y suma 1. Por ejemplo, en modo de 8 bits, -1 se representa como 11111111 (0xFF)."
+    "twosComplement": "El complemento a dos es la forma estándar de representar enteros con signo en binario. El bit más significativo (MSB) actúa como bit de signo: 0 para positivo, 1 para negativo. Para obtener el valor negativo, invierte todos los bits y suma 1. Por ejemplo, en modo de 8 bits, -1 se representa como 11111111 (0xFF).",
+    "faq1Q": "¿Qué bases numéricas son compatibles?",
+    "faq1A": "Binario (base 2), Octal (base 8), Decimal (base 10) y Hexadecimal (base 16) con conversión en tiempo real entre las cuatro.",
+    "aeoDefinition": "El Conversor de base numérica es una herramienta gratuita online para convertir números entre binario, octal, decimal y hexadecimal. Soporta complemento a dos de 8/16/32/64 bits y un editor de bits visual. Se ejecuta completamente en tu navegador."
   }
 }

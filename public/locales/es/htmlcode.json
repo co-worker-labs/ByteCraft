@@ -1,8 +1,4 @@
 {
-  "description": {
-    "p1": "Hay muchas letras, caracteres, caracteres especiales, símbolos e iconos que quizás quieras usar en el contenido de tu sitio web, pero cuando lo haces, no se muestran como deberían. Para asegurarte de que se muestren correctamente, necesitas usar códigos HTML. Cada letra, carácter, símbolo e icono tiene su propio código HTML que solo necesitas colocar en tu HTML. Hemos creado una lista completa de todos los códigos HTML para los diversos caracteres, caracteres especiales, letras, símbolos e iconos. Puedes copiar fácilmente estos códigos HTML y pegarlos en tu HTML para que se muestren correctamente en el contenido de tu sitio web. Donde estén disponibles, hemos añadido el código HTML amigable (nombre de entidad), el código HTML numérico (número de entidad) y el código HEX para que siempre encuentres el código correcto que necesitas.",
-    "p2": "Antes de usar uno de los códigos siguientes en tu sitio web, asegúrate de que tu documento HTML usa la codificación correcta para que los códigos HTML se muestren correctamente. Para ello, debes asegurarte de usar el juego de caracteres Unicode. Este juego de caracteres debe configurarse en la sección head de tu documento HTML. Se hace usando una meta etiqueta con el atributo charset y el valor UTF-8. Solo copia y pega la siguiente meta etiqueta en tu sección head y todos los caracteres HTML se mostrarán perfectamente."
-  },
   "tabs": {
     "letters": "Letras",
     "punctuation": "Puntuación",
@@ -34,5 +30,14 @@
     "ipaEntityCode": "Código de entidad AFI",
     "example": "Ejemplo"
   },
-  "searchPlaceholder": "Buscar por carácter, código o descripción..."
+  "searchPlaceholder": "Buscar por carácter, código o descripción...",
+  "descriptions": {
+    "p1": "Las entidades HTML son códigos especiales usados para representar caracteres reservados en HTML. Por ejemplo, &lt; para <, &amp; para & y &quot; para \". Consulta la [Tabla ASCII](/ascii) para códigos de caracteres, o los [Códigos de estado HTTP](/httpstatus) para referencias de respuestas web.",
+    "p2": "Antes de usar uno de los siguientes códigos en tu sitio web, asegúrate de que tu documento HTML usa la codificación correcta para que los códigos HTML y los códigos especiales se muestren correctamente. Para ello, asegúrate de usar el juego de caracteres Unicode, que debe configurarse en la sección head de tu documento HTML mediante una meta con el atributo charset y el valor UTF-8. Copia y pega la siguiente meta en tu sección head y todos los caracteres HTML se mostrarán perfectamente.",
+    "aeoDefinition": "El Codificador de entidades HTML es una herramienta gratuita online para codificar y decodificar caracteres especiales y entidades HTML. Referencia completa con entidades numéricas y con nombre. Se ejecuta completamente en tu navegador.",
+    "faq1Q": "¿Qué son las entidades de caracteres HTML?",
+    "faq1A": "Las entidades HTML son códigos especiales (como &amp; para &) usados para representar caracteres que tienen significado especial en HTML o no pueden escribirse directamente.",
+    "faq2Q": "¿Cuántas entidades están documentadas?",
+    "faq2A": "La herramienta proporciona una referencia completa de caracteres especiales HTML incluyendo entidades con nombre (&amp;), decimales (&#38;) y hexadecimales (&#x26;)."
+  }
 }

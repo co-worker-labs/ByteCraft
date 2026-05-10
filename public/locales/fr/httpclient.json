@@ -1,26 +1,53 @@
 {
-  "url": { "placeholder": "https://api.example.com/users" },
-  "method": { "label": "Méthode" },
-  "timeout": { "label": "Délai d'attente" },
-  "proxy": { "label": "Proxy", "tooltip": "Acheminer les requêtes via le proxy serveur pour contourner les restrictions CORS" },
+  "url": {
+    "placeholder": "https://api.example.com/users"
+  },
+  "proxy": {
+    "label": "Proxy",
+    "tooltip": "Acheminer les requêtes via le proxy serveur pour contourner les restrictions CORS"
+  },
   "send": "Envoyer",
   "sending": "Envoi en cours...",
-  "tabs": { "params": "Paramètres", "headers": "En-têtes", "body": "Corps", "auth": "Authentification" },
-  "bodyType": { "none": "aucun", "json": "JSON", "form-data": "Form-Data", "urlencoded": "x-www-form-urlencoded", "raw": "Brut" },
-  "authType": { "none": "aucune", "bearer": "Bearer Token", "basic": "Authentification Basic" },
-  "bearerToken": { "placeholder": "Entrez le token Bearer" },
-  "basicAuth": { "username": "Nom d'utilisateur", "password": "Mot de passe", "usernamePlaceholder": "Nom d'utilisateur", "passwordPlaceholder": "Mot de passe" },
-  "kv": { "keyPlaceholder": "Clé", "valuePlaceholder": "Valeur" },
+  "tabs": {
+    "params": "Paramètres",
+    "headers": "En-têtes",
+    "body": "Corps",
+    "auth": "Authentification"
+  },
+  "bodyType": {
+    "none": "aucun",
+    "json": "JSON",
+    "form-data": "Form-Data",
+    "urlencoded": "x-www-form-urlencoded",
+    "raw": "Brut"
+  },
+  "authType": {
+    "none": "aucune",
+    "bearer": "Bearer Token",
+    "basic": "Authentification Basic"
+  },
+  "bearerToken": {
+    "placeholder": "Entrez le token Bearer"
+  },
+  "basicAuth": {
+    "usernamePlaceholder": "Nom d'utilisateur",
+    "passwordPlaceholder": "Mot de passe"
+  },
+  "kv": {
+    "keyPlaceholder": "Clé",
+    "valuePlaceholder": "Valeur"
+  },
   "bodyPlaceholder": "Entrez le corps de la requête...",
   "response": {
-    "title": "Réponse",
     "emptyState": "Entrez une URL et cliquez sur Envoyer pour commencer",
-    "tabs": { "body": "Corps", "headers": "En-têtes", "cookies": "Cookies", "timing": "Chronométrage", "redirects": "Redirections" },
-    "status": "Statut",
-    "time": "Temps",
-    "size": "Taille",
-    "type": "Type",
-    "download": "Télécharger",
+    "tabs": {
+      "body": "Corps",
+      "headers": "En-têtes",
+      "cookies": "Cookies",
+      "timing": "Chronométrage",
+      "redirects": "Redirections"
+    },
+    "download": "Téléchargement",
     "copyBody": "Copier le corps",
     "pretty": "Formaté",
     "raw": "Brut",
@@ -30,10 +57,7 @@
     "cookieNote": "Les cookies ne sont visibles que pour les requêtes de même origine ou lorsque le serveur expose Set-Cookie via les en-têtes CORS.",
     "timingNote": "Le chronométrage détaillé (TTFB, téléchargement) n'est disponible que lorsque le serveur renvoie l'en-tête Timing-Allow-Origin.",
     "ttfb": "TTFB",
-    "download": "Téléchargement",
     "total": "Total",
-    "na": "N/A",
-    "crossOrigin": "(origine croisée)",
     "redirectOccurred": "Une redirection a eu lieu",
     "noRedirect": "Aucune redirection",
     "finalUrl": "URL finale",
@@ -42,7 +66,6 @@
   },
   "error": {
     "cors": "La politique CORS a bloqué cette requête. L'API cible n'autorise pas les requêtes cross-origin depuis les navigateurs.",
-    "network": "Erreur réseau",
     "timeout": "La requête a expiré après {timeout}s.",
     "generic": "Échec de la requête"
   },
@@ -50,22 +73,34 @@
     "title": "Historique",
     "clear": "Effacer l'historique",
     "empty": "Aucun historique",
-    "ago": { "seconds": "il y a {count}s", "minutes": "il y a {count}min", "hours": "il y a {count}h", "days": "il y a {count}j" }
+    "ago": {
+      "seconds": "il y a {count}s",
+      "minutes": "il y a {count}min",
+      "hours": "il y a {count}h",
+      "days": "il y a {count}j"
+    }
   },
-  "description": {
-    "text": "Un client HTTP léger basé sur le navigateur pour tester les APIs REST. Composez et envoyez des requêtes avec un contrôle total sur la méthode, les en-têtes, le corps et l'authentification, puis inspectez les réponses avec les détails de temps, les en-têtes et les cookies. Les requêtes sont exécutées directement via fetch() du navigateur par défaut. Activez le proxy pour acheminer les requêtes via le proxy serveur, contournant les restrictions CORS. Aucune donnée n'est stockée sur un serveur.",
+  "descriptions": {
+    "faq1Q": "Qu'est-ce que l'outil HTTP Client ?",
+    "faq1A": "Un client HTTP basé sur le navigateur pour tester des APIs. Envoyez des requêtes GET, POST, PUT, PATCH, DELETE, HEAD et OPTIONS avec des en-têtes personnalisés, paramètres de requête et corps de requête.",
+    "faq2Q": "Puis-je utiliser l'authentification ?",
+    "faq2A": "Oui. Prend en charge Basic Auth, les tokens Bearer, les clés API (en-tête et requête) et les en-têtes d'authentification personnalisés. Toutes les informations d'identification restent dans votre navigateur.",
+    "faq3Q": "Prend-il en charge l'historique des requêtes ?",
+    "faq3A": "Oui. Toutes les requêtes sont sauvegardées dans le stockage local avec les détails complets de requête/réponse. Vous pouvez mettre en favori les requêtes fréquemment utilisées pour un accès rapide.",
+    "text": "Envoyez des requêtes HTTP et testez des APIs REST directement dans votre navigateur. Prend en charge toutes les méthodes courantes avec en-têtes, corps et authentification. Consultez les codes de statut dans la référence [Codes de statut HTTP](/httpstatus) ou encodez les paramètres de requête avec l'[Encodeur d'URL](/urlencoder).",
     "features": {
       "title": "Fonctionnalités",
       "methods": "Toutes les méthodes HTTP standards : GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
-      "auth": "Authentification : Bearer Token, Basic Auth",
-      "body": "Formats de corps : JSON, Form-Data, x-www-form-urlencoded, texte brut",
-      "response": "Inspection des réponses : corps formaté, en-têtes, cookies, temps, redirections",
+      "auth": "Authentification : Bearer Token, Authentification Basic",
+      "body": "Formats de corps de requête : JSON, Form-Data, x-www-form-urlencoded, Texte brut",
+      "response": "Inspection de la réponse : corps formaté, en-têtes, cookies, chronométrage, infos de redirection",
       "history": "Historique des requêtes avec restauration en un clic (stocké localement)",
-      "proxy": "Mode proxy serveur : contournez les restrictions CORS en un clic"
+      "proxy": "Mode proxy côté serveur : contourner les restrictions CORS en un clic"
     },
     "cors": {
-      "title": "CORS et Proxy",
-      "text": "Par défaut, cet outil utilise l'API fetch() native du navigateur. Les requêtes entre origines nécessitent que le serveur inclue les en-têtes CORS appropriés. Si le serveur ne prend pas en charge CORS, activez le proxy : les requêtes seront acheminées via le proxy serveur, contournant entièrement les restrictions CORS."
-    }
+      "title": "CORS et proxy",
+      "text": "Par défaut, cet outil utilise l'API fetch() native du navigateur. Les requêtes cross-origin nécessitent que le serveur cible inclue les en-têtes CORS appropriés. Si un serveur ne supporte pas CORS, activez le proxy — les requêtes seront acheminées via le proxy côté serveur, contournant entièrement les restrictions CORS."
+    },
+    "aeoDefinition": "Le Client HTTP est un outil gratuit en ligne pour envoyer des requêtes HTTP et tester des APIs REST dans votre navigateur. Prend en charge GET, POST, PUT, DELETE avec en-têtes, corps et authentification. Toutes les requêtes s'exécutent localement par défaut ; proxy côté serveur en option pour contourner le CORS."
   }
 }

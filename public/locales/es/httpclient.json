@@ -1,26 +1,53 @@
 {
-  "url": { "placeholder": "https://api.example.com/users" },
-  "method": { "label": "Método" },
-  "timeout": { "label": "Tiempo de espera" },
-  "proxy": { "label": "Proxy", "tooltip": "Enviar solicitudes a través del proxy del servidor para evitar restricciones CORS" },
+  "url": {
+    "placeholder": "https://api.example.com/users"
+  },
+  "proxy": {
+    "label": "Proxy",
+    "tooltip": "Enviar solicitudes a través del proxy del servidor para evitar restricciones CORS"
+  },
   "send": "Enviar",
   "sending": "Enviando...",
-  "tabs": { "params": "Parámetros", "headers": "Cabeceras", "body": "Cuerpo", "auth": "Autenticación" },
-  "bodyType": { "none": "ninguno", "json": "JSON", "form-data": "Form-Data", "urlencoded": "x-www-form-urlencoded", "raw": "Raw" },
-  "authType": { "none": "ninguno", "bearer": "Bearer Token", "basic": "Autenticación Basic" },
-  "bearerToken": { "placeholder": "Introduce el token Bearer" },
-  "basicAuth": { "username": "Usuario", "password": "Contraseña", "usernamePlaceholder": "Usuario", "passwordPlaceholder": "Contraseña" },
-  "kv": { "keyPlaceholder": "Clave", "valuePlaceholder": "Valor" },
+  "tabs": {
+    "params": "Parámetros",
+    "headers": "Cabeceras",
+    "body": "Cuerpo",
+    "auth": "Autenticación"
+  },
+  "bodyType": {
+    "none": "ninguno",
+    "json": "JSON",
+    "form-data": "Form-Data",
+    "urlencoded": "x-www-form-urlencoded",
+    "raw": "Raw"
+  },
+  "authType": {
+    "none": "ninguno",
+    "bearer": "Bearer Token",
+    "basic": "Autenticación Basic"
+  },
+  "bearerToken": {
+    "placeholder": "Introduce el token Bearer"
+  },
+  "basicAuth": {
+    "usernamePlaceholder": "Usuario",
+    "passwordPlaceholder": "Contraseña"
+  },
+  "kv": {
+    "keyPlaceholder": "Clave",
+    "valuePlaceholder": "Valor"
+  },
   "bodyPlaceholder": "Introduce el cuerpo de la petición...",
   "response": {
-    "title": "Respuesta",
     "emptyState": "Introduce una URL y haz clic en Enviar para empezar",
-    "tabs": { "body": "Cuerpo", "headers": "Cabeceras", "cookies": "Cookies", "timing": "Tiempos", "redirects": "Redirecciones" },
-    "status": "Estado",
-    "time": "Tiempo",
-    "size": "Tamaño",
-    "type": "Tipo",
-    "download": "Descargar",
+    "tabs": {
+      "body": "Cuerpo",
+      "headers": "Cabeceras",
+      "cookies": "Cookies",
+      "timing": "Tiempos",
+      "redirects": "Redirecciones"
+    },
+    "download": "Descarga",
     "copyBody": "Copiar cuerpo",
     "pretty": "Formateado",
     "raw": "Raw",
@@ -30,10 +57,7 @@
     "cookieNote": "Las cookies solo son visibles en solicitudes del mismo origen o cuando el servidor expone Set-Cookie mediante cabeceras CORS.",
     "timingNote": "Los tiempos detallados (TTFB, descarga) solo están disponibles cuando el servidor devuelve la cabecera Timing-Allow-Origin.",
     "ttfb": "TTFB",
-    "download": "Descarga",
     "total": "Total",
-    "na": "N/A",
-    "crossOrigin": "(origen cruzado)",
     "redirectOccurred": "Ocurrió una redirección",
     "noRedirect": "Sin redirecciones",
     "finalUrl": "URL final",
@@ -42,7 +66,6 @@
   },
   "error": {
     "cors": "La política CORS bloqueó esta solicitud. La API de destino no permite solicitudes de origen cruzado desde navegadores.",
-    "network": "Error de red",
     "timeout": "La solicitud superó el tiempo de espera de {timeout}s.",
     "generic": "Error en la solicitud"
   },
@@ -50,22 +73,34 @@
     "title": "Historial",
     "clear": "Borrar historial",
     "empty": "Sin historial",
-    "ago": { "seconds": "hace {count}s", "minutes": "hace {count}min", "hours": "hace {count}h", "days": "hace {count}d" }
+    "ago": {
+      "seconds": "hace {count}s",
+      "minutes": "hace {count}min",
+      "hours": "hace {count}h",
+      "days": "hace {count}d"
+    }
   },
-  "description": {
-    "text": "Un cliente HTTP ligero basado en el navegador para probar APIs REST. Configura solicitudes con control total sobre método, encabezados, cuerpo y autenticación, luego inspecciona las respuestas con detalles de tiempo, encabezados y cookies. Las solicitudes se envían directamente vía fetch() del navegador por defecto. Activa el proxy para enrutar las solicitudes a través del proxy del servidor, evitando las restricciones CORS. No se almacenan datos en ningún servidor.",
+  "descriptions": {
+    "text": "Envía solicitudes HTTP y prueba APIs REST directamente en tu navegador. Soporta todos los métodos comunes con cabeceras, cuerpo y autenticación. Busca códigos de estado en la referencia de [Códigos HTTP](/httpstatus), o codifica parámetros de consulta con el [Codificador de URL](/urlencoder).",
     "features": {
       "title": "Características",
       "methods": "Todos los métodos HTTP estándar: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS",
       "auth": "Autenticación: Bearer Token, Basic Auth",
       "body": "Formatos de cuerpo: JSON, Form-Data, x-www-form-urlencoded, texto Raw",
-      "response": "Inspección de respuesta: cuerpo formateado, encabezados, cookies, tiempo, redirecciones",
+      "response": "Inspección de respuesta: cuerpo formateado, cabeceras, cookies, tiempos, info de redirección",
       "history": "Historial de solicitudes con restauración en un clic (almacenado localmente)",
-      "proxy": "Modo proxy del servidor: evita restricciones CORS con un solo clic"
+      "proxy": "Modo proxy del lado del servidor: evita restricciones CORS con un solo interruptor"
     },
     "cors": {
       "title": "CORS y Proxy",
-      "text": "Por defecto, esta herramienta usa la API fetch() nativa del navegador. Las solicitudes entre orígenes requieren que el servidor incluya los encabezados CORS apropiados. Si el servidor no soporta CORS, activa el proxy: las solicitudes se enrutarán a través del proxy del servidor, evitando completamente las restricciones CORS."
-    }
+      "text": "Por defecto, esta herramienta usa la API fetch() nativa del navegador. Las solicitudes de origen cruzado requieren que el servidor de destino incluya las cabeceras CORS apropiadas. Si un servidor no soporta CORS, activa el interruptor Proxy — las solicitudes se enrutarán a través del proxy del servidor, evitando las restricciones CORS completamente."
+    },
+    "aeoDefinition": "HTTP Client es una herramienta gratuita online para enviar solicitudes HTTP y probar APIs REST directamente en tu navegador. Soporta GET, POST, PUT, DELETE con cabeceras, cuerpo y autenticación. Todas las solicitudes se ejecutan localmente por defecto; proxy opcional del lado del servidor para evitar CORS.",
+    "faq1Q": "¿Qué es la herramienta HTTP Client?",
+    "faq1A": "Un cliente HTTP basado en navegador para probar APIs. Envía peticiones GET, POST, PUT, PATCH, DELETE, HEAD y OPTIONS con headers personalizados, parámetros de consulta y cuerpos de petición.",
+    "faq2Q": "¿Puedo usar autenticación?",
+    "faq2A": "Sí. Soporta Basic Auth, tokens Bearer, claves API (header y query) y headers de autenticación personalizados. Todas las credenciales permanecen en tu navegador.",
+    "faq3Q": "¿Soporta historial de peticiones?",
+    "faq3A": "Sí. Todas las peticiones se guardan en almacenamiento local con detalles completos de petición/respuesta. Puedes marcar como favoritas las peticiones usadas frecuentemente para acceso rápido."
   }
 }

@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState, Fragment } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import Layout from "../../../components/layout";
 import { StyledInput, StyledTextarea } from "../../../components/ui/input";
 import { NeonTabs } from "../../../components/ui/tabs";
@@ -25,6 +26,10 @@ import type {
 } from "../../../libs/regex/main";
 import type { FlagDef } from "../../../libs/regex/types";
 import { showToast } from "../../../libs/toast";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 // --- Flag Checkboxes ---
 
@@ -61,19 +66,6 @@ function ErrorCaret({ offset }: { offset: number }) {
       style={{ paddingLeft: `${offset * 0.6}em` }}
     >
       ^
-    </div>
-  );
-}
-
-// --- Privacy Banner ---
-
-function PrivacyBanner() {
-  const tc = useTranslations("common");
-  return (
-    <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-      <span className="text-sm text-fg-secondary leading-relaxed">
-        {tc("alert.notTransferred")}
-      </span>
     </div>
   );
 }
@@ -592,6 +584,8 @@ function Conversion() {
 
 function Description() {
   const t = useTranslations("regex");
+  const tc = useTranslations("common");
+  const locale = useLocale();
 
   const CHEATSHEET_SECTIONS = [
     {
@@ -761,14 +755,23 @@ function Description() {
     },
   ];
 
+  const faqItems = [1, 2].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <div className="mt-12 space-y-8 text-fg-secondary text-sm leading-relaxed">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       {/* What is Regex Tester */}
       <section>
         <h2 className="text-xl font-semibold text-fg-primary mb-3">
           {t("descriptions.whatIsTitle")}
         </h2>
-        <p className="mb-2">{t("descriptions.whatIsP1")}</p>
+        <p className="mb-2">{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
         <p className="mb-2">{t("descriptions.whatIsP2")}</p>
         <p>{t("descriptions.whatIsP3")}</p>
       </section>
@@ -791,7 +794,7 @@ function Description() {
       {/* Common Use Cases */}
       <section>
         <h2 className="text-xl font-semibold text-fg-primary mb-3">
-          {t("descriptions.useCasesTitle")}
+          {tc("descriptions.useCasesTitle")}
         </h2>
         <ul className="list-disc list-inside space-y-1">
           <li>{t("descriptions.useCasesP1")}</li>
@@ -846,7 +849,7 @@ function Description() {
       {/* Limitations */}
       <section>
         <h2 className="text-xl font-semibold text-fg-primary mb-3">
-          {t("descriptions.limitationsTitle")}
+          {tc("descriptions.limitationsTitle")}
         </h2>
         <ul className="list-disc list-inside space-y-1">
           <li>{t("descriptions.limitationsP1")}</li>
@@ -855,6 +858,15 @@ function Description() {
           <li>{t("descriptions.limitationsP4")}</li>
         </ul>
       </section>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {tc("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
     </div>
   );
 }
@@ -866,11 +878,12 @@ export default function RegexPage() {
   const title = t("regex.shortTitle");
 
   return (
-    <Layout title={title}>
+    <Layout title={title} categoryLabel={t("categories.text")} categorySlug="text-processing">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <PrivacyBanner />
         <Conversion />
         <Description />
+        <RelatedTools currentTool="regex" />
       </div>
     </Layout>
   );

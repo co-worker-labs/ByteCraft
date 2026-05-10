@@ -1,9 +1,7 @@
 {
   "printableCharacters": "Printable Characters",
   "controlCodeCharts": "Control Code Charts",
-  "description": {
-    "text": "ASCII stands for American Standard Code for Information Interchange. Computers can only understand numbers, so an ASCII code is the numerical representation of a character such as 'a' or '@' or an action of some sort. ASCII was developed a long time ago and now the non-printing characters are rarely used for their original purpose. Below is the ASCII character table and this includes descriptions of the first 32 non-printing characters. ASCII was actually designed for use with teletypes and so the descriptions are somewhat obscure. If someone says they want your CV however in ASCII format, all this means is they want 'plain' text with no formatting such as tabs, bold or underscoring - the raw format that any computer can understand. This is usually so they can easily import the file into their own applications without issues. Notepad.exe creates ASCII text, or in MS Word you can save a file as 'text only'"
-  },
+
   "tableHeaders": {
     "decimal": "Decimal",
     "binary": "Binary",
@@ -15,5 +13,16 @@
     "glyph": "Glyph"
   },
   "tip": "💡 Hover over any row for details. Use the search bar to quickly find characters by decimal, hex, or glyph.",
-  "searchPlaceholder": "Search by decimal, hex, or character..."
+  "searchPlaceholder": "Search by decimal, hex, or character...",
+  "descriptions": {
+    "text": "ASCII stands for American Standard Code for Information Interchange. Computers can only understand numbers, so an ASCII code is the numerical representation of a character such as 'a' or '@' or an action of some sort. ASCII was developed a long time ago and now the non-printing characters are rarely used for their original purpose. Below is the ASCII character table and this includes descriptions of the first 32 non-printing characters. ASCII was actually designed for use with teletypes and so the descriptions are somewhat obscure. If someone says they want your CV however in ASCII format, all this means is they want 'plain' text with no formatting such as tabs, bold or underscoring - the raw format that any computer can understand. This is usually so they can easily import the file into their own applications without issues. Notepad.exe creates ASCII text, or in MS Word you can save a file as 'text only'",
+    "whatIsTitle": "What is the ASCII Table?",
+    "aeoDefinition": "ASCII Table is a free online reference for ASCII characters with hex, octal, decimal, and HTML codes. Includes search, filtering, and conversion tools. Runs entirely in your browser.",
+    "whatIsP1": "ASCII (American Standard Code for Information Interchange) is a character encoding standard that assigns numeric values to letters, digits, punctuation, and control codes. It covers 128 characters from 0 to 127. See [HTML entities](/htmlcode) for web-safe characters, or [Number Base converter](/numbase) for hex/binary conversions.",
+    "whatIsP2": "This tool provides a complete interactive ASCII reference table with search, character-to-code conversion, and categorized sections for printable characters and control codes.",
+    "faq1Q": "What control characters are included?",
+    "faq1A": "All 33 control codes (0-31 and 127) including NUL, TAB, LF, CR, ESC, and DEL, with descriptions of their original teletype functions.",
+    "faq2Q": "How is ASCII different from Unicode?",
+    "faq2A": "ASCII covers 128 characters for English. Unicode extends this to over 140,000 characters covering virtually all writing systems. ASCII is a subset of Unicode (the first 128 code points match)."
+  }
 }

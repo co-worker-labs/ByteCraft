@@ -24,12 +24,17 @@
     "tableUrl": "URL complète",
     "tableForm": "Formulaire",
     "tableNote": "Le mode Composant encode tout sauf le jeu non réservé A-Z a-z 0-9 - _ . ! ~ * ' ( ). Le mode URL complète préserve en plus le jeu structurel ; , / ? : @ & = + $ # !. Le mode Formulaire encode le même jeu que Composant plus ! ' ( ) ~ (mais pas *), transforme l'espace en + au lieu de %20, et normalise \\n / \\r / \\r\\n en \\r\\n (encodé %0D%0A), ce qui correspond à ce que le navigateur envoie pour une soumission application/x-www-form-urlencoded.",
-    "useCasesTitle": "Cas d'utilisation courants",
     "useCasesP1": "Construire des chaînes de requête sûres : quand vous construisez des URL comme /search?q=[valeur] manuellement, passez la valeur par le mode Composant pour que les caractères comme & ou = dans la valeur ne corrompent pas l'URL environnante.",
     "useCasesP2": "Intégrer une URL dans une autre URL : quand vous passez une URL comme paramètre d'une autre (par exemple, une URL de redirection OAuth), vous devez encoder l'URL interne avec le mode Composant (pas URL complète) pour que les / : ? & de l'URL interne ne soient pas interprétés comme la structure de l'URL externe.",
     "useCasesP3": "Soumettre des données de formulaire avec fetch : quand vous POSTez un corps avec Content-Type: application/x-www-form-urlencoded, le corps doit être encodé avec la sémantique du mode Formulaire. La sortie du mode Formulaire de cet outil est compatible octet pour octet avec ce que le navigateur envoie.",
-    "limitationsTitle": "Limites",
     "limitationsP1": "L'encodage d'URL n'est pas un chiffrement. N'importe qui peut décoder la sortie avec un seul appel de fonction. N'utilisez jamais l'encodage pour cacher des secrets.",
-    "limitationsP2": "Le choix du mode est important. Passer une URL complète par le mode Composant casse l'URL (chaque / devient %2F). Passer une valeur de requête par le mode URL complète peut laisser des caractères réservés dangereux (un & dans la valeur ressemble toujours à un séparateur de paramètre). En cas de doute, choisissez Composant."
+    "limitationsP2": "Le choix du mode est important. Passer une URL complète par le mode Composant casse l'URL (chaque / devient %2F). Passer une valeur de requête par le mode URL complète peut laisser des caractères réservés dangereux (un & dans la valeur ressemble toujours à un séparateur de paramètre). En cas de doute, choisissez Composant.",
+    "faq1Q": "Qu'est-ce que l'encodage URL ?",
+    "faq1A": "L'encodage URL (encodage en pourcentage) convertit les caractères dans un format transmissible sur Internet. Les caractères spéciaux comme les espaces, guillemets et non-ASCII sont remplacés par des séquences %XX.",
+    "faq2Q": "Quels modes d'encodage sont disponibles ?",
+    "faq2A": "Trois modes : Composant (encode tous les caractères réservés), URL complète (préserve la structure URL comme ://, ?, &) et Formulaire (l'espace devient + au lieu de %20).",
+    "faq3Q": "Quand dois-je utiliser l'encodage URL ?",
+    "faq3A": "Utilisez l'encodage URL pour transmettre des données dans les paramètres de requête, intégrer des URL en HTML ou gérer des caractères spéciaux dans les appels API.",
+    "aeoDefinition": "L'Encodeur/Décodeur d'URL est un outil gratuit en ligne pour encoder et décoder des chaînes URL. Prend en charge les modes Composant, URL complète et Formulaire. Fonctionne entièrement dans votre navigateur — aucune donnée n'est envoyée à un serveur."
   }
 }

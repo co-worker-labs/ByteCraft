@@ -3,7 +3,8 @@
 import "../../../styles/prism-theme.css";
 
 import { useEffect, useRef, useState, type ChangeEvent, type DragEvent, type UIEvent } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { Upload, Download, FileDown, FileImage, Printer, Trash2, Columns2 } from "lucide-react";
 import Layout from "../../../components/layout";
 import { Button } from "../../../components/ui/button";
@@ -15,9 +16,14 @@ import { MAX_FILE_BYTES } from "../../../libs/file/limits";
 import { isBinaryFile } from "../../../libs/file/binary-sniff";
 import { renderMarkdown } from "../../../libs/markdown/render";
 import { downloadMd, printPdf, exportPng } from "../../../libs/markdown/export";
+import { ensureLanguagesLoaded } from "../../../libs/markdown/highlight";
 import { useIsMobile } from "../../../hooks/use-is-mobile";
 import { EditorView } from "./components/EditorView";
 import { PreviewView } from "./components/PreviewView";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 type EditorMode = "edit" | "preview" | "split";
 
@@ -63,6 +69,10 @@ function MarkdownPageBody() {
   const scrollLockRef = useRef(false);
 
   const isMobile = useIsMobile();
+
+  useEffect(() => {
+    ensureLanguagesLoaded();
+  }, []);
 
   const tooLargeForAuto = markdown.length > AUTO_RENDER_MAX_BYTES;
   const wordCount = markdown.trim() ? markdown.trim().split(/\s+/).length : 0;
@@ -315,13 +325,8 @@ function MarkdownPageBody() {
           </div>
         </div>
       )}
-      <div
-        data-no-print
-        className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4"
-      >
-        <span className="text-sm text-fg-secondary leading-relaxed">
-          {tc("alert.notTransferred")}
-        </span>
+      <div data-no-print>
+        <PrivacyBanner />
       </div>
 
       <div data-no-print className="flex flex-wrap items-center gap-2 my-3">
@@ -335,7 +340,7 @@ function MarkdownPageBody() {
         />
         <Button variant="primary" size="sm" onClick={() => fileInputRef.current?.click()}>
           <Upload size={14} />
-          {t("loadFile")}
+          {tc("loadFile")}
         </Button>
         <Button variant="secondary" size="sm" onClick={onDownload} disabled={!markdown}>
           <Download size={14} />
@@ -421,12 +426,19 @@ function MarkdownPageBody() {
 
 function Description() {
   const t = useTranslations("markdown");
+  const locale = useLocale();
+
   return (
     <section id="description" className="mt-8">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.whatIsP1")}</p>
+          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
         </div>
       </div>
       <div className="mb-4">
@@ -441,6 +453,10 @@ function Description() {
           <p>{t("descriptions.gfmP1")}</p>
         </div>
       </div>
+      <div className="mb-4">
+        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.faq1Q")}</h2>
+        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{t("descriptions.faq1A")}</p>
+      </div>
     </section>
   );
 }
@@ -449,10 +465,11 @@ export default function MarkdownPage() {
   const tTools = useTranslations("tools");
   const title = tTools("markdown.shortTitle");
   return (
-    <Layout title={title}>
+    <Layout title={title} categoryLabel={tTools("categories.text")} categorySlug="text-processing">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <MarkdownPageBody />
         <Description />
+        <RelatedTools currentTool="markdown" />
       </div>
     </Layout>
   );

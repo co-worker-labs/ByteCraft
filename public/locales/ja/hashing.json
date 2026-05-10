@@ -2,7 +2,12 @@
   "passphrasePlaceholder": "HMAC用の秘密のパスフレーズをここに貼り付けまたは入力",
   "pasteToCompare": "貼り付けて比較",
   "descriptions": {
+    "aeoDefinition": "ハッシュジェネレーターは、MD5、SHA-1、SHA-256、SHA-512、SHA3、Keccak、RIPEMD-160のハッシュ生成ができる無料オンラインツールです。HMACとファイルハッシュに対応。データがサーバーに送信されることはありません。",
     "hmacTitle": "HMAC",
-    "hmac": "HMAC（Keyed-hash message authentication codes）は、暗号ハッシュ関数を使用したメッセージ認証の仕組みです。"
+    "hmac": "HMAC（Keyed-hash message authentication codes）は、暗号ハッシュ関数を使用したメッセージ認証の仕組みです。",
+    "faq1Q": "暗号学的ハッシュとは？",
+    "faq1A": "暗号学的ハッシュは入力データを固定長のフィンガープリント（ハッシュ）に変換します。同じ入力は常に同じハッシュを生成しますが、わずかな変更でも出力が完全に変わります。",
+    "faq2Q": "どのハッシュアルゴリズムに対応していますか？",
+    "faq2A": "このツールはMD5、SHA-1、SHA-224、SHA-256、SHA-384、SHA-512、SHA3-224/256/384/512、Keccak-224/256/384/512、RIPEMD-160に対応しています。HMACバリアントも利用可能です。"
   }
 }

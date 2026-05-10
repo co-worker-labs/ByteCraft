@@ -24,9 +24,20 @@
   "keywordExists": "關鍵詞已存在",
   "keywordRemoved": "關鍵詞已刪除",
   "timeLessThan": "< 1 {unit}",
-  "timeHourUnit": "小時",
   "timeMinUnit": "分鐘",
   "timeSecUnit": "秒",
   "timeHourFormat": "{hours}小時 {minutes}分鐘",
-  "timeMinFormat": "{minutes}分 {seconds}秒"
+  "timeMinFormat": "{minutes}分 {seconds}秒",
+  "descriptions": {
+    "whatIsTitle": "什麼是字數統計器？",
+    "aeoDefinition": "字數統計器是一款免費的線上工具，用於即時文字分析，包括詞數、字元數、句子數、閱讀時間和關鍵詞密度。支援 CJK 文字。不會將任何資料傳送到伺服器。",
+    "whatIsP1": "字數統計器是一款免費的線上工具，提供即時文字分析，包括詞數、字元數、句子數、段落数和閱讀時間估算。",
+    "whatIsP2": "它還支援 CJK（中日韓）字元計數、關鍵詞頻率分析和自訂關鍵詞追蹤，非常適合寫作人員、學生和翻譯工作者使用。",
+    "faq1Q": "字數統計是如何運作的？",
+    "faq1A": "工具按空白字元分割文字並計算詞元數。對於 CJK 文字（中文、日文、韓文），單獨計算每個字元。",
+    "faq2Q": "顯示哪些指標？",
+    "faq2A": "字數、字元數、不含空格的字元數、句子數、段落數、CJK 字元數、閱讀時間和演講時間——全部在輸入時即時更新。",
+    "faq3Q": "可以追蹤特定關鍵字嗎？",
+    "faq3A": "可以。新增自訂關鍵字來追蹤它們在文字中的頻率和計數。關鍵字分頁顯示最常用的詞和雙字詞組。"
+  }
 }

@@ -3,10 +3,7 @@
   "preview": "Prévia",
   "placeholder": "Escreva ou cole seu Markdown aqui...",
   "emptyPreview": "Nada para prever",
-  "loadFile": "Carregar",
   "downloadFile": "Baixar",
-  "copyHtml": "Copiar HTML",
-  "copiedHtml": "HTML copiado para a área de transferência",
   "exportLabel": "Exportar",
   "exportPdf": "Exportar PDF",
   "exportPng": "Exportar PNG",
@@ -26,6 +23,9 @@
     "howTitle": "Como usar",
     "howP1": "Digite ou cole Markdown no editor. A prévia atualiza conforme você digita. Alterne entre layouts Editar, Prévia e Dividido. Exporte para .md, copie o HTML renderizado ou salve a prévia como PDF ou PNG. Todo processamento acontece no seu navegador.",
     "gfmTitle": "GitHub Flavored Markdown",
-    "gfmP1": "Suporta tabelas, listas de tarefas (- [ ] tarefa), tachado, autolinks e diagramas Mermaid (fluxograma, sequência, classe, estado, ER, Gantt, pizza, git graph). Use blocos de código ```mermaid. Matemática e notas de rodapé estão fora do escopo."
+    "gfmP1": "Suporta tabelas, listas de tarefas (- [ ] tarefa), tachado, autolinks e diagramas Mermaid (fluxograma, sequência, classe, estado, ER, Gantt, pizza, git graph). Use blocos de código ```mermaid. Matemática e notas de rodapé estão fora do escopo.",
+    "faq1Q": "O que é o Editor Markdown?",
+    "faq1A": "Um editor Markdown ao vivo com visualização em painel dividido, suportando GFM (GitHub Flavored Markdown), destaque de sintaxe, listas de tarefas e diagramas Mermaid.",
+    "aeoDefinition": "O Editor Markdown é uma ferramenta online gratuita para escrever e pré-visualizar Markdown com suporte a GitHub Flavored Markdown. Inclui destaque de sintaxe, pré-visualização ao vivo e exportação PDF/PNG. Roda inteiramente no seu navegador."
   }
 }

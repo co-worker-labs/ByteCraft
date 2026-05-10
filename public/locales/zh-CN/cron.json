@@ -5,8 +5,17 @@
     "spring": "Spring（6 字段）",
     "quartz": "Quartz（7 字段）"
   },
-  "tab": { "generate": "生成", "parse": "解析" },
-  "timezone": { "label": "时区", "local": "本地", "utc": "UTC" },
+  "tab": {
+    "generate": "生成",
+    "parse": "解析"
+  },
+  "parse": {
+    "placeholder": "例如 */5 * * * *"
+  },
+  "timezone": {
+    "local": "本地",
+    "utc": "UTC"
+  },
   "field": {
     "second": "秒",
     "minute": "分",
@@ -29,11 +38,28 @@
     "lastDayOffset": "倒数第 N 天"
   },
   "monthShort": [
-    "1月", "2月", "3月", "4月", "5月", "6月",
-    "7月", "8月", "9月", "10月", "11月", "12月"
+    "1月",
+    "2月",
+    "3月",
+    "4月",
+    "5月",
+    "6月",
+    "7月",
+    "8月",
+    "9月",
+    "10月",
+    "11月",
+    "12月"
   ],
-  "weekdayShort": ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
-  "weekdayLong": ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+  "weekdayLong": [
+    "星期日",
+    "星期一",
+    "星期二",
+    "星期三",
+    "星期四",
+    "星期五",
+    "星期六"
+  ],
   "presets": {
     "everyMinute": "每分钟",
     "every5Minutes": "每 5 分钟",
@@ -53,31 +79,36 @@
     "everyHourAt": "每小时 {time}",
     "everySecond": "每秒",
     "atTime": "于 {time}",
-        "everyN": "每 {n} 分钟",
-        "lastDow": "本月最后一个{weekday}",
-    "fromTo": "从 {from} 到 {to}",
+    "everyN": "每 {n} 分钟",
+    "lastDow": "本月最后一个{weekday}",
     "onDays": "在 {days}",
     "throughDays": "{from} 至 {to}",
-    "andList": "{prefix} 和 {item}",
-    "ofEveryMonth": "每月",
     "lastDayOfMonth": "本月最后一天",
     "nthWeekday": "本月第 {ordinal} 个 {weekday}",
     "nearestWeekdayTo": "距第 {day} 天最近的工作日",
     "lastWeekdayOfMonth": "本月最后一个工作日",
     "lastDayMinusN": "本月最后一天前 {n} 天"
   },
-  "ordinal": { "1": "第 1", "2": "第 2", "3": "第 3", "4": "第 4", "5": "第 5" },
+  "ordinal": {
+    "1": "第 1",
+    "2": "第 2",
+    "3": "第 3",
+    "4": "第 4",
+    "5": "第 5"
+  },
   "output": {
-    "expression": "表达式",
     "description": "描述",
     "nextExecutions": "未来 5 次执行",
-    "header": { "num": "#", "dateTime": "日期与时间", "relative": "相对" },
-    "relative": { "in": "{value} 后", "now": "现在", "past": "已过" }
-  },
-  "share": { "button": "分享链接", "copied": "分享链接已复制" },
-  "parse": {
-    "placeholder": "粘贴或输入 Cron 表达式",
-    "showingPrevious": "显示上次有效的输出"
+    "header": {
+      "num": "#",
+      "dateTime": "日期与时间",
+      "relative": "相对"
+    },
+    "relative": {
+      "in": "{value} 后",
+      "now": "现在",
+      "past": "已过"
+    }
   },
   "warn": {
     "neverTriggers": "此表达式永远不会触发",
@@ -105,24 +136,23 @@
   },
   "descriptions": {
     "whatIsTitle": "什么是 Cron 表达式？",
-    "whatIs": "Cron 表达式是一串描述计划调度时间的字段。每个字段控制一个时间单位（分、时、日、月、周）。最初来自 Unix cron，语法已由 Spring（增加秒）和 Quartz（增加秒和年，以及特殊字符 L、W、#）扩展。",
-    "fieldRefTitle": "字段参考",
-    "specialCharsTitle": "特殊字符",
-    "modesTitle": "模式",
+    "whatIs": "Cron 是类 Unix 操作系统中基于时间的作业调度器。Cron 表达式是由五个或六个字段组成的字符串，定义了作业应何时运行。此工具支持 Standard、Spring 和 Quartz 方言。配合 [Unix 时间戳](/unixtime) 转换器进行时间计算。",
     "dstTitle": "夏令时",
-    "dst": "当活跃时区使用夏令时，春季前进间隔内的计划将在下一个有效时间触发，秋季后退重叠内的计划将在第一次出现时触发。切换到 UTC 可完全避免夏令时问题。"
+    "dst": "当活跃时区使用夏令时，春季前进间隔内的计划将在下一个有效时间触发，秋季后退重叠内的计划将在第一次出现时触发。切换到 UTC 可完全避免夏令时问题。",
+    "faq1Q": "什么是 Cron 表达式？",
+    "faq1A": "Cron 表达式是由 5-7 个字段组成的字符串，用于定义重复任务的调度计划。它被 cron 守护进程、任务调度器和 Spring、Quartz 等框架使用。",
+    "faq2Q": "支持哪些 Cron 方言？",
+    "faq2A": "三种：标准（5 字段）、Spring（6 字段，含秒）和 Quartz（7 字段，含秒和年）。工具会自动检测方言并显示下次运行时间。",
+    "aeoDefinition": "Cron 表达式生成器是一个免费的在线 Cron 表达式构建和解析工具。支持 Standard、Spring 和 Quartz 模式，提供人类可读的解释和下次执行时间预览。数据不会离开你的浏览器。"
   },
   "editor": {
     "title": "编辑字段",
     "preview": "预览",
-    "apply": "应用",
     "specificValue": "值",
     "rangeFrom": "从",
     "rangeTo": "到",
     "stepStart": "起始",
     "stepInterval": "间隔",
-    "stepEvery": "每",
-    "listSelect": "选择值",
     "specialKind": "类型"
   },
   "presetSection": "快速预设"

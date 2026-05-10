@@ -3,8 +3,7 @@
     "title": "Timestamp Unix actual",
     "pause": "Pausar",
     "resume": "Reanudar",
-    "localLabel": "Local",
-    "utcLabel": "UTC"
+    "localLabel": "Local"
   },
   "tsToDate": {
     "title": "Timestamp → DateTime",
@@ -14,7 +13,6 @@
     "unitMilliseconds": "Milisegundos",
     "inputLabel": "Entrada",
     "inputPlaceholder": "ej. 1714521600",
-    "paste": "Pegar",
     "clear": "Limpiar",
     "quickLegend": "Rápido",
     "now": "Ahora",
@@ -22,9 +20,7 @@
     "todayUtc": "Hoy 00:00 UTC",
     "rows": {
       "local": "Local",
-      "utc": "UTC",
       "iso": "ISO 8601",
-      "sql": "SQL",
       "rfc": "RFC 2822",
       "dayWeek": "Día / Semana",
       "relative": "Relativo",
@@ -43,7 +39,6 @@
     "msLabel": "Milisegundos (opcional)",
     "tzLegend": "Zona horaria",
     "tzLocal": "Local",
-    "tzUtc": "UTC",
     "rows": {
       "seconds": "Segundos",
       "milliseconds": "Milisegundos"
@@ -54,22 +49,28 @@
     "negative": "Los timestamps negativos no son compatibles",
     "tooLong": "Demasiado largo. Parecen microsegundos. Trunca a 13 dígitos.",
     "secondsTooLarge": "Valor demasiado grande para segundos. ¿Cambiar a milisegundos?",
-    "outOfRange": "Fuera del rango soportado (1970-01-01 a 9999-12-31)",
-    "pasteFailed": "Pegado no disponible. Usa Ctrl+V / ⌘V en su lugar"
+    "outOfRange": "Fuera del rango soportado (1970-01-01 a 9999-12-31)"
   },
   "toast": {
     "paused": "Pausado",
     "resumed": "Reanudado",
     "applied": "Aplicado"
   },
-  "description": {
+  "descriptions": {
     "whatIsTitle": "¿Qué es un timestamp Unix?",
-    "whatIs": "Un timestamp Unix es el número de segundos transcurridos desde 1970-01-01T00:00:00Z (la época Unix). Es independiente de la zona horaria: el mismo número siempre se refiere al mismo instante, sin importar dónde estés.",
-    "secMsTitle": "Segundos vs milisegundos",
-    "secMs": "La mayoría de las herramientas Unix y archivos de log usan segundos (10 dígitos hoy). Date.getTime() de JavaScript, System.currentTimeMillis() de Java y muchas APIs web usan milisegundos (13 dígitos hoy).",
+    "whatIs": "Un timestamp Unix es el número de segundos transcurridos desde 1970-01-01T00:00:00Z (la época Unix). Es independiente de la zona horaria — el mismo número siempre se refiere al mismo instante, sin importar dónde te encuentres.",
+    "secMsTitle": "Segundos vs Milisegundos",
+    "secMs": "La mayoría de las herramientas Unix y archivos de log usan segundos (10 dígitos hoy en día). Date.getTime() de JavaScript, System.currentTimeMillis() de Java y muchas APIs web usan milisegundos (13 dígitos hoy en día).",
     "y2k38Title": "El problema del año 2038",
     "y2k38": "Los sistemas que almacenan segundos Unix en un entero de 32 bits con signo se desbordan el 2038-01-19 03:14:07 UTC. Los sistemas modernos de 64 bits no están afectados.",
     "tzTitle": "Zonas horarias",
-    "tz": "Un timestamp en sí no tiene zona horaria. La forma legible (ej. 2024-05-01 00:00:00) depende de la zona horaria en la que lo muestres. Esta herramienta siempre muestra Local y UTC."
+    "tz": "Un timestamp en sí no tiene zona horaria. La forma legible para humanos (ej. 2024-05-01 00:00:00) depende de la zona horaria en la que se muestre. Esta herramienta siempre muestra tanto la local como UTC.",
+    "aeoDefinition": "El Conversor de timestamps Unix es una herramienta gratuita online para convertir entre timestamps Unix y fechas legibles. Soporta segundos y milisegundos con reloj en vivo. Se ejecuta completamente en tu navegador.",
+    "faq1Q": "¿Qué es una marca de tiempo Unix?",
+    "faq1A": "Una marca de tiempo Unix es el número de segundos (o milisegundos) transcurridos desde el 1 de enero de 1970 UTC (la época Unix). Es una forma universal e independiente de zona horaria de representar el tiempo.",
+    "faq2Q": "¿Esta herramienta maneja zonas horarias?",
+    "faq2A": "Sí. La herramienta muestra tanto UTC como tu zona horaria local. Puedes convertir marcas de tiempo a fechas en cualquiera de las zonas horarias.",
+    "faq3Q": "¿Cuál es el rango de marcas de tiempo Unix?",
+    "faq3A": "Los enteros con signo de 32 bits estándar soportan marcas de tiempo hasta el 19 de enero de 2038 (el problema del año 2038). Esta herramienta soporta un rango mucho mayor usando el objeto Date de JavaScript."
   }
 }

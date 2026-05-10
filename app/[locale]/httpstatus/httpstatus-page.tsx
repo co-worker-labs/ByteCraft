@@ -1,13 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Search, ChevronDown, ChevronUp } from "lucide-react";
 import Layout from "../../../components/layout";
 import { Badge } from "../../../components/ui/badge";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { StyledInput } from "../../../components/ui/input";
 import { useIsMobile } from "../../../hooks/use-is-mobile";
 import { HttpStatusCode, getCategory, getStatusCodes } from "../../../libs/httpstatus";
+import RelatedTools from "../../../components/related-tools";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const statusCodes = getStatusCodes();
 
@@ -231,20 +235,23 @@ function StatusCodeTable() {
   );
 }
 
-function Description() {
+function TopDescription() {
   const t = useTranslations("httpstatus");
+  const locale = useLocale();
   const tc = useTranslations("common");
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section id="description" className="py-3">
+    <section className="pb-3">
       <div className="relative">
         <div
           className={`overflow-hidden transition-all duration-300 ${
             expanded ? "max-h-[500px]" : "max-h-20"
           }`}
         >
-          <p className="text-fg-secondary text-sm leading-8 indent-12">{t("description.text")}</p>
+          <p className="text-fg-secondary text-sm leading-8 indent-12">
+            {renderLinkedText(t("descriptions.text"), locale)}
+          </p>
         </div>
         {!expanded && (
           <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-bg-base to-transparent pointer-events-none" />
@@ -271,20 +278,52 @@ function Description() {
   );
 }
 
+function BottomDescription() {
+  const t = useTranslations("httpstatus");
+  const tc = useTranslations("common");
+
+  const faqItems = [1, 2].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
+
+  return (
+    <section id="description" className="py-3">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {tc("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
+    </section>
+  );
+}
+
 export default function HttpStatusPage() {
   const t = useTranslations("tools");
   const th = useTranslations("httpstatus");
+  const title = t("httpstatus.shortTitle");
 
   return (
-    <Layout title={t("httpstatus.shortTitle")}>
+    <Layout title={title} categoryLabel={t("categories.reference")} categorySlug="reference-lookup">
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <Description />
+        <TopDescription />
         <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
           <span className="text-sm text-fg-secondary leading-relaxed">{th("tip")}</span>
         </div>
         <section>
           <StatusCodeTable />
         </section>
+        <BottomDescription />
+        <RelatedTools currentTool="httpstatus" />
       </div>
     </Layout>
   );

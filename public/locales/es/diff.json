@@ -6,14 +6,15 @@
   "uploadFile": "Subir archivo",
   "formatJson": "Formatear JSON",
   "formatJsonInvalid": "JSON no válido: {message}",
+  "tooLarge": "El archivo es demasiado grande para comparar",
+  "binaryRejected": "Los archivos binarios no son compatibles",
   "swap": "Intercambiar textos",
   "copyDiff": "Copiar diff",
   "compare": "Comparar",
   "view": {
     "label": "Vista",
     "sideBySide": "Lado a lado",
-    "inline": "En línea",
-    "stacked": "Apilado"
+    "inline": "En línea"
   },
   "layout": {
     "label": "Diseño",
@@ -37,6 +38,7 @@
   "manualHint": "Entrada grande. Comparación automática desactivada. Haz clic en Comparar cuando estés listo.",
   "workerFailed": "El diff falló, inténtalo de nuevo",
   "descriptions": {
+    "aeoDefinition": "Text Diff es una herramienta gratuita online para comparar dos textos con precisión a nivel de línea y de palabra. Vista lado a lado o en línea con cambios resaltados. Se ejecuta completamente en tu navegador — no se envían datos a ningún servidor.",
     "whatIsTitle": "¿Qué es un diff?",
     "whatIsP1": "Un diff es una comparación estructurada entre dos textos que resalta qué se añadió, qué se eliminó y qué permaneció igual. Los desarrolladores lo usan a diario para revisar cambios de código, auditar desviaciones de configuración y reconciliar dos versiones de un documento.",
     "whatIsP2": "Esta herramienta ejecuta la comparación completamente en tu navegador usando la biblioteca jsdiff. Nada de lo que pegues o subas se envía a ningún servidor.",
@@ -45,13 +47,13 @@
     "howP2": "Alterna entre vistas lado a lado y en línea, ignora espacios o mayúsculas cuando lo necesites, y usa Formatear JSON para normalizar las entradas JSON antes de comparar.",
     "algorithmTitle": "Algoritmo",
     "algorithmP1": "Basado en el algoritmo de diff de Myers mediante jsdiff. La herramienta primero calcula un diff a nivel de línea, luego para cada par de líneas eliminadas y añadidas adyacentes ejecuta una segunda pasada a nivel de palabra para resaltar qué palabras cambiaron realmente, la misma convención que usan los pull requests de GitHub.",
-    "useCasesTitle": "Casos de uso comunes",
     "useCasesP1": "Comparar dos archivos de configuración (JSON, YAML, .env) para detectar desviaciones entre entornos.",
     "useCasesP2": "Revisar un cambio de código antes de pegarlo en un commit, especialmente al trabajar fuera de un editor.",
     "useCasesP3": "Reconciliar dos versiones de un documento, log o resultado de consulta lado a lado.",
-    "limitationsTitle": "Limitaciones",
     "limitationsP1": "La herramienta solo compara texto. Los archivos binarios se detectan y rechazan para mantener el resultado significativo.",
     "limitationsP2": "Las entradas están limitadas a 5MB por lado. Las entradas superiores a 512KB se ejecutan en un Web Worker en segundo plano; la página permanece responsiva pero el diff tarda proporcionalmente más para entradas muy grandes.",
-    "limitationsP3": "Las diferencias en finales de línea (CRLF vs LF) y espacios en blanco finales se normalizan automáticamente, nunca aparecerán como cambios."
+    "limitationsP3": "Las diferencias en finales de línea (CRLF vs LF) y espacios en blanco finales se normalizan automáticamente, nunca aparecerán como cambios.",
+    "faq1Q": "¿Qué es una herramienta de diff de texto?",
+    "faq1A": "Una herramienta de diff compara dos textos y resalta las diferencias entre ellos. Esta herramienta muestra adiciones, eliminaciones y modificaciones a nivel de palabra o carácter."
   }
 }

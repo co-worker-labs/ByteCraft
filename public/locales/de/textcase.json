@@ -31,5 +31,12 @@
     "titleCase": "Artikel- / Buchtitel",
     "sentenceCase": "Satzgroßschreibung",
     "pathCase": "Dateipfade, API-Routen"
+  },
+  "descriptions": {
+    "faq1Q": "Welche Groß-/Kleinschreibungs-Konvertierungen sind verfügbar?",
+    "faq1A": "camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case, Title Case, Sentence case, UPPER CASE, lower case und mehr.",
+    "faq2Q": "Kann ich mehrere Zeichenfolgen gleichzeitig konvertieren?",
+    "faq2A": "Ja. Fügen Sie mehrere Zeilen ein und das Tool konvertiert jede Zeile unabhängig. Mehrzeilige Konvertierung wendet die ausgewählte Schreibweise auf jede Zeile an.",
+    "aeoDefinition": "Der Text-Case-Konverter ist ein kostenloses Online-Tool, das Text zwischen camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE und mehr konvertiert. Sofortige Konvertierung mit Echtzeitvorschau. Keine Daten verlassen Ihren Browser."
   }
 }

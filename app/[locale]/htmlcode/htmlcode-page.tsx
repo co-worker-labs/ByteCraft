@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import { Search, ChevronDown, ChevronUp } from "lucide-react";
 import Layout from "../../../components/layout";
 import {
@@ -18,6 +19,9 @@ import {
 } from "../../../libs/htmlcode";
 import { NeonTabs } from "../../../components/ui/tabs";
 import { StyledInput } from "../../../components/ui/input";
+import RelatedTools from "../../../components/related-tools";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 function printEntityName(code: string | undefined) {
   if (code && code.startsWith("&")) {
@@ -362,21 +366,24 @@ function PrintLetters({ list }: { list: CharacterData[] }) {
   );
 }
 
-function Description() {
+function TopDescription() {
   const t = useTranslations("htmlcode");
+  const locale = useLocale();
   const tc = useTranslations("common");
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section id="description" className="py-3">
+    <section className="pb-3">
       <div className="relative">
         <div
           className={`overflow-hidden transition-all duration-300 ${
             expanded ? "max-h-[500px]" : "max-h-20"
           }`}
         >
-          <p className="text-fg-secondary text-sm leading-8 indent-12">{t("description.p1")}</p>
-          <p className="text-fg-secondary text-sm leading-8 indent-12">{t("description.p2")}</p>
+          <p className="text-fg-secondary text-sm leading-8 indent-12">
+            {renderLinkedText(t("descriptions.p1"), locale)}
+          </p>
+          <p className="text-fg-secondary text-sm leading-8 indent-12">{t("descriptions.p2")}</p>
           <div className="mt-3">
             <pre className="inline-block border border-border-default rounded-lg py-2 px-5 bg-bg-elevated text-fg-secondary font-mono text-sm">
               &lt;meta charset=&quot;utf-8&quot; &gt;
@@ -408,9 +415,39 @@ function Description() {
   );
 }
 
+function BottomDescription() {
+  const t = useTranslations("htmlcode");
+  const tc = useTranslations("common");
+
+  const faqItems = [1, 2].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
+
+  return (
+    <section id="description" className="py-3">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {tc("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
+    </section>
+  );
+}
+
 export default function HtmlCodePage() {
   const t = useTranslations("tools");
   const th = useTranslations("htmlcode");
+  const title = t("htmlcode.shortTitle");
 
   const letters = getLetters();
   const punctuations = getPunctuations();
@@ -422,9 +459,9 @@ export default function HtmlCodePage() {
   const pronunciations = getPronunciations();
 
   return (
-    <Layout title={t("htmlcode.shortTitle")}>
+    <Layout title={title} categoryLabel={t("categories.reference")} categorySlug="reference-lookup">
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <Description />
+        <TopDescription />
         <section>
           <NeonTabs
             tabs={[
@@ -482,6 +519,8 @@ export default function HtmlCodePage() {
             ]}
           />
         </section>
+        <BottomDescription />
+        <RelatedTools currentTool="htmlcode" />
       </div>
     </Layout>
   );

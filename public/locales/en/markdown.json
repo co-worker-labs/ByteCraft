@@ -3,10 +3,7 @@
   "preview": "Preview",
   "placeholder": "Write or paste your Markdown here...",
   "emptyPreview": "Nothing to preview",
-  "loadFile": "Load",
   "downloadFile": "Download",
-  "copyHtml": "Copy HTML",
-  "copiedHtml": "HTML copied to clipboard",
   "exportLabel": "Export",
   "exportPdf": "Export PDF",
   "exportPng": "Export PNG",
@@ -22,10 +19,13 @@
   "split": "Split",
   "descriptions": {
     "whatIsTitle": "What is Markdown?",
-    "whatIsP1": "Markdown is a lightweight markup language that lets you format plain text using simple, readable syntax. It's the de-facto standard for READMEs, documentation, and notes — easy to write, easy to diff, and renders beautifully across platforms.",
+    "aeoDefinition": "Markdown Editor is a free online tool for writing and previewing Markdown with GitHub Flavored Markdown support. Includes syntax highlighting, live preview, and PDF/PNG export. Runs entirely in your browser.",
+    "whatIsP1": "Markdown is a lightweight markup language that lets you format plain text using simple, readable syntax. It's the de-facto standard for READMEs, documentation, and notes — easy to write, easy to [diff](/diff), and renders beautifully across platforms.",
     "howTitle": "How to use",
     "howP1": "Type or paste Markdown into the editor. The preview updates as you type. Switch between Edit, Preview, and Split layouts. Export to .md, copy the rendered HTML, or save the preview as PDF or PNG. All processing happens in your browser.",
     "gfmTitle": "GitHub Flavored Markdown",
-    "gfmP1": "Supports tables, task lists (- [ ] todo), strikethrough, autolinks, and Mermaid diagrams (flowchart, sequence, class, state, ER, Gantt, pie, git graph). Use ```mermaid code blocks. Math and footnotes are out of scope."
+    "gfmP1": "Supports tables, task lists (- [ ] todo), strikethrough, autolinks, and Mermaid diagrams (flowchart, sequence, class, state, ER, Gantt, pie, git graph). Use ```mermaid code blocks. Math and footnotes are out of scope.",
+    "faq1Q": "Can I export Markdown to PDF?",
+    "faq1A": "Yes. Use the export buttons to save as PDF or PNG. The PDF export respects print styles for clean, formatted output."
   }
 }

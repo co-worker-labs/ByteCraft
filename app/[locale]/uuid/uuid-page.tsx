@@ -1,10 +1,16 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
-import { RefreshCw, Clipboard, Lock, Download, Info } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { RefreshCw, Clipboard, Download, Info } from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import "rc-slider/assets/index.css";
-import Slider from "rc-slider";
+
+const Slider = dynamic(() => import("rc-slider"), {
+  ssr: false,
+  loading: () => <div className="h-6 w-full animate-pulse bg-bg-input rounded" />,
+});
 
 import {
   generate,
@@ -20,6 +26,46 @@ import {
 import { showToast } from "../../../libs/toast";
 import Layout from "../../../components/layout";
 import { Button } from "../../../components/ui/button";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
+
+function Description() {
+  const t = useTranslations("uuid");
+  const tc = useTranslations("common");
+  const locale = useLocale();
+
+  const faqItems = [1, 2].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
+  return (
+    <section id="description" className="mt-8">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
+      <div className="mb-4">
+        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
+        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
+          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
+          <p>{t("descriptions.whatIsP2")}</p>
+        </div>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {tc("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
+      </div>
+    </section>
+  );
+}
 
 const VERSIONS: UuidVersion[] = ["v1", "v3", "v4", "v5", "v7"];
 const DEFAULT_VERSION: UuidVersion = "v4";
@@ -167,12 +213,9 @@ export default function UuidPage() {
   const displayed = bytesList.length > 0 ? formatUuid(bytesList[0], format, upper) : "";
 
   return (
-    <Layout title={title}>
+    <Layout title={title} categoryLabel={tTools("categories.generators")} categorySlug="generators">
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <Lock size={18} className="text-accent-cyan mt-0.5 shrink-0" />
-          <span className="text-sm text-fg-secondary leading-relaxed">{t("localGenerated")}</span>
-        </div>
+        <PrivacyBanner />
 
         <div className="relative mt-2">
           {bytesList.length > 1 ? (
@@ -408,7 +451,7 @@ export default function UuidPage() {
               className="w-full rounded-full font-bold"
             >
               <Download size={16} />
-              {t("download")}
+              {tc("download")}
             </Button>
           </div>
         </div>
@@ -511,6 +554,8 @@ export default function UuidPage() {
             </div>
           </div>
         </div>
+        <Description />
+        <RelatedTools currentTool="uuid" />
       </div>
     </Layout>
   );

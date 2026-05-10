@@ -26,9 +26,14 @@
     "message": "Die gesuchte Seite existiert nicht.",
     "backHome": "Zurück zur Startseite"
   },
+  "offline": {
+    "title": "Offline",
+    "message": "Ihre Internetverbindung scheint unterbrochen zu sein. OmniKit läuft vollständig im Browser — bereits besuchte Seiten sind weiterhin verfügbar.",
+    "reload": "Erneut versuchen"
+  },
   "alert": {
-    "notTransferred": "* Ihre Inhalte werden nicht an den Server übertragen. Alle Berechnungen erfolgen direkt im Browser.",
-    "filesNotTransferred": "* Ihre ausgewählten Dateien werden nicht an den Server übertragen. Alle Berechnungen erfolgen direkt im Browser.",
+    "notTransferred": "Keine Daten an Server gesendet — Alle Verarbeitung erfolgt im Browser",
+    "filesNotTransferred": "Ihre Dateien bleiben lokal — Alle Verarbeitung erfolgt im Browser",
     "checksumInfo": "Dies ist eine HTML5-basierte Online-Prüfsumme, die eine unbegrenzte Anzahl von Dateien mit unbegrenzter Dateigröße unterstützt.",
     "invalidCipher": "Ungültiger Chiffretext, Passphrase oder Einstellungen"
   },
@@ -77,7 +82,7 @@
   "binaryRejected": "Binärdatei erkannt, bitte laden Sie eine Textdatei hoch",
   "fileLoaded": "Datei geladen",
   "dropActive": "Loslassen zum Öffnen",
-  "loadFile": "Datei öffnen",
+  "loadFile": "Laden",
   "download": "Herunterladen",
   "showMore": "Mehr anzeigen",
   "showLess": "Weniger anzeigen",
@@ -91,5 +96,13 @@
     "sha2extra": "SHA-512 ist weitgehend identisch mit SHA-256, arbeitet jedoch mit 64-Bit-Wörtern statt 32-Bit.",
     "sha3Title": "SHA-3",
     "sha3": "SHA-3 ist der Gewinner eines fünfjährigen Wettbewerbs zur Auswahl eines neuen kryptografischen Hash-Algorithmus, bei dem 64 konkurrierende Entwürfe evaluiert wurden."
-  }
+  },
+  "descriptions": {
+    "faqTitle": "Häufig gestellte Fragen",
+    "limitationsTitle": "Einschränkungen",
+    "useCasesTitle": "Häufige Anwendungsfälle"
+  },
+  "advancedSettings": "Erweiterte Einstellungen",
+  "invalidInput": "Ungültige Eingabe",
+  "indent": "Einrückung"
 }

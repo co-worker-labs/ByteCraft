@@ -21,6 +21,9 @@ import {
   type Preset,
 } from "../../../libs/unixtime/main";
 import { showToast } from "../../../libs/toast";
+import RelatedTools from "../../../components/related-tools";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const emptySubscribe = () => () => {};
 
@@ -637,18 +640,34 @@ function DateToTimestamp() {
 }
 
 function Description() {
-  const t = useTranslations("unixtime.description");
+  const t = useTranslations("unixtime");
+  const tc = useTranslations("common");
+
   const items: {
-    titleKey: "whatIsTitle" | "secMsTitle" | "y2k38Title" | "tzTitle";
-    bodyKey: "whatIs" | "secMs" | "y2k38" | "tz";
+    titleKey:
+      | "descriptions.whatIsTitle"
+      | "descriptions.secMsTitle"
+      | "descriptions.y2k38Title"
+      | "descriptions.tzTitle";
+    bodyKey:
+      | "descriptions.whatIs"
+      | "descriptions.secMs"
+      | "descriptions.y2k38"
+      | "descriptions.tz";
   }[] = [
-    { titleKey: "whatIsTitle", bodyKey: "whatIs" },
-    { titleKey: "secMsTitle", bodyKey: "secMs" },
-    { titleKey: "y2k38Title", bodyKey: "y2k38" },
-    { titleKey: "tzTitle", bodyKey: "tz" },
+    { titleKey: "descriptions.whatIsTitle", bodyKey: "descriptions.whatIs" },
+    { titleKey: "descriptions.secMsTitle", bodyKey: "descriptions.secMs" },
+    { titleKey: "descriptions.y2k38Title", bodyKey: "descriptions.y2k38" },
+    { titleKey: "descriptions.tzTitle", bodyKey: "descriptions.tz" },
   ];
+
   return (
     <section className="rounded-lg border border-border-default bg-bg-surface p-5 space-y-3">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       {items.map(({ titleKey, bodyKey }) => (
         <div key={titleKey}>
           <h3 className="font-mono text-sm font-semibold text-accent-cyan mb-1">{t(titleKey)}</h3>
@@ -662,7 +681,11 @@ function Description() {
 export default function UnixtimePage() {
   const tt = useTranslations("tools");
   return (
-    <Layout title={tt("unixtime.shortTitle")}>
+    <Layout
+      title={tt("unixtime.shortTitle")}
+      categoryLabel={tt("categories.generators")}
+      categorySlug="generators"
+    >
       <div className="container mx-auto px-4 pt-3 pb-6 space-y-4">
         <LiveClock />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -670,6 +693,7 @@ export default function UnixtimePage() {
           <DateToTimestamp />
         </div>
         <Description />
+        <RelatedTools currentTool="unixtime" />
       </div>
     </Layout>
   );

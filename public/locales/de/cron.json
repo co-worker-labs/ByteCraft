@@ -9,8 +9,10 @@
     "generate": "Erstellen",
     "parse": "Analysieren"
   },
+  "parse": {
+    "placeholder": "z.B. */5 * * * *"
+  },
   "timezone": {
-    "label": "Zeitzone",
     "local": "Lokal",
     "utc": "UTC"
   },
@@ -49,15 +51,6 @@
     "Nov",
     "Dez"
   ],
-  "weekdayShort": [
-    "So",
-    "Mo",
-    "Di",
-    "Mi",
-    "Do",
-    "Fr",
-    "Sa"
-  ],
   "weekdayLong": [
     "Sonntag",
     "Montag",
@@ -88,11 +81,8 @@
     "atTime": "Um {time}",
     "everyN": "Alle {n} Minuten",
     "lastDow": "der letzte {weekday} des Monats",
-    "fromTo": "von {from} bis {to}",
     "onDays": "am {days}",
     "throughDays": "{from} bis {to}",
-    "andList": "{prefix} und {item}",
-    "ofEveryMonth": "jeden Monats",
     "lastDayOfMonth": "der letzte Tag des Monats",
     "nthWeekday": "der {ordinal} {weekday} des Monats",
     "nearestWeekdayTo": "der nächstgelegene Werktag zum {day}. Tag",
@@ -107,7 +97,6 @@
     "5": "fünfte"
   },
   "output": {
-    "expression": "Ausdruck",
     "description": "Beschreibung",
     "nextExecutions": "Nächste 5 Ausführungen",
     "header": {
@@ -120,14 +109,6 @@
       "now": "jetzt",
       "past": "vergangen"
     }
-  },
-  "share": {
-    "button": "Link teilen",
-    "copied": "Freigabelink kopiert"
-  },
-  "parse": {
-    "placeholder": "Cron-Ausdruck einfügen oder eingeben",
-    "showingPrevious": "Letzte gültige Ausgabe wird angezeigt"
   },
   "warn": {
     "neverTriggers": "Dieser Ausdruck wird nie ausgelöst",
@@ -156,23 +137,22 @@
   "descriptions": {
     "whatIsTitle": "Was ist ein Cron-Ausdruck?",
     "whatIs": "Ein Cron-Ausdruck ist eine Zeichenfolge aus Feldern, die einen Zeitplan beschreibt. Jedes Feld steuert eine Zeiteinheit (Minute, Stunde, Tag, Monat, Wochentag). Ursprünglich aus Unix cron, wurde die Syntax von Spring (fügt Sekunden hinzu) und Quartz (fügt Sekunden und Jahr hinzu, plus Sonderzeichen L, W, #) erweitert.",
-    "fieldRefTitle": "Feldreferenz",
-    "specialCharsTitle": "Sonderzeichen",
-    "modesTitle": "Modi",
     "dstTitle": "Sommerzeitumstellung",
-    "dst": "Wenn die aktive Zeitzone Sommerzeit (DST) beobachtet, werden Zeitpläne innerhalb der Vorstell-Lücke zur nächsten gültigen Zeit ausgelöst, und Zeitpläne innerhalb der Rückstell-Überschneidung beim ersten Auftreten. Wechseln Sie zu UTC, um DST vollständig zu vermeiden."
+    "dst": "Wenn die aktive Zeitzone Sommerzeit (DST) beobachtet, werden Zeitpläne innerhalb der Vorstell-Lücke zur nächsten gültigen Zeit ausgelöst, und Zeitpläne innerhalb der Rückstell-Überschneidung beim ersten Auftreten. Wechseln Sie zu UTC, um DST vollständig zu vermeiden.",
+    "faq1Q": "Was ist ein Cron-Ausdruck?",
+    "faq1A": "Ein Cron-Ausdruck ist eine Zeichenfolge aus 5-7 Feldern, die einen Zeitplan für wiederkehrende Aufgaben definiert. Er wird von Cron-Daemons, Auftragsplanern und Frameworks wie Spring und Quartz verwendet.",
+    "faq2Q": "Welche Cron-Dialekte werden unterstützt?",
+    "faq2A": "Drei: Standard (5 Felder), Spring (6 Felder mit Sekunden) und Quartz (7 Felder mit Sekunden und Jahr). Das Tool erkennt den Dialekt automatisch und zeigt die nächsten Ausführungszeiten.",
+    "aeoDefinition": "Der Cron-Ausdrucks-Generator ist ein kostenloses Online-Tool zum Erstellen und Dekodieren von Cron-Ausdrücken. Unterstützt Standard-, Spring- und Quartz-Modi mit menschenlesbaren Erklärungen und Vorschau der nächsten Ausführung. Keine Daten verlassen Ihren Browser."
   },
   "editor": {
     "title": "Feld bearbeiten",
     "preview": "Vorschau",
-    "apply": "Anwenden",
     "specificValue": "Wert",
     "rangeFrom": "Von",
     "rangeTo": "Bis",
     "stepStart": "Start",
     "stepInterval": "Intervall",
-    "stepEvery": "Alle",
-    "listSelect": "Werte auswählen",
     "specialKind": "Art"
   },
   "presetSection": "Schnellvorlagen"

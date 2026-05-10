@@ -26,9 +26,14 @@
     "message": "您造訪的頁面不存在。",
     "backHome": "返回首頁"
   },
+  "offline": {
+    "title": "網路已斷開",
+    "message": "您的網路連線似乎已中斷。OmniKit 完全在瀏覽器中運作，之前造訪過的頁面仍可正常使用。",
+    "reload": "重試"
+  },
   "alert": {
-    "notTransferred": "* 您的內容不會傳送至伺服器。所有計算皆在瀏覽器中直接執行",
-    "filesNotTransferred": "* 您選取的檔案不會傳送至伺服器。所有計算皆在瀏覽器中直接執行",
+    "notTransferred": "資料不傳送至伺服器 — 所有處理均在瀏覽器中完成",
+    "filesNotTransferred": "檔案保留在本機 — 所有處理均在瀏覽器中完成",
     "checksumInfo": "此為 HTML5 線上檔案校驗碼工具，支援不限數量的檔案及不限大小的檔案。",
     "invalidCipher": "無效的密文、密碼短語或設定"
   },
@@ -77,7 +82,7 @@
   "binaryRejected": "偵測到二進位檔案，請上傳文字檔案",
   "fileLoaded": "檔案已載入",
   "dropActive": "放開即可開啟",
-  "loadFile": "開啟檔案",
+  "loadFile": "載入",
   "download": "下載",
   "showMore": "展開更多",
   "showLess": "收起",
@@ -91,5 +96,13 @@
     "sha2extra": "SHA-512 與 SHA-256 基本相同，但以 64 位元字組運算，而非 32 位元。",
     "sha3Title": "SHA-3",
     "sha3": "SHA-3 是一場為期五年的密碼學雜湊演算法競賽的優勝者，共有 64 個參賽設計接受評估。"
-  }
+  },
+  "descriptions": {
+    "faqTitle": "常見問題",
+    "limitationsTitle": "限制說明",
+    "useCasesTitle": "常見用例"
+  },
+  "advancedSettings": "進階設定",
+  "invalidInput": "輸入無效",
+  "indent": "縮排"
 }

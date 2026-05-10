@@ -1,0 +1,64 @@
+{
+  "text": {
+    "title": "Text Processing Tools - JSON, Regex, Diff & More | OmniKit",
+    "shortTitle": "Text Processing",
+    "description": "Free online text processing tools for developers. Format JSON, test regex, compare diffs, convert cases, and more. All tools run 100% in your browser.",
+    "intro": "A suite of 8 text processing tools designed for developers who work with structured and unstructured text daily. Format and validate JSON, test regular expressions with real-time matching, compare text differences, write Markdown with live preview, convert text cases, extract emails and URLs, count words and characters, and remove duplicate lines — all without sending any data to a server.",
+    "faq1Q": "What text processing tools does OmniKit offer?",
+    "faq1A": "OmniKit provides 8 text processing tools: JSON Formatter (with JSON5 support), Regex Tester, Text Diff, Markdown Editor, Text Case Converter, Email & URL Extractor, Word Counter, and Deduplicate Lines.",
+    "faq2Q": "Are these text processing tools free?",
+    "faq2A": "Yes, all OmniKit text processing tools are completely free and run entirely in your browser. No data is sent to any server.",
+    "faq3Q": "Can I use these tools with large files?",
+    "faq3A": "Yes. Most tools handle files up to several MB. JSON Formatter, Diff, and Markdown Editor use Web Workers for smooth performance on large inputs."
+  },
+  "encoding": {
+    "title": "Encoding & Conversion Tools - Base64, URL, CSV, YAML | OmniKit",
+    "shortTitle": "Encoding & Conversion",
+    "description": "Free online encoding and conversion tools for developers. Base64 encode/decode, URL encode/decode, CSV conversion, YAML conversion, number base conversion, and more. 100% client-side.",
+    "intro": "7 encoding and conversion tools that cover the most common data transformation needs. Encode and decode Base64 strings, URL-encode parameters, convert between JSON and CSV or YAML, transform number bases, and convert storage units. Every operation runs locally in your browser — no server uploads.",
+    "faq1Q": "What encoding tools does OmniKit provide?",
+    "faq1A": "OmniKit offers 7 encoding and conversion tools: Base64 Encoder/Decoder, URL Encoder/Decoder, JSON/CSV Converter, CSV/Markdown Table Converter, Number Base Converter, JSON/YAML Converter, and Storage Unit Converter.",
+    "faq2Q": "Are the encoding conversions accurate?",
+    "faq2A": "Yes. All conversions follow their respective RFC specifications (RFC 4648 for Base64, RFC 3986 for URL encoding) and produce standards-compliant output."
+  },
+  "security": {
+    "title": "Security & Cryptography Tools - JWT, Hashing, Encryption | OmniKit",
+    "shortTitle": "Security & Crypto",
+    "description": "Free online security and cryptography tools for developers. Debug JWT tokens, generate hashes, create secure passwords, generate SSH keys, encrypt text, and calculate file checksums. 100% client-side.",
+    "intro": "6 security and cryptography tools for developers. Debug and verify JWT tokens, generate MD5/SHA hashes, create cryptographically secure passwords, generate SSH key pairs, encrypt and decrypt text with AES/DES/RC4, and calculate file checksums. All cryptographic operations run entirely in your browser — your data never leaves your device.",
+    "faq1Q": "Are the security tools safe to use with sensitive data?",
+    "faq1A": "Yes. All security tools run 100% client-side using JavaScript cryptographic libraries. No data is ever transmitted to any server. You can verify this by checking the open-source code.",
+    "faq2Q": "What encryption algorithms are supported?",
+    "faq2A": "The Encrypt/Decrypt tool supports AES-256, DES, Triple DES, Rabbit, RC4, and RC4Drop. The Hash Generator supports MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3, Keccak, and RIPEMD-160."
+  },
+  "generators": {
+    "title": "Generator Tools - UUID, Cron, Timestamp, QR Code | OmniKit",
+    "shortTitle": "Generators",
+    "description": "Free online generator tools for developers. Generate UUIDs, build Cron expressions, convert Unix timestamps, and create QR codes. All tools run 100% in your browser.",
+    "intro": "4 generator tools that help you create common developer artifacts. Generate UUID v4 and v7 identifiers, build and decode Cron expressions with next-run preview, convert Unix timestamps, and generate styled QR codes for text, URLs, WiFi, and more. Everything runs locally in your browser.",
+    "faq1Q": "What can I generate with OmniKit?",
+    "faq1A": "OmniKit provides 4 generator tools: UUID Generator (v4/v7), Cron Expression Generator, Unix Timestamp Converter, and QR Code Generator with custom styling.",
+    "faq2Q": "Are the generated UUIDs unique?",
+    "faq2A": "Yes. UUID v4 uses cryptographically secure random numbers, and UUID v7 combines timestamp with randomness. Both conform to RFC 4122/9562."
+  },
+  "visual": {
+    "title": "Visual & Media Tools - Color Converter, Image Compressor | OmniKit",
+    "shortTitle": "Visual & Media",
+    "description": "Free online visual and media tools for developers. Convert colors between HEX/RGB/HSL/OKLCH, extract palettes from images, compress and convert images. 100% client-side.",
+    "intro": "2 visual and media tools for design and image workflows. The Color Converter handles 7 color spaces (HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH) with a visual picker, image palette extraction, WCAG contrast checking, and color-blindness simulation. The Image Compressor handles PNG, JPG, and WebP conversion with resize support. All processing runs locally.",
+    "faq1Q": "What color spaces are supported?",
+    "faq1A": "The Color Converter supports HEX, RGB, HSL, HSV, CMYK, LAB, and OKLCH with bidirectional conversion and visual comparison.",
+    "faq2Q": "Is there a file size limit for image compression?",
+    "faq2A": "No. Image compression runs entirely in your browser using Canvas API, so there is no server-side file size limit. Very large images may be slower to process."
+  },
+  "reference": {
+    "title": "Reference & Lookup Tools - HTTP Status, ASCII, HTML Codes | OmniKit",
+    "shortTitle": "Reference & Lookup",
+    "description": "Free online reference and lookup tools for developers. HTTP status codes, ASCII table, HTML entities, SQLite viewer, and HTTP client. All tools run 100% in your browser.",
+    "intro": "5 reference and lookup tools for quick developer lookups. Browse HTTP status codes with RFC references, look up ASCII character codes, encode HTML entities, explore SQLite databases with a SQL editor, and test REST APIs with the HTTP client. All tools are free and run entirely in your browser.",
+    "faq1Q": "What reference tools does OmniKit provide?",
+    "faq1A": "OmniKit offers 5 reference tools: HTTP Status Codes reference, HTTP Client for API testing, SQLite Database Viewer, ASCII Table, and HTML Entity Encoder.",
+    "faq2Q": "Can I run SQL queries in the DB Viewer?",
+    "faq2A": "Yes. The SQLite Viewer supports read-only SQL queries with autocomplete, query history, pagination, and export to CSV or JSON — all running locally in your browser via WebAssembly."
+  }
+}

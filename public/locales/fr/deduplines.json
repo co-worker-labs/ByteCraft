@@ -18,9 +18,15 @@
     "howCase": "Sensible à la casse : si coché, 'Bonjour' et 'bonjour' sont traités comme des lignes différentes.",
     "howTrim": "Ignorer les espaces : si coché, les espaces en début et fin de ligne sont ignorés lors de la comparaison.",
     "howEmpty": "Supprimer les lignes vides : si coché, les lignes vides et les lignes ne contenant que des espaces sont supprimées.",
-    "useCasesTitle": "Cas d'utilisation courants",
     "useCasesP1": "Suppression des entrées en double dans les fichiers de journalisation.",
     "useCasesP2": "Nettoyage des fichiers de configuration avec des directives répétées.",
-    "useCasesP3": "Déduplication des lignes dans les données CSV avant traitement."
+    "useCasesP3": "Déduplication des lignes dans les données CSV avant traitement.",
+    "faq1Q": "Que fait l'outil Déduplicateur de lignes ?",
+    "faq1A": "Il supprime les lignes en double de votre texte tout en offrant des options pour préserver ou supprimer les lignes vides, trimming les espaces et trier la sortie.",
+    "faq2Q": "La déduplication est-elle sensible à la casse ?",
+    "faq2A": "Par défaut, oui. Vous pouvez activer le mode insensible à la casse pour traiter 'Bonjour' et 'bonjour' comme des doublons.",
+    "faq3Q": "Puis-je voir ce qui a été supprimé ?",
+    "faq3A": "L'outil affiche la sortie nettoyée et le nombre de doublons supprimés. Vous pouvez comparer l'entrée et la sortie pour vérifier les résultats.",
+    "aeoDefinition": "Le Déduplicateur de lignes est un outil gratuit en ligne qui supprime les lignes en doublon du texte tout en préservant l'ordre. Prend en charge la comparaison sensible à la casse, la suppression des espaces et la suppression des lignes vides. Fonctionne entièrement dans votre navigateur."
   }
 }

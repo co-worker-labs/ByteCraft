@@ -1,5 +1,10 @@
 {
-  "tabs": { "imagePalette": "画像から抽出", "converter": "変換", "palette": "パレット", "contrast": "コントラスト" },
+  "tabs": {
+    "imagePalette": "画像から抽出",
+    "converter": "変換",
+    "palette": "パレット",
+    "contrast": "コントラスト"
+  },
   "vision": {
     "label": "色覚",
     "none": "正常な視覚",
@@ -18,75 +23,70 @@
     "oklch": "OKLCH",
     "hsvNote": "HSVは参考用です。CSSにはhsv()関数がありません。HSLを使ってください。",
     "closestName": "最も近いCSS名",
-    "eyedropper": "画面から色を取得",
-    "eyedropperUnsupported": "スポイトはChromiumベースのブラウザが必要です",
     "cssVariable": "CSS変数",
     "cssVariableName": "変数名",
     "tailwindClass": "Tailwindユーティリティ",
     "tailwindTheme": "Tailwind v4 @theme"
   },
   "palette": {
-    "current": "現在の色",
     "complementary": "補色",
     "analogous": "類似色",
     "triadic": "トライアド",
     "splitComplementary": "分裂補色",
     "tetradic": "テトラード",
     "monochromatic": "モノクロマティック",
-    "fromImage": "画像から抽出",
     "imageDrop": "画像をドロップまたはクリックしてアップロード（最大5MB）",
-    "imageError": "この画像から色を抽出できませんでした",
-    "copyAll": "すべてコピー",
-    "clear": "クリア"
+    "copyAll": "すべてコピー"
   },
   "contrast": {
     "foreground": "前景色",
     "background": "背景色",
     "swap": "色を入れ替え",
-    "preview": "プレビュー",
     "wcagTitle": "WCAG 2.1",
     "apcaTitle": "APCA（WCAG 3候補）",
-    "ratio": "コントラスト比",
-    "lc": "Lcスコア",
     "normal": "通常テキスト",
     "large": "大きいテキスト",
     "bodyText": "本文テキスト",
     "headline": "見出し",
     "fluent": "Fluent",
-    "pass": "合格",
-    "fail": "不合格",
     "suggestionTitle": "提案",
     "suggestionText": "{color}に調整すると{target}に合格します",
     "useThis": "この色を使う"
   },
-  "history": { "recent": "最近使った色", "clear": "クリア" },
+  "history": {
+    "recent": "最近使った色",
+    "clear": "クリア"
+  },
   "errors": {
     "invalidColor": "無効なカラー値です",
     "fileTooLarge": "画像は5MB未満にしてください",
     "fileNotImage": "PNG、JPG、またはWebP画像をアップロードしてください"
   },
-  "description": {
+  "descriptions": {
     "title": "カラー変換について",
-    "introTitle": "カラーコンバーターとは？",
-    "introP1": "カラーコンバーターは、Web、印刷、デザインで使われるフォーマット間で同じ色を変換します。CSS用のHEX、調整用のRGB/HSL、印刷用のCMYK、知覚的均一性のためLAB/OKLCHなどです。",
-    "spacesTitle": "色空間",
+    "introP1": "このカラーツールは、7つのカラースペース間の変換、カラーハーモニーの生成、コントラスト比のチェック（WCAGとAPCA）、色覚シミュレーション、画像からのパレット抽出を行います。",
+    "spacesTitle": "カラースペース",
     "spaceHex": "HEX — コンパクトな6/8桁のRGB表記。CSSのデフォルト。",
-    "spaceRgb": "RGB — 加法混色の原色0〜255。ディスプレイピクセルに直接マッピング。",
-    "spaceHsl": "HSL — 色相/彩度/明度。RGBより人間が直感的に扱いやすい。",
-    "spaceHsv": "HSV — 色相/彩度/明るさ。デザインツールで一般的だが、CSS関数ではない。",
+    "spaceRgb": "RGB — 加法混色の原色 0–255。ディスプレイピクセルに直接マッピング。",
+    "spaceHsl": "HSL — 色相/彩度/明度。RGBよりも人間が直感的に扱いやすい。",
+    "spaceHsv": "HSV — 色相/彩度/値。デザインツールで一般的だが、CSS関数としては存在しない。",
     "spaceCmyk": "CMYK — 印刷用の減法混色の原色。RGBからの変換は近似値。",
-    "spaceLab": "LAB — 知覚的に均一。数値の距離が見た目の距離にほぼ等しい。",
-    "spaceOklch": "OKLCH — モダンな知覚的色空間。Tailwind v4とCSS Color Module Level 4で推奨。",
-    "harmoniesTitle": "カラーハーモニー",
-    "harmoniesP1": "ハーモニーはカラーホイール上の数学的な関係（補色は180°、トライアドは120°など）で、バランスの取れたパレットを生成しやすい組み合わせです。",
+    "spaceLab": "LAB — 知覚均等。数値の距離が視覚的な距離にほぼ等しい。",
+    "spaceOklch": "OKLCH — モダンな知覚均等カラースペース。Tailwind v4とCSS Color Module Level 4で推奨。",
     "contrastTitle": "コントラスト（WCAG vs APCA）",
-    "contrastP1": "WCAG 2.1は輝度比（1:1〜21:1）を使い、AA/AAAの閾値を定めています。広くサポートされていますが、小さなテキストやダークモードの知覚を完全には考慮していません。",
-    "contrastP2": "APCAはWCAG 3の候補で、極性を考慮したLcスコアを使用します。細いテキストや小さなテキストの可読性と相関が高いです。",
-    "visionTitle": "色覚シミュレーション",
-    "visionP1": "男性の約12人に1人、女性の約200人に1人が何らかの色覚異常を持っています。色覚切替でプロタンopia、デューテランopia、トリタンopia、全色盲をシミュレーションし、デザインが問題ないか確認できます。",
+    "contrastP1": "WCAG 2.1は輝度比（1:1〜21:1）を使用し、AA/AAAの閾値を定めています。広くサポートされていますが、小さなテキストやダークモードでの知覚を完全には考慮していません。",
+    "contrastP2": "APCAはWCAG 3の候補で、極性を考慮したLcスコアを採用しています。細いテキストや小さなテキストの読みやすさとより相関が高いです。",
+    "visionP1": "約12人に1人の男性と200人に1人の女性が何らかの色覚異常を持っています。色覚トグルでプロタンopia、デューテランopia、トリタンopia、全色盲をシミュレートし、デザインの耐性を確認できます。",
     "tipsTitle": "ヒント",
     "tipEyedropper": "スポイトを使って画面上の任意のピクセルから色を取得できます（Chromium系ブラウザ）。",
     "tipImage": "パレットタブに画像をドロップすると、メディアンカット量子化で6つの主要色を抽出します。",
-    "tipOklch": "Tailwind v4は知覚的な滑らかさのためにOKLCHで色を出力します。@themeブロックをコピーしてそのワークフローに合わせられます。"
+    "tipOklch": "Tailwind v4は知覚的な滑らかさのためOKLCHで色を出力します。@themeブロックをコピーしてそのワークフローに合わせましょう。",
+    "aeoDefinition": "カラー変換ツールは、HEX、RGB、HSL、OKLCHなどカラースペース間の変換ができる無料オンラインツールです。ビジュアルピッカー、画像パレット抽出、WCAGコントラストチェッカー、色覚プレビューを備え、ブラウザ上で完全に動作します。",
+    "faq1Q": "Color Toolとは？",
+    "faq1A": "Color Toolは、HEX、RGB、HSL、OKLCHカラーモデルに対応した包括的なカラーユーティリティで、ビジュアルピッカー、変換、コントラストチェックを備えています。",
+    "faq2Q": "OKLCHカラースペースとは？",
+    "faq2A": "OKLCHはHSLやRGBよりも人間の視覚に近い知覚均等カラースペースです。より一貫性のある明度グラデーションとアクセシビリティの高いパレットを生成します。",
+    "faq3Q": "画像から色を抽出できますか？",
+    "faq3A": "はい。パレット抽出エリアに画像をドラッグ＆ドロップすると主要な色を取得できます。色覚異常のシミュレーション（1型、2型、3型色覚）も可能です。"
   }
 }

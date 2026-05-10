@@ -1,15 +1,10 @@
 {
-  "tabConverter": "Conversor",
-  "tabReference": "Referência",
   "bitWidth": "Largura de bits",
   "decimal": "Decimal",
   "hexadecimal": "Hexadecimal",
   "octal": "Octal",
   "binary": "Binário",
   "asciiChar": "ASCII",
-  "unicodePoint": "Unicode",
-  "invalidInput": "Entrada inválida",
-  "overflowWarning": "Valor excede a largura de bits",
   "referenceTitle": "Referência de bases (0-15)",
   "refDec": "DEC",
   "refHex": "HEX",
@@ -19,6 +14,9 @@
     "whatIsTitle": "O que é conversão de base numérica?",
     "whatIs": "A conversão de base numérica transforma um número de um sistema de numeração posicional para outro. Computadores usam binário (base 2), enquanto humanos tipicamente trabalham com decimal (base 10). Hexadecimal (base 16) e octal (base 8) oferecem representações compactas de dados binários, comumente usadas em depuração, protocolos de rede, códigos de cor e permissões de arquivo.",
     "twosComplementTitle": "Complemento de dois",
-    "twosComplement": "O complemento de dois é a forma padrão de representar inteiros com sinal em binário. O bit mais significativo (MSB) atua como bit de sinal: 0 para positivo, 1 para negativo. Para obter o valor negativo, inverta todos os bits e some 1. Por exemplo, no modo 8 bits, -1 é representado como 11111111 (0xFF)."
+    "twosComplement": "O complemento de dois é a forma padrão de representar inteiros com sinal em binário. O bit mais significativo (MSB) atua como bit de sinal: 0 para positivo, 1 para negativo. Para obter o valor negativo, inverta todos os bits e some 1. Por exemplo, no modo 8 bits, -1 é representado como 11111111 (0xFF).",
+    "faq1Q": "Quais bases numéricas são suportadas?",
+    "faq1A": "Binário (base 2), Octal (base 8), Decimal (base 10) e Hexadecimal (base 16) com conversão em tempo real entre todas as quatro.",
+    "aeoDefinition": "O Conversor de Base Numérica é uma ferramenta online gratuita para converter números entre binário, octal, decimal e hexadecimal. Suporta complemento de dois de 8/16/32/64 bits e um editor de bits visual. Roda inteiramente no seu navegador."
   }
 }

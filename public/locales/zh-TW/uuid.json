@@ -1,17 +1,13 @@
 {
-  "generatedTitle": "您的 UUID",
   "version": "版本",
   "quantity": "數量",
   "namespace": "命名空間",
   "namespaceCustom": "自訂",
-  "namespaceCustomPlaceholder": "輸入 UUID",
-  "namespaceInvalid": "無效的命名空間 UUID",
   "invalidNamespace": "無效的命名空間 UUID",
   "namespaceDNS": "DNS（網域名稱）",
   "namespaceURL": "URL（網頁位址）",
   "namespaceOID": "OID（ISO 物件識別符）",
   "namespaceX500": "X.500（目錄路徑）",
-  "namespaceCUSTOM": "自訂命名空間 UUID",
   "namespaceDesc": "命名空間是一個固定的 UUID，用作根識別符。v3/v5 使用命名空間 + 名稱產生確定性 UUID。相同的命名空間 + 相同名稱始終產生相同的輸出。",
   "name": "名稱",
   "namePlaceholder": "輸入名稱以產生...",
@@ -20,11 +16,6 @@
   "formatNoHyphens": "無連字符",
   "formatBraces": "大括號",
   "uppercase": "大寫",
-  "copyAll": "全部複製",
-  "download": "下載 .txt",
-  "localGenerated": "完全在您的瀏覽器中產生。資料從未離開您的裝置。",
-  "securityTip": "作為資料庫主鍵時，建議 v7（可排序、索引友好）。一般隨機 ID 使用 v4。",
-  "unsupportedBrowser": "您的瀏覽器不支援安全的隨機產生。",
   "downloadFilename": "uuids.txt",
   "waitingForName": "輸入名稱以產生...",
   "whatIsUuid": "什麼是 UUID？",
@@ -32,7 +23,6 @@
   "uuidStructure": "UUID 結構",
   "uuidStructureDesc": "UUID 格式為 32 位元十六進位數字，用連字符分為 5 組：xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx。版本和變體編碼在特定位元上。",
   "versionCompare": "版本比較",
-  "versionTip": "點擊版本了解更多",
   "v1": {
     "name": "v1 — 時間戳 + MAC 位址",
     "desc": "結合時間戳和主機 MAC 位址產生。較舊，可預測，會暴露 MAC 位址。",
@@ -68,5 +58,15 @@
   "useCaseDist": "分散式系統 ID",
   "useCaseWeb": "連線或資源識別符",
   "useCaseMq": "訊息佇列訊息 ID",
-  "useCaseTest": "測試資料和模擬"
+  "useCaseTest": "測試資料和模擬",
+  "descriptions": {
+    "whatIsTitle": "什麼是 UUID 產生器？",
+    "aeoDefinition": "UUID 產生器是一款免費的線上工具，用於批量產生 v1、v3、v4、v5 和 v7 UUID。符合 RFC 4122/9562。所有操作完全在瀏覽器中執行。",
+    "whatIsP1": "UUID（通用唯一識別符）是由 RFC 4122 和 RFC 9562 定義的 128 位元識別符標準。本工具支援批量產生 UUID v4（隨機）和 v7（時間排序）。",
+    "whatIsP2": "UUID 被廣泛用作資料庫主鍵、分散式系統識別符和連線令牌。擁有 2^122 種可能的取值，碰撞機率微乎其微。",
+    "faq1Q": "什麼是 UUID？",
+    "faq1A": "UUID（通用唯一識別碼）是一種 128 位元識別碼標準。此工具產生 v4（隨機）和 v7（時間排序）UUID，無需中心協調即可保證唯一性。",
+    "faq2Q": "一次可以產生多少個 UUID？",
+    "faq2A": "一次最多可產生 1,000 個 UUID。所有產生在瀏覽器中使用 crypto.getRandomValues() 完成。"
+  }
 }

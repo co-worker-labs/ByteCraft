@@ -31,5 +31,12 @@
     "titleCase": "Article / book titles",
     "sentenceCase": "Sentence-leading capitalization",
     "pathCase": "File paths, API routes"
+  },
+  "descriptions": {
+    "aeoDefinition": "Text Case Converter is a free online tool that converts text between camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, and more. Instant conversion with real-time preview. No data leaves your browser.",
+    "faq1Q": "Can I convert multiple strings at once?",
+    "faq1A": "Yes. Paste multiple lines and the tool converts each line independently. Multi-line conversion applies the selected case to every line.",
+    "faq2Q": "Does it handle non-ASCII characters?",
+    "faq2A": "Yes. The tool correctly handles Unicode characters including accented letters, CJK characters, and emojis in case conversions."
   }
 }

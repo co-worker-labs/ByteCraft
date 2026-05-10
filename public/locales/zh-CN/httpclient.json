@@ -1,25 +1,52 @@
 {
-  "url": { "placeholder": "https://api.example.com/users" },
-  "method": { "label": "请求方法" },
-  "timeout": { "label": "超时时间" },
-  "proxy": { "label": "Proxy", "tooltip": "通过本站服务端代理转发请求，绕过 CORS 跨域限制" },
+  "url": {
+    "placeholder": "https://api.example.com/users"
+  },
+  "proxy": {
+    "label": "Proxy",
+    "tooltip": "通过本站服务端代理转发请求，绕过 CORS 跨域限制"
+  },
   "send": "发送",
   "sending": "发送中...",
-  "tabs": { "params": "参数", "headers": "请求头", "body": "请求体", "auth": "认证" },
-  "bodyType": { "none": "无", "json": "JSON", "form-data": "表单数据", "urlencoded": "x-www-form-urlencoded", "raw": "原始文本" },
-  "authType": { "none": "无", "bearer": "Bearer Token", "basic": "Basic 认证" },
-  "bearerToken": { "placeholder": "输入 Bearer Token" },
-  "basicAuth": { "username": "用户名", "password": "密码", "usernamePlaceholder": "用户名", "passwordPlaceholder": "密码" },
-  "kv": { "keyPlaceholder": "键", "valuePlaceholder": "值" },
+  "tabs": {
+    "params": "参数",
+    "headers": "请求头",
+    "body": "请求体",
+    "auth": "认证"
+  },
+  "bodyType": {
+    "none": "无",
+    "json": "JSON",
+    "form-data": "表单数据",
+    "urlencoded": "x-www-form-urlencoded",
+    "raw": "原始文本"
+  },
+  "authType": {
+    "none": "无",
+    "bearer": "Bearer Token",
+    "basic": "Basic 认证"
+  },
+  "bearerToken": {
+    "placeholder": "输入 Bearer Token"
+  },
+  "basicAuth": {
+    "usernamePlaceholder": "用户名",
+    "passwordPlaceholder": "密码"
+  },
+  "kv": {
+    "keyPlaceholder": "键",
+    "valuePlaceholder": "值"
+  },
   "bodyPlaceholder": "输入请求体...",
   "response": {
-    "title": "响应",
     "emptyState": "输入 URL 并点击发送开始测试",
-    "tabs": { "body": "响应体", "headers": "响应头", "cookies": "Cookies", "timing": "耗时", "redirects": "重定向" },
-    "status": "状态",
-    "time": "耗时",
-    "size": "大小",
-    "type": "类型",
+    "tabs": {
+      "body": "响应体",
+      "headers": "响应头",
+      "cookies": "Cookies",
+      "timing": "耗时",
+      "redirects": "重定向"
+    },
     "download": "下载",
     "copyBody": "复制响应体",
     "pretty": "格式化",
@@ -30,10 +57,7 @@
     "cookieNote": "Cookie 仅在同源请求或服务器通过 CORS 暴露 Set-Cookie 时可见。",
     "timingNote": "详细耗时（TTFB、下载）仅在服务器返回 Timing-Allow-Origin 头时可用。",
     "ttfb": "首字节时间",
-    "download": "下载",
     "total": "总计",
-    "na": "不可用",
-    "crossOrigin": "（跨域）",
     "redirectOccurred": "发生了重定向",
     "noRedirect": "无重定向",
     "finalUrl": "最终 URL",
@@ -42,7 +66,6 @@
   },
   "error": {
     "cors": "CORS 策略阻止了此请求。目标 API 不允许来自浏览器的跨域请求。",
-    "network": "网络错误",
     "timeout": "请求在 {timeout} 秒后超时。",
     "generic": "请求失败"
   },
@@ -50,22 +73,34 @@
     "title": "历史记录",
     "clear": "清空历史",
     "empty": "暂无历史记录",
-    "ago": { "seconds": "{count} 秒前", "minutes": "{count} 分钟前", "hours": "{count} 小时前", "days": "{count} 天前" }
+    "ago": {
+      "seconds": "{count} 秒前",
+      "minutes": "{count} 分钟前",
+      "hours": "{count} 小时前",
+      "days": "{count} 天前"
+    }
   },
-  "description": {
-    "text": "一个轻量级的浏览器端 HTTP 客户端，用于测试 REST API。可以自由配置请求方法、请求头、请求体和认证方式，发送请求后查看响应的耗时详情、响应头和 Cookie。默认通过浏览器 fetch() 直接发送请求，开启代理开关后可经由服务端代理转发，绕过 CORS 跨域限制。数据不会存储在任何服务器上。",
+  "descriptions": {
+    "text": "直接在浏览器中发送 HTTP 请求、测试 REST API。支持所有常用方法，可自定义请求头、请求体和认证。在 [HTTP 状态码](/httpstatus) 中查阅状态码，或使用 [URL 编码器](/urlencoder) 编码查询参数。",
     "features": {
       "title": "功能特性",
       "methods": "所有标准 HTTP 方法：GET、POST、PUT、PATCH、DELETE、HEAD、OPTIONS",
-      "auth": "认证方式：Bearer Token、Basic 认证",
-      "body": "请求体格式：JSON、表单数据、x-www-form-urlencoded、原始文本",
-      "response": "响应检查：格式化响应体、响应头、Cookie、耗时、重定向信息",
-      "history": "请求历史记录，一键恢复（本地存储）",
-      "proxy": "服务端代理模式：一键开关即可绕过 CORS 跨域限制"
+      "auth": "认证方式：Bearer Token、Basic Auth",
+      "body": "请求体格式：JSON、Form-Data、x-www-form-urlencoded、原始文本",
+      "response": "响应检查：格式化响应体、响应头、Cookies、耗时、重定向信息",
+      "history": "请求历史，一键恢复（本地存储）",
+      "proxy": "服务端代理模式：一键切换即可绕过 CORS 跨域限制"
     },
     "cors": {
       "title": "CORS 与代理",
-      "text": "默认情况下，本工具使用浏览器原生 fetch() API。跨域请求需要目标服务器包含正确的 CORS 响应头。如果服务器不支持 CORS，可以开启代理开关——请求将通过服务端代理转发，完全绕过 CORS 限制。"
-    }
+      "text": "默认情况下，本工具使用浏览器原生的 fetch() API。跨域请求需要目标服务器返回适当的 CORS 响应头。如果服务器不支持 CORS，请开启代理开关 —— 请求将通过服务端代理转发，完全绕过 CORS 限制。"
+    },
+    "faq1Q": "什么是 HTTP 客户端工具？",
+    "faq1A": "一个基于浏览器的 HTTP 客户端，用于测试 API。支持 GET、POST、PUT、PATCH、DELETE、HEAD 和 OPTIONS 请求，可自定义请求头、查询参数和请求体。",
+    "faq2Q": "可以使用身份认证吗？",
+    "faq2A": "可以。支持 Basic Auth、Bearer Token、API 密钥（请求头和查询参数）和自定义认证头。所有凭据保留在你的浏览器中。",
+    "faq3Q": "支持请求历史吗？",
+    "faq3A": "支持。所有请求都保存到本地存储，包含完整的请求/响应详情。你可以收藏常用请求以便快速访问。",
+    "aeoDefinition": "HTTP 客户端是一个免费的在线 HTTP 请求发送和 REST API 测试工具，完全在浏览器中运行。支持 GET、POST、PUT、DELETE，包含请求头、请求体和认证。数据不会通过任何服务器。"
   }
 }

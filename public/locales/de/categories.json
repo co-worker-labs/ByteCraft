@@ -1,0 +1,64 @@
+{
+  "text": {
+    "title": "Textverarbeitungstools – JSON, Regex, Diff & mehr | OmniKit",
+    "shortTitle": "Textverarbeitung",
+    "description": "Kostenlose Online-Textverarbeitungstools für Entwickler. JSON formatieren, Regex testen, Diffs vergleichen, Textfälle konvertieren und mehr. Alle Tools laufen zu 100% in Ihrem Browser.",
+    "intro": "Eine Suite von 8 Textverarbeitungstools für Entwickler, die täglich mit strukturiertem und unstrukturiertem Text arbeiten. JSON formatieren und validieren, reguläre Ausdrücke mit Echtzeit-Matching testen, Textunterschiede vergleichen, Markdown mit Live-Vorschau schreiben, Textfälle konvertieren, E-Mails und URLs extrahieren, Wörter und Zeichen zählen sowie doppelte Zeilen entfernen — alles, ohne Daten an einen Server zu senden.",
+    "faq1Q": "Welche Textverarbeitungstools bietet OmniKit?",
+    "faq1A": "OmniKit bietet 8 Textverarbeitungstools: JSON-Formatierer (mit JSON5-Unterstützung), Regex-Tester, Text-Diff, Markdown-Editor, Text-Case-Konverter, E-Mail- und URL-Extraktor, Wortzähler und Zeilendeduplizierung.",
+    "faq2Q": "Sind diese Textverarbeitungstools kostenlos?",
+    "faq2A": "Ja, alle OmniKit-Textverarbeitungstools sind völlig kostenlos und laufen vollständig in Ihrem Browser. Es werden keine Daten an einen Server gesendet.",
+    "faq3Q": "Kann ich diese Tools mit großen Dateien verwenden?",
+    "faq3A": "Ja. Die meisten Tools verarbeiten Dateien bis mehrere MB. JSON-Formatierer, Diff und Markdown-Editor nutzen Web Workers für flüssige Performance bei großen Eingaben."
+  },
+  "encoding": {
+    "title": "Kodierungs- und Konvertierungstools – Base64, URL, CSV, YAML | OmniKit",
+    "shortTitle": "Kodierung & Konvertierung",
+    "description": "Kostenlose Online-Kodierungs- und Konvertierungstools für Entwickler. Base64 kodieren/dekodieren, URL kodieren/dekodieren, CSV-Konvertierung, YAML-Konvertierung, Zahlenbasen konvertieren und mehr. 100% clientseitig.",
+    "intro": "7 Kodierungs- und Konvertierungstools, die die häufigsten Datentransformationsanforderungen abdecken. Base64-Zeichenketten kodieren und dekodieren, URL-Parameter kodieren, zwischen JSON und CSV oder YAML konvertieren, Zahlenbasen transformieren und Speichereinheiten umrechnen. Jede Operation läuft lokal in Ihrem Browser — keine Server-Uploads.",
+    "faq1Q": "Welche Kodierungstools bietet OmniKit?",
+    "faq1A": "OmniKit bietet 7 Kodierungs- und Konvertierungstools: Base64-Kodierer/Dekodierer, URL-Kodierer/Dekodierer, JSON/CSV-Konverter, CSV/Markdown-Tabellenkonverter, Zahlenbasenkonverter, JSON/YAML-Konverter und Speichereinheitenkonverter.",
+    "faq2Q": "Sind die Kodierungskonvertierungen genau?",
+    "faq2A": "Ja. Alle Konvertierungen folgen den entsprechenden RFC-Spezifikationen (RFC 4648 für Base64, RFC 3986 für URL-Kodierung) und produzieren standardkonforme Ergebnisse."
+  },
+  "security": {
+    "title": "Sicherheits- und Kryptografie-Tools – JWT, Hashing, Verschlüsselung | OmniKit",
+    "shortTitle": "Sicherheit & Krypto",
+    "description": "Kostenlose Online-Sicherheits- und Kryptografie-Tools für Entwickler. JWT-Token debuggen, Hashes generieren, sichere Passwörter erstellen, SSH-Schlüssel generieren, Text verschlüsseln und Datei-Prüfsummen berechnen. 100% clientseitig.",
+    "intro": "6 Sicherheits- und Kryptografie-Tools für Entwickler. JWT-Token debuggen und verifizieren, MD5/SHA-Hashes generieren, kryptografisch sichere Passwörter erstellen, SSH-Schlüsselpaare generieren, Text mit AES/DES/RC4 ver- und entschlüsseln sowie Datei-Prüfsummen berechnen. Alle kryptografischen Operationen laufen vollständig in Ihrem Browser — Ihre Daten verlassen niemals Ihr Gerät.",
+    "faq1Q": "Sind die Sicherheitstools für sensible Daten sicher?",
+    "faq1A": "Ja. Alle Sicherheitstools laufen zu 100% clientseitig mit JavaScript-Kryptografie-Bibliotheken. Es werden niemals Daten an einen Server übertragen. Sie können dies überprüfen, indem Sie den Open-Source-Code einsehen.",
+    "faq2Q": "Welche Verschlüsselungsalgorithmen werden unterstützt?",
+    "faq2A": "Das Ver-/Entschlüsseln-Tool unterstützt AES-256, DES, Triple DES, Rabbit, RC4 und RC4Drop. Der Hash-Generator unterstützt MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3, Keccak und RIPEMD-160."
+  },
+  "generators": {
+    "title": "Generator-Tools – UUID, Cron, Zeitstempel, QR-Code | OmniKit",
+    "shortTitle": "Generatoren",
+    "description": "Kostenlose Online-Generator-Tools für Entwickler. UUIDs generieren, Cron-Ausdrücke erstellen, Unix-Zeitstempel konvertieren und QR-Codes erzeugen. Alle Tools laufen zu 100% in Ihrem Browser.",
+    "intro": "4 Generator-Tools, die Ihnen helfen, gängige Entwickler-Artefakte zu erstellen. UUID v4- und v7-Identifikatoren generieren, Cron-Ausdrücke erstellen und dekodieren mit Vorschau der nächsten Ausführung, Unix-Zeitstempel konvertieren sowie gestylte QR-Codes für Text, URLs, WiFi und mehr generieren. Alles läuft lokal in Ihrem Browser.",
+    "faq1Q": "Was kann ich mit OmniKit generieren?",
+    "faq1A": "OmniKit bietet 4 Generator-Tools: UUID-Generator (v4/v7), Cron-Ausdrucks-Generator, Unix-Zeitstempel-Konverter und QR-Code-Generator mit anpassbarem Styling.",
+    "faq2Q": "Sind die generierten UUIDs eindeutig?",
+    "faq2A": "Ja. UUID v4 verwendet kryptografisch sichere Zufallszahlen und UUID v7 kombiniert Zeitstempel mit Zufälligkeit. Beide entsprechen RFC 4122/9562."
+  },
+  "visual": {
+    "title": "Visuelle & Medien-Tools – Farbkonverter, Bildkompressor | OmniKit",
+    "shortTitle": "Visuell & Medien",
+    "description": "Kostenlose Online-Visuell- und Medientools für Entwickler. Farben zwischen HEX/RGB/HSL/OKLCH konvertieren, Paletten aus Bildern extrahieren, Bilder komprimieren und konvertieren. 100% clientseitig.",
+    "intro": "2 Visuell- und Medientools für Design- und Bild-Workflows. Der Farbkonverter verarbeitet 7 Farbräume (HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH) mit visueller Farbauswahl, Bildpaletten-Extraktion, WCAG-Kontrastprüfung und Farbfehlsichtigkeitssimulation. Der Bildkompressor unterstützt PNG-, JPG- und WebP-Konvertierung mit Größenänderung. Alle Verarbeitung läuft lokal.",
+    "faq1Q": "Welche Farbräume werden unterstützt?",
+    "faq1A": "Der Farbkonverter unterstützt HEX, RGB, HSL, HSV, CMYK, LAB und OKLCH mit bidirektionaler Konvertierung und visuellem Vergleich.",
+    "faq2Q": "Gibt es eine Dateigrößenbeschränkung für die Bildkomprimierung?",
+    "faq2A": "Nein. Die Bildkomprimierung läuft vollständig in Ihrem Browser über die Canvas-API, daher gibt es kein serverseitiges Dateigrößenlimit. Sehr große Bilder können länger dauern."
+  },
+  "reference": {
+    "title": "Referenz- und Nachschlagetools – HTTP-Status, ASCII, HTML-Codes | OmniKit",
+    "shortTitle": "Referenz & Nachschlagewerk",
+    "description": "Kostenlose Online-Referenz- und Nachschlagetools für Entwickler. HTTP-Statuscodes, ASCII-Tabelle, HTML-Entitäten, SQLite-Viewer und HTTP-Client. Alle Tools laufen zu 100% in Ihrem Browser.",
+    "intro": "5 Referenz- und Nachschlagetools für schnelle Entwickler-Recherchen. HTTP-Statuscodes mit RFC-Referenzen durchsuchen, ASCII-Zeichencodes nachschlagen, HTML-Entitäten kodieren, SQLite-Datenbanken mit einem SQL-Editor erkunden und REST-APIs mit dem HTTP-Client testen. Alle Tools sind kostenlos und laufen vollständig in Ihrem Browser.",
+    "faq1Q": "Welche Referenztools bietet OmniKit?",
+    "faq1A": "OmniKit bietet 5 Referenztools: HTTP-Statuscodes-Referenz, HTTP-Client für API-Tests, SQLite-Datenbank-Viewer, ASCII-Tabelle und HTML-Entity-Kodierer.",
+    "faq2Q": "Kann ich im DB-Viewer SQL-Abfragen ausführen?",
+    "faq2A": "Ja. Der SQLite-Viewer unterstützt schreibgeschützte SQL-Abfragen mit Autovervollständigung, Abfrageverlauf, Paginierung und Export als CSV oder JSON — alles läuft lokal in Ihrem Browser über WebAssembly."
+  }
+}

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useSyncExternalStore } from "react";
 import { useRouter, usePathname, Link } from "../i18n/navigation";
-import { LayoutGrid, Sun, Moon, ClipboardX, Maximize, Minimize } from "lucide-react";
+import { LayoutGrid, Sun, Moon, ClipboardX, Maximize, Minimize, ChevronRight } from "lucide-react";
 import { useTheme } from "../libs/theme";
 import { useTranslations } from "next-intl";
 import LanguageSwitcher from "./language_switcher";
@@ -16,10 +16,14 @@ export default function Header({
   position,
   title,
   hideToolsButton,
+  categoryLabel,
+  categorySlug,
 }: {
   position: HeaderPosition;
   title?: string;
   hideToolsButton?: boolean;
+  categoryLabel?: string;
+  categorySlug?: string;
 }) {
   const router = useRouter();
   const currentPath = usePathname();
@@ -68,21 +72,36 @@ export default function Header({
     <>
       <nav className={`${positionClass} bg-bg-surface/80 backdrop-blur-md`}>
         <div className="mx-auto flex items-center justify-between px-4 py-2 lg:px-6">
-          <Link
-            href="/"
-            className="flex shrink-0 items-center gap-2 text-fg-primary hover:text-accent-cyan transition-colors"
-          >
-            <img src="/favicon.svg" alt="Logo" height={28} width={28} />
-            <span className={`font-bold ${!title ? "" : "hidden md:inline"}`}>
-              {t("nav.brand")}
-            </span>
-          </Link>
+          <div className="flex items-center gap-1.5 min-w-0">
+            <Link
+              href="/"
+              className="flex shrink-0 items-center gap-2 text-fg-primary hover:text-accent-cyan transition-colors"
+            >
+              <img src="/favicon.svg" alt="Logo" height={28} width={28} />
+              <span className="text-sm font-bold hidden md:inline">{t("nav.brand")}</span>
+            </Link>
 
-          {title && (
-            <h1 className="mx-4 truncate text-center text-sm font-bold text-fg-secondary">
-              {title}
-            </h1>
-          )}
+            {categoryLabel && categorySlug && (
+              <>
+                <span className="text-fg-muted/40 shrink-0 hidden md:inline">·</span>
+                <Link
+                  href={`/${categorySlug}`}
+                  className="shrink-0 text-sm font-medium text-fg-secondary hover:text-accent-cyan transition-colors truncate"
+                >
+                  {categoryLabel}
+                </Link>
+              </>
+            )}
+
+            {title && (
+              <>
+                <ChevronRight size={10} className="text-fg-muted/50 shrink-0 hidden md:block" />
+                <h1 className="text-sm font-semibold text-fg-secondary truncate hidden md:inline">
+                  {title}
+                </h1>
+              </>
+            )}
+          </div>
 
           <div className="flex items-center gap-2">
             {!hideToolsButton && (

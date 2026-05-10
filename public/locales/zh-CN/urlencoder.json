@@ -10,7 +10,7 @@
   "decodeFailed": "解码失败：输入不是有效的百分号编码字符串",
   "descriptions": {
     "whatIsTitle": "什么是 URL 编码？",
-    "whatIsP1": "URL 编码（也称百分号编码）是 RFC 3986 定义的、用于在 URL 中传输数据的机制。对在 URL 中具有保留语义的字符（如 ? / # & =）或非 ASCII 可打印字符，会被改写为一个或多个 %XX 三元组，其中 XX 是该字节的十六进制表示。解码时按字节逆向还原。",
+    "whatIsP1": "URL 编码（又称百分号编码）是 RFC 3986 定义的在 URL 中承载数据的机制。在 URL 中具有保留含义的字符（如 ? / # & =）或超出 ASCII 可打印范围的字符被重写为一个或多个 %XX 三元组。另请参阅 [Base64](/base64) 用于二进制到文本的编码。",
     "whatIsP2": "百分号编码只是一种传输格式，不是安全机制。任何收到编码字符串的人都可以轻易解码；不要把编码误认为加密或哈希。",
     "howTitle": "如何选择模式",
     "howIntro": "本工具暴露了开发者最终都会遇到的三种编码模式。选择的模式决定了哪些字符会被编码。",
@@ -24,12 +24,17 @@
     "tableUrl": "Whole URL",
     "tableForm": "Form",
     "tableNote": "Component 会编码除 A–Z a–z 0–9 - _ . ! ~ * ' ( ) 之外的全部字符。Whole URL 在此基础上额外保留结构性字符 ; , / ? : @ & = + $ # !。Form 编码与 Component 相同的字符集，并额外编码 ! ' ( ) ~（但不编码 *），把空格换成 + 而不是 %20，并把 \\n / \\r / \\r\\n 归一化为 \\r\\n（编码为 %0D%0A）—— 这正是浏览器提交 application/x-www-form-urlencoded 表单时发出的字节序列。",
-    "useCasesTitle": "常见用例",
     "useCasesP1": "以编程方式构造安全的查询字符串：手工拼接 /search?q=[value] 这类 URL 时，把值经过 Component 模式编码，保证值中出现的 & 或 = 不会污染外层 URL 结构。",
     "useCasesP2": "在 URL 中嵌套 URL：当你把一个 URL 作为另一个 URL 的参数传递（例如 OAuth 回调地址）时，必须用 Component 模式编码内层 URL，而非 Whole URL —— 否则内层 URL 中的 / : ? & 会被外层 URL 误读为结构符。",
     "useCasesP3": "使用 fetch 提交表单：当你 POST 一个 Content-Type 为 application/x-www-form-urlencoded 的请求体时，请求体必须按 Form 模式编码。本工具的 Form 模式输出与浏览器发送的字节一致。",
-    "limitationsTitle": "局限性",
     "limitationsP1": "URL 编码不是加密。任何人都可以通过一次函数调用解码其输出；绝不要用编码来隐藏秘密。",
-    "limitationsP2": "模式选择很关键。用 Component 模式编码整条 URL 会把它打烂（每个 / 都变成 %2F）。用 Whole URL 模式编码查询值会留下危险的保留字符（值中的 & 仍然会被消费方当成参数分隔符）。不确定时请选 Component。"
+    "limitationsP2": "模式选择很关键。用 Component 模式编码整条 URL 会把它打烂（每个 / 都变成 %2F）。用 Whole URL 模式编码查询值会留下危险的保留字符（值中的 & 仍然会被消费方当成参数分隔符）。不确定时请选 Component。",
+    "faq1Q": "什么是 URL 编码？",
+    "faq1A": "URL 编码（百分号编码）将字符转换为可在互联网上传输的格式。空格、引号和非 ASCII 等特殊字符被替换为 %XX 序列。",
+    "faq2Q": "有哪些编码模式？",
+    "faq2A": "三种模式：Component（编码所有保留字符）、Whole URL（保留 URL 结构如 ://、?、&）和 Form（空格变为 + 而非 %20）。",
+    "faq3Q": "何时应使用 URL 编码？",
+    "faq3A": "在查询参数中传递数据、在 HTML 中嵌入 URL，或在 API 调用中处理特殊字符时应使用 URL 编码。",
+    "aeoDefinition": "URL 编解码工具是一个免费的在线 URL 字符串编码和解码工具。支持组件模式、完整 URL 模式和表单模式。完全在浏览器中运行，不会发送任何数据到服务器。"
   }
 }

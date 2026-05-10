@@ -1,12 +1,18 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { renderLinkedText } from "../../../utils/linked-text";
 import Layout from "../../../components/layout";
 import { showToast } from "../../../libs/toast";
 import { fromEvent } from "file-selector";
 import "rc-slider/assets/index.css";
-import Slider from "rc-slider";
+
+const Slider = dynamic(() => import("rc-slider"), {
+  ssr: false,
+  loading: () => <div className="h-6 w-full animate-pulse bg-bg-input rounded" />,
+});
 import { Download, Clipboard, RefreshCw, ImageIcon, ImagePlus, ArrowLeftRight } from "lucide-react";
 import { StyledSelect, StyledInput, StyledCheckbox } from "../../../components/ui/input";
 import { Button } from "../../../components/ui/button";
@@ -14,6 +20,10 @@ import { encode } from "../../../libs/image/encode";
 import { calculateDimensions } from "../../../libs/image/resize";
 import { getSupportedEncodeFormats } from "../../../libs/image/format-support";
 import type { OutputFormat, ResizeMode } from "../../../libs/image/types";
+import RelatedTools from "../../../components/related-tools";
+import PrivacyBanner from "../../../components/privacy-banner";
+import { Accordion } from "../../../components/ui/accordion";
+import { CircleHelp } from "lucide-react";
 
 const FORMAT_OPTIONS: { value: OutputFormat; label: string }[] = [
   { value: "png", label: "PNG" },
@@ -547,7 +557,7 @@ function Conversion() {
               disabled={!resultBlob || processing}
             >
               <Download size={14} />
-              {t("download")}
+              {tc("download")}
             </Button>
             <Button
               variant="outline-cyan"
@@ -664,14 +674,35 @@ function Conversion() {
 
 function Description() {
   const t = useTranslations("image");
+  const tc = useTranslations("common");
+  const locale = useLocale();
+
+  const faqItems = [1, 2, 3].map((i) => ({
+    title: t(`descriptions.faq${i}Q`),
+    content: <p>{t(`descriptions.faq${i}A`)}</p>,
+  }));
   return (
     <section className="mt-8">
+      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
+        <p className="text-fg-secondary text-sm leading-relaxed">
+          {t("descriptions.aeoDefinition")}
+        </p>
+      </div>
       <h2 className="text-sm font-semibold mb-3">{t("descriptions.title")}</h2>
       <div className="space-y-3 text-sm text-fg-secondary leading-relaxed">
-        <p>{t("descriptions.p1")}</p>
+        <p>{renderLinkedText(t("descriptions.p1"), locale)}</p>
         <p>{t("descriptions.p2")}</p>
         <p>{t("descriptions.p3")}</p>
         <p>{t("descriptions.p4")}</p>
+      </div>
+      <div className="mt-8">
+        <div className="flex items-center gap-2 mb-4">
+          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
+          <h2 className="font-semibold text-fg-primary text-base text-pretty">
+            {tc("descriptions.faqTitle")}
+          </h2>
+        </div>
+        <Accordion items={faqItems} />
       </div>
     </section>
   );
@@ -679,17 +710,14 @@ function Description() {
 
 export default function ImagePage() {
   const t = useTranslations("tools");
-  const tc = useTranslations("common");
+  const title = t("image.shortTitle");
   return (
-    <Layout title={t("image.shortTitle")}>
+    <Layout title={title} categoryLabel={t("categories.visual")} categorySlug="visual-media">
       <div className="container mx-auto px-4 pt-3 pb-6">
-        <div className="flex items-start gap-2 border-l-2 border-accent-cyan bg-accent-cyan-dim/30 rounded-r-lg p-3 my-4">
-          <span className="text-sm text-fg-secondary leading-relaxed">
-            {tc("alert.notTransferred")}
-          </span>
-        </div>
+        <PrivacyBanner />
         <Conversion />
         <Description />
+        <RelatedTools currentTool="image" />
       </div>
     </Layout>
   );

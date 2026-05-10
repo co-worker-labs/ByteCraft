@@ -3,8 +3,14 @@
   "deselect": "取消选择 ({count})",
   "noFileChosen": "未选择文件",
   "selectedFiles": "已选择 {count} 个文件",
-  "selectedFile": "已选择 {count} 个文件",
   "checksumOutput": "校验输出",
   "algoTip": "处理大文件时，请仅勾选所需的算法以减少计算耗时。",
-  "calculate": "开始计算"
+  "calculate": "开始计算",
+  "descriptions": {
+    "faq1Q": "什么是文件校验和？",
+    "faq1A": "校验和是根据文件内容计算的散列值，用于验证文件完整性——即使一个字节发生变化，校验和也会完全改变。",
+    "faq2Q": "有哪些散列算法可用？",
+    "faq2A": "MD5、SHA-1、SHA-256、SHA-384、SHA-512、SHA3-256、SHA3-512 和 CRC32。可同时对同一文件运行多种算法。",
+    "aeoDefinition": "文件校验和工具是一个免费的在线 MD5、SHA-1、SHA-256、SHA-512 校验和计算工具。支持无限文件大小，100% 浏览器端处理。"
+  }
 }

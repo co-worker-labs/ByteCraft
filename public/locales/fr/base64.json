@@ -21,11 +21,14 @@
     "whyTitle": "Pourquoi utiliser l'encodage Base64 ?",
     "whyP1": "Envoyer des informations au format binaire peut parfois être risqué, car toutes les applications ou tous les systèmes réseau ne peuvent pas gérer le binaire brut. En revanche, le jeu de caractères ASCII est largement connu et très simple à manipuler pour la plupart des systèmes.",
     "whyP2": "Par exemple, les serveurs de messagerie attendent des données textuelles, c'est pourquoi on utilise généralement ASCII. Si vous souhaitez envoyer des images ou tout autre fichier binaire à un serveur de messagerie, vous devez d'abord l'encoder dans un format textuel, de préférence ASCII. C'est là que l'encodage Base64 devient extrêmement utile pour convertir les données binaires aux formats appropriés.",
-    "useCasesTitle": "Cas d'utilisation courants de Base64",
     "useCasesP1": "Vous pouvez aussi utiliser Base64 pour représenter des données binaires de manière compatible avec HTML, JavaScript et CSS. Par exemple, vous pouvez intégrer une image directement dans un fichier CSS ou JavaScript en utilisant Base64.",
     "useCasesP2": "Il est possible d'utiliser Base64 pour convertir des entrées, comme des données de formulaire ou du JSON, en une chaîne avec un jeu de caractères réduit compatible avec les URL. Cependant, en raison de la façon dont certains serveurs peuvent interpréter les caractères plus (+) et barre oblique (/), il est recommandé d'utiliser encodeURIComponent à la place.",
-    "limitationsTitle": "Limites de Base64",
     "limitationsP1": "Base64 n'est en aucun cas une méthode de chiffrement sécurisée.",
-    "limitationsP2": "Base64 n'est pas non plus une méthode de compression. L'encodage d'une chaîne en Base64 donne généralement un résultat 33 % plus long."
+    "limitationsP2": "Base64 n'est pas non plus une méthode de compression. L'encodage d'une chaîne en Base64 donne généralement un résultat 33 % plus long.",
+    "faq1Q": "Qu'est-ce que l'encodage Base64 ?",
+    "faq1A": "Base64 est un schéma d'encodage binaire-texte qui représente des données binaires en utilisant 64 caractères ASCII (A-Z, a-z, 0-9, +, /). Il est couramment utilisé pour intégrer des données dans les URL, HTML et JSON.",
+    "faq2Q": "Le Base64 est-il un chiffrement ?",
+    "faq2A": "Non. Le Base64 est un encodage, pas un chiffrement. Il ne fournit aucune sécurité — n'importe qui peut le décoder. Utilisez l'outil Chiffrer/Déchiffrer pour une véritable protection des données.",
+    "aeoDefinition": "L'Encodeur/Décodeur Base64 est un outil gratuit en ligne pour encoder et décoder des chaînes Base64. Prend en charge les en-têtes d'authentification Basic, plusieurs jeux de caractères et la conversion en temps réel. Tout le traitement s'exécute dans votre navigateur."
   }
 }

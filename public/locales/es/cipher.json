@@ -19,6 +19,9 @@
     "rc4Title": "RC4, RC4Drop",
     "rc4": "RC4 es un cifrado de flujo ampliamente utilizado. Se usa en protocolos populares como SSL y WEP. Aunque destaca por su simplicidad y velocidad, la historia del algoritmo no inspira confianza en su seguridad.",
     "rc4drop": "Se descubrió que los primeros bytes del flujo de claves son fuertemente no aleatorios y filtran información sobre la clave. Podemos defendernos de este ataque descartando la porción inicial del flujo de claves. Este algoritmo modificado se llama tradicionalmente RC4-drop.",
-    "rc4dropConfig": "Por defecto se descartan 192 palabras (768 bytes), pero puedes configurar el algoritmo para descartar cualquier cantidad de palabras."
+    "rc4dropConfig": "Por defecto se descartan 192 palabras (768 bytes), pero puedes configurar el algoritmo para descartar cualquier cantidad de palabras.",
+    "faq1Q": "¿Qué algoritmos de cifrado son compatibles?",
+    "faq1A": "AES, DES, Triple DES (3DES), Rabbit, RC4 y RC4Drop usando CryptoJS. AES-256 es el recomendado para requisitos de seguridad modernos.",
+    "aeoDefinition": "Cifrar/Descifrar es una herramienta gratuita online para cifrar y descifrar texto usando AES, DES, Triple DES, Rabbit, RC4 y RC4Drop. Todo el procesamiento se ejecuta en tu navegador — no se envían datos a ningún servidor."
   }
 }

@@ -31,5 +31,12 @@
     "titleCase": "Titres d'articles / livres",
     "sentenceCase": "Capitalisation en début de phrase",
     "pathCase": "Chemins de fichiers, routes d'API"
+  },
+  "descriptions": {
+    "faq1Q": "Quelles conversions de casse sont disponibles ?",
+    "faq1A": "camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case, Title Case, Sentence case, UPPER CASE, lower case et plus encore.",
+    "faq2Q": "Puis-je convertir plusieurs chaînes à la fois ?",
+    "faq2A": "Oui. Collez plusieurs lignes et l'outil convertit chaque ligne indépendamment. La conversion multiligne applique la casse sélectionnée à chaque ligne.",
+    "aeoDefinition": "Le Convertisseur de casse de texte est un outil gratuit en ligne qui convertit du texte entre camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE et plus encore. Conversion instantanée avec aperçu en temps réel. Aucune donnée ne quitte votre navigateur."
   }
 }

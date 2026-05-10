@@ -6,32 +6,22 @@
     "releaseToLoad": "Suelta para cargar",
     "unsupported": "Tipo de archivo no soportado",
     "tooLarge": "El archivo supera el límite de 200 MB.",
-    "invalidHeader": "No es un archivo de base de datos SQLite válido.",
     "engineFailed": "No se pudo cargar el motor SQLite. Verifica la conexión o recarga la página.",
     "initializing": "Inicializando motor…",
-    "reading": "Leyendo archivo… {loaded} / {total}",
     "privacy": "Todos los datos se procesan localmente en tu navegador"
   },
   "info": {
-    "tables": "{count, plural, =1 {1 tabla} other {# tablas}}",
-    "views": "{count, plural, =1 {1 vista} other {# vistas}}",
-    "indexes": "{count, plural, =1 {1 índice} other {# índices}}",
-    "triggers": "{count, plural, =1 {1 trigger} other {# triggers}}",
     "close": "Cerrar"
   },
   "sidebar": {
-    "search": "Buscar…",
     "tables": "TABLAS",
     "views": "VISTAS",
     "indexes": "ÍNDICES",
     "triggers": "TRIGGERS",
-    "showSystem": "Mostrar sistema",
-    "noResults": "Sin resultados",
     "collapse": "Colapsar barra lateral",
     "expand": "Expandir barra lateral"
   },
   "schema": {
-    "columns": "Columnas",
     "foreignKeys": "Claves foráneas",
     "indexes": "Índices",
     "rowCount": "Filas: {count}",
@@ -40,13 +30,7 @@
     "type": "Tipo",
     "nullable": "Nulable",
     "default": "Por defecto",
-    "pk": "PK",
-    "from": "Desde",
-    "to": "Hacia",
-    "onDelete": "ON DELETE",
-    "onUpdate": "ON UPDATE",
-    "unique": "Único",
-    "trigger": "SQL del Trigger"
+    "pk": "PK"
   },
   "editor": {
     "run": "Ejecutar",
@@ -54,10 +38,8 @@
     "format": "Formatear",
     "compress": "Comprimir",
     "clear": "Limpiar",
-    "history": "Historial",
     "noHistory": "Sin consultas aún",
-    "clearHistory": "Limpiar historial",
-    "placeholder": "-- Escribe consultas SELECT aquí. Ctrl/Cmd+Enter para ejecutar."
+    "clearHistory": "Limpiar historial"
   },
   "result": {
     "running": "Ejecutando consulta…",
@@ -71,23 +53,26 @@
     "exportJson": "Exportar JSON",
     "empty": "Sin resultados",
     "tabName": "Resultado {n}",
-    "errorTab": "Error",
-    "rejectedReadonly": "Solo se permiten sentencias de solo lectura (se recibió: {keyword}).",
-    "rejectedPragma": "PRAGMA \"{name}\" no está en la lista blanca de solo lectura.",
-    "rejectedCte": "CTE con modificación de datos detectada; rechazada.",
     "exportConfirm": "El cursor no ha terminado. ¿Exportar las {loaded} filas actuales, o cargar todo primero?",
     "exportLoaded": "Exportar filas actuales",
     "exportLoadAll": "Cargar todo y exportar"
   },
   "cell": {
-    "null": "NULL",
     "empty": "(vacío)",
     "blob": "BLOB · {bytes} B",
-    "expandLong": "Mostrar texto completo",
-    "copyLong": "Copiar"
+    "expandLong": "Mostrar texto completo"
   },
-  "status": {
-    "engineRestarted": "Motor de base de datos reiniciado. Tus datos fueron recargados.",
-    "abortShortcut": "Presiona Esc para cancelar"
+  "status": {},
+  "descriptions": {
+    "whatIsTitle": "¿Qué es el Visor de SQLite?",
+    "whatIsP1": "El Visor de SQLite te permite abrir y explorar archivos de bases de datos SQLite directamente en el navegador, sin necesidad de subirlos a un servidor. Ejecuta consultas SQL, explora tablas y exporta datos como CSV o JSON.",
+    "whatIsP2": "Basado en sql.js (SQLite compilado a WebAssembly), soporta autocompletado, historial de consultas, paginación y maneja bases de datos hasta el límite de memoria del navegador.",
+    "faq1Q": "¿Qué bases de datos puedo ver?",
+    "faq1A": "La herramienta soporta archivos de base de datos SQLite (.db, .sqlite, .sqlite3). Abre cualquier archivo SQLite para explorar tablas, ejecutar consultas y exportar datos.",
+    "faq2Q": "¿Se sube mi base de datos a un servidor?",
+    "faq2A": "No. La base de datos se carga en la memoria del navegador usando sql.js (SQLite compilado a WebAssembly). Todas las operaciones se realizan localmente.",
+    "faq3Q": "¿Qué características SQL son compatibles?",
+    "faq3A": "Sintaxis SQL completa de SQLite incluyendo SELECT, INSERT, UPDATE, DELETE, JOINs, subconsultas, agregaciones y transacciones. El editor proporciona autocompletado para nombres de tablas y columnas.",
+    "aeoDefinition": "El Visor de SQLite es una herramienta gratuita online para abrir y explorar archivos de bases de datos SQLite en tu navegador. Ejecuta consultas SQL con autocompletado, explora tablas y exporta a CSV o JSON. No sale ningún dato de tu dispositivo."
   }
 }

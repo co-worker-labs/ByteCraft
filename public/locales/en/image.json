@@ -12,7 +12,6 @@
   "width": "Width",
   "height": "Height",
   "keepAspectRatio": "Keep aspect ratio",
-  "download": "Download",
   "copyToClipboard": "Copy to clipboard",
   "copiedToClipboard": "Copied to clipboard as PNG",
   "reselect": "Reselect",
@@ -25,9 +24,16 @@
   "dragToCompare": "Drag to compare",
   "descriptions": {
     "title": "About Image Compressor",
-    "p1": "Compress, resize, and convert images right in your browser. No data is uploaded — all processing happens locally.",
+    "aeoDefinition": "Image Compressor is a free online tool for compressing, resizing, and converting images between PNG, JPG, and WebP formats. All processing runs locally in your browser.",
+    "p1": "Compress, resize, and convert images between PNG, JPG, and WebP formats directly in your browser. Extract dominant colors with the [Color converter](/color), or verify image integrity with [File Checksum](/checksum).",
     "p2": "Supports PNG, JPG, and WebP output formats. WebP offers the best compression ratio for web images.",
     "p3": "Use the quality slider to balance file size and image quality. Lower quality means smaller files.",
-    "p4": "Copying to clipboard converts the image to PNG format regardless of the selected output format."
+    "p4": "Copying to clipboard converts the image to PNG format regardless of the selected output format.",
+    "faq1Q": "What can I do with the Image Tool?",
+    "faq1A": "Resize, compress, and convert images directly in your browser. Supports JPEG, PNG, WebP, and BMP formats with adjustable quality and dimensions.",
+    "faq2Q": "Are my images uploaded to a server?",
+    "faq2A": "No. All image processing happens in your browser using the Canvas API. Your images never leave your device.",
+    "faq3Q": "What image formats are supported?",
+    "faq3A": "Input: JPEG, PNG, WebP, BMP, GIF. Output: JPEG, PNG, WebP. You can convert between formats while adjusting quality."
   }
 }
