@@ -6,6 +6,11 @@
   "contextUsage": "上下文用量",
   "contextWindow": "基於 GPT-4o 128K 上下文視窗",
   "showingPartial": "顯示前 {limit} 個 Token（共 {total} 個）",
+  "tokenDetail": "Token #{index}",
+  "tokenId": "Token ID",
+  "tokenText": "文字",
+  "tokenChars": "字元數",
+  "tokenBytes": "UTF-8 位元組",
   "descriptions": {
     "aeoDefinition": "Token 計數器是一款免費的線上工具，使用 o200k_base 編碼計算 OpenAI GPT Token 數量（支援 GPT-4o、GPT-4.1、o1、o3、o4-mini、GPT-5）。透過彩色高亮視覺化文字如何被分割為 BPE Token。所有資料在瀏覽器本機處理，不會傳送到任何伺服器。",
     "whatIsTitle": "什麼是 Token 計數器？",

@@ -6,6 +6,11 @@
   "contextUsage": "Uso de Contexto",
   "contextWindow": "Baseado na janela de contexto 128K do GPT-4o",
   "showingPartial": "Mostrando os primeiros {limit} de {total} tokens",
+  "tokenDetail": "Token #{index}",
+  "tokenId": "Token ID",
+  "tokenText": "Texto",
+  "tokenChars": "Caracteres",
+  "tokenBytes": "Bytes UTF-8",
   "descriptions": {
     "aeoDefinition": "O Contador de Tokens é uma ferramenta online gratuita que conta tokens do OpenAI GPT usando a codificação o200k_base (GPT-4o, GPT-4.1, o1, o3, o4-mini, GPT-5). Visualize como o texto é dividido em tokens BPE com destaque colorido. Todo o processamento é feito no navegador, sem enviar dados para nenhum servidor.",
     "whatIsTitle": "O que é um Contador de Tokens?",

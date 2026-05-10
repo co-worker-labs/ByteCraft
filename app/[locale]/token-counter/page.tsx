@@ -25,7 +25,7 @@ export default async function TokenCounterRoute({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tools" });
-  const tx = await getTranslations({ locale, namespace: "tokencounter" });
+  const tx = await getTranslations({ locale, namespace: "token-counter" });
   const tc = await getTranslations({ locale, namespace: "categories" });
   const category = TOOL_CATEGORIES.find((c) => c.tools.includes(TOOL_KEY))!;
   const categorySlug = CATEGORY_SLUGS[category.key];

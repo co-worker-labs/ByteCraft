@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { renderLinkedText } from "../../../utils/linked-text";
-import { FolderOpen, Upload, X, CircleHelp } from "lucide-react";
+import { FolderOpen, Upload, X, CircleHelp, XCircle } from "lucide-react";
 import Layout from "../../../components/layout";
 import { StyledTextarea } from "../../../components/ui/input";
 import { showToast } from "../../../libs/toast";
@@ -33,10 +33,15 @@ function renderTokenText(tokenText: string) {
   return nodes;
 }
 
+function escapeTokenText(text: string) {
+  return text.replace(/\n/g, "↵").replace(/\t/g, "→").replace(/\0/g, "\\0");
+}
+
 function Conversion() {
-  const t = useTranslations("tokencounter");
+  const t = useTranslations("token-counter");
   const tc = useTranslations("common");
   const [text, setText] = useState("");
+  const [selectedTokenIndex, setSelectedTokenIndex] = useState<number | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const result = tokenize(text);
@@ -48,6 +53,7 @@ function Conversion() {
     }
     const content = await file.text();
     setText(content);
+    setSelectedTokenIndex(null);
     showToast(tc("fileLoaded"), "success", 2000);
   });
 
@@ -61,6 +67,7 @@ function Conversion() {
     }
     file.text().then((content) => {
       setText(content);
+      setSelectedTokenIndex(null);
       showToast(tc("fileLoaded"), "success", 2000);
     });
     e.target.value = "";
@@ -68,6 +75,14 @@ function Conversion() {
 
   const showPartial = result.tokens.length > MAX_VIS_TOKENS;
   const displayTokens = result.tokens.slice(0, MAX_VIS_TOKENS);
+
+  const selectedToken =
+    selectedTokenIndex !== null ? (displayTokens[selectedTokenIndex] ?? null) : null;
+  const selectedBytes = selectedToken
+    ? Array.from(new TextEncoder().encode(selectedToken.text))
+        .map((b) => b.toString(16).padStart(2, "0").toUpperCase())
+        .join(" ")
+    : "";
 
   const statCards = [
     { label: t("tokens"), value: result.tokenCount },
@@ -136,7 +151,10 @@ function Conversion() {
         </div>
         <StyledTextarea
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={(e) => {
+            setText(e.target.value);
+            setSelectedTokenIndex(null);
+          }}
           placeholder={t("textareaPlaceholder")}
           className="font-mono h-[30vh] resize-y"
         />
@@ -157,20 +175,63 @@ function Conversion() {
               {t("showingPartial", { limit: MAX_VIS_TOKENS, total: result.tokens.length })}
             </div>
           )}
-          <div className="bg-bg-surface border border-border-default rounded-xl p-4 font-mono text-sm leading-relaxed break-all">
+          <div className="bg-bg-surface border border-border-default rounded-xl p-4 font-mono text-sm leading-relaxed break-all max-h-[50vh] overflow-y-auto">
             {displayTokens.map((token, i) => (
               <span
                 key={i}
-                className="rounded px-0.5 mx-px"
+                className={`rounded px-0.5 mx-px cursor-pointer transition-all ${
+                  selectedTokenIndex === i
+                    ? "ring-2 ring-accent-cyan ring-offset-1 ring-offset-bg-surface"
+                    : "hover:ring-1 hover:ring-accent-cyan/40"
+                }`}
                 style={{
-                  backgroundColor: `color-mix(in srgb, var(--tool-icon-${i % 20}) 25%, transparent)`,
+                  backgroundColor: `color-mix(in srgb, var(--tool-icon-${token.id % 20}) 25%, transparent)`,
                 }}
-                title={`Token #${i}\nText: "${token.text}"\nID: ${token.id}`}
+                onClick={() => setSelectedTokenIndex(selectedTokenIndex === i ? null : i)}
               >
                 {renderTokenText(token.text)}
               </span>
             ))}
           </div>
+
+          {selectedToken && (
+            <div className="mt-3 bg-bg-surface border border-border-default rounded-xl p-4">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-sm font-semibold text-fg-primary">
+                  {t("tokenDetail", { index: selectedTokenIndex! })}
+                </span>
+                <button
+                  type="button"
+                  className="text-fg-muted hover:text-fg-primary transition-colors cursor-pointer"
+                  onClick={() => setSelectedTokenIndex(null)}
+                >
+                  <XCircle size={16} />
+                </button>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div>
+                  <div className="text-xs text-fg-muted mb-1">{t("tokenId")}</div>
+                  <div className="text-sm font-mono text-accent-cyan">{selectedToken.id}</div>
+                </div>
+                <div>
+                  <div className="text-xs text-fg-muted mb-1">{t("tokenText")}</div>
+                  <div className="text-sm font-mono text-fg-primary break-all">
+                    {escapeTokenText(selectedToken.text)}
+                  </div>
+                </div>
+                <div>
+                  <div className="text-xs text-fg-muted mb-1">{t("tokenChars")}</div>
+                  <div className="text-sm font-mono text-fg-primary">
+                    {selectedToken.text.length}
+                  </div>
+                </div>
+                <div>
+                  <div className="text-xs text-fg-muted mb-1">{t("tokenBytes")}</div>
+                  <div className="text-sm font-mono text-fg-primary break-all">{selectedBytes}</div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </section>
@@ -178,7 +239,7 @@ function Conversion() {
 }
 
 function Description() {
-  const t = useTranslations("tokencounter");
+  const t = useTranslations("token-counter");
   const tc = useTranslations("common");
   const locale = useLocale();
 

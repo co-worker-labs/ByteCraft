@@ -6,6 +6,11 @@
   "contextUsage": "Использование контекста",
   "contextWindow": "На основе контекстного окна 128K GPT-4o",
   "showingPartial": "Показаны первые {limit} из {total} токенов",
+  "tokenDetail": "Token #{index}",
+  "tokenId": "Token ID",
+  "tokenText": "Текст",
+  "tokenChars": "Символы",
+  "tokenBytes": "Байты UTF-8",
   "descriptions": {
     "aeoDefinition": "Счётчик токенов — бесплатный онлайн-инструмент, подсчитывающий токены OpenAI GPT с использованием кодировки o200k_base (GPT-4o, GPT-4.1, o1, o3, o4-mini, GPT-5). Визуализируйте разбиение текста на BPE-токены с цветовой подсветкой. Все данные обрабатываются в браузере и не отправляются на серверы.",
     "whatIsTitle": "Что такое счётчик токенов?",

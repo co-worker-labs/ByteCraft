@@ -6,6 +6,11 @@
   "contextUsage": "コンテキスト使用量",
   "contextWindow": "GPT-4o 128K コンテキストウィンドウ基準",
   "showingPartial": "最初の {limit} トークンを表示（全 {total} トークン中）",
+  "tokenDetail": "Token #{index}",
+  "tokenId": "Token ID",
+  "tokenText": "テキスト",
+  "tokenChars": "文字数",
+  "tokenBytes": "UTF-8 バイト",
   "descriptions": {
     "aeoDefinition": "Token カウンターは、o200k_base エンコーディング（GPT-4o、GPT-4.1、o1、o3、o4-mini、GPT-5 対応）を使用して OpenAI GPT トークン数を計算する無料オンラインツールです。BPE トークンの分割をカラー ハイライトで視覚化。全データはブラウザ上で処理され、サーバーには送信されません。",
     "whatIsTitle": "Token カウンターとは？",

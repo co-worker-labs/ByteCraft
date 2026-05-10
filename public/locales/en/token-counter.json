@@ -6,6 +6,11 @@
   "contextUsage": "Context Usage",
   "contextWindow": "Based on GPT-4o 128K context window",
   "showingPartial": "Showing first {limit} of {total} tokens",
+  "tokenDetail": "Token #{index}",
+  "tokenId": "Token ID",
+  "tokenText": "Text",
+  "tokenChars": "Characters",
+  "tokenBytes": "UTF-8 Bytes",
   "descriptions": {
     "aeoDefinition": "Token Counter is a free online tool that counts OpenAI GPT tokens using the o200k_base encoding (GPT-4o, GPT-4.1, o1, o3, o4-mini, GPT-5). Visualize how text is split into BPE tokens with colored highlighting. No data is sent to any server.",
     "whatIsTitle": "What is a Token Counter?",

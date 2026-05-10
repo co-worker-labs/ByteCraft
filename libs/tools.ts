@@ -201,10 +201,12 @@ export function getToolCardMap(t: ReturnType<typeof useTranslations>): Map<strin
   return new Map(cards.map((card) => [card.path, card]));
 }
 
+const TOOL_KEY_TO_PATH = new Map(TOOLS.map((t) => [t.key, t.path]));
+
 export function getToolCardsByKeys(keys: string[], cardMap: Map<string, ToolCard>): ToolCard[] {
   return keys
     .map((key) => {
-      const path = `/${key}`;
+      const path = TOOL_KEY_TO_PATH.get(key) ?? `/${key}`;
       return cardMap.get(path);
     })
     .filter((card): card is ToolCard => card !== undefined);

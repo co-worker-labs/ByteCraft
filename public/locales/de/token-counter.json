@@ -6,6 +6,11 @@
   "contextUsage": "Kontextnutzung",
   "contextWindow": "Basierend auf dem 128K-Kontextfenster von GPT-4o",
   "showingPartial": "Zeige die ersten {limit} von {total} Tokens",
+  "tokenDetail": "Token #{index}",
+  "tokenId": "Token ID",
+  "tokenText": "Text",
+  "tokenChars": "Zeichen",
+  "tokenBytes": "UTF-8-Bytes",
   "descriptions": {
     "aeoDefinition": "Der Token-Zähler ist ein kostenloses Online-Tool, das OpenAI GPT-Token mit der o200k_base-Kodierung zählt (GPT-4o, GPT-4.1, o1, o3, o4-mini, GPT-5). Visualisieren Sie, wie Text in BPE-Tokens aufgeteilt wird, mit farbiger Hervorhebung. Alle Verarbeitung erfolgt im Browser, keine Daten werden an Server gesendet.",
     "whatIsTitle": "Was ist ein Token-Zähler?",

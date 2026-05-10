@@ -6,6 +6,11 @@
   "contextUsage": "上下文用量",
   "contextWindow": "基于 GPT-4o 128K 上下文窗口",
   "showingPartial": "显示前 {limit} 个 Token（共 {total} 个）",
+  "tokenDetail": "Token #{index}",
+  "tokenId": "Token ID",
+  "tokenText": "文本",
+  "tokenChars": "字符数",
+  "tokenBytes": "UTF-8 字节",
   "descriptions": {
     "aeoDefinition": "Token 计数器是一款免费的在线工具，使用 o200k_base 编码计算 OpenAI GPT Token 数量（支持 GPT-4o、GPT-4.1、o1、o3、o4-mini、GPT-5）。通过彩色高亮可视化文本如何被分割为 BPE Token。所有数据在浏览器本地处理，不会发送到任何服务器。",
     "whatIsTitle": "什么是 Token 计数器？",
