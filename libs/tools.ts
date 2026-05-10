@@ -76,6 +76,7 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
       "textcase",
       "extractor",
       "wordcounter",
+      "tokencounter",
       "deduplines",
     ],
   },
@@ -122,7 +123,8 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   htmlcode: ["ascii", "httpstatus", "markdown"],
   ascii: ["htmlcode", "numbase", "httpstatus"],
   extractor: ["regex", "textcase", "deduplines"],
-  wordcounter: ["textcase", "extractor", "deduplines"],
+  wordcounter: ["textcase", "extractor", "deduplines", "tokencounter"],
+  tokencounter: ["wordcounter", "regex", "textcase"],
   httpclient: ["httpstatus", "urlencoder", "json"],
 };
 
@@ -175,6 +177,7 @@ export const TOOLS: ToolEntry[] = [
   { key: "extractor", path: "/extractor", icon: Search },
   { key: "wordcounter", path: "/wordcounter", icon: AlignLeft },
   { key: "httpclient", path: "/httpclient", icon: Send },
+  { key: "tokencounter", path: "/token-counter", icon: Hash },
 ] as const;
 
 export const TOOL_PATHS = new Set(TOOLS.map((t) => t.path));
@@ -198,10 +201,12 @@ export function getToolCardMap(t: ReturnType<typeof useTranslations>): Map<strin
   return new Map(cards.map((card) => [card.path, card]));
 }
 
+const TOOL_KEY_TO_PATH = new Map(TOOLS.map((t) => [t.key, t.path]));
+
 export function getToolCardsByKeys(keys: string[], cardMap: Map<string, ToolCard>): ToolCard[] {
   return keys
     .map((key) => {
-      const path = `/${key}`;
+      const path = TOOL_KEY_TO_PATH.get(key) ?? `/${key}`;
       return cardMap.get(path);
     })
     .filter((card): card is ToolCard => card !== undefined);

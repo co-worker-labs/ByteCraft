@@ -150,6 +150,11 @@
     "shortTitle": "Wortzähler",
     "description": "Zählt Wörter, Zeichen, Sätze und Absätze. Schätzt Lese- und Sprechzeit. Analysiert Schlüsselwort-Häufigkeit und -Dichte für SEO. Kostenloses Online-Tool, 100% im Browser."
   },
+  "tokencounter": {
+    "title": "Token-Zähler - OpenAI GPT & BPE-Visualisierung",
+    "shortTitle": "Token-Zähler",
+    "description": "Zählt OpenAI GPT-Tokens (o200k_base) mit Echtzeit-BPE-Tokenisierungs-Visualisierung. Unterstützt GPT-4o, GPT-4.1, o1, o3, o4-mini, GPT-5."
+  },
   "sshkey": {
     "title": "SSH-Schlüsselgenerator - RSA & Ed25519 Schlüsselpaare online erstellen",
     "shortTitle": "SSH-Schlüsselgenerator",

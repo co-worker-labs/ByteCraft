@@ -1,0 +1,58 @@
+import { getTranslations } from "next-intl/server";
+import { generatePageMeta } from "../../../libs/seo";
+import { buildToolSchemas } from "../../../components/json-ld";
+import { TOOL_CATEGORIES, CATEGORY_SLUGS } from "../../../libs/tools";
+import TokenCounterPage from "./token-counter-page";
+
+const PATH = "/token-counter";
+const TOOL_KEY = "tokencounter";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "tools" });
+  return generatePageMeta({
+    locale,
+    path: PATH,
+    title: t("tokencounter.title"),
+    description: t("tokencounter.description"),
+  });
+}
+
+export default async function TokenCounterRoute({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "tools" });
+  const tx = await getTranslations({ locale, namespace: "token-counter" });
+  const tc = await getTranslations({ locale, namespace: "categories" });
+  const category = TOOL_CATEGORIES.find((c) => c.tools.includes(TOOL_KEY))!;
+  const categorySlug = CATEGORY_SLUGS[category.key];
+  const schemas = buildToolSchemas({
+    name: t("tokencounter.title"),
+    description: tx.has("descriptions.aeoDefinition")
+      ? tx("descriptions.aeoDefinition")
+      : t("tokencounter.description"),
+    path: PATH,
+    categoryName: tc(`${category.key}.shortTitle`),
+    categoryPath: `/${categorySlug}`,
+    faqItems: [1, 2, 3].map((i) => ({
+      q: tx(`descriptions.faq${i}Q`),
+      a: tx(`descriptions.faq${i}A`),
+    })),
+  });
+
+  return (
+    <>
+      {schemas.map((s, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }}
+        />
+      ))}
+      <TokenCounterPage />
+    </>
+  );
+}

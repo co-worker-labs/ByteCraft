@@ -1,0 +1,26 @@
+{
+  "textareaPlaceholder": "输入或粘贴文本以计算 Token 数量...",
+  "tokens": "Token 数",
+  "characters": "字符数",
+  "charsPerToken": "字符/Token",
+  "contextUsage": "上下文用量",
+  "contextWindow": "基于 GPT-4o 128K 上下文窗口",
+  "showingPartial": "显示前 {limit} 个 Token（共 {total} 个）",
+  "tokenDetail": "Token #{index}",
+  "tokenId": "Token ID",
+  "tokenText": "文本",
+  "tokenChars": "字符数",
+  "tokenBytes": "UTF-8 字节",
+  "descriptions": {
+    "aeoDefinition": "Token 计数器是一款免费的在线工具，使用 o200k_base 编码计算 OpenAI GPT Token 数量（支持 GPT-4o、GPT-4.1、o1、o3、o4-mini、GPT-5）。通过彩色高亮可视化文本如何被分割为 BPE Token。所有数据在浏览器本地处理，不会发送到任何服务器。",
+    "whatIsTitle": "什么是 Token 计数器？",
+    "whatIsP1": "Token 计数器用于测量文本在发送到 GPT-4o、GPT-4.1 等 OpenAI 模型时会消耗多少 Token。了解 Token 数量有助于优化提示词并避免超出上下文限制。配合 [文本差异对比](/diff) 工具可以比较不同版本提示词的 Token 用量。",
+    "whatIsP2": "本工具使用 o200k_base 编码，即 GPT-4o、o1、o3、o4-mini 和 GPT-5 所使用的分词器。可视化中每个彩色片段代表一个 BPE（字节对编码）Token。",
+    "faq1Q": "什么是 Token？",
+    "faq1A": "Token 是语言模型处理文本的基本单位。在英文中，一个 Token 大约相当于 4 个字符或 0.75 个单词。常见单词通常是一个 Token，而罕见或复杂的单词可能被拆分为多个 Token。",
+    "faq2Q": "哪些模型使用 o200k_base 编码？",
+    "faq2A": "o200k_base 编码用于 GPT-4o、GPT-4.1、o1、o3、o4-mini 和 GPT-5。它支持约 20 万个 Token 的词表，相比早期的 cl100k_base 编码在多语言覆盖方面有显著提升。",
+    "faq3Q": "Token 计数有多准确？",
+    "faq3A": "对于标准文本，计数非常准确。本工具使用与 OpenAI 分词器相同的 BPE 算法。对于聊天格式的消息（包含 system/user/assistant 角色），可能会有微小差异，因为本工具计算的是原始文本 Token，而非聊天模板 Token。"
+  }
+}

@@ -150,6 +150,11 @@
     "shortTitle": "Compteur de Mots",
     "description": "Comptez les mots, caractères, phrases et paragraphes. Estimez le temps de lecture et de parole. Analysez la fréquence et la densité des mots-clés pour le SEO. Outil gratuit, 100% dans le navigateur."
   },
+  "tokencounter": {
+    "title": "Compteur de Tokens - OpenAI GPT & Visualisation BPE",
+    "shortTitle": "Compteur de Tokens",
+    "description": "Comptez les tokens OpenAI GPT (o200k_base) avec visualisation BPE en temps réel. Compatible GPT-4o, GPT-4.1, o1, o3, o4-mini, GPT-5."
+  },
   "sshkey": {
     "title": "Générateur de Clés SSH - Générez des clés RSA et Ed25519 en ligne",
     "shortTitle": "Générateur de Clés SSH",

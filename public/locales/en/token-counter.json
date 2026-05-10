@@ -1,0 +1,26 @@
+{
+  "textareaPlaceholder": "Enter or paste text to count tokens...",
+  "tokens": "Tokens",
+  "characters": "Characters",
+  "charsPerToken": "Chars/Token",
+  "contextUsage": "Context Usage",
+  "contextWindow": "Based on GPT-4o 128K context window",
+  "showingPartial": "Showing first {limit} of {total} tokens",
+  "tokenDetail": "Token #{index}",
+  "tokenId": "Token ID",
+  "tokenText": "Text",
+  "tokenChars": "Characters",
+  "tokenBytes": "UTF-8 Bytes",
+  "descriptions": {
+    "aeoDefinition": "Token Counter is a free online tool that counts OpenAI GPT tokens using the o200k_base encoding (GPT-4o, GPT-4.1, o1, o3, o4-mini, GPT-5). Visualize how text is split into BPE tokens with colored highlighting. No data is sent to any server.",
+    "whatIsTitle": "What is a Token Counter?",
+    "whatIsP1": "A Token Counter measures how many tokens your text will consume when sent to OpenAI models like GPT-4o and GPT-4.1. Understanding token count helps optimize prompts and avoid exceeding context limits. Pair it with the [Text Diff](/diff) tool to compare token usage between prompt versions.",
+    "whatIsP2": "This tool uses the o200k_base encoding, which is the tokenizer used by GPT-4o, o1, o3, o4-mini, and GPT-5. Each colored segment in the visualization represents one BPE (Byte Pair Encoding) token.",
+    "faq1Q": "What are tokens?",
+    "faq1A": "Tokens are the basic units that language models use to process text. In English, a token is approximately 4 characters or 0.75 words. Common words are single tokens, while rare or complex words may be split into multiple tokens.",
+    "faq2Q": "Which models use the o200k_base encoding?",
+    "faq2A": "The o200k_base encoding is used by GPT-4o, GPT-4.1, o1, o3, o4-mini, and GPT-5. It supports a vocabulary of approximately 200,000 tokens with improved multilingual coverage compared to the earlier cl100k_base encoding.",
+    "faq3Q": "How accurate is the token count?",
+    "faq3A": "The count is highly accurate for standard text. It uses the same BPE algorithm as OpenAI's tokenizer. Minor discrepancies may occur for chat-formatted messages (system/user/assistant roles) since this tool counts raw text tokens, not chat template tokens."
+  }
+}

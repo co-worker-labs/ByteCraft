@@ -150,6 +150,11 @@
     "shortTitle": "Word Counter",
     "description": "Count words, characters, sentences, and paragraphs. Estimate reading and speaking time. Analyze keyword frequency and density for SEO."
   },
+  "tokencounter": {
+    "title": "Token Counter - OpenAI GPT Token Count & BPE Visualization",
+    "shortTitle": "Token Counter",
+    "description": "Count OpenAI GPT tokens (o200k_base) with real-time BPE tokenization visualization. Supports GPT-4o, GPT-4.1, o1, o3, o4-mini, GPT-5."
+  },
   "sshkey": {
     "title": "SSH Key Generator - Generate RSA & Ed25519 Key Pairs Online",
     "shortTitle": "SSH Key Generator",

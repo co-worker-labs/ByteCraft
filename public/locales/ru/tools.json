@@ -178,6 +178,12 @@
     "description": "Подсчитывает слова, символы, предложения и абзацы. Оценивает время чтения и речи. Анализирует частоту и плотность ключевых слов для SEO. Бесплатный онлайн-инструмент, 100% в браузере.",
     "searchTerms": "schetchikslov sch slov vremya chteniya plotnost"
   },
+  "tokencounter": {
+    "title": "Счётчик токенов - OpenAI GPT & Визуализация BPE",
+    "shortTitle": "Счётчик токенов",
+    "description": "Подсчёт токенов OpenAI GPT (o200k_base) с визуализацией BPE-токенизации в реальном времени. Поддержка GPT-4o, GPT-4.1, o1, o3, o4-mini, GPT-5.",
+    "searchTerms": "schetchiktokenov schtok token BPE"
+  },
   "sshkey": {
     "title": "Генератор SSH-ключей - Создание RSA и Ed25519 онлайн",
     "shortTitle": "Генератор SSH-ключей",

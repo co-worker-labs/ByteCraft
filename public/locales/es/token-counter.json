@@ -1,0 +1,26 @@
+{
+  "textareaPlaceholder": "Introduce o pega texto para contar tokens...",
+  "tokens": "Tokens",
+  "characters": "Caracteres",
+  "charsPerToken": "Caracteres/Token",
+  "contextUsage": "Uso de Contexto",
+  "contextWindow": "Basado en la ventana de contexto de 128K de GPT-4o",
+  "showingPartial": "Mostrando los primeros {limit} de {total} tokens",
+  "tokenDetail": "Token #{index}",
+  "tokenId": "Token ID",
+  "tokenText": "Texto",
+  "tokenChars": "Caracteres",
+  "tokenBytes": "Bytes UTF-8",
+  "descriptions": {
+    "aeoDefinition": "El Contador de Tokens es una herramienta online gratuita que cuenta tokens de OpenAI GPT usando la codificación o200k_base (GPT-4o, GPT-4.1, o1, o3, o4-mini, GPT-5). Visualiza cómo el texto se divide en tokens BPE con resaltado en color. Todo se procesa en el navegador, sin enviar datos a ningún servidor.",
+    "whatIsTitle": "¿Qué es un Contador de Tokens?",
+    "whatIsP1": "Un Contador de Tokens mide cuántos tokens consumirá tu texto al enviarlo a modelos de OpenAI como GPT-4o y GPT-4.1. Comprender el recuento de tokens ayuda a optimizar prompts y evitar exceder los límites de contexto. Combínalo con la herramienta [Diff de Texto](/diff) para comparar el uso de tokens entre versiones de prompts.",
+    "whatIsP2": "Esta herramienta usa la codificación o200k_base, el tokenizador empleado por GPT-4o, o1, o3, o4-mini y GPT-5. Cada segmento coloreado en la visualización representa un token BPE (Byte Pair Encoding).",
+    "faq1Q": "¿Qué son los tokens?",
+    "faq1A": "Los tokens son las unidades básicas que los modelos de lenguaje usan para procesar texto. En inglés, un token equivale aproximadamente a 4 caracteres o 0.75 palabras. Las palabras comunes suelen ser un solo token, mientras que las palabras raras o complejas pueden dividirse en múltiples tokens.",
+    "faq2Q": "¿Qué modelos usan la codificación o200k_base?",
+    "faq2A": "La codificación o200k_base se usa en GPT-4o, GPT-4.1, o1, o3, o4-mini y GPT-5. Soporta un vocabulario de aproximadamente 200.000 tokens con mejor cobertura multilingüe respecto a la codificación anterior cl100k_base.",
+    "faq3Q": "¿Qué tan preciso es el conteo de tokens?",
+    "faq3A": "El conteo es muy preciso para texto estándar. Usa el mismo algoritmo BPE que el tokenizador de OpenAI. Pueden existir ligeras discrepancias en mensajes con formato de chat (roles system/user/assistant), ya que esta herramienta cuenta tokens de texto plano, no tokens de plantilla de chat."
+  }
+}

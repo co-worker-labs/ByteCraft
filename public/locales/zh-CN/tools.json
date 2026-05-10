@@ -180,6 +180,12 @@
     "description": "统计字数、字符数、句子和段落。估算阅读和朗读时间。分析关键词频率和密度。免费在线字数统计工具，100% 客户端处理。",
     "searchTerms": "zishutongji zstj guanjianci yuedushijian guanjianmidu"
   },
+  "tokencounter": {
+    "title": "Token 计数器 - OpenAI GPT Token 计数与 BPE 可视化",
+    "shortTitle": "Token 计数器",
+    "description": "使用 o200k_base 编码计算 OpenAI GPT Token 数量，实时 BPE 分词可视化。支持 GPT-4o、GPT-4.1、o1、o3、o4-mini、GPT-5。",
+    "searchTerms": "tokenjishuqi tjsq BPE fenci"
+  },
   "sshkey": {
     "title": "SSH 密钥生成器 - 在线生成 RSA 和 Ed25519 密钥对",
     "shortTitle": "SSH 密钥生成",
