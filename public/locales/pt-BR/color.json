@@ -87,6 +87,12 @@
     "tipEyedropper": "Use o conta-gotas para selecionar uma cor de qualquer pixel na sua tela (navegadores Chromium).",
     "tipImage": "Solte uma imagem na aba Paleta para extrair suas 6 cores dominantes via quantização median-cut.",
     "tipOklch": "O Tailwind v4 emite cores em OKLCH para suavidade perceptual — copie o bloco @theme para alinhar com esse fluxo de trabalho.",
-    "aeoDefinition": "O Conversor de Cores é uma ferramenta online gratuita para converter entre HEX, RGB, HSL, OKLCH e outros espaços de cor. Inclui seletor visual, extração de paleta de imagens, verificador de contraste WCAG e pré-visualização de daltonismo. Roda inteiramente no seu navegador."
+    "aeoDefinition": "O Conversor de Cores é uma ferramenta online gratuita para converter entre HEX, RGB, HSL, OKLCH e outros espaços de cor. Inclui seletor visual, extração de paleta de imagens, verificador de contraste WCAG e pré-visualização de daltonismo. Roda inteiramente no seu navegador.",
+    "whatIsTitle": "O que é a Ferramenta de Cores?",
+    "whatIs": "Um utilitário de cores abrangente que converte entre 7 espaços de cor (HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH), gera harmonias de cores, verifica taxas de contraste para acessibilidade, simula deficiências de visão de cores e extrai paletas de imagens.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesP1": "Selecionar e converter cores para desenvolvimento web — obtenha o valor exato HEX, RGB, HSL ou OKLCH para CSS ou Tailwind.",
+    "useCasesP2": "Verificar contraste de texto contra uma cor de fundo para atender às diretrizes de acessibilidade WCAG (AA/AAA) ou o novo padrão APCA.",
+    "useCasesP3": "Extrair cores dominantes de uma imagem para construir uma paleta de design coesa, gerando harmonias complementares, análogas ou triádicas."
   }
 }

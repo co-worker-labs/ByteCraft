@@ -3,8 +3,8 @@
 import "../../../styles/prism-theme.css";
 
 import { useEffect, useRef, useState, type ChangeEvent, type DragEvent, type UIEvent } from "react";
-import { useTranslations, useLocale } from "next-intl";
-import { renderLinkedText } from "../../../utils/linked-text";
+import { useTranslations } from "next-intl";
+import DescriptionSection from "../../../components/description-section";
 import { Upload, Download, FileDown, FileImage, Printer, Trash2, Columns2 } from "lucide-react";
 import Layout from "../../../components/layout";
 import { Button } from "../../../components/ui/button";
@@ -22,8 +22,6 @@ import { EditorView } from "./components/EditorView";
 import { PreviewView } from "./components/PreviewView";
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
-import { Accordion } from "../../../components/ui/accordion";
-import { CircleHelp } from "lucide-react";
 
 type EditorMode = "edit" | "preview" | "split";
 
@@ -424,43 +422,6 @@ function MarkdownPageBody() {
   );
 }
 
-function Description() {
-  const t = useTranslations("markdown");
-  const locale = useLocale();
-
-  return (
-    <section id="description" className="mt-8">
-      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
-        <p className="text-fg-secondary text-sm leading-relaxed">
-          {t("descriptions.aeoDefinition")}
-        </p>
-      </div>
-      <div className="mb-4">
-        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
-        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
-        </div>
-      </div>
-      <div className="mb-4">
-        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.howTitle")}</h2>
-        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.howP1")}</p>
-        </div>
-      </div>
-      <div className="mb-4">
-        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.gfmTitle")}</h2>
-        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.gfmP1")}</p>
-        </div>
-      </div>
-      <div className="mb-4">
-        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.faq1Q")}</h2>
-        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{t("descriptions.faq1A")}</p>
-      </div>
-    </section>
-  );
-}
-
 export default function MarkdownPage() {
   const tTools = useTranslations("tools");
   const title = tTools("markdown.shortTitle");
@@ -468,7 +429,7 @@ export default function MarkdownPage() {
     <Layout title={title} categoryLabel={tTools("categories.text")} categorySlug="text-processing">
       <div className="container mx-auto px-4 pt-3 pb-6">
         <MarkdownPageBody />
-        <Description />
+        <DescriptionSection namespace="markdown" />
         <RelatedTools currentTool="markdown" />
       </div>
     </Layout>

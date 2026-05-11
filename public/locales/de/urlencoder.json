@@ -35,6 +35,13 @@
     "faq2A": "Drei Modi: Komponente (kodiert alle reservierten Zeichen), Ganze URL (erhält URL-Struktur wie ://, ?, &) und Formular (Leerzeichen wird + statt %20).",
     "faq3Q": "Wann sollte ich URL-Kodierung verwenden?",
     "faq3A": "Verwenden Sie URL-Kodierung beim Übergeben von Daten in Abfrageparametern, Einbetten von URLs in HTML oder Behandeln von Sonderzeichen in API-Aufrufen.",
-    "aeoDefinition": "Der URL-Kodierer/Dekodierer ist ein kostenloses Online-Tool zum Kodieren und Dekodieren von URL-Zeichenketten. Unterstützt Component-, Whole-URL- und Form-Kodierungsmodi. Läuft vollständig in Ihrem Browser — es werden keine Daten an einen Server gesendet."
+    "aeoDefinition": "Der URL-Kodierer/Dekodierer ist ein kostenloses Online-Tool zum Kodieren und Dekodieren von URL-Zeichenketten. Unterstützt Component-, Whole-URL- und Form-Kodierungsmodi. Läuft vollständig in Ihrem Browser — es werden keine Daten an einen Server gesendet.",
+    "step1Title": "Text eingeben",
+    "step1Text": "Fügen Sie die URL oder den zu kodierenden Text ein oder fügen Sie eine prozentkodierte Zeichenfolge zum Dekodieren ein.",
+    "step2Title": "Modus wählen",
+    "step2Text": "Wählen Sie Komponente, Gesamte URL oder Formular-Modus je nach Kodierungsbedarf. Das Tool konvertiert in Echtzeit.",
+    "step3Title": "Ergebnis kopieren",
+    "step3Text": "Die kodierte oder dekodierte Ausgabe wird sofort aktualisiert. Klicken Sie auf die Kopiertaste, um das Ergebnis zu übernehmen.",
+    "stepsTitle": "URLs kodieren oder dekodieren"
   }
 }

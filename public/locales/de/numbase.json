@@ -17,6 +17,22 @@
     "twosComplement": "Das Zweierkomplement ist die Standardmethode zur Darstellung vorzeichenbehafteter Ganzzahlen im Binärsystem. Das höchstwertige Bit (MSB) dient als Vorzeichenbit: 0 für positiv, 1 für negativ. Um den negativen Wert zu erhalten, invertieren Sie alle Bits und addieren 1. Zum Beispiel wird im 8-Bit-Modus -1 als 11111111 (0xFF) dargestellt.",
     "faq1Q": "Welche Zahlensysteme werden unterstützt?",
     "faq1A": "Binär (Basis 2), Oktal (Basis 8), Dezimal (Basis 10) und Hexadezimal (Basis 16) mit Echtzeit-Konvertierung zwischen allen vieren.",
-    "aeoDefinition": "Der Zahlenbasenkonverter ist ein kostenloses Online-Tool zur Konvertierung von Zahlen zwischen Binär-, Oktal-, Dezimal- und Hexadezimalsystem. Unterstützt 8/16/32/64-Bit-Zweierkomplement und einen visuellen Bit-Editor. Läuft vollständig in Ihrem Browser."
+    "aeoDefinition": "Der Zahlenbasenkonverter ist ein kostenloses Online-Tool zur Konvertierung von Zahlen zwischen Binär-, Oktal-, Dezimal- und Hexadezimalsystem. Unterstützt 8/16/32/64-Bit-Zweierkomplement und einen visuellen Bit-Editor. Läuft vollständig in Ihrem Browser.",
+    "faq2Q": "Wofür wird das Zweierkomplement verwendet?",
+    "faq2A": "Das Zweierkomplement ist die Art, wie Computer vorzeichenbehaftete Ganzzahlen darstellen. Es ermöglicht der CPU, dieselbe Schaltung für Addition und Subtraktion zu verwenden, und vermeidet das +0/-0-Problem der Vorzeichen-Betrags-Darstellung.",
+    "faq3Q": "Werden negative Zahlen unterstützt?",
+    "faq3A": "Ja. Geben Sie eine negative Dezimalzahl ein und das Tool zeigt die Zweierkomplement-Darstellung in Binär, Hex und Oktal basierend auf der gewählten Bit-Breite an.",
+    "step1Title": "Wert eingeben",
+    "step1Text": "Geben Sie eine Zahl in einer beliebigen Basis ein — Dezimal, Hexadezimal (0x-Präfix), Oktal (0o-Präfix) oder Binär (0b-Präfix). Alle anderen Basen aktualisieren sich sofort.",
+    "step2Title": "Bit-Breite wählen",
+    "step2Text": "Wählen Sie 8-, 16-, 32- oder 64-Bit-Modus, um die Zweierkomplement-Darstellung zu sehen und einzelne Bits im visuellen Editor umzuschalten.",
+    "step3Title": "Ergebnis kopieren",
+    "step3Text": "Klicken Sie auf die Kopiertaste neben einer beliebigen Basiskonvertierung, um den formatierten Wert zu kopieren.",
+    "stepsTitle": "Zahlenbasen konvertieren",
+    "useCasesDesc1": "Systemprogrammierung",
+    "useCasesDesc2": "Hardware & Farbe",
+    "useCasesP1": "Low-Level-Protokolle, Netzwerkpakete oder Binärdateiformate debuggen, die hexadezimale oder oktale Notation verwenden.",
+    "useCasesP2": "Farbwerte zwischen Hex und Dezimal konvertieren oder Speicheradressen und Offsets während der Embedded-Entwicklung berechnen.",
+    "useCasesTitle": "Gängige Anwendungsfälle"
   }
 }

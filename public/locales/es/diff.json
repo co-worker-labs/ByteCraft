@@ -52,8 +52,20 @@
     "useCasesP3": "Reconciliar dos versiones de un documento, log o resultado de consulta lado a lado.",
     "limitationsP1": "La herramienta solo compara texto. Los archivos binarios se detectan y rechazan para mantener el resultado significativo.",
     "limitationsP2": "Las entradas están limitadas a 5MB por lado. Las entradas superiores a 512KB se ejecutan en un Web Worker en segundo plano; la página permanece responsiva pero el diff tarda proporcionalmente más para entradas muy grandes.",
-    "limitationsP3": "Las diferencias en finales de línea (CRLF vs LF) y espacios en blanco finales se normalizan automáticamente, nunca aparecerán como cambios.",
+    "limitationsP3": "Las diferencias en finales de línea (CRLF vs LF) y espacios en blanco finales se normalizan automáticamente — nunca aparecerán como cambios.",
     "faq1Q": "¿Qué es una herramienta de diff de texto?",
-    "faq1A": "Una herramienta de diff compara dos textos y resalta las diferencias entre ellos. Esta herramienta muestra adiciones, eliminaciones y modificaciones a nivel de palabra o carácter."
+    "faq1A": "Una herramienta de diff compara dos textos y resalta las diferencias entre ellos. Esta herramienta muestra adiciones, eliminaciones y modificaciones a nivel de palabra o carácter.",
+    "useCasesTitle": "Casos de uso comunes",
+    "stepsTitle": "Cómo comparar dos textos",
+    "step1Title": "Pega o sube tus textos",
+    "step1Desc": "Introduce el texto original en Texto A y la versión modificada en Texto B. También puedes arrastrar y soltar archivos directamente en cualquiera de las entradas.",
+    "step2Title": "Elige tu vista",
+    "step2Desc": "Alterna entre lado a lado (muestra ambos textos con cambios alineados) y en línea (muestra adiciones y eliminaciones en un único flujo).",
+    "step3Title": "Revisa los cambios resaltados",
+    "step3Desc": "Las líneas añadidas aparecen en verde, las eliminadas en rojo. Los resaltados a nivel de palabra dentro de las líneas cambiadas muestran exactamente qué palabras difieren — la misma convención usada por los pull requests de GitHub.",
+    "faq2Q": "¿Puedo ignorar espacios en blanco o diferencias de mayúsculas?",
+    "faq2A": "Sí. Usa el menú de Opciones para activar 'Ignorar espacios en blanco' e 'Ignorar mayúsculas/minúsculas'. Estos ajustes filtran cambios superficiales para que puedas centrarte en las diferencias significativas.",
+    "faq3Q": "¿Qué algoritmo usa el diff?",
+    "faq3A": "La herramienta usa el algoritmo de diff de Myers mediante la biblioteca jsdiff. Primero calcula un diff a nivel de línea, luego ejecuta una segunda pasada a nivel de palabra en las líneas cambiadas adyacentes para resaltar qué palabras específicas se añadieron o eliminaron."
   }
 }

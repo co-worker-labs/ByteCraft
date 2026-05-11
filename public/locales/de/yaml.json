@@ -25,6 +25,13 @@
     "faq2A": "Ja. Dieses Tool unterstützt YAML-zu-JSON- und JSON-zu-YAML-Konvertierung mit Unterstützung für Multi-Dokument-YAML-Streams (--- Trennzeichen).",
     "faq3Q": "Werden YAML-Anker und Aliase unterstützt?",
     "faq3A": "Der Parser verarbeitet Standard-YAML einschließlich Anker (&) und Aliase (*). Komplexe Funktionen wie Merge-Keys (<<:) werden unterstützt, wo anwendbar.",
-    "aeoDefinition": "Der YAML-Konverter ist ein kostenloses Online-Tool zur Konvertierung zwischen JSON- und YAML-Formaten. Unterstützt YAML 1.2, Multi-Dokument, Anchors und Aliases. Die gesamte Verarbeitung läuft in Ihrem Browser."
+    "aeoDefinition": "Der YAML-Konverter ist ein kostenloses Online-Tool zur Konvertierung zwischen JSON- und YAML-Formaten. Unterstützt YAML 1.2, Multi-Dokument, Anchors und Aliases. Die gesamte Verarbeitung läuft in Ihrem Browser.",
+    "step1Title": "Daten einfügen",
+    "step1Text": "Fügen Sie JSON im linken Bereich oder YAML im rechten Bereich ein. Das Tool konvertiert in Echtzeit.",
+    "step2Title": "Optionen konfigurieren",
+    "step2Text": "JSON5-Eingabemodus oder Schlüsselsortierung umschalten. Das Tool unterstützt Multi-Dokument-YAML-Streams.",
+    "step3Title": "Ergebnis kopieren",
+    "step3Text": "Die konvertierte Ausgabe erscheint sofort. Klicken Sie auf die Kopiertaste oder ziehen Sie Dateien direkt in einen der Bereiche.",
+    "stepsTitle": "JSON in YAML konvertieren (und zurück)"
   }
 }

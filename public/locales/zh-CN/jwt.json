@@ -45,6 +45,21 @@
     "keyFormats": "HMAC：任意 UTF-8 字符串。非对称：仅支持 PEM 格式——签名使用 PKCS8（-----BEGIN PRIVATE KEY-----），验证使用 SPKI（-----BEGIN PUBLIC KEY-----）。不支持 PKCS1、SEC1、加密 PEM 和 X.509 证书；工具会告诉你具体的 openssl 转换命令。",
     "faq1Q": "什么是 JWT？",
     "faq1A": "JSON Web Token（JWT）是一种开放标准（RFC 7519），用于在各方之间安全地传输信息。它常用于身份认证和信息交换。",
-    "aeoDefinition": "JWT 调试器是一个免费的在线 JSON Web Token 编码、解码和验证工具。支持 HS256、RS256、ES256 等多种算法。所有处理均在浏览器中完成，不会将令牌发送到任何服务器。"
+    "aeoDefinition": "JWT 调试器是一个免费的在线 JSON Web Token 编码、解码和验证工具。支持 HS256、RS256、ES256 等多种算法。所有处理均在浏览器中完成，不会将令牌发送到任何服务器。",
+    "useCasesTitle": "常见使用场景",
+    "useCasesP1": "API 请求认证——在 Authorization 头中包含 JWT（Bearer 令牌），验证调用者的身份和权限。",
+    "useCasesP2": "开发过程中解码和调试令牌——检查头部和载荷声明（iss、sub、exp、iat），无需编写代码。",
+    "useCasesP3": "使用共享密钥（HMAC）或公钥（RSA/ECDSA）验证令牌签名，在信任声明之前确保完整性。",
+    "stepsTitle": "如何解码 JWT",
+    "step1Title": "粘贴 JWT",
+    "step1Desc": "复制完整的 JWT 字符串（三个以点号分隔的 Base64URL 段），粘贴到解码标签页的输入框中。",
+    "step2Title": "检查头部和载荷",
+    "step2Desc": "工具自动将头部（算法、类型）和载荷（声明）解码为可读 JSON。检查 exp 声明以确认令牌是否已过期。",
+    "step3Title": "验证签名（可选）",
+    "step3Desc": "切换到验证区域，输入密钥或公钥，点击「验证签名」确认令牌由预期方签名。",
+    "faq2Q": "HMAC 和 RSA JWT 算法有什么区别？",
+    "faq2A": "HMAC 算法（HS256/384/512）使用共享密钥——签发方和验证方都知道同一个密钥。RSA 算法（RS256/384/512）使用公私钥对——签发方用私钥签名，任何持有公钥的人都可以验证。服务器间通信使用 HMAC，分布式系统中验证方不应能创建令牌时使用 RSA。",
+    "faq3Q": "JWT 过期后会怎样？",
+    "faq3A": "载荷中的 exp 声明指定了过期时间戳。超过该时间后，服务器应拒绝该令牌。本工具会显示解码后的 exp，方便你检查令牌是否仍然有效。注意 JWT 过期是一种声明，并非由令牌本身强制执行——服务器必须进行验证。"
   }
 }

@@ -26,6 +26,21 @@
     "gfmP1": "Unterstützt Tabellen, Aufgabenlisten (- [ ] todo), Durchstreichungen, Autolinks und Mermaid-Diagramme (Flussdiagramm, Sequenz, Klasse, Zustand, ER, Gantt, Kreis, Git-Graph). Verwenden Sie ```mermaid-Codeblöcke. Mathematik und Fußnoten sind nicht im Umfang enthalten.",
     "faq1Q": "Was ist der Markdown-Editor?",
     "faq1A": "Ein Live-Markdown-Editor mit geteilter Vorschau, der GFM (GitHub Flavored Markdown), Syntaxhervorhebung, Aufgabenlisten und Mermaid-Diagramme unterstützt.",
-    "aeoDefinition": "Der Markdown-Editor ist ein kostenloses Online-Tool zum Schreiben und Voranschauen von Markdown mit GitHub Flavored Markdown-Unterstützung. Enthält Syntaxhervorhebung, Live-Vorschau und PDF/PNG-Export. Läuft vollständig in Ihrem Browser."
+    "aeoDefinition": "Der Markdown-Editor ist ein kostenloses Online-Tool zum Schreiben und Voranschauen von Markdown mit GitHub Flavored Markdown-Unterstützung. Enthält Syntaxhervorhebung, Live-Vorschau und PDF/PNG-Export. Läuft vollständig in Ihrem Browser.",
+    "faq2Q": "Unterstützt dieser Editor Mermaid-Diagramme?",
+    "faq2A": "Ja. Verwenden Sie einen ```mermaid-Codeblock und die Vorschau rendert automatisch Flussdiagramme, Sequenzdiagramme, Klassendiagramme, Zustandsdiagramme, ER-Diagramme, Gantt-Diagramme, Kreisdiagramme und Git-Graphen.",
+    "faq3Q": "Gibt es ein Dateigrößenlimit?",
+    "faq3A": "Die Live-Vorschau funktioniert für Inhalte bis zu einer angemessenen Größe. Bei sehr großen Dokumenten wird ein „Jetzt rendern\"-Button statt Auto-Rendering angezeigt, um die Seite responsiv zu halten. Die gesamte Verarbeitung erfolgt in Ihrem Browser — nichts wird an einen Server gesendet.",
+    "step1Desc": "Geben Sie direkt im Editor ein oder legen Sie eine .md-Datei ab. Die Vorschau aktualisiert sich beim Tippen in Echtzeit.",
+    "step1Title": "Markdown schreiben oder einfügen",
+    "step2Desc": "Wechseln Sie zwischen Bearbeiten-, Vorschau- und Geteilt-Layouts. Geteilt bietet nebeneinander Bearbeitung mit Live-Rendering.",
+    "step2Title": "Ansichtsmodus wählen",
+    "step3Desc": "Als .md herunterladen, die gerenderte Vorschau als PDF oder PNG exportieren oder das rohe Markdown in die Zwischenablage kopieren.",
+    "step3Title": "Dokument exportieren",
+    "stepsTitle": "Markdown-Editor verwenden",
+    "useCasesP1": "README-Dateien für GitHub- oder GitLab-Repositories schreiben und vor dem Committen voranschauen.",
+    "useCasesP2": "Dokumentation oder Blogposts mit Live-Formatierung entwerfen — gerenderte Ausgabe Seite an Seite mit dem Text sehen.",
+    "useCasesP3": "Markdown-Notizen in PDF oder PNG konvertieren zum Teilen mit Personen ohne Markdown-Viewer.",
+    "useCasesTitle": "Gängige Anwendungsfälle"
   }
 }

@@ -38,6 +38,19 @@
     "faq2A": "Mots, caractères, caractères sans espaces, phrases, paragraphes, caractères CJK, temps de lecture et temps de parole — tout mis à jour en temps réel pendant que vous tapez.",
     "faq3Q": "Puis-je suivre des mots-clés spécifiques ?",
     "faq3A": "Oui. Ajoutez des mots-clés personnalisés pour suivre leur fréquence et leur nombre dans votre texte. L'onglet Mots-clés affiche les mots principaux et les phrases de 2 mots.",
-    "aeoDefinition": "Le Compteur de mots est un outil gratuit en ligne d'analyse de texte en temps réel incluant le comptage de mots, de caractères, de phrases, le temps de lecture et la densité de mots-clés. Prend en charge le texte CJC. Aucune donnée n'est envoyée à un serveur."
+    "aeoDefinition": "Le Compteur de mots est un outil gratuit en ligne d'analyse de texte en temps réel incluant le comptage de mots, de caractères, de phrases, le temps de lecture et la densité de mots-clés. Prend en charge le texte CJC. Aucune donnée n'est envoyée à un serveur.",
+    "stepsTitle": "Comment compter les mots et caractères",
+    "step1Title": "Collez votre texte",
+    "step1Text": "Saisissez ou collez du texte dans la zone de saisie. Le comptage de mots, de caractères et le temps de lecture se mettent à jour en temps réel.",
+    "step2Title": "Consulter l'aperçu",
+    "step2Text": "L'onglet Aperçu affiche les mots, caractères, phrases, paragraphes, caractères CJK, temps de lecture et temps de parole.",
+    "step3Title": "Analyser les mots-clés",
+    "step3Text": "Passez à l'onglet Mots-clés pour la fréquence des mots principaux et l'analyse des expressions de 2 mots, ou ajoutez des mots-clés personnalisés à suivre.",
+    "useCasesDesc1": "Rédaction et édition",
+    "useCasesP1": "Suivez les comptages de mots pour des articles de blog, essais ou publications sur les réseaux sociaux ayant des limites de caractères.",
+    "useCasesDesc2": "Estimations de traduction",
+    "useCasesP2": "Obtenez des comptages précis de mots et caractères pour estimer le temps et le coût de traduction, y compris le comptage des caractères CJK.",
+    "useCasesTitle": "Cas d'utilisation courants",
+    "whatIs": "Le Compteur de Mots est un outil en ligne gratuit qui analyse votre texte en temps réel : nombre de mots, de caractères, de phrases, de paragraphes et estimation du temps de lecture. Combinez-le avec le [Convertisseur de casse](/textcase) pour des transformations de texte en lot ou [Déduplicateur de lignes](/deduplines) pour nettoyer des listes."
   }
 }

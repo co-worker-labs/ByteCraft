@@ -22,6 +22,15 @@
     "faq1Q": "Was ist ASCII?",
     "faq1A": "ASCII (American Standard Code for Information Interchange) ist ein 7-Bit-Zeichenkodierungsstandard, der 128 Zeichen abdeckt: englische Buchstaben, Ziffern, Interpunktion und Steuerzeichen.",
     "faq2Q": "Welche Steuerzeichen sind enthalten?",
-    "faq2A": "Alle 33 Steuercodes (0-31 und 127) einschließlich NUL, TAB, LF, CR, ESC und DEL mit Beschreibungen ihrer ursprünglichen Fernschreiber-Funktionen."
+    "faq2A": "Alle 33 Steuercodes (0-31 und 127) einschließlich NUL, TAB, LF, CR, ESC und DEL mit Beschreibungen ihrer ursprünglichen Fernschreiber-Funktionen.",
+    "faq3Q": "Was ist der Unterschied zwischen ASCII und UTF-8?",
+    "faq3A": "ASCII ist eine 7-Bit-Kodierung (0–127). UTF-8 ist eine Kodierung variabler Länge, die abwärtskompatibel zu ASCII ist — die ersten 128 Codepunkte sind identisch. UTF-8 erweitert den Zeichensatz auf alle Unicode-Zeichen.",
+    "step1Title": "Nach einem Zeichen suchen",
+    "step1Text": "Geben Sie ein Zeichen, eine Dezimalzahl oder einen Hex-Wert in die Suchleiste ein. Die Tabelle filtert in Echtzeit.",
+    "step2Title": "Nach Kategorie durchsuchen",
+    "step2Text": "Wechseln Sie zwischen den Registerkarten Druckbare Zeichen und Steuerzeichen-Übersicht, um verschiedene ASCII-Bereiche zu erkunden.",
+    "step3Title": "Konvertierungen nachschlagen",
+    "step3Text": "Jede Zeile zeigt Dezimal-, Binär-, Oktal-, Hex-, HTML-Code und Glyph — fahren Sie mit der Maus für Details.",
+    "stepsTitle": "Verwendung der ASCII-Tabelle"
   }
 }

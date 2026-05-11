@@ -73,6 +73,18 @@
     "faq2A": "Não. O banco de dados é carregado na memória do navegador usando sql.js (SQLite compilado para WebAssembly). Todas as operações acontecem localmente.",
     "faq3Q": "Quais recursos SQL são suportados?",
     "faq3A": "Sintaxe SQL completa do SQLite incluindo SELECT, INSERT, UPDATE, DELETE, JOINs, subconsultas, agregações e transações. O editor fornece autocomplete para nomes de tabelas e colunas.",
-    "aeoDefinition": "O Visualizador SQLite é uma ferramenta online gratuita para abrir e explorar arquivos de banco de dados SQLite no seu navegador. Execute consultas SQL com autocompletar, navegue por tabelas e exporte para CSV ou JSON. Nenhum dado sai do seu dispositivo."
+    "aeoDefinition": "O Visualizador SQLite é uma ferramenta online gratuita para abrir e explorar arquivos de banco de dados SQLite no seu navegador. Execute consultas SQL com autocompletar, navegue por tabelas e exporte para CSV ou JSON. Nenhum dado sai do seu dispositivo.",
+    "stepsTitle": "Como visualizar um banco de dados SQLite",
+    "step1Title": "Abra um arquivo de banco de dados",
+    "step1Text": "Arraste e solte um arquivo .db, .sqlite ou .sqlite3, ou clique em \"Testar banco de dados de exemplo\" para explorar uma demonstração.",
+    "step2Title": "Navegue pelas tabelas",
+    "step2Text": "Clique em qualquer tabela na barra lateral para visualizar seu esquema e dados. Use paginação para navegar em grandes conjuntos de dados.",
+    "step3Title": "Execute consultas SQL",
+    "step3Text": "Escreva SQL no editor com suporte a autocompletar. Execute consultas SELECT e exporte resultados como CSV ou JSON.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesDesc1": "Inspeção rápida de dados",
+    "useCasesP1": "Abra arquivos SQLite de aplicativos móveis, navegadores ou dispositivos embarcados sem instalar ferramentas desktop.",
+    "useCasesDesc2": "Análise de dados",
+    "useCasesP2": "Execute consultas SQL ad-hoc nos seus dados e exporte resultados. Use o [Conversor CSV](/csv) para processamento adicional."
   }
 }

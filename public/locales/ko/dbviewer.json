@@ -73,6 +73,18 @@
     "faq2A": "아니요. 데이터베이스는 sql.js(WebAssembly로 컴파일된 SQLite)를 사용하여 브라우저 메모리에 로드됩니다. 모든 작업은 로컬에서 실행됩니다.",
     "faq3Q": "어떤 SQL 기능을 지원하나요?",
     "faq3A": "SQLite의 전체 SQL 구문(SELECT, INSERT, UPDATE, DELETE, JOIN, 서브쿼리, 집계, 트랜잭션)을 지원합니다. 편집기에서 테이블 및 열 이름 자동 완성을 제공합니다.",
+    "stepsTitle": "SQLite 데이터베이스 보는 방법",
+    "step1Title": "데이터베이스 파일 열기",
+    "step1Text": ".db, .sqlite, .sqlite3 파일을 드래그 앤 드롭하거나 \"샘플 데이터베이스 체험하기\"를 클릭하여 데모를 탐색하세요.",
+    "step2Title": "테이블 탐색",
+    "step2Text": "사이드바에서 테이블을 클릭하여 스키마와 데이터를 확인하세요. 페이지네이션으로 대용량 데이터셋을 탐색할 수 있습니다.",
+    "step3Title": "SQL 쿼리 실행",
+    "step3Text": "자동 완성이 지원되는 편집기에서 SQL을 작성하세요. SELECT 쿼리를 실행하고 결과를 CSV 또는 JSON으로 내보낼 수 있습니다.",
+    "useCasesTitle": "일반적인 활용 사례",
+    "useCasesDesc1": "빠른 데이터 검사",
+    "useCasesP1": "데스크톱 도구 설치 없이 모바일 앱, 브라우저, 임베디드 기기의 SQLite 파일을 엽니다.",
+    "useCasesDesc2": "데이터 분석",
+    "useCasesP2": "데이터에 대해 임시 SQL 쿼리를 실행하고 결과를 내보냅니다. [CSV 변환기](/csv)로 추가 처리를 할 수 있습니다.",
     "aeoDefinition": "SQLite 뷰어는 브라우저에서 SQLite 데이터베이스 파일을 열고 탐색하는 무료 온라인 도구입니다. 자동완성이 포함된 SQL 쿼리 실행, 테이블 탐색, CSV/JSON 내보내기를 지원합니다. 데이터가 기기를 벗어나지 않습니다."
   }
 }

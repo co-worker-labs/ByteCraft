@@ -52,7 +52,22 @@
     "limitationsP3": "Diferenças em finais de linha (CRLF vs LF) e espaços trailing são normalizadas — nunca aparecerão como mudanças.",
     "faq1Q": "O que é uma ferramenta de diff de texto?",
     "faq1A": "Uma ferramenta de diff compara dois textos e destaca as diferenças entre eles. Esta ferramenta mostra adições, remoções e modificações em nível de palavra ou caractere.",
-    "aeoDefinition": "O Diff de Texto é uma ferramenta online gratuita para comparar dois textos com precisão em nível de linha e palavra. Visualização lado a lado ou inline com mudanças destacadas. Roda inteiramente no seu navegador — nenhum dado é enviado para qualquer servidor."
+    "aeoDefinition": "O Diff de Texto é uma ferramenta online gratuita para comparar dois textos com precisão em nível de linha e palavra. Visualização lado a lado ou inline com mudanças destacadas. Roda inteiramente no seu navegador — nenhum dado é enviado para qualquer servidor.",
+    "useCasesTitle": "Casos de uso comuns",
+    "limitationsP1": "A ferramenta compara apenas texto. Arquivos binários são detectados e rejeitados para manter o resultado significativo.",
+    "limitationsP2": "As entradas são limitadas a 5MB cada. Entradas acima de 512KB são executadas em um Web Worker em segundo plano; a página permanece responsiva, mas o diff demora proporcionalmente mais para entradas muito grandes.",
+    "limitationsP3": "Diferenças em finais de linha (CRLF vs LF) e espaços trailing são normalizadas — nunca aparecerão como mudanças.",
+    "stepsTitle": "Como comparar dois textos",
+    "step1Title": "Cole ou envie seus textos",
+    "step1Desc": "Insira o texto original no Texto A e a versão modificada no Texto B. Você também pode arrastar e soltar arquivos diretamente em qualquer entrada.",
+    "step2Title": "Escolha sua visualização",
+    "step2Desc": "Alterne entre lado a lado (mostra ambos os textos com mudanças alinhadas) e inline (mostra adições e remoções em um único fluxo).",
+    "step3Title": "Revise as mudanças destacadas",
+    "step3Desc": "Linhas adicionadas aparecem em verde, linhas removidas em vermelho. Destaques em nível de palavra dentro de linhas alteradas mostram exatamente quais palavras diferem — a mesma convenção usada em pull requests do GitHub.",
+    "faq2Q": "Posso ignorar espaços ou diferenças de maiúsculas?",
+    "faq2A": "Sim. Use o menu Opções para ativar 'Ignorar espaços' e 'Ignorar maiúsculas'. Essas configurações filtram mudanças superficiais para que você foque nas diferenças significativas.",
+    "faq3Q": "Qual algoritmo o diff usa?",
+    "faq3A": "A ferramenta usa o algoritmo de diff Myers via biblioteca jsdiff. Primeiro calcula um diff em nível de linha, depois executa uma segunda passagem em nível de palavra nas linhas alteradas adjacentes para destacar quais palavras específicas foram adicionadas ou removidas."
   },
   "tooLarge": "O arquivo é muito grande para comparar",
   "binaryRejected": "Arquivos binários não são suportados"

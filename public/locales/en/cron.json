@@ -138,12 +138,21 @@
     "whatIsTitle": "What is a Cron Expression?",
     "aeoDefinition": "Cron Expression Generator is a free online tool for building and decoding Cron expressions. Supports Standard, Spring, and Quartz modes with human-readable explanations and next-run preview. No data leaves your browser.",
     "whatIs": "Cron is a time-based job scheduler in Unix-like operating systems. A Cron expression is a string of five or six fields that defines when a job should run. This tool supports Standard, Spring, and Quartz dialects. Pair it with the [Unix Timestamp](/unixtime) converter for time calculations.",
+    "stepsTitle": "How to Build a Cron Expression",
+    "step1Title": "Choose a mode",
+    "step1Text": "Select Standard (5 fields), Spring (6 fields with seconds), or Quartz (7 fields with year).",
+    "step2Title": "Configure each field",
+    "step2Text": "Use the field editors to set minute, hour, day, month, and weekday values. Or pick a preset like \"Every 5 minutes\".",
+    "step3Title": "Review next runs",
+    "step3Text": "The tool shows the next 5 execution times and a human-readable description of your expression.",
     "dstTitle": "Daylight Saving Time",
     "dst": "When the active timezone observes DST, schedules within the spring-forward gap fire at the next valid time, and schedules within the fall-back overlap fire at the first occurrence. Switch to UTC to avoid DST entirely.",
     "faq1Q": "What Cron dialects are supported?",
     "faq1A": "Three: Standard (5-field), Spring (6-field with seconds), and Quartz (7-field with seconds and year). The tool auto-detects the dialect and shows next run times.",
     "faq2Q": "How accurate are the next-run predictions?",
-    "faq2A": "Predictions are computed client-side and match standard cron behavior. The tool shows the next 5 scheduled execution times for your expression."
+    "faq2A": "Predictions are computed client-side and match standard cron behavior. The tool shows the next 5 scheduled execution times for your expression.",
+    "faq3Q": "What happens during daylight saving time changes?",
+    "faq3A": "Schedules within the spring-forward gap fire at the next valid time. Schedules within the fall-back overlap fire at the first occurrence. Switch to UTC to avoid DST entirely."
   },
   "editor": {
     "title": "Edit field",

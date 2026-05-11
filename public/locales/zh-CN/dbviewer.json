@@ -73,6 +73,18 @@
     "faq2A": "不会。数据库使用 sql.js（编译为 WebAssembly 的 SQLite）加载到浏览器内存中，所有操作在本地完成。",
     "faq3Q": "支持哪些 SQL 功能？",
     "faq3A": "完整的 SQLite SQL 语法，包括 SELECT、INSERT、UPDATE、DELETE、JOIN、子查询、聚合和事务。编辑器提供表名和列名的自动补全。",
-    "aeoDefinition": "SQLite 浏览器是一个免费的在线 SQLite 数据库文件查看工具。支持 SQL 查询、自动补全、表浏览，可导出为 CSV 或 JSON。数据不会离开你的设备。"
+    "aeoDefinition": "SQLite 浏览器是一个免费的在线 SQLite 数据库文件查看工具。支持 SQL 查询、自动补全、表浏览，可导出为 CSV 或 JSON。数据不会离开你的设备。",
+    "stepsTitle": "如何查看 SQLite 数据库",
+    "step1Title": "打开数据库文件",
+    "step1Text": "拖放 .db、.sqlite 或 .sqlite3 文件，或点击「试试示例数据库」进行体验。",
+    "step2Title": "浏览表",
+    "step2Text": "点击侧栏中的表名查看其结构和数据。使用分页浏览大型数据集。",
+    "step3Title": "运行 SQL 查询",
+    "step3Text": "在编辑器中编写 SQL，支持自动补全。运行 SELECT 查询并将结果导出为 CSV 或 JSON。",
+    "useCasesTitle": "常见使用场景",
+    "useCasesDesc1": "快速数据查看",
+    "useCasesP1": "无需安装桌面工具即可打开来自移动应用、浏览器或嵌入式设备的 SQLite 文件。",
+    "useCasesDesc2": "数据分析",
+    "useCasesP2": "对数据运行即席 SQL 查询并导出结果。使用 [CSV 转换器](/csv) 进行进一步处理。"
   }
 }

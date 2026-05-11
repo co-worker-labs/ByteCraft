@@ -453,6 +453,22 @@
     "faq1Q": "Que sont les codes de statut HTTP ?",
     "faq1A": "Les codes de statut HTTP sont des nombres à 3 chiffres renvoyés par un serveur en réponse à une requête client. Ils indiquent si la requête a réussi, été redirigée ou a rencontré une erreur.",
     "faq2Q": "Combien de codes de statut sont documentés ?",
-    "faq2A": "L'outil couvre tous les codes de statut standard dans 5 catégories : 1xx (Informationnel), 2xx (Succès), 3xx (Redirection), 4xx (Erreur client) et 5xx (Erreur serveur)."
+    "faq2A": "L'outil couvre tous les codes de statut standard dans 5 catégories : 1xx (Informationnel), 2xx (Succès), 3xx (Redirection), 4xx (Erreur client) et 5xx (Erreur serveur).",
+    "faq3Q": "Quel est le code de statut HTTP le plus courant ?",
+    "faq3A": "200 OK est le plus courant — il signifie que la requête a réussi. 404 Not Found (la ressource n'existe pas) et 500 Internal Server Error (échec côté serveur) sont aussi très fréquents. Comprendre ces codes vous aide à diagnostiquer les problèmes plus rapidement.",
+    "stepsTitle": "Comment utiliser la référence des codes de statut HTTP",
+    "step1Title": "Rechercher ou filtrer",
+    "step1Text": "Recherchez par numéro de code, nom de statut ou description. Filtrez par catégorie avec les boutons : 1xx à 5xx, ou codes non officiels.",
+    "step2Title": "Consulter les détails",
+    "step2Text": "Survolez une ligne (ordinateur) ou appuyez dessus (mobile) pour afficher les notes d'utilisation et les causes fréquentes de ce code de statut.",
+    "step3Title": "Vérifier la spécification",
+    "step3Text": "Chaque code renvoie à sa spécification RFC. Cliquez sur le lien de spec pour lire la définition officielle.",
+    "useCasesDesc1": "Débogage d'API",
+    "useCasesP1": "Déboguez les réponses d'API en recherchant les codes de statut peu familiers et en comprenant leur signification, leurs causes fréquentes et leur contexte d'utilisation.",
+    "useCasesDesc2": "Conception de la gestion d'erreurs",
+    "useCasesP2": "Implémentez une gestion d'erreurs appropriée dans votre application en comprenant quels codes attendre et comment répondre à chacun.",
+    "useCasesTitle": "Cas d'utilisation courants",
+    "whatIs": "Les codes de statut HTTP sont des nombres à trois chiffres renvoyés par un serveur en réponse à une requête client. Ils indiquent si la requête a réussi, été redirigée ou a rencontré une erreur. Les codes sont regroupés en cinq classes : 1xx (Informationnel), 2xx (Succès), 3xx (Redirection), 4xx (Erreur client) et 5xx (Erreur serveur). Cette référence couvre tous les codes enregistrés par l'IANA ainsi que les codes non officiels courants de Nginx et Cloudflare.",
+    "whatIsTitle": "Que sont les codes de statut HTTP ?"
   }
 }

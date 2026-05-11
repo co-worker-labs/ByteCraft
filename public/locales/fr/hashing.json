@@ -8,6 +8,22 @@
     "faq1A": "Le hachage cryptographique convertit des données d'entrée en une empreinte de taille fixe (hash). La même entrée produit toujours le même hash, mais un petit changement modifie complètement la sortie.",
     "faq2Q": "Quels algorithmes de hachage sont pris en charge ?",
     "faq2A": "Cet outil prend en charge MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3-224/256/384/512, Keccak-224/256/384/512 et RIPEMD-160. Les variantes HMAC sont également disponibles.",
-    "aeoDefinition": "Le Générateur de hachages est un outil gratuit en ligne pour générer des hachages MD5, SHA-1, SHA-256, SHA-512, SHA3, Keccak et RIPEMD-160. Prend en charge HMAC et le hachage de fichiers. Aucune donnée n'est envoyée à un serveur."
+    "aeoDefinition": "Le Générateur de hachages est un outil gratuit en ligne pour générer des hachages MD5, SHA-1, SHA-256, SHA-512, SHA3, Keccak et RIPEMD-160. Prend en charge HMAC et le hachage de fichiers. Aucune donnée n'est envoyée à un serveur.",
+    "faq3Q": "Quelle est la différence entre SHA-2 et SHA-3 ?",
+    "faq3A": "SHA-2 (SHA-256, SHA-512) utilise la construction Merkle-Damgard, tandis que SHA-3 utilise la construction éponge Keccak. SHA-3 ne remplace pas SHA-2 — c'est une alternative offrant une conception interne différente. Les deux sont considérés comme sûrs.",
+    "stepsTitle": "Comment générer un hachage",
+    "step1Title": "Entrez votre texte",
+    "step1Text": "Collez ou saisissez le texte brut à hacher dans le champ de saisie.",
+    "step2Title": "Sélectionner les algorithmes",
+    "step2Text": "Cochez les algorithmes de hachage souhaités dans le panneau d'algorithmes. Plusieurs algorithmes peuvent être sélectionnés simultanément.",
+    "step3Title": "Copier le hachage",
+    "step3Text": "Le résultat du hachage est affiché instantanément. Utilisez le bouton copier ou collez un hachage à comparer pour vérification.",
+    "useCasesDesc1": "Vérification d'intégrité des données",
+    "useCasesP1": "Vérifiez l'intégrité des données en comparant les hachages des données originales et reçues pour détecter tout changement lors de la transmission ou du stockage.",
+    "useCasesDesc2": "Authentification de messages",
+    "useCasesP2": "Générez des signatures HMAC à l'aide d'une phrase secrète pour authentifier l'origine et l'intégrité des messages.",
+    "useCasesTitle": "Cas d'utilisation courants",
+    "whatIs": "Le hachage cryptographique convertit des données d'entrée de toute taille en une empreinte de taille fixe appelée hachage. La même entrée produit toujours le même hachage, mais une modification même minime modifie complètement la sortie. Les hachages sont à sens unique — il est impossible de revenir d'un hachage à l'entrée d'origine. Cet outil génère des hachages avec MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3, Keccak et RIPEMD-160.",
+    "whatIsTitle": "Qu'est-ce que le hachage cryptographique ?"
   }
 }

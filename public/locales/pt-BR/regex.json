@@ -152,7 +152,16 @@
     "faq1A": "Uma expressão regular (regex) é uma sequência de caracteres que define um padrão de busca. É usada para correspondência de strings, validação, busca e substituição e extração de texto.",
     "faq2Q": "Posso testar regex com flags?",
     "faq2A": "Sim. Esta ferramenta suporta todas as flags padrão de regex do JavaScript: g (global), i (insensível a maiúsculas), m (multiline), s (dotAll), u (unicode) e y (sticky).",
-    "aeoDefinition": "O Testador de Regex é uma ferramenta online gratuita para testar expressões regulares com destaque de correspondência em tempo real, inspeção de grupos de captura e pré-visualização de substituição. Inclui uma biblioteca de padrões integrada e explicação em nível de token. Roda inteiramente no seu navegador."
+    "aeoDefinition": "O Testador de Regex é uma ferramenta online gratuita para testar expressões regulares com destaque de correspondência em tempo real, inspeção de grupos de captura e pré-visualização de substituição. Inclui uma biblioteca de padrões integrada e explicação em nível de token. Roda inteiramente no seu navegador.",
+    "stepsTitle": "Como testar um regex",
+    "step1Title": "Insira seu padrão",
+    "step1Text": "Digite uma expressão regular no campo de padrão. Ative flags como g (global), i (insensível a maiúsculas) e m (multiline) conforme necessário.",
+    "step2Title": "Adicione texto de teste",
+    "step2Text": "Cole ou digite o texto contra o qual deseja testar. Correspondências são destacadas em tempo real conforme você digita.",
+    "step3Title": "Inspecione e refine",
+    "step3Text": "Visualize detalhes das correspondências com posições, grupos de captura e substituições. Use o modo Explicar para um detalhamento token a token.",
+    "faq3Q": "Existe um limite de correspondências?",
+    "faq3A": "Sim. Para manter a interface responsiva, apenas as primeiras 1.000 correspondências são renderizadas. Para padrões com mais correspondências, a ferramenta mostra a contagem total."
   },
   "explainGroupNamed": "grupo: {name}"
 }

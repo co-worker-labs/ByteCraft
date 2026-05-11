@@ -17,6 +17,22 @@
     "twosComplement": "O complemento de dois é a forma padrão de representar inteiros com sinal em binário. O bit mais significativo (MSB) atua como bit de sinal: 0 para positivo, 1 para negativo. Para obter o valor negativo, inverta todos os bits e some 1. Por exemplo, no modo 8 bits, -1 é representado como 11111111 (0xFF).",
     "faq1Q": "Quais bases numéricas são suportadas?",
     "faq1A": "Binário (base 2), Octal (base 8), Decimal (base 10) e Hexadecimal (base 16) com conversão em tempo real entre todas as quatro.",
-    "aeoDefinition": "O Conversor de Base Numérica é uma ferramenta online gratuita para converter números entre binário, octal, decimal e hexadecimal. Suporta complemento de dois de 8/16/32/64 bits e um editor de bits visual. Roda inteiramente no seu navegador."
+    "aeoDefinition": "O Conversor de Base Numérica é uma ferramenta online gratuita para converter números entre binário, octal, decimal e hexadecimal. Suporta complemento de dois de 8/16/32/64 bits e um editor de bits visual. Roda inteiramente no seu navegador.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesDesc1": "Programação de sistemas",
+    "useCasesP1": "Depure protocolos de baixo nível, pacotes de rede ou formatos de arquivo binário que usam notação hexadecimal ou octal.",
+    "useCasesDesc2": "Hardware e cores",
+    "useCasesP2": "Converta valores de cor entre hex e decimal, ou calcule endereços de memória e offsets durante desenvolvimento embarcado.",
+    "stepsTitle": "Como converter bases numéricas",
+    "step1Title": "Insira um valor",
+    "step1Text": "Digite um número em qualquer base — decimal, hexadecimal (prefixo 0x), octal (prefixo 0o) ou binário (prefixo 0b). Todas as outras bases atualizam instantaneamente.",
+    "step2Title": "Escolha a largura de bits",
+    "step2Text": "Selecione o modo 8, 16, 32 ou 64 bits para ver a representação em complemento de dois e alternar bits individuais no editor visual.",
+    "step3Title": "Copie o resultado",
+    "step3Text": "Clique no botão copiar ao lado de qualquer conversão de base para copiar o valor formatado.",
+    "faq2Q": "Para que serve o complemento de dois?",
+    "faq2A": "O complemento de dois é como computadores representam inteiros com sinal. Permite que a CPU use o mesmo circuito para adição e subtração, e evita o problema de +0/-0 da representação sinal-magnitude.",
+    "faq3Q": "Suporta números negativos?",
+    "faq3A": "Sim. Insira um número decimal negativo e a ferramenta exibe as representações binária, hex e octal em complemento de dois baseada na largura de bits selecionada."
   }
 }

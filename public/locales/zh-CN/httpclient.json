@@ -101,6 +101,20 @@
     "faq2A": "可以。支持 Basic Auth、Bearer Token、API 密钥（请求头和查询参数）和自定义认证头。所有凭据保留在你的浏览器中。",
     "faq3Q": "支持请求历史吗？",
     "faq3A": "支持。所有请求都保存到本地存储，包含完整的请求/响应详情。你可以收藏常用请求以便快速访问。",
-    "aeoDefinition": "HTTP 客户端是一个免费的在线 HTTP 请求发送和 REST API 测试工具，完全在浏览器中运行。支持 GET、POST、PUT、DELETE，包含请求头、请求体和认证。数据不会通过任何服务器。"
+    "aeoDefinition": "HTTP 客户端是一个免费的在线 HTTP 请求发送和 REST API 测试工具，完全在浏览器中运行。支持 GET、POST、PUT、DELETE，包含请求头、请求体和认证。数据不会通过任何服务器。",
+    "whatIsTitle": "什么是 HTTP 客户端？",
+    "whatIs": "一个基于浏览器的 HTTP 客户端，用于测试 REST API。可发送 GET、POST、PUT、PATCH、DELETE、HEAD 和 OPTIONS 请求，自定义请求头、请求体和认证——全部在浏览器中完成。",
+    "stepsTitle": "如何发送 HTTP 请求",
+    "step1Title": "输入 URL",
+    "step1Text": "输入或粘贴 API 端点 URL，选择 HTTP 方法（GET、POST、PUT 等）。",
+    "step2Title": "配置请求",
+    "step2Text": "按需添加查询参数、请求头、请求体（JSON、表单数据或原始文本）和认证。",
+    "step3Title": "发送并检查",
+    "step3Text": "点击「发送」，在响应面板中查看响应体、响应头、Cookies、耗时和重定向信息。",
+    "useCasesTitle": "常见使用场景",
+    "useCasesDesc1": "API 开发",
+    "useCasesP1": "开发过程中测试 REST API 端点，无需安装 Postman 或 curl 等桌面工具。",
+    "useCasesDesc2": "调试",
+    "useCasesP2": "检查响应头、状态码和耗时来诊断 API 问题。使用代理开关绕过 CORS 限制。"
   }
 }

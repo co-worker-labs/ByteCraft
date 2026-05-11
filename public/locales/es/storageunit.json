@@ -14,6 +14,15 @@
     "faq1A": "Bits, Bytes, KB, MB, GB, TB y PB. La herramienta soporta tanto el estándar decimal (1 KB = 1000 bytes) como el binario (1 KiB = 1024 bytes).",
     "faq2Q": "¿Por qué hay dos estándares de conversión?",
     "faq2A": "El decimal (SI) usa potencias de 1000 y es usado por los fabricantes de almacenamiento. El binario (IEC) usa potencias de 1024 y es lo que los sistemas operativos típicamente reportan.",
-    "aeoDefinition": "El Conversor de unidades de almacenamiento es una herramienta gratuita online para convertir entre bytes, KB, MB, GB, TB y PB. Soporta los estándares SI (decimal) e IEC (binario). Se ejecuta completamente en tu navegador."
+    "aeoDefinition": "El Conversor de unidades de almacenamiento es una herramienta gratuita online para convertir entre bytes, KB, MB, GB, TB y PB. Soporta los estándares SI (decimal) e IEC (binario). Se ejecuta completamente en tu navegador.",
+    "stepsTitle": "Cómo convertir unidades de almacenamiento",
+    "step1Title": "Introduce un valor",
+    "step1Text": "Escribe un número en cualquier campo de unidad de almacenamiento. La herramienta convierte a todas las demás unidades en tiempo real.",
+    "step2Title": "Elige decimal o binario",
+    "step2Text": "Alterna entre los estándares SI (1K = 1000 bytes) e IEC (1K = 1024 bytes) usando el interruptor de medida.",
+    "step3Title": "Lee la tabla de conversión",
+    "step3Text": "Todos los valores equivalentes se muestran a la vez. La tabla de conversiones comunes debajo muestra valores de referencia.",
+    "faq3Q": "¿Por qué mi disco duro muestra menos espacio del anunciado?",
+    "faq3A": "Los fabricantes usan unidades decimales (SI) — 1 TB = 1.000.000.000.000 bytes. Tu sistema operativo usa binario — 1 TiB = 1.099.511.627.776 bytes. Un disco de \"1 TB\" se muestra como aproximadamente 931 GiB en tu SO."
   }
 }

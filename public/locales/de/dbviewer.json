@@ -73,6 +73,18 @@
     "faq2A": "Nein. Die Datenbank wird mit sql.js (SQLite kompiliert zu WebAssembly) in den Browser-Speicher geladen. Alle Operationen erfolgen lokal.",
     "faq3Q": "Welche SQL-Funktionen werden unterstützt?",
     "faq3A": "Volle SQLite-SQL-Syntax einschließlich SELECT, INSERT, UPDATE, DELETE, JOINs, Unterabfragen, Aggregationen und Transaktionen. Der Editor bietet Autovervollständigung für Tabellen- und Spaltennamen.",
-    "aeoDefinition": "Der SQLite-Viewer ist ein kostenloses Online-Tool zum Öffnen und Erkunden von SQLite-Datenbankdateien in Ihrem Browser. SQL-Abfragen mit Autovervollständigung ausführen, Tabellen durchsuchen und als CSV oder JSON exportieren. Keine Daten verlassen Ihr Gerät."
+    "aeoDefinition": "Der SQLite-Viewer ist ein kostenloses Online-Tool zum Öffnen und Erkunden von SQLite-Datenbankdateien in Ihrem Browser. SQL-Abfragen mit Autovervollständigung ausführen, Tabellen durchsuchen und als CSV oder JSON exportieren. Keine Daten verlassen Ihr Gerät.",
+    "step1Title": "Datenbankdatei öffnen",
+    "step1Text": "Ziehen Sie eine .db-, .sqlite- oder .sqlite3-Datei per Drag & Drop oder klicken Sie auf „Beispieldatenbank ausprobieren\".",
+    "step2Title": "Tabellen durchsuchen",
+    "step2Text": "Klicken Sie auf eine Tabelle in der Seitenleiste, um Schema und Daten anzuzeigen. Nutzen Sie die Paginierung für große Datensätze.",
+    "step3Title": "SQL-Abfragen ausführen",
+    "step3Text": "Schreiben Sie SQL im Editor mit Autovervollständigung. Führen Sie SELECT-Abfragen aus und exportieren Sie Ergebnisse als CSV oder JSON.",
+    "stepsTitle": "SQLite-Datenbank anzeigen",
+    "useCasesDesc1": "Schnelle Dateninspektion",
+    "useCasesDesc2": "Datenanalyse",
+    "useCasesP1": "SQLite-Dateien aus mobilen Apps, Browsern oder Embedded-Geräten öffnen, ohne Desktop-Tools zu installieren.",
+    "useCasesP2": "Ad-hoc-SQL-Abfragen gegen Ihre Daten ausführen und Ergebnisse exportieren. Verwenden Sie den [CSV-Konverter](/csv) für die Weiterverarbeitung.",
+    "useCasesTitle": "Gängige Anwendungsfälle"
   }
 }

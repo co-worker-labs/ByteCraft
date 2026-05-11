@@ -10,6 +10,13 @@
     "whatIsP1": "Base64 encoding is a way to convert data (typically binary) into the ASCII character set. It is important to mention here that Base64 is not an encryption or compression technique, although it can sometimes be confused as encryption due to the way it seems to obscure data. Use [Hashing](/hashing) for cryptographic purposes or [URL Encoder](/urlencoder) for URL-safe strings.",
     "whatIsP2": "Base64 is the most widely used base encoding technique with Base16 and Base32 being the other two commonly used encoding schemes.",
     "whatIsP3": "Base64 encoding is one of the most common ways of converting binary data into plain ASCII text. It is a very useful format for communicating between one or more systems that cannot easily handle binary data, like images in HTML markup or web requests.",
+    "stepsTitle": "How to Encode or Decode Base64",
+    "step1Title": "Enter your text",
+    "step1Text": "Type or paste the plain text you want to encode, or paste an existing Base64 string to decode.",
+    "step2Title": "Choose encode or decode",
+    "step2Text": "The tool converts in real time. Switch between Encode and Decode modes with a single click.",
+    "step3Title": "Copy the result",
+    "step3Text": "The encoded or decoded output appears instantly. Click the copy button to grab the result.",
     "howTitle": "How Does Base64 Work?",
     "howP1": "Converting data to base64 is a multistep process. Here is how it works for strings of text:",
     "howStep1": "Calculate the 8-bit binary version of the input text",
@@ -29,6 +36,8 @@
     "faq1Q": "Is Base64 encryption?",
     "faq1A": "No. Base64 is encoding, not encryption. It provides no security — anyone can decode it. Use the Encrypt/Decrypt tool for actual data protection.",
     "faq2Q": "Does Base64 encoding increase file size?",
-    "faq2A": "Yes. Base64 encoding increases data size by approximately 33%. Every 3 bytes of input become 4 characters of output."
+    "faq2A": "Yes. Base64 encoding increases data size by approximately 33%. Every 3 bytes of input become 4 characters of output.",
+    "faq3Q": "Can I use Base64 for URL-safe encoding?",
+    "faq3A": "Standard Base64 uses + and / characters which are not URL-safe. For URLs, use the URL Encoder tool or Base64url variant which replaces + with - and / with _."
   }
 }

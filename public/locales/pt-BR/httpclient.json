@@ -101,6 +101,20 @@
       "title": "CORS e Proxy",
       "text": "Por padrão, esta ferramenta usa a API fetch() nativa do navegador. Requisições de origem cruzada exigem que o servidor de destino inclua cabeçalhos CORS apropriados. Se um servidor não suporta CORS, ative o toggle Proxy — as requisições serão roteadas pelo proxy do servidor, contornando as restrições CORS completamente."
     },
-    "aeoDefinition": "O HTTP Client é uma ferramenta online gratuita para enviar requisições HTTP e testar APIs REST diretamente no seu navegador. Suporta GET, POST, PUT, DELETE com cabeçalhos, corpo e autenticação. Todas as requisições rodam localmente por padrão; proxy opcional no servidor para contorno de CORS."
+    "aeoDefinition": "O HTTP Client é uma ferramenta online gratuita para enviar requisições HTTP e testar APIs REST diretamente no seu navegador. Suporta GET, POST, PUT, DELETE com cabeçalhos, corpo e autenticação. Todas as requisições rodam localmente por padrão; proxy opcional no servidor para contorno de CORS.",
+    "whatIsTitle": "O que é o HTTP Client?",
+    "whatIs": "Um cliente HTTP baseado em navegador para testar APIs REST. Envie requisições GET, POST, PUT, PATCH, DELETE, HEAD e OPTIONS com cabeçalhos personalizados, corpo e autenticação — tudo do seu navegador.",
+    "stepsTitle": "Como enviar uma requisição HTTP",
+    "step1Title": "Insira uma URL",
+    "step1Text": "Digite ou cole a URL do endpoint da API. Selecione um método HTTP (GET, POST, PUT, etc.).",
+    "step2Title": "Configure a requisição",
+    "step2Text": "Adicione parâmetros de consulta, cabeçalhos, corpo da requisição (JSON, form-data ou raw) e autenticação conforme necessário.",
+    "step3Title": "Envie e inspecione",
+    "step3Text": "Clique em Enviar. Visualize o corpo da resposta, cabeçalhos, cookies, tempos e informações de redirecionamento no painel de resposta.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesDesc1": "Desenvolvimento de APIs",
+    "useCasesP1": "Teste endpoints de APIs REST durante o desenvolvimento sem instalar ferramentas desktop como Postman ou curl.",
+    "useCasesDesc2": "Depuração",
+    "useCasesP2": "Inspecione cabeçalhos de resposta, códigos de status e tempos para diagnosticar problemas de API. Use o toggle proxy para contornar CORS."
   }
 }

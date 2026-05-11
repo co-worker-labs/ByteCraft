@@ -143,7 +143,16 @@
     "faq1A": "Ein Cron-Ausdruck ist eine Zeichenfolge aus 5-7 Feldern, die einen Zeitplan für wiederkehrende Aufgaben definiert. Er wird von Cron-Daemons, Auftragsplanern und Frameworks wie Spring und Quartz verwendet.",
     "faq2Q": "Welche Cron-Dialekte werden unterstützt?",
     "faq2A": "Drei: Standard (5 Felder), Spring (6 Felder mit Sekunden) und Quartz (7 Felder mit Sekunden und Jahr). Das Tool erkennt den Dialekt automatisch und zeigt die nächsten Ausführungszeiten.",
-    "aeoDefinition": "Der Cron-Ausdrucks-Generator ist ein kostenloses Online-Tool zum Erstellen und Dekodieren von Cron-Ausdrücken. Unterstützt Standard-, Spring- und Quartz-Modi mit menschenlesbaren Erklärungen und Vorschau der nächsten Ausführung. Keine Daten verlassen Ihren Browser."
+    "aeoDefinition": "Der Cron-Ausdrucks-Generator ist ein kostenloses Online-Tool zum Erstellen und Dekodieren von Cron-Ausdrücken. Unterstützt Standard-, Spring- und Quartz-Modi mit menschenlesbaren Erklärungen und Vorschau der nächsten Ausführung. Keine Daten verlassen Ihren Browser.",
+    "faq3Q": "Was passiert bei Sommerzeitumstellungen?",
+    "faq3A": "Zeitpläne innerhalb der Vorstell-Lücke werden zur nächsten gültigen Zeit ausgelöst. Zeitpläne innerhalb der Rückstell-Überschneidung beim ersten Auftreten. Wechseln Sie zu UTC, um DST vollständig zu vermeiden.",
+    "step1Title": "Modus wählen",
+    "step1Text": "Wählen Sie Standard (5 Felder), Spring (6 Felder mit Sekunden) oder Quartz (7 Felder mit Jahr).",
+    "step2Title": "Felder konfigurieren",
+    "step2Text": "Verwenden Sie die Feld-Editoren, um Minuten, Stunden, Tage, Monate und Wochentage einzustellen. Oder wählen Sie eine Vorlage wie „Alle 5 Minuten\".",
+    "step3Title": "Nächste Ausführungen prüfen",
+    "step3Text": "Das Tool zeigt die nächsten 5 Ausführungszeiten und eine menschenlesbare Beschreibung Ihres Ausdrucks.",
+    "stepsTitle": "Cron-Ausdruck erstellen"
   },
   "editor": {
     "title": "Feld bearbeiten",

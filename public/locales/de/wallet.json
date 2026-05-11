@@ -56,6 +56,18 @@
     "faq2Q": "Warum erfordern Solana-Pfade alle gehärteten Segmente?",
     "faq2A": "Solana verwendet die ed25519-Kurve über SLIP-0010, das nur gehärtete Ableitung unterstützt. Nicht-gehärtete Ableitung ist mit ed25519-Schlüsseln nicht möglich.",
     "faq3Q": "Was ist der Unterschied zwischen Bitcoin Legacy-, SegWit- und Taproot-Adressen?",
-    "faq3A": "Legacy (P2PKH, beginnt mit 1) ist das ursprüngliche Format. SegWit (P2WPKH, bc1q) verwendet Bech32-Kodierung mit niedrigeren Gebühren. Taproot (P2TR, bc1p) ist das neueste Format mit verbessertem Datenschutz."
+    "faq3A": "Legacy (P2PKH, beginnt mit 1) ist das ursprüngliche Format. SegWit (P2WPKH, bc1q) verwendet Bech32-Kodierung mit niedrigeren Gebühren. Taproot (P2TR, bc1p) ist das neueste Format mit verbessertem Datenschutz.",
+    "step1Title": "Mnemonische Phrase generieren oder eingeben",
+    "step1Text": "Klicken Sie auf Generieren, um eine neue 12- oder 24-Wort-BIP39-Mnemonik zu erstellen, oder fügen Sie eine bestehende ein.",
+    "step2Title": "Blockchains und Pfade wählen",
+    "step2Text": "Wählen Sie, für welche Blockchains Adressen abgeleitet werden sollen. Passen Sie den Ableitungspfad bei Bedarf an.",
+    "step3Title": "Abgeleitete Adressen anzeigen",
+    "step3Text": "Das Tool zeigt Adresse, öffentlichen Schlüssel und privaten Schlüssel für jeden abgeleiteten Adressindex.",
+    "stepsTitle": "HD-Wallet generieren",
+    "useCasesDesc1": "Entwicklung und Tests",
+    "useCasesDesc2": "HD-Wallets verstehen",
+    "useCasesP1": "Test-Wallets für Smart-Contract-Entwicklung generieren, ohne echte Guthaben zu gefährden.",
+    "useCasesP2": "Verstehen, wie BIP32/BIP39/BIP44-Schlüsselableitung funktioniert, durch Experimentieren mit verschiedenen Pfaden und Blockchains.",
+    "useCasesTitle": "Gängige Anwendungsfälle"
   }
 }

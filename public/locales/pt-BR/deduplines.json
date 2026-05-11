@@ -27,6 +27,13 @@
     "faq2A": "Por padrão, sim. Você pode ativar o modo insensível a maiúsculas para tratar 'Olá' e 'olá' como duplicados.",
     "faq3Q": "Posso ver o que foi removido?",
     "faq3A": "A ferramenta mostra a saída limpa e a contagem de duplicados removidos. Você pode comparar entrada e saída para verificar os resultados.",
-    "aeoDefinition": "O Deduplicador de Linhas é uma ferramenta online gratuita que remove linhas duplicadas de texto preservando a ordem. Suporta correspondência sensível a maiúsculas, remoção de espaços e remoção de linhas vazias. Roda inteiramente no seu navegador."
+    "aeoDefinition": "O Deduplicador de Linhas é uma ferramenta online gratuita que remove linhas duplicadas de texto preservando a ordem. Suporta correspondência sensível a maiúsculas, remoção de espaços e remoção de linhas vazias. Roda inteiramente no seu navegador.",
+    "stepsTitle": "Como remover linhas duplicadas",
+    "step1Title": "Cole seu texto",
+    "step1Text": "Digite ou cole texto multilinha na área de entrada. A ferramenta deduplica em tempo real.",
+    "step2Title": "Configure as opções",
+    "step2Text": "Alterne sensibilidade a maiúsculas, remoção de espaços ou remoção de linhas vazias usando os botões de opção.",
+    "step3Title": "Copie a saída limpa",
+    "step3Text": "As linhas únicas aparecem na área de saída com a contagem de duplicatas removidas."
   }
 }

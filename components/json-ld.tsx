@@ -7,7 +7,7 @@ function WebsiteJsonLd() {
     name: "OmniKit",
     url: SITE_URL,
     description:
-      "A collection of free, browser-based developer tools. Base64 encoder, password generator, hash generator, encryption, checksum, and more.",
+      "Free online developer tools that run entirely in your browser. JSON formatter, Base64 encoder, password generator, hash calculator, JWT debugger, and 30+ more utilities. No data sent to any server.",
     potentialAction: {
       "@type": "SearchAction",
       target: {
@@ -34,7 +34,7 @@ export function buildOrganizationSchema() {
     url: SITE_URL,
     logo: `${SITE_URL}/icons/icon-512x512.png`,
     sameAs: ["https://github.com/nickvore"],
-    description: "A collection of free, browser-based developer tools.",
+    description: "Browser-based developer tools platform",
   };
 }
 
@@ -46,13 +46,15 @@ export function buildToolSchemas(options: {
   howToSteps?: { name: string; text: string }[];
   categoryName?: string;
   categoryPath?: string;
+  sameAs?: string[];
 }): object[] {
-  const { name, description, path, faqItems, howToSteps, categoryName, categoryPath } = options;
+  const { name, description, path, faqItems, howToSteps, categoryName, categoryPath, sameAs } =
+    options;
   const url = `${SITE_URL}${path}`;
 
   const schemas: object[] = [];
 
-  schemas.push({
+  const webApp: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": ["WebApplication", "SoftwareApplication"],
     name,
@@ -62,7 +64,13 @@ export function buildToolSchemas(options: {
     operatingSystem: "Any",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     browserRequirements: "Requires JavaScript. Requires HTML5.",
-  });
+  };
+
+  if (sameAs && sameAs.length > 0) {
+    webApp.sameAs = sameAs;
+  }
+
+  schemas.push(webApp);
 
   const breadcrumbItems: object[] = [
     { "@type": "ListItem", position: 1, name: "OmniKit", item: SITE_URL },

@@ -1,11 +1,12 @@
 import { getTranslations } from "next-intl/server";
 import { generatePageMeta } from "../../../libs/seo";
 import { buildToolSchemas } from "../../../components/json-ld";
-import { TOOL_CATEGORIES, CATEGORY_SLUGS } from "../../../libs/tools";
+import { TOOLS, TOOL_CATEGORIES, CATEGORY_SLUGS } from "../../../libs/tools";
 import ColorPage from "./color-page";
 
 const PATH = "/color";
 const TOOL_KEY = "color";
+const tool = TOOLS.find((t) => t.key === TOOL_KEY)!;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -15,6 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     path: PATH,
     title: t("color.title"),
     description: t("color.description"),
+    ogImage: { title: t("color.shortTitle"), emoji: tool.emoji, desc: t("color.description") },
   });
 }
 
@@ -37,6 +39,7 @@ export default async function ColorRoute({ params }: { params: Promise<{ locale:
       q: tx(`descriptions.faq${i}Q`),
       a: tx(`descriptions.faq${i}A`),
     })),
+    sameAs: tool.sameAs,
   });
 
   return (

@@ -22,6 +22,23 @@
     "rc4dropConfig": "Por padrão, 192 palavras (768 bytes) são descartadas, mas você pode configurar o algoritmo para descartar qualquer número de palavras.",
     "faq1Q": "Quais algoritmos de criptografia são suportados?",
     "faq1A": "AES, DES, Triple DES (3DES), Rabbit, RC4 e RC4Drop usando CryptoJS. AES-256 é recomendado para requisitos de segurança modernos.",
-    "aeoDefinition": "A ferramenta de Criptografia/Descriptografia é uma ferramenta online gratuita para criptografar e descriptografar texto usando AES, DES, Triple DES, Rabbit, RC4 e RC4Drop. Todo o processamento roda no seu navegador — nenhum dado é enviado para qualquer servidor."
+    "aeoDefinition": "A ferramenta de Criptografia/Descriptografia é uma ferramenta online gratuita para criptografar e descriptografar texto usando AES, DES, Triple DES, Rabbit, RC4 e RC4Drop. Todo o processamento roda no seu navegador — nenhum dado é enviado para qualquer servidor.",
+    "whatIsTitle": "O que é criptografia?",
+    "whatIs": "Criptografia transforma texto legível (plaintext) em texto ilegível (ciphertext) usando um algoritmo criptográfico e uma chave secreta. Apenas quem possui a chave correta pode descriptografar o ciphertext de volta ao plaintext original. Esta ferramenta suporta criptografia simétrica — a mesma chave criptografa e descriptografa.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesP1": "Criptografar texto sensível antes de compartilhar — o destinatário precisa da mesma senha para descriptografar.",
+    "useCasesP2": "Verificar saída de criptografia ou descriptografar ciphertext recebido, sem instalar nenhum software.",
+    "useCasesP3": "Testar e aprender como diferentes algoritmos (AES, DES, RC4) se comportam com vários modos de bloco e esquemas de padding.",
+    "stepsTitle": "Como criptografar ou descriptografar texto",
+    "step1Title": "Escolha seu algoritmo",
+    "step1Desc": "Selecione AES (recomendado), DES, Triple DES, Rabbit, RC4 ou RC4Drop. Para cifras de bloco, escolha também um modo (CBC, CFB, CTR, OFB, ECB) e esquema de padding.",
+    "step2Title": "Insira seu texto e senha",
+    "step2Desc": "Digite ou cole o texto simples (para criptografar) ou o ciphertext (para descriptografar). Insira a senha — a mesma senha é necessária para reverter a operação.",
+    "step3Title": "Criptografe ou descriptografe",
+    "step3Desc": "Clique no botão Criptografar ou Descriptografar. O resultado aparece imediatamente. Copie a saída ou limpe os campos para recomeçar. Todo o processamento acontece no seu navegador.",
+    "faq2Q": "Qual algoritmo devo usar?",
+    "faq2A": "Use AES para qualquer projeto novo — é o padrão moderno, amplamente suportado e considerado seguro. DES é obsoleto (chave de 56 bits). Triple DES é aceitável para sistemas legados. RC4 tem vulnerabilidades conhecidas; use RC4Drop se precisar usar RC4. Rabbit é rápido, mas menos auditado.",
+    "faq3Q": "O que é um modo de cifra de bloco?",
+    "faq3A": "Cifras de bloco (AES, DES) criptografam dados em blocos de tamanho fixo (tipicamente 8 ou 16 bytes). O modo define como múltiplos blocos são encadeados. CBC é o mais comum e recomendado para uso geral. ECB criptografa cada bloco independentemente — evite, pois blocos de plaintext idênticos produzem ciphertext idêntico."
   }
 }

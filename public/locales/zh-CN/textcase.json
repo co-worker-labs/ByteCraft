@@ -37,6 +37,22 @@
     "faq1A": "camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE、dot.case、path/case、Title Case、Sentence case、UPPER CASE、lower case 等。",
     "faq2Q": "可以同时转换多个字符串吗？",
     "faq2A": "可以。粘贴多行文本，工具会独立转换每一行。多行转换将选中的大小写格式应用到每一行。",
-    "aeoDefinition": "大小写转换工具是一个免费的在线文本转换器，支持 camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE 等格式。即时转换，实时预览。数据不会离开你的浏览器。"
+    "aeoDefinition": "大小写转换工具是一个免费的在线文本转换器，支持 camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE 等格式。即时转换，实时预览。数据不会离开你的浏览器。",
+    "whatIsTitle": "什么是大小写转换工具？",
+    "whatIs": "大小写转换工具在编程和写作中使用的命名约定之间转换字符串。它自动检测输入格式，并实时显示到 camelCase、PascalCase、snake_case、CONSTANT_CASE、kebab-case、dot.case、lower case、UPPER CASE、Title Case、Sentence case 和 path/case 的转换结果。",
+    "useCasesTitle": "常见使用场景",
+    "useCasesDesc1": "语言迁移",
+    "useCasesP1": "在不同编程语言之间迁移代码时重命名变量——一次粘贴即可将 Python 的 snake_case 转换为 JavaScript 的 camelCase。",
+    "useCasesDesc2": "命名规范统一",
+    "useCasesP2": "从普通英文输入生成一致的 URL 路径、CSS 类名或环境变量名。",
+    "stepsTitle": "如何转换文本大小写",
+    "step1Title": "粘贴文本",
+    "step1Text": "在输入框中输入或粘贴任意字符串。工具会自动检测当前的大小写格式。",
+    "step2Title": "查看转换结果",
+    "step2Text": "所有 11 种格式即时显示在表格中。检测到的格式以标签高亮显示。",
+    "step3Title": "复制结果",
+    "step3Text": "点击任意转换结果旁的复制按钮，将其复制到剪贴板。",
+    "faq3Q": "支持哪些大小写格式？",
+    "faq3A": "转换器支持 11 种格式：camelCase、PascalCase、snake_case、CONSTANT_CASE、kebab-case、dot.case、lower case、UPPER CASE、Title Case、Sentence case 和 path/case。"
   }
 }

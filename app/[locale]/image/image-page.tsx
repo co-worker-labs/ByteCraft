@@ -22,8 +22,6 @@ import { getSupportedEncodeFormats } from "../../../libs/image/format-support";
 import type { OutputFormat, ResizeMode } from "../../../libs/image/types";
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
-import { Accordion } from "../../../components/ui/accordion";
-import { CircleHelp } from "lucide-react";
 
 const FORMAT_OPTIONS: { value: OutputFormat; label: string }[] = [
   { value: "png", label: "PNG" },
@@ -677,32 +675,14 @@ function Description() {
   const tc = useTranslations("common");
   const locale = useLocale();
 
-  const faqItems = [1, 2, 3].map((i) => ({
-    title: t(`descriptions.faq${i}Q`),
-    content: <p>{t(`descriptions.faq${i}A`)}</p>,
-  }));
   return (
     <section className="mt-8">
-      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
-        <p className="text-fg-secondary text-sm leading-relaxed">
-          {t("descriptions.aeoDefinition")}
-        </p>
-      </div>
       <h2 className="text-sm font-semibold mb-3">{t("descriptions.title")}</h2>
       <div className="space-y-3 text-sm text-fg-secondary leading-relaxed">
         <p>{renderLinkedText(t("descriptions.p1"), locale)}</p>
         <p>{t("descriptions.p2")}</p>
         <p>{t("descriptions.p3")}</p>
         <p>{t("descriptions.p4")}</p>
-      </div>
-      <div className="mt-8">
-        <div className="flex items-center gap-2 mb-4">
-          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
-          <h2 className="font-semibold text-fg-primary text-base text-pretty">
-            {tc("descriptions.faqTitle")}
-          </h2>
-        </div>
-        <Accordion items={faqItems} />
       </div>
     </section>
   );

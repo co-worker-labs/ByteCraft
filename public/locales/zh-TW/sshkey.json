@@ -39,6 +39,12 @@
     "faq3Q": "如何將 SSH 公鑰新增到 GitHub？",
     "faq3A": "進入 Settings → SSH and GPG keys → New SSH key。填寫標題，貼上公鑰完整內容（以 ssh-ed25519 或 ssh-rsa 開頭的整行），點擊 Add SSH key。也可以使用 GitHub CLI：gh ssh-key add ~/.ssh/id_ed25519.pub。",
     "faq4Q": "在瀏覽器中產生 SSH 金鑰安全嗎？",
-    "faq4A": "安全。本工具使用 Web Crypto API，提供與 OpenSSL 和 OpenSSH 相同的加密基礎元件。金鑰完全在瀏覽器記憶體中產生，不會傳送到任何伺服器。關閉或重新整理頁面後金鑰即遺失，請務必在離開前下載或複製。"
+    "faq4A": "安全。本工具使用 Web Crypto API，提供與 OpenSSL 和 OpenSSH 相同的加密基礎元件。金鑰完全在瀏覽器記憶體中產生，不會傳送到任何伺服器。關閉或重新整理頁面後金鑰即遺失，請務必在離開前下載或複製。",
+    "whatIsTitle": "什麼是 SSH 金鑰？",
+    "whatIs": "SSH 金鑰對由私鑰和公鑰組成，用於對伺服器和服務（Git 平台、雲端服務商、遠端機器）進行安全驗證。私鑰留在你的裝置上；公鑰放在伺服器上。SSH 金鑰比密碼更安全，因為它們能抵抗暴力破解和網路釣魚攻擊。",
+    "useCasesTitle": "常見使用場景",
+    "useCasesP1": "驗證 Git 平台（GitHub、GitLab、Bitbucket），每次 push 或 pull 無需輸入密碼。",
+    "useCasesP2": "安全遠端連線——將公鑰新增到 ~/.ssh/authorized_keys 即可免密碼登入。",
+    "useCasesP3": "CI/CD 部署金鑰——為自動化系統產生專用金鑰對，存取儲存庫或伺服器時無需共享憑證。"
   }
 }

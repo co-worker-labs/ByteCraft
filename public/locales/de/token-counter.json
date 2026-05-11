@@ -21,6 +21,18 @@
     "faq2Q": "Welche Modelle verwenden die o200k_base-Kodierung?",
     "faq2A": "Die o200k_base-Kodierung wird von GPT-4o, GPT-4.1, o1, o3, o4-mini und GPT-5 verwendet. Sie unterstützt ein Vokabular von etwa 200.000 Tokens mit verbesserter mehrsprachiger Abdeckung gegenüber der früheren cl100k_base-Kodierung.",
     "faq3Q": "Wie genau ist die Token-Zählung?",
-    "faq3A": "Die Zählung ist für Standardtext sehr genau. Sie verwendet denselben BPE-Algorithmus wie der OpenAI-Tokenizer. Geringe Abweichungen können bei Chat-formatierten Nachrichten (mit System-/Benutzer-/Assistent-Rollen) auftreten, da dieses Tool rohe Text-Tokens zählt, keine Chat-Vorlagen-Tokens."
+    "faq3A": "Die Zählung ist für Standardtext sehr genau. Sie verwendet denselben BPE-Algorithmus wie der OpenAI-Tokenizer. Geringe Abweichungen können bei Chat-formatierten Nachrichten (mit System-/Benutzer-/Assistent-Rollen) auftreten, da dieses Tool rohe Text-Tokens zählt, keine Chat-Vorlagen-Tokens.",
+    "step1Title": "Text einfügen",
+    "step1Text": "Geben Sie den zu tokenisierenden Text ein oder fügen Sie ihn ein. Die Token-Anzahl wird in Echtzeit aktualisiert.",
+    "step2Title": "Anzahl prüfen",
+    "step2Text": "Gesamte Tokens, Zeichen, Zeichen-pro-Token-Verhältnis und Kontextfensternutzung anzeigen (basierend auf GPT-4o 128K).",
+    "step3Title": "Einzelne Tokens inspizieren",
+    "step3Text": "Durch die Token-Visualisierung scrollen, wo jedes farbige Segment ein BPE-Token mit seiner ID und seinem Text darstellt.",
+    "stepsTitle": "Tokens zählen",
+    "useCasesDesc1": "Prompt-Engineering",
+    "useCasesDesc2": "Modellvergleich",
+    "useCasesP1": "Tokens zählen, bevor Prompts an OpenAI-APIs gesendet werden, um innerhalb der Kontextgrenzen zu bleiben und Kosten zu schätzen.",
+    "useCasesP2": "Token-Anzahlen über verschiedene Texteingaben vergleichen, um Prompt-Effizienz für GPT-4o, o1 und GPT-5 zu optimieren.",
+    "useCasesTitle": "Gängige Anwendungsfälle"
   }
 }

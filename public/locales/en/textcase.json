@@ -34,9 +34,25 @@
   },
   "descriptions": {
     "aeoDefinition": "Text Case Converter is a free online tool that converts text between camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, and more. Instant conversion with real-time preview. No data leaves your browser.",
+    "whatIsTitle": "What is a Text Case Converter?",
+    "whatIs": "A text case converter transforms strings between naming conventions used in programming and writing. It detects the input format automatically and shows conversions to camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, lower case, UPPER CASE, Title Case, Sentence case, and path/case — all updated in real time as you type.",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesDesc1": "Language Migration",
+    "useCasesP1": "Rename variables when migrating code between languages — convert Python snake_case to JavaScript camelCase with one paste.",
+    "useCasesDesc2": "Naming Convention Enforcement",
+    "useCasesP2": "Generate consistent URL slugs, CSS class names, or environment variable names from plain English input.",
+    "stepsTitle": "How to Convert Text Case",
+    "step1Title": "Paste your text",
+    "step1Text": "Type or paste any string into the input field. The tool auto-detects the current case format.",
+    "step2Title": "Review conversions",
+    "step2Text": "All 11 case formats are displayed instantly in a table. The detected format is highlighted with a badge.",
+    "step3Title": "Copy the result",
+    "step3Text": "Click the copy button next to any converted string to copy it to your clipboard.",
     "faq1Q": "Can I convert multiple strings at once?",
     "faq1A": "Yes. Paste multiple lines and the tool converts each line independently. Multi-line conversion applies the selected case to every line.",
     "faq2Q": "Does it handle non-ASCII characters?",
-    "faq2A": "Yes. The tool correctly handles Unicode characters including accented letters, CJK characters, and emojis in case conversions."
+    "faq2A": "Yes. The tool correctly handles Unicode characters including accented letters, CJK characters, and emojis in case conversions.",
+    "faq3Q": "What case formats are supported?",
+    "faq3A": "The converter supports 11 formats: camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, lower case, UPPER CASE, Title Case, Sentence case, and path/case."
   }
 }

@@ -19,6 +19,13 @@
     "whatIsP1": "JSON (JavaScript Object Notation) is the universal data interchange format of the web. APIs return it, config files use it, and every modern programming language can parse it. Pair it with the [YAML converter](/yaml) or [CSV converter](/csv) for cross-format workflows. Formatting (pretty-printing) takes minified, hard-to-read JSON and adds indentation and line breaks so humans can scan and understand the structure at a glance.",
     "whatIsP2": "Compression (minification) does the reverse: it strips all unnecessary whitespace, producing the smallest possible valid JSON for production use — smaller payloads mean faster network transfers and lower bandwidth costs.",
     "whatIsP3": "This tool runs entirely in your browser. No data is ever sent to any server.",
+    "stepsTitle": "How to Format JSON",
+    "step1Title": "Paste your JSON",
+    "step1Text": "Paste raw JSON or JSON5 text into the input area. The tool auto-detects whether the input is valid JSON or JSON5.",
+    "step2Title": "Choose an action",
+    "step2Text": "Click Format to pretty-print, Compress to minify, or toggle JSON5 mode for relaxed parsing. Use Sort Keys to alphabetize object keys.",
+    "step3Title": "Copy the result",
+    "step3Text": "The formatted or compressed output appears instantly. Click the copy button or drag the output to the input for further editing.",
     "json5Title": "What is JSON5?",
     "json5P1": "JSON5 is a superset of JSON that adds human-friendly features: comments (// and /* */), trailing commas, single-quoted strings, unquoted object keys, hexadecimal numbers (0xFF), and special values like NaN and Infinity. It was created to make JSON easier to write by hand — especially for configuration files.",
     "json5P2": "Enable JSON5 mode to parse relaxed input directly. When JSON5 mode is off, Format and Compress automatically fall back to JSON5 parsing if strict JSON parsing fails — you'll see a notification when this happens. Output is always standard JSON.",
@@ -33,6 +40,8 @@
     "faq1Q": "What is JSON formatting?",
     "faq1A": "JSON formatting transforms raw or minified JSON into a readable, indented structure. This tool supports configurable indentation (2, 4, 8 spaces or tabs), minification, and validation — including JSON5 syntax.",
     "faq2Q": "What is the difference between JSON and JSON5?",
-    "faq2A": "JSON5 is a superset of JSON that supports comments, trailing commas, unquoted keys, and more relaxed syntax. This tool can parse and format both standard JSON and JSON5."
+    "faq2A": "JSON5 is a superset of JSON that supports comments, trailing commas, unquoted keys, and more relaxed syntax. This tool can parse and format both standard JSON and JSON5.",
+    "faq3Q": "Can I sort JSON keys?",
+    "faq3A": "Yes. Toggle the Sort Keys option to alphabetically sort all object keys in the output. This is useful for version control diffs and consistent data structure comparison."
   }
 }

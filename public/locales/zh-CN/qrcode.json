@@ -89,6 +89,23 @@
     "tipTest": "在正式打印或大规模分享前，务必用真实手机摄像头测试生成的二维码。",
     "faq1Q": "什么是二维码生成器？",
     "faq1A": "一个可定制的二维码生成器，支持文本、URL、WiFi 凭据和 vCard。可添加 Logo、更改颜色，并导出为 SVG 或 PNG。",
-    "aeoDefinition": "二维码生成器是一个免费的在线二维码生成工具，支持文本、URL、WiFi、vCard 等内容。支持自定义颜色、Logo 和点样式，可导出 SVG/PNG。不会发送任何数据到服务器。"
+    "aeoDefinition": "二维码生成器是一个免费的在线二维码生成工具，支持文本、URL、WiFi、vCard 等内容。支持自定义颜色、Logo 和点样式，可导出 SVG/PNG。不会发送任何数据到服务器。",
+    "whatIsTitle": "什么是二维码？",
+    "whatIs": "QR（Quick Response）码是存储黑白方块图案数据的二维条形码。由 Denso Wave 于 1994 年发明，可编码 URL、文本、联系信息、WiFi 凭据等——任何智能手机摄像头都能扫描。",
+    "useCasesTitle": "常见使用场景",
+    "useCasesP1": "分享网站链接——在名片、传单或海报上放置二维码，让人扫码即可打开链接。",
+    "useCasesP2": "WiFi 网络分享——编码 SSID、密码和加密方式，访客扫码即可连接。",
+    "useCasesP3": "vCard 名片交换——将姓名、电话、邮箱和组织信息嵌入可扫描的二维码。",
+    "stepsTitle": "如何创建二维码",
+    "step1Title": "选择内容类型",
+    "step1Desc": "根据要编码的内容选择文本/URL、WiFi、vCard、邮件、短信或 WhatsApp。",
+    "step2Title": "输入数据",
+    "step2Desc": "填写必填字段。URL 请粘贴完整链接，WiFi 请输入网络名称和密码。",
+    "step3Title": "自定义外观",
+    "step3Desc": "调整颜色、点样式、纠错等级，可选添加 Logo。使用 Logo 时建议选择较高的纠错等级（Q 或 H）。",
+    "faq2Q": "应该使用 SVG 还是 PNG 导出？",
+    "faq2A": "印刷品使用 SVG——可无损缩放到任意大小。数字展示、社交媒体或需要固定分辨率光栅图像时使用 PNG。PNG 导出支持最高 1024px 分辨率，适合高质量打印。",
+    "faq3Q": "可以在二维码中放入 Logo 吗？",
+    "faq3A": "可以。上传 Logo 图片后，工具会将其叠加在二维码中心。纠错等级会自动提升至 H（30% 恢复率）以保持可扫描性。Logo 尺寸建议不超过二维码面积的 30%。"
   }
 }

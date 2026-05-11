@@ -21,6 +21,18 @@
     "faq2Q": "哪些模型使用 o200k_base 編碼？",
     "faq2A": "o200k_base 編碼用於 GPT-4o、GPT-4.1、o1、o3、o4-mini 和 GPT-5。它支援約 20 萬個 Token 的詞彙表，相比早期的 cl100k_base 編碼在多語言覆蓋方面有顯著提升。",
     "faq3Q": "Token 計數有多準確？",
-    "faq3A": "對於標準文字，計數非常準確。本工具使用與 OpenAI 分詞器相同的 BPE 演算法。對於聊天格式的訊息（包含 system/user/assistant 角色），可能會有微小差異，因為本工具計算的是原始文字 Token，而非聊天範本 Token。"
+    "faq3A": "對於標準文字，計數非常準確。本工具使用與 OpenAI 分詞器相同的 BPE 演算法。對於聊天格式的訊息（包含 system/user/assistant 角色），可能會有微小差異，因為本工具計算的是原始文字 Token，而非聊天範本 Token。",
+    "stepsTitle": "如何計算 Token 數量",
+    "step1Title": "貼上文字",
+    "step1Text": "輸入或貼上要分詞的文字。Token 數量即時更新。",
+    "step2Title": "檢視計數",
+    "step2Text": "查看總 Token 數、字元數、字元/Token 比率和上下文視窗用量（基於 GPT-4o 128K）。",
+    "step3Title": "檢查個別 Token",
+    "step3Text": "捲動瀏覽 Token 視覺化，每個彩色片段代表一個 BPE Token，附有其 ID 和文字。",
+    "useCasesTitle": "常見使用場景",
+    "useCasesDesc1": "提示詞工程",
+    "useCasesP1": "在向 OpenAI API 傳送提示詞之前計算 Token 數量，以保持在上下文限制內並估算成本。",
+    "useCasesDesc2": "模型比較",
+    "useCasesP2": "比較不同文字輸入的 Token 數量，為 GPT-4o、o1 和 GPT-5 模型最佳化提示詞效率。"
   }
 }

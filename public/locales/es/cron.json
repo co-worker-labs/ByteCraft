@@ -143,7 +143,16 @@
     "faq1A": "Una expresión Cron es una cadena de 5-7 campos que define un horario para tareas recurrentes. Se usa por demonios cron, planificadores de tareas y frameworks como Spring y Quartz.",
     "faq2Q": "¿Qué dialectos Cron son compatibles?",
     "faq2A": "Tres: Estándar (5 campos), Spring (6 campos con segundos) y Quartz (7 campos con segundos y año). La herramienta detecta automáticamente el dialecto y muestra las próximas ejecuciones.",
-    "aeoDefinition": "El Generador de expresiones Cron es una herramienta gratuita online para construir y decodificar expresiones Cron. Soporta modos Estándar, Spring y Quartz con explicaciones legibles y vista previa de próxima ejecución. No sale ningún dato de tu navegador."
+    "aeoDefinition": "El Generador de expresiones Cron es una herramienta gratuita online para construir y decodificar expresiones Cron. Soporta modos Estándar, Spring y Quartz con explicaciones legibles y vista previa de próxima ejecución. No sale ningún dato de tu navegador.",
+    "stepsTitle": "Cómo construir una expresión Cron",
+    "step1Title": "Elige un modo",
+    "step1Text": "Selecciona Estándar (5 campos), Spring (6 campos con segundos) o Quartz (7 campos con año).",
+    "step2Title": "Configura cada campo",
+    "step2Text": "Usa los editores de campo para configurar los valores de minuto, hora, día, mes y día de la semana. O elige un preset como \"Cada 5 minutos\".",
+    "step3Title": "Revisa las próximas ejecuciones",
+    "step3Text": "La herramienta muestra las 5 próximas horas de ejecución y una descripción legible de tu expresión.",
+    "faq3Q": "¿Qué ocurre durante los cambios de horario de verano?",
+    "faq3A": "Las programaciones dentro del salto de primavera se ejecutan en el siguiente momento válido. Las programaciones dentro del solapamiento de otoño se ejecutan en la primera ocurrencia. Cambia a UTC para evitar el horario de verano por completo."
   },
   "editor": {
     "title": "Editar campo",

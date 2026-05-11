@@ -35,6 +35,13 @@
     "faq2A": "三种模式：Component（编码所有保留字符）、Whole URL（保留 URL 结构如 ://、?、&）和 Form（空格变为 + 而非 %20）。",
     "faq3Q": "何时应使用 URL 编码？",
     "faq3A": "在查询参数中传递数据、在 HTML 中嵌入 URL，或在 API 调用中处理特殊字符时应使用 URL 编码。",
-    "aeoDefinition": "URL 编解码工具是一个免费的在线 URL 字符串编码和解码工具。支持组件模式、完整 URL 模式和表单模式。完全在浏览器中运行，不会发送任何数据到服务器。"
+    "aeoDefinition": "URL 编解码工具是一个免费的在线 URL 字符串编码和解码工具。支持组件模式、完整 URL 模式和表单模式。完全在浏览器中运行，不会发送任何数据到服务器。",
+    "stepsTitle": "如何编码或解码 URL",
+    "step1Title": "输入文本",
+    "step1Text": "粘贴要编码的 URL 或文本，或粘贴已编码的百分号编码字符串进行解码。",
+    "step2Title": "选择模式",
+    "step2Text": "根据编码内容选择 Component、Whole URL 或 Form 模式。工具实时转换。",
+    "step3Title": "复制结果",
+    "step3Text": "编码或解码输出即时更新。点击复制按钮获取结果。"
   }
 }

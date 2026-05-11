@@ -73,6 +73,18 @@
     "faq2Q": "Is my database uploaded to a server?",
     "faq2A": "No. The database is loaded into browser memory using sql.js (SQLite compiled to WebAssembly). All operations happen locally.",
     "faq3Q": "What SQL features are supported?",
-    "faq3A": "Full read-only SQLite SQL syntax including SELECT, JOINs, subqueries, aggregations, EXPLAIN, and PRAGMA. Write operations (INSERT, UPDATE, DELETE, DDL) are rejected for safety. The editor provides autocomplete for table and column names."
+    "faq3A": "Full read-only SQLite SQL syntax including SELECT, JOINs, subqueries, aggregations, EXPLAIN, and PRAGMA. Write operations (INSERT, UPDATE, DELETE, DDL) are rejected for safety. The editor provides autocomplete for table and column names.",
+    "stepsTitle": "How to View a SQLite Database",
+    "step1Title": "Open a database file",
+    "step1Text": "Drag and drop a .db, .sqlite, or .sqlite3 file, or click \"Try sample database\" to explore a demo.",
+    "step2Title": "Browse tables",
+    "step2Text": "Click any table in the sidebar to view its schema and data. Use pagination to navigate large datasets.",
+    "step3Title": "Run SQL queries",
+    "step3Text": "Write SQL in the editor with autocomplete support. Run SELECT queries and export results as CSV or JSON.",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesDesc1": "Quick data inspection",
+    "useCasesP1": "Open SQLite files from mobile apps, browsers, or embedded devices without installing desktop tools.",
+    "useCasesDesc2": "Data analysis",
+    "useCasesP2": "Run ad-hoc SQL queries against your data and export results. Use [CSV converter](/csv) for further processing."
   }
 }

@@ -38,6 +38,18 @@
     "faq2A": "Palabras, caracteres, caracteres sin espacios, oraciones, párrafos, caracteres CJK, tiempo de lectura y tiempo de habla — todo actualizado en tiempo real mientras escribes.",
     "faq3Q": "¿Puedo rastrear palabras clave específicas?",
     "faq3A": "Sí. Añade palabras clave personalizadas para rastrear su frecuencia y conteo en tu texto. La pestaña Palabras clave muestra las palabras principales y frases de 2 palabras.",
-    "aeoDefinition": "El Contador de palabras es una herramienta gratuita online para análisis de texto en tiempo real incluyendo conteo de palabras, caracteres, oraciones, tiempo de lectura y densidad de palabras clave. Soporta texto CJK. No se envían datos a ningún servidor."
+    "aeoDefinition": "El Contador de palabras es una herramienta gratuita online para análisis de texto en tiempo real incluyendo conteo de palabras, caracteres, oraciones, tiempo de lectura y densidad de palabras clave. Soporta texto CJK. No se envían datos a ningún servidor.",
+    "stepsTitle": "Cómo contar palabras y caracteres",
+    "step1Title": "Pega tu texto",
+    "step1Text": "Escribe o pega texto en el área de entrada. El conteo de palabras, caracteres y tiempo de lectura se actualizan en tiempo real.",
+    "step2Title": "Revisa el resumen",
+    "step2Text": "La pestaña Resumen muestra palabras, caracteres, oraciones, párrafos, caracteres CJK, tiempo de lectura y tiempo de habla.",
+    "step3Title": "Analiza palabras clave",
+    "step3Text": "Cambia a la pestaña Palabras clave para ver las palabras más frecuentes y análisis de frases de 2 palabras, o añade palabras clave personalizadas para rastrear.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesDesc1": "Escritura y edición",
+    "useCasesP1": "Rastrea conteos de palabras para artículos, ensayos o publicaciones en redes sociales que tienen límites de caracteres.",
+    "useCasesDesc2": "Estimaciones de traducción",
+    "useCasesP2": "Obtén conteos precisos de palabras y caracteres para estimar tiempo y coste de traducción, incluyendo conteo de caracteres CJK."
   }
 }

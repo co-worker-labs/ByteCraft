@@ -7,6 +7,11 @@ type GenerateMetaOptions = {
   path: string;
   title?: string;
   description: string;
+  ogImage?: {
+    title: string;
+    emoji: string;
+    desc: string;
+  };
 };
 
 const OG_LOCALES: Record<string, string> = {
@@ -27,6 +32,7 @@ export function generatePageMeta({
   path,
   title,
   description,
+  ogImage,
 }: GenerateMetaOptions): Metadata {
   const { defaultLocale, locales } = routing;
 
@@ -64,6 +70,12 @@ export function generatePageMeta({
 
   if (title) {
     result.title = title;
+  }
+
+  if (ogImage) {
+    const ogImageUrl = `/api/og?title=${encodeURIComponent(ogImage.title)}&icon=${encodeURIComponent(ogImage.emoji)}&desc=${encodeURIComponent(ogImage.desc)}`;
+    result.openGraph!.images = [ogImageUrl];
+    result.twitter!.images = [ogImageUrl];
   }
 
   return result;

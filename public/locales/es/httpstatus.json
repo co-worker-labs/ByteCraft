@@ -453,6 +453,22 @@
     "faq1Q": "¿Qué son los códigos de estado HTTP?",
     "faq1A": "Los códigos de estado HTTP son números de 3 dígitos devueltos por un servidor en respuesta a una petición del cliente. Indican si la petición fue exitosa, redirigida o encontró un error.",
     "faq2Q": "¿Cuántos códigos de estado están documentados?",
-    "faq2A": "La herramienta cubre todos los códigos de estado estándar en 5 categorías: 1xx (Informativo), 2xx (Éxito), 3xx (Redirección), 4xx (Error del cliente) y 5xx (Error del servidor)."
+    "faq2A": "La herramienta cubre todos los códigos de estado estándar en 5 categorías: 1xx (Informativo), 2xx (Éxito), 3xx (Redirección), 4xx (Error del cliente) y 5xx (Error del servidor).",
+    "whatIsTitle": "¿Qué son los códigos de estado HTTP?",
+    "whatIs": "Los códigos de estado HTTP son números de tres dígitos devueltos por un servidor en respuesta a una solicitud del cliente. Indican si la solicitud fue exitosa, redirigida o encontró un error. Los códigos se agrupan en cinco clases: 1xx (Informativo), 2xx (Éxito), 3xx (Redirección), 4xx (Error del cliente) y 5xx (Error del servidor). Esta referencia cubre todos los códigos registrados por IANA más códigos no oficiales comunes de Nginx y Cloudflare.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesDesc1": "Depuración de APIs",
+    "useCasesP1": "Depura respuestas de API buscando códigos de estado desconocidos y entendiendo su significado, causas comunes y contexto de uso.",
+    "useCasesDesc2": "Diseño de manejo de errores",
+    "useCasesP2": "Implementa un manejo de errores adecuado en tu aplicación entendiendo qué códigos esperar y cómo responder a cada uno.",
+    "stepsTitle": "Cómo usar la referencia de códigos de estado HTTP",
+    "step1Title": "Busca o filtra",
+    "step1Text": "Busca por número de código, nombre de estado o descripción. Filtra por categoría usando los botones: de 1xx a 5xx o códigos no oficiales.",
+    "step2Title": "Revisa los detalles",
+    "step2Text": "Pasa el cursor sobre una fila (escritorio) o tócala (móvil) para expandir las notas de uso y causas comunes de ese código de estado.",
+    "step3Title": "Consulta la especificación",
+    "step3Text": "Cada código enlaza a su especificación RFC. Haz clic en el enlace de la especificación para leer la definición autoritativa.",
+    "faq3Q": "¿Cuál es el código de estado HTTP más común?",
+    "faq3A": "200 OK es el más común — significa que la solicitud tuvo éxito. 404 Not Found (el recurso no existe) y 500 Internal Server Error (fallo del lado del servidor) también son muy comunes. Entender estos códigos te ayuda a diagnosticar problemas más rápido."
   }
 }

@@ -29,6 +29,15 @@
     "faq1A": "Base64 ist ein Binär-zu-Text-Kodierungsschema, das Binärdaten mit 64 ASCII-Zeichen (A-Z, a-z, 0-9, +, /) darstellt. Es wird häufig verwendet, um Daten in URLs, HTML und JSON einzubetten.",
     "faq2Q": "Ist Base64 Verschlüsselung?",
     "faq2A": "Nein. Base64 ist Kodierung, keine Verschlüsselung. Es bietet keine Sicherheit — jeder kann es dekodieren. Verwenden Sie das Verschlüsselungs-/Entschlüsselungs-Tool für echten Datenschutz.",
-    "aeoDefinition": "Der Base64-Kodierer/Dekodierer ist ein kostenloses Online-Tool zum Kodieren und Dekodieren von Base64-Zeichenketten. Unterstützt Basic-Authentifizierungs-Header, mehrere Zeichensätze und Echtzeit-Konvertierung. Die gesamte Verarbeitung läuft in Ihrem Browser."
+    "aeoDefinition": "Der Base64-Kodierer/Dekodierer ist ein kostenloses Online-Tool zum Kodieren und Dekodieren von Base64-Zeichenketten. Unterstützt Basic-Authentifizierungs-Header, mehrere Zeichensätze und Echtzeit-Konvertierung. Die gesamte Verarbeitung läuft in Ihrem Browser.",
+    "faq3Q": "Kann ich Base64 für URL-sichere Kodierung verwenden?",
+    "faq3A": "Standard-Base64 verwendet die Zeichen + und /, die nicht URL-sicher sind. Verwenden Sie für URLs das URL-Kodierer-Tool oder die Base64url-Variante, die + durch - und / durch _ ersetzt.",
+    "step1Title": "Text eingeben",
+    "step1Text": "Geben Sie den zu kodierenden Klartext ein oder fügen Sie eine bestehende Base64-Zeichenfolge zum Dekodieren ein.",
+    "step2Title": "Kodieren oder Dekodieren wählen",
+    "step2Text": "Das Tool konvertiert in Echtzeit. Wechseln Sie mit einem Klick zwischen Kodierungs- und Dekodierungsmodus.",
+    "step3Title": "Ergebnis kopieren",
+    "step3Text": "Die kodierte oder dekodierte Ausgabe erscheint sofort. Klicken Sie auf die Kopiertaste, um das Ergebnis zu übernehmen.",
+    "stepsTitle": "Base64 kodieren oder dekodieren"
   }
 }

@@ -45,6 +45,21 @@
     "keyFormats": "HMAC: cualquier cadena UTF-8. Asimétrico: solo PEM, PKCS8 (-----BEGIN PRIVATE KEY-----) para firmar, SPKI (-----BEGIN PUBLIC KEY-----) para verificar. PKCS1, SEC1, PEM cifrado y certificados X.509 no se aceptan; la herramienta te indicará el comando openssl exacto para convertirlos.",
     "faq1Q": "¿Qué es un JWT?",
     "faq1A": "JSON Web Token (JWT) es un estándar abierto (RFC 7519) para transmitir información de forma segura entre partes como un objeto JSON. Se usa comúnmente para autenticación e intercambio de información.",
-    "aeoDefinition": "El Depurador de JWT es una herramienta gratuita online para codificar, decodificar y verificar JSON Web Tokens. Soporta HS256, RS256, ES256 y más algoritmos. Todo el procesamiento se ejecuta en tu navegador — no se envían tokens a ningún servidor."
+    "aeoDefinition": "El Depurador de JWT es una herramienta gratuita online para codificar, decodificar y verificar JSON Web Tokens. Soporta HS256, RS256, ES256 y más algoritmos. Todo el procesamiento se ejecuta en tu navegador — no se envían tokens a ningún servidor.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesP1": "Autenticar solicitudes de API — incluye un JWT en la cabecera Authorization (token Bearer) para verificar la identidad y permisos del solicitante.",
+    "useCasesP2": "Decodificar y depurar tokens durante el desarrollo — inspecciona las claims de cabecera y payload (iss, sub, exp, iat) sin escribir código.",
+    "useCasesP3": "Verificar firmas de token contra un secreto compartido (HMAC) o clave pública (RSA/ECDSA) para asegurar la integridad antes de confiar en las claims.",
+    "stepsTitle": "Cómo decodificar un JWT",
+    "step1Title": "Pega tu JWT",
+    "step1Desc": "Copia la cadena JWT completa (tres segmentos Base64URL separados por puntos) y pégala en el campo de entrada de la pestaña Decodificar.",
+    "step2Title": "Inspecciona la cabecera y el payload",
+    "step2Desc": "La herramienta decodifica automáticamente la cabecera (algoritmo, tipo) y el payload (claims) en JSON legible. Comprueba la claim exp para ver si el token ha expirado.",
+    "step3Title": "Verifica la firma (opcional)",
+    "step3Desc": "Ve a la sección de Verificar, introduce el secreto o la clave pública y haz clic en Verificar para confirmar que el token fue firmado por la parte esperada.",
+    "faq2Q": "¿Cuál es la diferencia entre algoritmos JWT HMAC y RSA?",
+    "faq2A": "Los algoritmos HMAC (HS256/384/512) usan un secreto compartido — tanto el emisor como el verificador conocen la misma clave. Los algoritmos RSA (RS256/384/512) usan un par de claves pública/privada — el emisor firma con la clave privada y cualquiera con la clave pública puede verificar. Usa HMAC para servidor a servidor, RSA para sistemas distribuidos donde el verificador no debería poder crear tokens.",
+    "faq3Q": "¿Qué ocurre cuando un JWT expira?",
+    "faq3A": "La claim exp en el payload especifica el timestamp de expiración. Después de ese momento, el servidor debería rechazar el token. Esta herramienta te muestra el exp decodificado para que puedas comprobar si un token sigue siendo válido. Ten en cuenta que la expiración JWT es una claim, no aplicada por el token en sí — el servidor debe validarla."
   }
 }

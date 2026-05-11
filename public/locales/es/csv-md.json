@@ -34,6 +34,13 @@
     "faq2A": "Sí. Elige alineación izquierda, centro o derecha por columna. La herramienta genera la sintaxis de alineación Markdown correcta.",
     "faq3Q": "¿Soporta archivos CSV grandes?",
     "faq3A": "El procesamiento se realiza completamente en tu navegador. Archivos de hasta varios MB funcionan bien, limitados solo por la memoria de tu dispositivo.",
-    "aeoDefinition": "El Conversor de CSV ↔ Tabla Markdown es una herramienta gratuita online para convertir entre formatos CSV y tabla Markdown. Conversión bidireccional en tiempo real. Se ejecuta completamente en tu navegador."
+    "aeoDefinition": "El Conversor de CSV ↔ Tabla Markdown es una herramienta gratuita online para convertir entre formatos CSV y tabla Markdown. Conversión bidireccional en tiempo real. Se ejecuta completamente en tu navegador.",
+    "stepsTitle": "Cómo convertir CSV a tablas Markdown",
+    "step1Title": "Pega tu CSV o Markdown",
+    "step1Text": "Pega CSV en el panel izquierdo o texto de tabla Markdown en el panel derecho. La herramienta detecta automáticamente la dirección.",
+    "step2Title": "Ajusta la configuración",
+    "step2Text": "Elige un delimitador y la alineación de columnas (izquierda, centro, derecha o ninguna) para la salida.",
+    "step3Title": "Copia el resultado",
+    "step3Text": "La salida convertida aparece al instante. Cambia entre los modos Editar y Vista previa para tablas Markdown."
   }
 }

@@ -276,7 +276,7 @@ function Description() {
   const tc = useTranslations("common");
   const locale = useLocale();
 
-  const faqItems = [1, 2].map((i) => ({
+  const faqItems = [1, 2, 3].map((i) => ({
     title: t(`descriptions.faq${i}Q`),
     content: <p>{t(`descriptions.faq${i}A`)}</p>,
   }));

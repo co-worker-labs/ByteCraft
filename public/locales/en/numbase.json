@@ -13,10 +13,26 @@
   "descriptions": {
     "whatIsTitle": "What is Number Base Conversion?",
     "aeoDefinition": "Number Base Converter is a free online tool for converting numbers between binary, octal, decimal, and hexadecimal. Supports 8/16/32/64-bit two's complement and a visual bit editor. Runs entirely in your browser.",
-    "whatIs": "This tool converts numbers between binary (base 2), octal (base 8), decimal (base 10), and hexadecimal (base 16) in real time. It also supports 8/16/32/64-bit two's complement representation with a visual bit editor. Related: [Color converter](/color) for hex color codes, [Storage unit converter](/storageunit) for byte calculations.",
+    "whatIs": "This tool converts numbers between binary (base 2), octal (base 8), decimal (base 10), and hexadecimal (base 16) in real time. It also supports 8/16/32/64-bit two's complement representation with a visual bit editor for toggling individual bits.",
     "twosComplementTitle": "Two's Complement",
     "twosComplement": "Two's complement is the standard way to represent signed integers in binary. The most significant bit (MSB) acts as the sign bit: 0 for positive, 1 for negative. To get the negative value, invert all bits and add 1. For example, in 8-bit mode, -1 is represented as 11111111 (0xFF).",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesDesc1": "Systems Programming",
+    "useCasesP1": "Debug low-level protocols, network packets, or binary file formats that use hexadecimal or octal notation.",
+    "useCasesDesc2": "Hardware & Color",
+    "useCasesP2": "Convert color values between hex and decimal, or calculate memory addresses and offsets during embedded development.",
+    "stepsTitle": "How to Convert Number Bases",
+    "step1Title": "Enter a value",
+    "step1Text": "Type a number in any base — decimal, hexadecimal (0x prefix), octal (0o prefix), or binary (0b prefix). All other bases update instantly.",
+    "step2Title": "Choose bit width",
+    "step2Text": "Select 8, 16, 32, or 64-bit mode to see the two's complement representation and toggle individual bits in the visual editor.",
+    "step3Title": "Copy the result",
+    "step3Text": "Click the copy button next to any base conversion to copy the formatted value.",
     "faq1Q": "Can I edit individual bits?",
-    "faq1A": "Yes. The bit editor shows the binary representation and lets you toggle individual bits, instantly updating all other base conversions."
+    "faq1A": "Yes. The bit editor shows the binary representation and lets you toggle individual bits, instantly updating all other base conversions.",
+    "faq2Q": "What is two's complement used for?",
+    "faq2A": "Two's complement is how computers represent signed integers. It lets the CPU use the same circuit for addition and subtraction, and avoids the +0/-0 problem of sign-magnitude representation.",
+    "faq3Q": "Does it support negative numbers?",
+    "faq3A": "Yes. Enter a negative decimal number and the tool displays the two's complement binary, hex, and octal representations based on the selected bit width."
   }
 }

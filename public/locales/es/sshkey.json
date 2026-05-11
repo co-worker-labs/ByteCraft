@@ -39,6 +39,12 @@
     "faq3A": "Ve a Settings → SSH and GPG keys → New SSH key. Ponle un título descriptivo, pega el contenido completo de tu clave pública (la línea que empieza con ssh-ed25519 o ssh-rsa) y haz clic en Add SSH key. También puedes usar la CLI de GitHub: gh ssh-key add ~/.ssh/id_ed25519.pub.",
     "faq4Q": "¿Es seguro generar claves SSH en el navegador?",
     "faq4A": "Sí. Esta herramienta usa la Web Crypto API, que proporciona las mismas primitivas criptográficas que OpenSSL y OpenSSH. La generación de claves ocurre completamente en la memoria del navegador — no se envían datos a ningún servidor. Las claves generadas se pierden al cerrar o recargar la página, así que descárgalas o cópialas antes de salir.",
-    "aeoDefinition": "El Generador de claves SSH es una herramienta gratuita online para generar pares de claves SSH RSA y Ed25519 completamente en tu navegador. Soporta cifrado con frase de contraseña y muestra de huella digital. No se envían datos a ningún servidor."
+    "aeoDefinition": "El Generador de claves SSH es una herramienta gratuita online para generar pares de claves SSH RSA y Ed25519 completamente en tu navegador. Soporta cifrado con frase de contraseña y muestra de huella digital. No se envían datos a ningún servidor.",
+    "whatIsTitle": "¿Qué es una clave SSH?",
+    "whatIs": "Un par de claves SSH consta de una clave privada y una clave pública usadas para autenticación segura a servidores y servicios (plataformas Git, proveedores cloud, máquinas remotas). La clave privada permanece en tu dispositivo; la clave pública se coloca en el servidor. Las claves SSH son más seguras que las contraseñas porque resisten ataques de fuerza bruta y phishing.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesP1": "Autenticarse en plataformas Git (GitHub, GitLab, Bitbucket) sin escribir tu contraseña en cada push o pull.",
+    "useCasesP2": "Acceso shell seguro a servidores remotos — añade tu clave pública a ~/.ssh/authorized_keys e inicia sesión sin contraseña.",
+    "useCasesP3": "Claves de despliegue CI/CD — genera un par de claves dedicado para sistemas automatizados que accedan a repositorios o servidores sin credenciales compartidas."
   }
 }

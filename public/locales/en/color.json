@@ -63,7 +63,13 @@
     "fileNotImage": "Please upload a PNG, JPG, or WebP image"
   },
   "descriptions": {
-    "title": "About Color Conversion",
+    "aeoDefinition": "Color Converter is a free online tool for converting between HEX, RGB, HSL, OKLCH and other color spaces. Includes a visual picker, image palette extraction, WCAG contrast checker, and color-blindness preview. Runs entirely in your browser.",
+    "whatIsTitle": "What is the Color Tool?",
+    "whatIs": "A comprehensive color utility that converts between 7 color spaces (HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH), generates color harmonies, checks contrast ratios for accessibility, simulates color vision deficiencies, and extracts palettes from images.",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesP1": "Picking and converting colors for web development — get the exact HEX, RGB, HSL, or OKLCH value you need for CSS or Tailwind.",
+    "useCasesP2": "Checking text contrast against a background color to meet WCAG accessibility guidelines (AA/AAA) or the newer APCA standard.",
+    "useCasesP3": "Extracting dominant colors from an image to build a cohesive design palette, then generating complementary, analogous, or triadic harmonies.",
     "introP1": "This color tool converts between 7 color spaces, generates harmonies, checks contrast ratios (WCAG and APCA), simulates color blindness, and extracts palettes from images. See [Number Base converter](/numbase) for hex calculations, or [Image compressor](/image) for image processing.",
     "spacesTitle": "Color Spaces",
     "spaceHex": "HEX — compact 6/8-digit RGB notation. The default for CSS.",
@@ -81,7 +87,6 @@
     "tipEyedropper": "Use the eyedropper to pick a color from any pixel on your screen (Chromium browsers).",
     "tipImage": "Drop an image into the Palette tab to extract its 6 dominant colors via median-cut quantization.",
     "tipOklch": "Tailwind v4 emits colors in OKLCH for perceptual smoothness — copy the @theme block to align with that workflow.",
-    "aeoDefinition": "Color Converter is a free online tool for converting between HEX, RGB, HSL, OKLCH and other color spaces. Includes a visual picker, image palette extraction, WCAG contrast checker, and color-blindness preview. Runs entirely in your browser.",
     "faq1Q": "What is the Color Tool?",
     "faq1A": "The Color Tool is a comprehensive color utility that supports HEX, RGB, HSL, and OKLCH color models with a visual picker, conversions, and contrast checking.",
     "faq2Q": "What is OKLCH color space?",

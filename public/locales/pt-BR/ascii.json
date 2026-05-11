@@ -22,6 +22,15 @@
     "faq2Q": "Quais caracteres de controle estão incluídos?",
     "faq2A": "Todos os 33 códigos de controle (0-31 e 127) incluindo NUL, TAB, LF, CR, ESC e DEL, com descrições de suas funções originais de teletipo.",
     "text": "ASCII significa American Standard Code for Information Interchange (Código Padrão Americano para Intercâmbio de Informações). Computadores só conseguem entender números, então um código ASCII é a representação numérica de um caractere como \"a\" ou \"@\" ou de alguma ação. O ASCII foi desenvolvido há muito tempo e hoje os caracteres não imprimíveis raramente são usados para seu propósito original. Abaixo está a tabela de caracteres ASCII, que inclui descrições dos primeiros 32 caracteres não imprimíveis. O ASCII foi originalmente projetado para uso com teletipos, então as descrições são um tanto quanto obscuras. Se alguém diz que quer seu currículo em formato ASCII, isso significa que querem texto puro sem formatação como tabs, negrito ou sublinhado — o formato bruto que qualquer computador consegue entender. Isso geralmente é para que possam importar o arquivo em seus próprios aplicativos sem problemas. O Bloco de Notas cria texto ASCII, ou no MS Word você pode salvar um arquivo como \"somente texto\".",
-    "aeoDefinition": "A Tabela ASCII é uma referência online gratuita de caracteres ASCII com códigos hexadecimais, octais, decimais e HTML. Inclui busca, filtragem e ferramentas de conversão. Roda inteiramente no seu navegador."
+    "aeoDefinition": "A Tabela ASCII é uma referência online gratuita de caracteres ASCII com códigos hexadecimais, octais, decimais e HTML. Inclui busca, filtragem e ferramentas de conversão. Roda inteiramente no seu navegador.",
+    "stepsTitle": "Como usar a Tabela ASCII",
+    "step1Title": "Busque um caractere",
+    "step1Text": "Digite um caractere, número decimal ou valor hex na barra de busca. A tabela filtra em tempo real.",
+    "step2Title": "Navegue por categoria",
+    "step2Text": "Alterne entre as abas Caracteres Imprimíveis e Tabelas de Códigos de Controle para explorar diferentes faixas ASCII.",
+    "step3Title": "Consulte conversões",
+    "step3Text": "Cada linha mostra decimal, binário, octal, hex, código HTML e glifo — passe o mouse para detalhes.",
+    "faq3Q": "Qual a diferença entre ASCII e UTF-8?",
+    "faq3A": "ASCII é uma codificação de 7 bits (0-127). UTF-8 é uma codificação de comprimento variável compatível com ASCII — os primeiros 128 code points são idênticos. UTF-8 se estende para cobrir todos os caracteres Unicode."
   }
 }

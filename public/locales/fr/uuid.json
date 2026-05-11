@@ -67,6 +67,19 @@
     "faq1A": "UUID (Identifiant Universellement Unique) est une norme d'identifiant de 128 bits. Cet outil génère des UUID v4 (aléatoires) et v7 (ordonnés dans le temps) qui sont uniques sans coordination centrale.",
     "faq2Q": "Combien d'UUID puis-je générer à la fois ?",
     "faq2A": "Vous pouvez générer jusqu'à 1 000 UUID en un seul lot. Toute la génération se fait dans votre navigateur en utilisant crypto.getRandomValues().",
-    "aeoDefinition": "Le Générateur d'UUID est un outil gratuit en ligne pour générer des UUID v1, v3, v4, v5 et v7 en lot. Conforme à la RFC 4122/9562. Fonctionne entièrement dans votre navigateur."
+    "aeoDefinition": "Le Générateur d'UUID est un outil gratuit en ligne pour générer des UUID v1, v3, v4, v5 et v7 en lot. Conforme à la RFC 4122/9562. Fonctionne entièrement dans votre navigateur.",
+    "faq3Q": "Puis-je générer le même UUID à chaque fois ?",
+    "faq3A": "Oui. Utilisez v3 (MD5) ou v5 (SHA-1) avec le même espace de noms et le même nom — ils produisent toujours le même UUID déterministe. C'est utile pour générer des identifiants cohérents à partir d'entrées connues comme des URL ou des noms de domaine.",
+    "step1Title": "Sélectionner votre version d'UUID",
+    "step1Desc": "Choisissez v4 (aléatoire, usage général), v7 (ordonné dans le temps, adapté aux bases de données), v3/v5 (déterministe depuis espace de noms + nom) ou v1 (horodatage + MAC).",
+    "step2Title": "Définir la quantité et le format",
+    "step2Desc": "Ajustez le curseur pour générer jusqu'à 100 UUID à la fois. Choisissez le format standard, sans tirets ou entre accolades, et activez les majuscules si nécessaire.",
+    "step3Title": "Copier ou télécharger",
+    "step3Desc": "Cliquez sur le bouton copier pour un UUID unique, ou téléchargez tous les UUID générés dans un fichier .txt pour un usage en lot.",
+    "stepsTitle": "Comment générer des UUID",
+    "useCasesP1": "Clés primaires de base de données — les UUID évitent les collisions d'ID dans les bases de données distribuées sans nécessiter de coordinateur central.",
+    "useCasesP2": "Identifiants de systèmes distribués — générez des ID uniques across plusieurs services, régions ou centres de données sans coordination.",
+    "useCasesP3": "Jetons de session et traçage de requêtes — utilisez les UUID comme ID de corrélation garantis uniques across toute votre infrastructure.",
+    "useCasesTitle": "Cas d'utilisation courants"
   }
 }

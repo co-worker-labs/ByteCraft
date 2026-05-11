@@ -13,6 +13,15 @@
     "faq1Q": "¿Cuántas palabras hay en la lista BIP39?",
     "faq1A": "La lista de palabras BIP39 en inglés contiene exactamente 2048 palabras. Cada palabra codifica 11 bits de datos, por lo que una frase mnemotécnica de 12 palabras representa 132 bits (128 bits de entropía + 4 bits de checksum) y una de 24 palabras representa 264 bits.",
     "faq2Q": "¿Puedo usar palabras BIP39 en otros idiomas?",
-    "faq2A": "BIP39 soporta múltiples idiomas incluyendo inglés, japonés, coreano, español, chino (simplificado y tradicional), francés, italiano, portugués y checo. Sin embargo, el inglés es el más utilizado y recomendado por compatibilidad."
+    "faq2A": "BIP39 soporta múltiples idiomas incluyendo inglés, japonés, coreano, español, chino (simplificado y tradicional), francés, italiano, portugués y checo. Sin embargo, el inglés es el más utilizado y recomendado por compatibilidad.",
+    "stepsTitle": "Cómo usar la lista de palabras BIP39",
+    "step1Title": "Busca una palabra",
+    "step1Text": "Escribe una palabra o subcadena en la barra de búsqueda. Las coincidencias se resaltan y filtran en tiempo real.",
+    "step2Title": "Busca por índice",
+    "step2Text": "Cada palabra tiene un índice numérico (1-2048). Busca por número para encontrar la palabra correspondiente al instante.",
+    "step3Title": "Verifica tu frase mnemónica",
+    "step3Text": "Comprueba que cada palabra de tu frase mnemónica existe en la lista BIP39 y está escrita correctamente.",
+    "faq3Q": "¿Por qué ninguna pareja de palabras comparte las primeras cuatro letras?",
+    "faq3A": "Es una decisión de diseño deliberada para reducir errores de transcripción. Al escribir una frase de recuperación en una cartera hardware, solo necesitas las primeras cuatro letras para identificar cada palabra de forma única, haciendo el proceso más rápido y menos propenso a errores."
   }
 }

@@ -22,6 +22,15 @@
     "faq1Q": "¿Qué es ASCII?",
     "faq1A": "ASCII (American Standard Code for Information Interchange) es un estándar de codificación de caracteres de 7 bits que cubre 128 caracteres: letras inglesas, dígitos, puntuación y códigos de control.",
     "faq2Q": "¿Qué caracteres de control están incluidos?",
-    "faq2A": "Los 33 códigos de control (0-31 y 127) incluyendo NUL, TAB, LF, CR, ESC y DEL, con descripciones de sus funciones originales de teletipo."
+    "faq2A": "Los 33 códigos de control (0-31 y 127) incluyendo NUL, TAB, LF, CR, ESC y DEL, con descripciones de sus funciones originales de teletipo.",
+    "stepsTitle": "Cómo usar la tabla ASCII",
+    "step1Title": "Busca un carácter",
+    "step1Text": "Escribe un carácter, número decimal o valor hexadecimal en la barra de búsqueda. La tabla se filtra en tiempo real.",
+    "step2Title": "Navega por categoría",
+    "step2Text": "Cambia entre las pestañas de Caracteres imprimibles y Tabla de códigos de control para explorar diferentes rangos ASCII.",
+    "step3Title": "Consulta conversiones",
+    "step3Text": "Cada fila muestra decimal, binario, octal, hexadecimal, código HTML y glifo. Pasa el cursor para ver los detalles.",
+    "faq3Q": "¿Cuál es la diferencia entre ASCII y UTF-8?",
+    "faq3A": "ASCII es una codificación de 7 bits (0-127). UTF-8 es una codificación de longitud variable compatible con ASCII: los primeros 128 puntos de código son idénticos. UTF-8 se extiende para cubrir todos los caracteres Unicode."
   }
 }

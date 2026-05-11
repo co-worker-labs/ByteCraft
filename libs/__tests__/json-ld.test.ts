@@ -188,3 +188,35 @@ describe("buildCategorySchema", () => {
     expect(elements[1].position).toBe(2);
   });
 });
+
+describe("buildToolSchemas — sameAs", () => {
+  const base = {
+    name: "JSON Formatter",
+    description: "Format and validate JSON online",
+    path: "/json",
+  };
+
+  it("injects sameAs into WebApplication schema when provided", () => {
+    const schemas = buildToolSchemas({
+      ...base,
+      sameAs: ["https://www.json.org", "https://datatracker.ietf.org/doc/html/rfc8259"],
+    });
+    const webApp = schemas[0] as Record<string, unknown>;
+    expect(webApp.sameAs).toEqual([
+      "https://www.json.org",
+      "https://datatracker.ietf.org/doc/html/rfc8259",
+    ]);
+  });
+
+  it("omits sameAs when not provided", () => {
+    const schemas = buildToolSchemas(base);
+    const webApp = schemas[0] as Record<string, unknown>;
+    expect(webApp.sameAs).toBeUndefined();
+  });
+
+  it("omits sameAs when empty array", () => {
+    const schemas = buildToolSchemas({ ...base, sameAs: [] });
+    const webApp = schemas[0] as Record<string, unknown>;
+    expect(webApp.sameAs).toBeUndefined();
+  });
+});

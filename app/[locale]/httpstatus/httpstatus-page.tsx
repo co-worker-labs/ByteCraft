@@ -10,8 +10,7 @@ import { StyledInput } from "../../../components/ui/input";
 import { useIsMobile } from "../../../hooks/use-is-mobile";
 import { HttpStatusCode, getCategory, getStatusCodes } from "../../../libs/httpstatus";
 import RelatedTools from "../../../components/related-tools";
-import { Accordion } from "../../../components/ui/accordion";
-import { CircleHelp } from "lucide-react";
+import DescriptionSection from "../../../components/description-section";
 
 const statusCodes = getStatusCodes();
 
@@ -278,35 +277,6 @@ function TopDescription() {
   );
 }
 
-function BottomDescription() {
-  const t = useTranslations("httpstatus");
-  const tc = useTranslations("common");
-
-  const faqItems = [1, 2].map((i) => ({
-    title: t(`descriptions.faq${i}Q`),
-    content: <p>{t(`descriptions.faq${i}A`)}</p>,
-  }));
-
-  return (
-    <section id="description" className="py-3">
-      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
-        <p className="text-fg-secondary text-sm leading-relaxed">
-          {t("descriptions.aeoDefinition")}
-        </p>
-      </div>
-      <div className="mt-8">
-        <div className="flex items-center gap-2 mb-4">
-          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
-          <h2 className="font-semibold text-fg-primary text-base text-pretty">
-            {tc("descriptions.faqTitle")}
-          </h2>
-        </div>
-        <Accordion items={faqItems} />
-      </div>
-    </section>
-  );
-}
-
 export default function HttpStatusPage() {
   const t = useTranslations("tools");
   const th = useTranslations("httpstatus");
@@ -322,7 +292,7 @@ export default function HttpStatusPage() {
         <section>
           <StatusCodeTable />
         </section>
-        <BottomDescription />
+        <DescriptionSection namespace="httpstatus" />
         <RelatedTools currentTool="httpstatus" />
       </div>
     </Layout>

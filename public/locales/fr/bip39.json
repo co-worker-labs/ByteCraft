@@ -13,6 +13,15 @@
     "faq1Q": "Combien de mots contient la liste BIP39 ?",
     "faq1A": "La liste de mots BIP39 en anglais contient exactement 2048 mots. Chaque mot code 11 bits de données, donc une phrase mnémonique de 12 mots représente 132 bits (128 bits d'entropie + 4 bits de somme de contrôle) et une de 24 mots représente 264 bits.",
     "faq2Q": "Puis-je utiliser des mots BIP39 dans d'autres langues ?",
-    "faq2A": "BIP39 prend en charge plusieurs langues dont l'anglais, le japonais, le coréen, l'espagnol, le chinois (simplifié et traditionnel), le français, l'italien, le portugais et le tchèque. Cependant, l'anglais est le plus largement utilisé et recommandé pour la compatibilité."
+    "faq2A": "BIP39 prend en charge plusieurs langues dont l'anglais, le japonais, le coréen, l'espagnol, le chinois (simplifié et traditionnel), le français, l'italien, le portugais et le tchèque. Cependant, l'anglais est le plus largement utilisé et recommandé pour la compatibilité.",
+    "faq3Q": "Pourquoi aucune paire de mots ne partage-t-elle les quatre mêmes premières lettres ?",
+    "faq3A": "C'est un choix de conception délibéré pour réduire les erreurs de transcription. Lors de la saisie d'une phrase de récupération sur un portefeuille matériel, seules les quatre premières lettres suffisent pour identifier chaque mot, rendant le processus plus rapide et moins sujet aux erreurs.",
+    "stepsTitle": "Comment utiliser la liste de mots BIP39",
+    "step1Title": "Rechercher un mot",
+    "step1Text": "Saisissez un mot ou une sous-chaîne dans la barre de recherche. Les mots correspondants sont surlignés et filtrés en temps réel.",
+    "step2Title": "Trouver par index",
+    "step2Text": "Chaque mot possède un index numérique (1-2048). Recherchez par nombre pour trouver le mot correspondant instantanément.",
+    "step3Title": "Vérifier votre mnémonique",
+    "step3Text": "Vérifiez que chaque mot de votre phrase mnémonique existe dans la liste BIP39 et est correctement orthographié."
   }
 }

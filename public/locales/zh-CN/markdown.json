@@ -26,6 +26,21 @@
     "gfmP1": "支持表格、任务清单（- [ ] todo）、删除线、自动链接和 Mermaid 图表（流程图、时序图、类图、状态图、ER 图、甘特图、饼图、Git 图）。使用 ```mermaid 代码块。暂不支持数学公式和脚注。",
     "faq1Q": "什么是 Markdown 编辑器？",
     "faq1A": "一个实时 Markdown 编辑器，支持分屏预览、GFM（GitHub 风格 Markdown）、语法高亮、任务列表和 Mermaid 图表。",
-    "aeoDefinition": "Markdown 编辑器是一个免费的在线 Markdown 编写和预览工具，支持 GitHub 风格 Markdown。包含语法高亮、实时预览和 PDF/PNG 导出。完全在浏览器中运行。"
+    "aeoDefinition": "Markdown 编辑器是一个免费的在线 Markdown 编写和预览工具，支持 GitHub 风格 Markdown。包含语法高亮、实时预览和 PDF/PNG 导出。完全在浏览器中运行。",
+    "useCasesTitle": "常见使用场景",
+    "useCasesP1": "编写和预览 GitHub 或 GitLab 仓库的 README 文件，在提交前确认渲染效果。",
+    "useCasesP2": "撰写文档或博客文章，实时查看格式化效果——文本和渲染结果并排显示。",
+    "useCasesP3": "将 Markdown 笔记转换为 PDF 或 PNG，方便与没有 Markdown 查看器的人分享。",
+    "stepsTitle": "如何使用 Markdown 编辑器",
+    "step1Title": "编写或粘贴 Markdown",
+    "step1Desc": "直接在编辑器中输入，或拖入 .md 文件。预览随输入实时更新。",
+    "step2Title": "选择视图模式",
+    "step2Desc": "在编辑、预览和分屏布局之间切换。分屏模式可同时查看文本和渲染结果。",
+    "step3Title": "导出文档",
+    "step3Desc": "下载为 .md 文件，将渲染预览导出为 PDF 或 PNG，或将原始 Markdown 复制到剪贴板。",
+    "faq2Q": "编辑器支持 Mermaid 图表吗？",
+    "faq2A": "支持。使用 ```mermaid 代码块，预览会自动渲染流程图、时序图、类图、状态图、ER 图、甘特图、饼图和 Git 图。",
+    "faq3Q": "有文件大小限制吗？",
+    "faq3A": "实时预览适用于合理大小的内容。超大文档会显示「立即渲染」按钮，而非自动渲染，以保持页面响应。所有处理均在浏览器中完成，不会发送到服务器。"
   }
 }

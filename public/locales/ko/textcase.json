@@ -37,6 +37,22 @@
     "faq1A": "camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case, Title Case, Sentence case, UPPER CASE, lower case 등.",
     "faq2Q": "여러 문자열을 한 번에 변환할 수 있나요?",
     "faq2A": "네. 여러 줄을 붙여넣으면 도구가 각 줄을 독립적으로 변환합니다. 여러 줄 변환은 선택한 케이스를 모든 줄에 적용합니다.",
-    "aeoDefinition": "텍스트 케이스 변환기는 camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE 등으로 텍스트를 변환하는 무료 온라인 도구입니다. 실시간 미리보기와 함께 즉시 변환됩니다. 브라우저에서만 실행됩니다."
+    "aeoDefinition": "텍스트 케이스 변환기는 camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE 등으로 텍스트를 변환하는 무료 온라인 도구입니다. 실시간 미리보기와 함께 즉시 변환됩니다. 브라우저에서만 실행됩니다.",
+    "whatIsTitle": "텍스트 케이스 변환기란?",
+    "whatIs": "텍스트 케이스 변환기는 프로그래밍과 글쓰기에서 사용하는 명명 규칙 간에 문자열을 변환합니다. 입력 형식을 자동 감지하고 camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, lower case, UPPER CASE, Title Case, Sentence case, path/case 변환을 모두 실시간으로 보여줍니다.",
+    "useCasesTitle": "일반적인 활용 사례",
+    "useCasesDesc1": "언어 마이그레이션",
+    "useCasesP1": "언어 간 코드 마이그레이션 시 변수명 변경 — 한 번의 붙여넣기로 Python snake_case를 JavaScript camelCase로 변환합니다.",
+    "useCasesDesc2": "명명 규칙 적용",
+    "useCasesP2": "일반 영어 입력에서 일관된 URL 슬러그, CSS 클래스명, 환경 변수명을 생성합니다.",
+    "stepsTitle": "텍스트 케이스 변환 방법",
+    "step1Title": "텍스트 붙여넣기",
+    "step1Text": "입력 필드에 문자열을 입력하거나 붙여넣으세요. 도구가 현재 케이스 형식을 자동 감지합니다.",
+    "step2Title": "변환 결과 확인",
+    "step2Text": "11개 케이스 형식이 테이블에 즉시 표시됩니다. 감지된 형식은 배지로 하이라이트됩니다.",
+    "step3Title": "결과 복사",
+    "step3Text": "변환된 문자열 옆의 복사 버튼을 클릭하여 클립보드에 복사하세요.",
+    "faq3Q": "어떤 케이스 형식을 지원하나요?",
+    "faq3A": "camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, lower case, UPPER CASE, Title Case, Sentence case, path/case의 11가지 형식을 지원합니다."
   }
 }

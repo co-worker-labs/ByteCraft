@@ -8,9 +8,25 @@
   "calculate": "Calculate",
   "descriptions": {
     "aeoDefinition": "File Checksum is a free online tool for calculating MD5, SHA-1, SHA-256, and SHA-512 checksums for any file. Supports unlimited file size with 100% client-side processing.",
+    "whatIsTitle": "What is a File Checksum?",
+    "whatIs": "A file checksum is a fixed-size hash value computed from a file's contents using a cryptographic algorithm. Even a single byte change in the file produces a completely different checksum, making it ideal for verifying data integrity. This tool supports MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3, and RIPEMD-160.",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesDesc1": "Download Verification",
+    "useCasesP1": "Verify downloaded files match the publisher's published checksum to confirm no corruption or tampering occurred during transfer.",
+    "useCasesDesc2": "Backup Integrity",
+    "useCasesP2": "Compare checksums before and after copying files to network storage, optical media, or cloud backups to ensure data fidelity.",
+    "stepsTitle": "How to Calculate a File Checksum",
+    "step1Title": "Select your file",
+    "step1Text": "Drag and drop a file onto the drop zone, or click to browse. Multiple files are supported.",
+    "step2Title": "Choose algorithms",
+    "step2Text": "Check the hash algorithms you need. For large files, select only what you need to reduce processing time.",
+    "step3Title": "Calculate and compare",
+    "step3Text": "Click Calculate. Paste an expected checksum into the comparison field to instantly verify a match.",
     "faq1Q": "What is a file checksum?",
     "faq1A": "A checksum is a hash value computed from file contents. It's used to verify file integrity — if even one byte changes, the checksum changes completely.",
     "faq2Q": "Is there a file size limit?",
-    "faq2A": "No hard limit. The tool processes files in chunks using the HTML5 File API, supporting unlimited file sizes limited only by your device's memory."
+    "faq2A": "No hard limit. The tool processes files in chunks using the HTML5 File API, supporting unlimited file sizes limited only by your device's memory.",
+    "faq3Q": "Which hash algorithm should I use?",
+    "faq3A": "For integrity verification, SHA-256 is the standard choice. MD5 and SHA-1 are faster but considered cryptographically broken. Use SHA-512 or SHA3 for higher security requirements."
   }
 }

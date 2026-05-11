@@ -453,6 +453,22 @@
     "faq1Q": "Was sind HTTP-Statuscodes?",
     "faq1A": "HTTP-Statuscodes sind 3-stellige Zahlen, die von einem Server als Antwort auf eine Client-Anfrage zurückgegeben werden. Sie zeigen an, ob die Anfrage erfolgreich war, weitergeleitet wurde oder ein Fehler aufgetreten ist.",
     "faq2Q": "Wie viele Statuscodes sind dokumentiert?",
-    "faq2A": "Das Tool deckt alle Standard-Statuscodes in 5 Kategorien ab: 1xx (Information), 2xx (Erfolg), 3xx (Umleitung), 4xx (Client-Fehler) und 5xx (Server-Fehler)."
+    "faq2A": "Das Tool deckt alle Standard-Statuscodes in 5 Kategorien ab: 1xx (Information), 2xx (Erfolg), 3xx (Umleitung), 4xx (Client-Fehler) und 5xx (Server-Fehler).",
+    "faq3Q": "Was ist der häufigste HTTP-Statuscode?",
+    "faq3A": "200 OK ist der häufigste — er bedeutet, dass die Anfrage erfolgreich war. 404 Not Found (Ressource existiert nicht) und 500 Internal Server Error (serverseitiger Fehler) sind ebenfalls sehr häufig. Das Verständnis dieser Codes hilft bei der schnelleren Problemdiagnose.",
+    "step1Title": "Suchen oder filtern",
+    "step1Text": "Suchen Sie nach Code-Nummer, Statusname oder Beschreibung. Filtern Sie nach Kategorie mit den Buttons: 1xx bis 5xx oder inoffizielle Codes.",
+    "step2Title": "Details prüfen",
+    "step2Text": "Fahren Sie mit der Maus über eine Zeile (Desktop) oder tippen Sie darauf (Mobil), um Nutzungshinweise und häufige Ursachen zu sehen.",
+    "step3Title": "Spezifikation prüfen",
+    "step3Text": "Jeder Code verlinkt zur RFC-Spezifikation. Klicken Sie auf den Spezifikations-Link, um die maßgebliche Definition zu lesen.",
+    "stepsTitle": "HTTP-Statuscode-Referenz verwenden",
+    "useCasesDesc1": "API-Debugging",
+    "useCasesDesc2": "Fehlerbehandlungs-Design",
+    "useCasesP1": "API-Antworten debuggen, indem unbekannte Statuscodes nachgeschlagen und ihre Bedeutung, häufige Ursachen und Nutzungskontext verstanden werden.",
+    "useCasesP2": "Ordnungsgemäße Fehlerbehandlung in Ihrer Anwendung implementieren, indem verstanden wird, welche Codes zu erwarten sind und wie auf jeden zu reagieren ist.",
+    "useCasesTitle": "Gängige Anwendungsfälle",
+    "whatIs": "HTTP-Statuscodes sind dreistellige Zahlen, die ein Server als Antwort auf eine Client-Anfrage zurückgibt. Sie zeigen an, ob die Anfrage erfolgreich war, weitergeleitet wurde oder ein Fehler auftrat. Codes sind in fünf Klassen eingeteilt: 1xx (Information), 2xx (Erfolg), 3xx (Umleitung), 4xx (Client-Fehler) und 5xx (Server-Fehler).",
+    "whatIsTitle": "Was sind HTTP-Statuscodes?"
   }
 }

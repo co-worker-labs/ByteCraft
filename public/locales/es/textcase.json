@@ -37,6 +37,22 @@
     "faq1A": "camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case, Title Case, Sentence case, UPPER CASE, lower case y más.",
     "faq2Q": "¿Puedo convertir múltiples cadenas a la vez?",
     "faq2A": "Sí. Pega múltiples líneas y la herramienta convierte cada línea independientemente. La conversión multilínea aplica la capitalización seleccionada a cada línea.",
-    "aeoDefinition": "El Conversor de mayúsculas/minúsculas es una herramienta gratuita online que convierte texto entre camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE y más. Conversión instantánea con vista previa en tiempo real. No sale ningún dato de tu navegador."
+    "aeoDefinition": "El Conversor de mayúsculas/minúsculas es una herramienta gratuita online que convierte texto entre camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE y más. Conversión instantánea con vista previa en tiempo real. No sale ningún dato de tu navegador.",
+    "whatIsTitle": "¿Qué es un Conversor de Mayúsculas/Minúsculas?",
+    "whatIs": "Un conversor de mayúsculas/minúsculas transforma cadenas entre convenciones de nomenclatura usadas en programación y escritura. Detecta automáticamente el formato de entrada y muestra conversiones a camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, lower case, UPPER CASE, Title Case, Sentence case y path/case — todo actualizado en tiempo real mientras escribes.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesDesc1": "Migración entre lenguajes",
+    "useCasesP1": "Renombra variables al migrar código entre lenguajes — convierte snake_case de Python a camelCase de JavaScript con un solo pegado.",
+    "useCasesDesc2": "Aplicar convenciones de nomenclatura",
+    "useCasesP2": "Genera slugs de URL consistentes, clases CSS o nombres de variables de entorno a partir de entrada en texto plano.",
+    "stepsTitle": "Cómo convertir mayúsculas/minúsculas",
+    "step1Title": "Pega tu texto",
+    "step1Text": "Escribe o pega cualquier cadena en el campo de entrada. La herramienta detecta automáticamente el formato de mayúsculas/minúsculas actual.",
+    "step2Title": "Revisa las conversiones",
+    "step2Text": "Los 11 formatos de mayúsculas/minúsculas se muestran al instante en una tabla. El formato detectado se resalta con una etiqueta.",
+    "step3Title": "Copia el resultado",
+    "step3Text": "Haz clic en el botón de copiar junto a cualquier cadena convertida para copiarla al portapapeles.",
+    "faq3Q": "¿Qué formatos de mayúsculas/minúsculas son compatibles?",
+    "faq3A": "El conversor soporta 11 formatos: camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, lower case, UPPER CASE, Title Case, Sentence case y path/case."
   }
 }

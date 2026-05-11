@@ -34,6 +34,20 @@
     "faq2A": "No. Todo el procesamiento de imágenes se realiza en tu navegador usando la API Canvas. Tus imágenes nunca salen de tu dispositivo.",
     "faq3Q": "¿Qué formatos de imagen son compatibles?",
     "faq3A": "Entrada: JPEG, PNG, WebP, BMP, GIF. Salida: JPEG, PNG, WebP. Puedes convertir entre formatos mientras ajustas la calidad.",
-    "aeoDefinition": "El Compresor de imágenes es una herramienta gratuita online para comprimir, redimensionar y convertir imágenes entre formatos PNG, JPG y WebP. Todo el procesamiento se ejecuta localmente en tu navegador."
+    "aeoDefinition": "El Compresor de imágenes es una herramienta gratuita online para comprimir, redimensionar y convertir imágenes entre formatos PNG, JPG y WebP. Todo el procesamiento se ejecuta localmente en tu navegador.",
+    "whatIsTitle": "¿Qué es el Compresor de Imágenes?",
+    "whatIs": "Comprime, redimensiona y convierte imágenes entre formatos PNG, JPG y WebP directamente en tu navegador. No se sube ningún dato a ningún servidor — todo el procesamiento usa la API Canvas de HTML5.",
+    "stepsTitle": "Cómo comprimir una imagen",
+    "step1Title": "Suelta o selecciona una imagen",
+    "step1Text": "Arrastra y suelta una imagen en la zona de soltar, o haz clic para explorar. Soporta entrada PNG, JPG, WebP, GIF, BMP y SVG.",
+    "step2Title": "Ajusta la configuración",
+    "step2Text": "Elige un formato de salida (PNG, JPG, WebP), ajusta la calidad con el control deslizante y opcionalmente redimensiona por porcentaje o dimensiones personalizadas.",
+    "step3Title": "Descarga o copia",
+    "step3Text": "Compara original vs. comprimida lado a lado. Descarga el resultado o cópialo directamente al portapapeles como PNG.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesDesc1": "Optimización web",
+    "useCasesP1": "Convierte PNG a WebP para tamaños de archivo más pequeños en sitios web. Ajusta la calidad para equilibrar fidelidad visual y ancho de banda.",
+    "useCasesDesc2": "Redimensionado rápido",
+    "useCasesP2": "Redimensiona imágenes para perfiles de redes sociales, adjuntos de email o capturas de documentación sin abrir un editor de escritorio."
   }
 }

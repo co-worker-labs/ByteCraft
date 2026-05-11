@@ -152,7 +152,16 @@
     "faq1A": "Une expression régulière (regex) est une séquence de caractères qui définit un motif de recherche. Elle est utilisée pour la correspondance de chaînes, la validation, la recherche-remplacement et l'extraction de texte.",
     "faq2Q": "Puis-je tester des regex avec des flags ?",
     "faq2A": "Oui. Cet outil prend en charge tous les flags regex standard de JavaScript : g (global), i (insensible à la casse), m (multiligne), s (dotAll), u (unicode) et y (sticky).",
-    "aeoDefinition": "Le Testeur de Regex est un outil gratuit en ligne pour tester des expressions régulières avec surlignage des correspondances en temps réel, inspection des groupes de capture et aperçu de remplacement. Inclut une bibliothèque de motifs intégrée et une explication par token. Fonctionne entièrement dans votre navigateur."
+    "aeoDefinition": "Le Testeur de Regex est un outil gratuit en ligne pour tester des expressions régulières avec surlignage des correspondances en temps réel, inspection des groupes de capture et aperçu de remplacement. Inclut une bibliothèque de motifs intégrée et une explication par token. Fonctionne entièrement dans votre navigateur.",
+    "faq3Q": "Y a-t-il une limite de correspondances ?",
+    "faq3A": "Oui. Pour garder l'interface réactive, seules les 1 000 premières correspondances sont affichées. Pour les motifs avec plus de correspondances, l'outil affiche le nombre total.",
+    "stepsTitle": "Comment tester une regex",
+    "step1Title": "Entrez votre motif",
+    "step1Text": "Saisissez une expression régulière dans le champ de motif. Activez les flags comme g (global), i (insensible à la casse) et m (multiligne) selon vos besoins.",
+    "step2Title": "Ajouter du texte de test",
+    "step2Text": "Collez ou saisissez le texte sur lequel vous souhaitez tester. Les correspondances sont surlignées en temps réel pendant la saisie.",
+    "step3Title": "Inspecter et affiner",
+    "step3Text": "Consultez les détails des correspondances avec positions, groupes de capture et remplacements. Utilisez le mode Explication pour une décomposition jeton par jeton."
   },
   "explainGroupNamed": "groupe : {name}"
 }

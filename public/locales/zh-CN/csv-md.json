@@ -34,6 +34,13 @@
     "faq2A": "可以。选择每列左对齐、居中或右对齐，工具会生成正确的 Markdown 对齐语法。",
     "faq3Q": "支持大型 CSV 文件吗？",
     "faq3A": "处理完全在浏览器中进行。几 MB 以内的文件都能正常工作，仅受设备内存限制。",
-    "aeoDefinition": "CSV ↔ Markdown 表格转换器是一个免费的在线 CSV 和 Markdown 表格格式互转工具。实时双向转换。完全在浏览器中运行。"
+    "aeoDefinition": "CSV ↔ Markdown 表格转换器是一个免费的在线 CSV 和 Markdown 表格格式互转工具。实时双向转换。完全在浏览器中运行。",
+    "stepsTitle": "如何将 CSV 转换为 Markdown 表格",
+    "step1Title": "粘贴 CSV 或 Markdown",
+    "step1Text": "在左侧面板粘贴 CSV，或在右侧面板粘贴 Markdown 表格文本。工具会自动检测转换方向。",
+    "step2Title": "调整设置",
+    "step2Text": "选择分隔符和列对齐方式（左对齐、居中、右对齐或无）。",
+    "step3Title": "复制结果",
+    "step3Text": "转换结果即时显示。可在编辑和预览模式之间切换查看 Markdown 表格。"
   }
 }

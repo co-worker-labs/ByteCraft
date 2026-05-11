@@ -37,6 +37,22 @@
     "faq1Q": "支援哪些文字大小寫轉換？",
     "faq1A": "camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE、dot.case、path/case、Title Case、Sentence case、UPPER CASE、lower case 等。",
     "faq2Q": "可以同時轉換多個字串嗎？",
-    "faq2A": "可以。貼上多行文字，工具會獨立轉換每一行。多行轉換將選取的大小寫格式套用到每一行。"
+    "faq2A": "可以。貼上多行文字，工具會獨立轉換每一行。多行轉換將選取的大小寫格式套用到每一行。",
+    "whatIsTitle": "什麼是文字大小寫轉換器？",
+    "whatIs": "文字大小寫轉換器將字串在程式設計和寫作中使用的命名慣例之間轉換。它自動偵測輸入格式，並即時顯示 camelCase、PascalCase、snake_case、CONSTANT_CASE、kebab-case、dot.case、lower case、UPPER CASE、Title Case、Sentence case 和 path/case 的轉換結果——全部隨輸入即時更新。",
+    "useCasesTitle": "常見使用場景",
+    "useCasesDesc1": "語言遷移",
+    "useCasesP1": "在不同程式語言之間遷移程式碼時重新命名變數——一次貼上即可將 Python snake_case 轉換為 JavaScript camelCase。",
+    "useCasesDesc2": "命名慣例規範化",
+    "useCasesP2": "從英文輸入產生一致的 URL 路徑、CSS 類別名稱或環境變數名稱。",
+    "stepsTitle": "如何轉換文字大小寫",
+    "step1Title": "貼上文字",
+    "step1Text": "在輸入欄位中輸入或貼上任何字串。工具自動偵測目前的大小寫格式。",
+    "step2Title": "檢視轉換",
+    "step2Text": "所有 11 種大小寫格式即時顯示在表格中。偵測到的格式以標籤高亮標示。",
+    "step3Title": "複製結果",
+    "step3Text": "點擊任何轉換後的字串旁的複製按鈕，將其複製到剪貼簿。",
+    "faq3Q": "支援哪些大小寫格式？",
+    "faq3A": "轉換器支援 11 種格式：camelCase、PascalCase、snake_case、CONSTANT_CASE、kebab-case、dot.case、lower case、UPPER CASE、Title Case、Sentence case 和 path/case。"
   }
 }

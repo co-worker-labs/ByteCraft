@@ -38,6 +38,18 @@
     "faq2A": "Palavras, caracteres, caracteres sem espaços, sentenças, parágrafos, caracteres CJK, tempo de leitura e tempo de fala — tudo atualizado em tempo real enquanto você digita.",
     "faq3Q": "Posso rastrear palavras-chave específicas?",
     "faq3A": "Sim. Adicione palavras-chave personalizadas para rastrear sua frequência e contagem no seu texto. A aba Palavras-chave mostra as principais palavras e frases de 2 palavras.",
-    "aeoDefinition": "O Contador de Palavras é uma ferramenta online gratuita para análise de texto em tempo real, incluindo contagem de palavras, caracteres, sentenças, tempo de leitura e densidade de palavras-chave. Suporta texto CJK. Nenhum dado é enviado para qualquer servidor."
+    "aeoDefinition": "O Contador de Palavras é uma ferramenta online gratuita para análise de texto em tempo real, incluindo contagem de palavras, caracteres, sentenças, tempo de leitura e densidade de palavras-chave. Suporta texto CJK. Nenhum dado é enviado para qualquer servidor.",
+    "stepsTitle": "Como contar palavras e caracteres",
+    "step1Title": "Cole seu texto",
+    "step1Text": "Digite ou cole texto na área de entrada. Contagem de palavras, caracteres e tempo de leitura atualizam em tempo real.",
+    "step2Title": "Revise a visão geral",
+    "step2Text": "A aba Visão geral mostra palavras, caracteres, frases, parágrafos, caracteres CJK, tempo de leitura e tempo de fala.",
+    "step3Title": "Analise palavras-chave",
+    "step3Text": "Mude para a aba Palavras-chave para análise de frequência das principais palavras e frases de 2 palavras, ou adicione palavras-chave personalizadas para rastrear.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesDesc1": "Escrita e edição",
+    "useCasesP1": "Acompanhe contagens de palavras para posts de blog, redações ou posts em redes sociais com limite de caracteres.",
+    "useCasesDesc2": "Estimativas de tradução",
+    "useCasesP2": "Obtenha contagens precisas de palavras e caracteres para estimar tempo e custo de tradução, incluindo contagem de caracteres CJK."
   }
 }

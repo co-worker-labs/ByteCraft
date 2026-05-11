@@ -89,6 +89,23 @@
     "tipTest": "在大量列印或分享之前，務必使用真實手機相機測試產生的 QR Code。",
     "aeoDefinition": "QR Code 產生器是一款免費的線上工具，用於建立文字、URL、WiFi、名片等內容的 QR Code。支援自訂顏色、Logo 和點樣式，可匯出 SVG/PNG。不會將任何資料傳送到伺服器。",
     "faq1Q": "什麼是 QR Code 產生器？",
-    "faq1A": "一個可自訂的 QR Code 產生器，支援文字、URL、WiFi 憑證和 vCard。可新增 Logo、變更顏色，並匯出為 SVG 或 PNG。"
+    "faq1A": "一個可自訂的 QR Code 產生器，支援文字、URL、WiFi 憑證和 vCard。可新增 Logo、變更顏色，並匯出為 SVG 或 PNG。",
+    "whatIsTitle": "什麼是 QR Code？",
+    "whatIs": "QR（Quick Response）碼是一種二維條碼，以黑白方塊圖案儲存資料。由 Denso Wave 於 1994 年發明，可編碼 URL、文字、聯絡資訊、WiFi 憑證等——用任何智慧型手機相機即可掃描。",
+    "useCasesTitle": "常見使用場景",
+    "useCasesP1": "分享網站 URL——在名片、傳單或海報上放置 QR Code，讓人們即時開啟連結。",
+    "useCasesP2": "WiFi 網路分享——編碼 SSID、密碼和加密類型，訪客只需掃描即可連線。",
+    "useCasesP3": "vCard 聯絡資訊交換——將姓名、電話、電子郵件和組織嵌入可掃描的 QR Code 中。",
+    "stepsTitle": "如何建立 QR Code",
+    "step1Title": "選擇內容類型",
+    "step1Desc": "根據你要編碼的內容，選擇文字/URL、WiFi、名片、電子郵件、簡訊或 WhatsApp。",
+    "step2Title": "輸入資料",
+    "step2Desc": "填寫必填欄位。對於 URL，貼上完整連結。對於 WiFi，輸入網路名稱和密碼。",
+    "step3Title": "自訂外觀",
+    "step3Desc": "調整顏色、點樣式、錯誤修正等級，並可選擇新增 Logo。使用 Logo 時建議選擇較高的錯誤修正等級（Q 或 H）。",
+    "faq2Q": "應該使用 SVG 還是 PNG 匯出？",
+    "faq2A": "印刷品使用 SVG——可縮放至任何大小而不失真。數位顯示、社群媒體或需要固定解析度點陣圖時使用 PNG。PNG 匯出支援最高 1024px 解析度，適合高品質印刷。",
+    "faq3Q": "可以在 QR Code 中放入 Logo 嗎？",
+    "faq3A": "可以。上傳 Logo 圖片，工具會將其覆蓋在中心位置。錯誤修正會自動提升至 H（30% 恢復能力）以保持可掃描性。Logo 大小控制在 QR Code 面積的 30% 以內效果最佳。"
   }
 }

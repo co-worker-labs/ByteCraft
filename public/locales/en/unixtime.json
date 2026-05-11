@@ -71,6 +71,13 @@
     "faq2Q": "Does this tool handle timezones?",
     "faq2A": "Yes. The tool shows both UTC and your local timezone. You can convert timestamps to dates in either timezone.",
     "faq3Q": "What is the Unix timestamp range?",
-    "faq3A": "Standard 32-bit signed integers support timestamps up to January 19, 2038 (the Year 2038 problem). This tool supports a much wider range using JavaScript's Date object."
+    "faq3A": "Standard 32-bit signed integers support timestamps up to January 19, 2038 (the Year 2038 problem). This tool supports a much wider range using JavaScript's Date object.",
+    "stepsTitle": "How to Convert a Unix Timestamp",
+    "step1Title": "Enter a timestamp or date",
+    "step1Text": "Paste a Unix timestamp in the Timestamp→Date panel, or pick a date and time in the Date→Timestamp panel.",
+    "step2Title": "Choose seconds or milliseconds",
+    "step2Text": "Select the unit (auto-detection works for most cases). Use the Quick buttons for \"Now\" or \"Today\".",
+    "step3Title": "Read the conversion",
+    "step3Text": "The result shows Local time, ISO 8601, RFC 2822, relative time, and timezone info — all at a glance."
   }
 }

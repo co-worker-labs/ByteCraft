@@ -27,6 +27,13 @@
     "faq2A": "Standardmäßig ja. Sie können den Modus ohne Groß-/Kleinschreibungsunterscheidung aktivieren, um 'Hallo' und 'hallo' als Duplikate zu behandeln.",
     "faq3Q": "Kann ich sehen, was entfernt wurde?",
     "faq3A": "Das Tool zeigt die bereinigte Ausgabe und die Anzahl der entfernten Duplikate. Sie können Ein- und Ausgabe vergleichen, um die Ergebnisse zu überprüfen.",
-    "aeoDefinition": "Die Zeilendeduplizierung ist ein kostenloses Online-Tool, das doppelte Zeilen aus Text entfernt, während die Reihenfolge erhalten bleibt. Unterstützt groß-/kleinsensitive Erkennung, Leerzeichen-Trimming und Entfernung leerer Zeilen. Läuft vollständig in Ihrem Browser."
+    "aeoDefinition": "Die Zeilendeduplizierung ist ein kostenloses Online-Tool, das doppelte Zeilen aus Text entfernt, während die Reihenfolge erhalten bleibt. Unterstützt groß-/kleinsensitive Erkennung, Leerzeichen-Trimming und Entfernung leerer Zeilen. Läuft vollständig in Ihrem Browser.",
+    "step1Title": "Text einfügen",
+    "step1Text": "Geben Sie mehrzeiligen Text in den Eingabebereich ein oder fügen Sie ihn ein. Das Tool dedupliziert in Echtzeit.",
+    "step2Title": "Optionen konfigurieren",
+    "step2Text": "Schalten Sie Groß-/Kleinschreibung, Leerzeichen-Trimming oder Entfernung leerer Zeilen über die Optionsbuttons um.",
+    "step3Title": "Bereinigte Ausgabe kopieren",
+    "step3Text": "Eindeutige Zeilen erscheinen im Ausgabebereich mit einer Anzahl der entfernten Duplikate.",
+    "stepsTitle": "Duplikatzeilen entfernen"
   }
 }

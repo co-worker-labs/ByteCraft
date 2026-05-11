@@ -11,6 +11,22 @@
     "faq1A": "Un checksum est une valeur de hachage calculée à partir du contenu d'un fichier. Il est utilisé pour vérifier l'intégrité des fichiers — si un seul octet change, le checksum change complètement.",
     "faq2Q": "Quels algorithmes de hachage sont disponibles ?",
     "faq2A": "MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 et CRC32. Plusieurs algorithmes peuvent s'exécuter simultanément sur le même fichier.",
-    "aeoDefinition": "La Somme de contrôle de fichier est un outil gratuit en ligne pour calculer les sommes de contrôle MD5, SHA-1, SHA-256 et SHA-512 de n'importe quel fichier. Prend en charge les fichiers de taille illimitée avec un traitement 100% côté client."
+    "aeoDefinition": "La Somme de contrôle de fichier est un outil gratuit en ligne pour calculer les sommes de contrôle MD5, SHA-1, SHA-256 et SHA-512 de n'importe quel fichier. Prend en charge les fichiers de taille illimitée avec un traitement 100% côté client.",
+    "faq3Q": "Quel algorithme de hachage devrais-je utiliser ?",
+    "faq3A": "Pour la vérification d'intégrité, SHA-256 est le choix standard. MD5 et SHA-1 sont plus rapides mais considérés comme cryptographiquement cassés. Utilisez SHA-512 ou SHA3 pour des exigences de sécurité plus élevées.",
+    "stepsTitle": "Comment calculer un checksum de fichier",
+    "step1Title": "Sélectionnez votre fichier",
+    "step1Text": "Glissez-déposez un fichier sur la zone de dépôt, ou cliquez pour parcourir. Plusieurs fichiers sont supportés.",
+    "step2Title": "Choisir les algorithmes",
+    "step2Text": "Cochez les algorithmes de hachage souhaités. Pour les gros fichiers, sélectionnez uniquement ce dont vous avez besoin pour réduire le temps de traitement.",
+    "step3Title": "Calculer et comparer",
+    "step3Text": "Cliquez sur Calculer. Collez un checksum attendu dans le champ de comparaison pour vérifier instantanément la correspondance.",
+    "useCasesDesc1": "Vérification de téléchargement",
+    "useCasesP1": "Vérifiez que les fichiers téléchargés correspondent au checksum publié par l'éditeur pour confirmer l'absence de corruption ou de falsification lors du transfert.",
+    "useCasesDesc2": "Intégrité de sauvegarde",
+    "useCasesP2": "Comparez les checksums avant et après la copie de fichiers vers un stockage réseau, un support optique ou un cloud pour garantir la fidélité des données.",
+    "useCasesTitle": "Cas d'utilisation courants",
+    "whatIs": "Un checksum de fichier est une valeur de hachage de taille fixe calculée à partir du contenu d'un fichier à l'aide d'un algorithme cryptographique. Même la modification d'un seul octet produit un checksum complètement différent, ce qui le rend idéal pour vérifier l'intégrité des données. Cet outil prend en charge MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3 et RIPEMD-160.",
+    "whatIsTitle": "Qu'est-ce qu'un checksum de fichier ?"
   }
 }

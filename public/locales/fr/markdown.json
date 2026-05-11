@@ -26,6 +26,21 @@
     "gfmP1": "Supporte les tableaux, les listes de tâches (- [ ] todo), le texte barré, les liens automatiques et les diagrammes Mermaid (flowchart, sequence, class, state, ER, Gantt, pie, git graph). Utilisez des blocs de code ```mermaid. Les mathématiques et les notes de bas de page ne sont pas incluses.",
     "faq1Q": "Qu'est-ce que l'Éditeur Markdown ?",
     "faq1A": "Un éditeur Markdown en direct avec aperçu en volet divisé, prenant en charge GFM (GitHub Flavored Markdown), la coloration syntaxique, les listes de tâches et les diagrammes Mermaid.",
-    "aeoDefinition": "L'Éditeur Markdown est un outil gratuit en ligne pour écrire et prévisualiser du Markdown avec support de GitHub Flavored Markdown. Inclut la coloration syntaxique, l'aperçu en direct et l'export PDF/PNG. Fonctionne entièrement dans votre navigateur."
+    "aeoDefinition": "L'Éditeur Markdown est un outil gratuit en ligne pour écrire et prévisualiser du Markdown avec support de GitHub Flavored Markdown. Inclut la coloration syntaxique, l'aperçu en direct et l'export PDF/PNG. Fonctionne entièrement dans votre navigateur.",
+    "faq2Q": "Cet éditeur prend-il en charge les diagrammes Mermaid ?",
+    "faq2A": "Oui. Utilisez un bloc de code ```mermaid et l'aperçu rendra automatiquement les diagrammes de flux, diagrammes de séquence, diagrammes de classes, diagrammes d'état, diagrammes ER, diagrammes de Gantt, camemberts et graphes git.",
+    "faq3Q": "Y a-t-il une limite de taille de fichier ?",
+    "faq3A": "L'aperçu en direct fonctionne pour un contenu de taille raisonnable. Les très gros documents affichent un bouton « Rendre maintenant » au lieu du rendu automatique pour garder la page réactive. Tout le traitement se fait dans votre navigateur — rien n'est envoyé à un serveur.",
+    "step1Title": "Écrire ou coller votre Markdown",
+    "step1Desc": "Saisissez directement dans l'éditeur ou déposez un fichier .md. L'aperçu se met à jour en temps réel pendant la saisie.",
+    "step2Title": "Choisir le mode d'affichage",
+    "step2Desc": "Basculez entre les dispositions Éditer, Aperçu et Split. Split offre l'édition côte à côte avec un rendu en direct.",
+    "step3Title": "Exporter votre document",
+    "step3Desc": "Téléchargez en .md, exportez l'aperçu rendu en PDF ou PNG, ou copiez le Markdown brut dans votre presse-papiers.",
+    "stepsTitle": "Comment utiliser l'éditeur Markdown",
+    "useCasesP1": "Écrire et prévisualiser des fichiers README pour les dépôts GitHub ou GitLab avant de committer.",
+    "useCasesP2": "Rédiger de la documentation ou des articles de blog avec formatage en direct — voir le rendu côte à côte avec votre texte.",
+    "useCasesP3": "Convertir des notes Markdown en PDF ou PNG pour les partager avec des personnes n'ayant pas de visualiseur Markdown.",
+    "useCasesTitle": "Cas d'utilisation courants"
   }
 }

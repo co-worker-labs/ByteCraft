@@ -27,6 +27,13 @@
     "faq2A": "Par défaut, oui. Vous pouvez activer le mode insensible à la casse pour traiter 'Bonjour' et 'bonjour' comme des doublons.",
     "faq3Q": "Puis-je voir ce qui a été supprimé ?",
     "faq3A": "L'outil affiche la sortie nettoyée et le nombre de doublons supprimés. Vous pouvez comparer l'entrée et la sortie pour vérifier les résultats.",
-    "aeoDefinition": "Le Déduplicateur de lignes est un outil gratuit en ligne qui supprime les lignes en doublon du texte tout en préservant l'ordre. Prend en charge la comparaison sensible à la casse, la suppression des espaces et la suppression des lignes vides. Fonctionne entièrement dans votre navigateur."
+    "aeoDefinition": "Le Déduplicateur de lignes est un outil gratuit en ligne qui supprime les lignes en doublon du texte tout en préservant l'ordre. Prend en charge la comparaison sensible à la casse, la suppression des espaces et la suppression des lignes vides. Fonctionne entièrement dans votre navigateur.",
+    "stepsTitle": "Comment supprimer les lignes en doublon",
+    "step1Title": "Collez votre texte",
+    "step1Text": "Saisissez ou collez du texte multiligne dans la zone de saisie. L'outil déduplique en temps réel.",
+    "step2Title": "Configurer les options",
+    "step2Text": "Activez ou désactivez la sensibilité à la casse, la suppression des espaces ou la suppression des lignes vides via les boutons d'option.",
+    "step3Title": "Copier la sortie nettoyée",
+    "step3Text": "Les lignes uniques apparaissent dans la zone de sortie avec un compteur des doublons supprimés."
   }
 }

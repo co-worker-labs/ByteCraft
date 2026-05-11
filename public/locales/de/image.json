@@ -34,6 +34,20 @@
     "faq2A": "Nein. Die gesamte Bildverarbeitung erfolgt in Ihrem Browser mit der Canvas API. Ihre Bilder verlassen niemals Ihr Gerät.",
     "faq3Q": "Welche Bildformate werden unterstützt?",
     "faq3A": "Eingabe: JPEG, PNG, WebP, BMP, GIF. Ausgabe: JPEG, PNG, WebP. Sie können zwischen Formaten konvertieren und gleichzeitig die Qualität anpassen.",
-    "aeoDefinition": "Der Bildkompressor ist ein kostenloses Online-Tool zum Komprimieren, Skalieren und Konvertieren von Bildern zwischen PNG-, JPG- und WebP-Formaten. Die gesamte Verarbeitung läuft lokal in Ihrem Browser."
+    "aeoDefinition": "Der Bildkompressor ist ein kostenloses Online-Tool zum Komprimieren, Skalieren und Konvertieren von Bildern zwischen PNG-, JPG- und WebP-Formaten. Die gesamte Verarbeitung läuft lokal in Ihrem Browser.",
+    "step1Title": "Bild ablegen oder auswählen",
+    "step1Text": "Ziehen Sie ein Bild auf die Ablagezone oder klicken Sie zum Durchsuchen. Unterstützt PNG, JPG, WebP, GIF, BMP und SVG.",
+    "step2Title": "Einstellungen anpassen",
+    "step2Text": "Wählen Sie ein Ausgabeformat (PNG, JPG, WebP), passen Sie die Qualität mit dem Regler an und ändern Sie optional die Größe prozentual oder mit benutzerdefinierten Abmessungen.",
+    "step3Title": "Herunterladen oder kopieren",
+    "step3Text": "Vergleichen Sie Original und Komprimiertes Seite an Seite. Laden Sie das Ergebnis herunter oder kopieren Sie es direkt als PNG in die Zwischenablage.",
+    "stepsTitle": "Bild komprimieren",
+    "useCasesDesc1": "Web-Optimierung",
+    "useCasesDesc2": "Schnelle Größenänderung",
+    "useCasesP1": "PNG in WebP für kleinere Dateigrößen auf Websites konvertieren. Qualität anpassen, um visuelle Genauigkeit und Bandbreite auszubalancieren.",
+    "useCasesP2": "Bilder für Social-Media-Profile, E-Mail-Anhänge oder Dokumentations-Screenshots skalieren, ohne einen Desktop-Editor zu öffnen.",
+    "useCasesTitle": "Gängige Anwendungsfälle",
+    "whatIs": "Komprimieren, skalieren und konvertieren Sie Bilder zwischen PNG-, JPG- und WebP-Formaten direkt in Ihrem Browser. Kein Daten-Upload — die gesamte Verarbeitung nutzt die HTML5 Canvas API.",
+    "whatIsTitle": "Was ist der Bildkompressor?"
   }
 }

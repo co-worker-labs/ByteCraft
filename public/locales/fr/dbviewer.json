@@ -73,6 +73,18 @@
     "faq2A": "Non. La base de données est chargée en mémoire du navigateur en utilisant sql.js (SQLite compilé en WebAssembly). Toutes les opérations se font localement.",
     "faq3Q": "Quelles fonctionnalités SQL sont prises en charge ?",
     "faq3A": "Syntaxe SQL complète de SQLite incluant SELECT, INSERT, UPDATE, DELETE, JOINs, sous-requêtes, agrégations et transactions. L'éditeur fournit l'autocomplétion pour les noms de tables et colonnes.",
-    "aeoDefinition": "La Visionneuse SQLite est un outil gratuit en ligne pour ouvrir et explorer des fichiers de base de données SQLite dans votre navigateur. Exécutez des requêtes SQL avec auto-complétion, parcourez les tables et exportez en CSV ou JSON. Aucune donnée ne quitte votre appareil."
+    "aeoDefinition": "La Visionneuse SQLite est un outil gratuit en ligne pour ouvrir et explorer des fichiers de base de données SQLite dans votre navigateur. Exécutez des requêtes SQL avec auto-complétion, parcourez les tables et exportez en CSV ou JSON. Aucune donnée ne quitte votre appareil.",
+    "stepsTitle": "Comment visualiser une base de données SQLite",
+    "step1Title": "Ouvrir un fichier de base de données",
+    "step1Text": "Glissez-déposez un fichier .db, .sqlite ou .sqlite3, ou cliquez sur « Essayer la base de données d'exemple » pour explorer une démo.",
+    "step2Title": "Parcourir les tables",
+    "step2Text": "Cliquez sur n'importe quelle table dans le panneau latéral pour voir son schéma et ses données. Utilisez la pagination pour naviguer dans les grands jeux de données.",
+    "step3Title": "Exécuter des requêtes SQL",
+    "step3Text": "Écrivez du SQL dans l'éditeur avec support d'autocomplétion. Exécutez des requêtes SELECT et exportez les résultats en CSV ou JSON.",
+    "useCasesDesc1": "Inspection rapide des données",
+    "useCasesP1": "Ouvrez des fichiers SQLite provenant d'applications mobiles, de navigateurs ou d'appareils embarqués sans installer d'outils bureautiques.",
+    "useCasesDesc2": "Analyse de données",
+    "useCasesP2": "Exécutez des requêtes SQL ad hoc sur vos données et exportez les résultats. Utilisez le [convertisseur CSV](/csv) pour un traitement ultérieur.",
+    "useCasesTitle": "Cas d'utilisation courants"
   }
 }

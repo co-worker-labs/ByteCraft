@@ -17,6 +17,22 @@
     "twosComplement": "Le complément à deux est la méthode standard pour représenter les entiers signés en binaire. Le bit de poids fort (MSB) sert de bit de signe : 0 pour positif, 1 pour négatif. Pour obtenir la valeur négative, inversez tous les bits et ajoutez 1. Par exemple, en mode 8 bits, -1 est représenté par 11111111 (0xFF).",
     "faq1Q": "Quelles bases numériques sont prises en charge ?",
     "faq1A": "Binaire (base 2), Octal (base 8), Décimal (base 10) et Hexadécimal (base 16) avec conversion en temps réel entre les quatre.",
-    "aeoDefinition": "Le Convertisseur de base numérique est un outil gratuit en ligne pour convertir des nombres entre binaire, octal, décimal et hexadécimal. Prend en charge le complément à deux sur 8/16/32/64 bits et un éditeur de bits visuel. Fonctionne entièrement dans votre navigateur."
+    "aeoDefinition": "Le Convertisseur de base numérique est un outil gratuit en ligne pour convertir des nombres entre binaire, octal, décimal et hexadécimal. Prend en charge le complément à deux sur 8/16/32/64 bits et un éditeur de bits visuel. Fonctionne entièrement dans votre navigateur.",
+    "faq2Q": "À quoi sert le complément à deux ?",
+    "faq2A": "Le complément à deux est la façon dont les ordinateurs représentent les entiers signés. Il permet au processeur d'utiliser le même circuit pour l'addition et la soustraction, et évite le problème +0/-0 de la représentation signe-magnitude.",
+    "faq3Q": "Prend-il en charge les nombres négatifs ?",
+    "faq3A": "Oui. Entrez un nombre décimal négatif et l'outil affiche les représentations binaires, hexadécimales et octales en complément à deux selon la largeur de bits sélectionnée.",
+    "stepsTitle": "Comment convertir des bases numériques",
+    "step1Title": "Entrez une valeur",
+    "step1Text": "Saisissez un nombre dans n'importe quelle base — décimal, hexadécimal (préfixe 0x), octal (préfixe 0o) ou binaire (préfixe 0b). Toutes les autres bases se mettent à jour instantanément.",
+    "step2Title": "Choisir la largeur de bits",
+    "step2Text": "Sélectionnez le mode 8, 16, 32 ou 64 bits pour voir la représentation en complément à deux et basculer les bits individuels dans l'éditeur visuel.",
+    "step3Title": "Copier le résultat",
+    "step3Text": "Cliquez sur le bouton copier à côté de n'importe quelle conversion de base pour copier la valeur formatée.",
+    "useCasesDesc1": "Programmation système",
+    "useCasesP1": "Déboguez des protocoles bas niveau, des paquets réseau ou des formats de fichiers binaires utilisant la notation hexadécimale ou octale.",
+    "useCasesDesc2": "Matériel et couleur",
+    "useCasesP2": "Convertissez des valeurs de couleur entre hexadécimal et décimal, ou calculez des adresses mémoire et des offsets lors du développement embarqué.",
+    "useCasesTitle": "Cas d'utilisation courants"
   }
 }

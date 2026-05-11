@@ -14,22 +14,6 @@ import { SITE_URL } from "../../libs/site";
 import { SerwistProvider } from "../serwist";
 import { IOSSplashLinks } from "../../components/ios-splash-links";
 import { WebsiteJsonLd, buildOrganizationSchema } from "../../components/json-ld";
-import { Inter, JetBrains_Mono } from "next/font/google";
-import "../globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
 
 type Props = {
   children: ReactNode;
@@ -63,10 +47,26 @@ export async function generateMetadata({ params }: Props) {
     },
     icons: {
       icon: { url: "/favicon.svg", type: "image/svg+xml" },
+      apple: "/icons/apple-touch-icon.png",
+    },
+    manifest: `/${locale}/manifest.webmanifest`,
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: "black-translucent",
+      title: "OmniKit",
+    },
+    other: {
+      "mobile-web-app-capable": "yes",
     },
     openGraph: {
       siteName: "OmniKit",
-      images: [{ url: "/og-image.svg", width: 1200, height: 630 }],
+      images: [
+        {
+          url: "/api/og?title=OmniKit&icon=🛠&desc=Free+online+developer+tools",
+          width: 1200,
+          height: 630,
+        },
+      ],
     },
   };
 }
@@ -91,34 +91,20 @@ export default async function LocaleLayout({ children, params }: Props) {
   const initialTheme: Theme = themeCookie === "dark" ? "dark" : "light";
 
   return (
-    <html
-      lang={locale}
-      className={`${inter.variable} ${jetbrainsMono.variable}${initialTheme === "dark" ? " dark" : ""}`}
-      suppressHydrationWarning
-    >
-      <head>
-        <link rel="manifest" href={`/${locale}/manifest.webmanifest`} />
-        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="OmniKit" />
-        <IOSSplashLinks />
-        <WebsiteJsonLd />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(buildOrganizationSchema()) }}
-        />
-      </head>
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          <Providers initialTheme={initialTheme}>
-            <SerwistProvider swUrl="/serwist/sw.js">{children}</SerwistProvider>
-          </Providers>
-        </NextIntlClientProvider>
-        <Analytics />
-        <SpeedInsights />
-      </body>
-    </html>
+    <>
+      <IOSSplashLinks />
+      <WebsiteJsonLd />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildOrganizationSchema()) }}
+      />
+      <NextIntlClientProvider messages={messages}>
+        <Providers initialTheme={initialTheme}>
+          <SerwistProvider swUrl="/serwist/sw.js">{children}</SerwistProvider>
+        </Providers>
+      </NextIntlClientProvider>
+      <Analytics />
+      <SpeedInsights />
+    </>
   );
 }

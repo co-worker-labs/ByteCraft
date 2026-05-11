@@ -1,11 +1,12 @@
 import { getTranslations } from "next-intl/server";
 import { generatePageMeta } from "../../../libs/seo";
 import { buildToolSchemas } from "../../../components/json-ld";
-import { TOOL_CATEGORIES, CATEGORY_SLUGS } from "../../../libs/tools";
+import { TOOLS, TOOL_CATEGORIES, CATEGORY_SLUGS } from "../../../libs/tools";
 import PasswordPage from "./password-page";
 
 const PATH = "/password";
 const TOOL_KEY = "password";
+const tool = TOOLS.find((t) => t.key === TOOL_KEY)!;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -15,6 +16,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     path: PATH,
     title: t("password.title"),
     description: t("password.description"),
+    ogImage: {
+      title: t("password.shortTitle"),
+      emoji: tool.emoji,
+      desc: t("password.description"),
+    },
   });
 }
 
@@ -25,6 +31,10 @@ export default async function PasswordRoute({ params }: { params: Promise<{ loca
   const tc = await getTranslations({ locale, namespace: "categories" });
   const category = TOOL_CATEGORIES.find((c) => c.tools.includes(TOOL_KEY))!;
   const categorySlug = CATEGORY_SLUGS[category.key];
+  const howToSteps = [1, 2, 3, 4, 5].map((i) => ({
+    name: tp(`descriptions.step${i}Title`),
+    text: tp(`descriptions.step${i}Desc`),
+  }));
   const schemas = buildToolSchemas({
     name: t("password.title"),
     description: tp.has("descriptions.aeoDefinition")
@@ -37,10 +47,8 @@ export default async function PasswordRoute({ params }: { params: Promise<{ loca
       q: tp(`descriptions.faq${i}Q`),
       a: tp(`descriptions.faq${i}A`),
     })),
-    howToSteps: [1, 2, 3, 4, 5].map((i) => ({
-      name: tp(`descriptions.step${i}Title`),
-      text: tp(`descriptions.step${i}Desc`),
-    })),
+    howToSteps,
+    sameAs: tool.sameAs,
   });
 
   return (

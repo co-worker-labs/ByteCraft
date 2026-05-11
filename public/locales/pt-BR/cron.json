@@ -143,7 +143,16 @@
     "faq1A": "Uma expressão Cron é uma string de 5-7 campos que define um agendamento para tarefas recorrentes. É usada por daemons cron, agendadores de tarefas e frameworks como Spring e Quartz.",
     "faq2Q": "Quais dialetos Cron são suportados?",
     "faq2A": "Três: Padrão (5 campos), Spring (6 campos com segundos) e Quartz (7 campos com segundos e ano). A ferramenta detecta automaticamente o dialeto e mostra as próximas execuções.",
-    "aeoDefinition": "O Gerador de Expressões Cron é uma ferramenta online gratuita para construir e decodificar expressões Cron. Suporta modos Standard, Spring e Quartz com explicações legíveis e pré-visualização da próxima execução. Nenhum dado sai do seu navegador."
+    "aeoDefinition": "O Gerador de Expressões Cron é uma ferramenta online gratuita para construir e decodificar expressões Cron. Suporta modos Standard, Spring e Quartz com explicações legíveis e pré-visualização da próxima execução. Nenhum dado sai do seu navegador.",
+    "stepsTitle": "Como construir uma expressão Cron",
+    "step1Title": "Escolha um modo",
+    "step1Text": "Selecione Standard (5 campos), Spring (6 campos com segundos) ou Quartz (7 campos com ano).",
+    "step2Title": "Configure cada campo",
+    "step2Text": "Use os editores de campo para definir valores de minuto, hora, dia, mês e dia da semana. Ou escolha um preset como \"A cada 5 minutos\".",
+    "step3Title": "Revise as próximas execuções",
+    "step3Text": "A ferramenta mostra as próximas 5 execuções e uma descrição legível da sua expressão.",
+    "faq3Q": "O que acontece durante mudanças de horário de verão?",
+    "faq3A": "Agendamentos dentro do intervalo perdido do horário de verão disparam no próximo horário válido. Agendamentos no horário duplicado disparam na primeira ocorrência. Mude para UTC para evitar o horário de verão completamente."
   },
   "editor": {
     "title": "Editar campo",

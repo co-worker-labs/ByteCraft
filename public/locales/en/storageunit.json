@@ -11,9 +11,18 @@
     "aeoDefinition": "Storage Unit Converter is a free online tool for converting between bytes, KB, MB, GB, TB, and PB. Supports both SI (decimal) and IEC (binary) standards. Runs entirely in your browser.",
     "whatIsP1": "The Storage Unit Converter lets you instantly convert between digital storage units — bytes, KB, MB, GB, TB, PB — supporting both decimal (SI) and binary (IEC) standards. See also [Number Base converter](/numbase) for binary/hex conversions, or [File Checksum](/checksum) to verify file sizes.",
     "whatIsP2": "Whether you're comparing file sizes, provisioning disk space, or understanding data transfer limits, this tool gives you accurate conversions at a glance.",
+    "stepsTitle": "How to Convert Storage Units",
+    "step1Title": "Enter a value",
+    "step1Text": "Type a number in any storage unit field. The tool converts to all other units in real time.",
+    "step2Title": "Choose decimal or binary",
+    "step2Text": "Toggle between SI (1K = 1000 bytes) and IEC (1K = 1024 bytes) standards using the measurement switch.",
+    "step3Title": "Read the conversion table",
+    "step3Text": "All equivalent values are displayed at once. The common conversion table below shows reference values.",
     "faq1Q": "Why are there two conversion standards?",
     "faq1A": "Decimal (SI) uses powers of 1000 and is used by storage manufacturers. Binary (IEC) uses powers of 1024 and is what operating systems typically report.",
     "faq2Q": "What is the difference between KB and KiB?",
-    "faq2A": "KB (kilobyte) = 1000 bytes. KiB (kibibyte) = 1024 bytes. The IEC introduced KiB/MiB/GiB to disambiguate, but KB/MB/GB are still commonly used for both."
+    "faq2A": "KB (kilobyte) = 1000 bytes. KiB (kibibyte) = 1024 bytes. The IEC introduced KiB/MiB/GiB to disambiguate, but KB/MB/GB are still commonly used for both.",
+    "faq3Q": "Why does my hard drive show less space than advertised?",
+    "faq3A": "Manufacturers use decimal (SI) units — 1 TB = 1,000,000,000,000 bytes. Your operating system uses binary — 1 TiB = 1,099,511,627,776 bytes. A \"1 TB\" drive shows as approximately 931 GiB in your OS."
   }
 }

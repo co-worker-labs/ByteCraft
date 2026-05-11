@@ -8,6 +8,22 @@
     "faq1A": "Kryptografisches Hashing wandelt Eingabedaten in einen Fingerabdruck fester Größe (Hash) um. Dieselbe Eingabe erzeugt immer denselben Hash, aber eine winzige Änderung verändert die Ausgabe vollständig.",
     "faq2Q": "Welche Hash-Algorithmen werden unterstützt?",
     "faq2A": "Dieses Tool unterstützt MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3-224/256/384/512, Keccak-224/256/384/512 und RIPEMD-160. HMAC-Varianten sind ebenfalls verfügbar.",
-    "aeoDefinition": "Der Hash-Generator ist ein kostenloses Online-Tool zum Erzeugen von MD5-, SHA-1-, SHA-256-, SHA-512-, SHA3-, Keccak- und RIPEMD-160-Hashes. Unterstützt HMAC und Datei-Hashing. Es werden keine Daten an einen Server gesendet."
+    "aeoDefinition": "Der Hash-Generator ist ein kostenloses Online-Tool zum Erzeugen von MD5-, SHA-1-, SHA-256-, SHA-512-, SHA3-, Keccak- und RIPEMD-160-Hashes. Unterstützt HMAC und Datei-Hashing. Es werden keine Daten an einen Server gesendet.",
+    "faq3Q": "Was ist der Unterschied zwischen SHA-2 und SHA-3?",
+    "faq3A": "SHA-2 (SHA-256, SHA-512) verwendet die Merkle-Damgård-Konstruktion, während SHA-3 die Keccak-Schwamm-Konstruktion verwendet. SHA-3 ist kein Ersatz für SHA-2, sondern eine Alternative mit unterschiedlichem internem Design. Beide gelten als sicher.",
+    "step1Title": "Text eingeben",
+    "step1Text": "Fügen Sie den zu hashenden Klartext in das Eingabefeld ein oder geben Sie ihn ein.",
+    "step2Title": "Algorithmen auswählen",
+    "step2Text": "Aktivieren Sie die gewünschten Hash-Algorithmen im Algorithmus-Bereich. Mehrere Algorithmen können gleichzeitig ausgewählt werden.",
+    "step3Title": "Hash kopieren",
+    "step3Text": "Die Hash-Ausgabe wird sofort angezeigt. Verwenden Sie die Kopiertaste oder fügen Sie einen Hash zum Vergleich ein.",
+    "stepsTitle": "Hash generieren",
+    "useCasesDesc1": "Datenintegritätsprüfung",
+    "useCasesDesc2": "Nachrichtenauthentifizierung",
+    "useCasesP1": "Datenintegrität durch Vergleich von Hashes der Original- und Empfangsdaten überprüfen, um Änderungen bei Übertragung oder Speicherung zu erkennen.",
+    "useCasesP2": "HMAC-Signaturen mit einer geheimen Passphrase generieren, um Nachrichtenursprung und Integrität zu authentifizieren.",
+    "useCasesTitle": "Gängige Anwendungsfälle",
+    "whatIs": "Kryptografisches Hashing wandelt Eingabedaten beliebiger Größe in einen Fingerabdruck fester Größe um (Hash). Dieselbe Eingabe erzeugt immer denselben Hash, aber selbst eine winzige Änderung verändert die Ausgabe vollständig. Hashes sind Einweg — Sie können einen Hash nicht in die ursprüngliche Eingabe zurückverwandeln. Dieses Tool generiert Hashes mit MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3, Keccak und RIPEMD-160.",
+    "whatIsTitle": "Was ist kryptografisches Hashing?"
   }
 }

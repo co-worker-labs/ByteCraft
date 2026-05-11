@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { RefreshCw, Clipboard, Download, Info } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
-import { renderLinkedText } from "../../../utils/linked-text";
 import "rc-slider/assets/index.css";
 
 const Slider = dynamic(() => import("rc-slider"), {
@@ -30,42 +29,7 @@ import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
 import { Accordion } from "../../../components/ui/accordion";
 import { CircleHelp } from "lucide-react";
-
-function Description() {
-  const t = useTranslations("uuid");
-  const tc = useTranslations("common");
-  const locale = useLocale();
-
-  const faqItems = [1, 2].map((i) => ({
-    title: t(`descriptions.faq${i}Q`),
-    content: <p>{t(`descriptions.faq${i}A`)}</p>,
-  }));
-  return (
-    <section id="description" className="mt-8">
-      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
-        <p className="text-fg-secondary text-sm leading-relaxed">
-          {t("descriptions.aeoDefinition")}
-        </p>
-      </div>
-      <div className="mb-4">
-        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
-        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
-          <p>{t("descriptions.whatIsP2")}</p>
-        </div>
-      </div>
-      <div className="mt-8">
-        <div className="flex items-center gap-2 mb-4">
-          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
-          <h2 className="font-semibold text-fg-primary text-base text-pretty">
-            {tc("descriptions.faqTitle")}
-          </h2>
-        </div>
-        <Accordion items={faqItems} />
-      </div>
-    </section>
-  );
-}
+import DescriptionSection from "../../../components/description-section";
 
 const VERSIONS: UuidVersion[] = ["v1", "v3", "v4", "v5", "v7"];
 const DEFAULT_VERSION: UuidVersion = "v4";
@@ -554,7 +518,7 @@ export default function UuidPage() {
             </div>
           </div>
         </div>
-        <Description />
+        <DescriptionSection namespace="uuid" />
         <RelatedTools currentTool="uuid" />
       </div>
     </Layout>

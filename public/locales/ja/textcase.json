@@ -37,6 +37,22 @@
     "faq1Q": "どのテキストケース変換が利用可能？",
     "faq1A": "camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE、dot.case、path/case、Title Case、Sentence case、UPPER CASE、lower caseなど。",
     "faq2Q": "複数の文字列を一度に変換できますか？",
-    "faq2A": "はい。複数行を貼り付けると、ツールが各行を独立して変換します。複数行変換では選択したケースがすべての行に適用されます。"
+    "faq2A": "はい。複数行を貼り付けると、ツールが各行を独立して変換します。複数行変換では選択したケースがすべての行に適用されます。",
+    "faq3Q": "どのケースフォーマットに対応していますか？",
+    "faq3A": "11種類のフォーマットに対応: camelCase、PascalCase、snake_case、CONSTANT_CASE、kebab-case、dot.case、lower case、UPPER CASE、Title Case、Sentence case、path/case。",
+    "step1Title": "テキストを貼り付ける",
+    "step1Text": "入力フィールドに任意の文字列を入力または貼り付けます。ツールが現在のケースフォーマットを自動検出します。",
+    "step2Title": "変換結果を確認する",
+    "step2Text": "11種類すべてのケースフォーマットがテーブルに即座に表示されます。検出されたフォーマットにはバッジが付きます。",
+    "step3Title": "結果をコピーする",
+    "step3Text": "変換された文字列の横にあるコピーボタンをクリックしてクリップボードにコピーします。",
+    "stepsTitle": "テキストケースの変換方法",
+    "useCasesDesc1": "言語間の移行",
+    "useCasesP1": "Pythonのsnake_caseをJavaScriptのcamelCaseに、1回の貼り付けで変換するなど、言語間でコードを移行する際の変数名変更。",
+    "useCasesDesc2": "命名規則の統一",
+    "useCasesP2": "プレーンな英語入力から一貫したURLスラッグ、CSSクラス名、環境変数名を生成。",
+    "useCasesTitle": "一般的なユースケース",
+    "whatIs": "テキストケース変換ツールは、プログラミングや執筆で使用される命名規則間で文字列を変換します。入力フォーマットを自動検出し、camelCase、PascalCase、snake_case、CONSTANT_CASE、kebab-case、dot.case、lower case、UPPER CASE、Title Case、Sentence case、path/caseにリアルタイムで変換表示します。",
+    "whatIsTitle": "テキストケース変換ツールとは？"
   }
 }

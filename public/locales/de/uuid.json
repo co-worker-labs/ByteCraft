@@ -67,6 +67,19 @@
     "faq1A": "UUID (Universally Unique Identifier) ist ein 128-Bit-Identifikatorstandard. Dieses Tool generiert v4 (zufällige) und v7 (zeitgeordnete) UUIDs, die ohne zentrale Koordination eindeutig sind.",
     "faq2Q": "Wie viele UUIDs kann ich gleichzeitig generieren?",
     "faq2A": "Sie können bis zu 1.000 UUIDs in einem einzigen Batch generieren. Die gesamte Generierung erfolgt in Ihrem Browser mit crypto.getRandomValues().",
-    "aeoDefinition": "Der UUID-Generator ist ein kostenloses Online-Tool zum massenhaften Erzeugen von v1-, v3-, v4-, v5- und v7-UUIDs. Entspricht RFC 4122/9562. Läuft vollständig in Ihrem Browser."
+    "aeoDefinition": "Der UUID-Generator ist ein kostenloses Online-Tool zum massenhaften Erzeugen von v1-, v3-, v4-, v5- und v7-UUIDs. Entspricht RFC 4122/9562. Läuft vollständig in Ihrem Browser.",
+    "faq3Q": "Kann ich jedes Mal dieselbe UUID generieren?",
+    "faq3A": "Ja. Verwenden Sie v3 (MD5) oder v5 (SHA-1) mit demselben Namespace und Namen — sie erzeugen immer dieselbe deterministische UUID. Nützlich für konsistente Identifikatoren aus bekannten Eingaben wie URLs oder Domänennamen.",
+    "step1Desc": "Wählen Sie v4 (zufällig, universell), v7 (zeitgeordnet, datenbankfreundlich), v3/v5 (deterministisch aus Namespace + Name) oder v1 (Timestamp + MAC).",
+    "step1Title": "UUID-Version wählen",
+    "step2Desc": "Passen Sie den Regler an, um bis zu 100 UUIDs gleichzeitig zu generieren. Wählen Sie Standard-, Ohne-Bindestriche- oder Geschweifte-Klammern-Format und schalten Sie Großbuchstaben um.",
+    "step2Title": "Anzahl und Format festlegen",
+    "step3Desc": "Klicken Sie auf die Kopiertaste für eine einzelne UUID oder laden Sie alle generierten UUIDs als .txt-Datei herunter.",
+    "step3Title": "Kopieren oder herunterladen",
+    "stepsTitle": "UUIDs generieren",
+    "useCasesP1": "Datenbank-Primärschlüssel — UUIDs vermeiden ID-Kollisionen in verteilten Datenbanken ohne zentralen Koordinator.",
+    "useCasesP2": "Identifikatoren in verteilten Systemen — eindeutige IDs über mehrere Dienste, Regionen oder Rechenzentren ohne Koordination generieren.",
+    "useCasesP3": "Session-Token und Request-Tracing — UUIDs als Korrelations-IDs verwenden, die in der gesamten Infrastruktur garantiert eindeutig sind.",
+    "useCasesTitle": "Gängige Anwendungsfälle"
   }
 }

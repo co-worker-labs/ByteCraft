@@ -22,5 +22,19 @@
   "faq3Q": "データは安全ですか？",
   "faq3A": "すべての処理はクライアントサイドのJavaScriptを使用してブラウザ内で行われます。データがサーバーに送信されることはありません。ファイルやテキストがデバイスから離れることはありません。",
   "faq4Q": "インストールは必要ですか？",
-  "faq4A": "インストール不要です。OmniKitはモダンブラウザで動作し、Progressive Web App（PWA）としてインストールして素早くアクセスすることもできます。"
+  "faq4A": "インストール不要です。OmniKitはモダンブラウザで動作し、Progressive Web App（PWA）としてインストールして素早くアクセスすることもできます。",
+  "catEncodingConversion": "エンコードとフォーマット変換 — Base64、URLエンコード、進数変換、YAML、CSV。",
+  "catGenerators": "UUID、QRコード、Cron式、タイムスタンプの生成。",
+  "catReferenceLookup": "ASCIIコード、HTTPステータスコード、HTMLエンティティなどの参照。",
+  "catSecurityCrypto": "暗号化、ハッシュ、データ保護 — JWT、ハッシュ、暗号、SSH鍵、パスワードツール。",
+  "catTextProcessing": "テキストとコードのフォーマット、変換、分析 — JSON、正規表現、Diffなどのツール。",
+  "catVisualMedia": "カラー、画像、ビジュアルコンテンツの処理。",
+  "categoryIntroTitle": "カテゴリ別に探す",
+  "whyFreeDesc": "オープンソース、登録不要、トラッキングなし、有料プランなし。",
+  "whyFreeTitle": "永久無料",
+  "whyOfflineDesc": "PWAとしてインストールすれば、インターネット接続なしでツールを利用できます。",
+  "whyOfflineTitle": "オフライン対応",
+  "whyPrivacyDesc": "すべての処理はブラウザ内で行われます。データがサーバーに送信されることはありません。",
+  "whyPrivacyTitle": "プライバシー優先",
+  "whyTitle": "OmniKitが選ばれる理由"
 }

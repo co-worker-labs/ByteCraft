@@ -43,6 +43,20 @@
     "faq2Q": "¿Puedo definir patrones de extracción personalizados?",
     "faq2A": "Sí. Escribe tu propio patrón regex para extraer cualquier formato de texto. La herramienta resalta coincidencias y muestra grupos de captura.",
     "faq3Q": "¿Qué patrones integrados están disponibles?",
-    "faq3A": "Direcciones de email, URLs, direcciones IPv4/IPv6, números de teléfono, colores hex, números y fechas. Cada patrón está preconfigurado para casos de uso comunes."
+    "faq3A": "Direcciones de email (soporta etiquetas + y subdominios), URLs (http/https con rutas, consultas y fragmentos) y números de teléfono internacionales (mínimo 7 dígitos). Cada tipo se puede activar independientemente.",
+    "whatIsTitle": "¿Qué es el Extractor de Texto?",
+    "whatIs": "El Extractor de Texto escanea cualquier texto y extrae direcciones de email, URLs y números de teléfono en una sola pasada. Activa o desactiva cada tipo, ve los resultados deduplicados y exporta como CSV o JSON — todo en tu navegador.",
+    "stepsTitle": "Cómo extraer emails, URLs y números de teléfono",
+    "step1Title": "Pega tu texto",
+    "step1Text": "Pega o suelta un archivo de texto que contenga emails, URLs o números de teléfono. La herramienta escanea en tiempo real.",
+    "step2Title": "Activa los tipos de extracción",
+    "step2Text": "Usa los botones Email, URL y Teléfono para incluir o excluir cada tipo. Todas las coincidencias se encuentran en una sola pasada.",
+    "step3Title": "Exporta los resultados",
+    "step3Text": "Copia todos los resultados o exporta como CSV y JSON. Los resultados se deduplican por defecto.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesDesc1": "Generación de leads",
+    "useCasesP1": "Extrae direcciones de email de páginas web, documentos o archivos de log para campañas de outreach.",
+    "useCasesDesc2": "Limpieza de datos",
+    "useCasesP2": "Extrae URLs o números de teléfono de texto no estructurado y expórtalos en un formato estructurado."
   }
 }

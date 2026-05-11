@@ -43,6 +43,20 @@
     "faq2Q": "Kann ich benutzerdefinierte Extraktionsmuster definieren?",
     "faq2A": "Ja. Schreiben Sie Ihr eigenes Regex-Muster, um ein beliebiges Textformat zu extrahieren. Das Tool hebt Treffer hervor und zeigt Capture-Gruppen an.",
     "faq3Q": "Welche eingebauten Muster sind verfügbar?",
-    "faq3A": "E-Mail-Adressen, URLs, IPv4/IPv6-Adressen, Telefonnummern, Hex-Farben, Zahlen und Daten. Jedes Muster ist für gängige Anwendungsfälle vorkonfiguriert."
+    "faq3A": "E-Mail-Adressen, URLs, IPv4/IPv6-Adressen, Telefonnummern, Hex-Farben, Zahlen und Daten. Jedes Muster ist für gängige Anwendungsfälle vorkonfiguriert.",
+    "step1Title": "Text einfügen",
+    "step1Text": "Fügen Sie eine Textdatei mit E-Mails, URLs oder Telefonnummern ein oder legen Sie sie ab. Das Tool scannt in Echtzeit.",
+    "step2Title": "Extraktionstypen umschalten",
+    "step2Text": "Verwenden Sie die E-Mail-, URL- und Telefon-Chipbuttons, um jeden Typ ein- oder auszuschalten. Alle Treffer werden in einem Durchgang gefunden.",
+    "step3Title": "Ergebnisse exportieren",
+    "step3Text": "Kopieren Sie alle Ergebnisse oder exportieren Sie als CSV und JSON. Ergebnisse werden standardmäßig dedupliziert.",
+    "stepsTitle": "E-Mails, URLs und Telefonnummern extrahieren",
+    "useCasesDesc1": "Lead-Generierung",
+    "useCasesDesc2": "Datenbereinigung",
+    "useCasesP1": "E-Mail-Adressen aus Webseiten, Dokumenten oder Logdateien für Outreach-Kampagnen extrahieren.",
+    "useCasesP2": "URLs oder Telefonnummern aus unstrukturiertem Text ziehen und in einem strukturierten Format exportieren.",
+    "useCasesTitle": "Gängige Anwendungsfälle",
+    "whatIs": "Der Text-Extraktor durchsucht beliebigen Text und extrahiert E-Mail-Adressen, URLs und Telefonnummern in einem Durchgang. Schalten Sie jeden Typ ein oder aus, zeigen Sie deduplizierte Ergebnisse an und exportieren Sie als CSV oder JSON — alles in Ihrem Browser.",
+    "whatIsTitle": "Was ist der Text-Extraktor?"
   }
 }

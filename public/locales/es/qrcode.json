@@ -89,6 +89,23 @@
     "tipTest": "Siempre prueba el QR generado con la cámara real de un teléfono antes de imprimir o compartir ampliamente.",
     "aeoDefinition": "El Generador de códigos QR es una herramienta gratuita online para crear códigos QR para texto, URLs, WiFi, vCard y más. Soporta colores personalizados, logos y estilos de puntos con exportación SVG/PNG. No se envían datos a ningún servidor.",
     "faq1Q": "¿Qué es el Generador de QR?",
-    "faq1A": "Un generador de códigos QR personalizable que soporta texto, URLs, credenciales WiFi y vCards. Añade logos, cambia colores y exporta como SVG o PNG."
+    "faq1A": "Un generador de códigos QR personalizable que soporta texto, URLs, credenciales WiFi y vCards. Añade logos, cambia colores y exporta como SVG o PNG.",
+    "whatIsTitle": "¿Qué es un código QR?",
+    "whatIs": "Los códigos QR (Quick Response) son códigos de barras bidimensionales que almacenan datos en un patrón de cuadrados blancos y negros. Inventados por Denso Wave en 1994, pueden codificar URLs, texto, información de contacto, credenciales WiFi y más — escanéalos con la cámara de cualquier smartphone.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesP1": "Compartir una URL — pon un código QR en una tarjeta de visita, folleto o cartel para que la gente pueda abrir el enlace al instante.",
+    "useCasesP2": "Compartir red WiFi — codifica el SSID, contraseña y tipo de cifrado para que los invitados se conecten escaneando.",
+    "useCasesP3": "Intercambio de contactos vCard — incluye tu nombre, teléfono, email y organización en un código escaneable.",
+    "stepsTitle": "Cómo crear un código QR",
+    "step1Title": "Elige el tipo de contenido",
+    "step1Desc": "Selecciona Texto/URL, WiFi, vCard, Email, SMS o WhatsApp según lo que quieras codificar.",
+    "step2Title": "Introduce tus datos",
+    "step2Desc": "Rellena los campos requeridos. Para URLs, pega el enlace completo. Para WiFi, introduce el nombre de red y la contraseña.",
+    "step3Title": "Personaliza la apariencia",
+    "step3Desc": "Ajusta colores, estilo de puntos, nivel de corrección de errores y opcionalmente añade un logo. Se recomienda corrección alta (Q o H) cuando se usan logos.",
+    "faq2Q": "¿Debo usar exportación SVG o PNG?",
+    "faq2A": "Usa SVG para materiales impresos — escala a cualquier tamaño sin pixelarse. Usa PNG para pantalla digital, redes sociales o cuando necesites una imagen raster de resolución fija. La exportación PNG soporta hasta 1024px de resolución para impresión de alta calidad.",
+    "faq3Q": "¿Puedo poner un logo dentro de mi código QR?",
+    "faq3A": "Sí. Sube una imagen de logo y la herramienta lo superpondrá en el centro. La corrección de errores se eleva automáticamente a H (30% de recuperación) para mantener la escaneabilidad. Mantén el tamaño del logo al 30% o menos del área del código QR para mejores resultados."
   }
 }

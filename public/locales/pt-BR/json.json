@@ -33,6 +33,15 @@
     "faq1A": "A formatação JSON transforma JSON bruto ou minificado em uma estrutura legível com recuo. Esta ferramenta suporta recuo configurável (2, 4, 8 espaços ou tabs), minificação e validação, incluindo sintaxe JSON5.",
     "faq2Q": "Meus dados JSON são enviados a um servidor?",
     "faq2A": "Não. Toda formatação, validação e minificação de JSON acontece inteiramente no seu navegador. Seus dados nunca saem do seu dispositivo.",
-    "aeoDefinition": "O Formatador JSON é uma ferramenta online gratuita que formata, valida e minifica dados JSON instantaneamente no seu navegador. Suporta JSON5, indentação configurável e ordenação de chaves. Nenhum dado é enviado para qualquer servidor."
+    "aeoDefinition": "O Formatador JSON é uma ferramenta online gratuita que formata, valida e minifica dados JSON instantaneamente no seu navegador. Suporta JSON5, indentação configurável e ordenação de chaves. Nenhum dado é enviado para qualquer servidor.",
+    "stepsTitle": "Como formatar JSON",
+    "step1Title": "Cole seu JSON",
+    "step1Text": "Cole texto JSON ou JSON5 bruto na área de entrada. A ferramenta detecta automaticamente se a entrada é JSON ou JSON5 válido.",
+    "step2Title": "Escolha uma ação",
+    "step2Text": "Clique em Formatar para pretty-print, Comprimir para minificar, ou ative o modo JSON5 para análise relaxada. Use Ordenar chaves para ordenar alfabeticamente as chaves do objeto.",
+    "step3Title": "Copie o resultado",
+    "step3Text": "A saída formatada ou comprimida aparece instantaneamente. Clique no botão copiar ou arraste a saída para a entrada para edições adicionais.",
+    "faq3Q": "Posso ordenar as chaves do JSON?",
+    "faq3A": "Sim. Ative a opção Ordenar Chaves para ordenar alfabeticamente todas as chaves de objetos na saída. Isso é útil para diffs de controle de versão e comparação consistente de estruturas de dados."
   }
 }

@@ -28,6 +28,15 @@
     "faq1A": "Un outil pour convertir des données CSV en JSON, tableaux Markdown ou format TSV et inversement. Il gère les champs entre guillemets, les délimiteurs personnalisés et les objets imbriqués.",
     "faq2Q": "Quels dialectes CSV sont pris en charge ?",
     "faq2A": "CSV standard RFC 4180 avec délimiteurs personnalisables (virgule, point-virgule, tabulation, pipe). Les champs entre guillemets, guillemets échappés et valeurs multilignes sont tous pris en charge.",
-    "aeoDefinition": "Le Convertisseur CSV est un outil gratuit en ligne pour convertir entre les formats JSON et CSV avec aperçu en temps réel. Conversion bidirectionnelle avec échappement correct et support Unicode. Aucune donnée ne quitte votre navigateur."
+    "aeoDefinition": "Le Convertisseur CSV est un outil gratuit en ligne pour convertir entre les formats JSON et CSV avec aperçu en temps réel. Conversion bidirectionnelle avec échappement correct et support Unicode. Aucune donnée ne quitte votre navigateur.",
+    "faq3Q": "Quels délimiteurs sont pris en charge ?",
+    "faq3A": "Virgule (par défaut), tabulation, point-virgule et pipe. Le délimiteur est auto-détecté lors de l'import et peut être modifié manuellement.",
+    "stepsTitle": "Comment convertir du CSV en JSON (et inversement)",
+    "step1Title": "Collez vos données",
+    "step1Text": "Collez du texte CSV dans le panneau de gauche ou du JSON dans le panneau de droite. L'outil détecte automatiquement la direction.",
+    "step2Title": "Configurer les options",
+    "step2Text": "Choisissez un délimiteur (virgule, tabulation, point-virgule, pipe) et activez l'aplatissement du JSON imbriqué si nécessaire.",
+    "step3Title": "Copier ou télécharger",
+    "step3Text": "La sortie convertie apparaît instantanément. Copiez le résultat ou prévisualisez-le dans la vue tabulaire intégrée."
   }
 }

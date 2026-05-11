@@ -28,6 +28,15 @@
     "faq1A": "Ein Tool zum Konvertieren von CSV-Daten in JSON, Markdown-Tabellen oder TSV-Format und zurück. Es verarbeitet Felder in Anführungszeichen, benutzerdefinierte Trennzeichen und verschachtelte Objekte.",
     "faq2Q": "Welche CSV-Dialekte werden unterstützt?",
     "faq2A": "RFC 4180 Standard-CSV mit anpassbaren Trennzeichen (Komma, Semikolon, Tab, Pipe). Felder in Anführungszeichen, escapierte Anführungszeichen und mehrzeilige Werte werden alle unterstützt.",
-    "aeoDefinition": "Der CSV-Konverter ist ein kostenloses Online-Tool zur Konvertierung zwischen JSON- und CSV-Formaten mit Echtzeitvorschau. Bidirektionale Konvertierung mit korrektem Escaping und Unicode-Unterstützung. Keine Daten verlassen Ihren Browser."
+    "aeoDefinition": "Der CSV-Konverter ist ein kostenloses Online-Tool zur Konvertierung zwischen JSON- und CSV-Formaten mit Echtzeitvorschau. Bidirektionale Konvertierung mit korrektem Escaping und Unicode-Unterstützung. Keine Daten verlassen Ihren Browser.",
+    "faq3Q": "Welche Trennzeichen werden unterstützt?",
+    "faq3A": "Komma (Standard), Tabulator, Semikolon und Pipe. Das Trennzeichen wird beim Import automatisch erkannt und kann manuell geändert werden.",
+    "step1Title": "Daten einfügen",
+    "step1Text": "Fügen Sie CSV-Text im linken Bereich oder JSON im rechten Bereich ein. Das Tool erkennt die Richtung automatisch.",
+    "step2Title": "Optionen konfigurieren",
+    "step2Text": "Wählen Sie ein Trennzeichen (Komma, Tabulator, Semikolon, Pipe) und aktivieren Sie bei Bedarf die Abflachung verschachtelter JSON-Objekte.",
+    "step3Title": "Kopieren oder herunterladen",
+    "step3Text": "Die konvertierte Ausgabe erscheint sofort. Kopieren Sie das Ergebnis oder zeigen Sie es in der integrierten Tabellenansicht an.",
+    "stepsTitle": "CSV in JSON konvertieren (und zurück)"
   }
 }

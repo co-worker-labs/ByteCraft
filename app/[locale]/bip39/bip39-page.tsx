@@ -124,7 +124,7 @@ function BottomDescription() {
     { title: t("descriptions.securityTitle"), content: t("descriptions.security") },
   ];
 
-  const faqItems = [1, 2].map((i) => ({
+  const faqItems = [1, 2, 3].map((i) => ({
     title: t(`descriptions.faq${i}Q`),
     content: <p>{t(`descriptions.faq${i}A`)}</p>,
   }));

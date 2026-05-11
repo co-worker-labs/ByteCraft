@@ -101,6 +101,20 @@
     "faq2Q": "Kann ich Authentifizierung verwenden?",
     "faq2A": "Ja. Unterstützt Basic Auth, Bearer-Token, API-Schlüssel (Header und Query) und benutzerdefinierte Authentifizierungs-Header. Alle Anmeldeinformationen bleiben in Ihrem Browser.",
     "faq3Q": "Wird der Anfrageverlauf unterstützt?",
-    "faq3A": "Ja. Alle Anfragen werden mit vollständigen Anfrage-/Antwortdetails im lokalen Speicher gespeichert. Sie können häufig verwendete Anfragen für schnellen Zugriff als Favorit markieren."
+    "faq3A": "Ja. Alle Anfragen werden mit vollständigen Anfrage-/Antwortdetails im lokalen Speicher gespeichert. Sie können häufig verwendete Anfragen für schnellen Zugriff als Favorit markieren.",
+    "step1Title": "URL eingeben",
+    "step1Text": "Geben Sie die API-Endpunkt-URL ein oder fügen Sie sie ein. Wählen Sie eine HTTP-Methode (GET, POST, PUT usw.).",
+    "step2Title": "Anfrage konfigurieren",
+    "step2Text": "Fügen Sie Abfrageparameter, Header, Anfrage-Body (JSON, Form-Data oder Raw) und Authentifizierung nach Bedarf hinzu.",
+    "step3Title": "Senden und inspizieren",
+    "step3Text": "Klicken Sie auf Senden. Zeigen Sie Antwort-Body, Header, Cookies, Zeitmessung und Weiterleitungsinfos im Antwortbereich an.",
+    "stepsTitle": "HTTP-Anfrage senden",
+    "useCasesDesc1": "API-Entwicklung",
+    "useCasesDesc2": "Debugging",
+    "useCasesP1": "REST-API-Endpunkte während der Entwicklung testen, ohne Desktop-Tools wie Postman oder curl zu installieren.",
+    "useCasesP2": "Antwort-Header, Statuscodes und Zeitmessung inspizieren, um API-Probleme zu diagnostizieren. Proxy-Schalter für CORS-Umgehung nutzen.",
+    "useCasesTitle": "Gängige Anwendungsfälle",
+    "whatIs": "Ein browserbasierter HTTP-Client zum Testen von REST-APIs. Senden Sie GET-, POST-, PUT-, PATCH-, DELETE-, HEAD- und OPTIONS-Anfragen mit benutzerdefinierten Headern, Body und Authentifizierung — alles aus Ihrem Browser.",
+    "whatIsTitle": "Was ist der HTTP-Client?"
   }
 }

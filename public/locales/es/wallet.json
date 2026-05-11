@@ -56,6 +56,18 @@
     "faq2Q": "¿Por qué las rutas de Solana requieren todos los segmentos endurecidos?",
     "faq2A": "Solana usa la curva ed25519 mediante SLIP-0010, que solo admite derivación endurecida. La derivación no endurecida no es posible con claves ed25519.",
     "faq3Q": "¿Cuál es la diferencia entre direcciones Bitcoin Legacy, SegWit y Taproot?",
-    "faq3A": "Legacy (P2PKH, empieza por 1) es el formato original. SegWit (P2WPKH, bc1q) usa codificación Bech32 con comisiones más bajas. Taproot (P2TR, bc1p) es el formato más reciente con privacidad mejorada."
+    "faq3A": "Legacy (P2PKH, empieza por 1) es el formato original. SegWit (P2WPKH, bc1q) usa codificación Bech32 con comisiones más bajas. Taproot (P2TR, bc1p) es el formato más reciente con privacidad mejorada.",
+    "stepsTitle": "Cómo generar una cartera HD",
+    "step1Title": "Genera o introduce una frase mnemónica",
+    "step1Text": "Haz clic en Generar para crear una nueva frase mnemónica BIP39 de 12 o 24 palabras, o pega una existente.",
+    "step2Title": "Selecciona cadenas y rutas",
+    "step2Text": "Elige para qué blockchains derivar direcciones. Personaliza la ruta de derivación si es necesario.",
+    "step3Title": "Ve las direcciones derivadas",
+    "step3Text": "La herramienta muestra dirección, clave pública y clave privada para cada índice de dirección derivado.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesDesc1": "Desarrollo y pruebas",
+    "useCasesP1": "Genera carteras de prueba para desarrollo de contratos inteligentes sin exponer fondos reales.",
+    "useCasesDesc2": "Entender las carteras HD",
+    "useCasesP2": "Aprende cómo funciona la derivación de claves BIP32/BIP39/BIP44 experimentando con diferentes rutas y cadenas."
   }
 }

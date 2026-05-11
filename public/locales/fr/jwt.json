@@ -45,6 +45,21 @@
     "keyFormats": "HMAC : toute chaîne UTF-8. Asymétrique : PEM uniquement. PKCS8 (-----BEGIN PRIVATE KEY-----) pour la signature, SPKI (-----BEGIN PUBLIC KEY-----) pour la vérification. Les formats PKCS1, SEC1, PEM chiffré et les certificats X.509 ne sont pas acceptés. L'outil vous indiquera la commande openssl exacte pour les convertir.",
     "faq1Q": "Qu'est-ce qu'un JWT ?",
     "faq1A": "JSON Web Token (JWT) est une norme ouverte (RFC 7519) pour transmettre securely des informations entre des parties sous forme d'objet JSON. Il est couramment utilisé pour l'authentification et l'échange d'informations.",
-    "aeoDefinition": "Le Débogueur JWT est un outil gratuit en ligne pour encoder, décoder et vérifier des JSON Web Tokens. Prend en charge HS256, RS256, ES256 et d'autres algorithmes. Tout le traitement s'exécute dans votre navigateur — aucun token n'est envoyé à un serveur."
+    "aeoDefinition": "Le Débogueur JWT est un outil gratuit en ligne pour encoder, décoder et vérifier des JSON Web Tokens. Prend en charge HS256, RS256, ES256 et d'autres algorithmes. Tout le traitement s'exécute dans votre navigateur — aucun token n'est envoyé à un serveur.",
+    "faq2Q": "Quelle est la différence entre les algorithmes JWT HMAC et RSA ?",
+    "faq2A": "Les algorithmes HMAC (HS256/384/512) utilisent un secret partagé — l'émetteur et le vérificateur connaissent la même clé. Les algorithmes RSA (RS256/384/512) utilisent une paire de clés publique/privée — l'émetteur signe avec la clé privée, et toute personne disposant de la clé publique peut vérifier. Utilisez HMAC pour serveur à serveur, RSA pour les systèmes distribués où le vérificateur ne doit pas pouvoir créer de jetons.",
+    "faq3Q": "Que se passe-t-il quand un JWT expire ?",
+    "faq3A": "La revendication exp dans la charge utile spécifie l'horodatage d'expiration. Après ce délai, le jeton doit être rejeté par le serveur. Cet outil affiche le exp décodé pour vérifier si un jeton est encore valide. Notez que l'expiration JWT est une revendication, pas appliquée par le jeton lui-même — le serveur doit la valider.",
+    "step1Title": "Collez votre JWT",
+    "step1Desc": "Copiez la chaîne JWT complète (trois segments Base64URL séparés par des points) et collez-la dans le champ de saisie de l'onglet Décoder.",
+    "step2Title": "Inspecter l'en-tête et la charge utile",
+    "step2Desc": "L'outil décode automatiquement l'en-tête (algorithme, type) et la charge utile (revendications) en JSON lisible. Vérifiez la revendication exp pour voir si le jeton a expiré.",
+    "step3Title": "Vérifier la signature (optionnel)",
+    "step3Desc": "Passez à la section Vérifier, entrez le secret ou la clé publique, et cliquez sur Vérifier pour confirmer que le jeton a été signé par la partie attendue.",
+    "stepsTitle": "Comment décoder un JWT",
+    "useCasesP1": "Authentifier des requêtes API — incluez un JWT dans l'en-tête Authorization (Bearer token) pour vérifier l'identité et les permissions de l'appelant.",
+    "useCasesP2": "Décoder et déboguer des jetons pendant le développement — inspectez les revendications de l'en-tête et de la charge utile (iss, sub, exp, iat) sans écrire de code.",
+    "useCasesP3": "Vérifier les signatures de jetons contre un secret partagé (HMAC) ou une clé publique (RSA/ECDSA) pour garantir l'intégrité avant de faire confiance aux revendications.",
+    "useCasesTitle": "Cas d'utilisation courants"
   }
 }

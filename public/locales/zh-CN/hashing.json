@@ -8,6 +8,22 @@
     "faq1A": "加密散列将输入数据转换为固定大小的指纹（散列值）。相同输入始终产生相同散列，但即使微小变化也会完全改变输出。",
     "faq2Q": "支持哪些散列算法？",
     "faq2A": "此工具支持 MD5、SHA-1、SHA-224、SHA-256、SHA-384、SHA-512、SHA3-224/256/384/512、Keccak-224/256/384/512 和 RIPEMD-160，也支持 HMAC 变体。",
-    "aeoDefinition": "哈希生成器是一个免费的在线 MD5、SHA-1、SHA-256、SHA-512、SHA3、Keccak 和 RIPEMD-160 哈希生成工具。支持 HMAC 和文件哈希。不会发送任何数据到服务器。"
+    "aeoDefinition": "哈希生成器是一个免费的在线 MD5、SHA-1、SHA-256、SHA-512、SHA3、Keccak 和 RIPEMD-160 哈希生成工具。支持 HMAC 和文件哈希。不会发送任何数据到服务器。",
+    "whatIsTitle": "什么是加密哈希？",
+    "whatIs": "加密哈希将任意大小的输入数据转换为固定长度的指纹（哈希值）。相同输入始终产生相同哈希，但即使微小变化也会完全改变输出。哈希是单向的——无法从哈希值还原原始输入。本工具支持 MD5、SHA-1、SHA-224、SHA-256、SHA-384、SHA-512、SHA3、Keccak 和 RIPEMD-160。",
+    "useCasesTitle": "常见使用场景",
+    "useCasesDesc1": "数据完整性验证",
+    "useCasesP1": "通过比较原始数据和接收数据的哈希值来验证数据完整性，检测传输或存储过程中的任何变化。",
+    "useCasesDesc2": "消息认证",
+    "useCasesP2": "使用密钥短语生成 HMAC 签名，用于验证消息来源和完整性。",
+    "stepsTitle": "如何生成哈希值",
+    "step1Title": "输入文本",
+    "step1Text": "在输入框中粘贴或输入要哈希的纯文本。",
+    "step2Title": "选择算法",
+    "step2Text": "在算法面板中勾选需要的哈希算法，可同时选择多种算法。",
+    "step3Title": "复制哈希值",
+    "step3Text": "哈希输出即时显示。使用复制按钮或粘贴哈希值进行对比验证。",
+    "faq3Q": "SHA-2 和 SHA-3 有什么区别？",
+    "faq3A": "SHA-2（SHA-256、SHA-512）使用 Merkle-Damgard 结构，而 SHA-3 使用 Keccak 海绵结构。SHA-3 不是 SHA-2 的替代品，而是一种采用不同内部设计的替代方案。两者都被认为是安全的。"
   }
 }

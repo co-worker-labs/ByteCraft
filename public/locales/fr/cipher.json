@@ -22,6 +22,23 @@
     "rc4dropConfig": "Par défaut, 192 mots (768 octets) sont ignorés, mais vous pouvez configurer l'algorithme pour ignorer n'importe quel nombre de mots.",
     "faq1Q": "Quels algorithmes de chiffrement sont pris en charge ?",
     "faq1A": "AES, DES, Triple DES (3DES), Rabbit, RC4 et RC4Drop — utilisant CryptoJS. AES-256 est recommandé pour les exigences de sécurité modernes.",
-    "aeoDefinition": "Chiffrer/Déchiffrer est un outil gratuit en ligne pour chiffrer et déchiffrer du texte avec AES, DES, Triple DES, Rabbit, RC4 et RC4Drop. Tout le traitement s'exécute dans votre navigateur — aucune donnée n'est envoyée à un serveur."
+    "aeoDefinition": "Chiffrer/Déchiffrer est un outil gratuit en ligne pour chiffrer et déchiffrer du texte avec AES, DES, Triple DES, Rabbit, RC4 et RC4Drop. Tout le traitement s'exécute dans votre navigateur — aucune donnée n'est envoyée à un serveur.",
+    "faq2Q": "Quel algorithme devrais-je utiliser ?",
+    "faq2A": "Utilisez AES pour tout nouveau projet — c'est le standard moderne, largement supporté et considéré comme sûr. DES est obsolète (clé 56 bits). Le Triple DES est acceptable pour les systèmes anciens. RC4 présente des vulnérabilités connues ; utilisez RC4Drop si vous devez utiliser RC4. Rabbit est rapide mais moins audité.",
+    "faq3Q": "Qu'est-ce qu'un mode de chiffrement par blocs ?",
+    "faq3A": "Les chiffrements par blocs (AES, DES) chiffrent les données par blocs de taille fixe (généralement 8 ou 16 octets). Le mode définit comment plusieurs blocs sont chaînés. CBC est le plus courant et recommandé pour un usage général. ECB chiffre chaque bloc indépendamment — évitez-le, car des blocs de texte en clair identiques produisent un texte chiffré identique.",
+    "step1Title": "Choisissez votre algorithme",
+    "step1Desc": "Sélectionnez AES (recommandé), DES, Triple DES, Rabbit, RC4 ou RC4Drop. Pour les chiffrements par blocs, choisissez aussi un mode (CBC, CFB, CTR, OFB, ECB) et un schéma de remplissage.",
+    "step2Title": "Entrez votre texte et phrase secrète",
+    "step2Desc": "Saisissez ou collez le texte en clair (à chiffrer) ou le texte chiffré (à déchiffrer). Entrez la phrase secrète — la même phrase est requise pour inverser l'opération.",
+    "step3Title": "Chiffrer ou déchiffrer",
+    "step3Desc": "Cliquez sur le bouton Chiffrer ou Déchiffrer. Le résultat apparaît immédiatement. Copiez la sortie ou effacez les champs pour recommencer. Tout le traitement se fait dans votre navigateur.",
+    "stepsTitle": "Comment chiffrer ou déchiffrer du texte",
+    "useCasesP1": "Chiffrer du texte sensible avant de le partager — le destinataire a besoin de la même phrase secrète pour déchiffrer.",
+    "useCasesP2": "Vérifier la sortie de chiffrement ou déchiffrer un texte chiffré reçu, sans installer de logiciel.",
+    "useCasesP3": "Tester et apprendre le comportement des différents algorithmes (AES, DES, RC4) avec divers modes de blocs et schémas de remplissage.",
+    "useCasesTitle": "Cas d'utilisation courants",
+    "whatIs": "Le chiffrement transforme du texte lisible en texte illisible à l'aide d'un algorithme cryptographique et d'une clé secrète. Seule une personne disposant de la clé correcte peut déchiffrer le texte chiffré pour retrouver le texte d'origine. Cet outil prend en charge le chiffrement symétrique — la même clé chiffre et déchiffre.",
+    "whatIsTitle": "Qu'est-ce que le chiffrement ?"
   }
 }

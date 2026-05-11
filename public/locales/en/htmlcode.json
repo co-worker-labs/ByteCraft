@@ -35,9 +35,25 @@
     "p1": "HTML entities are special codes used to represent reserved characters in HTML. For example, &lt; for <, &amp; for &, and &quot; for \". See the [ASCII table](/ascii) for character codes, or [HTTP status codes](/httpstatus) for web response references.",
     "p2": "Before you use one of the below codes on your website, make sure your HTML document uses the correct encoding so you are sure that the HTML codes and HTML special codes are displayed properly. To make sure your HTML uses the correct encoding, you should make sure that you use the Unicode character set. This Unicode character set must be set in the head section of your HTML document. This is done by using a meta with the charset attribute and the value UTF-8. Just copy and paste the following meta into your head section and all the below HTML characters will be displayed perfectly so you're good to go.",
     "aeoDefinition": "HTML Entity Encoder is a free online tool for encoding and decoding HTML special characters and entities. Complete reference with numeric and named entities. Runs entirely in your browser.",
+    "whatIsTitle": "What are HTML Entities?",
+    "whatIs": "HTML entities are codes that represent characters reserved in HTML (like <, >, &) or characters that cannot be typed easily. They use the format &name; or &#number; — for example, &lt; renders as < and &#169; renders as the copyright symbol. This tool provides a complete reference of named entities, decimal codes, and hex codes across 8 categories.",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesDesc1": "Escaping HTML",
+    "useCasesP1": "Escape reserved HTML characters like <, >, &, and \" so they display as text instead of being parsed as markup.",
+    "useCasesDesc2": "Special Characters",
+    "useCasesP2": "Insert special symbols like currency signs, mathematical operators, or typographic marks into web pages using their entity codes.",
+    "stepsTitle": "How to Find HTML Entities",
+    "step1Title": "Choose a category",
+    "step1Text": "Select a tab — Letters, Punctuation, Currencies, Mathematical, Pronunciations, Diacritics, ASCII, or Icons.",
+    "step2Title": "Search or browse",
+    "step2Text": "Use the search bar to filter by character, entity name, or code point. Or scroll through the full table.",
+    "step3Title": "Copy the code",
+    "step3Text": "Each row shows the character, named entity, decimal code, and hex code. Copy whichever format your project needs.",
     "faq1Q": "How many entities are documented?",
     "faq1A": "The tool provides a complete reference of HTML special characters including named entities (&amp;), decimal (&#38;), and hexadecimal (&#x26;) codes.",
     "faq2Q": "Can I search for specific characters?",
-    "faq2A": "Yes. Search by character name, entity name, or code point to quickly find the HTML entity you need."
+    "faq2A": "Yes. Search by character name, entity name, or code point to quickly find the HTML entity you need.",
+    "faq3Q": "What is the difference between named and numeric entities?",
+    "faq3A": "Named entities use a mnemonic like &amp; for & or &lt; for <. Numeric entities use the Unicode code point: &#38; (decimal) or &#x26; (hex). Named entities are more readable, but numeric entities work for all Unicode characters."
   }
 }

@@ -71,6 +71,13 @@
     "faq2Q": "Cet outil gère-t-il les fuseaux horaires ?",
     "faq2A": "Oui. L'outil affiche à la fois l'UTC et votre fuseau horaire local. Vous pouvez convertir les timestamps en dates dans l'un ou l'autre fuseau.",
     "faq3Q": "Quelle est la plage des timestamps Unix ?",
-    "faq3A": "Les entiers signés 32 bits standard prennent en charge les timestamps jusqu'au 19 janvier 2038 (le problème de l'an 2038). Cet outil prend en charge une plage beaucoup plus large grâce à l'objet Date de JavaScript."
+    "faq3A": "Les entiers signés 32 bits standard prennent en charge les timestamps jusqu'au 19 janvier 2038 (le problème de l'an 2038). Cet outil prend en charge une plage beaucoup plus large grâce à l'objet Date de JavaScript.",
+    "stepsTitle": "Comment convertir un horodatage Unix",
+    "step1Title": "Entrez un horodatage ou une date",
+    "step1Text": "Collez un horodatage Unix dans le panneau Horodatage→Date, ou choisissez une date et heure dans le panneau Date→Horodatage.",
+    "step2Title": "Choisir secondes ou millisecondes",
+    "step2Text": "Sélectionnez l'unité (l'auto-détection fonctionne dans la plupart des cas). Utilisez les boutons Raccourci pour « Maintenant » ou « Aujourd'hui ».",
+    "step3Title": "Lire la conversion",
+    "step3Text": "Le résultat affiche l'heure locale, ISO 8601, RFC 2822, le temps relatif et les infos de fuseau horaire — tout en un coup d'œil."
   }
 }

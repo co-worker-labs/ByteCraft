@@ -38,6 +38,22 @@
     "faq1Q": "Que sont les entités de caractères HTML ?",
     "faq1A": "Les entités HTML sont des codes spéciaux (comme &amp; pour &) utilisés pour représenter des caractères qui ont une signification spéciale en HTML ou ne peuvent pas être saisis directement.",
     "faq2Q": "Combien d'entités sont documentées ?",
-    "faq2A": "L'outil fournit une référence complète des caractères spéciaux HTML incluant les entités nommées (&amp;), décimales (&#38;) et hexadécimales (&#x26;)."
+    "faq2A": "L'outil fournit une référence complète des caractères spéciaux HTML incluant les entités nommées (&amp;), décimales (&#38;) et hexadécimales (&#x26;).",
+    "faq3Q": "Quelle est la différence entre les entités nommées et numériques ?",
+    "faq3A": "Les entités nommées utilisent un mnémonique comme &amp; pour & ou &lt; pour <. Les entités numériques utilisent le point de code Unicode : &#38; (décimal) ou &#x26; (hexadécimal). Les entités nommées sont plus lisibles, mais les entités numériques fonctionnent pour tous les caractères Unicode.",
+    "stepsTitle": "Comment trouver des entités HTML",
+    "step1Title": "Choisir une catégorie",
+    "step1Text": "Sélectionnez un onglet — Lettres, Ponctuation, Monnaies, Mathématiques, Prononciation, Diacritiques, ASCII ou Icônes.",
+    "step2Title": "Rechercher ou parcourir",
+    "step2Text": "Utilisez la barre de recherche pour filtrer par caractère, nom d'entité ou point de code. Ou faites défiler le tableau complet.",
+    "step3Title": "Copier le code",
+    "step3Text": "Chaque ligne affiche le caractère, l'entité nommée, le code décimal et le code hexadécimal. Copiez le format dont votre projet a besoin.",
+    "useCasesDesc1": "Échappement HTML",
+    "useCasesP1": "Échappez les caractères HTML réservés comme <, >, & et \" pour qu'ils s'affichent comme du texte au lieu d'être analysés comme balisage.",
+    "useCasesDesc2": "Caractères spéciaux",
+    "useCasesP2": "Insérez des symboles spéciaux comme des signes monétaires, des opérateurs mathématiques ou des marques typographiques dans les pages web en utilisant leurs codes d'entité.",
+    "useCasesTitle": "Cas d'utilisation courants",
+    "whatIs": "Les entités HTML sont des codes qui représentent des caractères réservés en HTML (comme <, >, &) ou des caractères difficiles à saisir. Elles utilisent le format &nom; ou &#nombre; — par exemple, &lt; produit < et &#169; produit le symbole de copyright. Cet outil fournit une référence complète des entités nommées, codes décimaux et codes hexadécimaux dans 8 catégories.",
+    "whatIsTitle": "Qu'est-ce que les entités HTML ?"
   }
 }

@@ -25,6 +25,13 @@
     "faq2A": "可以。此工具支持 YAML 转 JSON 和 JSON 转 YAML，支持多文档 YAML 流（--- 分隔符）。",
     "faq3Q": "支持 YAML 锚点和别名吗？",
     "faq3A": "解析器支持标准 YAML，包括锚点（&）和别名（*）。合并键（<<:）等复杂特性在适用情况下也受支持。",
-    "aeoDefinition": "YAML 转换器是一个免费的在线 JSON 与 YAML 格式互转工具。支持 YAML 1.2、多文档、锚点和别名。所有处理均在浏览器中完成。"
+    "aeoDefinition": "YAML 转换器是一个免费的在线 JSON 与 YAML 格式互转工具。支持 YAML 1.2、多文档、锚点和别名。所有处理均在浏览器中完成。",
+    "stepsTitle": "如何在 JSON 和 YAML 之间转换",
+    "step1Title": "粘贴数据",
+    "step1Text": "在左侧面板粘贴 JSON，或在右侧面板粘贴 YAML。工具实时转换。",
+    "step2Title": "配置选项",
+    "step2Text": "切换 JSON5 输入模式或键名排序。工具支持多文档 YAML 流。",
+    "step3Title": "复制结果",
+    "step3Text": "转换结果即时显示。点击复制按钮或直接将文件拖入任一面板。"
   }
 }

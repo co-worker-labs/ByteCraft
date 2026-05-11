@@ -101,6 +101,20 @@
       "title": "CORS et proxy",
       "text": "Par défaut, cet outil utilise l'API fetch() native du navigateur. Les requêtes cross-origin nécessitent que le serveur cible inclue les en-têtes CORS appropriés. Si un serveur ne supporte pas CORS, activez le proxy — les requêtes seront acheminées via le proxy côté serveur, contournant entièrement les restrictions CORS."
     },
-    "aeoDefinition": "Le Client HTTP est un outil gratuit en ligne pour envoyer des requêtes HTTP et tester des APIs REST dans votre navigateur. Prend en charge GET, POST, PUT, DELETE avec en-têtes, corps et authentification. Toutes les requêtes s'exécutent localement par défaut ; proxy côté serveur en option pour contourner le CORS."
+    "aeoDefinition": "Le Client HTTP est un outil gratuit en ligne pour envoyer des requêtes HTTP et tester des APIs REST dans votre navigateur. Prend en charge GET, POST, PUT, DELETE avec en-têtes, corps et authentification. Toutes les requêtes s'exécutent localement par défaut ; proxy côté serveur en option pour contourner le CORS.",
+    "stepsTitle": "Comment envoyer une requête HTTP",
+    "step1Title": "Entrez une URL",
+    "step1Text": "Saisissez ou collez l'URL du point d'accès API. Sélectionnez une méthode HTTP (GET, POST, PUT, etc.).",
+    "step2Title": "Configurer la requête",
+    "step2Text": "Ajoutez des paramètres de requête, des en-têtes, un corps de requête (JSON, form-data ou brut) et une authentification si nécessaire.",
+    "step3Title": "Envoyer et inspecter",
+    "step3Text": "Cliquez sur Envoyer. Consultez le corps de la réponse, les en-têtes, les cookies, le chronométrage et les infos de redirection dans le panneau de réponse.",
+    "useCasesDesc1": "Développement d'API",
+    "useCasesP1": "Testez les points d'accès d'API REST pendant le développement sans installer d'outils bureautiques comme Postman ou curl.",
+    "useCasesDesc2": "Débogage",
+    "useCasesP2": "Inspectez les en-têtes de réponse, les codes de statut et le chronométrage pour diagnostiquer les problèmes d'API. Utilisez le proxy pour contourner le CORS.",
+    "useCasesTitle": "Cas d'utilisation courants",
+    "whatIs": "Un client HTTP basé sur le navigateur pour tester des APIs REST. Envoyez des requêtes GET, POST, PUT, PATCH, DELETE, HEAD et OPTIONS avec des en-têtes personnalisés, un corps et une authentification — tout depuis votre navigateur.",
+    "whatIsTitle": "Qu'est-ce que le Client HTTP ?"
   }
 }

@@ -143,7 +143,16 @@
     "faq1A": "Une expression Cron est une chaîne de 5 à 7 champs qui définit un planning pour des tâches récurrentes. Elle est utilisée par les démons cron, les planificateurs de tâches et les frameworks comme Spring et Quartz.",
     "faq2Q": "Quels dialectes Cron sont pris en charge ?",
     "faq2A": "Trois : Standard (5 champs), Spring (6 champs avec secondes) et Quartz (7 champs avec secondes et année). L'outil détecte automatiquement le dialecte et affiche les prochaines exécutions.",
-    "aeoDefinition": "Le Générateur d'expressions Cron est un outil gratuit en ligne pour construire et décoder des expressions Cron. Prend en charge les modes Standard, Spring et Quartz avec explications lisibles et aperçu des prochaines exécutions. Aucune donnée ne quitte votre navigateur."
+    "aeoDefinition": "Le Générateur d'expressions Cron est un outil gratuit en ligne pour construire et décoder des expressions Cron. Prend en charge les modes Standard, Spring et Quartz avec explications lisibles et aperçu des prochaines exécutions. Aucune donnée ne quitte votre navigateur.",
+    "faq3Q": "Que se passe-t-il lors des changements d'heure d'été ?",
+    "faq3A": "Les planifications dans le créneau de passage à l'heure d'été se déclenchent à la prochaine heure valide. Les planifications dans le créneau de retour à l'heure d'hiver se déclenchent à la première occurrence. Passez en UTC pour éviter l'heure d'été.",
+    "stepsTitle": "Comment construire une expression Cron",
+    "step1Title": "Choisir un mode",
+    "step1Text": "Sélectionnez Standard (5 champs), Spring (6 champs avec secondes) ou Quartz (7 champs avec année).",
+    "step2Title": "Configurer chaque champ",
+    "step2Text": "Utilisez les éditeurs de champ pour définir les valeurs de minute, heure, jour, mois et jour de semaine. Ou choisissez un préréglage comme « Toutes les 5 minutes ».",
+    "step3Title": "Vérifier les prochaines exécutions",
+    "step3Text": "L'outil affiche les 5 prochaines heures d'exécution et une description lisible de votre expression."
   },
   "editor": {
     "title": "Modifier le champ",

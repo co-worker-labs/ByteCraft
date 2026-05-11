@@ -22,5 +22,19 @@
   "faq3Q": "¿Mis datos están seguros?",
   "faq3A": "Todo el procesamiento se realiza completamente en tu navegador mediante JavaScript del lado del cliente. Ningún dato se envía a ningún servidor. Tus archivos y texto nunca salen de tu dispositivo.",
   "faq4Q": "¿Necesito instalar algo?",
-  "faq4A": "No necesita instalación. OmniKit funciona en cualquier navegador moderno y se puede instalar como Progressive Web App (PWA) para acceso rápido."
+  "faq4A": "No necesita instalación. OmniKit funciona en cualquier navegador moderno y se puede instalar como Progressive Web App (PWA) para acceso rápido.",
+  "whyTitle": "¿Por qué OmniKit?",
+  "whyPrivacyTitle": "Privacidad primero",
+  "whyPrivacyDesc": "Todo el procesamiento ocurre en tu navegador. Ningún dato se envía a ningún servidor.",
+  "whyOfflineTitle": "Funciona sin conexión",
+  "whyOfflineDesc": "Instala como PWA y usa las herramientas sin conexión a internet.",
+  "whyFreeTitle": "Gratis para siempre",
+  "whyFreeDesc": "Código abierto, sin registro, sin rastreo, sin planes de pago.",
+  "categoryIntroTitle": "Explorar por categoría",
+  "catTextProcessing": "Formatea, transforma y analiza texto y código con herramientas para JSON, regex, diff y más.",
+  "catEncodingConversion": "Convierte entre codificaciones y formatos — Base64, codificación URL, bases numéricas, YAML, CSV.",
+  "catSecurityCrypto": "Cifra, hashea y protege tus datos con JWT, hashing, cifrado, claves SSH y contraseñas.",
+  "catGenerators": "Genera UUIDs, códigos QR, expresiones Cron y marcas de tiempo.",
+  "catVisualMedia": "Trabaja con colores, imágenes y contenido visual.",
+  "catReferenceLookup": "Busca códigos ASCII, códigos de estado HTTP, entidades HTML y más."
 }

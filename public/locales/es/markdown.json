@@ -26,6 +26,21 @@
     "gfmP1": "Soporta tablas, listas de tareas (- [ ] pendiente), tachado, enlaces automáticos y diagramas Mermaid (flowchart, secuencia, clase, estado, ER, Gantt, pie, git graph). Usa bloques de código ```mermaid. Matemáticas y notas al pie están fuera del alcance.",
     "faq1Q": "¿Qué es el Editor Markdown?",
     "faq1A": "Un editor Markdown en vivo con vista previa en panel dividido, que soporta GFM (GitHub Flavored Markdown), resaltado de sintaxis, listas de tareas y diagramas Mermaid.",
-    "aeoDefinition": "El Editor de Markdown es una herramienta gratuita online para escribir y previsualizar Markdown con soporte para GitHub Flavored Markdown. Incluye resaltado de sintaxis, vista previa en vivo y exportación a PDF/PNG. Se ejecuta completamente en tu navegador."
+    "aeoDefinition": "El Editor de Markdown es una herramienta gratuita online para escribir y previsualizar Markdown con soporte para GitHub Flavored Markdown. Incluye resaltado de sintaxis, vista previa en vivo y exportación a PDF/PNG. Se ejecuta completamente en tu navegador.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesP1": "Escribir y previsualizar archivos README para repositorios de GitHub o GitLab antes de hacer commit.",
+    "useCasesP2": "Redactar documentación o artículos con formato en vivo — ve la salida renderizada lado a lado con tu texto.",
+    "useCasesP3": "Convertir notas Markdown a PDF o PNG para compartir con personas que no tienen un visor de Markdown.",
+    "stepsTitle": "Cómo usar el Editor de Markdown",
+    "step1Title": "Escribe o pega tu Markdown",
+    "step1Desc": "Escribe directamente en el editor o suelta un archivo .md. La vista previa se actualiza en tiempo real mientras escribes.",
+    "step2Title": "Elige tu modo de vista",
+    "step2Desc": "Cambia entre los diseños Editar, Vista previa y Dividido. Dividido te ofrece edición lado a lado con renderizado en vivo.",
+    "step3Title": "Exporta tu documento",
+    "step3Desc": "Descarga como .md, exporta la vista previa renderizada como PDF o PNG, o copia el Markdown crudo al portapapeles.",
+    "faq2Q": "¿Este editor soporta diagramas Mermaid?",
+    "faq2A": "Sí. Usa un bloque de código ```mermaid y la vista previa renderizará automáticamente diagramas de flujo, diagramas de secuencia, diagramas de clases, diagramas de estado, diagramas ER, diagramas de Gantt, gráficos de pastel y grafos de git.",
+    "faq3Q": "¿Hay un límite de tamaño de archivo?",
+    "faq3A": "La vista previa en vivo funciona para contenido de tamaño razonable. Documentos muy grandes muestran un botón 'Renderizar ahora' en lugar de renderizado automático para mantener la página responsiva. Todo el procesamiento ocurre en tu navegador — nada se envía a un servidor."
   }
 }

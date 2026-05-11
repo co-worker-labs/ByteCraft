@@ -71,6 +71,13 @@
     "faq2Q": "Verarbeitet dieses Tool Zeitzonen?",
     "faq2A": "Ja. Das Tool zeigt sowohl UTC als auch Ihre lokale Zeitzone an. Sie können Zeitstempel in beiden Zeitzonen in Daten umwandeln.",
     "faq3Q": "Was ist der Bereich der Unix-Zeitstempel?",
-    "faq3A": "Standardmäßige 32-Bit-Signed-Integers unterstützen Zeitstempel bis zum 19. Januar 2038 (das Jahr-2038-Problem). Dieses Tool unterstützt einen viel größeren Bereich mit dem Date-Objekt von JavaScript."
+    "faq3A": "Standardmäßige 32-Bit-Signed-Integers unterstützen Zeitstempel bis zum 19. Januar 2038 (das Jahr-2038-Problem). Dieses Tool unterstützt einen viel größeren Bereich mit dem Date-Objekt von JavaScript.",
+    "step1Title": "Timestamp oder Datum eingeben",
+    "step1Text": "Fügen Sie einen Unix-Timestamp im Panel Timestamp→Datum ein oder wählen Sie Datum und Uhrzeit im Panel Datum→Timestamp.",
+    "step2Title": "Sekunden oder Millisekunden wählen",
+    "step2Text": "Wählen Sie die Einheit (Auto-Erkennung funktioniert in den meisten Fällen). Verwenden Sie die Schnell-Buttons für „Jetzt\" oder „Heute\".",
+    "step3Title": "Konvertierung ablesen",
+    "step3Text": "Das Ergebnis zeigt Lokalzeit, ISO 8601, RFC 2822, relative Zeit und Zeitzonen-Info — alles auf einen Blick.",
+    "stepsTitle": "Unix-Timestamp konvertieren"
   }
 }

@@ -450,9 +450,25 @@
   "descriptions": {
     "text": "A complete reference of HTTP status codes with descriptions, categories, and RFC specification links. Covers all IANA-registered codes plus common unofficial codes. Test APIs with the [HTTP Client](/httpclient), or encode URLs with the [URL Encoder](/urlencoder).",
     "aeoDefinition": "HTTP Status Codes is a free online reference for all HTTP status codes with descriptions, categories, and RFC links. Covers official IANA codes and common unofficial codes.",
+    "whatIsTitle": "What are HTTP Status Codes?",
+    "whatIs": "HTTP status codes are three-digit numbers returned by a server in response to a client request. They indicate whether the request was successful, redirected, or encountered an error. Codes are grouped into five classes: 1xx (Informational), 2xx (Success), 3xx (Redirection), 4xx (Client Error), and 5xx (Server Error). This reference covers all IANA-registered codes plus common unofficial codes from Nginx and Cloudflare.",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesDesc1": "API Debugging",
+    "useCasesP1": "Debug API responses by looking up unfamiliar status codes and understanding their meaning, common causes, and usage context.",
+    "useCasesDesc2": "Error Handling Design",
+    "useCasesP2": "Implement proper error handling in your application by understanding which codes to expect and how to respond to each.",
+    "stepsTitle": "How to Use the HTTP Status Code Reference",
+    "step1Title": "Search or filter",
+    "step1Text": "Search by code number, status name, or description. Filter by category using the buttons: 1xx through 5xx, or unofficial codes.",
+    "step2Title": "Review details",
+    "step2Text": "Hover over a row (desktop) or tap it (mobile) to expand usage notes and common causes for that status code.",
+    "step3Title": "Check the spec",
+    "step3Text": "Each code links to its RFC specification. Click the spec link to read the authoritative definition.",
     "faq1Q": "How many status codes are documented?",
     "faq1A": "The tool covers all standard status codes across 5 categories: 1xx (Informational), 2xx (Success), 3xx (Redirection), 4xx (Client Error), and 5xx (Server Error).",
     "faq2Q": "Can I search for specific codes?",
-    "faq2A": "Yes. Search by code number, phrase, or category to quickly find the status code you need."
+    "faq2A": "Yes. Search by code number, phrase, or category to quickly find the status code you need.",
+    "faq3Q": "What is the most common HTTP status code?",
+    "faq3A": "200 OK is the most common — it means the request succeeded. 404 Not Found (resource doesn't exist) and 500 Internal Server Error (server-side failure) are also very common. Understanding these codes helps you diagnose issues faster."
   }
 }

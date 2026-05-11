@@ -22,5 +22,19 @@
   "faq3Q": "Sind meine Daten sicher?",
   "faq3A": "Die gesamte Verarbeitung erfolgt ausschließlich in Ihrem Browser mittels clientseitigem JavaScript. Es werden niemals Daten an einen Server gesendet. Ihre Dateien und Texte verlassen niemals Ihr Gerät.",
   "faq4Q": "Muss ich etwas installieren?",
-  "faq4A": "Keine Installation erforderlich. OmniKit funktioniert in jedem modernen Browser und kann als Progressive Web App (PWA) für schnellen Zugriff installiert werden."
+  "faq4A": "Keine Installation erforderlich. OmniKit funktioniert in jedem modernen Browser und kann als Progressive Web App (PWA) für schnellen Zugriff installiert werden.",
+  "catEncodingConversion": "Konvertierung zwischen Kodierungen und Formaten — Base64, URL-Kodierung, Zahlensysteme, YAML, CSV.",
+  "catGenerators": "UUIDs, QR-Codes, Cron-Ausdrücke und Zeitstempel generieren.",
+  "catReferenceLookup": "ASCII-Codes, HTTP-Statuscodes, HTML-Entitäten und mehr nachschlagen.",
+  "catSecurityCrypto": "Verschlüsseln, hashen und Daten schützen mit JWT, Hashing, Verschlüsselung, SSH-Schlüsseln und Passwörtern.",
+  "catTextProcessing": "Text und Code formatieren, umwandeln und analysieren — JSON, Regex, Diff und mehr.",
+  "catVisualMedia": "Farben, Bilder und visuelle Inhalte bearbeiten.",
+  "categoryIntroTitle": "Nach Kategorie erkunden",
+  "whyFreeDesc": "Open Source, keine Anmeldung, kein Tracking, keine Premium-Stufen.",
+  "whyFreeTitle": "Für immer kostenlos",
+  "whyOfflineDesc": "Als PWA installieren und Tools ohne Internetverbindung nutzen.",
+  "whyOfflineTitle": "Funktioniert offline",
+  "whyPrivacyDesc": "Die gesamte Verarbeitung erfolgt in Ihrem Browser. Es werden niemals Daten an einen Server gesendet.",
+  "whyPrivacyTitle": "Datenschutz zuerst",
+  "whyTitle": "Warum OmniKit?"
 }
