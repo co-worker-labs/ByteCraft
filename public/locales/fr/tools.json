@@ -75,6 +75,11 @@
     "shortTitle": "JSON Format / Compress",
     "description": "Formatez, compressez et validez du JSON en ligne. Pretty-print avec indentation configurable, minification sur une seule ligne, ou analyse JSON5. 100% côté client."
   },
+  "jsonts": {
+    "title": "JSON vers TypeScript - Générer des Interfaces et Types depuis JSON",
+    "shortTitle": "JSON → TypeScript",
+    "description": "Convertissez du JSON ou JSON5 en interfaces et définitions de types TypeScript. Supporte les objets imbriqués, les types union, la fusion de tableaux et JSON5. 100% dans le navigateur."
+  },
   "dbviewer": {
     "title": "Visionneuse SQLite - Parcourir et interroger les fichiers .db",
     "shortTitle": "Visionneuse DB",
@@ -174,6 +179,16 @@
     "title": "Liste de mots BIP39 - Référence complète des mnémoniques",
     "shortTitle": "Liste BIP39",
     "description": "Référence complète de la liste de mots mnémoniques BIP39 avec recherche. Les 2048 mots standards en anglais, recherchables par index ou sous-chaîne."
+  },
+  "cssunit": {
+    "title": "Convertisseur d'unités CSS - px vers rem, em, vw, vh",
+    "shortTitle": "Convertisseur d'unités CSS",
+    "description": "Convertissez entre unités CSS (px, rem, em, vw, vh) avec des valeurs de base personnalisables. Conversion par lot de code CSS et table de référence."
+  },
+  "subnet": {
+    "title": "Calculateur de Sous-réseaux IP - IPv4/IPv6 CIDR et VLSM",
+    "shortTitle": "Calculateur de Sous-réseaux",
+    "description": "Calculateur CIDR IPv4/IPv6 avec diviseur de sous-réseaux et allocateur VLSM. Calcule l'adresse réseau, la diffusion, la plage d'hôtes et le masque de sous-réseau — 100% côté client."
   },
   "categories": {
     "text": "Traitement de texte",

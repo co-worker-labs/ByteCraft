@@ -90,6 +90,12 @@
     "description": "線上格式化、壓縮和驗證 JSON。支援自訂縮排美化輸出、單行壓縮和 JSON5 寬鬆解析。100% 瀏覽器端處理。",
     "searchTerms": "jsongeshihua jsgsh yanzheng yasuo"
   },
+  "jsonts": {
+    "title": "JSON 轉 TypeScript - 產生介面與型別定義",
+    "shortTitle": "JSON 轉 TypeScript",
+    "description": "將 JSON 或 JSON5 轉換為 TypeScript 介面與型別定義。支援巢狀物件、聯合型別、陣列合併和 JSON5。100% 瀏覽器端處理。",
+    "searchTerms": "jsonzhuantypescript jsonzts leixing jiekou"
+  },
   "dbviewer": {
     "title": "SQLite 資料庫檢視器 - 瀏覽和查詢 .db 檔案",
     "shortTitle": "資料庫檢視器",
@@ -209,6 +215,18 @@
     "shortTitle": "BIP39 單字表",
     "description": "完整的 BIP39 助記詞單字表參考，支援搜尋。標準英文 BIP39 單字表全部 2048 個單字，可按索引或子字串尋找。",
     "searchTerms": "bip39danzibiao bip39dzb zhujici cibiao"
+  },
+  "cssunit": {
+    "title": "CSS 單位轉換器 - px 轉 rem、em、vw、vh",
+    "shortTitle": "CSS 單位轉換",
+    "description": "在 CSS 單位（px、rem、em、vw、vh）之間轉換，支援自訂基準值。批次轉換 CSS 程式碼，提供參考對照表。",
+    "searchTerms": "cssdanweizhuanhuanqi csdwzhq rem em xiangying"
+  },
+  "subnet": {
+    "title": "IP 子網路計算器 - IPv4/IPv6 CIDR 與 VLSM",
+    "shortTitle": "子網路計算器",
+    "description": "IPv4/IPv6 CIDR 子網路計算器，支援子網路劃分和 VLSM 分配。計算網路位址、廣播位址、主機範圍和子網路遮罩——100% 瀏覽器端處理。",
+    "searchTerms": "ziwangjisuanqi zwjsq ziwang CIDR"
   },
   "categories": {
     "text": "文本處理",

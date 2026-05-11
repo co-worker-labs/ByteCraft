@@ -3,12 +3,14 @@ import type { useTranslations } from "next-intl";
 import {
   FileJson,
   FileCode,
+  FileCode2,
   FileBraces,
   ShieldCheck,
   Percent,
   FingerprintPattern,
   Regex,
   QrCode,
+  Ruler,
   GitCompare,
   Hash,
   KeyRound,
@@ -35,6 +37,7 @@ import {
   Send,
   Wallet,
   BookOpen,
+  Network,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -86,7 +89,17 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
   },
   {
     key: "encoding",
-    tools: ["base64", "urlencoder", "csv", "csv-md", "numbase", "yaml", "storageunit"],
+    tools: [
+      "base64",
+      "urlencoder",
+      "jsonts",
+      "csv",
+      "csv-md",
+      "numbase",
+      "yaml",
+      "storageunit",
+      "cssunit",
+    ],
   },
   {
     key: "security",
@@ -96,14 +109,14 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
   { key: "visual", tools: ["color", "image"] },
   {
     key: "reference",
-    tools: ["httpstatus", "httpclient", "dbviewer", "ascii", "htmlcode", "bip39"],
+    tools: ["httpstatus", "httpclient", "dbviewer", "ascii", "htmlcode", "bip39", "subnet"],
   },
 ];
 
 export const QUICK_ACCESS_DEFAULT: string[] = ["json", "base64", "jwt", "regex", "diff", "hashing"];
 
 export const TOOL_RELATIONS: Record<string, string[]> = {
-  json: ["csv", "yaml", "diff", "regex"],
+  json: ["csv", "yaml", "diff", "regex", "jsonts"],
   base64: ["urlencoder", "hashing", "cipher"],
   jwt: ["base64", "hashing", "password"],
   regex: ["json", "textcase", "diff"],
@@ -115,29 +128,32 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   password: ["jwt", "sshkey", "uuid", "hashing"],
   wallet: ["sshkey", "password", "hashing", "jwt", "bip39"],
   sshkey: ["password", "hashing", "jwt", "wallet"],
-  color: ["image", "numbase"],
+  color: ["image", "numbase", "cssunit"],
   cron: ["unixtime", "regex"],
   markdown: ["json", "diff", "htmlcode"],
   qrcode: ["uuid", "urlencoder", "password"],
   textcase: ["regex", "extractor", "wordcounter"],
   deduplines: ["extractor", "textcase", "wordcounter"],
-  csv: ["json", "yaml", "diff"],
+  csv: ["json", "yaml", "diff", "jsonts"],
   "csv-md": ["csv", "markdown", "json"],
   cipher: ["hashing", "base64", "password"],
-  numbase: ["color", "storageunit", "ascii"],
+  numbase: ["color", "storageunit", "ascii", "subnet"],
   dbviewer: ["csv", "json", "yaml"],
   checksum: ["hashing", "cipher"],
-  storageunit: ["numbase", "checksum"],
-  httpstatus: ["httpclient", "urlencoder"],
-  yaml: ["json", "csv", "markdown"],
+  storageunit: ["numbase", "checksum", "cssunit"],
+  httpstatus: ["httpclient", "urlencoder", "subnet"],
+  yaml: ["json", "csv", "markdown", "jsonts"],
+  jsonts: ["json", "csv", "yaml"],
   image: ["color", "qrcode", "checksum"],
   htmlcode: ["ascii", "httpstatus", "markdown"],
-  ascii: ["htmlcode", "numbase", "httpstatus"],
+  ascii: ["htmlcode", "numbase", "httpstatus", "subnet"],
   extractor: ["regex", "textcase", "deduplines"],
   wordcounter: ["textcase", "extractor", "deduplines", "tokencounter"],
   tokencounter: ["wordcounter", "regex", "textcase"],
   httpclient: ["httpstatus", "urlencoder", "json"],
   bip39: ["wallet", "password"],
+  cssunit: ["storageunit", "numbase", "color"],
+  subnet: ["numbase", "httpstatus", "ascii"],
 };
 
 const PALETTE_SIZE = 20;
@@ -163,6 +179,13 @@ export const TOOLS: ToolEntry[] = [
     icon: FileJson,
     emoji: "{}",
     sameAs: ["https://www.json.org", "https://datatracker.ietf.org/doc/html/rfc8259"],
+  },
+  {
+    key: "jsonts",
+    path: "/jsonts",
+    icon: FileCode2,
+    emoji: "🔷",
+    sameAs: ["https://www.typescriptlang.org/"],
   },
   {
     key: "base64",
@@ -302,6 +325,13 @@ export const TOOLS: ToolEntry[] = [
   },
   { key: "storageunit", path: "/storageunit", icon: HardDrive, emoji: "💾", sameAs: [] },
   {
+    key: "cssunit",
+    path: "/cssunit",
+    icon: Ruler,
+    emoji: "📐",
+    sameAs: ["https://www.w3.org/TR/css-values-4/"],
+  },
+  {
     key: "httpstatus",
     path: "/httpstatus",
     icon: Globe,
@@ -335,6 +365,17 @@ export const TOOLS: ToolEntry[] = [
     icon: BookOpen,
     emoji: "📖",
     sameAs: ["https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"],
+  },
+  {
+    key: "subnet",
+    path: "/subnet",
+    icon: Network,
+    emoji: "🧮",
+    sameAs: [
+      "https://datatracker.ietf.org/doc/html/rfc4632",
+      "https://datatracker.ietf.org/doc/html/rfc4291",
+      "https://en.wikipedia.org/wiki/Subnetwork",
+    ],
   },
 ];
 

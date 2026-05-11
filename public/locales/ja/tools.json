@@ -90,6 +90,12 @@
     "description": "JSONをオンラインで整形、圧縮、検証。インデント設定可能な整形、1行圧縮、JSON5パースに対応。100%ブラウザ上で処理。",
     "searchTerms": "JSONseikei assyuku bari-de-to"
   },
+  "jsonts": {
+    "title": "JSON → TypeScript - インターフェースと型定義を生成",
+    "shortTitle": "JSON → TypeScript",
+    "description": "JSON または JSON5 を TypeScript のインターフェースと型定義に変換。ネストされたオブジェクト、ユニオン型、配列のマージ、JSON5 に対応。100%ブラウザ処理。",
+    "searchTerms": "jsontotypescript jtts kata taipu"
+  },
   "dbviewer": {
     "title": "SQLiteビューアー - .dbファイルの閲覧・クエリ",
     "shortTitle": "DBビューアー",
@@ -209,6 +215,18 @@
     "shortTitle": "BIP39 ワードリスト",
     "description": "検索機能付きの完全な BIP39 ニーモニックワードリスト。標準英語 BIP39 ワードリストの全 2048 語をインデックスまたは部分文字列で検索。",
     "searchTerms": "bip39wadorisuto bip39wdlst tango nemonikku"
+  },
+  "cssunit": {
+    "title": "CSS 単位変換 - px ↔ rem, em, vw, vh",
+    "shortTitle": "CSS 単位変換",
+    "description": "CSS 単位（px、rem、em、vw、vh）を相互変換。ルートフォントサイズとビューポート寸法をカスタマイズ可能。CSS コードの一括変換と参照テーブル付き。",
+    "searchTerms": "css tanibengou rem em responsive"
+  },
+  "subnet": {
+    "title": "IP サブネット計算機 - IPv4/IPv6 CIDR & VLSM",
+    "shortTitle": "サブネット計算機",
+    "description": "IPv4/IPv6 CIDR サブネット計算機。サブネット分割と VLSM 割り当てに対応。ネットワークアドレス、ブロードキャスト、ホスト範囲、サブネットマスクを計算——100% ブラウザ上で処理。",
+    "searchTerms": "sabunettokarakyurator sbntkr sabunetto CIDR"
   },
   "categories": {
     "text": "テキスト処理",

@@ -1,0 +1,32 @@
+{
+  "jsonInput": "JSON Input",
+  "tsOutput": "TypeScript Output",
+  "jsonPlaceholder": "Paste JSON or JSON5 here…",
+  "tsPlaceholder": "TypeScript output will appear here",
+  "rootName": "Root Name",
+  "invalidJson": "Invalid JSON",
+  "primitiveError": "Please enter a JSON object or array",
+  "interface": "interface",
+  "type": "type",
+  "addExport": "Add export",
+  "descriptions": {
+    "aeoDefinition": "JSON to TypeScript is a free online tool that converts JSON or JSON5 into TypeScript interfaces and type definitions instantly in your browser. Supports nested objects, union types, array merging, and JSON5. No data is sent to any server.",
+    "whatIsTitle": "What is JSON to TypeScript?",
+    "whatIsP1": "JSON to TypeScript converts JSON data into TypeScript interface and type definitions. Paste any JSON — including JSON5 with comments and trailing commas — and get ready-to-use TypeScript types. Nested objects are automatically extracted into separate named types, and arrays of objects are intelligently merged.",
+    "stepsTitle": "How to Use",
+    "step1Title": "Paste your JSON",
+    "step1Text": "Paste JSON or JSON5 data into the input area. The tool auto-detects JSON5 syntax.",
+    "step2Title": "Configure options",
+    "step2Text": "Set the root type name, choose between interface and type alias, and toggle the export keyword.",
+    "step3Title": "Copy TypeScript output",
+    "step3Text": "The TypeScript definitions appear instantly. Click copy to use them in your project.",
+    "useCasesP1": "Generating TypeScript types from API responses. Creating type definitions for JSON config files. Converting JSON Schema data to TypeScript for static typing. Building type-safe data layers from mock data.",
+    "limitationsP1": "The tool generates types from a single JSON sample — it cannot infer optional vs required fields unless an array of objects is provided. Union types are based on observed values only. Circular references are not supported.",
+    "faq1Q": "Does it support JSON5?",
+    "faq1A": "Yes. The tool automatically falls back to JSON5 parsing when standard JSON parsing fails. This means you can paste JSON with single quotes, trailing commas, comments, and unquoted keys.",
+    "faq2Q": "What about nested objects?",
+    "faq2A": "Nested objects are automatically extracted into separate named types. For example, a 'user' property containing an object will create a 'User' interface. Types are ordered so that referenced types appear before the types that use them.",
+    "faq3Q": "Can I export the types?",
+    "faq3A": "Yes. Toggle the 'Add export' switch to prepend the export keyword to each generated type. You can also choose between interface and type alias syntax."
+  }
+}

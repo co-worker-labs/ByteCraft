@@ -52,12 +52,12 @@
     "faq2A": "No. La compresión de imágenes se ejecuta completamente en tu navegador usando Canvas API, por lo que no hay límite de tamaño de archivo del lado del servidor. Imágenes muy grandes pueden tardar más en procesarse."
   },
   "reference": {
-    "title": "Herramientas de referencia y consulta - HTTP Status, ASCII, Códigos HTML | OmniKit",
+    "title": "Herramientas de referencia y consulta - HTTP Status, ASCII, Códigos HTML, Subredes | OmniKit",
     "shortTitle": "Referencia y consulta",
-    "description": "Herramientas gratuitas de referencia y consulta para desarrolladores. Códigos de estado HTTP, tabla ASCII, entidades HTML, visor SQLite y cliente HTTP. Todas funcionan 100% en tu navegador.",
-    "intro": "5 herramientas de referencia y consulta para búsquedas rápidas de desarrollo. Explora códigos de estado HTTP con referencias RFC, busca códigos de caracteres ASCII, codifica entidades HTML, explora bases de datos SQLite con un editor SQL y prueba APIs REST con el cliente HTTP. Todas las herramientas son gratuitas y se ejecutan completamente en tu navegador.",
+    "description": "Herramientas gratuitas de referencia y consulta para desarrolladores. Códigos de estado HTTP, tabla ASCII, entidades HTML, visor SQLite, cliente HTTP y calculadora de subredes. Todas funcionan 100% en tu navegador.",
+    "intro": "6 herramientas de referencia y consulta para búsquedas rápidas de desarrollo. Explora códigos de estado HTTP con referencias RFC, busca códigos de caracteres ASCII, codifica entidades HTML, explora bases de datos SQLite con un editor SQL, prueba APIs REST con el cliente HTTP y calcula subredes con la Calculadora de Subredes IP. Todas las herramientas son gratuitas y se ejecutan completamente en tu navegador.",
     "faq1Q": "¿Qué herramientas de referencia proporciona OmniKit?",
-    "faq1A": "OmniKit ofrece 5 herramientas: referencia de Códigos de estado HTTP, Cliente HTTP para pruebas de API, Visor de bases de datos SQLite, Tabla ASCII y Codificador de entidades HTML.",
+    "faq1A": "OmniKit ofrece 6 herramientas: referencia de Códigos de estado HTTP, Cliente HTTP para pruebas de API, Visor de bases de datos SQLite, Tabla ASCII, Codificador de entidades HTML y Calculadora de Subredes IP.",
     "faq2Q": "¿Puedo ejecutar consultas SQL en el visor de bases de datos?",
     "faq2A": "Sí. El visor SQLite soporta consultas SQL de solo lectura con autocompletado, historial de consultas, paginación y exportación a CSV o JSON, todo ejecutándose localmente en tu navegador mediante WebAssembly."
   }

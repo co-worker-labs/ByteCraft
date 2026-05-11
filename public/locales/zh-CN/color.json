@@ -26,7 +26,8 @@
     "cssVariable": "CSS 变量",
     "cssVariableName": "变量名",
     "tailwindClass": "Tailwind 类",
-    "tailwindTheme": "Tailwind v4 @theme"
+    "tailwindTheme": "Tailwind v4 @theme",
+    "eyedropper": "从屏幕取色"
   },
   "palette": {
     "complementary": "互补色",

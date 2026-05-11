@@ -1,0 +1,93 @@
+{
+  "cidr": {
+    "placeholder": "輸入 IP/CIDR（例如 192.168.1.0/24）",
+    "networkAddress": "網路位址",
+    "broadcastAddress": "廣播位址",
+    "firstHost": "第一個可用主機",
+    "lastHost": "最後一個可用主機",
+    "usableHosts": "可用主機數",
+    "totalHosts": "總位址數",
+    "subnetMask": "子網路遮罩",
+    "cidrNotation": "CIDR 表示法",
+    "ipClass": "IP 類別",
+    "addressType": "位址類型",
+    "binaryView": "二進位檢視",
+    "networkBits": "網路位元",
+    "hostBits": "主機位元",
+    "expand": "展開",
+    "collapse": "收合"
+  },
+  "ipCheck": {
+    "title": "IP 是否屬於同一子網路？",
+    "ip1": "IP 位址 1",
+    "ip2": "IP 位址 2",
+    "sameSubnet": "同一子網路",
+    "differentSubnet": "不同子網路"
+  },
+  "split": {
+    "title": "子網路劃分",
+    "parentCidr": "父網路（CIDR）",
+    "splitBy": "劃分方式",
+    "bySubnetCount": "按子網路數量",
+    "byHostCount": "按每子網路主機數",
+    "subnetCount": "子網路數量",
+    "hostCount": "每子網路主機數",
+    "tooManyToVisualize": "子網路數量過多，無法視覺化顯示",
+    "tableHeaders": {
+      "index": "#",
+      "network": "網路位址",
+      "broadcast": "廣播位址",
+      "hostRange": "主機範圍",
+      "usableHosts": "可用主機數",
+      "subnetMask": "子網路遮罩",
+      "cidr": "CIDR"
+    }
+  },
+  "vlsm": {
+    "title": "VLSM 分配器",
+    "parentCidr": "父網路（CIDR）",
+    "subnetName": "子網路名稱",
+    "requiredHosts": "需要主機數",
+    "addSubnet": "新增子網路",
+    "freeSpace": "剩餘空間",
+    "deleteRow": "刪除"
+  },
+  "addressType": {
+    "private": "私有",
+    "public": "公有",
+    "loopback": "回送",
+    "linkLocal": "鏈結本機",
+    "multicast": "群播",
+    "reserved": "保留"
+  },
+  "ipClass": {
+    "a": "A 類",
+    "b": "B 類",
+    "c": "C 類",
+    "d": "D 類（群播）",
+    "e": "E 類（保留）"
+  },
+  "descriptions": {
+    "aeoDefinition": "IP 子網路計算器是一款免費的線上工具，用於 IPv4/IPv6 CIDR 計算、子網路劃分和 VLSM 分配。完全在瀏覽器中計算網路位址、廣播位址、主機範圍和子網路遮罩。",
+    "whatIsTitle": "什麼是子網路計算器？",
+    "whatIs": "子網路計算器根據 CIDR 表示法輸入計算網路屬性。它可以確定 IPv4 和 IPv6 網路的網路位址、廣播位址、可用主機範圍和子網路遮罩。",
+    "useCasesTitle": "常見使用情境",
+    "useCasesDesc1": "網路規劃",
+    "useCasesP1": "規劃子網路的 IP 位址分配，根據主機數量確定合適的 CIDR 前綴，驗證子網路設定。",
+    "useCasesDesc2": "VLSM 規劃",
+    "useCasesP2": "當不同子網路有不同主機需求時，使用可變長度子網路遮罩高效利用位址空間。",
+    "stepsTitle": "如何使用子網路計算器",
+    "step1Title": "輸入 CIDR 位址",
+    "step1Text": "輸入帶 CIDR 前綴的 IP 位址（例如 192.168.1.0/24），檢視包括廣播位址、主機範圍和子網路遮罩在內的網路屬性。",
+    "step2Title": "劃分或分配子網路",
+    "step2Text": "切換到「子網路劃分」分頁將網路等分為多個子網路，或使用「VLSM 分配器」進行可變長度分配。",
+    "step3Title": "複製結果",
+    "step3Text": "點擊任何結果欄位旁的複製按鈕，即可將其複製到剪貼簿。",
+    "faq1Q": "/24 和 /16 有什麼區別？",
+    "faq1A": "/24 網路共有 256 個位址（254 個可用主機），/16 網路共有 65,536 個位址（65,534 個可用主機）。前綴長度決定了網路部分使用的位元數——主機位元越少，可用位址越少。",
+    "faq2Q": "為什麼 IPv6 沒有廣播位址？",
+    "faq2A": "IPv6 取消了廣播位址的概念，改用群播位址實現一對多通訊。IPv6 子網路中的第一個和最後一個位址都可以使用（根據 RFC 6164，/127 點對點連結除外）。",
+    "faq3Q": "什麼是 VLSM？",
+    "faq3A": "可變長度子網路遮罩（VLSM）允許將一個網路劃分為大小不同的子網路。這比固定長度子網路劃分更高效，因為每個子網路只獲得所需的位址數量，減少了位址浪費。"
+  }
+}

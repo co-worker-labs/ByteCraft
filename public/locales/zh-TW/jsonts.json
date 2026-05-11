@@ -1,0 +1,32 @@
+{
+  "jsonInput": "JSON 輸入",
+  "tsOutput": "TypeScript 輸出",
+  "jsonPlaceholder": "在此貼上 JSON 或 JSON5…",
+  "tsPlaceholder": "TypeScript 輸出將在此顯示",
+  "rootName": "根型別名稱",
+  "invalidJson": "無效 JSON",
+  "primitiveError": "請輸入 JSON 物件或陣列",
+  "interface": "interface",
+  "type": "type",
+  "addExport": "加入 export",
+  "descriptions": {
+    "aeoDefinition": "JSON 轉 TypeScript 是一款免費的線上工具，可將 JSON 或 JSON5 即時轉換為 TypeScript 介面與型別定義。支援巢狀物件、聯合型別、陣列合併和 JSON5。所有處理均在瀏覽器中完成。",
+    "whatIsTitle": "什麼是 JSON 轉 TypeScript？",
+    "whatIsP1": "JSON 轉 TypeScript 將 JSON 資料轉換為 TypeScript 介面與型別定義。貼上任意 JSON（包括帶註解和尾隨逗號的 JSON5），即可獲得可直接使用的 TypeScript 型別。巢狀物件會自動提取為獨立的命名型別，物件陣列會智慧合併。",
+    "stepsTitle": "使用方法",
+    "step1Title": "貼上 JSON",
+    "step1Text": "將 JSON 或 JSON5 資料貼上到輸入區域。工具會自動偵測 JSON5 語法。",
+    "step2Title": "設定選項",
+    "step2Text": "設定根型別名稱，選擇 interface 或 type，切換 export 關鍵字。",
+    "step3Title": "複製 TypeScript 輸出",
+    "step3Text": "TypeScript 定義即時產生。點擊複製即可在專案中使用。",
+    "useCasesP1": "從 API 回應產生 TypeScript 型別。為 JSON 設定檔建立型別定義。將 JSON 資料轉換為 TypeScript 以實現靜態型別檢查。從 mock 資料建構型別安全的資料層。",
+    "limitationsP1": "工具基於單一 JSON 樣本產生型別，除非提供物件陣列，否則無法推斷可選欄位與必填欄位。聯合型別僅基於觀察到的值。不支援循環參考。",
+    "faq1Q": "支援 JSON5 嗎？",
+    "faq1A": "支援。當標準 JSON 解析失敗時，工具會自動回退到 JSON5 解析。你可以貼上帶單引號、尾隨逗號、註解和無引號鍵的 JSON。",
+    "faq2Q": "巢狀物件如何處理？",
+    "faq2A": "巢狀物件會自動提取為獨立的命名型別。例如，包含物件的 'user' 屬性會建立 'User' 介面。型別按依賴順序排列，被參考的型別出現在參考它的型別之前。",
+    "faq3Q": "可以匯出型別嗎？",
+    "faq3A": "可以。切換「加入 export」開關可為每個產生的型別加入 export 關鍵字。你還可以在 interface 和 type alias 語法之間選擇。"
+  }
+}

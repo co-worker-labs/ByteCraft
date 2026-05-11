@@ -52,12 +52,12 @@
     "faq2A": "没有。图片压缩完全在浏览器中使用 Canvas API 处理，因此没有服务端文件大小限制。非常大的图片处理可能会稍慢。"
   },
   "reference": {
-    "title": "参考查询工具 - HTTP 状态码、ASCII、HTML 实体 | OmniKit",
+    "title": "参考查询工具 - HTTP 状态码、ASCII、HTML 实体、子网计算 | OmniKit",
     "shortTitle": "参考查询",
-    "description": "面向开发者的免费在线参考查询工具。HTTP 状态码、ASCII 表、HTML 实体、SQLite 浏览器、HTTP 客户端。所有工具完全在浏览器中运行。",
-    "intro": "5 个参考查询工具，方便开发者快速查找。浏览 HTTP 状态码及 RFC 参考、查询 ASCII 字符编码、编码 HTML 实体、使用 SQL 编辑器浏览 SQLite 数据库、使用 HTTP 客户端测试 REST API。所有工具免费且完全在浏览器中运行。",
+    "description": "面向开发者的免费在线参考查询工具。HTTP 状态码、ASCII 表、HTML 实体、SQLite 浏览器、HTTP 客户端、子网计算器。所有工具完全在浏览器中运行。",
+    "intro": "6 个参考查询工具，方便开发者快速查找。浏览 HTTP 状态码及 RFC 参考、查询 ASCII 字符编码、编码 HTML 实体、使用 SQL 编辑器浏览 SQLite 数据库、使用 HTTP 客户端测试 REST API、使用 IP 子网计算器计算子网。所有工具免费且完全在浏览器中运行。",
     "faq1Q": "OmniKit 提供哪些参考工具？",
-    "faq1A": "OmniKit 提供 5 个参考工具：HTTP 状态码参考、HTTP 客户端（API 测试）、SQLite 数据库浏览器、ASCII 表和 HTML 实体编码器。",
+    "faq1A": "OmniKit 提供 6 个参考工具：HTTP 状态码参考、HTTP 客户端（API 测试）、SQLite 数据库浏览器、ASCII 表、HTML 实体编码器和 IP 子网计算器。",
     "faq2Q": "可以在数据库浏览器中执行 SQL 查询吗？",
     "faq2A": "可以。SQLite 浏览器支持只读 SQL 查询，具备自动补全、查询历史、分页功能，并支持导出为 CSV 或 JSON——全部通过 WebAssembly 在浏览器本地运行。"
   }

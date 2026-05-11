@@ -1,0 +1,32 @@
+{
+  "jsonInput": "Entrada JSON",
+  "tsOutput": "Salida TypeScript",
+  "jsonPlaceholder": "Pega JSON o JSON5 aquí…",
+  "tsPlaceholder": "La salida de TypeScript aparecerá aquí",
+  "rootName": "Nombre raíz",
+  "invalidJson": "JSON inválido",
+  "primitiveError": "Introduce un objeto o array JSON",
+  "interface": "interface",
+  "type": "type",
+  "addExport": "Añadir export",
+  "descriptions": {
+    "aeoDefinition": "JSON a TypeScript es una herramienta online gratuita que convierte JSON o JSON5 en interfaces y definiciones de tipos TypeScript al instante en tu navegador. Soporta objetos anidados, tipos unión, fusión de arrays y JSON5. No se envían datos a ningún servidor.",
+    "whatIsTitle": "¿Qué es JSON a TypeScript?",
+    "whatIsP1": "JSON a TypeScript convierte datos JSON en interfaces y definiciones de tipos TypeScript. Pega cualquier JSON — incluyendo JSON5 con comentarios y comas finales — y obtén tipos TypeScript listos para usar. Los objetos anidados se extraen automáticamente como tipos con nombre separados, y los arrays de objetos se fusionan inteligentemente.",
+    "stepsTitle": "Cómo usar",
+    "step1Title": "Pega tu JSON",
+    "step1Text": "Pega datos JSON o JSON5 en el área de entrada. La herramienta detecta automáticamente la sintaxis JSON5.",
+    "step2Title": "Configura las opciones",
+    "step2Text": "Establece el nombre del tipo raíz, elige entre interface y type alias, y activa o desactiva la palabra clave export.",
+    "step3Title": "Copia la salida TypeScript",
+    "step3Text": "Las definiciones TypeScript aparecen al instante. Haz clic en copiar para usarlas en tu proyecto.",
+    "useCasesP1": "Generar tipos TypeScript a partir de respuestas de API. Crear definiciones de tipos para archivos de configuración JSON. Convertir datos JSON a TypeScript para tipado estático. Construir capas de datos con seguridad de tipos a partir de datos mock.",
+    "limitationsP1": "La herramienta genera tipos a partir de una sola muestra JSON — no puede inferir campos opcionales vs obligatorios a menos que se proporcione un array de objetos. Los tipos unión se basan únicamente en los valores observados. No se soportan referencias circulares.",
+    "faq1Q": "¿Soporta JSON5?",
+    "faq1A": "Sí. La herramienta recurre automáticamente al análisis JSON5 cuando el análisis JSON estándar falla. Puedes pegar JSON con comillas simples, comas finales, comentarios y claves sin comillas.",
+    "faq2Q": "¿Qué pasa con los objetos anidados?",
+    "faq2A": "Los objetos anidados se extraen automáticamente como tipos con nombre separados. Por ejemplo, una propiedad 'user' que contiene un objeto creará una interfaz 'User'. Los tipos se ordenan para que los tipos referenciados aparezcan antes que los que los usan.",
+    "faq3Q": "¿Puedo exportar los tipos?",
+    "faq3A": "Sí. Activa el interruptor 'Añadir export' para anteponer la palabra clave export a cada tipo generado. También puedes elegir entre sintaxis de interface y type alias."
+  }
+}

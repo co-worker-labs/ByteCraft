@@ -1,0 +1,93 @@
+{
+  "cidr": {
+    "placeholder": "Entrez l'IP/CIDR (ex. 192.168.1.0/24)",
+    "networkAddress": "Adresse réseau",
+    "broadcastAddress": "Adresse de diffusion",
+    "firstHost": "Premier hôte utilisable",
+    "lastHost": "Dernier hôte utilisable",
+    "usableHosts": "Hôtes utilisables",
+    "totalHosts": "Total des adresses",
+    "subnetMask": "Masque de sous-réseau",
+    "cidrNotation": "Notation CIDR",
+    "ipClass": "Classe IP",
+    "addressType": "Type d'adresse",
+    "binaryView": "Vue binaire",
+    "networkBits": "Bits réseau",
+    "hostBits": "Bits hôte",
+    "expand": "Développer",
+    "collapse": "Réduire"
+  },
+  "ipCheck": {
+    "title": "L'IP appartient-elle au sous-réseau ?",
+    "ip1": "Adresse IP 1",
+    "ip2": "Adresse IP 2",
+    "sameSubnet": "Même sous-réseau",
+    "differentSubnet": "Sous-réseaux différents"
+  },
+  "split": {
+    "title": "Diviseur de sous-réseaux",
+    "parentCidr": "Réseau parent (CIDR)",
+    "splitBy": "Diviser par",
+    "bySubnetCount": "Nombre de sous-réseaux",
+    "byHostCount": "Hôtes par sous-réseau",
+    "subnetCount": "Nombre de sous-réseaux",
+    "hostCount": "Hôtes par sous-réseau",
+    "tooManyToVisualize": "Trop de sous-réseaux pour un affichage visuel",
+    "tableHeaders": {
+      "index": "#",
+      "network": "Adresse réseau",
+      "broadcast": "Diffusion",
+      "hostRange": "Plage d'hôtes",
+      "usableHosts": "Hôtes utilisables",
+      "subnetMask": "Masque de sous-réseau",
+      "cidr": "CIDR"
+    }
+  },
+  "vlsm": {
+    "title": "Allocateur VLSM",
+    "parentCidr": "Réseau parent (CIDR)",
+    "subnetName": "Nom du sous-réseau",
+    "requiredHosts": "Hôtes requis",
+    "addSubnet": "Ajouter un sous-réseau",
+    "freeSpace": "Espace libre",
+    "deleteRow": "Supprimer"
+  },
+  "addressType": {
+    "private": "Privée",
+    "public": "Publique",
+    "loopback": "Loopback",
+    "linkLocal": "Link-Local",
+    "multicast": "Multicast",
+    "reserved": "Réservée"
+  },
+  "ipClass": {
+    "a": "Classe A",
+    "b": "Classe B",
+    "c": "Classe C",
+    "d": "Classe D (Multicast)",
+    "e": "Classe E (Réservée)"
+  },
+  "descriptions": {
+    "aeoDefinition": "Le Calculateur de Sous-réseaux IP est un outil en ligne gratuit pour le calcul CIDR IPv4/IPv6, le découpage de sous-réseaux et l'allocation VLSM. Calcule l'adresse réseau, la diffusion, la plage d'hôtes et le masque de sous-réseau entièrement dans votre navigateur.",
+    "whatIsTitle": "Qu'est-ce qu'un calculateur de sous-réseaux ?",
+    "whatIs": "Un calculateur de sous-réseaux détermine les propriétés réseau à partir d'une notation CIDR. Il calcule l'adresse réseau, l'adresse de diffusion, la plage d'hôtes utilisables et le masque de sous-réseau pour les réseaux IPv4 et IPv6.",
+    "useCasesTitle": "Cas d'utilisation courants",
+    "useCasesDesc1": "Conception réseau",
+    "useCasesP1": "Planifiez l'allocation d'adresses IP pour les sous-réseaux, déterminez les préfixes CIDR appropriés selon le nombre d'hôtes et vérifiez les configurations de sous-réseaux.",
+    "useCasesDesc2": "Planification VLSM",
+    "useCasesP2": "Allouez des masques de sous-réseau à longueur variable pour utiliser efficacement l'espace d'adressage lorsque différents sous-réseaux ont des besoins en hôtes différents.",
+    "stepsTitle": "Comment utiliser le calculateur de sous-réseaux",
+    "step1Title": "Entrez une adresse CIDR",
+    "step1Text": "Saisissez une adresse IP avec un préfixe CIDR (ex. 192.168.1.0/24) pour voir les propriétés réseau, y compris la diffusion, la plage d'hôtes et le masque de sous-réseau.",
+    "step2Title": "Découpez ou allouez des sous-réseaux",
+    "step2Text": "Passez à l'onglet Diviseur de sous-réseaux pour diviser un réseau en sous-réseaux égaux, ou utilisez l'Allocateur VLSM pour une allocation à longueur variable.",
+    "step3Title": "Copiez les résultats",
+    "step3Text": "Cliquez sur le bouton de copie à côté de n'importe quel champ de résultat pour le copier dans le presse-papiers.",
+    "faq1Q": "Quelle est la différence entre /24 et /16 ?",
+    "faq1A": "Un réseau /24 possède 256 adresses au total (254 hôtes utilisables), tandis qu'un réseau /16 en possède 65 536 (65 534 hôtes utilisables). La longueur du préfixe détermine le nombre de bits utilisés pour la partie réseau — moins de bits hôtes signifie moins d'adresses.",
+    "faq2Q": "Pourquoi IPv6 n'a-t-il pas d'adresse de diffusion ?",
+    "faq2A": "IPv6 a supprimé le concept d'adresse de diffusion (broadcast). À la place, IPv6 utilise des adresses multicast pour la communication un-à-plusieurs. La première et la dernière adresse d'un sous-réseau IPv6 sont toutes deux utilisables (sauf sur les liens point-à-point /127 selon la RFC 6164).",
+    "faq3Q": "Qu'est-ce que VLSM ?",
+    "faq3A": "VLSM (Variable Length Subnet Masking) permet de diviser un réseau en sous-réseaux de tailles différentes. C'est plus efficace que le sous-réseautage à longueur fixe car chaque sous-réseau reçoit uniquement le nombre d'adresses dont il a besoin, réduisant ainsi le gaspillage d'espace d'adressage."
+  }
+}

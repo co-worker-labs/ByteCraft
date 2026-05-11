@@ -75,6 +75,11 @@
     "shortTitle": "JSON Formatieren / Komprimieren",
     "description": "JSON online formatieren, komprimieren und validieren. Pretty-Print mit konfigurierbarer Einrückung, minifizieren oder JSON5 parsen. 100% clientseitig."
   },
+  "jsonts": {
+    "title": "JSON zu TypeScript - Interfaces und Typen aus JSON generieren",
+    "shortTitle": "JSON → TypeScript",
+    "description": "Konvertiert JSON oder JSON5 in TypeScript-Interfaces und Typdefinitionen. Unterstützt verschachtelte Objekte, Union-Typen, Array-Zusammenführung und JSON5. 100% im Browser."
+  },
   "dbviewer": {
     "title": "SQLite-Viewer - .db-Dateien durchsuchen und abfragen",
     "shortTitle": "DB-Viewer",
@@ -174,6 +179,16 @@
     "title": "BIP39-Wortliste - Vollständige mnemonische Wortreferenz",
     "shortTitle": "BIP39-Wortliste",
     "description": "Vollständige Referenz der BIP39-mnemonischen Wortliste mit Suche. Alle 2048 Wörter der englischen Standardliste, durchsuchbar nach Index oder Teilzeichenfolge."
+  },
+  "cssunit": {
+    "title": "CSS-Einheitenumrechner - px zu rem, em, vw, vh",
+    "shortTitle": "CSS-Einheitenumrechner",
+    "description": "Umrechnung zwischen CSS-Einheiten (px, rem, em, vw, vh) mit anpassbaren Basiswerten. Batch-Umrechnung von CSS-Code und Referenztabelle."
+  },
+  "subnet": {
+    "title": "IP-Subnetzrechner - IPv4/IPv6 CIDR und VLSM",
+    "shortTitle": "Subnetzrechner",
+    "description": "IPv4/IPv6-CIDR-Rechner mit Subnetz-Aufteiler und VLSM-Zuteiler. Berechnet Netzwerkadresse, Broadcast, Host-Bereich und Subnetzmaske — 100% clientseitig."
   },
   "categories": {
     "text": "Textverarbeitung",

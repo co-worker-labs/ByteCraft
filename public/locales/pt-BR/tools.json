@@ -75,6 +75,11 @@
     "shortTitle": "JSON Formatar / Comprimir",
     "description": "Formate, comprima e valide JSON online. Pretty-print com indentação configurável, minifique em linha única ou analise JSON5. 100% no navegador."
   },
+  "jsonts": {
+    "title": "JSON para TypeScript - Gerar Interfaces e Tipos a partir de JSON",
+    "shortTitle": "JSON → TypeScript",
+    "description": "Converta JSON ou JSON5 em interfaces e definições de tipos TypeScript. Suporta objetos aninhados, tipos união, mesclagem de arrays e JSON5. 100% no navegador."
+  },
   "dbviewer": {
     "title": "Visualizador SQLite - Navegue e Consulte Arquivos .db",
     "shortTitle": "DB Viewer",
@@ -174,6 +179,16 @@
     "title": "Lista de Palavras BIP39 - Referência Completa de Mnemônicos",
     "shortTitle": "Lista BIP39",
     "description": "Referência completa da lista de palavras mnemônicas BIP39 com busca. Todas as 2048 palavras padrão em inglês, com busca por índice ou substring."
+  },
+  "cssunit": {
+    "title": "Conversor de unidades CSS - px para rem, em, vw, vh",
+    "shortTitle": "Conversor de unidades CSS",
+    "description": "Converta entre unidades CSS (px, rem, em, vw, vh) com valores base personalizáveis. Conversão em lote de código CSS e tabela de referência."
+  },
+  "subnet": {
+    "title": "Calculadora de Sub-redes IP - IPv4/IPv6 CIDR e VLSM",
+    "shortTitle": "Calculadora de Sub-redes",
+    "description": "Calculadora CIDR IPv4/IPv6 con divisor de sub-redes e alocador VLSM. Calcula endereço de rede, broadcast, faixa de hosts e máscara de sub-rede — 100% no navegador."
   },
   "categories": {
     "text": "Processamento de texto",

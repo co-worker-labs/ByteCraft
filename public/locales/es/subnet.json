@@ -1,0 +1,93 @@
+{
+  "cidr": {
+    "placeholder": "Introduce IP/CIDR (ej. 192.168.1.0/24)",
+    "networkAddress": "Dirección de red",
+    "broadcastAddress": "Dirección de broadcast",
+    "firstHost": "Primer host utilizable",
+    "lastHost": "Último host utilizable",
+    "usableHosts": "Hosts utilizables",
+    "totalHosts": "Total de direcciones",
+    "subnetMask": "Máscara de subred",
+    "cidrNotation": "Notación CIDR",
+    "ipClass": "Clase IP",
+    "addressType": "Tipo de dirección",
+    "binaryView": "Vista binaria",
+    "networkBits": "Bits de red",
+    "hostBits": "Bits de host",
+    "expand": "Expandir",
+    "collapse": "Colapsar"
+  },
+  "ipCheck": {
+    "title": "¿La IP pertenece a la subred?",
+    "ip1": "Dirección IP 1",
+    "ip2": "Dirección IP 2",
+    "sameSubnet": "Misma subred",
+    "differentSubnet": "Subred diferente"
+  },
+  "split": {
+    "title": "Divisor de subredes",
+    "parentCidr": "Red principal (CIDR)",
+    "splitBy": "Dividir por",
+    "bySubnetCount": "Número de subredes",
+    "byHostCount": "Hosts por subred",
+    "subnetCount": "Número de subredes",
+    "hostCount": "Hosts por subred",
+    "tooManyToVisualize": "Demasiadas subredes para mostrar visualmente",
+    "tableHeaders": {
+      "index": "#",
+      "network": "Dirección de red",
+      "broadcast": "Broadcast",
+      "hostRange": "Rango de hosts",
+      "usableHosts": "Hosts utilizables",
+      "subnetMask": "Máscara de subred",
+      "cidr": "CIDR"
+    }
+  },
+  "vlsm": {
+    "title": "Asignador VLSM",
+    "parentCidr": "Red principal (CIDR)",
+    "subnetName": "Nombre de subred",
+    "requiredHosts": "Hosts requeridos",
+    "addSubnet": "Añadir subred",
+    "freeSpace": "Espacio libre",
+    "deleteRow": "Eliminar"
+  },
+  "addressType": {
+    "private": "Privada",
+    "public": "Pública",
+    "loopback": "Loopback",
+    "linkLocal": "Link-Local",
+    "multicast": "Multicast",
+    "reserved": "Reservada"
+  },
+  "ipClass": {
+    "a": "Clase A",
+    "b": "Clase B",
+    "c": "Clase C",
+    "d": "Clase D (Multicast)",
+    "e": "Clase E (Reservada)"
+  },
+  "descriptions": {
+    "aeoDefinition": "La Calculadora de Subredes IP es una herramienta online gratuita para cálculo CIDR de IPv4/IPv6, división de subredes y asignación VLSM. Calcula dirección de red, broadcast, rango de hosts y máscara de subred completamente en tu navegador.",
+    "whatIsTitle": "¿Qué es una Calculadora de Subredes?",
+    "whatIs": "Una calculadora de subredes calcula las propiedades de red a partir de una entrada en notación CIDR. Determina la dirección de red, la dirección de broadcast, el rango de hosts utilizables y la máscara de subred para redes IPv4 e IPv6.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesDesc1": "Diseño de red",
+    "useCasesP1": "Planifica la asignación de direcciones IP para subredes, determina prefijos CIDR apropiados para un número dado de hosts y verifica configuraciones de subred.",
+    "useCasesDesc2": "Planificación VLSM",
+    "useCasesP2": "Asigna máscaras de subred de longitud variable para usar eficientemente el espacio de direcciones cuando diferentes subredes tienen diferentes requerimientos de hosts.",
+    "stepsTitle": "Cómo usar la Calculadora de Subredes",
+    "step1Title": "Introduce una dirección CIDR",
+    "step1Text": "Escribe una dirección IP con prefijo CIDR (ej. 192.168.1.0/24) para ver las propiedades de red incluyendo broadcast, rango de hosts y máscara de subred.",
+    "step2Title": "Divide o asigna subredes",
+    "step2Text": "Cambia a la pestaña Divisor de subredes para dividir una red en subredes iguales, o usa el Asignador VLSM para asignación de longitud variable.",
+    "step3Title": "Copia los resultados",
+    "step3Text": "Haz clic en el botón de copiar junto a cualquier campo de resultado para copiarlo al portapapeles.",
+    "faq1Q": "¿Cuál es la diferencia entre /24 y /16?",
+    "faq1A": "Una red /24 tiene 256 direcciones totales (254 hosts utilizables), mientras que una red /16 tiene 65.536 direcciones totales (65.534 hosts utilizables). La longitud del prefijo determina cuántos bits se usan para la porción de red — menos bits de host significa menos direcciones.",
+    "faq2Q": "¿Por qué IPv6 no tiene dirección de broadcast?",
+    "faq2A": "IPv6 eliminó el concepto de dirección de broadcast. En su lugar, IPv6 usa direcciones multicast para comunicación uno-a-muchos. La primera y última dirección en una subred IPv6 son ambas utilizables (excepto en enlaces punto a punto /127 según RFC 6164).",
+    "faq3Q": "¿Qué es VLSM?",
+    "faq3A": "VLSM (Variable Length Subnet Masking) permite dividir una red en subredes de diferentes tamaños. Esto es más eficiente que el subnetting de longitud fija porque cada subred recibe solo la cantidad de direcciones que necesita, reduciendo el desperdicio de espacio de direcciones."
+  }
+}

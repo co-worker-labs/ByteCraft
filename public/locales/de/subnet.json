@@ -1,0 +1,93 @@
+{
+  "cidr": {
+    "placeholder": "IP/CIDR eingeben (z.B. 192.168.1.0/24)",
+    "networkAddress": "Netzwerkadresse",
+    "broadcastAddress": "Broadcast-Adresse",
+    "firstHost": "Erster nutzbarer Host",
+    "lastHost": "Letzter nutzbarer Host",
+    "usableHosts": "Nutzbare Hosts",
+    "totalHosts": "Gesamtadressen",
+    "subnetMask": "Subnetzmaske",
+    "cidrNotation": "CIDR-Notation",
+    "ipClass": "IP-Klasse",
+    "addressType": "Adresstyp",
+    "binaryView": "Binäransicht",
+    "networkBits": "Netzwerkbits",
+    "hostBits": "Hostbits",
+    "expand": "Erweitern",
+    "collapse": "Einklappen"
+  },
+  "ipCheck": {
+    "title": "Gehört die IP zum Subnetz?",
+    "ip1": "IP-Adresse 1",
+    "ip2": "IP-Adresse 2",
+    "sameSubnet": "Gleiches Subnetz",
+    "differentSubnet": "Unterschiedliches Subnetz"
+  },
+  "split": {
+    "title": "Subnetz-Aufteiler",
+    "parentCidr": "Übergeordnetes Netzwerk (CIDR)",
+    "splitBy": "Aufteilen nach",
+    "bySubnetCount": "Anzahl der Subnetze",
+    "byHostCount": "Hosts pro Subnetz",
+    "subnetCount": "Anzahl der Subnetze",
+    "hostCount": "Hosts pro Subnetz",
+    "tooManyToVisualize": "Zu viele Subnetze für die visuelle Darstellung",
+    "tableHeaders": {
+      "index": "#",
+      "network": "Netzwerkadresse",
+      "broadcast": "Broadcast",
+      "hostRange": "Host-Bereich",
+      "usableHosts": "Nutzbare Hosts",
+      "subnetMask": "Subnetzmaske",
+      "cidr": "CIDR"
+    }
+  },
+  "vlsm": {
+    "title": "VLSM-Zuteiler",
+    "parentCidr": "Übergeordnetes Netzwerk (CIDR)",
+    "subnetName": "Subnetzname",
+    "requiredHosts": "Benötigte Hosts",
+    "addSubnet": "Subnetz hinzufügen",
+    "freeSpace": "Freier Platz",
+    "deleteRow": "Löschen"
+  },
+  "addressType": {
+    "private": "Privat",
+    "public": "Öffentlich",
+    "loopback": "Loopback",
+    "linkLocal": "Link-Local",
+    "multicast": "Multicast",
+    "reserved": "Reserviert"
+  },
+  "ipClass": {
+    "a": "Klasse A",
+    "b": "Klasse B",
+    "c": "Klasse C",
+    "d": "Klasse D (Multicast)",
+    "e": "Klasse E (Reserviert)"
+  },
+  "descriptions": {
+    "aeoDefinition": "Der IP-Subnetzrechner ist ein kostenloses Online-Tool für IPv4/IPv6-CIDR-Berechnung, Subnetz-Aufteilung und VLSM-Zuteilung. Berechnet Netzwerkadresse, Broadcast, Host-Bereich und Subnetzmaske vollständig in Ihrem Browser.",
+    "whatIsTitle": "Was ist ein Subnetzrechner?",
+    "whatIs": "Ein Subnetzrechner berechnet Netzwerkeigenschaften aus einer CIDR-Notationseingabe. Er ermittelt die Netzwerkadresse, Broadcast-Adresse, den nutzbaren Host-Bereich und die Subnetzmaske für IPv4- und IPv6-Netzwerke.",
+    "useCasesTitle": "Häufige Anwendungsfälle",
+    "useCasesDesc1": "Netzwerkdesign",
+    "useCasesP1": "Planen Sie die IP-Adressenzuteilung für Subnetze, bestimmen Sie geeignete CIDR-Präfixe für gegebene Host-Anzahlen und überprüfen Sie Subnetz-Konfigurationen.",
+    "useCasesDesc2": "VLSM-Planung",
+    "useCasesP2": "Weisen Sie Subnetzmasken variabler Länge zu, um den Adressraum effizient zu nutzen, wenn verschiedene Subnetze unterschiedliche Host-Anforderungen haben.",
+    "stepsTitle": "So verwenden Sie den Subnetzrechner",
+    "step1Title": "CIDR-Adresse eingeben",
+    "step1Text": "Geben Sie eine IP-Adresse mit CIDR-Präfix ein (z.B. 192.168.1.0/24), um Netzwerkeigenschaften einschließlich Broadcast, Host-Bereich und Subnetzmaske zu sehen.",
+    "step2Title": "Subnetze aufteilen oder zuteilen",
+    "step2Text": "Wechseln Sie zum Tab Subnetz-Aufteiler, um ein Netzwerk in gleiche Subnetze zu teilen, oder verwenden Sie den VLSM-Zuteiler für Zuteilung variabler Länge.",
+    "step3Title": "Ergebnisse kopieren",
+    "step3Text": "Klicken Sie auf die Kopier-Schaltfläche neben einem beliebigen Ergebnisfeld, um es in die Zwischenablage zu kopieren.",
+    "faq1Q": "Was ist der Unterschied zwischen /24 und /16?",
+    "faq1A": "Ein /24-Netzwerk hat 256 Gesamtadressen (254 nutzbare Hosts), während ein /16-Netzwerk 65.536 Gesamtadressen (65.534 nutzbare Hosts) hat. Die Präfixlänge bestimmt, wie viele Bits für den Netzwerkteil verwendet werden — weniger Host-Bits bedeutet weniger Adressen.",
+    "faq2Q": "Warum hat IPv6 keine Broadcast-Adresse?",
+    "faq2A": "IPv6 hat das Konzept der Broadcast-Adresse abgeschafft. Stattdessen verwendet IPv6 Multicast-Adressen für Eins-zu-vielen-Kommunikation. Die erste und letzte Adresse in einem IPv6-Subnetz sind beide nutzbar (außer auf /127-Punkt-zu-Punkt-Verbindungen gemäß RFC 6164).",
+    "faq3Q": "Was ist VLSM?",
+    "faq3A": "VLSM (Variable Length Subnet Masking) ermöglicht die Aufteilung eines Netzwerks in Subnetze unterschiedlicher Größe. Dies ist effizienter als Subnetting mit fester Länge, da jedes Subnetz nur die benötigte Anzahl an Adressen erhält und so Adressraum verschwendet wird."
+  }
+}

@@ -52,12 +52,12 @@
     "faq2A": "아니요. 이미지 압축은 Canvas API를 사용하여 브라우저에서 완전히 실행되므로 서버 측 파일 크기 제한이 없습니다. 매우 큰 이미지는 처리 시간이 더 걸릴 수 있습니다."
   },
   "reference": {
-    "title": "참조 & 검색 도구 - HTTP 상태 코드, ASCII, HTML 코드 | OmniKit",
+    "title": "참조 & 검색 도구 - HTTP 상태 코드, ASCII, HTML 코드, 서브넷 | OmniKit",
     "shortTitle": "참조 & 검색",
-    "description": "개발자를 위한 무료 온라인 참조 및 검색 도구입니다. HTTP 상태 코드, ASCII 테이블, HTML 엔티티, SQLite 뷰어, HTTP 클라이언트를 제공합니다. 모든 도구는 100% 브라우저에서 실행됩니다.",
-    "intro": "빠른 개발자 검색을 위한 5개의 참조 및 검색 도구입니다. RFC 참조가 포함된 HTTP 상태 코드 탐색, ASCII 문자 코드 조회, HTML 엔티티 인코딩, SQL 편집기로 SQLite 데이터베이스 탐색, HTTP 클라이언트로 REST API 테스트를 제공합니다. 모든 도구는 무료이며 브라우저에서 완전히 실행됩니다.",
+    "description": "개발자를 위한 무료 온라인 참조 및 검색 도구입니다. HTTP 상태 코드, ASCII 테이블, HTML 엔티티, SQLite 뷰어, HTTP 클라이언트, 서브넷 계산기를 제공합니다. 모든 도구는 100% 브라우저에서 실행됩니다.",
+    "intro": "빠른 개발자 검색을 위한 6개의 참조 및 검색 도구입니다. RFC 참조가 포함된 HTTP 상태 코드 탐색, ASCII 문자 코드 조회, HTML 엔티티 인코딩, SQL 편집기로 SQLite 데이터베이스 탐색, HTTP 클라이언트로 REST API 테스트, IP 서브넷 계산기로 서브넷 계산을 제공합니다. 모든 도구는 무료이며 브라우저에서 완전히 실행됩니다.",
     "faq1Q": "OmniKit에서 어떤 참조 도구를 제공하나요?",
-    "faq1A": "OmniKit은 5개의 참조 도구를 제공합니다: HTTP 상태 코드 참조, API 테스트용 HTTP 클라이언트, SQLite 데이터베이스 뷰어, ASCII 테이블, HTML 엔티티 인코더.",
+    "faq1A": "OmniKit은 6개의 참조 도구를 제공합니다: HTTP 상태 코드 참조, API 테스트용 HTTP 클라이언트, SQLite 데이터베이스 뷰어, ASCII 테이블, HTML 엔티티 인코더, IP 서브넷 계산기.",
     "faq2Q": "DB 뷰어에서 SQL 쿼리를 실행할 수 있나요?",
     "faq2A": "네. SQLite 뷰어는 자동완성, 쿼리 기록, 페이지네이션, CSV/JSON 내보내기를 지원하는 읽기 전용 SQL 쿼리를 지원합니다 — WebAssembly를 통해 브라우저에서 로컬로 실행됩니다."
   }

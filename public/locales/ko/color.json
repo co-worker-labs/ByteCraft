@@ -26,7 +26,8 @@
     "cssVariable": "CSS 변수",
     "cssVariableName": "변수명",
     "tailwindClass": "Tailwind 유틸리티",
-    "tailwindTheme": "Tailwind v4 @theme"
+    "tailwindTheme": "Tailwind v4 @theme",
+    "eyedropper": "화면에서 색상 선택"
   },
   "palette": {
     "complementary": "보색",

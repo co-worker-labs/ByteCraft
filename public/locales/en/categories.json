@@ -52,12 +52,12 @@
     "faq2A": "No. Image compression runs entirely in your browser using Canvas API, so there is no server-side file size limit. Very large images may be slower to process."
   },
   "reference": {
-    "title": "Reference & Lookup Tools - HTTP Status, ASCII, HTML Codes | OmniKit",
+    "title": "Reference & Lookup Tools - HTTP Status, ASCII, HTML Codes, Subnet | OmniKit",
     "shortTitle": "Reference & Lookup",
-    "description": "Free online reference and lookup tools for developers. HTTP status codes, ASCII table, HTML entities, SQLite viewer, and HTTP client. All tools run 100% in your browser.",
-    "intro": "5 reference and lookup tools for quick developer lookups. Browse HTTP status codes with RFC references, look up ASCII character codes, encode HTML entities, explore SQLite databases with a SQL editor, and test REST APIs with the HTTP client. All tools are free and run entirely in your browser.",
+    "description": "Free online reference and lookup tools for developers. HTTP status codes, ASCII table, HTML entities, SQLite viewer, HTTP client, and subnet calculator. All tools run 100% in your browser.",
+    "intro": "6 reference and lookup tools for quick developer lookups. Browse HTTP status codes with RFC references, look up ASCII character codes, encode HTML entities, explore SQLite databases with a SQL editor, test REST APIs with the HTTP client, and calculate subnets with the IP Subnet Calculator. All tools are free and run entirely in your browser.",
     "faq1Q": "What reference tools does OmniKit provide?",
-    "faq1A": "OmniKit offers 5 reference tools: HTTP Status Codes reference, HTTP Client for API testing, SQLite Database Viewer, ASCII Table, and HTML Entity Encoder.",
+    "faq1A": "OmniKit offers 6 reference tools: HTTP Status Codes reference, HTTP Client for API testing, SQLite Database Viewer, ASCII Table, HTML Entity Encoder, and IP Subnet Calculator.",
     "faq2Q": "Can I run SQL queries in the DB Viewer?",
     "faq2A": "Yes. The SQLite Viewer supports read-only SQL queries with autocomplete, query history, pagination, and export to CSV or JSON — all running locally in your browser via WebAssembly."
   }

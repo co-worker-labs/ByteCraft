@@ -52,12 +52,12 @@
     "faq2A": "Non. La compression d'image s'exécute entièrement dans votre navigateur via l'API Canvas, il n'y a donc pas de limite de taille côté serveur. Les images très volumineuses peuvent être plus lentes à traiter."
   },
   "reference": {
-    "title": "Outils de référence et recherche — Statut HTTP, ASCII, Codes HTML | OmniKit",
+    "title": "Outils de référence et recherche — Statut HTTP, ASCII, Codes HTML, Sous-réseaux | OmniKit",
     "shortTitle": "Référence et recherche",
-    "description": "Outils gratuits de référence et de recherche en ligne pour les développeurs. Codes de statut HTTP, table ASCII, entités HTML, visionneuse SQLite et client HTTP. 100% côté client.",
-    "intro": "5 outils de référence et de recherche pour des consultations rapides. Parcourir les codes de statut HTTP avec références RFC, consulter les codes de caractères ASCII, encoder les entités HTML, explorer les bases de données SQLite avec un éditeur SQL et tester les APIs REST avec le client HTTP. Tous les outils sont gratuits et fonctionnent entièrement dans votre navigateur.",
+    "description": "Outils gratuits de référence et de recherche en ligne pour les développeurs. Codes de statut HTTP, table ASCII, entités HTML, visionneuse SQLite, client HTTP et calculateur de sous-réseaux. 100% côté client.",
+    "intro": "6 outils de référence et de recherche pour des consultations rapides. Parcourir les codes de statut HTTP avec références RFC, consulter les codes de caractères ASCII, encoder les entités HTML, explorer les bases de données SQLite avec un éditeur SQL, tester les APIs REST avec le client HTTP et calculer des sous-réseaux avec le Calculateur de Sous-réseaux IP. Tous les outils sont gratuits et fonctionnent entièrement dans votre navigateur.",
     "faq1Q": "Quels outils de référence OmniKit propose-t-il ?",
-    "faq1A": "OmniKit offre 5 outils de référence : Référence des codes de statut HTTP, Client HTTP pour tester des APIs, Visionneuse de base de données SQLite, Table ASCII et Encodeur d'entités HTML.",
+    "faq1A": "OmniKit offre 6 outils de référence : Référence des codes de statut HTTP, Client HTTP pour tester des APIs, Visionneuse de base de données SQLite, Table ASCII, Encodeur d'entités HTML et Calculateur de Sous-réseaux IP.",
     "faq2Q": "Puis-je exécuter des requêtes SQL dans la visionneuse de base de données ?",
     "faq2A": "Oui. La visionneuse SQLite prend en charge les requêtes SQL en lecture seule avec auto-complétion, historique des requêtes, pagination et export en CSV ou JSON — le tout fonctionnant localement dans votre navigateur via WebAssembly."
   }

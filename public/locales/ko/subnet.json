@@ -1,0 +1,93 @@
+{
+  "cidr": {
+    "placeholder": "IP/CIDR 입력 (예: 192.168.1.0/24)",
+    "networkAddress": "네트워크 주소",
+    "broadcastAddress": "브로드캐스트 주소",
+    "firstHost": "첫 번째 사용 가능한 호스트",
+    "lastHost": "마지막 사용 가능한 호스트",
+    "usableHosts": "사용 가능한 호스트 수",
+    "totalHosts": "전체 주소 수",
+    "subnetMask": "서브넷 마스크",
+    "cidrNotation": "CIDR 표기법",
+    "ipClass": "IP 클래스",
+    "addressType": "주소 유형",
+    "binaryView": "이진수 보기",
+    "networkBits": "네트워크 비트",
+    "hostBits": "호스트 비트",
+    "expand": "펼치기",
+    "collapse": "접기"
+  },
+  "ipCheck": {
+    "title": "같은 서브넷에 속하는 IP인가요?",
+    "ip1": "IP 주소 1",
+    "ip2": "IP 주소 2",
+    "sameSubnet": "같은 서브넷",
+    "differentSubnet": "다른 서브넷"
+  },
+  "split": {
+    "title": "서브넷 분할",
+    "parentCidr": "상위 네트워크 (CIDR)",
+    "splitBy": "분할 기준",
+    "bySubnetCount": "서브넷 수로 지정",
+    "byHostCount": "서브넷당 호스트 수로 지정",
+    "subnetCount": "서브넷 수",
+    "hostCount": "서브넷당 호스트 수",
+    "tooManyToVisualize": "서브넷이 너무 많아 시각적으로 표시할 수 없습니다",
+    "tableHeaders": {
+      "index": "#",
+      "network": "네트워크 주소",
+      "broadcast": "브로드캐스트",
+      "hostRange": "호스트 범위",
+      "usableHosts": "사용 가능한 호스트 수",
+      "subnetMask": "서브넷 마스크",
+      "cidr": "CIDR"
+    }
+  },
+  "vlsm": {
+    "title": "VLSM 할당기",
+    "parentCidr": "상위 네트워크 (CIDR)",
+    "subnetName": "서브넷 이름",
+    "requiredHosts": "필요 호스트 수",
+    "addSubnet": "서브넷 추가",
+    "freeSpace": "남은 공간",
+    "deleteRow": "삭제"
+  },
+  "addressType": {
+    "private": "사설",
+    "public": "공인",
+    "loopback": "루프백",
+    "linkLocal": "링크 로컬",
+    "multicast": "멀티캐스트",
+    "reserved": "예약됨"
+  },
+  "ipClass": {
+    "a": "A 클래스",
+    "b": "B 클래스",
+    "c": "C 클래스",
+    "d": "D 클래스 (멀티캐스트)",
+    "e": "E 클래스 (예약됨)"
+  },
+  "descriptions": {
+    "aeoDefinition": "IP 서브넷 계산기는 IPv4/IPv6 CIDR 계산, 서브넷 분할, VLSM 할당을 위한 무료 온라인 도구입니다. 네트워크 주소, 브로드캐스트, 호스트 범위, 서브넷 마스크를 브라우저에서 완전히 계산합니다.",
+    "whatIsTitle": "서브넷 계산기란?",
+    "whatIs": "서브넷 계산기는 CIDR 표기 입력으로부터 네트워크 속성을 계산합니다. IPv4 및 IPv6 네트워크의 네트워크 주소, 브로드캐스트 주소, 사용 가능한 호스트 범위 및 서브넷 마스크를 확인할 수 있습니다.",
+    "useCasesTitle": "주요 활용 사례",
+    "useCasesDesc1": "네트워크 설계",
+    "useCasesP1": "서브넷의 IP 주소 할당을 계획하고, 호스트 수에 맞는 적절한 CIDR 접두사를 결정하며, 서브넷 구성을 검증합니다.",
+    "useCasesDesc2": "VLSM 설계",
+    "useCasesP2": "서로 다른 서브넷이 서로 다른 호스트 요구사항을 가질 때, 가변 길이 서브넷 마스크를 사용하여 주소 공간을 효율적으로 활용합니다.",
+    "stepsTitle": "서브넷 계산기 사용법",
+    "step1Title": "CIDR 주소 입력",
+    "step1Text": "CIDR 접두사가 포함된 IP 주소(예: 192.168.1.0/24)를 입력하면 브로드캐스트, 호스트 범위, 서브넷 마스크 등의 네트워크 속성을 확인할 수 있습니다.",
+    "step2Title": "서브넷 분할 또는 할당",
+    "step2Text": "「서브넷 분할」 탭으로 전환하여 네트워크를 균등하게 분할하거나, 「VLSM 할당기」를 사용하여 가변 길이 할당을 수행합니다.",
+    "step3Title": "결과 복사",
+    "step3Text": "결과 필드 옆의 복사 버튼을 클릭하여 클립보드에 복사합니다.",
+    "faq1Q": "/24와 /16의 차이는 무엇인가요?",
+    "faq1A": "/24 네트워크는 총 256개의 주소(254개의 사용 가능한 호스트)를 가지며, /16 네트워크는 총 65,536개의 주소(65,534개의 사용 가능한 호스트)를 가집니다. 접두사 길이는 네트워크 부분에 사용되는 비트 수를 결정하며, 호스트 비트가 적을수록 주소 수가 줄어듭니다.",
+    "faq2Q": "IPv6에 브로드캐스트 주소가 없는 이유는 무엇인가요?",
+    "faq2A": "IPv6는 브로드캐스트 주소 개념을 폐지했습니다. 대신 멀티캐스트 주소를 사용하여 일대다 통신을 수행합니다. IPv6 서브넷의 첫 번째와 마지막 주소 모두 사용 가능합니다(RFC 6164에 따른 /127 포인트 투 포인트 링크 제외).",
+    "faq3Q": "VLSM이란 무엇인가요?",
+    "faq3A": "가변 길이 서브넷 마스크(VLSM)는 하나의 네트워크를 서로 다른 크기의 서브넷으로 분할할 수 있게 합니다. 각 서브넷이 필요한 주소 수만큼만 할당받으므로 고정 길이 서브넷 분할보다 효율적이며, 주소 공간 낭비를 줄입니다."
+  }
+}

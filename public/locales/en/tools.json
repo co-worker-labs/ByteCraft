@@ -45,6 +45,11 @@
     "shortTitle": "Storage Unit Conversion",
     "description": "Convert between bytes, KB, MB, GB, TB, PB and more. Supports both SI (decimal) and IEC (binary) standards."
   },
+  "cssunit": {
+    "title": "CSS Unit Converter - px to rem, em, vw, vh",
+    "shortTitle": "CSS Unit Converter",
+    "description": "Convert between CSS units (px, rem, em, vw, vh) with customizable base values. Batch convert CSS code and reference lookup table."
+  },
   "uuid": {
     "title": "UUID Generator - v4, v7 Random UUID",
     "shortTitle": "UUID Generator",
@@ -74,6 +79,11 @@
     "title": "JSON Formatter & Validator",
     "shortTitle": "JSON Format / Compress",
     "description": "Format, compress, and validate JSON. Pretty-print with configurable indentation, minify to single line, or parse JSON5."
+  },
+  "jsonts": {
+    "title": "JSON to TypeScript - Generate Interfaces & Types from JSON",
+    "shortTitle": "JSON / TypeScript",
+    "description": "Convert JSON or JSON5 to TypeScript interfaces and type definitions. Supports nested objects, union types, array merging, and JSON5."
   },
   "dbviewer": {
     "title": "SQLite Viewer - Browse & Query .db Files",
@@ -174,6 +184,11 @@
     "title": "BIP39 Word List - Complete Mnemonic Word Reference",
     "shortTitle": "BIP39 Word List",
     "description": "Complete BIP39 mnemonic word list reference with search. All 2048 words in the standard English BIP39 word list, searchable by index or substring."
+  },
+  "subnet": {
+    "title": "IP Subnet Calculator - IPv4/IPv6 CIDR & VLSM",
+    "shortTitle": "Subnet Calculator",
+    "description": "IPv4/IPv6 CIDR calculator with subnet splitter and VLSM allocator. Compute network address, broadcast, host range, and subnet mask — 100% client-side."
   },
   "categories": {
     "text": "Text Processing",

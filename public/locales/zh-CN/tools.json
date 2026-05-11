@@ -90,6 +90,12 @@
     "description": "在线格式化、压缩和验证 JSON。支持自定义缩进美化输出、单行压缩和 JSON5 宽松解析。100% 浏览器端处理。",
     "searchTerms": "jsongeshihua jsgsh yanzheng yasuo"
   },
+  "jsonts": {
+    "title": "JSON 转 TypeScript - 生成接口和类型定义",
+    "shortTitle": "JSON 转 TypeScript",
+    "description": "将 JSON 或 JSON5 转换为 TypeScript 接口和类型定义。支持嵌套对象、联合类型、数组合并和 JSON5。100% 浏览器端处理。",
+    "searchTerms": "jsonzhuantypescript jsonzts leixing jiekou"
+  },
   "dbviewer": {
     "title": "SQLite 数据库查看器 - 浏览和查询 .db 文件",
     "shortTitle": "数据库查看器",
@@ -209,6 +215,18 @@
     "shortTitle": "BIP39 单词表",
     "description": "完整的 BIP39 助记词单词表参考，支持搜索。标准英文 BIP39 单词表全部 2048 个单词，可按索引或子字符串查找。",
     "searchTerms": "bip39dancibiao bip39dcb zhujici zhuci cibiao"
+  },
+  "cssunit": {
+    "title": "CSS 单位转换器 - px 转 rem、em、vw、vh",
+    "shortTitle": "CSS 单位转换",
+    "description": "在 CSS 单位（px、rem、em、vw、vh）之间转换，支持自定义基准值。批量转换 CSS 代码，提供参考对照表。",
+    "searchTerms": "cssdanweizhuanhuanqi csdwzhq rem em xiangying"
+  },
+  "subnet": {
+    "title": "IP 子网计算器 - IPv4/IPv6 CIDR 与 VLSM",
+    "shortTitle": "子网计算器",
+    "description": "IPv4/IPv6 CIDR 子网计算器，支持子网划分和 VLSM 分配。计算网络地址、广播地址、主机范围和子网掩码——100% 浏览器端处理。",
+    "searchTerms": "ziwangjisuanqi zwjsq ziwang CIDR"
   },
   "categories": {
     "text": "文本处理",

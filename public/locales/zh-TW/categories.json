@@ -52,12 +52,12 @@
     "faq2A": "沒有。圖片壓縮完全使用 Canvas API 在瀏覽器中執行，因此沒有伺服器端的檔案大小限制。非常大的圖片處理速度可能較慢。"
   },
   "reference": {
-    "title": "參考與查詢工具 - HTTP 狀態碼、ASCII、HTML 實體 | OmniKit",
+    "title": "參考與查詢工具 - HTTP 狀態碼、ASCII、HTML 實體、子網路計算 | OmniKit",
     "shortTitle": "參考與查詢",
-    "description": "免費的線上參考與查詢工具，專為開發者設計。HTTP 狀態碼、ASCII 表、HTML 實體、SQLite 檢視器和 HTTP 用戶端。所有工具 100% 在瀏覽器中執行。",
-    "intro": "5 款參考與查詢工具，用於快速查詢開發者常用資訊。瀏覽 HTTP 狀態碼及 RFC 參考、查詢 ASCII 字元代碼、編碼 HTML 實體、使用 SQL 編輯器瀏覽 SQLite 資料庫、以 HTTP 用戶端測試 REST API。所有工具完全免費，在瀏覽器中執行。",
+    "description": "免費的線上參考與查詢工具，專為開發者設計。HTTP 狀態碼、ASCII 表、HTML 實體、SQLite 檢視器、HTTP 用戶端、子網路計算器。所有工具 100% 在瀏覽器中執行。",
+    "intro": "6 款參考與查詢工具，用於快速查詢開發者常用資訊。瀏覽 HTTP 狀態碼及 RFC 參考、查詢 ASCII 字元代碼、編碼 HTML 實體、使用 SQL 編輯器瀏覽 SQLite 資料庫、以 HTTP 用戶端測試 REST API、使用 IP 子網路計算器計算子網。所有工具完全免費，在瀏覽器中執行。",
     "faq1Q": "OmniKit 提供哪些參考工具？",
-    "faq1A": "OmniKit 提供 5 款參考工具：HTTP 狀態碼參考、HTTP 用戶端（API 測試）、SQLite 資料庫檢視器、ASCII 表和 HTML 實體編碼器。",
+    "faq1A": "OmniKit 提供 6 款參考工具：HTTP 狀態碼參考、HTTP 用戶端（API 測試）、SQLite 資料庫檢視器、ASCII 表、HTML 實體編碼器和 IP 子網路計算器。",
     "faq2Q": "可以在 DB Viewer 中執行 SQL 查詢嗎？",
     "faq2A": "可以。SQLite 檢視器支援唯讀 SQL 查詢，具備自動補全、查詢歷史、分頁瀏覽功能，並可匯出為 CSV 或 JSON——全部透過 WebAssembly 在瀏覽器本機執行。"
   }
