@@ -180,6 +180,11 @@
     "shortTitle": "Liste BIP39",
     "description": "Référence complète de la liste de mots mnémoniques BIP39 avec recherche. Les 2048 mots standards en anglais, recherchables par index ou sous-chaîne."
   },
+  "cssunit": {
+    "title": "Convertisseur d'unités CSS - px vers rem, em, vw, vh",
+    "shortTitle": "Convertisseur d'unités CSS",
+    "description": "Convertissez entre unités CSS (px, rem, em, vw, vh) avec des valeurs de base personnalisables. Conversion par lot de code CSS et table de référence."
+  },
   "categories": {
     "text": "Traitement de texte",
     "encoding": "Encodage et conversion",

@@ -180,6 +180,11 @@
     "shortTitle": "Lista BIP39",
     "description": "Referência completa da lista de palavras mnemônicas BIP39 com busca. Todas as 2048 palavras padrão em inglês, com busca por índice ou substring."
   },
+  "cssunit": {
+    "title": "Conversor de unidades CSS - px para rem, em, vw, vh",
+    "shortTitle": "Conversor de unidades CSS",
+    "description": "Converta entre unidades CSS (px, rem, em, vw, vh) com valores base personalizáveis. Conversão em lote de código CSS e tabela de referência."
+  },
   "categories": {
     "text": "Processamento de texto",
     "encoding": "Codificação e conversão",

@@ -216,6 +216,12 @@
     "description": "完整的 BIP39 助記詞單字表參考，支援搜尋。標準英文 BIP39 單字表全部 2048 個單字，可按索引或子字串尋找。",
     "searchTerms": "bip39danzibiao bip39dzb zhujici cibiao"
   },
+  "cssunit": {
+    "title": "CSS 單位轉換器 - px 轉 rem、em、vw、vh",
+    "shortTitle": "CSS 單位轉換",
+    "description": "在 CSS 單位（px、rem、em、vw、vh）之間轉換，支援自訂基準值。批次轉換 CSS 程式碼，提供參考對照表。",
+    "searchTerms": "cssdanweizhuanhuanqi csdwzhq rem em xiangying"
+  },
   "categories": {
     "text": "文本處理",
     "encoding": "編碼轉換",

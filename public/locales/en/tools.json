@@ -45,6 +45,11 @@
     "shortTitle": "Storage Unit Conversion",
     "description": "Convert between bytes, KB, MB, GB, TB, PB and more. Supports both SI (decimal) and IEC (binary) standards."
   },
+  "cssunit": {
+    "title": "CSS Unit Converter - px to rem, em, vw, vh",
+    "shortTitle": "CSS Unit Converter",
+    "description": "Convert between CSS units (px, rem, em, vw, vh) with customizable base values. Batch convert CSS code and reference lookup table."
+  },
   "uuid": {
     "title": "UUID Generator - v4, v7 Random UUID",
     "shortTitle": "UUID Generator",

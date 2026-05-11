@@ -216,6 +216,12 @@
     "description": "検索機能付きの完全な BIP39 ニーモニックワードリスト。標準英語 BIP39 ワードリストの全 2048 語をインデックスまたは部分文字列で検索。",
     "searchTerms": "bip39wadorisuto bip39wdlst tango nemonikku"
   },
+  "cssunit": {
+    "title": "CSS 単位変換 - px ↔ rem, em, vw, vh",
+    "shortTitle": "CSS 単位変換",
+    "description": "CSS 単位（px、rem、em、vw、vh）を相互変換。ルートフォントサイズとビューポート寸法をカスタマイズ可能。CSS コードの一括変換と参照テーブル付き。",
+    "searchTerms": "css tanibengou rem em responsive"
+  },
   "categories": {
     "text": "テキスト処理",
     "encoding": "エンコード・変換",

@@ -216,6 +216,12 @@
     "description": "검색 기능이 있는 완전한 BIP39 니모닉 단어 목록 참조. 표준 영어 BIP39 단어 목록의 2048개 단어를 인덱스 또는 부분 문자열로 검색.",
     "searchTerms": "bip39daneomokrok bip39dnmr nimonik daneo"
   },
+  "cssunit": {
+    "title": "CSS 단위 변환기 - px ↔ rem, em, vw, vh",
+    "shortTitle": "CSS 단위 변환",
+    "description": "CSS 단위(px, rem, em, vw, vh) 간 변환. 루트 폰트 크기와 뷰포트 크기 설정 가능. CSS 코드 일괄 변환 및 참조 테이블 제공.",
+    "searchTerms": "cssdangwibyeonhwan cssdwbh rem em bandeunghyeong"
+  },
   "categories": {
     "text": "텍스트 처리",
     "encoding": "인코딩 & 변환",

@@ -45,6 +45,7 @@ const namespaces = [
   "wallet",
   "bip39",
   "jsonts",
+  "cssunit",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

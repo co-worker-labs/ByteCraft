@@ -10,6 +10,7 @@ import {
   FingerprintPattern,
   Regex,
   QrCode,
+  Ruler,
   GitCompare,
   Hash,
   KeyRound,
@@ -87,7 +88,17 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
   },
   {
     key: "encoding",
-    tools: ["base64", "urlencoder", "jsonts", "csv", "csv-md", "numbase", "yaml", "storageunit"],
+    tools: [
+      "base64",
+      "urlencoder",
+      "jsonts",
+      "csv",
+      "csv-md",
+      "numbase",
+      "yaml",
+      "storageunit",
+      "cssunit",
+    ],
   },
   {
     key: "security",
@@ -116,7 +127,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   password: ["jwt", "sshkey", "uuid", "hashing"],
   wallet: ["sshkey", "password", "hashing", "jwt", "bip39"],
   sshkey: ["password", "hashing", "jwt", "wallet"],
-  color: ["image", "numbase"],
+  color: ["image", "numbase", "cssunit"],
   cron: ["unixtime", "regex"],
   markdown: ["json", "diff", "htmlcode"],
   qrcode: ["uuid", "urlencoder", "password"],
@@ -128,7 +139,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   numbase: ["color", "storageunit", "ascii"],
   dbviewer: ["csv", "json", "yaml"],
   checksum: ["hashing", "cipher"],
-  storageunit: ["numbase", "checksum"],
+  storageunit: ["numbase", "checksum", "cssunit"],
   httpstatus: ["httpclient", "urlencoder"],
   yaml: ["json", "csv", "markdown", "jsonts"],
   jsonts: ["json", "csv", "yaml"],
@@ -140,6 +151,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   tokencounter: ["wordcounter", "regex", "textcase"],
   httpclient: ["httpstatus", "urlencoder", "json"],
   bip39: ["wallet", "password"],
+  cssunit: ["storageunit", "numbase", "color"],
 };
 
 const PALETTE_SIZE = 20;
@@ -310,6 +322,13 @@ export const TOOLS: ToolEntry[] = [
     sameAs: ["https://en.wikipedia.org/wiki/Checksum"],
   },
   { key: "storageunit", path: "/storageunit", icon: HardDrive, emoji: "💾", sameAs: [] },
+  {
+    key: "cssunit",
+    path: "/cssunit",
+    icon: Ruler,
+    emoji: "📐",
+    sameAs: ["https://www.w3.org/TR/css-values-4/"],
+  },
   {
     key: "httpstatus",
     path: "/httpstatus",

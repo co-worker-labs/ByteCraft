@@ -180,6 +180,11 @@
     "shortTitle": "BIP39-Wortliste",
     "description": "Vollständige Referenz der BIP39-mnemonischen Wortliste mit Suche. Alle 2048 Wörter der englischen Standardliste, durchsuchbar nach Index oder Teilzeichenfolge."
   },
+  "cssunit": {
+    "title": "CSS-Einheitenumrechner - px zu rem, em, vw, vh",
+    "shortTitle": "CSS-Einheitenumrechner",
+    "description": "Umrechnung zwischen CSS-Einheiten (px, rem, em, vw, vh) mit anpassbaren Basiswerten. Batch-Umrechnung von CSS-Code und Referenztabelle."
+  },
   "categories": {
     "text": "Textverarbeitung",
     "encoding": "Kodierung & Konvertierung",
