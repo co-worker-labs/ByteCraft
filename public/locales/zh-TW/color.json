@@ -26,7 +26,8 @@
     "cssVariable": "CSS 變數",
     "cssVariableName": "變數名稱",
     "tailwindClass": "Tailwind 類別",
-    "tailwindTheme": "Tailwind v4 @theme"
+    "tailwindTheme": "Tailwind v4 @theme",
+    "eyedropper": "從螢幕取色"
   },
   "palette": {
     "complementary": "互補色",

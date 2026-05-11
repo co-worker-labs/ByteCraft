@@ -26,7 +26,8 @@
     "cssVariable": "CSS-переменная",
     "cssVariableName": "Имя переменной",
     "tailwindClass": "Утилита Tailwind",
-    "tailwindTheme": "Tailwind v4 @theme"
+    "tailwindTheme": "Tailwind v4 @theme",
+    "eyedropper": "Выбрать цвет с экрана"
   },
   "palette": {
     "complementary": "Комплементарные",

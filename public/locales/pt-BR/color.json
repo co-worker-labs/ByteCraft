@@ -26,7 +26,8 @@
     "cssVariable": "Variável CSS",
     "cssVariableName": "Nome da variável",
     "tailwindClass": "Utilitário Tailwind",
-    "tailwindTheme": "Tailwind v4 @theme"
+    "tailwindTheme": "Tailwind v4 @theme",
+    "eyedropper": "Selecionar cor da tela"
   },
   "palette": {
     "complementary": "Complementar",

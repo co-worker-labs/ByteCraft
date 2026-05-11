@@ -26,7 +26,8 @@
     "cssVariable": "CSS変数",
     "cssVariableName": "変数名",
     "tailwindClass": "Tailwindユーティリティ",
-    "tailwindTheme": "Tailwind v4 @theme"
+    "tailwindTheme": "Tailwind v4 @theme",
+    "eyedropper": "画面から色を取得"
   },
   "palette": {
     "complementary": "補色",
