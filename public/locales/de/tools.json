@@ -185,6 +185,11 @@
     "shortTitle": "CSS-Einheitenumrechner",
     "description": "Umrechnung zwischen CSS-Einheiten (px, rem, em, vw, vh) mit anpassbaren Basiswerten. Batch-Umrechnung von CSS-Code und Referenztabelle."
   },
+  "subnet": {
+    "title": "IP-Subnetzrechner - IPv4/IPv6 CIDR und VLSM",
+    "shortTitle": "Subnetzrechner",
+    "description": "IPv4/IPv6-CIDR-Rechner mit Subnetz-Aufteiler und VLSM-Zuteiler. Berechnet Netzwerkadresse, Broadcast, Host-Bereich und Subnetzmaske — 100% clientseitig."
+  },
   "categories": {
     "text": "Textverarbeitung",
     "encoding": "Kodierung & Konvertierung",

@@ -1,0 +1,93 @@
+{
+  "cidr": {
+    "placeholder": "Insira IP/CIDR (ex. 192.168.1.0/24)",
+    "networkAddress": "Endereço de rede",
+    "broadcastAddress": "Endereço de broadcast",
+    "firstHost": "Primeiro host utilizável",
+    "lastHost": "Último host utilizável",
+    "usableHosts": "Hosts utilizáveis",
+    "totalHosts": "Total de endereços",
+    "subnetMask": "Máscara de sub-rede",
+    "cidrNotation": "Notação CIDR",
+    "ipClass": "Classe IP",
+    "addressType": "Tipo de endereço",
+    "binaryView": "Visualização binária",
+    "networkBits": "Bits de rede",
+    "hostBits": "Bits de host",
+    "expand": "Expandir",
+    "collapse": "Recolher"
+  },
+  "ipCheck": {
+    "title": "O IP pertence à sub-rede?",
+    "ip1": "Endereço IP 1",
+    "ip2": "Endereço IP 2",
+    "sameSubnet": "Mesma sub-rede",
+    "differentSubnet": "Sub-redes diferentes"
+  },
+  "split": {
+    "title": "Divisor de sub-redes",
+    "parentCidr": "Rede pai (CIDR)",
+    "splitBy": "Dividir por",
+    "bySubnetCount": "Número de sub-redes",
+    "byHostCount": "Hosts por sub-rede",
+    "subnetCount": "Número de sub-redes",
+    "hostCount": "Hosts por sub-rede",
+    "tooManyToVisualize": "Muitas sub-redes para exibição visual",
+    "tableHeaders": {
+      "index": "#",
+      "network": "Endereço de rede",
+      "broadcast": "Broadcast",
+      "hostRange": "Faixa de hosts",
+      "usableHosts": "Hosts utilizáveis",
+      "subnetMask": "Máscara de sub-rede",
+      "cidr": "CIDR"
+    }
+  },
+  "vlsm": {
+    "title": "Alocador VLSM",
+    "parentCidr": "Rede pai (CIDR)",
+    "subnetName": "Nome da sub-rede",
+    "requiredHosts": "Hosts necessários",
+    "addSubnet": "Adicionar sub-rede",
+    "freeSpace": "Espaço livre",
+    "deleteRow": "Excluir"
+  },
+  "addressType": {
+    "private": "Privado",
+    "public": "Público",
+    "loopback": "Loopback",
+    "linkLocal": "Link-Local",
+    "multicast": "Multicast",
+    "reserved": "Reservado"
+  },
+  "ipClass": {
+    "a": "Classe A",
+    "b": "Classe B",
+    "c": "Classe C",
+    "d": "Classe D (Multicast)",
+    "e": "Classe E (Reservado)"
+  },
+  "descriptions": {
+    "aeoDefinition": "A Calculadora de Sub-redes IP é uma ferramenta online gratuita para cálculo CIDR IPv4/IPv6, divisão de sub-redes e alocação VLSM. Calcula endereço de rede, broadcast, faixa de hosts e máscara de sub-rede inteiramente no seu navegador.",
+    "whatIsTitle": "O que é uma Calculadora de Sub-redes?",
+    "whatIs": "Uma calculadora de sub-redes computa as propriedades de rede a partir de uma entrada em notação CIDR. Ela determina o endereço de rede, endereço de broadcast, faixa de hosts utilizáveis e máscara de sub-rede para redes IPv4 e IPv6.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesDesc1": "Design de rede",
+    "useCasesP1": "Planeje a alocação de endereços IP para sub-redes, determine prefixos CIDR adequados para determinada quantidade de hosts e verifique configurações de sub-rede.",
+    "useCasesDesc2": "Planejamento VLSM",
+    "useCasesP2": "Aloque máscaras de sub-rede de comprimento variável para usar eficientemente o espaço de endereçamento quando diferentes sub-redes têm diferentes necessidades de hosts.",
+    "stepsTitle": "Como usar a Calculadora de Sub-redes",
+    "step1Title": "Insira um endereço CIDR",
+    "step1Text": "Digite um endereço IP com prefixo CIDR (ex. 192.168.1.0/24) para ver as propriedades da rede, incluindo broadcast, faixa de hosts e máscara de sub-rede.",
+    "step2Title": "Divida ou aloque sub-redes",
+    "step2Text": "Mude para a aba Divisor de sub-redes para dividir uma rede em sub-redes iguais, ou use o Alocador VLSM para alocação de comprimento variável.",
+    "step3Title": "Copie os resultados",
+    "step3Text": "Clique no botão de copiar ao lado de qualquer campo de resultado para copiá-lo para a área de transferência.",
+    "faq1Q": "Qual a diferença entre /24 e /16?",
+    "faq1A": "Uma rede /24 tem 256 endereços totais (254 hosts utilizáveis), enquanto uma rede /16 tem 65.536 endereços totais (65.534 hosts utilizáveis). O comprimento do prefixo determina quantos bits são usados para a porção de rede — menos bits de host significa menos endereços.",
+    "faq2Q": "Por que o IPv6 não tem endereço de broadcast?",
+    "faq2A": "O IPv6 eliminou o conceito de endereço de broadcast. Em vez disso, o IPv6 usa endereços multicast para comunicação um-para-muitos. O primeiro e o último endereço em uma sub-rede IPv6 são ambos utilizáveis (exceto em links ponto a ponto /127 conforme RFC 6164).",
+    "faq3Q": "O que é VLSM?",
+    "faq3A": "VLSM (Variable Length Subnet Masking) permite dividir uma rede em sub-redes de tamanhos diferentes. Isso é mais eficiente que o subnetting de comprimento fixo, pois cada sub-rede recebe apenas a quantidade de endereços necessária, reduzindo o desperdício de espaço de endereçamento."
+  }
+}

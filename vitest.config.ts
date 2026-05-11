@@ -23,6 +23,7 @@ export default defineConfig({
       "libs/wallet/**/*.test.ts",
       "libs/cssunit/**/*.test.ts",
       "libs/jsonts/**/*.test.ts",
+      "libs/subnet/**/*.test.ts",
       "libs/__tests__/*.test.ts",
       "utils/__tests__/*.test.{ts,tsx}",
       "hooks/**/*.test.ts",

@@ -52,12 +52,12 @@
     "faq2A": "Nein. Die Bildkomprimierung läuft vollständig in Ihrem Browser über die Canvas-API, daher gibt es kein serverseitiges Dateigrößenlimit. Sehr große Bilder können länger dauern."
   },
   "reference": {
-    "title": "Referenz- und Nachschlagetools – HTTP-Status, ASCII, HTML-Codes | OmniKit",
+    "title": "Referenz- und Nachschlagetools – HTTP-Status, ASCII, HTML-Codes, Subnetze | OmniKit",
     "shortTitle": "Referenz & Nachschlagewerk",
-    "description": "Kostenlose Online-Referenz- und Nachschlagetools für Entwickler. HTTP-Statuscodes, ASCII-Tabelle, HTML-Entitäten, SQLite-Viewer und HTTP-Client. Alle Tools laufen zu 100% in Ihrem Browser.",
-    "intro": "5 Referenz- und Nachschlagetools für schnelle Entwickler-Recherchen. HTTP-Statuscodes mit RFC-Referenzen durchsuchen, ASCII-Zeichencodes nachschlagen, HTML-Entitäten kodieren, SQLite-Datenbanken mit einem SQL-Editor erkunden und REST-APIs mit dem HTTP-Client testen. Alle Tools sind kostenlos und laufen vollständig in Ihrem Browser.",
+    "description": "Kostenlose Online-Referenz- und Nachschlagetools für Entwickler. HTTP-Statuscodes, ASCII-Tabelle, HTML-Entitäten, SQLite-Viewer, HTTP-Client und Subnetzrechner. Alle Tools laufen zu 100% in Ihrem Browser.",
+    "intro": "6 Referenz- und Nachschlagetools für schnelle Entwickler-Recherchen. HTTP-Statuscodes mit RFC-Referenzen durchsuchen, ASCII-Zeichencodes nachschlagen, HTML-Entitäten kodieren, SQLite-Datenbanken mit einem SQL-Editor erkunden, REST-APIs mit dem HTTP-Client testen und Subnetze mit dem IP-Subnetzrechner berechnen. Alle Tools sind kostenlos und laufen vollständig in Ihrem Browser.",
     "faq1Q": "Welche Referenztools bietet OmniKit?",
-    "faq1A": "OmniKit bietet 5 Referenztools: HTTP-Statuscodes-Referenz, HTTP-Client für API-Tests, SQLite-Datenbank-Viewer, ASCII-Tabelle und HTML-Entity-Kodierer.",
+    "faq1A": "OmniKit bietet 6 Referenztools: HTTP-Statuscodes-Referenz, HTTP-Client für API-Tests, SQLite-Datenbank-Viewer, ASCII-Tabelle, HTML-Entity-Kodierer und IP-Subnetzrechner.",
     "faq2Q": "Kann ich im DB-Viewer SQL-Abfragen ausführen?",
     "faq2A": "Ja. Der SQLite-Viewer unterstützt schreibgeschützte SQL-Abfragen mit Autovervollständigung, Abfrageverlauf, Paginierung und Export als CSV oder JSON — alles läuft lokal in Ihrem Browser über WebAssembly."
   }

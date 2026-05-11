@@ -185,6 +185,11 @@
     "shortTitle": "Conversor de unidades CSS",
     "description": "Convierte entre unidades CSS (px, rem, em, vw, vh) con valores base personalizables. Conversión por lotes de código CSS y tabla de referencia."
   },
+  "subnet": {
+    "title": "Calculadora de Subredes IP - IPv4/IPv6 CIDR y VLSM",
+    "shortTitle": "Calculadora de Subredes",
+    "description": "Calculadora CIDR IPv4/IPv6 con divisor de subredes y asignador VLSM. Calcula dirección de red, broadcast, rango de hosts y máscara de subred — 100% del lado del cliente."
+  },
   "categories": {
     "text": "Procesamiento de texto",
     "encoding": "Codificación y conversión",

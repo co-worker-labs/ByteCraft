@@ -185,6 +185,11 @@
     "shortTitle": "BIP39 Word List",
     "description": "Complete BIP39 mnemonic word list reference with search. All 2048 words in the standard English BIP39 word list, searchable by index or substring."
   },
+  "subnet": {
+    "title": "IP Subnet Calculator - IPv4/IPv6 CIDR & VLSM",
+    "shortTitle": "Subnet Calculator",
+    "description": "IPv4/IPv6 CIDR calculator with subnet splitter and VLSM allocator. Compute network address, broadcast, host range, and subnet mask — 100% client-side."
+  },
   "categories": {
     "text": "Text Processing",
     "encoding": "Encoding & Conversion",

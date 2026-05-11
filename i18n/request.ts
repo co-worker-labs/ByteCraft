@@ -46,6 +46,7 @@ const namespaces = [
   "bip39",
   "jsonts",
   "cssunit",
+  "subnet",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

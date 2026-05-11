@@ -222,6 +222,12 @@
     "description": "CSS 단위(px, rem, em, vw, vh) 간 변환. 루트 폰트 크기와 뷰포트 크기 설정 가능. CSS 코드 일괄 변환 및 참조 테이블 제공.",
     "searchTerms": "cssdangwibyeonhwan cssdwbh rem em bandeunghyeong"
   },
+  "subnet": {
+    "title": "IP 서브넷 계산기 - IPv4/IPv6 CIDR & VLSM",
+    "shortTitle": "서브넷 계산기",
+    "description": "IPv4/IPv6 CIDR 서브넷 계산기. 서브넷 분할 및 VLSM 할당 지원. 네트워크 주소, 브로드캐스트, 호스트 범위, 서브넷 마스크 계산 — 100% 클라이언트 처리.",
+    "searchTerms": "seobinetgyesangi sbnCIDR somak"
+  },
   "categories": {
     "text": "텍스트 처리",
     "encoding": "인코딩 & 변환",

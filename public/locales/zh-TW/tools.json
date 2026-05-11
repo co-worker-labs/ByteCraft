@@ -222,6 +222,12 @@
     "description": "在 CSS 單位（px、rem、em、vw、vh）之間轉換，支援自訂基準值。批次轉換 CSS 程式碼，提供參考對照表。",
     "searchTerms": "cssdanweizhuanhuanqi csdwzhq rem em xiangying"
   },
+  "subnet": {
+    "title": "IP 子網路計算器 - IPv4/IPv6 CIDR 與 VLSM",
+    "shortTitle": "子網路計算器",
+    "description": "IPv4/IPv6 CIDR 子網路計算器，支援子網路劃分和 VLSM 分配。計算網路位址、廣播位址、主機範圍和子網路遮罩——100% 瀏覽器端處理。",
+    "searchTerms": "ziwangjisuanqi zwjsq ziwang CIDR"
+  },
   "categories": {
     "text": "文本處理",
     "encoding": "編碼轉換",

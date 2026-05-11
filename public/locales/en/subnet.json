@@ -1,0 +1,93 @@
+{
+  "cidr": {
+    "placeholder": "Enter IP/CIDR (e.g. 192.168.1.0/24)",
+    "networkAddress": "Network Address",
+    "broadcastAddress": "Broadcast Address",
+    "firstHost": "First Usable Host",
+    "lastHost": "Last Usable Host",
+    "usableHosts": "Usable Hosts",
+    "totalHosts": "Total Addresses",
+    "subnetMask": "Subnet Mask",
+    "cidrNotation": "CIDR Notation",
+    "ipClass": "IP Class",
+    "addressType": "Address Type",
+    "binaryView": "Binary View",
+    "networkBits": "Network bits",
+    "hostBits": "Host bits",
+    "expand": "Expand",
+    "collapse": "Collapse"
+  },
+  "ipCheck": {
+    "title": "IP Belongs to Subnet?",
+    "ip1": "IP Address 1",
+    "ip2": "IP Address 2",
+    "sameSubnet": "Same Subnet",
+    "differentSubnet": "Different Subnet"
+  },
+  "split": {
+    "title": "Subnet Splitter",
+    "parentCidr": "Parent Network (CIDR)",
+    "splitBy": "Split By",
+    "bySubnetCount": "Number of Subnets",
+    "byHostCount": "Hosts per Subnet",
+    "subnetCount": "Number of Subnets",
+    "hostCount": "Hosts per Subnet",
+    "tooManyToVisualize": "Too many subnets for visual display",
+    "tableHeaders": {
+      "index": "#",
+      "network": "Network Address",
+      "broadcast": "Broadcast",
+      "hostRange": "Host Range",
+      "usableHosts": "Usable Hosts",
+      "subnetMask": "Subnet Mask",
+      "cidr": "CIDR"
+    }
+  },
+  "vlsm": {
+    "title": "VLSM Allocator",
+    "parentCidr": "Parent Network (CIDR)",
+    "subnetName": "Subnet Name",
+    "requiredHosts": "Required Hosts",
+    "addSubnet": "Add Subnet",
+    "freeSpace": "Free Space",
+    "deleteRow": "Delete"
+  },
+  "addressType": {
+    "private": "Private",
+    "public": "Public",
+    "loopback": "Loopback",
+    "linkLocal": "Link-Local",
+    "multicast": "Multicast",
+    "reserved": "Reserved"
+  },
+  "ipClass": {
+    "a": "Class A",
+    "b": "Class B",
+    "c": "Class C",
+    "d": "Class D (Multicast)",
+    "e": "Class E (Reserved)"
+  },
+  "descriptions": {
+    "aeoDefinition": "IP Subnet Calculator is a free online tool for IPv4/IPv6 CIDR calculation, subnet splitting, and VLSM allocation. Computes network address, broadcast, host range, and subnet mask entirely in your browser.",
+    "whatIsTitle": "What is a Subnet Calculator?",
+    "whatIs": "A subnet calculator computes network properties from a CIDR notation input. It determines the network address, broadcast address, usable host range, and subnet mask for both IPv4 and IPv6 networks.",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesDesc1": "Network Design",
+    "useCasesP1": "Plan IP address allocation for subnets, determine appropriate CIDR prefixes for given host counts, and verify subnet configurations.",
+    "useCasesDesc2": "VLSM Planning",
+    "useCasesP2": "Allocate variable-length subnet masks to efficiently use address space when different subnets have different host requirements.",
+    "stepsTitle": "How to Use the Subnet Calculator",
+    "step1Title": "Enter a CIDR address",
+    "step1Text": "Type an IP address with CIDR prefix (e.g. 192.168.1.0/24) to see network properties including broadcast, host range, and subnet mask.",
+    "step2Title": "Split or allocate subnets",
+    "step2Text": "Switch to the Subnet Splitter tab to divide a network into equal subnets, or use the VLSM Allocator for variable-length allocation.",
+    "step3Title": "Copy results",
+    "step3Text": "Click the copy button next to any result field to copy it to your clipboard.",
+    "faq1Q": "What is the difference between /24 and /16?",
+    "faq1A": "A /24 network has 256 total addresses (254 usable hosts), while a /16 network has 65,536 total addresses (65,534 usable hosts). The prefix length determines how many bits are used for the network portion — fewer host bits means fewer addresses.",
+    "faq2Q": "Why does IPv6 not have a broadcast address?",
+    "faq2A": "IPv6 eliminated the broadcast address concept. Instead, IPv6 uses multicast addresses for one-to-many communication. The first and last addresses in an IPv6 subnet are both usable (except on /127 point-to-point links per RFC 6164).",
+    "faq3Q": "What is VLSM?",
+    "faq3A": "Variable Length Subnet Masking (VLSM) allows dividing a network into subnets of different sizes. This is more efficient than fixed-length subnetting because each subnet gets only the number of addresses it needs, reducing wasted address space."
+  }
+}

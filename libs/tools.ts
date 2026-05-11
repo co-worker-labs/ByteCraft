@@ -37,6 +37,7 @@ import {
   Send,
   Wallet,
   BookOpen,
+  Network,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -108,7 +109,7 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
   { key: "visual", tools: ["color", "image"] },
   {
     key: "reference",
-    tools: ["httpstatus", "httpclient", "dbviewer", "ascii", "htmlcode", "bip39"],
+    tools: ["httpstatus", "httpclient", "dbviewer", "ascii", "htmlcode", "bip39", "subnet"],
   },
 ];
 
@@ -136,22 +137,23 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   csv: ["json", "yaml", "diff", "jsonts"],
   "csv-md": ["csv", "markdown", "json"],
   cipher: ["hashing", "base64", "password"],
-  numbase: ["color", "storageunit", "ascii"],
+  numbase: ["color", "storageunit", "ascii", "subnet"],
   dbviewer: ["csv", "json", "yaml"],
   checksum: ["hashing", "cipher"],
   storageunit: ["numbase", "checksum", "cssunit"],
-  httpstatus: ["httpclient", "urlencoder"],
+  httpstatus: ["httpclient", "urlencoder", "subnet"],
   yaml: ["json", "csv", "markdown", "jsonts"],
   jsonts: ["json", "csv", "yaml"],
   image: ["color", "qrcode", "checksum"],
   htmlcode: ["ascii", "httpstatus", "markdown"],
-  ascii: ["htmlcode", "numbase", "httpstatus"],
+  ascii: ["htmlcode", "numbase", "httpstatus", "subnet"],
   extractor: ["regex", "textcase", "deduplines"],
   wordcounter: ["textcase", "extractor", "deduplines", "tokencounter"],
   tokencounter: ["wordcounter", "regex", "textcase"],
   httpclient: ["httpstatus", "urlencoder", "json"],
   bip39: ["wallet", "password"],
   cssunit: ["storageunit", "numbase", "color"],
+  subnet: ["numbase", "httpstatus", "ascii"],
 };
 
 const PALETTE_SIZE = 20;
@@ -363,6 +365,17 @@ export const TOOLS: ToolEntry[] = [
     icon: BookOpen,
     emoji: "📖",
     sameAs: ["https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"],
+  },
+  {
+    key: "subnet",
+    path: "/subnet",
+    icon: Network,
+    emoji: "🧮",
+    sameAs: [
+      "https://datatracker.ietf.org/doc/html/rfc4632",
+      "https://datatracker.ietf.org/doc/html/rfc4291",
+      "https://en.wikipedia.org/wiki/Subnetwork",
+    ],
   },
 ];
 

@@ -1,0 +1,93 @@
+{
+  "cidr": {
+    "placeholder": "输入 IP/CIDR（例如 192.168.1.0/24）",
+    "networkAddress": "网络地址",
+    "broadcastAddress": "广播地址",
+    "firstHost": "第一个可用主机",
+    "lastHost": "最后一个可用主机",
+    "usableHosts": "可用主机数",
+    "totalHosts": "总地址数",
+    "subnetMask": "子网掩码",
+    "cidrNotation": "CIDR 表示法",
+    "ipClass": "IP 类别",
+    "addressType": "地址类型",
+    "binaryView": "二进制视图",
+    "networkBits": "网络位",
+    "hostBits": "主机位",
+    "expand": "展开",
+    "collapse": "收起"
+  },
+  "ipCheck": {
+    "title": "IP 是否属于同一子网？",
+    "ip1": "IP 地址 1",
+    "ip2": "IP 地址 2",
+    "sameSubnet": "同一子网",
+    "differentSubnet": "不同子网"
+  },
+  "split": {
+    "title": "子网划分",
+    "parentCidr": "父网络（CIDR）",
+    "splitBy": "划分方式",
+    "bySubnetCount": "按子网数量",
+    "byHostCount": "按每子网主机数",
+    "subnetCount": "子网数量",
+    "hostCount": "每子网主机数",
+    "tooManyToVisualize": "子网数量过多，无法可视化展示",
+    "tableHeaders": {
+      "index": "#",
+      "network": "网络地址",
+      "broadcast": "广播地址",
+      "hostRange": "主机范围",
+      "usableHosts": "可用主机数",
+      "subnetMask": "子网掩码",
+      "cidr": "CIDR"
+    }
+  },
+  "vlsm": {
+    "title": "VLSM 分配器",
+    "parentCidr": "父网络（CIDR）",
+    "subnetName": "子网名称",
+    "requiredHosts": "需要主机数",
+    "addSubnet": "添加子网",
+    "freeSpace": "剩余空间",
+    "deleteRow": "删除"
+  },
+  "addressType": {
+    "private": "私有",
+    "public": "公有",
+    "loopback": "环回",
+    "linkLocal": "链路本地",
+    "multicast": "组播",
+    "reserved": "保留"
+  },
+  "ipClass": {
+    "a": "A 类",
+    "b": "B 类",
+    "c": "C 类",
+    "d": "D 类（组播）",
+    "e": "E 类（保留）"
+  },
+  "descriptions": {
+    "aeoDefinition": "IP 子网计算器是一款免费的在线工具，用于 IPv4/IPv6 CIDR 计算、子网划分和 VLSM 分配。完全在浏览器中计算网络地址、广播地址、主机范围和子网掩码。",
+    "whatIsTitle": "什么是子网计算器？",
+    "whatIs": "子网计算器根据 CIDR 表示法输入计算网络属性。它可以确定 IPv4 和 IPv6 网络的网络地址、广播地址、可用主机范围和子网掩码。",
+    "useCasesTitle": "常见使用场景",
+    "useCasesDesc1": "网络规划",
+    "useCasesP1": "规划子网的 IP 地址分配，根据主机数量确定合适的 CIDR 前缀，验证子网配置。",
+    "useCasesDesc2": "VLSM 规划",
+    "useCasesP2": "当不同子网有不同主机需求时，使用可变长子网掩码高效利用地址空间。",
+    "stepsTitle": "如何使用子网计算器",
+    "step1Title": "输入 CIDR 地址",
+    "step1Text": "输入带 CIDR 前缀的 IP 地址（例如 192.168.1.0/24），查看包括广播地址、主机范围和子网掩码在内的网络属性。",
+    "step2Title": "划分或分配子网",
+    "step2Text": "切换到「子网划分」选项卡将网络等分为多个子网，或使用「VLSM 分配器」进行可变长分配。",
+    "step3Title": "复制结果",
+    "step3Text": "点击任意结果字段旁的复制按钮，即可将其复制到剪贴板。",
+    "faq1Q": "/24 和 /16 有什么区别？",
+    "faq1A": "/24 网络共有 256 个地址（254 个可用主机），/16 网络共有 65,536 个地址（65,534 个可用主机）。前缀长度决定了网络部分使用的位数——主机位越少，可用地址越少。",
+    "faq2Q": "为什么 IPv6 没有广播地址？",
+    "faq2A": "IPv6 取消了广播地址的概念，改用组播地址实现一对多通信。IPv6 子网中的第一个和最后一个地址都可以使用（根据 RFC 6164，/127 点对点链路除外）。",
+    "faq3Q": "什么是 VLSM？",
+    "faq3A": "可变长子网掩码（VLSM）允许将一个网络划分为大小不同的子网。这比固定长度子网划分更高效，因为每个子网只获得所需的地址数量，减少了地址浪费。"
+  }
+}
