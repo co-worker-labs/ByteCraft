@@ -27,71 +27,44 @@ function ConfigBar({
   onChange: (config: ConvertConfig) => void;
 }) {
   const t = useTranslations("cssunit");
-  return (
-    <div className="flex flex-wrap gap-3 items-end">
-      <div className="flex-1 min-w-[120px]">
-        <label className="block text-xs text-fg-muted font-mono mb-1">
-          {t("rootFontSize")} (px)
-        </label>
-        <StyledInput
-          type="number"
-          min={0}
-          value={config.rootFontSize}
-          onChange={(e) => onChange({ ...config, rootFontSize: Number(e.target.value) })}
-          className="font-mono text-center"
-        />
-      </div>
-      <div className="flex-1 min-w-[120px]">
-        <label className="block text-xs text-fg-muted font-mono mb-1">
-          {t("parentFontSize")} (px)
-        </label>
-        <StyledInput
-          type="number"
-          min={0}
-          value={config.parentFontSize}
-          onChange={(e) => onChange({ ...config, parentFontSize: Number(e.target.value) })}
-          className="font-mono text-center"
-        />
-      </div>
-      <div className="w-[100px]">
-        <label className="block text-xs text-fg-muted font-mono mb-1">{t("precision")}</label>
-        <StyledInput
-          type="number"
-          min={0}
-          max={10}
-          value={config.precision}
-          onChange={(e) => onChange({ ...config, precision: Number(e.target.value) })}
-          className="font-mono text-center"
-        />
-      </div>
-    </div>
-  );
-}
-
-function ViewportSection({
-  viewportW,
-  viewportH,
-  onChange,
-}: {
-  viewportW: number;
-  viewportH: number;
-  onChange: (w: number, h: number) => void;
-}) {
-  const t = useTranslations("cssunit");
   const activePreset = VIEWPORT_PRESETS.findIndex(
-    (p) => p.width === viewportW && p.height === viewportH
+    (p) => p.width === config.viewportW && p.height === config.viewportH
   );
 
   return (
-    <div className="mt-4 p-3 rounded-lg border border-border-default bg-bg-surface">
+    <div>
       <div className="flex flex-wrap gap-3 items-end">
+        <div className="flex-1 min-w-[120px]">
+          <label className="block text-xs text-fg-muted font-mono mb-1">
+            {t("rootFontSize")} (px)
+          </label>
+          <StyledInput
+            type="number"
+            min={0}
+            value={config.rootFontSize}
+            onChange={(e) => onChange({ ...config, rootFontSize: Number(e.target.value) })}
+            className="font-mono text-center"
+          />
+        </div>
+        <div className="flex-1 min-w-[120px]">
+          <label className="block text-xs text-fg-muted font-mono mb-1">
+            {t("parentFontSize")} (px)
+          </label>
+          <StyledInput
+            type="number"
+            min={0}
+            value={config.parentFontSize}
+            onChange={(e) => onChange({ ...config, parentFontSize: Number(e.target.value) })}
+            className="font-mono text-center"
+          />
+        </div>
         <div className="flex-1 min-w-[100px]">
           <label className="block text-xs text-fg-muted font-mono mb-1">{t("width")} (px)</label>
           <StyledInput
             type="number"
             min={1}
-            value={viewportW}
-            onChange={(e) => onChange(Number(e.target.value), viewportH)}
+            value={config.viewportW}
+            onChange={(e) => onChange({ ...config, viewportW: Number(e.target.value) })}
             className="font-mono text-center"
           />
         </div>
@@ -101,8 +74,19 @@ function ViewportSection({
           <StyledInput
             type="number"
             min={1}
-            value={viewportH}
-            onChange={(e) => onChange(viewportW, Number(e.target.value))}
+            value={config.viewportH}
+            onChange={(e) => onChange({ ...config, viewportH: Number(e.target.value) })}
+            className="font-mono text-center"
+          />
+        </div>
+        <div className="w-[100px]">
+          <label className="block text-xs text-fg-muted font-mono mb-1">{t("precision")}</label>
+          <StyledInput
+            type="number"
+            min={0}
+            max={10}
+            value={config.precision}
+            onChange={(e) => onChange({ ...config, precision: Number(e.target.value) })}
             className="font-mono text-center"
           />
         </div>
@@ -112,7 +96,9 @@ function ViewportSection({
           <button
             key={i}
             type="button"
-            onClick={() => onChange(preset.width, preset.height)}
+            onClick={() =>
+              onChange({ ...config, viewportW: preset.width, viewportH: preset.height })
+            }
             className={
               "px-2.5 py-1 rounded-full text-xs font-mono transition-colors cursor-pointer " +
               (activePreset === i
@@ -404,10 +390,6 @@ export default function CssUnitPage() {
     precision: 4,
   });
 
-  const handleViewportChange = (w: number, h: number) => {
-    setConfig((prev) => ({ ...prev, viewportW: w, viewportH: h }));
-  };
-
   const title = t("cssunit.shortTitle");
 
   return (
@@ -418,11 +400,6 @@ export default function CssUnitPage() {
     >
       <div className="container mx-auto px-4 pt-3 pb-6">
         <ConfigBar config={config} onChange={setConfig} />
-        <ViewportSection
-          viewportW={config.viewportW}
-          viewportH={config.viewportH}
-          onChange={handleViewportChange}
-        />
 
         <div className="mt-6">
           <NeonTabs
