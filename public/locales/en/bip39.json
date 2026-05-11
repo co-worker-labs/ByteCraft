@@ -1,0 +1,18 @@
+{
+  "searchPlaceholder": "Search BIP39 words...",
+  "noResults": "No words found",
+  "descriptions": {
+    "text": "BIP39 (Bitcoin Improvement Proposal 39) defines a standard for creating mnemonic phrases — human-readable sequences of 12 to 24 words that encode a deterministic wallet seed. The English word list contains exactly 2048 words, chosen for distinctiveness: no two words share the first four letters, minimizing the risk of transcription errors. Each word maps to an 11-bit number, so a 12-word phrase encodes 132 bits (128 bits of entropy + 4-bit checksum). Use the search bar below to look up any BIP39 word by index or substring.",
+    "aeoDefinition": "BIP39 Word List is a free online reference for the complete BIP39 mnemonic word list with search. All 2048 words in the standard English BIP39 word list, searchable by index or substring. Runs entirely in your browser.",
+    "whatIsTitle": "What is BIP39?",
+    "whatIs": "BIP39 is a Bitcoin Improvement Proposal that defines how to represent a random seed as a list of human-readable words. This makes it easier to back up and recover cryptocurrency wallets by writing down a sequence of words instead of a long hexadecimal string.",
+    "purposeTitle": "Purpose of the Word List",
+    "purpose": "The BIP39 word list is designed so that no two words share the same first four characters (when typed). This means you only need to type the first four letters for any word to be uniquely identified, reducing errors when entering recovery phrases.",
+    "securityTitle": "Security Notes",
+    "security": "The word list itself is public and not secret. Security comes from the random selection and ordering of words in your mnemonic phrase. Never share your mnemonic phrase with anyone, and store it offline in a secure location.",
+    "faq1Q": "How many words are in the BIP39 list?",
+    "faq1A": "The BIP39 English word list contains exactly 2048 words. Each word encodes 11 bits of data, so a 12-word mnemonic phrase represents 132 bits (128 bits of entropy + 4-bit checksum), and a 24-word phrase represents 264 bits.",
+    "faq2Q": "Can I use BIP39 words in any language?",
+    "faq2A": "BIP39 supports multiple languages including English, Japanese, Korean, Spanish, Chinese (Simplified and Traditional), French, Italian, Portuguese, and Czech. However, English is the most widely used and recommended for compatibility."
+  }
+}

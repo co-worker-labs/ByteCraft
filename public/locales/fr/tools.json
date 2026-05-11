@@ -165,6 +165,16 @@
     "shortTitle": "Client HTTP",
     "description": "Envoyez des requêtes HTTP et testez les APIs REST directement dans votre navigateur. Prend en charge GET, POST, PUT, DELETE avec en-têtes, corps et authentification. Gratuit, aucune donnée envoyée aux serveurs."
   },
+  "wallet": {
+    "title": "Générateur de Portefeuille HD - Phrase Mnémonique BIP39 et Dérivation Multichaîne",
+    "shortTitle": "Portefeuille HD",
+    "description": "Générez des phrases mnémoniques BIP39 et dérivez des adresses de cryptomonnaies pour EVM, Bitcoin, Solana, Tron et Cosmos. Outil gratuit 100% dans le navigateur."
+  },
+  "bip39": {
+    "title": "Liste de mots BIP39 - Référence complète des mnémoniques",
+    "shortTitle": "Liste BIP39",
+    "description": "Référence complète de la liste de mots mnémoniques BIP39 avec recherche. Les 2048 mots standards en anglais, recherchables par index ou sous-chaîne."
+  },
   "categories": {
     "text": "Traitement de texte",
     "encoding": "Encodage et conversion",

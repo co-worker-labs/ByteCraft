@@ -33,6 +33,8 @@ import {
   AlignLeft,
   Terminal,
   Send,
+  Wallet,
+  BookOpen,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -84,10 +86,16 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
     key: "encoding",
     tools: ["base64", "urlencoder", "csv", "csv-md", "numbase", "yaml", "storageunit"],
   },
-  { key: "security", tools: ["jwt", "hashing", "password", "sshkey", "cipher", "checksum"] },
+  {
+    key: "security",
+    tools: ["jwt", "hashing", "password", "sshkey", "wallet", "cipher", "checksum"],
+  },
   { key: "generators", tools: ["uuid", "cron", "unixtime", "qrcode"] },
   { key: "visual", tools: ["color", "image"] },
-  { key: "reference", tools: ["httpstatus", "httpclient", "dbviewer", "ascii", "htmlcode"] },
+  {
+    key: "reference",
+    tools: ["httpstatus", "httpclient", "dbviewer", "ascii", "htmlcode", "bip39"],
+  },
 ];
 
 export const QUICK_ACCESS_DEFAULT: string[] = ["json", "base64", "jwt", "regex", "diff", "hashing"];
@@ -103,7 +111,8 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   unixtime: ["cron", "uuid"],
   diff: ["json", "regex", "csv"],
   password: ["jwt", "sshkey", "uuid", "hashing"],
-  sshkey: ["password", "hashing", "jwt"],
+  wallet: ["sshkey", "password", "hashing", "jwt", "bip39"],
+  sshkey: ["password", "hashing", "jwt", "wallet"],
   color: ["image", "numbase"],
   cron: ["unixtime", "regex"],
   markdown: ["json", "diff", "htmlcode"],
@@ -126,6 +135,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   wordcounter: ["textcase", "extractor", "deduplines", "tokencounter"],
   tokencounter: ["wordcounter", "regex", "textcase"],
   httpclient: ["httpstatus", "urlencoder", "json"],
+  bip39: ["wallet", "password"],
 };
 
 const PALETTE_SIZE = 20;
@@ -178,6 +188,8 @@ export const TOOLS: ToolEntry[] = [
   { key: "wordcounter", path: "/wordcounter", icon: AlignLeft },
   { key: "httpclient", path: "/httpclient", icon: Send },
   { key: "tokencounter", path: "/token-counter", icon: Hash },
+  { key: "wallet", path: "/wallet", icon: Wallet },
+  { key: "bip39", path: "/bip39", icon: BookOpen },
 ] as const;
 
 export const TOOL_PATHS = new Set(TOOLS.map((t) => t.path));

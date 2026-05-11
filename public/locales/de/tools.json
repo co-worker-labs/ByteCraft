@@ -165,6 +165,16 @@
     "shortTitle": "HTTP-Client",
     "description": "Senden Sie HTTP-Anfragen und testen Sie REST-APIs direkt im Browser. Unterstützt GET, POST, PUT, DELETE mit Headern, Body und Authentifizierung. Kostenlos, keine Daten an Server gesendet."
   },
+  "wallet": {
+    "title": "HD-Wallet-Generator - BIP39 Mnemonische Phrase & Multichain-Adressableitung",
+    "shortTitle": "HD-Wallet",
+    "description": "Generieren Sie BIP39-mnemonische Phrasen und leiten Sie Kryptowährungsadressen für EVM, Bitcoin, Solana, Tron und Cosmos ab. Kostenloses Online-Tool, 100% im Browser."
+  },
+  "bip39": {
+    "title": "BIP39-Wortliste - Vollständige mnemonische Wortreferenz",
+    "shortTitle": "BIP39-Wortliste",
+    "description": "Vollständige Referenz der BIP39-mnemonischen Wortliste mit Suche. Alle 2048 Wörter der englischen Standardliste, durchsuchbar nach Index oder Teilzeichenfolge."
+  },
   "categories": {
     "text": "Textverarbeitung",
     "encoding": "Kodierung & Konvertierung",

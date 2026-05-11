@@ -198,6 +198,18 @@
     "description": "ブラウザで直接 HTTP リクエストを送信し、REST API をテスト。GET、POST、PUT、DELETE に対応。ヘッダー、ボディ、認証を設定可能。無料、データはサーバーに送信されません。",
     "searchTerms": "httpkuraianto hk rest api"
   },
+  "wallet": {
+    "title": "HD ウォレットジェネレーター - BIP39 ニーモニック & マルチチェーンアドレス導出",
+    "shortTitle": "HD ウォレット",
+    "description": "BIP39 ニーモニックを生成し、EVM、Bitcoin、Solana、Tron、Cosmos チェーンの暗号通貨アドレスを導出。無料のオンライン HD ウォレットツール。100% ブラウザ内処理。",
+    "searchTerms": "hdworetto nemunikku paishutsu"
+  },
+  "bip39": {
+    "title": "BIP39 ワードリスト - ニーモニック単語リファレンス",
+    "shortTitle": "BIP39 ワードリスト",
+    "description": "検索機能付きの完全な BIP39 ニーモニックワードリスト。標準英語 BIP39 ワードリストの全 2048 語をインデックスまたは部分文字列で検索。",
+    "searchTerms": "bip39wadorisuto bip39wdlst tango nemonikku"
+  },
   "categories": {
     "text": "テキスト処理",
     "encoding": "エンコード・変換",

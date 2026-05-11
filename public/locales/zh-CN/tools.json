@@ -198,6 +198,18 @@
     "description": "在浏览器中直接发送 HTTP 请求，测试 REST API。支持 GET、POST、PUT、DELETE，可配置请求头、请求体和认证。免费，数据不上传服务器。",
     "searchTerms": "httpkehuduan hkt rest api"
   },
+  "wallet": {
+    "title": "HD 钱包生成器 - BIP39 助记词 & 多链地址派生",
+    "shortTitle": "HD 钱包",
+    "description": "生成 BIP39 助记词，为 EVM、Bitcoin、Solana、Tron、Cosmos 等多链派生加密货币地址。免费在线 HD 钱包工具，100% 浏览器端处理。",
+    "searchTerms": "hdaobaoqiandai hdbqzhujici paisheng"
+  },
+  "bip39": {
+    "title": "BIP39 单词表 - 完整助记词参考",
+    "shortTitle": "BIP39 单词表",
+    "description": "完整的 BIP39 助记词单词表参考，支持搜索。标准英文 BIP39 单词表全部 2048 个单词，可按索引或子字符串查找。",
+    "searchTerms": "bip39dancibiao bip39dcb zhujici zhuci cibiao"
+  },
   "categories": {
     "text": "文本处理",
     "encoding": "编码转换",

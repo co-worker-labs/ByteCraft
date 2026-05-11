@@ -165,6 +165,16 @@
     "shortTitle": "HTTP Client",
     "description": "Send HTTP requests and test REST APIs directly in your browser. Supports GET, POST, PUT, DELETE with headers, body, and auth."
   },
+  "wallet": {
+    "title": "HD Wallet Generator - BIP39 Mnemonic & Multi-Chain Address Derivation",
+    "shortTitle": "HD Wallet",
+    "description": "Generate BIP39 mnemonic phrases and derive cryptocurrency addresses for EVM, Bitcoin, Solana, Tron, and Cosmos chains. Free online HD wallet tool — 100% client-side."
+  },
+  "bip39": {
+    "title": "BIP39 Word List - Complete Mnemonic Word Reference",
+    "shortTitle": "BIP39 Word List",
+    "description": "Complete BIP39 mnemonic word list reference with search. All 2048 words in the standard English BIP39 word list, searchable by index or substring."
+  },
   "categories": {
     "text": "Text Processing",
     "encoding": "Encoding & Conversion",

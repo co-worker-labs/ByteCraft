@@ -1,0 +1,61 @@
+{
+  "viewWordList": "檢視完整 BIP39 單字表 →",
+  "mnemonicLabel": "助記詞",
+  "mnemonicPlaceholder": "輸入 BIP39 助記詞（12/15/18/21/24 個英文單字）",
+  "generate": "產生",
+  "wordCount12": "12 個單字",
+  "wordCount24": "24 個單字",
+  "passphraseToggle": "密碼短語（BIP39）",
+  "passphrasePlaceholder": "選用密碼短語（第 25 個詞）",
+  "validation": {
+    "invalidLength": "助記詞長度無效（必須是 12、15、18、21 或 24 個單字）",
+    "invalidWords": "以下位置存在無效單字：{positions}",
+    "invalidChecksum": "校驗和不正確"
+  },
+  "pathEditor": {
+    "label": "衍生路徑",
+    "purpose": "用途",
+    "coinType": "幣種類型",
+    "account": "帳戶",
+    "change": "找零",
+    "addressCount": "地址數量",
+    "allHardenedWarning": "ed25519 鏈要求所有路徑段都必須為強化衍生"
+  },
+  "chainSelection": {
+    "label": "選擇鏈",
+    "groupSecp256k1": "secp256k1",
+    "groupEd25519": "ed25519"
+  },
+  "results": {
+    "index": "#",
+    "address": "地址",
+    "publicKey": "公鑰",
+    "privateKey": "私鑰",
+    "show": "顯示",
+    "hide": "隱藏",
+    "copy": "複製",
+    "pathUsed": "使用路徑",
+    "expand": "展開",
+    "collapse": "收合",
+    "noMnemonic": "輸入或產生助記詞以衍生地址"
+  },
+  "descriptions": {
+    "aeoDefinition": "HD 錢包產生器是一款免費的線上工具，用於產生 BIP39 助記詞並在多條區塊鏈上衍生加密貨幣地址。支援 EVM、Bitcoin、Solana、Tron 和 Cosmos 生態。所有運算完全在瀏覽器端進行，不會向任何伺服器傳送資料。",
+    "whatIsTitle": "什麼是 HD 錢包？",
+    "whatIs": "HD（分層確定性）錢包使用樹狀結構從單一主種子產生所有私鑰。這意味著你只需備份一個助記詞即可還原所有衍生路徑下的所有地址。",
+    "bip39Title": "BIP39 助記詞",
+    "bip39": "BIP39 定義了如何將隨機種子表示為人類可讀的單字列表（12 或 24 個單字）。助記詞是錢包的備份——請安全儲存，切勿分享。",
+    "bip32Title": "BIP32 HD 金鑰衍生",
+    "bip32": "BIP32 規定了如何從主種子衍生金鑰對樹。樹中的每個節點透過衍生路徑定址，如 m/44'/60'/0'/0/0。",
+    "bip44Title": "BIP44 多帳戶",
+    "bip44": "BIP44 定義了標準路徑結構：m / purpose' / coin_type' / account' / change / address_index。每條區塊鏈都有註冊的 coin_type（例如以太坊為 60，比特幣為 0）。",
+    "securityTitle": "安全提示",
+    "security": "本工具僅供教育和開發用途。請勿在瀏覽器產生的助記詞中儲存真實資金。正式環境請使用硬體錢包。",
+    "faq1Q": "什麼是 BIP39 密碼短語？",
+    "faq1A": "BIP39 密碼短語也被稱為「第 25 個詞」，是為助記詞增加額外安全性的可選項。相同的助記詞搭配不同的密碼短語會產生完全不同的錢包。如果使用了密碼短語，還原錢包時必須記住它。",
+    "faq2Q": "為什麼 Solana 路徑要求所有段都是強化衍生？",
+    "faq2A": "Solana 透過 SLIP-0010 使用 ed25519 曲線，該標準僅支援強化衍生。ed25519 金鑰無法進行非強化衍生，因此所有路徑段必須包含 '（強化）後綴。",
+    "faq3Q": "比特幣 Legacy、SegWit 和 Taproot 地址有什麼區別？",
+    "faq3A": "Legacy（P2PKH，以 1 開頭）是最初的格式。SegWit（P2WPKH，以 bc1q 開頭）使用 Bech32 編碼，手續費更低。Taproot（P2TR，以 bc1p 開頭）是最新的格式，提供更強的隱私和智慧合約功能。"
+  }
+}
