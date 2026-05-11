@@ -44,6 +44,7 @@ const namespaces = [
   "token-counter",
   "wallet",
   "bip39",
+  "jsonts",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {
