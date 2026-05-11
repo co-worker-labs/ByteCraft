@@ -204,6 +204,12 @@
     "description": "BIP39 ニーモニックを生成し、EVM、Bitcoin、Solana、Tron、Cosmos チェーンの暗号通貨アドレスを導出。無料のオンライン HD ウォレットツール。100% ブラウザ内処理。",
     "searchTerms": "hdworetto nemunikku paishutsu"
   },
+  "bip39": {
+    "title": "BIP39 ワードリスト - ニーモニック単語リファレンス",
+    "shortTitle": "BIP39 ワードリスト",
+    "description": "検索機能付きの完全な BIP39 ニーモニックワードリスト。標準英語 BIP39 ワードリストの全 2048 語をインデックスまたは部分文字列で検索。",
+    "searchTerms": "bip39wadorisuto bip39wdlst tango nemonikku"
+  },
   "categories": {
     "text": "テキスト処理",
     "encoding": "エンコード・変換",

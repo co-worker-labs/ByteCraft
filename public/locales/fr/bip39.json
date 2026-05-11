@@ -1,0 +1,18 @@
+{
+  "searchPlaceholder": "Rechercher des mots BIP39...",
+  "noResults": "Aucun mot trouvé",
+  "descriptions": {
+    "text": "BIP39 (Proposition d'Amélioration Bitcoin 39) définit une norme pour créer des phrases mnémoniques — des séquences de 12 à 24 mots lisibles par l'humain qui codent une graine de portefeuille déterministe. La liste de mots anglais contient exactement 2048 mots, choisis pour leur caractère distinctif : aucune paire de mots ne partage les quatre mêmes premières lettres, minimisant le risque d'erreurs de transcription. Chaque mot correspond à un nombre de 11 bits, donc une phrase de 12 mots code 132 bits (128 bits d'entropie + 4 bits de somme de contrôle). Utilisez la barre de recherche pour trouver n'importe quel mot BIP39 par index ou sous-chaîne.",
+    "aeoDefinition": "Liste de mots BIP39 est une référence en ligne gratuite de la liste complète des mots mnémoniques BIP39 avec recherche. Les 2048 mots de la liste standard anglaise, recherchables par index ou sous-chaîne. Fonctionne entièrement dans votre navigateur.",
+    "whatIsTitle": "Qu'est-ce que BIP39 ?",
+    "whatIs": "BIP39 est une Proposition d'Amélioration Bitcoin qui définit comment représenter une graine aléatoire sous forme de liste de mots lisibles par l'humain. Cela facilite la sauvegarde et la restauration de portefeuilles de cryptomonnaies en notant une séquence de mots au lieu d'une longue chaîne hexadécimale.",
+    "purposeTitle": "Objectif de la liste de mots",
+    "purpose": "La liste de mots BIP39 est conçue pour qu'aucune paire de mots ne partage les mêmes quatre premiers caractères. Cela signifie qu'il suffit de taper les quatre premières lettres pour identifier de manière unique n'importe quel mot, réduisant les erreurs lors de la saisie des phrases de récupération.",
+    "securityTitle": "Notes de sécurité",
+    "security": "La liste de mots elle-même est publique et n'est pas secrète. La sécurité provient de la sélection aléatoire et de l'ordre des mots dans votre phrase mnémonique. Ne partagez jamais votre phrase mnémonique avec qui que ce soit et stockez-la hors ligne dans un endroit sûr.",
+    "faq1Q": "Combien de mots contient la liste BIP39 ?",
+    "faq1A": "La liste de mots BIP39 en anglais contient exactement 2048 mots. Chaque mot code 11 bits de données, donc une phrase mnémonique de 12 mots représente 132 bits (128 bits d'entropie + 4 bits de somme de contrôle) et une de 24 mots représente 264 bits.",
+    "faq2Q": "Puis-je utiliser des mots BIP39 dans d'autres langues ?",
+    "faq2A": "BIP39 prend en charge plusieurs langues dont l'anglais, le japonais, le coréen, l'espagnol, le chinois (simplifié et traditionnel), le français, l'italien, le portugais et le tchèque. Cependant, l'anglais est le plus largement utilisé et recommandé pour la compatibilité."
+  }
+}

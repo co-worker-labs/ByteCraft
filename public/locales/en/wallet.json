@@ -56,5 +56,6 @@
     "faq2A": "Solana uses the ed25519 curve via SLIP-0010, which only supports hardened derivation. Non-hardened derivation is not possible with ed25519 keys, so all path segments must include the ' (hardened) suffix.",
     "faq3Q": "What is the difference between Legacy, SegWit, and Taproot Bitcoin addresses?",
     "faq3A": "Legacy (P2PKH, starts with 1) is the original format. SegWit (P2WPKH, starts with bc1q) uses Bech32 encoding for lower fees. Taproot (P2TR, starts with bc1p) is the newest format with enhanced privacy and smart contract capabilities."
-  }
+  },
+  "viewWordList": "View complete BIP39 word list →"
 }

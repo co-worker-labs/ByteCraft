@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useRef } from "react";
 import Layout from "../../../components/layout";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 import { NeonTabs } from "../../../components/ui/tabs";
 import { Accordion } from "../../../components/ui/accordion";
 import { Button } from "../../../components/ui/button";
@@ -450,6 +451,7 @@ export default function WalletPage() {
 function Description() {
   const t = useTranslations("wallet");
   const tc = useTranslations("common");
+  const locale = useLocale();
 
   const descriptionSections = [
     { title: t("descriptions.whatIsTitle"), content: t("descriptions.whatIs") },
@@ -481,6 +483,14 @@ function Description() {
           </div>
         </div>
       ))}
+      <div className="mb-4">
+        <Link
+          href={locale === "en" ? "/bip39" : `/${locale}/bip39`}
+          className="text-sm text-accent-cyan hover:text-accent-cyan/80 transition-colors"
+        >
+          {t("viewWordList")}
+        </Link>
+      </div>
       <div className="mt-8">
         <div className="flex items-center gap-2 mb-4">
           <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />

@@ -1,0 +1,18 @@
+{
+  "searchPlaceholder": "Buscar palabras BIP39...",
+  "noResults": "No se encontraron palabras",
+  "descriptions": {
+    "text": "BIP39 (Propuesta de Mejora de Bitcoin 39) define un estándar para crear frases mnemotécnicas: secuencias de 12 a 24 palabras legibles por humanos que codifican una semilla de billetera determinista. La lista de palabras en inglés contiene exactamente 2048 palabras, elegidas por su distintividad: ninguna pareja de palabras comparte las primeras cuatro letras, minimizando el riesgo de errores de transcripción. Cada palabra se mapea a un número de 11 bits, por lo que una frase de 12 palabras codifica 132 bits (128 bits de entropía + 4 bits de checksum). Use la barra de búsqueda para buscar cualquier palabra BIP39 por índice o subcadena.",
+    "aeoDefinition": "Lista de palabras BIP39 es una referencia en línea gratuita de la lista completa de palabras mnemotécnicas BIP39 con búsqueda. Las 2048 palabras de la lista estándar en inglés, con búsqueda por índice o subcadena. Se ejecuta completamente en su navegador.",
+    "whatIsTitle": "¿Qué es BIP39?",
+    "whatIs": "BIP39 es una Propuesta de Mejora de Bitcoin que define cómo representar una semilla aleatoria como una lista de palabras legibles por humanos. Esto facilita hacer copias de seguridad y recuperar billeteras de criptomonedas escribiendo una secuencia de palabras en lugar de una larga cadena hexadecimal.",
+    "purposeTitle": "Propósito de la lista de palabras",
+    "purpose": "La lista de palabras BIP39 está diseñada para que ninguna pareja de palabras comparta los mismos primeros cuatro caracteres. Esto significa que solo necesita escribir las primeras cuatro letras para identificar de forma única cualquier palabra, reduciendo errores al ingresar frases de recuperación.",
+    "securityTitle": "Notas de seguridad",
+    "security": "La lista de palabras en sí es pública y no es secreta. La seguridad proviene de la selección aleatoria y el orden de las palabras en su frase mnemotécnica. Nunca comparta su frase mnemotécnica con nadie y guárdela offline en un lugar seguro.",
+    "faq1Q": "¿Cuántas palabras hay en la lista BIP39?",
+    "faq1A": "La lista de palabras BIP39 en inglés contiene exactamente 2048 palabras. Cada palabra codifica 11 bits de datos, por lo que una frase mnemotécnica de 12 palabras representa 132 bits (128 bits de entropía + 4 bits de checksum) y una de 24 palabras representa 264 bits.",
+    "faq2Q": "¿Puedo usar palabras BIP39 en otros idiomas?",
+    "faq2A": "BIP39 soporta múltiples idiomas incluyendo inglés, japonés, coreano, español, chino (simplificado y tradicional), francés, italiano, portugués y checo. Sin embargo, el inglés es el más utilizado y recomendado por compatibilidad."
+  }
+}

@@ -1,4 +1,5 @@
 {
+  "viewWordList": "查看完整 BIP39 单词表 →",
   "mnemonicLabel": "助记词",
   "mnemonicPlaceholder": "输入 BIP39 助记词（12/15/18/21/24 个英文单词）",
   "generate": "生成",

@@ -1,4 +1,5 @@
 {
+  "viewWordList": "完全な BIP39 ワードリストを見る →",
   "mnemonicLabel": "ニーモニックフレーズ",
   "mnemonicPlaceholder": "BIP39 ニーモニックを入力（12/15/18/21/24 語）",
   "generate": "生成",

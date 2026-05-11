@@ -43,6 +43,7 @@ const namespaces = [
   "httpclient",
   "token-counter",
   "wallet",
+  "bip39",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

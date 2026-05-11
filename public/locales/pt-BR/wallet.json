@@ -1,4 +1,5 @@
 {
+  "viewWordList": "Ver lista completa de palavras BIP39 →",
   "mnemonicLabel": "Frase mnemônica",
   "mnemonicPlaceholder": "Insira sua frase mnemônica BIP39 (12/15/18/21/24 palavras)",
   "generate": "Gerar",

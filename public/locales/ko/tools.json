@@ -204,6 +204,12 @@
     "description": "BIP39 니모닉 구문을 생성하고 EVM, Bitcoin, Solana, Tron, Cosmos 체인의 암호화폐 주소를 파생합니다. 무료 온라인 HD 지갑 도구. 100% 브라우저 처리.",
     "searchTerms": "hdjibsaengseonggi nimonic paesaeng"
   },
+  "bip39": {
+    "title": "BIP39 단어 목록 - 니모닉 단어 참조",
+    "shortTitle": "BIP39 단어 목록",
+    "description": "검색 기능이 있는 완전한 BIP39 니모닉 단어 목록 참조. 표준 영어 BIP39 단어 목록의 2048개 단어를 인덱스 또는 부분 문자열로 검색.",
+    "searchTerms": "bip39daneomokrok bip39dnmr nimonik daneo"
+  },
   "categories": {
     "text": "텍스트 처리",
     "encoding": "인코딩 & 변환",

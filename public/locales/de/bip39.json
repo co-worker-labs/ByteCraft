@@ -1,0 +1,18 @@
+{
+  "searchPlaceholder": "BIP39-Wörter suchen...",
+  "noResults": "Keine Wörter gefunden",
+  "descriptions": {
+    "text": "BIP39 (Bitcoin Improvement Proposal 39) definiert einen Standard zur Erstellung von mnemonischen Phrasen — menschenlesbare Sequenzen aus 12 bis 24 Wörtern, die einen deterministischen Wallet-Seed kodieren. Die englische Wortliste enthält genau 2048 Wörter, die nach ihrer Eindeutigkeit ausgewählt wurden: Keine zwei Wörter teilen die gleichen ersten vier Buchstaben, was das Risiko von Übertragungsfehlern minimiert. Jedes Wort wird einer 11-Bit-Zahl zugeordnet, sodass eine 12-Wort-Phrase 132 Bits kodiert (128 Bits Entropie + 4 Bits Prüfsumme). Verwenden Sie die Suchleiste, um ein beliebiges BIP39-Wort nach Index oder Teilzeichenfolge zu suchen.",
+    "aeoDefinition": "BIP39-Wortliste ist eine kostenlose Online-Referenz für die vollständige BIP39-mnemonische Wortliste mit Suche. Alle 2048 Wörter der englischen Standardliste, durchsuchbar nach Index oder Teilzeichenfolge. Läuft vollständig in Ihrem Browser.",
+    "whatIsTitle": "Was ist BIP39?",
+    "whatIs": "BIP39 ist ein Bitcoin-Verbesserungsvorschlag, der definiert, wie ein zufälliger Seed als menschenlesbare Wortliste dargestellt wird. Dies erleichtert das Sichern und Wiederherstellen von Krypto-Wallets, indem man eine Wortsequenz anstelle einer langen hexadezimalen Zeichenfolge aufschreibt.",
+    "purposeTitle": "Zweck der Wortliste",
+    "purpose": "Die BIP39-Wortliste ist so konzipiert, dass keine zwei Wörter dieselben ersten vier Zeichen teilen. Das bedeutet, dass Sie nur die ersten vier Buchstaben eingeben müssen, um ein Wort eindeutig zu identifizieren, was Eingabefehler bei Wiederherstellungsphrasen reduziert.",
+    "securityTitle": "Sicherheitshinweise",
+    "security": "Die Wortliste selbst ist öffentlich und nicht geheim. Die Sicherheit ergibt sich aus der zufälligen Auswahl und Reihenfolge der Wörter in Ihrer mnemonischen Phrase. Teilen Sie Ihre mnemonische Phrase niemals mit jemandem und bewahren Sie sie offline an einem sicheren Ort auf.",
+    "faq1Q": "Wie viele Wörter enthält die BIP39-Liste?",
+    "faq1A": "Die englische BIP39-Wortliste enthält genau 2048 Wörter. Jedes Wort kodiert 11 Bits Daten, sodass eine 12-Wort-mnemonische Phrase 132 Bits (128 Bits Entropie + 4 Bits Prüfsumme) und eine 24-Wort-Phrase 264 Bits darstellt.",
+    "faq2Q": "Kann ich BIP39-Wörter in anderen Sprachen verwenden?",
+    "faq2A": "BIP39 unterstützt mehrere Sprachen, darunter Englisch, Japanisch, Koreanisch, Spanisch, Chinesisch (vereinfacht und traditionell), Französisch, Italienisch, Portugiesisch und Tschechisch. Englisch ist jedoch am weitesten verbreitet und wird aus Kompatibilitätsgründen empfohlen."
+  }
+}

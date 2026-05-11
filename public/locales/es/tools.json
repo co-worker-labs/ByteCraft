@@ -170,6 +170,11 @@
     "shortTitle": "Cartera HD",
     "description": "Genera frases mnemónicas BIP39 y deriva direcciones de criptomonedas para EVM, Bitcoin, Solana, Tron y Cosmos. Herramienta gratuita 100% en el navegador."
   },
+  "bip39": {
+    "title": "Lista de palabras BIP39 - Referencia completa de palabras mnemotécnicas",
+    "shortTitle": "Lista BIP39",
+    "description": "Referencia completa de la lista de palabras mnemotécnicas BIP39 con búsqueda. Las 2048 palabras estándar en inglés, con búsqueda por índice o subcadena."
+  },
   "categories": {
     "text": "Procesamiento de texto",
     "encoding": "Codificación y conversión",

@@ -204,6 +204,12 @@
     "description": "產生 BIP39 助記詞，為 EVM、Bitcoin、Solana、Tron、Cosmos 等多鏈衍生加密貨幣地址。免費線上 HD 錢包工具，100% 瀏覽器端處理。",
     "searchTerms": "hdaqianbaoshengchengqi hdqbzhujici paisheng"
   },
+  "bip39": {
+    "title": "BIP39 單字表 - 完整助記詞參考",
+    "shortTitle": "BIP39 單字表",
+    "description": "完整的 BIP39 助記詞單字表參考，支援搜尋。標準英文 BIP39 單字表全部 2048 個單字，可按索引或子字串尋找。",
+    "searchTerms": "bip39danzibiao bip39dzb zhujici cibiao"
+  },
   "categories": {
     "text": "文本處理",
     "encoding": "編碼轉換",
