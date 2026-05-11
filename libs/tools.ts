@@ -3,6 +3,7 @@ import type { useTranslations } from "next-intl";
 import {
   FileJson,
   FileCode,
+  FileCode2,
   FileBraces,
   ShieldCheck,
   Percent,
@@ -86,7 +87,7 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
   },
   {
     key: "encoding",
-    tools: ["base64", "urlencoder", "csv", "csv-md", "numbase", "yaml", "storageunit"],
+    tools: ["base64", "urlencoder", "jsonts", "csv", "csv-md", "numbase", "yaml", "storageunit"],
   },
   {
     key: "security",
@@ -103,7 +104,7 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
 export const QUICK_ACCESS_DEFAULT: string[] = ["json", "base64", "jwt", "regex", "diff", "hashing"];
 
 export const TOOL_RELATIONS: Record<string, string[]> = {
-  json: ["csv", "yaml", "diff", "regex"],
+  json: ["csv", "yaml", "diff", "regex", "jsonts"],
   base64: ["urlencoder", "hashing", "cipher"],
   jwt: ["base64", "hashing", "password"],
   regex: ["json", "textcase", "diff"],
@@ -121,7 +122,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   qrcode: ["uuid", "urlencoder", "password"],
   textcase: ["regex", "extractor", "wordcounter"],
   deduplines: ["extractor", "textcase", "wordcounter"],
-  csv: ["json", "yaml", "diff"],
+  csv: ["json", "yaml", "diff", "jsonts"],
   "csv-md": ["csv", "markdown", "json"],
   cipher: ["hashing", "base64", "password"],
   numbase: ["color", "storageunit", "ascii"],
@@ -129,7 +130,8 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   checksum: ["hashing", "cipher"],
   storageunit: ["numbase", "checksum"],
   httpstatus: ["httpclient", "urlencoder"],
-  yaml: ["json", "csv", "markdown"],
+  yaml: ["json", "csv", "markdown", "jsonts"],
+  jsonts: ["json", "csv", "yaml"],
   image: ["color", "qrcode", "checksum"],
   htmlcode: ["ascii", "httpstatus", "markdown"],
   ascii: ["htmlcode", "numbase", "httpstatus"],
@@ -163,6 +165,13 @@ export const TOOLS: ToolEntry[] = [
     icon: FileJson,
     emoji: "{}",
     sameAs: ["https://www.json.org", "https://datatracker.ietf.org/doc/html/rfc8259"],
+  },
+  {
+    key: "jsonts",
+    path: "/jsonts",
+    icon: FileCode2,
+    emoji: "🔷",
+    sameAs: ["https://www.typescriptlang.org/"],
   },
   {
     key: "base64",

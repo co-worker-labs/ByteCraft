@@ -90,6 +90,12 @@
     "description": "在线格式化、压缩和验证 JSON。支持自定义缩进美化输出、单行压缩和 JSON5 宽松解析。100% 浏览器端处理。",
     "searchTerms": "jsongeshihua jsgsh yanzheng yasuo"
   },
+  "jsonts": {
+    "title": "JSON 转 TypeScript - 生成接口和类型定义",
+    "shortTitle": "JSON 转 TypeScript",
+    "description": "将 JSON 或 JSON5 转换为 TypeScript 接口和类型定义。支持嵌套对象、联合类型、数组合并和 JSON5。100% 浏览器端处理。",
+    "searchTerms": "jsonzhuantypescript jsonzts leixing jiekou"
+  },
   "dbviewer": {
     "title": "SQLite 数据库查看器 - 浏览和查询 .db 文件",
     "shortTitle": "数据库查看器",

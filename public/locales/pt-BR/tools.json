@@ -75,6 +75,11 @@
     "shortTitle": "JSON Formatar / Comprimir",
     "description": "Formate, comprima e valide JSON online. Pretty-print com indentação configurável, minifique em linha única ou analise JSON5. 100% no navegador."
   },
+  "jsonts": {
+    "title": "JSON para TypeScript - Gerar Interfaces e Tipos a partir de JSON",
+    "shortTitle": "JSON → TypeScript",
+    "description": "Converta JSON ou JSON5 em interfaces e definições de tipos TypeScript. Suporta objetos aninhados, tipos união, mesclagem de arrays e JSON5. 100% no navegador."
+  },
   "dbviewer": {
     "title": "Visualizador SQLite - Navegue e Consulte Arquivos .db",
     "shortTitle": "DB Viewer",

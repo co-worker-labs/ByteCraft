@@ -1,0 +1,32 @@
+{
+  "jsonInput": "JSON 输入",
+  "tsOutput": "TypeScript 输出",
+  "jsonPlaceholder": "在此粘贴 JSON 或 JSON5…",
+  "tsPlaceholder": "TypeScript 输出将在此显示",
+  "rootName": "根类型名称",
+  "invalidJson": "无效 JSON",
+  "primitiveError": "请输入 JSON 对象或数组",
+  "interface": "interface",
+  "type": "type",
+  "addExport": "添加 export",
+  "descriptions": {
+    "aeoDefinition": "JSON 转 TypeScript 是一款免费的在线工具，可将 JSON 或 JSON5 即时转换为 TypeScript 接口和类型定义。支持嵌套对象、联合类型、数组合并和 JSON5。所有处理均在浏览器中完成。",
+    "whatIsTitle": "什么是 JSON 转 TypeScript？",
+    "whatIsP1": "JSON 转 TypeScript 将 JSON 数据转换为 TypeScript 接口和类型定义。粘贴任意 JSON（包括带注释和尾随逗号的 JSON5），即可获得可直接使用的 TypeScript 类型。嵌套对象会自动提取为独立的命名类型，对象数组会智能合并。",
+    "stepsTitle": "使用方法",
+    "step1Title": "粘贴 JSON",
+    "step1Text": "将 JSON 或 JSON5 数据粘贴到输入区域。工具会自动检测 JSON5 语法。",
+    "step2Title": "配置选项",
+    "step2Text": "设置根类型名称，选择 interface 或 type，开关 export 关键字。",
+    "step3Title": "复制 TypeScript 输出",
+    "step3Text": "TypeScript 定义即时生成。点击复制即可在项目中使用。",
+    "useCasesP1": "从 API 响应生成 TypeScript 类型。为 JSON 配置文件创建类型定义。将 JSON 数据转换为 TypeScript 以实现静态类型检查。从 mock 数据构建类型安全的数据层。",
+    "limitationsP1": "工具基于单个 JSON 样本生成类型，除非提供对象数组，否则无法推断可选字段与必填字段。联合类型仅基于观察到的值。不支持循环引用。",
+    "faq1Q": "支持 JSON5 吗？",
+    "faq1A": "支持。当标准 JSON 解析失败时，工具会自动回退到 JSON5 解析。你可以粘贴带单引号、尾随逗号、注释和无引号键的 JSON。",
+    "faq2Q": "嵌套对象如何处理？",
+    "faq2A": "嵌套对象会自动提取为独立的命名类型。例如，包含对象的 'user' 属性会创建 'User' 接口。类型按依赖顺序排列，被引用的类型出现在引用它的类型之前。",
+    "faq3Q": "可以导出类型吗？",
+    "faq3A": "可以。切换「添加 export」开关可为每个生成的类型添加 export 关键字。你还可以在 interface 和 type alias 语法之间选择。"
+  }
+}

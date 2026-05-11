@@ -1,0 +1,32 @@
+{
+  "jsonInput": "JSON 入力",
+  "tsOutput": "TypeScript 出力",
+  "jsonPlaceholder": "JSON または JSON5 を貼り付けてください…",
+  "tsPlaceholder": "TypeScript の出力がここに表示されます",
+  "rootName": "ルート型名",
+  "invalidJson": "無効な JSON",
+  "primitiveError": "JSON オブジェクトまたは配列を入力してください",
+  "interface": "interface",
+  "type": "type",
+  "addExport": "export を追加",
+  "descriptions": {
+    "aeoDefinition": "JSON to TypeScript は、JSON または JSON5 を TypeScript のインターフェースと型定義に即座に変換する無料オンラインツールです。ネストされたオブジェクト、ユニオン型、配列のマージ、JSON5 に対応。データはサーバーに送信されません。",
+    "whatIsTitle": "JSON to TypeScript とは？",
+    "whatIsP1": "JSON to TypeScript は JSON データを TypeScript のインターフェースと型定義に変換します。コメントや末尾カンマを含む JSON5 を貼り付けるだけで、すぐに使える TypeScript の型が得られます。ネストされたオブジェクトは自動的に別の名前付き型として抽出され、オブジェクトの配列はインテリジェントにマージされます。",
+    "stepsTitle": "使い方",
+    "step1Title": "JSON を貼り付け",
+    "step1Text": "JSON または JSON5 データを入力エリアに貼り付けます。JSON5 構文は自動検出されます。",
+    "step2Title": "オプションを設定",
+    "step2Text": "ルート型名を設定し、interface または type を選択し、export キーワードを切り替えます。",
+    "step3Title": "TypeScript 出力をコピー",
+    "step3Text": "TypeScript 定義が即座に生成されます。コピーをクリックしてプロジェクトで使用してください。",
+    "useCasesP1": "API レスポンスから TypeScript の型を生成。JSON 設定ファイルの型定義を作成。JSON データを TypeScript に変換して静的型付けを実現。モックデータから型安全なデータレイヤーを構築。",
+    "limitationsP1": "単一の JSON サンプルから型を生成するため、オブジェクトの配列が提供されない限り、オプショナルフィールドと必須フィールドを推測できません。ユニオン型は観測された値のみに基づきます。循環参照には対応していません。",
+    "faq1Q": "JSON5 に対応していますか？",
+    "faq1A": "はい。標準の JSON パースに失敗すると、自動的に JSON5 パースにフォールバックします。シングルクォート、末尾カンマ、コメント、クォートなしのキーを含む JSON を貼り付けることができます。",
+    "faq2Q": "ネストされたオブジェクトはどうなりますか？",
+    "faq2A": "ネストされたオブジェクトは自動的に別の名前付き型として抽出されます。例えば、オブジェクトを含む 'user' プロパティは 'User' インターフェースを作成します。型は参照される型が参照する型の前にくるよう並べられます。",
+    "faq3Q": "型をエクスポートできますか？",
+    "faq3A": "はい。「export を追加」スイッチを切り替えて、生成された各型に export キーワードを追加できます。また、interface と type alias 構文のどちらかを選択できます。"
+  }
+}

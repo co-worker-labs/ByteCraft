@@ -90,6 +90,12 @@
     "description": "JSON을 온라인에서 포맷, 압축, 검증합니다. 설정 가능한 들여쓰기로 예쁘게 인쇄, 한 줄로 최소화, JSON5 파싱. 100% 클라이언트 처리.",
     "searchTerms": "jsonpomaeteu jspm yasuo meihwa"
   },
+  "jsonts": {
+    "title": "JSON → TypeScript - 인터페이스 및 타입 정의 생성",
+    "shortTitle": "JSON → TypeScript",
+    "description": "JSON 또는 JSON5를 TypeScript 인터페이스와 타입 정의로 변환합니다. 중첩 객체, 유니온 타입, 배열 병합, JSON5를 지원합니다. 100% 브라우저 처리.",
+    "searchTerms": "jsontotypescript jtts taipu inteopeiseeu"
+  },
   "dbviewer": {
     "title": "SQLite 뷰어 - .db 파일 찾아보기 & 쿼리",
     "shortTitle": "DB 뷰어",

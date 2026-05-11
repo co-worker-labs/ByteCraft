@@ -1,0 +1,32 @@
+{
+  "jsonInput": "JSON 입력",
+  "tsOutput": "TypeScript 출력",
+  "jsonPlaceholder": "JSON 또는 JSON5를 여기에 붙여넣으세요…",
+  "tsPlaceholder": "TypeScript 출력이 여기에 표시됩니다",
+  "rootName": "루트 타입 이름",
+  "invalidJson": "잘못된 JSON",
+  "primitiveError": "JSON 객체 또는 배열을 입력하세요",
+  "interface": "interface",
+  "type": "type",
+  "addExport": "export 추가",
+  "descriptions": {
+    "aeoDefinition": "JSON to TypeScript는 JSON 또는 JSON5를 TypeScript 인터페이스와 타입 정의로 즉시 변환하는 무료 온라인 도구입니다. 중첩 객체, 유니온 타입, 배열 병합, JSON5를 지원합니다. 데이터는 서버로 전송되지 않습니다.",
+    "whatIsTitle": "JSON to TypeScript란?",
+    "whatIsP1": "JSON to TypeScript는 JSON 데이터를 TypeScript 인터페이스와 타입 정의로 변환합니다. 주석과 후행 쉼표가 포함된 JSON5를 포함하여 모든 JSON을 붙여넣으면 바로 사용할 수 있는 TypeScript 타입을 얻을 수 있습니다. 중첩 객체는 자동으로 별도의 명명된 타입으로 추출되며, 객체 배열은 지능적으로 병합됩니다.",
+    "stepsTitle": "사용 방법",
+    "step1Title": "JSON 붙여넣기",
+    "step1Text": "JSON 또는 JSON5 데이터를 입력 영역에 붙여넣습니다. JSON5 구문은 자동으로 감지됩니다.",
+    "step2Title": "옵션 설정",
+    "step2Text": "루트 타입 이름을 설정하고, interface 또는 type을 선택하고, export 키워드를 전환합니다.",
+    "step3Title": "TypeScript 출력 복사",
+    "step3Text": "TypeScript 정의가 즉시 생성됩니다. 복사를 클릭하여 프로젝트에서 사용하세요.",
+    "useCasesP1": "API 응답에서 TypeScript 타입 생성. JSON 설정 파일의 타입 정의 작성. JSON 데이터를 TypeScript로 변환하여 정적 타입 검사 구현. 모의 데이터에서 타입 안전한 데이터 레이어 구축.",
+    "limitationsP1": "이 도구는 단일 JSON 샘플에서 타입을 생성하므로, 객체 배열이 제공되지 않으면 선택 필드와 필수 필드를 추론할 수 없습니다. 유니온 타입은 관찰된 값만 기반으로 합니다. 순환 참조는 지원되지 않습니다.",
+    "faq1Q": "JSON5를 지원하나요?",
+    "faq1A": "네. 표준 JSON 파싱이 실패하면 자동으로 JSON5 파싱으로 대체됩니다. 작은따옴표, 후행 쉼표, 주석, 따옴표 없는 키가 포함된 JSON을 붙여넣을 수 있습니다.",
+    "faq2Q": "중첩 객체는 어떻게 처리되나요?",
+    "faq2A": "중첩 객체는 자동으로 별도의 명명된 타입으로 추출됩니다. 예를 들어, 객체를 포함하는 'user' 속성은 'User' 인터페이스를 생성합니다. 타입은 참조되는 타입이 참조하는 타입 앞에 오도록 정렬됩니다.",
+    "faq3Q": "타입을 내보낼 수 있나요?",
+    "faq3A": "네. 'export 추가' 스위치를 전환하여 생성된 각 타입에 export 키워드를 추가할 수 있습니다. 또한 interface와 type alias 구문 중에서 선택할 수 있습니다."
+  }
+}

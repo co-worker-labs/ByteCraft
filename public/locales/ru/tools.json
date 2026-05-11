@@ -90,6 +90,11 @@
     "description": "Форматирование, сжатие и валидация JSON онлайн. Pretty-print с настраиваемыми отступами, минификация в одну строку или парсинг JSON5. 100% в браузере.",
     "searchTerms": "jsonformatirovanie jsonformat json"
   },
+  "jsonts": {
+    "title": "JSON в TypeScript - Генерация интерфейсов и типов из JSON",
+    "shortTitle": "JSON → TypeScript",
+    "description": "Конвертируйте JSON или JSON5 в интерфейсы и определения типов TypeScript. Поддерживает вложенные объекты, типы объединения, слияние массивов и JSON5. 100% в браузере."
+  },
   "dbviewer": {
     "title": "SQLite Viewer — Просмотр и запросы к .db файлам",
     "shortTitle": "DB Viewer",

@@ -75,6 +75,11 @@
     "shortTitle": "JSON Format / Compress",
     "description": "Format, compress, and validate JSON. Pretty-print with configurable indentation, minify to single line, or parse JSON5."
   },
+  "jsonts": {
+    "title": "JSON to TypeScript - Generate Interfaces & Types from JSON",
+    "shortTitle": "JSON / TypeScript",
+    "description": "Convert JSON or JSON5 to TypeScript interfaces and type definitions. Supports nested objects, union types, array merging, and JSON5."
+  },
   "dbviewer": {
     "title": "SQLite Viewer - Browse & Query .db Files",
     "shortTitle": "DB Viewer",

@@ -1,0 +1,32 @@
+{
+  "jsonInput": "JSON-Eingabe",
+  "tsOutput": "TypeScript-Ausgabe",
+  "jsonPlaceholder": "JSON oder JSON5 hier einfügen…",
+  "tsPlaceholder": "TypeScript-Ausgabe wird hier angezeigt",
+  "rootName": "Root-Name",
+  "invalidJson": "Ungültiges JSON",
+  "primitiveError": "Bitte ein JSON-Objekt oder Array eingeben",
+  "interface": "interface",
+  "type": "type",
+  "addExport": "Export hinzufügen",
+  "descriptions": {
+    "aeoDefinition": "JSON zu TypeScript ist ein kostenloses Online-Tool, das JSON oder JSON5 sofort in TypeScript-Interfaces und Typdefinitionen umwandelt. Unterstützt verschachtelte Objekte, Union-Typen, Array-Zusammenführung und JSON5. Keine Daten werden an Server gesendet.",
+    "whatIsTitle": "Was ist JSON zu TypeScript?",
+    "whatIsP1": "JSON zu TypeScript konvertiert JSON-Daten in TypeScript-Interfaces und Typdefinitionen. Fügen Sie beliebige JSON-Daten ein — einschließlich JSON5 mit Kommentaren und abschließenden Kommas — und erhalten Sie sofort verwendbare TypeScript-Typen. Verschachtelte Objekte werden automatisch als separate benannte Typen extrahiert, und Objekt-Arrays werden intelligent zusammengeführt.",
+    "stepsTitle": "Verwendung",
+    "step1Title": "JSON einfügen",
+    "step1Text": "JSON- oder JSON5-Daten in den Eingabebereich einfügen. Das Tool erkennt JSON5-Syntax automatisch.",
+    "step2Title": "Optionen konfigurieren",
+    "step2Text": "Root-Typnamen festlegen, zwischen interface und type alias wählen und das export-Schlüsselwort umschalten.",
+    "step3Title": "TypeScript-Ausgabe kopieren",
+    "step3Text": "Die TypeScript-Definitionen erscheinen sofort. Auf Kopieren klicken, um sie im Projekt zu verwenden.",
+    "useCasesP1": "TypeScript-Typen aus API-Antworten generieren. Typdefinitionen für JSON-Konfigurationsdateien erstellen. JSON-Daten für statische Typisierung in TypeScript konvertieren. Typsichere Datenschichten aus Mock-Daten aufbauen.",
+    "limitationsP1": "Das Tool generiert Typen aus einer einzelnen JSON-Stichprobe — es kann optionale und Pflichtfelder nur ableiten, wenn ein Objekt-Array bereitgestellt wird. Union-Typen basieren nur auf beobachteten Werten. Zirkelverweise werden nicht unterstützt.",
+    "faq1Q": "Wird JSON5 unterstützt?",
+    "faq1A": "Ja. Das Tool greift automatisch auf JSON5-Parsing zurück, wenn das Standard-JSON-Parsing fehlschlägt. Sie können JSON mit einfachen Anführungszeichen, abschließenden Kommas, Kommentaren und Schlüsseln ohne Anführungszeichen einfügen.",
+    "faq2Q": "Was passiert mit verschachtelten Objekten?",
+    "faq2A": "Verschachtelte Objekte werden automatisch als separate benannte Typen extrahiert. Beispielsweise erstellt eine 'user'-Eigenschaft mit einem Objekt ein 'User'-Interface. Typen werden so angeordnet, dass referenzierte Typen vor den Typen erscheinen, die sie verwenden.",
+    "faq3Q": "Kann ich die Typen exportieren?",
+    "faq3A": "Ja. Schalten Sie den Schalter 'Export hinzufügen' um, um jedem generierten Typ das export-Schlüsselwort hinzuzufügen. Sie können auch zwischen Interface- und Type-Alias-Syntax wählen."
+  }
+}

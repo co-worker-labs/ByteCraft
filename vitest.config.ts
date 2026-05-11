@@ -21,6 +21,7 @@ export default defineConfig({
       "libs/sshkey/**/*.test.ts",
       "libs/httpclient/**/*.test.ts",
       "libs/wallet/**/*.test.ts",
+      "libs/jsonts/**/*.test.ts",
       "libs/__tests__/*.test.ts",
       "utils/__tests__/*.test.{ts,tsx}",
       "hooks/**/*.test.ts",

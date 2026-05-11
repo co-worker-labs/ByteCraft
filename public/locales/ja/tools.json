@@ -90,6 +90,12 @@
     "description": "JSONをオンラインで整形、圧縮、検証。インデント設定可能な整形、1行圧縮、JSON5パースに対応。100%ブラウザ上で処理。",
     "searchTerms": "JSONseikei assyuku bari-de-to"
   },
+  "jsonts": {
+    "title": "JSON → TypeScript - インターフェースと型定義を生成",
+    "shortTitle": "JSON → TypeScript",
+    "description": "JSON または JSON5 を TypeScript のインターフェースと型定義に変換。ネストされたオブジェクト、ユニオン型、配列のマージ、JSON5 に対応。100%ブラウザ処理。",
+    "searchTerms": "jsontotypescript jtts kata taipu"
+  },
   "dbviewer": {
     "title": "SQLiteビューアー - .dbファイルの閲覧・クエリ",
     "shortTitle": "DBビューアー",

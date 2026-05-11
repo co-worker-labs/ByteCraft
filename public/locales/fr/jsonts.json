@@ -1,0 +1,32 @@
+{
+  "jsonInput": "Entrée JSON",
+  "tsOutput": "Sortie TypeScript",
+  "jsonPlaceholder": "Collez du JSON ou JSON5 ici…",
+  "tsPlaceholder": "La sortie TypeScript apparaîtra ici",
+  "rootName": "Nom racine",
+  "invalidJson": "JSON invalide",
+  "primitiveError": "Veuillez entrer un objet ou un tableau JSON",
+  "interface": "interface",
+  "type": "type",
+  "addExport": "Ajouter export",
+  "descriptions": {
+    "aeoDefinition": "JSON vers TypeScript est un outil en ligne gratuit qui convertit du JSON ou JSON5 en interfaces et définitions de types TypeScript instantanément dans votre navigateur. Supporte les objets imbriqués, les types union, la fusion de tableaux et JSON5. Aucune donnée n'est envoyée à un serveur.",
+    "whatIsTitle": "Qu'est-ce que JSON vers TypeScript ?",
+    "whatIsP1": "JSON vers TypeScript convertit des données JSON en interfaces et définitions de types TypeScript. Collez n'importe quel JSON — y compris du JSON5 avec des commentaires et des virgules finales — et obtenez des types TypeScript prêts à l'emploi. Les objets imbriqués sont automatiquement extraits en types nommés séparés, et les tableaux d'objets sont fusionnés intelligemment.",
+    "stepsTitle": "Comment utiliser",
+    "step1Title": "Collez votre JSON",
+    "step1Text": "Collez des données JSON ou JSON5 dans la zone de saisie. L'outil détecte automatiquement la syntaxe JSON5.",
+    "step2Title": "Configurez les options",
+    "step2Text": "Définissez le nom du type racine, choisissez entre interface et type alias, et activez ou désactivez le mot-clé export.",
+    "step3Title": "Copiez la sortie TypeScript",
+    "step3Text": "Les définitions TypeScript apparaissent instantanément. Cliquez sur copier pour les utiliser dans votre projet.",
+    "useCasesP1": "Générer des types TypeScript à partir de réponses d'API. Créer des définitions de types pour des fichiers de configuration JSON. Convertir des données JSON en TypeScript pour un typage statique. Construire des couches de données type-safe à partir de données mock.",
+    "limitationsP1": "L'outil génère des types à partir d'un seul échantillon JSON — il ne peut pas déduire les champs optionnels vs obligatoires sauf si un tableau d'objets est fourni. Les types union sont basés uniquement sur les valeurs observées. Les références circulaires ne sont pas supportées.",
+    "faq1Q": "Supporte-t-il le JSON5 ?",
+    "faq1A": "Oui. L'outil passe automatiquement à l'analyse JSON5 lorsque l'analyse JSON standard échoue. Vous pouvez coller du JSON avec des guillemets simples, des virgules finales, des commentaires et des clés sans guillemets.",
+    "faq2Q": "Qu'en est-il des objets imbriqués ?",
+    "faq2A": "Les objets imbriqués sont automatiquement extraits en types nommés séparés. Par exemple, une propriété 'user' contenant un objet créera une interface 'User'. Les types sont ordonnés de sorte que les types référencés apparaissent avant ceux qui les utilisent.",
+    "faq3Q": "Puis-je exporter les types ?",
+    "faq3A": "Oui. Activez l'interrupteur 'Ajouter export' pour ajouter le mot-clé export à chaque type généré. Vous pouvez également choisir entre la syntaxe interface et type alias."
+  }
+}
