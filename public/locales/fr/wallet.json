@@ -42,7 +42,7 @@
   "descriptions": {
     "aeoDefinition": "Le générateur de portefeuille HD est un outil gratuit pour générer des phrases mnémoniques BIP39 et dériver des adresses de cryptomonnaies sur plusieurs blockchains. Compatible EVM, Bitcoin, Solana, Tron et Cosmos. Tout le traitement est effectué dans votre navigateur.",
     "whatIsTitle": "Qu'est-ce qu'un portefeuille HD ?",
-    "whatIs": "Un portefeuille HD (Hiérarchique Déterministe) génère toutes les clés privées à partir d'une seule graine maîtresse en utilisant une structure arborescente. Vous n'avez besoin de sauvegarder qu'une seule phrase mnémonique pour récupérer toutes les adresses.",
+    "whatIs": "Un portefeuille HD (Hiérarchique Déterministe) génère toutes les clés privées à partir d'une seule graine maîtresse en utilisant une structure arborescente. Vous n'avez besoin de sauvegarder qu'une seule phrase mnémonique pour récupérer toutes les adresses across tous les chemins dérivés.",
     "bip39Title": "Phrase mnémonique BIP39",
     "bip39": "BIP39 définit comment représenter une graine aléatoire sous forme de liste de mots lisibles (12 ou 24 mots). La phrase mnémonique est la sauvegarde de votre portefeuille. Conservez-la en sécurité et ne la partagez jamais.",
     "bip32Title": "Dérivation de clés BIP32",
@@ -56,6 +56,18 @@
     "faq2Q": "Pourquoi les chemins Solana exigent-ils tous les segments endurcis ?",
     "faq2A": "Solana utilise la courbe ed25519 via SLIP-0010, qui ne prend en charge que la dérivation endurcie. La dérivation non endurcie n'est pas possible avec les clés ed25519.",
     "faq3Q": "Quelle est la différence entre les adresses Bitcoin Legacy, SegWit et Taproot ?",
-    "faq3A": "Legacy (P2PKH, commence par 1) est le format original. SegWit (P2WPKH, bc1q) utilise l'encodage Bech32 avec des frais plus bas. Taproot (P2TR, bc1p) est le format le plus récent avec une confidentialité améliorée."
+    "faq3A": "Legacy (P2PKH, commence par 1) est le format original. SegWit (P2WPKH, bc1q) utilise l'encodage Bech32 avec des frais plus bas. Taproot (P2TR, bc1p) est le format le plus récent avec une confidentialité améliorée.",
+    "stepsTitle": "Comment générer un portefeuille HD",
+    "step1Title": "Générer ou entrer une mnémonique",
+    "step1Text": "Cliquez sur Générer pour créer une nouvelle mnémonique BIP39 de 12 ou 24 mots, ou collez-en une existante.",
+    "step2Title": "Sélectionner les chaînes et chemins",
+    "step2Text": "Choisissez les blockchains pour lesquelles dériver des adresses. Personnalisez le chemin de dérivation si nécessaire.",
+    "step3Title": "Voir les adresses dérivées",
+    "step3Text": "L'outil affiche l'adresse, la clé publique et la clé privée pour chaque index d'adresse dérivé.",
+    "useCasesDesc1": "Développement et test",
+    "useCasesP1": "Générez des portefeuilles de test pour le développement de contrats intelligents sans exposer de fonds réels.",
+    "useCasesDesc2": "Comprendre les portefeuilles HD",
+    "useCasesP2": "Apprenez comment fonctionne la dérivation de clés BIP32/BIP39/BIP44 en expérimentant avec différents chemins et chaînes.",
+    "useCasesTitle": "Cas d'utilisation courants"
   }
 }

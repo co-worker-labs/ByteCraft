@@ -35,6 +35,13 @@
     "faq2A": "Tres modos: Componente (codifica todos los caracteres reservados), URL completa (preserva la estructura URL como ://, ?, &) y Formulario (el espacio se convierte en + en vez de %20).",
     "faq3Q": "¿Cuándo debo usar codificación URL?",
     "faq3A": "Usa codificación URL al pasar datos en parámetros de consulta, incrustar URLs en HTML o manejar caracteres especiales en llamadas API.",
-    "aeoDefinition": "El Codificador/Decodificador de URL es una herramienta gratuita online para codificar y decodificar cadenas URL. Soporta modos de codificación Component, Whole URL y Form. Se ejecuta completamente en tu navegador — no se envían datos a ningún servidor."
+    "aeoDefinition": "El Codificador/Decodificador de URL es una herramienta gratuita online para codificar y decodificar cadenas URL. Soporta modos de codificación Component, Whole URL y Form. Se ejecuta completamente en tu navegador — no se envían datos a ningún servidor.",
+    "stepsTitle": "Cómo codificar o decodificar URLs",
+    "step1Title": "Introduce tu texto",
+    "step1Text": "Pega la URL o texto que quieres codificar, o pega una cadena codificada en porcentaje para decodificar.",
+    "step2Title": "Elige un modo",
+    "step2Text": "Selecciona Componente, URL completa o Formulario según lo que estés codificando. La herramienta convierte en tiempo real.",
+    "step3Title": "Copia el resultado",
+    "step3Text": "La salida codificada o decodificada se actualiza al instante. Haz clic en el botón de copiar para obtener el resultado."
   }
 }

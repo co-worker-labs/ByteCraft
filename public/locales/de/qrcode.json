@@ -89,6 +89,23 @@
     "tipTest": "Testen Sie den generierten QR-Code immer mit einer echten Handykamera, bevor Sie ihn drucken oder weit verbreiten.",
     "aeoDefinition": "Der QR-Code-Generator ist ein kostenloses Online-Tool zum Erstellen von QR-Codes für Text, URLs, WiFi, vCard und mehr. Unterstützt benutzerdefinierte Farben, Logos und Punktstile mit SVG/PNG-Export. Es werden keine Daten an einen Server gesendet.",
     "faq1Q": "Was ist der QR-Code-Generator?",
-    "faq1A": "Ein anpassbarer QR-Code-Generator, der Text, URLs, WiFi-Zugangsdaten und vCards unterstützt. Logo hinzufügen, Farben ändern und als SVG oder PNG exportieren."
+    "faq1A": "Ein anpassbarer QR-Code-Generator, der Text, URLs, WiFi-Zugangsdaten und vCards unterstützt. Logo hinzufügen, Farben ändern und als SVG oder PNG exportieren.",
+    "faq2Q": "Sollte ich SVG- oder PNG-Export verwenden?",
+    "faq2A": "Verwenden Sie SVG für Druckmaterialien — es skaliert auf jede Größe ohne Pixilierung. PNG für digitale Anzeige, Social Media oder wenn Sie ein Rasterbild fester Auflösung benötigen. Der PNG-Export unterstützt bis zu 1024px für hochwertigen Druck.",
+    "faq3Q": "Kann ich ein Logo in meinen QR-Code einbetten?",
+    "faq3A": "Ja. Laden Sie ein Logo-Bild hoch und das Tool legt es zentriert darüber. Die Fehlerkorrektur wird automatisch auf H (30% Wiederherstellung) erhöht, um die Scanbarkeit zu erhalten. Halten Sie die Logogröße bei maximal 30% der QR-Code-Fläche für beste Ergebnisse.",
+    "step1Desc": "Wählen Sie Text/URL, WiFi, vCard, E-Mail, SMS oder WhatsApp je nach dem, was Sie kodieren möchten.",
+    "step1Title": "Inhaltstyp wählen",
+    "step2Desc": "Füllen Sie die erforderlichen Felder aus. Für URLs den vollständigen Link einfügen. Für WiFi Netzwerkname und Passwort eingeben.",
+    "step2Title": "Daten eingeben",
+    "step3Desc": "Farben, Punktstil und Fehlerkorrekturgrad anpassen und optional ein Logo hinzufügen. Höhere Fehlerkorrektur (Q oder H) wird bei Verwendung von Logos empfohlen.",
+    "step3Title": "Erscheinungsbild anpassen",
+    "stepsTitle": "QR-Code erstellen",
+    "useCasesP1": "Website-URL teilen — QR-Code auf Visitenkarte, Flyer oder Poster, damit Leute den Link sofort öffnen können.",
+    "useCasesP2": "WiFi-Netzwerk teilen — SSID, Passwort und Verschlüsselungstyp kodieren, damit Gäste durch Scannen verbinden können.",
+    "useCasesP3": "vCard-Kontaktaustausch — Name, Telefon, E-Mail und Organisation in einen scannbaren Code einbetten.",
+    "useCasesTitle": "Gängige Anwendungsfälle",
+    "whatIs": "QR (Quick Response) Codes sind zweidimensionale Barcodes, die Daten in einem Muster aus schwarzen und weißen Quadraten speichern. 1994 von Denso Wave erfunden, können sie URLs, Text, Kontaktinfos, WiFi-Zugangsdaten und mehr kodieren — scannen Sie sie mit jeder Smartphone-Kamera.",
+    "whatIsTitle": "Was ist ein QR-Code?"
   }
 }

@@ -3,11 +3,27 @@
   "pasteToCompare": "Paste to compare",
   "descriptions": {
     "aeoDefinition": "Hash Generator is a free online tool for generating MD5, SHA-1, SHA-256, SHA-512, SHA3, Keccak, and RIPEMD-160 hashes. Supports HMAC and file hashing. No data is sent to any server.",
+    "whatIsTitle": "What is Cryptographic Hashing?",
+    "whatIs": "Cryptographic hashing converts input data of any size into a fixed-size fingerprint called a hash. The same input always produces the same hash, but even a tiny change completely alters the output. Hashes are one-way — you cannot reverse a hash back to the original input. This tool generates hashes using MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3, Keccak, and RIPEMD-160.",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesDesc1": "Data Integrity Verification",
+    "useCasesP1": "Verify data integrity by comparing hashes of original and received data to detect any changes during transmission or storage.",
+    "useCasesDesc2": "Message Authentication",
+    "useCasesP2": "Generate HMAC signatures using a secret passphrase to authenticate message origin and integrity.",
+    "stepsTitle": "How to Generate a Hash",
+    "step1Title": "Enter your text",
+    "step1Text": "Paste or type the plain text you want to hash into the input field.",
+    "step2Title": "Select algorithms",
+    "step2Text": "Check the hash algorithms you need from the algorithm panel. Multiple algorithms can be selected simultaneously.",
+    "step3Title": "Copy the hash",
+    "step3Text": "The hash output is displayed instantly. Use the copy button or paste a hash to compare for verification.",
     "hmacTitle": "HMAC",
     "hmac": "Keyed-hash message authentication codes (HMAC) is a mechanism for message authentication using cryptographic hash functions.",
     "faq1Q": "What is cryptographic hashing?",
     "faq1A": "Cryptographic hashing converts input data into a fixed-size fingerprint (hash). The same input always produces the same hash, but even a tiny change completely alters the output.",
     "faq2Q": "Is hashing the same as encryption?",
-    "faq2A": "No. Hashing is one-way — you cannot reverse a hash back to the original input. Encryption is two-way. Hashing is used for verification, not confidentiality."
+    "faq2A": "No. Hashing is one-way — you cannot reverse a hash back to the original input. Encryption is two-way. Hashing is used for verification, not confidentiality.",
+    "faq3Q": "What is the difference between SHA-2 and SHA-3?",
+    "faq3A": "SHA-2 (SHA-256, SHA-512) uses the Merkle-Damgard construction, while SHA-3 uses the Keccak sponge construction. SHA-3 is not a replacement for SHA-2 — it is an alternative offering a different internal design. Both are considered secure."
   }
 }

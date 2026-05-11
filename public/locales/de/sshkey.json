@@ -39,6 +39,12 @@
     "faq3A": "Gehen Sie zu Settings → SSH and GPG keys → New SSH key. Geben Sie einen beschreibenden Titel ein, fügen Sie den vollständigen Inhalt Ihres öffentlichen Schlüssels ein (die gesamte Zeile beginnend mit ssh-ed25519 oder ssh-rsa) und klicken Sie auf Add SSH key. Alternativ können Sie die GitHub CLI verwenden: gh ssh-key add ~/.ssh/id_ed25519.pub.",
     "faq4Q": "Ist es sicher, SSH-Schlüssel im Browser zu generieren?",
     "faq4A": "Ja. Dieses Tool verwendet die Web Crypto API, die dieselben kryptografischen Primitiven wie OpenSSL und OpenSSH bietet. Die Schlüsselgenerierung erfolgt vollständig im Arbeitsspeicher des Browsers — es werden keine Daten an einen Server gesendet. Generierte Schlüssel gehen beim Schließen oder Neuladen der Seite verloren, also laden Sie sie herunter oder kopieren Sie sie vor dem Verlassen.",
-    "aeoDefinition": "Der SSH-Schlüssel-Generator ist ein kostenloses Online-Tool zum Erstellen von RSA- und Ed25519-SSH-Schlüsselpaaren vollständig in Ihrem Browser. Unterstützt Passwort-Verschlüsselung und Fingerabdruck-Anzeige. Es werden keine Daten an einen Server gesendet."
+    "aeoDefinition": "Der SSH-Schlüssel-Generator ist ein kostenloses Online-Tool zum Erstellen von RSA- und Ed25519-SSH-Schlüsselpaaren vollständig in Ihrem Browser. Unterstützt Passwort-Verschlüsselung und Fingerabdruck-Anzeige. Es werden keine Daten an einen Server gesendet.",
+    "useCasesP1": "Authentifizierung bei Git-Plattformen (GitHub, GitLab, Bitbucket) ohne Passworteingabe bei jedem Push oder Pull.",
+    "useCasesP2": "Sicherer Shell-Zugriff auf Remote-Server — öffentlichen Schlüssel zu ~/.ssh/authorized_keys hinzufügen und passwortlos anmelden.",
+    "useCasesP3": "CI/CD-Deploy-Schlüssel — dediziertes Schlüsselpaar für automatisierte Systeme generieren, um auf Repositories oder Server ohne geteilte Anmeldeinformationen zuzugreifen.",
+    "useCasesTitle": "Gängige Anwendungsfälle",
+    "whatIs": "Ein SSH-Schlüsselpaar besteht aus einem privaten und einem öffentlichen Schlüssel zur sicheren Authentifizierung an Servern und Diensten (Git-Plattformen, Cloud-Anbieter, Remote-Maschinen). Der private Schlüssel bleibt auf Ihrem Gerät; der öffentliche Schlüssel wird auf dem Server platziert. SSH-Schlüssel sind sicherer als Passwörter, da sie Brute-Force- und Phishing-Angriffen widerstehen.",
+    "whatIsTitle": "Was ist ein SSH-Schlüssel?"
   }
 }

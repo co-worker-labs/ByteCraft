@@ -152,7 +152,16 @@
     "faq1A": "Ein regulärer Ausdruck (Regex) ist eine Zeichenfolge, die ein Suchmuster definiert. Er wird für Zeichenfolgenabgleich, Validierung, Suchen-Ersetzen und Textextraktion verwendet.",
     "faq2Q": "Kann ich Regex mit Flags testen?",
     "faq2A": "Ja. Dieses Tool unterstützt alle Standard-JavaScript-Regex-Flags: g (global), i (Groß-/Kleinschreibung ignorieren), m (mehrzeilig), s (dotAll), u (unicode) und y (sticky).",
-    "aeoDefinition": "Der Regex-Tester ist ein kostenloses Online-Tool zum Testen regulärer Ausdrücke mit Echtzeit-Match-Hervorhebung, Capture-Gruppen-Inspektion und Ersetzungsvorschau. Enthält eine integrierte Musterbibliothek und tokenbasierte Erklärung. Läuft vollständig in Ihrem Browser."
+    "aeoDefinition": "Der Regex-Tester ist ein kostenloses Online-Tool zum Testen regulärer Ausdrücke mit Echtzeit-Match-Hervorhebung, Capture-Gruppen-Inspektion und Ersetzungsvorschau. Enthält eine integrierte Musterbibliothek und tokenbasierte Erklärung. Läuft vollständig in Ihrem Browser.",
+    "faq3Q": "Gibt es ein Trefferlimit?",
+    "faq3A": "Ja. Um die UI reaktionsfähig zu halten, werden nur die ersten 1.000 Treffer gerendert. Bei Mustern mit mehr Treffern zeigt das Tool die Gesamtzahl an.",
+    "step1Title": "Muster eingeben",
+    "step1Text": "Geben Sie einen regulären Ausdruck in das Musterfeld ein. Schalten Sie Flags wie g (global), i (Groß-/Kleinschreibung ignorieren) und m (mehrzeilig) um.",
+    "step2Title": "Testtext hinzufügen",
+    "step2Text": "Fügen Sie den Text ein oder geben Sie ihn ein, gegen den Sie abgleichen möchten. Treffer werden beim Tippen in Echtzeit hervorgehoben.",
+    "step3Title": "Inspizieren und verfeinern",
+    "step3Text": "Trefferdetails mit Positionen, Erfassungsgruppen und Ersetzungen anzeigen. Erklärungs-Modus für token-basierte Aufschlüsselung nutzen.",
+    "stepsTitle": "Regex testen"
   },
   "explainGroupNamed": "Gruppe: {name}"
 }

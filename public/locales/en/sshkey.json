@@ -23,6 +23,12 @@
   "inspectComment": "Comment",
   "descriptions": {
     "aeoDefinition": "SSH Key Generator is a free online tool for generating RSA and Ed25519 SSH key pairs entirely in your browser. Supports passphrase encryption and fingerprint display. No data is sent to any server.",
+    "whatIsTitle": "What is an SSH key?",
+    "whatIs": "An SSH key pair consists of a private key and a public key used for secure authentication to servers and services (Git platforms, cloud providers, remote machines). The private key stays on your device; the public key is placed on the server. SSH keys are more secure than passwords because they resist brute-force and phishing attacks.",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesP1": "Authenticating to Git platforms (GitHub, GitLab, Bitbucket) without typing your password on every push or pull.",
+    "useCasesP2": "Secure shell access to remote servers — add your public key to ~/.ssh/authorized_keys and log in without a password.",
+    "useCasesP3": "CI/CD deployment keys — generate a dedicated key pair for automated systems to access repositories or servers without shared credentials.",
     "stepsTitle": "How to Generate & Deploy SSH Keys",
     "step1Title": "Choose your key type",
     "step1Desc": "Select Ed25519 (recommended — more secure, faster key generation) or RSA (broader compatibility with legacy systems), then set the key size if using RSA.",

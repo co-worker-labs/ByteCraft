@@ -18,7 +18,7 @@ import { searchTools } from "../../libs/tools-search";
 import { Card } from "../../components/ui/card";
 import { Accordion } from "../../components/ui/accordion";
 import { useRecentTools } from "../../hooks/use-recent-tools";
-import { Search, X, LayoutGrid, Grid3X3, CircleHelp } from "lucide-react";
+import { Search, X, LayoutGrid, Grid3X3, CircleHelp, Shield, Wifi, Heart } from "lucide-react";
 
 type ViewMode = "grouped" | "all";
 
@@ -529,14 +529,83 @@ export default function HomeClient() {
 
       {!isSearching && (
         <>
-          <section className="mx-auto mt-16 max-w-3xl text-center">
+          <section className="mx-auto mt-16 max-w-4xl text-center">
             <h2 className="text-lg font-semibold text-fg-primary">{tHome("toolCount")}</h2>
             <p className="mt-3 text-sm leading-relaxed text-fg-secondary">
               {tHome("brandDescription")}
             </p>
           </section>
 
-          <section className="mx-auto mt-12 max-w-3xl pb-12">
+          <section className="mx-auto mt-16 max-w-4xl">
+            <h2 className="text-center text-lg font-semibold text-fg-primary mb-8">
+              {tHome("whyTitle")}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="rounded-xl border border-border-default bg-bg-surface p-6 text-center">
+                <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-cyan/10">
+                  <Shield size={20} className="text-accent-cyan" />
+                </div>
+                <h3 className="text-sm font-semibold text-fg-primary">
+                  {tHome("whyPrivacyTitle")}
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-fg-secondary">
+                  {tHome("whyPrivacyDesc")}
+                </p>
+              </div>
+              <div className="rounded-xl border border-border-default bg-bg-surface p-6 text-center">
+                <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-cyan/10">
+                  <Wifi size={20} className="text-accent-cyan" />
+                </div>
+                <h3 className="text-sm font-semibold text-fg-primary">
+                  {tHome("whyOfflineTitle")}
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-fg-secondary">
+                  {tHome("whyOfflineDesc")}
+                </p>
+              </div>
+              <div className="rounded-xl border border-border-default bg-bg-surface p-6 text-center">
+                <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-cyan/10">
+                  <Heart size={20} className="text-accent-cyan" />
+                </div>
+                <h3 className="text-sm font-semibold text-fg-primary">{tHome("whyFreeTitle")}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-fg-secondary">
+                  {tHome("whyFreeDesc")}
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="mx-auto mt-16 max-w-4xl">
+            <h2 className="text-center text-lg font-semibold text-fg-primary mb-8">
+              {tHome("categoryIntroTitle")}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {TOOL_CATEGORIES.map((cat) => {
+                const slug = CATEGORY_SLUGS[cat.key];
+                const descKey =
+                  "cat" +
+                  slug
+                    .split("-")
+                    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+                    .join("");
+                return (
+                  <div
+                    key={cat.key}
+                    className="rounded-xl border border-border-default bg-bg-surface p-5"
+                  >
+                    <h3 className="text-sm font-semibold text-fg-primary">
+                      {categoryNames[cat.key] ?? cat.key}
+                    </h3>
+                    <p className="mt-2 text-xs leading-relaxed text-fg-secondary">
+                      {tHome(descKey)}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+
+          <section className="mx-auto mt-12 max-w-4xl pb-12">
             <div className="mb-4 flex items-center gap-2">
               <CircleHelp size={16} className="shrink-0 text-accent-cyan" aria-hidden="true" />
               <h2 className="text-base font-semibold text-fg-primary">{tHome("faqTitle")}</h2>

@@ -152,7 +152,16 @@
     "faq1A": "Una expresión regular (regex) es una secuencia de caracteres que define un patrón de búsqueda. Se usa para coincidencia de cadenas, validación, búsqueda y reemplazo, y extracción de texto.",
     "faq2Q": "¿Puedo probar regex con flags?",
     "faq2A": "Sí. Esta herramienta soporta todas las flags estándar de regex de JavaScript: g (global), i (insensible a mayúsculas), m (multilínea), s (dotAll), u (unicode) e y (sticky).",
-    "aeoDefinition": "El Tester de Regex es una herramienta gratuita online para probar expresiones regulares con resaltado de coincidencias en tiempo real, inspección de grupos de captura y vista previa de reemplazo. Incluye una biblioteca de patrones integrada y explicación a nivel de token. Se ejecuta completamente en tu navegador."
+    "aeoDefinition": "El Tester de Regex es una herramienta gratuita online para probar expresiones regulares con resaltado de coincidencias en tiempo real, inspección de grupos de captura y vista previa de reemplazo. Incluye una biblioteca de patrones integrada y explicación a nivel de token. Se ejecuta completamente en tu navegador.",
+    "stepsTitle": "Cómo probar un regex",
+    "step1Title": "Introduce tu patrón",
+    "step1Text": "Escribe una expresión regular en el campo de patrón. Activa flags como g (global), i (insensible a mayúsculas) y m (multilínea) según necesites.",
+    "step2Title": "Añade texto de prueba",
+    "step2Text": "Pega o escribe el texto contra el que quieres hacer coincidir. Las coincidencias se resaltan en tiempo real mientras escribes.",
+    "step3Title": "Inspecciona y refina",
+    "step3Text": "Ve detalles de las coincidencias con posiciones, grupos de captura y reemplazos. Usa el modo Explicar para un desglose token por token.",
+    "faq3Q": "¿Hay un límite de coincidencias?",
+    "faq3A": "Sí. Para mantener la interfaz responsiva, solo se renderizan las primeras 1.000 coincidencias. Para patrones con más coincidencias, la herramienta muestra un conteo del total."
   },
   "explainGroupNamed": "grupo: {name}"
 }

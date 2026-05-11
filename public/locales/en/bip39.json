@@ -6,6 +6,13 @@
     "aeoDefinition": "BIP39 Word List is a free online reference for the complete BIP39 mnemonic word list with search. All 2048 words in the standard English BIP39 word list, searchable by index or substring. Runs entirely in your browser.",
     "whatIsTitle": "What is BIP39?",
     "whatIs": "BIP39 is a Bitcoin Improvement Proposal that defines how to represent a random seed as a list of human-readable words. This makes it easier to back up and recover cryptocurrency wallets by writing down a sequence of words instead of a long hexadecimal string.",
+    "stepsTitle": "How to Use the BIP39 Word List",
+    "step1Title": "Search for a word",
+    "step1Text": "Type a word or substring in the search bar. Matching words are highlighted and filtered in real time.",
+    "step2Title": "Find by index",
+    "step2Text": "Each word has a numeric index (1-2048). Search by number to find the corresponding word instantly.",
+    "step3Title": "Verify your mnemonic",
+    "step3Text": "Check that each word in your mnemonic phrase exists in the BIP39 word list and is spelled correctly.",
     "purposeTitle": "Purpose of the Word List",
     "purpose": "The BIP39 word list is designed so that no two words share the same first four characters (when typed). This means you only need to type the first four letters for any word to be uniquely identified, reducing errors when entering recovery phrases.",
     "securityTitle": "Security Notes",
@@ -13,6 +20,8 @@
     "faq1Q": "How many words are in the BIP39 list?",
     "faq1A": "The BIP39 English word list contains exactly 2048 words. Each word encodes 11 bits of data, so a 12-word mnemonic phrase represents 132 bits (128 bits of entropy + 4-bit checksum), and a 24-word phrase represents 264 bits.",
     "faq2Q": "Can I use BIP39 words in any language?",
-    "faq2A": "BIP39 supports multiple languages including English, Japanese, Korean, Spanish, Chinese (Simplified and Traditional), French, Italian, Portuguese, and Czech. However, English is the most widely used and recommended for compatibility."
+    "faq2A": "BIP39 supports multiple languages including English, Japanese, Korean, Spanish, Chinese (Simplified and Traditional), French, Italian, Portuguese, and Czech. However, English is the most widely used and recommended for compatibility.",
+    "faq3Q": "Why do no two words share the first four letters?",
+    "faq3A": "This is a deliberate design choice to reduce transcription errors. When typing a recovery phrase on a hardware wallet, you only need the first four letters to uniquely identify each word, making the process faster and less error-prone."
   }
 }

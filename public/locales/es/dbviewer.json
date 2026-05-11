@@ -73,6 +73,18 @@
     "faq2A": "No. La base de datos se carga en la memoria del navegador usando sql.js (SQLite compilado a WebAssembly). Todas las operaciones se realizan localmente.",
     "faq3Q": "¿Qué características SQL son compatibles?",
     "faq3A": "Sintaxis SQL completa de SQLite incluyendo SELECT, INSERT, UPDATE, DELETE, JOINs, subconsultas, agregaciones y transacciones. El editor proporciona autocompletado para nombres de tablas y columnas.",
-    "aeoDefinition": "El Visor de SQLite es una herramienta gratuita online para abrir y explorar archivos de bases de datos SQLite en tu navegador. Ejecuta consultas SQL con autocompletado, explora tablas y exporta a CSV o JSON. No sale ningún dato de tu dispositivo."
+    "aeoDefinition": "El Visor de SQLite es una herramienta gratuita online para abrir y explorar archivos de bases de datos SQLite en tu navegador. Ejecuta consultas SQL con autocompletado, explora tablas y exporta a CSV o JSON. No sale ningún dato de tu dispositivo.",
+    "stepsTitle": "Cómo ver una base de datos SQLite",
+    "step1Title": "Abre un archivo de base de datos",
+    "step1Text": "Arrastra y suelta un archivo .db, .sqlite o .sqlite3, o haz clic en \"Probar base de datos de ejemplo\" para explorar una demo.",
+    "step2Title": "Navega las tablas",
+    "step2Text": "Haz clic en cualquier tabla de la barra lateral para ver su esquema y datos. Usa la paginación para navegar conjuntos de datos grandes.",
+    "step3Title": "Ejecuta consultas SQL",
+    "step3Text": "Escribe SQL en el editor con soporte de autocompletado. Ejecuta consultas SELECT y exporta los resultados como CSV o JSON.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesDesc1": "Inspección rápida de datos",
+    "useCasesP1": "Abre archivos SQLite de aplicaciones móviles, navegadores o dispositivos embebidos sin instalar herramientas de escritorio.",
+    "useCasesDesc2": "Análisis de datos",
+    "useCasesP2": "Ejecuta consultas SQL ad-hoc sobre tus datos y exporta los resultados. Usa el [Conversor de CSV](/csv) para procesamiento adicional."
   }
 }

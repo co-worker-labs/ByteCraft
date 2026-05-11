@@ -26,6 +26,21 @@
     "gfmP1": "테이블, 작업 목록(- [ ] todo), 취소선, 자동 링크, Mermaid 다이어그램(순서도, 시퀀스, 클래스, 상태, ER, 간트, 파이, git 그래프)을 지원합니다. ```mermaid 코드 블록을 사용하세요. 수식과 각주는 범위 밖입니다.",
     "faq1Q": "Markdown 편집기란?",
     "faq1A": "분할 창 미리보기가 있는 실시간 Markdown 편집기입니다. GFM(GitHub Flavored Markdown), 구문 강조, 작업 목록, Mermaid 다이어그램을 지원합니다.",
-    "aeoDefinition": "Markdown 편집기는 GitHub Flavored Markdown을 지원하는 Markdown 작성 및 미리보기를 위한 무료 온라인 도구입니다. 구문 강조, 실시간 미리보기, PDF/PNG 내보내기를 포함하며 브라우저에서 완전히 실행됩니다."
+    "aeoDefinition": "Markdown 편집기는 GitHub Flavored Markdown을 지원하는 Markdown 작성 및 미리보기를 위한 무료 온라인 도구입니다. 구문 강조, 실시간 미리보기, PDF/PNG 내보내기를 포함하며 브라우저에서 완전히 실행됩니다.",
+    "useCasesTitle": "일반적인 활용 사례",
+    "useCasesP1": "커밋하기 전에 GitHub나 GitLab 저장소의 README 파일을 작성하고 미리보기합니다.",
+    "useCasesP2": "실시간 서식으로 문서나 블로그 포스트를 초안 작성 — 텍스트와 나란히 렌더링된 출력을 확인할 수 있습니다.",
+    "useCasesP3": "Markdown 뷰어가 없는 사람과 공유하기 위해 Markdown 노트를 PDF나 PNG로 변환합니다.",
+    "stepsTitle": "Markdown 편집기 사용 방법",
+    "step1Title": "Markdown 작성 또는 붙여넣기",
+    "step1Desc": "편집기에 직접 입력하거나 .md 파일을 드롭하세요. 입력하면 미리보기가 실시간으로 업데이트됩니다.",
+    "step2Title": "보기 모드 선택",
+    "step2Desc": "편집, 미리보기, 분할 레이아웃을 전환하세요. 분할은 실시간 렌더링과 나란히 편집을 제공합니다.",
+    "step3Title": "문서 내보내기",
+    "step3Desc": ".md로 다운로드하거나, 렌더링된 미리보기를 PDF나 PNG로 내보내거나, 원시 Markdown을 클립보드에 복사할 수 있습니다.",
+    "faq2Q": "Mermaid 다이어그램을 지원하나요?",
+    "faq2A": "네. ```mermaid 코드 블록을 사용하면 순서도, 시퀀스 다이어그램, 클래스 다이어그램, 상태 다이어그램, ER 다이어그램, 간트 차트, 파이 차트, git 그래프가 자동으로 렌더링됩니다.",
+    "faq3Q": "파일 크기 제한이 있나요?",
+    "faq3A": "라이브 미리보기는 적절한 크기까지 작동합니다. 매우 큰 문서는 페이지 반응성을 유지하기 위해 자동 렌더링 대신 '지금 렌더링' 버튼이 표시됩니다. 모든 처리는 브라우저에서 이루어지며 서버로 전송되지 않습니다."
   }
 }

@@ -22,5 +22,19 @@
   "faq3Q": "我的数据安全吗？",
   "faq3A": "所有处理完全在浏览器中使用客户端 JavaScript 完成。数据不会发送到任何服务器。您的文件和文本永远不会离开您的设备。",
   "faq4Q": "需要安装吗？",
-  "faq4A": "无需安装。OmniKit 可在任何现代浏览器中使用，也可以作为渐进式 Web 应用（PWA）安装以便快速访问。"
+  "faq4A": "无需安装。OmniKit 可在任何现代浏览器中使用，也可以作为渐进式 Web 应用（PWA）安装以便快速访问。",
+  "catEncodingConversion": "编码与格式转换工具 — Base64、URL编码、进制转换、YAML、CSV。",
+  "catGenerators": "生成 UUID、二维码、Cron 表达式和时间戳。",
+  "catReferenceLookup": "查询 ASCII 码、HTTP 状态码、HTML 实体等参考资料。",
+  "catSecurityCrypto": "加密、哈希和保护数据 — JWT、哈希、加密、SSH密钥、密码工具。",
+  "catTextProcessing": "格式化、转换和分析文本与代码 — JSON、正则、文本对比等工具。",
+  "catVisualMedia": "处理颜色、图片和视觉内容。",
+  "categoryIntroTitle": "按分类浏览",
+  "whyFreeDesc": "开源免费，无需注册，无追踪，无付费版本。",
+  "whyFreeTitle": "永久免费",
+  "whyOfflineDesc": "安装为 PWA 应用，无需网络即可使用。",
+  "whyOfflineTitle": "离线可用",
+  "whyPrivacyDesc": "所有处理均在浏览器中完成，数据不会发送到任何服务器。",
+  "whyPrivacyTitle": "隐私优先",
+  "whyTitle": "为什么选择 OmniKit？"
 }

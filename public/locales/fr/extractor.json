@@ -42,7 +42,21 @@
     "faq2A": "Oui. Écrivez votre propre motif regex pour extraire n'importe quel format de texte. L'outil surligne les correspondances et affiche les groupes de capture.",
     "faq3Q": "Quels motifs intégrés sont disponibles ?",
     "faq3A": "Adresses email, URL, adresses IPv4/IPv6, numéros de téléphone, couleurs hex, nombres et dates. Chaque motif est préconfiguré pour les cas d'utilisation courants.",
-    "aeoDefinition": "L'Extracteur d'emails et d'URL est un outil gratuit en ligne qui extrait les emails, URL et numéros de téléphone de n'importe quel texte instantanément. Prend en charge plusieurs formats et le traitement par lots. Fonctionne entièrement dans votre navigateur."
+    "aeoDefinition": "L'Extracteur d'emails et d'URL est un outil gratuit en ligne qui extrait les emails, URL et numéros de téléphone de n'importe quel texte instantanément. Prend en charge plusieurs formats et le traitement par lots. Fonctionne entièrement dans votre navigateur.",
+    "stepsTitle": "Comment extraire des emails, URLs et numéros de téléphone",
+    "step1Title": "Collez votre texte",
+    "step1Text": "Collez ou déposez un fichier texte contenant des emails, URLs ou numéros de téléphone. L'outil analyse en temps réel.",
+    "step2Title": "Activer les types d'extraction",
+    "step2Text": "Utilisez les boutons Email, URL et Téléphone pour inclure ou exclure chaque type. Toutes les correspondances sont trouvées en un seul passage.",
+    "step3Title": "Exporter les résultats",
+    "step3Text": "Copiez tous les résultats ou exportez en CSV et JSON. Les résultats sont dédupliqués par défaut.",
+    "useCasesDesc1": "Génération de leads",
+    "useCasesP1": "Extrayez les adresses email de pages web, documents ou fichiers journaux pour des campagnes de prospection.",
+    "useCasesDesc2": "Nettoyage de données",
+    "useCasesP2": "Extrayez les URLs ou numéros de téléphone d'un texte non structuré et exportez-les dans un format structuré.",
+    "useCasesTitle": "Cas d'utilisation courants",
+    "whatIs": "L'Extracteur de texte scanne n'importe quel texte et extrait les adresses email, URLs et numéros de téléphone en un seul passage. Activez ou désactivez chaque type, consultez les résultats dédupliqués et exportez en CSV ou JSON — tout dans votre navigateur.",
+    "whatIsTitle": "Qu'est-ce que l'Extracteur de texte ?"
   },
   "dropZone": "Déposez un fichier texte"
 }

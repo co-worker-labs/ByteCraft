@@ -14,6 +14,15 @@
     "faq1A": "Bits, Bytes, KB, MB, GB, TB und PB. Das Tool unterstützt sowohl den Dezimalstandard (1 KB = 1000 Bytes) als auch den Binärstandard (1 KiB = 1024 Bytes).",
     "faq2Q": "Warum gibt es zwei Konvertierungsstandards?",
     "faq2A": "Dezimal (SI) verwendet Potenzen von 1000 und wird von Speicherherstellern verwendet. Binär (IEC) verwendet Potenzen von 1024 und wird typischerweise von Betriebssystemen angezeigt.",
-    "aeoDefinition": "Der Speichereinheitenkonverter ist ein kostenloses Online-Tool zur Umrechnung zwischen Bytes, KB, MB, GB, TB und PB. Unterstützt sowohl SI- (dezimal) als auch IEC- (binär) Standards. Läuft vollständig in Ihrem Browser."
+    "aeoDefinition": "Der Speichereinheitenkonverter ist ein kostenloses Online-Tool zur Umrechnung zwischen Bytes, KB, MB, GB, TB und PB. Unterstützt sowohl SI- (dezimal) als auch IEC- (binär) Standards. Läuft vollständig in Ihrem Browser.",
+    "faq3Q": "Warum zeigt meine Festplatte weniger Speicher als beworben an?",
+    "faq3A": "Hersteller verwenden dezimale (SI) Einheiten — 1 TB = 1.000.000.000.000 Bytes. Ihr Betriebssystem verwendet binär — 1 TiB = 1.099.511.627.776 Bytes. Eine „1 TB\"-Festplatte zeigt im Betriebssystem ca. 931 GiB an.",
+    "step1Title": "Wert eingeben",
+    "step1Text": "Geben Sie eine Zahl in ein beliebiges Speichereinheiten-Feld ein. Das Tool konvertiert in Echtzeit in alle anderen Einheiten.",
+    "step2Title": "Dezimal oder Binär wählen",
+    "step2Text": "Schalten Sie zwischen SI (1K = 1000 Bytes) und IEC (1K = 1024 Bytes) Standards mit dem Schalter um.",
+    "step3Title": "Konvertierungstabelle lesen",
+    "step3Text": "Alle äquivalenten Werte werden gleichzeitig angezeigt. Die allgemeine Konvertierungstabelle unten zeigt Referenzwerte.",
+    "stepsTitle": "Speichereinheiten konvertieren"
   }
 }

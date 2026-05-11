@@ -16,7 +16,7 @@ import { Plus, X, Play } from "lucide-react";
 import CryptoJS from "crypto-js";
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
-import { CircleHelp } from "lucide-react";
+import DescriptionSection from "../../../components/description-section";
 
 interface HashResult {
   title: string;
@@ -518,53 +518,6 @@ function FileCalculator() {
   );
 }
 
-function Description() {
-  const tc = useTranslations("common");
-  const t = useTranslations("checksum");
-
-  const faqItems = [1, 2].map((i) => ({
-    title: t(`descriptions.faq${i}Q`),
-    content: <p>{t(`descriptions.faq${i}A`)}</p>,
-  }));
-  return (
-    <section id="description" className="mt-8">
-      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
-        <p className="text-fg-secondary text-sm leading-relaxed">
-          {t("descriptions.aeoDefinition")}
-        </p>
-      </div>
-      <div className="mb-4">
-        <h2 className="font-semibold text-fg-primary text-base">{tc("algorithms.md5Title")}</h2>
-        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{tc("algorithms.md5")}</p>
-      </div>
-      <div className="mb-4">
-        <h2 className="font-semibold text-fg-primary text-base">{tc("algorithms.sha1Title")}</h2>
-        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{tc("algorithms.sha1")}</p>
-      </div>
-      <div className="mb-4">
-        <h2 className="font-semibold text-fg-primary text-base">{tc("algorithms.sha2Title")}</h2>
-        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{tc("algorithms.sha2")}</p>
-        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">
-          {tc("algorithms.sha2extra")}
-        </p>
-      </div>
-      <div className="mb-4">
-        <h2 className="font-semibold text-fg-primary text-base">{tc("algorithms.sha3Title")}</h2>
-        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{tc("algorithms.sha3")}</p>
-      </div>
-      <div className="mt-8">
-        <div className="flex items-center gap-2 mb-4">
-          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
-          <h2 className="font-semibold text-fg-primary text-base text-pretty">
-            {tc("descriptions.faqTitle")}
-          </h2>
-        </div>
-        <Accordion items={faqItems} />
-      </div>
-    </section>
-  );
-}
-
 export default function ChecksumPage() {
   const tc = useTranslations("common");
   const t = useTranslations("tools");
@@ -582,7 +535,7 @@ export default function ChecksumPage() {
           </span>
         </div>
         <FileCalculator />
-        <Description />
+        <DescriptionSection namespace="checksum" />
         <RelatedTools currentTool="checksum" />
       </div>
     </Layout>

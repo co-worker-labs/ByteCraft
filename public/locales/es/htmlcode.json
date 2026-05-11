@@ -38,6 +38,22 @@
     "faq1Q": "¿Qué son las entidades de caracteres HTML?",
     "faq1A": "Las entidades HTML son códigos especiales (como &amp; para &) usados para representar caracteres que tienen significado especial en HTML o no pueden escribirse directamente.",
     "faq2Q": "¿Cuántas entidades están documentadas?",
-    "faq2A": "La herramienta proporciona una referencia completa de caracteres especiales HTML incluyendo entidades con nombre (&amp;), decimales (&#38;) y hexadecimales (&#x26;)."
+    "faq2A": "La herramienta proporciona una referencia completa de caracteres especiales HTML incluyendo entidades con nombre (&amp;), decimales (&#38;) y hexadecimales (&#x26;).",
+    "whatIsTitle": "¿Qué son las entidades HTML?",
+    "whatIs": "Las entidades HTML son códigos que representan caracteres reservados en HTML (como <, >, &) o caracteres que no se pueden escribir fácilmente. Usan el formato &nombre; o &#número; — por ejemplo, &lt; se renderiza como < y &#169; se renderiza como el símbolo de copyright. Esta herramienta proporciona una referencia completa de entidades con nombre, códigos decimales y hexadecimales en 8 categorías.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesDesc1": "Escapar HTML",
+    "useCasesP1": "Escapa caracteres HTML reservados como <, >, & y \" para que se muestren como texto en lugar de ser interpretados como marcado.",
+    "useCasesDesc2": "Caracteres especiales",
+    "useCasesP2": "Inserta símbolos especiales como signos monetarios, operadores matemáticos o marcas tipográficas en páginas web usando sus códigos de entidad.",
+    "stepsTitle": "Cómo encontrar entidades HTML",
+    "step1Title": "Elige una categoría",
+    "step1Text": "Selecciona una pestaña: Letras, Puntuación, Monedas, Matemáticos, Pronunciación, Diacríticos, ASCII o Iconos.",
+    "step2Title": "Busca o navega",
+    "step2Text": "Usa la barra de búsqueda para filtrar por carácter, nombre de entidad o punto de código. O desplázate por la tabla completa.",
+    "step3Title": "Copia el código",
+    "step3Text": "Cada fila muestra el carácter, entidad con nombre, código decimal y código hexadecimal. Copia el formato que tu proyecto necesite.",
+    "faq3Q": "¿Cuál es la diferencia entre entidades con nombre y numéricas?",
+    "faq3A": "Las entidades con nombre usan un mnemónico como &amp; para & o &lt; para <. Las numéricas usan el punto de código Unicode: &#38; (decimal) o &#x26; (hexadecimal). Las con nombre son más legibles, pero las numéricas funcionan para todos los caracteres Unicode."
   }
 }

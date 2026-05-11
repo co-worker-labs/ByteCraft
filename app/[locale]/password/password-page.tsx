@@ -53,6 +53,7 @@ import {
 } from "lucide-react";
 import PrivacyBanner from "../../../components/privacy-banner";
 import RelatedTools from "../../../components/related-tools";
+import DescriptionSection from "../../../components/description-section";
 
 const default_type = "Random";
 
@@ -834,55 +835,6 @@ function parseSavedPasswords(raw: string): SavedRecord[] {
   }
 }
 
-function Description() {
-  const t = useTranslations("password");
-  const tc = useTranslations("common");
-  const steps = [1, 2, 3, 4, 5].map((i) => ({
-    title: t(`descriptions.step${i}Title`),
-    desc: t(`descriptions.step${i}Desc`),
-  }));
-  const faqItems = [1, 2, 3].map((i) => ({
-    title: t(`descriptions.faq${i}Q`),
-    content: <p>{t(`descriptions.faq${i}A`)}</p>,
-  }));
-  return (
-    <section id="description" className="mt-8">
-      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
-        <p className="text-fg-secondary text-sm leading-relaxed">
-          {t("descriptions.aeoDefinition")}
-        </p>
-      </div>
-      <div className="mb-4">
-        <h2 className="font-semibold text-fg-primary text-base text-pretty">
-          {t("descriptions.stepsTitle")}
-        </h2>
-      </div>
-      <ol className="space-y-3">
-        {steps.map((step, i) => (
-          <li key={i} className="flex items-start gap-3">
-            <span className="shrink-0 w-6 h-6 rounded-full bg-accent-cyan text-bg-base text-xs font-bold flex items-center justify-center">
-              {i + 1}
-            </span>
-            <div>
-              <span className="font-medium text-fg-primary text-sm">{step.title}</span>
-              <p className="text-fg-secondary text-sm leading-relaxed text-pretty">{step.desc}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
-      <div className="mt-8">
-        <div className="flex items-center gap-2 mb-4">
-          <CircleHelp size={16} className="text-accent-cyan shrink-0" aria-hidden="true" />
-          <h2 className="font-semibold text-fg-primary text-base text-pretty">
-            {tc("descriptions.faqTitle")}
-          </h2>
-        </div>
-        <Accordion items={faqItems} />
-      </div>
-    </section>
-  );
-}
-
 export default function PasswordPage() {
   const t = useTranslations("password");
   const tTools = useTranslations("tools");
@@ -955,7 +907,7 @@ export default function PasswordPage() {
             setSaved([]);
           }}
         />
-        <Description />
+        <DescriptionSection namespace="password" howToStepCount={5} faqCount={3} />
         <RelatedTools currentTool="password" />
       </div>
     </Layout>

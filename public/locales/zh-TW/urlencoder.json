@@ -35,6 +35,13 @@
     "faq2Q": "有哪些編碼模式？",
     "faq2A": "三種模式：Component（編碼所有保留字元）、Whole URL（保留 URL 結構如 ://、?、&）和 Form（空格變為 + 而非 %20）。",
     "faq3Q": "何時應使用 URL 編碼？",
-    "faq3A": "在查詢參數中傳遞資料、在 HTML 中嵌入 URL，或在 API 呼叫中處理特殊字元時應使用 URL 編碼。"
+    "faq3A": "在查詢參數中傳遞資料、在 HTML 中嵌入 URL，或在 API 呼叫中處理特殊字元時應使用 URL 編碼。",
+    "stepsTitle": "如何編碼或解碼 URL",
+    "step1Title": "輸入文字",
+    "step1Text": "貼上要編碼的 URL 或文字，或貼上已百分號編碼的字串進行解碼。",
+    "step2Title": "選擇模式",
+    "step2Text": "根據編碼內容選擇 Component、Whole URL 或 Form 模式。工具即時轉換。",
+    "step3Title": "複製結果",
+    "step3Text": "編碼或解碼的輸出即時更新。點擊複製按鈕取得結果。"
   }
 }

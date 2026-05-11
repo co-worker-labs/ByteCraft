@@ -28,6 +28,15 @@
     "faq1A": "Una herramienta para convertir datos CSV a JSON, tablas Markdown o formato TSV y viceversa. Maneja campos entrecomillados, delimitadores personalizados y objetos anidados.",
     "faq2Q": "¿Qué dialectos CSV son compatibles?",
     "faq2A": "CSV estándar RFC 4180 con delimitadores personalizables (coma, punto y coma, tabulador, pipe). Campos entrecomillados, comillas escapadas y valores multilínea están soportados.",
-    "aeoDefinition": "El Conversor de CSV es una herramienta gratuita online para convertir entre formatos JSON y CSV con vista previa en tiempo real. Conversión bidireccional con escape adecuado y soporte Unicode. No sale ningún dato de tu navegador."
+    "aeoDefinition": "El Conversor de CSV es una herramienta gratuita online para convertir entre formatos JSON y CSV con vista previa en tiempo real. Conversión bidireccional con escape adecuado y soporte Unicode. No sale ningún dato de tu navegador.",
+    "stepsTitle": "Cómo convertir CSV a JSON (y viceversa)",
+    "step1Title": "Pega tus datos",
+    "step1Text": "Pega texto CSV en el panel izquierdo o JSON en el panel derecho. La herramienta detecta automáticamente la dirección.",
+    "step2Title": "Configura las opciones",
+    "step2Text": "Elige un delimitador (coma, tabulador, punto y coma, barra vertical) y habilita el aplanamiento de JSON anidado si es necesario.",
+    "step3Title": "Copia o descarga",
+    "step3Text": "La salida convertida aparece al instante. Copia el resultado o previsualízalo en la vista de tabla integrada.",
+    "faq3Q": "¿Qué delimitadores son compatibles?",
+    "faq3A": "Coma (por defecto), tabulador, punto y coma y barra vertical. El delimitador se detecta automáticamente durante la importación y se puede cambiar manualmente."
   }
 }

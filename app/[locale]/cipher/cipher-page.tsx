@@ -16,8 +16,7 @@ import { ChevronsDown, ChevronsUp, X } from "lucide-react";
 import CryptoJS from "crypto-js";
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
-import { Accordion } from "../../../components/ui/accordion";
-import { CircleHelp } from "lucide-react";
+import DescriptionSection from "../../../components/description-section";
 
 type Algorithms = "AES" | "DES" | "Triple DES" | "Rabbit" | "RC4" | "RC4Drop";
 type BlockMode = "CBC" | "CFB" | "CTR" | "OFB" | "ECB";
@@ -445,16 +444,10 @@ function Conversion() {
   );
 }
 
-function Description() {
+function CipherExtras() {
   const t = useTranslations("cipher");
-
   return (
-    <section id="description" className="mt-8">
-      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
-        <p className="text-fg-secondary text-sm leading-relaxed">
-          {t("descriptions.aeoDefinition")}
-        </p>
-      </div>
+    <section className="mt-6 space-y-4">
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.aesTitle")}</h2>
         <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{t("descriptions.aes")}</p>
@@ -480,10 +473,6 @@ function Description() {
           {t("descriptions.rc4dropConfig")}
         </p>
       </div>
-      <div className="mb-4">
-        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.faq1Q")}</h2>
-        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{t("descriptions.faq1A")}</p>
-      </div>
     </section>
   );
 }
@@ -496,7 +485,7 @@ export default function CipherPage() {
       <div className="container mx-auto px-4 pt-3 pb-6">
         <PrivacyBanner />
         <Conversion />
-        <Description />
+        <DescriptionSection namespace="cipher" extraSections={<CipherExtras />} />
         <RelatedTools currentTool="cipher" />
       </div>
     </Layout>

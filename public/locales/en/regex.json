@@ -133,6 +133,13 @@
     "whatIsP1": "A regex (regular expression) tester is an interactive tool that lets you build and test regex patterns against sample text in real time. Use it alongside [JSON formatter](/json) for data validation or [Text Case Converter](/textcase) for batch text transformations.",
     "whatIsP2": "As you type, matches are highlighted directly in the test text, and a detailed match list shows each match with its position, captured groups, and length.",
     "whatIsP3": "This tool runs entirely in your browser — no data is ever sent to any server.",
+    "stepsTitle": "How to Test a Regex",
+    "step1Title": "Enter your pattern",
+    "step1Text": "Type a regular expression in the pattern field. Toggle flags like g (global), i (case-insensitive), and m (multiline) as needed.",
+    "step2Title": "Add test text",
+    "step2Text": "Paste or type the text you want to match against. Matches are highlighted in real time as you type.",
+    "step3Title": "Inspect and refine",
+    "step3Text": "View match details with positions, capture groups, and replacements. Use Explain mode for a token-by-token breakdown.",
     "featuresTitle": "Key Features",
     "featuresP1": "Real-time match highlighting — see matches visually in your test text with alternating colors for clarity.",
     "featuresP2": "Capture group inspection — view named and numbered capture groups for each match.",
@@ -152,7 +159,9 @@
     "faq1Q": "Can I test regex with flags?",
     "faq1A": "Yes. This tool supports all standard JavaScript regex flags: g (global), i (case-insensitive), m (multiline), s (dotAll), u (unicode), and y (sticky).",
     "faq2Q": "What is the Explain mode?",
-    "faq2A": "Explain mode breaks down your regex pattern into human-readable descriptions, showing what each token matches and how quantifiers and groups work."
+    "faq2A": "Explain mode breaks down your regex pattern into human-readable descriptions, showing what each token matches and how quantifiers and groups work.",
+    "faq3Q": "Is there a match limit?",
+    "faq3A": "Yes. To keep the UI responsive, only the first 1,000 matches are rendered. For patterns with more matches, the tool shows a count of the total."
   },
   "explainGroupNamed": "group: {name}"
 }

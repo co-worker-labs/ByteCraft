@@ -27,6 +27,13 @@
     "faq2A": "Por defecto, sí. Puedes activar el modo insensible a mayúsculas para tratar 'Hola' y 'hola' como duplicados.",
     "faq3Q": "¿Puedo ver qué se eliminó?",
     "faq3A": "La herramienta muestra la salida limpia y el conteo de duplicados eliminados. Puedes comparar la entrada y salida para verificar los resultados.",
-    "aeoDefinition": "El Eliminador de líneas duplicadas es una herramienta gratuita online que elimina las líneas duplicadas del texto preservando el orden. Soporta coincidencia sensible a mayúsculas, recorte de espacios y eliminación de líneas vacías. Se ejecuta completamente en tu navegador."
+    "aeoDefinition": "El Eliminador de líneas duplicadas es una herramienta gratuita online que elimina las líneas duplicadas del texto preservando el orden. Soporta coincidencia sensible a mayúsculas, recorte de espacios y eliminación de líneas vacías. Se ejecuta completamente en tu navegador.",
+    "stepsTitle": "Cómo eliminar líneas duplicadas",
+    "step1Title": "Pega tu texto",
+    "step1Text": "Escribe o pega texto multilínea en el área de entrada. La herramienta deduplica en tiempo real.",
+    "step2Title": "Configura las opciones",
+    "step2Text": "Activa o desactiva la sensibilidad a mayúsculas, el recorte de espacios o la eliminación de líneas vacías usando los botones de opciones.",
+    "step3Title": "Copia la salida limpia",
+    "step3Text": "Las líneas únicas aparecen en el área de salida con un conteo de duplicados eliminados."
   }
 }

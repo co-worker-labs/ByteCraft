@@ -35,6 +35,13 @@
     "faq2A": "Trois modes : Composant (encode tous les caractères réservés), URL complète (préserve la structure URL comme ://, ?, &) et Formulaire (l'espace devient + au lieu de %20).",
     "faq3Q": "Quand dois-je utiliser l'encodage URL ?",
     "faq3A": "Utilisez l'encodage URL pour transmettre des données dans les paramètres de requête, intégrer des URL en HTML ou gérer des caractères spéciaux dans les appels API.",
-    "aeoDefinition": "L'Encodeur/Décodeur d'URL est un outil gratuit en ligne pour encoder et décoder des chaînes URL. Prend en charge les modes Composant, URL complète et Formulaire. Fonctionne entièrement dans votre navigateur — aucune donnée n'est envoyée à un serveur."
+    "aeoDefinition": "L'Encodeur/Décodeur d'URL est un outil gratuit en ligne pour encoder et décoder des chaînes URL. Prend en charge les modes Composant, URL complète et Formulaire. Fonctionne entièrement dans votre navigateur — aucune donnée n'est envoyée à un serveur.",
+    "stepsTitle": "Comment encoder ou décoder des URL",
+    "step1Title": "Entrez votre texte",
+    "step1Text": "Collez l'URL ou le texte à encoder, ou collez une chaîne encodée en pourcentage à décoder.",
+    "step2Title": "Choisir un mode",
+    "step2Text": "Sélectionnez Composant, URL complète ou Formulaire selon ce que vous encodez. L'outil convertit en temps réel.",
+    "step3Title": "Copier le résultat",
+    "step3Text": "La sortie encodée ou décodée se met à jour instantanément. Cliquez sur le bouton copier pour récupérer le résultat."
   }
 }

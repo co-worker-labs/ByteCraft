@@ -11,6 +11,22 @@
     "faq1A": "Eine Prüfsumme ist ein Hash-Wert, der aus dem Dateiinhalt berechnet wird. Sie wird zur Überprüfung der Dateiintegrität verwendet — wenn sich ein einziges Byte ändert, ändert sich die Prüfsumme vollständig.",
     "faq2Q": "Welche Hash-Algorithmen sind verfügbar?",
     "faq2A": "MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 und CRC32. Mehrere Algorithmen können gleichzeitig für dieselbe Datei ausgeführt werden.",
-    "aeoDefinition": "Die Datei-Prüfsumme ist ein kostenloses Online-Tool zur Berechnung von MD5-, SHA-1-, SHA-256- und SHA-512-Prüfsummen für beliebige Dateien. Unterstützt unbegrenzte Dateigröße mit 100% clientseitiger Verarbeitung."
+    "aeoDefinition": "Die Datei-Prüfsumme ist ein kostenloses Online-Tool zur Berechnung von MD5-, SHA-1-, SHA-256- und SHA-512-Prüfsummen für beliebige Dateien. Unterstützt unbegrenzte Dateigröße mit 100% clientseitiger Verarbeitung.",
+    "faq3Q": "Welchen Hash-Algorithmus sollte ich verwenden?",
+    "faq3A": "Für Integritätsprüfung ist SHA-256 der Standard. MD5 und SHA-1 sind schneller, gelten aber als kryptografisch gebrochen. Verwenden Sie SHA-512 oder SHA3 für höhere Sicherheitsanforderungen.",
+    "step1Title": "Datei auswählen",
+    "step1Text": "Ziehen Sie eine Datei auf die Ablagezone oder klicken Sie zum Durchsuchen. Mehrere Dateien werden unterstützt.",
+    "step2Title": "Algorithmen wählen",
+    "step2Text": "Aktivieren Sie die gewünschten Hash-Algorithmen. Bei großen Dateien wählen Sie nur die benötigten, um die Verarbeitungszeit zu verkürzen.",
+    "step3Title": "Berechnen und vergleichen",
+    "step3Text": "Klicken Sie auf Berechnen. Fügen Sie eine erwartete Prüfsumme in das Vergleichsfeld ein, um sofortige Übereinstimmung zu prüfen.",
+    "stepsTitle": "Datei-Prüfsumme berechnen",
+    "useCasesDesc1": "Download-Verifizierung",
+    "useCasesDesc2": "Backup-Integrität",
+    "useCasesP1": "Heruntergeladene Dateien mit der veröffentlichten Prüfsumme des Herausgebers vergleichen, um Korruption oder Manipulation auszuschließen.",
+    "useCasesP2": "Prüfsummen vor und nach dem Kopieren auf Netzwerkspeicher, optische Medien oder Cloud-Backups vergleichen, um Datenintegrität sicherzustellen.",
+    "useCasesTitle": "Gängige Anwendungsfälle",
+    "whatIs": "Eine Datei-Prüfsumme ist ein Hash-Wert fester Größe, der aus dem Dateiinhalt mit einem kryptografischen Algorithmus berechnet wird. Selbst die Änderung eines einzigen Bytes erzeugt eine völlig andere Prüfsumme. Dieses Tool unterstützt MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3 und RIPEMD-160.",
+    "whatIsTitle": "Was ist eine Datei-Prüfsumme?"
   }
 }

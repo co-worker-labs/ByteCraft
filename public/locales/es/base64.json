@@ -29,6 +29,15 @@
     "faq1A": "Base64 es un esquema de codificación de binario a texto que representa datos binarios usando 64 caracteres ASCII (A-Z, a-z, 0-9, +, /). Se usa comúnmente para incrustar datos en URLs, HTML y JSON.",
     "faq2Q": "¿Es Base64 un cifrado?",
     "faq2A": "No. Base64 es codificación, no cifrado. No proporciona seguridad — cualquiera puede decodificarlo. Usa la herramienta de Cifrado/Descifrado para protección real de datos.",
-    "aeoDefinition": "El Codificador/Decodificador Base64 es una herramienta gratuita online para codificar y decodificar cadenas Base64. Soporta cabeceras de autenticación Basic, múltiples juegos de caracteres y conversión en tiempo real. Todo el procesamiento se ejecuta en tu navegador."
+    "aeoDefinition": "El Codificador/Decodificador Base64 es una herramienta gratuita online para codificar y decodificar cadenas Base64. Soporta cabeceras de autenticación Basic, múltiples juegos de caracteres y conversión en tiempo real. Todo el procesamiento se ejecuta en tu navegador.",
+    "stepsTitle": "Cómo codificar o decodificar en Base64",
+    "step1Title": "Introduce tu texto",
+    "step1Text": "Escribe o pega el texto plano que quieres codificar, o pega una cadena Base64 existente para decodificar.",
+    "step2Title": "Elige codificar o decodificar",
+    "step2Text": "La herramienta convierte en tiempo real. Cambia entre los modos Codificar y Decodificar con un solo clic.",
+    "step3Title": "Copia el resultado",
+    "step3Text": "La salida codificada o decodificada aparece al instante. Haz clic en el botón de copiar para obtener el resultado.",
+    "faq3Q": "¿Puedo usar Base64 para codificación segura para URLs?",
+    "faq3A": "El Base64 estándar usa los caracteres + y / que no son seguros para URLs. Para URLs, usa la herramienta de Codificador de URL o la variante Base64url que reemplaza + por - y / por _."
   }
 }

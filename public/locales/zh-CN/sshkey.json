@@ -39,6 +39,12 @@
     "faq3A": "进入 Settings → SSH and GPG keys → New SSH key。填写标题，粘贴公钥完整内容（以 ssh-ed25519 或 ssh-rsa 开头的整行），点击 Add SSH key。也可以使用 GitHub CLI：gh ssh-key add ~/.ssh/id_ed25519.pub。",
     "faq4Q": "在浏览器中生成 SSH 密钥安全吗？",
     "faq4A": "安全。本工具使用 Web Crypto API，提供与 OpenSSL 和 OpenSSH 相同的加密原语。密钥完全在浏览器内存中生成，不会发送到任何服务器。关闭或刷新页面后密钥即丢失，请务必在离开前下载或复制。",
-    "aeoDefinition": "SSH 密钥生成器是一个免费的在线 RSA 和 Ed25519 SSH 密钥对生成工具，完全在浏览器中运行。支持密码短语加密和指纹显示。不会发送任何数据到服务器。"
+    "aeoDefinition": "SSH 密钥生成器是一个免费的在线 RSA 和 Ed25519 SSH 密钥对生成工具，完全在浏览器中运行。支持密码短语加密和指纹显示。不会发送任何数据到服务器。",
+    "whatIsTitle": "什么是 SSH 密钥？",
+    "whatIs": "SSH 密钥对由私钥和公钥组成，用于安全地认证到服务器和服务（Git 平台、云服务商、远程机器）。私钥保存在你的设备上；公钥放在服务器上。SSH 密钥比密码更安全，因为它们能抵御暴力破解和钓鱼攻击。",
+    "useCasesTitle": "常见使用场景",
+    "useCasesP1": "免密认证到 Git 平台（GitHub、GitLab、Bitbucket），每次 push 或 pull 无需输入密码。",
+    "useCasesP2": "远程服务器安全 Shell 访问——将公钥添加到 ~/.ssh/authorized_keys，无需密码即可登录。",
+    "useCasesP3": "CI/CD 部署密钥——为自动化系统生成专用密钥对，访问仓库或服务器而无需共享凭据。"
   }
 }

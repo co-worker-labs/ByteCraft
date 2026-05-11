@@ -11,6 +11,22 @@
     "faq1A": "Un checksum es un valor hash calculado a partir del contenido de un archivo. Se usa para verificar la integridad de archivos — si cambia un solo byte, el checksum cambia completamente.",
     "faq2Q": "¿Qué algoritmos de hash están disponibles?",
     "faq2A": "MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 y CRC32. Múltiples algoritmos pueden ejecutarse simultáneamente sobre el mismo archivo.",
-    "aeoDefinition": "El Checksum de archivos es una herramienta gratuita online para calcular checksums MD5, SHA-1, SHA-256 y SHA-512 de cualquier archivo. Soporta tamaño de archivo ilimitado con procesamiento 100% del lado del cliente."
+    "aeoDefinition": "El Checksum de archivos es una herramienta gratuita online para calcular checksums MD5, SHA-1, SHA-256 y SHA-512 de cualquier archivo. Soporta tamaño de archivo ilimitado con procesamiento 100% del lado del cliente.",
+    "whatIsTitle": "¿Qué es un checksum de archivo?",
+    "whatIs": "Un checksum de archivo es un valor hash de tamaño fijo calculado a partir del contenido de un archivo usando un algoritmo criptográfico. Incluso el cambio de un solo byte produce un checksum completamente diferente, lo que lo hace ideal para verificar la integridad de los datos. Esta herramienta soporta MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3 y RIPEMD-160.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesDesc1": "Verificación de descargas",
+    "useCasesP1": "Verifica que los archivos descargados coinciden con el checksum publicado por el editor para confirmar que no hubo corrupción ni manipulación durante la transferencia.",
+    "useCasesDesc2": "Integridad de copias de seguridad",
+    "useCasesP2": "Compara checksums antes y después de copiar archivos a almacenamiento en red, medios ópticos o copias de seguridad en la nube para asegurar la fidelidad de los datos.",
+    "stepsTitle": "Cómo calcular un checksum de archivo",
+    "step1Title": "Selecciona tu archivo",
+    "step1Text": "Arrastra y suelta un archivo en la zona de soltar, o haz clic para explorar. Se soportan múltiples archivos.",
+    "step2Title": "Elige los algoritmos",
+    "step2Text": "Marca los algoritmos de hash que necesites. Para archivos grandes, selecciona solo los necesarios para reducir el tiempo de procesamiento.",
+    "step3Title": "Calcula y compara",
+    "step3Text": "Haz clic en Calcular. Pega un checksum esperado en el campo de comparación para verificar al instante si coincide.",
+    "faq3Q": "¿Qué algoritmo de hash debería usar?",
+    "faq3A": "Para verificación de integridad, SHA-256 es la opción estándar. MD5 y SHA-1 son más rápidos pero se consideran criptográficamente rotos. Usa SHA-512 o SHA3 para requisitos de seguridad más altos."
   }
 }

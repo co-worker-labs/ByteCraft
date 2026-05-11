@@ -22,6 +22,15 @@
     "faq2Q": "Quels caractères de contrôle sont inclus ?",
     "faq2A": "Les 33 codes de contrôle (0-31 et 127) incluant NUL, TAB, LF, CR, ESC et DEL, avec les descriptions de leurs fonctions originales de téléscripteur.",
     "text": "ASCII signifie American Standard Code for Information Interchange (Code américain normalisé pour l'échange d'information). Les ordinateurs ne comprennent que les nombres, un code ASCII est donc la représentation numérique d'un caractère tel que « a » ou « @ » ou d'une action quelconque. ASCII a été développé il y a longtemps et les caractères non imprimables sont rarement utilisés pour leur fonction d'origine. Vous trouverez ci-dessous la table de caractères ASCII, incluant les descriptions des 32 premiers caractères non imprimables. ASCII a en réalité été conçu pour les téléscripteurs, les descriptions sont donc parfois obscures. Si quelqu'un vous demande votre CV au format ASCII, cela signifie simplement du texte brut sans mise en forme (pas de tabulations, gras ou souligné) — le format brut que tout ordinateur peut comprendre. C'est généralement pour pouvoir importer facilement le fichier dans leurs propres applications. Le Bloc-notes crée du texte ASCII, et dans MS Word vous pouvez enregistrer un fichier en « texte seulement ».",
-    "aeoDefinition": "La Table ASCII est un outil gratuit en ligne de référence pour les caractères ASCII avec codes hexadécimaux, octaux, décimaux et HTML. Inclut recherche, filtrage et outils de conversion. Fonctionne entièrement dans votre navigateur."
+    "aeoDefinition": "La Table ASCII est un outil gratuit en ligne de référence pour les caractères ASCII avec codes hexadécimaux, octaux, décimaux et HTML. Inclut recherche, filtrage et outils de conversion. Fonctionne entièrement dans votre navigateur.",
+    "faq3Q": "Quelle est la différence entre ASCII et UTF-8 ?",
+    "faq3A": "ASCII est un encodage 7 bits (0-127). UTF-8 est un encodage à longueur variable rétrocompatible avec ASCII — les 128 premiers points de code sont identiques. UTF-8 s'étend pour couvrir tous les caractères Unicode.",
+    "stepsTitle": "Comment utiliser la table ASCII",
+    "step1Title": "Rechercher un caractère",
+    "step1Text": "Saisissez un caractère, un nombre décimal ou une valeur hexadécimale dans la barre de recherche. Le tableau se filtre en temps réel.",
+    "step2Title": "Parcourir par catégorie",
+    "step2Text": "Basculez entre les onglets Caractères imprimables et Tableaux des codes de contrôle pour explorer les différentes plages ASCII.",
+    "step3Title": "Consulter les conversions",
+    "step3Text": "Chaque ligne affiche les valeurs décimale, binaire, octale, hexadécimale, le code HTML et le glyphe — survolez pour les détails."
   }
 }

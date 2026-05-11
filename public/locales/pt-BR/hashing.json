@@ -8,6 +8,22 @@
     "faq1A": "Hash criptográfico converte dados de entrada em uma impressão digital de tamanho fixo (hash). A mesma entrada sempre produz o mesmo hash, mas uma pequena mudança altera completamente a saída.",
     "faq2Q": "Quais algoritmos de hash são suportados?",
     "faq2A": "Esta ferramenta suporta MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3-224/256/384/512, Keccak-224/256/384/512 e RIPEMD-160. Variantes HMAC também estão disponíveis.",
-    "aeoDefinition": "O Gerador de Hash é uma ferramenta online gratuita para gerar hashes MD5, SHA-1, SHA-256, SHA-512, SHA3, Keccak e RIPEMD-160. Suporta HMAC e hash de arquivos. Nenhum dado é enviado para qualquer servidor."
+    "aeoDefinition": "O Gerador de Hash é uma ferramenta online gratuita para gerar hashes MD5, SHA-1, SHA-256, SHA-512, SHA3, Keccak e RIPEMD-160. Suporta HMAC e hash de arquivos. Nenhum dado é enviado para qualquer servidor.",
+    "whatIsTitle": "O que é Hash Criptográfico?",
+    "whatIs": "Hash criptográfico converte dados de entrada de qualquer tamanho em uma impressão digital de tamanho fixo chamada hash. A mesma entrada sempre produz o mesmo hash, mas uma pequena mudança altera completamente a saída. Hashes são unidirecionais — não é possível reverter um hash para a entrada original. Esta ferramenta gera hashes usando MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3, Keccak e RIPEMD-160.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesDesc1": "Verificação de integridade de dados",
+    "useCasesP1": "Verifique a integridade de dados comparando hashes dos dados originais e recebidos para detectar quaisquer mudanças durante transmissão ou armazenamento.",
+    "useCasesDesc2": "Autenticação de mensagens",
+    "useCasesP2": "Gere assinaturas HMAC usando uma senha secreta para autenticar a origem e integridade da mensagem.",
+    "stepsTitle": "Como gerar um hash",
+    "step1Title": "Insira seu texto",
+    "step1Text": "Cole ou digite o texto simples que deseja hashear no campo de entrada.",
+    "step2Title": "Selecione os algoritmos",
+    "step2Text": "Marque os algoritmos de hash necessários no painel de algoritmos. Múltiplos algoritmos podem ser selecionados simultaneamente.",
+    "step3Title": "Copie o hash",
+    "step3Text": "A saída do hash é exibida instantaneamente. Use o botão copiar ou cole um hash para comparar e verificar.",
+    "faq3Q": "Qual a diferença entre SHA-2 e SHA-3?",
+    "faq3A": "SHA-2 (SHA-256, SHA-512) usa a construção Merkle-Damgard, enquanto SHA-3 usa a construção de esponja Keccak. SHA-3 não é um substituto do SHA-2 — é uma alternativa que oferece um design interno diferente. Ambos são considerados seguros."
   }
 }

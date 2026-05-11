@@ -56,6 +56,18 @@
     "faq2Q": "為什麼 Solana 路徑要求所有段都是強化衍生？",
     "faq2A": "Solana 透過 SLIP-0010 使用 ed25519 曲線，該標準僅支援強化衍生。ed25519 金鑰無法進行非強化衍生，因此所有路徑段必須包含 '（強化）後綴。",
     "faq3Q": "比特幣 Legacy、SegWit 和 Taproot 地址有什麼區別？",
-    "faq3A": "Legacy（P2PKH，以 1 開頭）是最初的格式。SegWit（P2WPKH，以 bc1q 開頭）使用 Bech32 編碼，手續費更低。Taproot（P2TR，以 bc1p 開頭）是最新的格式，提供更強的隱私和智慧合約功能。"
+    "faq3A": "Legacy（P2PKH，以 1 開頭）是最初的格式。SegWit（P2WPKH，以 bc1q 開頭）使用 Bech32 編碼，手續費更低。Taproot（P2TR，以 bc1p 開頭）是最新的格式，提供更強的隱私和智慧合約功能。",
+    "stepsTitle": "如何產生 HD 錢包",
+    "step1Title": "產生或輸入助記詞",
+    "step1Text": "點擊「產生」建立新的 12 或 24 個單字 BIP39 助記詞，或貼上現有的助記詞。",
+    "step2Title": "選擇鏈和路徑",
+    "step2Text": "選擇要衍生地址的區塊鏈。可自訂衍生路徑。",
+    "step3Title": "檢視衍生地址",
+    "step3Text": "工具顯示每個衍生地址索引的地址、公鑰和私鑰。",
+    "useCasesTitle": "常見使用場景",
+    "useCasesDesc1": "開發和測試",
+    "useCasesP1": "為智慧合約開發產生測試錢包，無需暴露真實資金。",
+    "useCasesDesc2": "理解 HD 錢包",
+    "useCasesP2": "透過嘗試不同的路徑和鏈，學習 BIP32/BIP39/BIP44 金鑰衍生的工作原理。"
   }
 }

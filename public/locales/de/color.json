@@ -87,6 +87,12 @@
     "faq2Q": "Was ist der OKLCH-Farbraum?",
     "faq2A": "OKLCH ist ein wahrnehmungsgerechter Farbraum, der besser zur menschlichen Sicht passt als HSL oder RGB. Er erzeugt konsistentere Helligkeitsverläufe und barrierefreie Paletten.",
     "faq3Q": "Kann ich Farben aus einem Bild extrahieren?",
-    "faq3A": "Ja. Ziehen Sie ein beliebiges Bild in den Paletten-Extraktionsbereich, um die dominanten Farben zu erhalten. Sie können auch Farbseh-Schwächen simulieren (Protanopie, Deuteranopie, Tritanopie)."
+    "faq3A": "Ja. Ziehen Sie ein beliebiges Bild in den Paletten-Extraktionsbereich, um die dominanten Farben zu erhalten. Sie können auch Farbseh-Schwächen simulieren (Protanopie, Deuteranopie, Tritanopie).",
+    "useCasesP1": "Farben für die Webentwicklung auswählen und konvertieren — den exakten HEX-, RGB-, HSL- oder OKLCH-Wert für CSS oder Tailwind erhalten.",
+    "useCasesP2": "Textkontrast gegen eine Hintergrundfarbe prüfen, um die WCAG-Barrierefreiheitsrichtlinien (AA/AAA) oder den neueren APCA-Standard zu erfüllen.",
+    "useCasesP3": "Dominante Farben aus einem Bild extrahieren, um eine kohärente Designpalette zu erstellen, dann komplementäre, analoge oder triadische Harmonien generieren.",
+    "useCasesTitle": "Gängige Anwendungsfälle",
+    "whatIs": "Ein umfassendes Farbdienstprogramm, das zwischen 7 Farbräumen (HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH) konvertiert, Farbharmonien erzeugt, Kontrastverhältnisse für Barrierefreiheit prüft, Farbfehlsichtigkeit simuliert und Paletten aus Bildern extrahiert.",
+    "whatIsTitle": "Was ist das Farb-Tool?"
   }
 }

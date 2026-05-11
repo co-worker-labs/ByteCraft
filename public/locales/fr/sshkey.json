@@ -39,6 +39,12 @@
     "faq3A": "Allez dans Settings → SSH and GPG keys → New SSH key. Donnez-lui un titre descriptif, collez le contenu complet de votre clé publique (la ligne entière commençant par ssh-ed25519 ou ssh-rsa) et cliquez sur Add SSH key. Vous pouvez aussi utiliser la CLI GitHub : gh ssh-key add ~/.ssh/id_ed25519.pub.",
     "faq4Q": "Est-il sûr de générer des clés SSH dans le navigateur ?",
     "faq4A": "Oui. Cet outil utilise la Web Crypto API, qui fournit les mêmes primitives cryptographiques qu'OpenSSL et OpenSSH. La génération de clés se fait entièrement dans la mémoire du navigateur — aucune donnée n'est envoyée à un serveur. Les clés générées sont perdues à la fermeture ou au rechargement de la page, donc téléchargez ou copiez-les avant de quitter.",
-    "aeoDefinition": "Le Générateur de clés SSH est un outil gratuit en ligne pour générer des paires de clés SSH RSA et Ed25519 entièrement dans votre navigateur. Prend en charge le chiffrement par phrase de passe et l'affichage d'empreintes. Aucune donnée n'est envoyée à un serveur."
+    "aeoDefinition": "Le Générateur de clés SSH est un outil gratuit en ligne pour générer des paires de clés SSH RSA et Ed25519 entièrement dans votre navigateur. Prend en charge le chiffrement par phrase de passe et l'affichage d'empreintes. Aucune donnée n'est envoyée à un serveur.",
+    "useCasesTitle": "Cas d'utilisation courants",
+    "useCasesP1": "S'authentifier sur les plateformes Git (GitHub, GitLab, Bitbucket) sans saisir son mot de passe à chaque push ou pull.",
+    "useCasesP2": "Accès shell sécurisé aux serveurs distants — ajoutez votre clé publique à ~/.ssh/authorized_keys et connectez-vous sans mot de passe.",
+    "useCasesP3": "Clés de déploiement CI/CD — générez une paire de clés dédiée pour les systèmes automatisés afin d'accéder aux dépôts ou serveurs sans identifiants partagés.",
+    "whatIs": "Une paire de clés SSH se compose d'une clé privée et d'une clé publique utilisées pour l'authentification sécurisée aux serveurs et services (plateformes Git, fournisseurs cloud, machines distantes). La clé privée reste sur votre appareil ; la clé publique est placée sur le serveur. Les clés SSH sont plus sûres que les mots de passe car elles résistent aux attaques par force brute et au phishing.",
+    "whatIsTitle": "Qu'est-ce qu'une clé SSH ?"
   }
 }

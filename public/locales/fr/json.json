@@ -33,6 +33,15 @@
     "faq1A": "Le formatage JSON transforme du JSON brut ou minifié en une structure lisible avec indentation. Cet outil prend en charge l'indentation configurable (2, 4, 8 espaces ou tabulations), la minification et la validation, y compris la syntaxe JSON5.",
     "faq2Q": "Mes données JSON sont-elles envoyées à un serveur ?",
     "faq2A": "Non. Tout le formatage, la validation et la minification JSON se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil.",
-    "aeoDefinition": "Le Formateur JSON est un outil gratuit en ligne qui formate, valide et minifie instantanément les données JSON dans votre navigateur. Prend en charge JSON5, l'indentation configurable et le tri des clés. Aucune donnée n'est envoyée à un serveur."
+    "aeoDefinition": "Le Formateur JSON est un outil gratuit en ligne qui formate, valide et minifie instantanément les données JSON dans votre navigateur. Prend en charge JSON5, l'indentation configurable et le tri des clés. Aucune donnée n'est envoyée à un serveur.",
+    "faq3Q": "Puis-je trier les clés JSON ?",
+    "faq3A": "Oui. Activez l'option Trier les clés pour trier alphabétiquement toutes les clés d'objet dans la sortie. C'est utile pour les diffs de contrôle de version et la comparaison cohérente de structures de données.",
+    "stepsTitle": "Comment formater du JSON",
+    "step1Title": "Collez votre JSON",
+    "step1Text": "Collez du texte JSON ou JSON5 brut dans la zone de saisie. L'outil détecte automatiquement si l'entrée est du JSON ou du JSON5 valide.",
+    "step2Title": "Choisir une action",
+    "step2Text": "Cliquez sur Formater pour afficher proprement, Compresser pour minifier, ou activez le mode JSON5 pour une analyse permissive. Utilisez Trier les clés pour alphabétiser les clés d'objet.",
+    "step3Title": "Copier le résultat",
+    "step3Text": "La sortie formatée ou compressée apparaît instantanément. Cliquez sur le bouton copier ou glissez la sortie vers l'entrée pour poursuivre l'édition."
   }
 }

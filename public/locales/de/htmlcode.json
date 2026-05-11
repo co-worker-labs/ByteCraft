@@ -38,6 +38,22 @@
     "faq1Q": "Was sind HTML-Zeichenentitäten?",
     "faq1A": "HTML-Entitäten sind spezielle Codes (wie &amp; für &), die Zeichen darstellen, die in HTML eine besondere Bedeutung haben oder nicht direkt eingegeben werden können.",
     "faq2Q": "Wie viele Entitäten sind dokumentiert?",
-    "faq2A": "Das Tool bietet eine vollständige Referenz der HTML-Sonderzeichen einschließlich benannter Entitäten (&amp;), dezimaler (&#38;) und hexadezimaler (&#x26;) Codes."
+    "faq2A": "Das Tool bietet eine vollständige Referenz der HTML-Sonderzeichen einschließlich benannter Entitäten (&amp;), dezimaler (&#38;) und hexadezimaler (&#x26;) Codes.",
+    "faq3Q": "Was ist der Unterschied zwischen benannten und numerischen Entitäten?",
+    "faq3A": "Benannte Entitäten verwenden ein Kürzel wie &amp; für & oder &lt; für <. Numerische Entitäten verwenden den Unicode-Codepunkt: &#38; (dezimal) oder &#x26; (hex). Benannte Entitäten sind besser lesbar, numerische funktionieren für alle Unicode-Zeichen.",
+    "step1Title": "Kategorie wählen",
+    "step1Text": "Wählen Sie eine Registerkarte — Buchstaben, Satzzeichen, Währungen, Mathematik, Aussprache, Diakritika, ASCII oder Icons.",
+    "step2Title": "Suchen oder durchblättern",
+    "step2Text": "Nutzen Sie die Suchleiste zum Filtern nach Zeichen, Entity-Name oder Codepoint. Oder scrollen Sie durch die gesamte Tabelle.",
+    "step3Title": "Code kopieren",
+    "step3Text": "Jede Zeile zeigt Zeichen, benannte Entity, Dezimalcode und Hex-Code. Kopieren Sie das Format, das Ihr Projekt benötigt.",
+    "stepsTitle": "HTML-Entitäten finden",
+    "useCasesDesc1": "HTML-Escaping",
+    "useCasesDesc2": "Sonderzeichen",
+    "useCasesP1": "Reservierte HTML-Zeichen wie <, >, & und \" maskieren, damit sie als Text statt als Markup dargestellt werden.",
+    "useCasesP2": "Sondersymbole wie Währungszeichen, mathematische Operatoren oder typografische Zeichen über ihre Entity-Codes in Webseiten einfügen.",
+    "useCasesTitle": "Gängige Anwendungsfälle",
+    "whatIs": "HTML-Entitäten sind Codes, die in HTML reservierte Zeichen (wie <, >, &) oder schwer tippbare Zeichen darstellen. Sie verwenden das Format &name; oder &#nummer;. Dieses Tool bietet eine vollständige Referenz benannter Entitäten, Dezimalcodes und Hex-Codes in 8 Kategorien.",
+    "whatIsTitle": "Was sind HTML-Entitäten?"
   }
 }

@@ -22,6 +22,13 @@
     "whatIsTitle": "What is CSV?",
     "aeoDefinition": "CSV Converter is a free online tool for converting between JSON and CSV formats with real-time preview. Bidirectional conversion with proper escaping and Unicode support. No data leaves your browser.",
     "whatIsP1": "CSV (Comma-Separated Values) is a plain text format for storing tabular data. Each line represents a row, and fields are separated by commas. It's the most common format for data exchange between spreadsheets, databases, and applications. Use the [JSON formatter](/json) to inspect source data, or [YAML converter](/yaml) for YAML output.",
+    "stepsTitle": "How to Convert CSV to JSON (and Back)",
+    "step1Title": "Paste your data",
+    "step1Text": "Paste CSV text in the left panel or JSON in the right panel. The tool auto-detects the direction.",
+    "step2Title": "Configure options",
+    "step2Text": "Choose a delimiter (comma, tab, semicolon, pipe) and enable nested JSON flattening if needed.",
+    "step3Title": "Copy or download",
+    "step3Text": "The converted output appears instantly. Copy the result or preview it in the built-in table view.",
     "csvVsJsonTitle": "CSV vs JSON",
     "csvVsJsonP1": "CSV is ideal for flat tabular data and is widely supported by spreadsheet applications. JSON supports nested structures and is the standard format for APIs and web applications. This tool converts between them — nested JSON objects are flattened using dot-notation (e.g., user.name), and single objects are auto-wrapped into arrays.",
     "useCasesP1": "Importing/exporting data between spreadsheets and web APIs, converting [JSON](/json) API responses to CSV for analysis, preparing data for database bulk import with [DB Viewer](/dbviewer), sharing tabular data in a universally readable format.",
@@ -29,6 +36,8 @@
     "faq1Q": "What CSV dialects are supported?",
     "faq1A": "RFC 4180 standard CSV with customizable delimiters (comma, semicolon, tab, pipe). Quoted fields, escaped quotes, and multiline values are all supported.",
     "faq2Q": "Can I flatten nested JSON to CSV?",
-    "faq2A": "Yes. The tool can flatten nested JSON objects into dot-notation columns for CSV export, and unflatten them back."
+    "faq2A": "Yes. The tool can flatten nested JSON objects into dot-notation columns for CSV export, and unflatten them back.",
+    "faq3Q": "What delimiters are supported?",
+    "faq3A": "Comma (default), tab, semicolon, and pipe. The delimiter is auto-detected during import and can be changed manually."
   }
 }

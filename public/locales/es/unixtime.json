@@ -71,6 +71,13 @@
     "faq2Q": "¿Esta herramienta maneja zonas horarias?",
     "faq2A": "Sí. La herramienta muestra tanto UTC como tu zona horaria local. Puedes convertir marcas de tiempo a fechas en cualquiera de las zonas horarias.",
     "faq3Q": "¿Cuál es el rango de marcas de tiempo Unix?",
-    "faq3A": "Los enteros con signo de 32 bits estándar soportan marcas de tiempo hasta el 19 de enero de 2038 (el problema del año 2038). Esta herramienta soporta un rango mucho mayor usando el objeto Date de JavaScript."
+    "faq3A": "Los enteros con signo de 32 bits estándar soportan marcas de tiempo hasta el 19 de enero de 2038 (el problema del año 2038). Esta herramienta soporta un rango mucho mayor usando el objeto Date de JavaScript.",
+    "stepsTitle": "Cómo convertir un timestamp Unix",
+    "step1Title": "Introduce un timestamp o fecha",
+    "step1Text": "Pega un timestamp Unix en el panel Timestamp→Fecha, o selecciona una fecha y hora en el panel Fecha→Timestamp.",
+    "step2Title": "Elige segundos o milisegundos",
+    "step2Text": "Selecciona la unidad (la auto-detección funciona para la mayoría de casos). Usa los botones Rápido para \"Ahora\" o \"Hoy\".",
+    "step3Title": "Lee la conversión",
+    "step3Text": "El resultado muestra hora local, ISO 8601, RFC 2822, tiempo relativo e información de zona horaria — todo de un vistazo."
   }
 }

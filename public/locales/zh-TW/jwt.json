@@ -45,6 +45,21 @@
     "keyFormatsTitle": "接受的密鑰格式",
     "keyFormats": "HMAC：任意 UTF-8 字串。非對稱：僅支援 PEM 格式——簽章使用 PKCS8（-----BEGIN PRIVATE KEY-----），驗證使用 SPKI（-----BEGIN PUBLIC KEY-----）。不支援 PKCS1、SEC1、加密 PEM 和 X.509 憑證；工具會告訴你具體的 openssl 轉換命令。",
     "faq1Q": "什麼是 JWT？",
-    "faq1A": "JSON Web Token（JWT）是一種開放標準（RFC 7519），用於在各方之間安全地傳輸資訊。它常用於身份驗證和資訊交換。"
+    "faq1A": "JSON Web Token（JWT）是一種開放標準（RFC 7519），用於在各方之間安全地傳輸資訊。它常用於身份驗證和資訊交換。",
+    "useCasesTitle": "常見使用場景",
+    "useCasesP1": "API 請求驗證——在 Authorization 標頭中包含 JWT（Bearer token）以驗證呼叫者身份和權限。",
+    "useCasesP2": "開發期間解碼和除錯權杖——檢查標頭和承載宣告（iss、sub、exp、iat），無需撰寫程式碼。",
+    "useCasesP3": "使用共享密鑰（HMAC）或公鑰（RSA/ECDSA）驗證權杖簽章，確保完整性後再信任其宣告。",
+    "stepsTitle": "如何解碼 JWT",
+    "step1Title": "貼上 JWT",
+    "step1Desc": "複製完整的 JWT 字串（三個以點號分隔的 Base64URL 片段）並貼到「解碼」分頁的輸入欄位中。",
+    "step2Title": "檢查標頭和承載",
+    "step2Desc": "工具自動將標頭（演算法、類型）和承載（宣告）解碼為可讀的 JSON。檢查 exp 宣告以確認權杖是否已過期。",
+    "step3Title": "驗證簽章（可選）",
+    "step3Desc": "切換到「驗證簽章」區域，輸入密鑰或公鑰，點擊「驗證簽章」確認權杖是由預期方簽署的。",
+    "faq2Q": "HMAC 和 RSA JWT 演算法有什麼區別？",
+    "faq2A": "HMAC 演算法（HS256/384/512）使用共享密鑰——簽發者和驗證者都知道相同的金鑰。RSA 演算法（RS256/384/512）使用公鑰/私鑰對——簽發者用私鑰簽章，任何持有公鑰的人都可以驗證。伺服器之間使用 HMAC，驗證者不應能建立權杖的分散式系統使用 RSA。",
+    "faq3Q": "JWT 過期後會怎樣？",
+    "faq3A": "承載中的 exp 宣告指定了過期時間戳。超過該時間後，伺服器應拒絕該權杖。本工具顯示解碼後的 exp 值，讓你檢查權杖是否仍然有效。注意 JWT 過期是一個宣告，權杖本身不強制執行——伺服器必須驗證它。"
   }
 }

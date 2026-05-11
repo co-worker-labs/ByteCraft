@@ -67,6 +67,19 @@
     "faq1A": "UUID (Identificador Universalmente Único) es un estándar de identificador de 128 bits. Esta herramienta genera UUID v4 (aleatorios) y v7 (ordenados por tiempo) que son únicos sin coordinación central.",
     "faq2Q": "¿Cuántos UUID puedo generar a la vez?",
     "faq2A": "Puedes generar hasta 1.000 UUID en un solo lote. Toda la generación se realiza en tu navegador usando crypto.getRandomValues().",
-    "aeoDefinition": "El Generador de UUID es una herramienta gratuita online para generar UUIDs v1, v3, v4, v5 y v7 en lote. Cumple con RFC 4122/9562. Se ejecuta completamente en tu navegador."
+    "aeoDefinition": "El Generador de UUID es una herramienta gratuita online para generar UUIDs v1, v3, v4, v5 y v7 en lote. Cumple con RFC 4122/9562. Se ejecuta completamente en tu navegador.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesP1": "Claves primarias de bases de datos — los UUIDs evitan colisiones de IDs en bases de datos distribuidas sin necesidad de un coordinador central.",
+    "useCasesP2": "Identificadores en sistemas distribuidos — genera IDs únicos entre múltiples servicios, regiones o centros de datos sin coordinación.",
+    "useCasesP3": "Tokens de sesión y trazado de solicitudes — usa UUIDs como IDs de correlación garantizados únicos en toda tu infraestructura.",
+    "stepsTitle": "Cómo generar UUIDs",
+    "step1Title": "Selecciona tu versión de UUID",
+    "step1Desc": "Elige v4 (aleatorio, uso general), v7 (ordenado por tiempo, amigable con bases de datos), v3/v5 (determinista a partir de namespace + nombre) o v1 (timestamp + MAC).",
+    "step2Title": "Configura la cantidad y el formato",
+    "step2Desc": "Ajusta el control deslizante para generar hasta 100 UUIDs de una vez. Elige formato estándar, sin guiones o con llaves, y activa mayúsculas si es necesario.",
+    "step3Title": "Copia o descarga",
+    "step3Desc": "Haz clic en el botón de copiar para un solo UUID, o descarga todos los UUIDs generados como archivo .txt para uso masivo.",
+    "faq3Q": "¿Puedo generar el mismo UUID cada vez?",
+    "faq3A": "Sí. Usa v3 (MD5) o v5 (SHA-1) con el mismo namespace y nombre — siempre producen el mismo UUID determinista. Esto es útil para generar identificadores consistentes a partir de entradas conocidas como URLs o nombres de dominio."
   }
 }

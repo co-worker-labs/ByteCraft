@@ -37,6 +37,22 @@
     "faq1A": "camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case, Title Case, Sentence case, UPPER CASE, lower case e mais.",
     "faq2Q": "Posso converter múltiplas strings de uma vez?",
     "faq2A": "Sim. Cole múltiplas linhas e a ferramenta converte cada linha independentemente. A conversão multilinha aplica a capitalização selecionada a cada linha.",
-    "aeoDefinition": "O Conversor de Case de Texto é uma ferramenta online gratuita que converte texto entre camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE e mais. Conversão instantânea com pré-visualização em tempo real. Nenhum dado sai do seu navegador."
+    "aeoDefinition": "O Conversor de Case de Texto é uma ferramenta online gratuita que converte texto entre camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE e mais. Conversão instantânea com pré-visualização em tempo real. Nenhum dado sai do seu navegador.",
+    "whatIsTitle": "O que é um Conversor de Case de Texto?",
+    "whatIs": "Um conversor de case de texto transforma strings entre convenções de nomenclatura usadas em programação e escrita. Detecta automaticamente o formato de entrada e mostra conversões para camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, lower case, UPPER CASE, Title Case, Sentence case e path/case — tudo atualizado em tempo real conforme você digita.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesDesc1": "Migração de linguagens",
+    "useCasesP1": "Renomeie variáveis ao migrar código entre linguagens — converta snake_case do Python para camelCase do JavaScript com uma colada.",
+    "useCasesDesc2": "Imposição de convenções de nomenclatura",
+    "useCasesP2": "Gere slugs de URL consistentes, classes CSS ou nomes de variáveis de ambiente a partir de entrada em texto simples.",
+    "stepsTitle": "Como converter case de texto",
+    "step1Title": "Cole seu texto",
+    "step1Text": "Digite ou cole qualquer string no campo de entrada. A ferramenta detecta automaticamente o formato de case atual.",
+    "step2Title": "Revise as conversões",
+    "step2Text": "Todos os 11 formatos de case são exibidos instantaneamente em uma tabela. O formato detectado é destacado com um badge.",
+    "step3Title": "Copie o resultado",
+    "step3Text": "Clique no botão copiar ao lado de qualquer string convertida para copiá-la para sua área de transferência.",
+    "faq3Q": "Quais formatos de case são suportados?",
+    "faq3A": "O conversor suporta 11 formatos: camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, lower case, UPPER CASE, Title Case, Sentence case e path/case."
   }
 }

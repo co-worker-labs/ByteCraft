@@ -37,6 +37,22 @@
     "faq1A": "camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case, Title Case, Sentence case, UPPER CASE, lower case und mehr.",
     "faq2Q": "Kann ich mehrere Zeichenfolgen gleichzeitig konvertieren?",
     "faq2A": "Ja. Fügen Sie mehrere Zeilen ein und das Tool konvertiert jede Zeile unabhängig. Mehrzeilige Konvertierung wendet die ausgewählte Schreibweise auf jede Zeile an.",
-    "aeoDefinition": "Der Text-Case-Konverter ist ein kostenloses Online-Tool, das Text zwischen camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE und mehr konvertiert. Sofortige Konvertierung mit Echtzeitvorschau. Keine Daten verlassen Ihren Browser."
+    "aeoDefinition": "Der Text-Case-Konverter ist ein kostenloses Online-Tool, das Text zwischen camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE und mehr konvertiert. Sofortige Konvertierung mit Echtzeitvorschau. Keine Daten verlassen Ihren Browser.",
+    "faq3Q": "Welche Schreibungsformate werden unterstützt?",
+    "faq3A": "Der Konverter unterstützt 11 Formate: camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, lower case, UPPER CASE, Title Case, Sentence case und path/case.",
+    "step1Title": "Text einfügen",
+    "step1Text": "Geben Sie eine beliebige Zeichenfolge in das Eingabefeld ein oder fügen Sie sie ein. Das Tool erkennt das aktuelle Format automatisch.",
+    "step2Title": "Konvertierungen prüfen",
+    "step2Text": "Alle 11 Schreibungsformate werden sofort in einer Tabelle angezeigt. Das erkannte Format ist mit einem Badge hervorgehoben.",
+    "step3Title": "Ergebnis kopieren",
+    "step3Text": "Klicken Sie auf die Kopiertaste neben einer beliebigen konvertierten Zeichenfolge, um sie in die Zwischenablage zu kopieren.",
+    "stepsTitle": "Textschreibweise konvertieren",
+    "useCasesDesc1": "Sprachmigration",
+    "useCasesDesc2": "Namenskonventionen durchsetzen",
+    "useCasesP1": "Variablen beim Migrieren von Code zwischen Sprachen umbenennen — Python snake_case mit einem Einfügen in JavaScript camelCase konvertieren.",
+    "useCasesP2": "Konsistente URL-Slugs, CSS-Klassennamen oder Umgebungsvariablennamen aus Klartext-Eingabe generieren.",
+    "useCasesTitle": "Gängige Anwendungsfälle",
+    "whatIs": "Ein Text-Case-Konverter transformiert Zeichenfolgen zwischen Namenskonventionen der Programmierung und des Schreibens. Er erkennt das Eingabeformat automatisch und zeigt Konvertierungen in camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, lower case, UPPER CASE, Title Case, Sentence case und path/case — alle in Echtzeit beim Tippen aktualisiert.",
+    "whatIsTitle": "Was ist ein Text-Case-Konverter?"
   }
 }

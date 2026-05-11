@@ -22,6 +22,23 @@
     "rc4dropConfig": "Por defecto se descartan 192 palabras (768 bytes), pero puedes configurar el algoritmo para descartar cualquier cantidad de palabras.",
     "faq1Q": "¿Qué algoritmos de cifrado son compatibles?",
     "faq1A": "AES, DES, Triple DES (3DES), Rabbit, RC4 y RC4Drop usando CryptoJS. AES-256 es el recomendado para requisitos de seguridad modernos.",
-    "aeoDefinition": "Cifrar/Descifrar es una herramienta gratuita online para cifrar y descifrar texto usando AES, DES, Triple DES, Rabbit, RC4 y RC4Drop. Todo el procesamiento se ejecuta en tu navegador — no se envían datos a ningún servidor."
+    "aeoDefinition": "Cifrar/Descifrar es una herramienta gratuita online para cifrar y descifrar texto usando AES, DES, Triple DES, Rabbit, RC4 y RC4Drop. Todo el procesamiento se ejecuta en tu navegador — no se envían datos a ningún servidor.",
+    "whatIsTitle": "¿Qué es el cifrado?",
+    "whatIs": "El cifrado transforma texto plano legible en texto cifrado ilegible usando un algoritmo criptográfico y una clave secreta. Solo alguien con la clave correcta puede descifrar el texto cifrado de vuelta al texto plano original. Esta herramienta soporta cifrado simétrico: la misma clave cifra y descifra.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesP1": "Cifrar texto sensible antes de compartirlo — el destinatario necesita la misma frase de contraseña para descifrarlo.",
+    "useCasesP2": "Verificar la salida del cifrado o descifrar texto cifrado recibido, sin instalar ningún software.",
+    "useCasesP3": "Probar y aprender cómo se comportan diferentes algoritmos (AES, DES, RC4) con varios modos de bloque y esquemas de relleno.",
+    "stepsTitle": "Cómo cifrar o descifrar texto",
+    "step1Title": "Elige tu algoritmo",
+    "step1Desc": "Selecciona AES (recomendado), DES, Triple DES, Rabbit, RC4 o RC4Drop. Para cifradores de bloque, elige también un modo (CBC, CFB, CTR, OFB, ECB) y esquema de relleno.",
+    "step2Title": "Introduce tu texto y frase de contraseña",
+    "step2Desc": "Escribe o pega el texto plano (para cifrar) o el texto cifrado (para descifrar). Introduce la frase de contraseña — se requiere la misma frase para revertir la operación.",
+    "step3Title": "Cifra o descifra",
+    "step3Desc": "Haz clic en el botón Cifrar o Descifrar. El resultado aparece inmediatamente. Copia la salida o limpia los campos para empezar de nuevo. Todo el procesamiento ocurre en tu navegador.",
+    "faq2Q": "¿Qué algoritmo debería usar?",
+    "faq2A": "Usa AES para cualquier proyecto nuevo — es el estándar moderno, ampliamente soportado y considerado seguro. DES es obsoleto (clave de 56 bits). Triple DES es aceptable para sistemas heredados. RC4 tiene vulnerabilidades conocidas; usa RC4Drop si debes usar RC4. Rabbit es rápido pero menos auditado.",
+    "faq3Q": "¿Qué es un modo de cifrado de bloque?",
+    "faq3A": "Los cifradores de bloque (AES, DES) cifran datos en bloques de tamaño fijo (típicamente 8 o 16 bytes). El modo define cómo se encadenan múltiples bloques. CBC es el más común y recomendado para uso general. ECB cifra cada bloque independientemente — evítalo, ya que bloques de texto plano idénticos producen texto cifrado idéntico."
   }
 }

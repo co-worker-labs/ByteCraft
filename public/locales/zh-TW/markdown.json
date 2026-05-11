@@ -26,6 +26,21 @@
     "gfmTitle": "GitHub Flavored Markdown",
     "gfmP1": "支援表格、任務清單（- [ ] todo）、刪除線、自動連結和 Mermaid 圖表（流程圖、時序圖、類別圖、狀態圖、ER 圖、甘特圖、圓餅圖、Git 圖）。使用 ```mermaid 程式碼區塊。暫不支援數學公式與註腳。",
     "faq1Q": "什麼是 Markdown 編輯器？",
-    "faq1A": "一個即時 Markdown 編輯器，支援分窗預覽、GFM（GitHub 風格 Markdown）、語法高亮、任務清單和 Mermaid 圖表。"
+    "faq1A": "一個即時 Markdown 編輯器，支援分窗預覽、GFM（GitHub 風格 Markdown）、語法高亮、任務清單和 Mermaid 圖表。",
+    "useCasesTitle": "常見使用場景",
+    "useCasesP1": "為 GitHub 或 GitLab 儲存庫撰寫和預覽 README 檔案，在提交前確認效果。",
+    "useCasesP2": "撰寫文件或部落格文章並即時格式化——與你的文字並排檢視渲染輸出。",
+    "useCasesP3": "將 Markdown 筆記轉換為 PDF 或 PNG，方便與沒有 Markdown 檢視器的人分享。",
+    "stepsTitle": "如何使用 Markdown 編輯器",
+    "step1Title": "撰寫或貼上 Markdown",
+    "step1Desc": "在編輯器中直接輸入或拖放 .md 檔案。預覽會隨輸入即時更新。",
+    "step2Title": "選擇檢視模式",
+    "step2Desc": "在編輯、預覽和分割佈局之間切換。分割模式提供並排編輯和即時渲染。",
+    "step3Title": "匯出文件",
+    "step3Desc": "下載為 .md、將渲染預覽匯出為 PDF 或 PNG，或將原始 Markdown 複製到剪貼簿。",
+    "faq2Q": "此編輯器支援 Mermaid 圖表嗎？",
+    "faq2A": "支援。使用 ```mermaid 程式碼區塊，預覽會自動渲染流程圖、時序圖、類別圖、狀態圖、ER 圖、甘特圖、圓餅圖和 Git 圖。",
+    "faq3Q": "有檔案大小限制嗎？",
+    "faq3A": "即時預覽適用於合理大小的內容。非常大的文件會顯示「立即渲染」按鈕而非自動渲染，以保持頁面回應性。所有處理在瀏覽器中完成——不會傳送到伺服器。"
   }
 }

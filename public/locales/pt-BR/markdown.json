@@ -26,6 +26,21 @@
     "gfmP1": "Suporta tabelas, listas de tarefas (- [ ] tarefa), tachado, autolinks e diagramas Mermaid (fluxograma, sequência, classe, estado, ER, Gantt, pizza, git graph). Use blocos de código ```mermaid. Matemática e notas de rodapé estão fora do escopo.",
     "faq1Q": "O que é o Editor Markdown?",
     "faq1A": "Um editor Markdown ao vivo com visualização em painel dividido, suportando GFM (GitHub Flavored Markdown), destaque de sintaxe, listas de tarefas e diagramas Mermaid.",
-    "aeoDefinition": "O Editor Markdown é uma ferramenta online gratuita para escrever e pré-visualizar Markdown com suporte a GitHub Flavored Markdown. Inclui destaque de sintaxe, pré-visualização ao vivo e exportação PDF/PNG. Roda inteiramente no seu navegador."
+    "aeoDefinition": "O Editor Markdown é uma ferramenta online gratuita para escrever e pré-visualizar Markdown com suporte a GitHub Flavored Markdown. Inclui destaque de sintaxe, pré-visualização ao vivo e exportação PDF/PNG. Roda inteiramente no seu navegador.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesP1": "Escrever e pré-visualizar arquivos README para repositórios GitHub ou GitLab antes de fazer commit.",
+    "useCasesP2": "Redigir documentação ou posts de blog com formatação ao vivo — veja a saída renderizada lado a lado com seu texto.",
+    "useCasesP3": "Converter notas Markdown para PDF ou PNG para compartilhar com pessoas que não têm um visualizador Markdown.",
+    "stepsTitle": "Como usar o Editor Markdown",
+    "step1Title": "Escreva ou cole seu Markdown",
+    "step1Desc": "Digite diretamente no editor ou solte um arquivo .md. A prévia atualiza em tempo real conforme você digita.",
+    "step2Title": "Escolha o modo de visualização",
+    "step2Desc": "Alterne entre layouts Editar, Prévia e Dividido. Dividido oferece edição lado a lado com renderização ao vivo.",
+    "step3Title": "Exporte seu documento",
+    "step3Desc": "Baixe como .md, exporte a prévia renderizada como PDF ou PNG, ou copie o Markdown bruto para sua área de transferência.",
+    "faq2Q": "Este editor suporta diagramas Mermaid?",
+    "faq2A": "Sim. Use um bloco de código ```mermaid e a prévia renderizará fluxogramas, diagramas de sequência, diagramas de classe, diagramas de estado, diagramas ER, gráficos de Gantt, gráficos de pizza e git graphs automaticamente.",
+    "faq3Q": "Existe um limite de tamanho de arquivo?",
+    "faq3A": "A prévia ao vivo funciona para conteúdo de tamanho razoável. Documentos muito grandes mostram um botão 'Renderizar agora' em vez de renderizar automaticamente para manter a página responsiva. Todo o processamento acontece no seu navegador — nada é enviado a um servidor."
   }
 }

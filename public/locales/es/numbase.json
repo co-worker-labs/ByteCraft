@@ -17,6 +17,22 @@
     "twosComplement": "El complemento a dos es la forma estándar de representar enteros con signo en binario. El bit más significativo (MSB) actúa como bit de signo: 0 para positivo, 1 para negativo. Para obtener el valor negativo, invierte todos los bits y suma 1. Por ejemplo, en modo de 8 bits, -1 se representa como 11111111 (0xFF).",
     "faq1Q": "¿Qué bases numéricas son compatibles?",
     "faq1A": "Binario (base 2), Octal (base 8), Decimal (base 10) y Hexadecimal (base 16) con conversión en tiempo real entre las cuatro.",
-    "aeoDefinition": "El Conversor de base numérica es una herramienta gratuita online para convertir números entre binario, octal, decimal y hexadecimal. Soporta complemento a dos de 8/16/32/64 bits y un editor de bits visual. Se ejecuta completamente en tu navegador."
+    "aeoDefinition": "El Conversor de base numérica es una herramienta gratuita online para convertir números entre binario, octal, decimal y hexadecimal. Soporta complemento a dos de 8/16/32/64 bits y un editor de bits visual. Se ejecuta completamente en tu navegador.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesDesc1": "Programación de sistemas",
+    "useCasesP1": "Depura protocolos de bajo nivel, paquetes de red o formatos de archivo binario que usan notación hexadecimal u octal.",
+    "useCasesDesc2": "Hardware y color",
+    "useCasesP2": "Convierte valores de color entre hexadecimal y decimal, o calcula direcciones de memoria y offsets durante desarrollo embebido.",
+    "stepsTitle": "Cómo convertir bases numéricas",
+    "step1Title": "Introduce un valor",
+    "step1Text": "Escribe un número en cualquier base: decimal, hexadecimal (prefijo 0x), octal (prefijo 0o) o binario (prefijo 0b). Todas las demás bases se actualizan al instante.",
+    "step2Title": "Elige el ancho de bits",
+    "step2Text": "Selecciona 8, 16, 32 o 64 bits para ver la representación en complemento a dos y alternar bits individuales en el editor visual.",
+    "step3Title": "Copia el resultado",
+    "step3Text": "Haz clic en el botón de copiar junto a cualquier conversión de base para copiar el valor formateado.",
+    "faq2Q": "¿Para qué se usa el complemento a dos?",
+    "faq2A": "El complemento a dos es cómo las computadoras representan enteros con signo. Permite a la CPU usar el mismo circuito para suma y resta, y evita el problema de +0/-0 de la representación signo-magnitud.",
+    "faq3Q": "¿Soporta números negativos?",
+    "faq3A": "Sí. Introduce un número decimal negativo y la herramienta muestra las representaciones binarias, hexadecimales y octales en complemento a dos según el ancho de bits seleccionado."
   }
 }

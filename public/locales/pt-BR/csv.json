@@ -28,6 +28,15 @@
     "faq1A": "Uma ferramenta para converter dados CSV para JSON, tabelas Markdown ou formato TSV e vice-versa. Lida com campos entre aspas, delimitadores personalizados e objetos aninhados.",
     "faq2Q": "Quais dialetos CSV são suportados?",
     "faq2A": "CSV padrão RFC 4180 com delimitadores personalizáveis (vírgula, ponto e vírgula, tab, pipe). Campos entre aspas, aspas escapadas e valores multilinha são todos suportados.",
-    "aeoDefinition": "O Conversor CSV é uma ferramenta online gratuita para converter entre formatos JSON e CSV com pré-visualização em tempo real. Conversão bidirecional com escape adequado e suporte a Unicode. Nenhum dado sai do seu navegador."
+    "aeoDefinition": "O Conversor CSV é uma ferramenta online gratuita para converter entre formatos JSON e CSV com pré-visualização em tempo real. Conversão bidirecional com escape adequado e suporte a Unicode. Nenhum dado sai do seu navegador.",
+    "stepsTitle": "Como converter CSV para JSON (e vice-versa)",
+    "step1Title": "Cole seus dados",
+    "step1Text": "Cole texto CSV no painel esquerdo ou JSON no painel direito. A ferramenta detecta automaticamente a direção.",
+    "step2Title": "Configure as opções",
+    "step2Text": "Escolha um delimitador (vírgula, tab, ponto e vírgula, pipe) e ative o achatamento de JSON aninhado se necessário.",
+    "step3Title": "Copie ou baixe",
+    "step3Text": "A saída convertida aparece instantaneamente. Copie o resultado ou visualize na tabela integrada.",
+    "faq3Q": "Quais delimitadores são suportados?",
+    "faq3A": "Vírgula (padrão), tab, ponto e vírgula e pipe. O delimitador é detectado automaticamente durante a importação e pode ser alterado manualmente."
   }
 }

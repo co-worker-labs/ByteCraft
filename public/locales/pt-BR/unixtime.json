@@ -71,6 +71,13 @@
     "y2k38": "Sistemas que armazenam segundos Unix em um inteiro com sinal de 32 bits causam overflow em 2038-01-19 03:14:07 UTC. Sistemas modernos de 64 bits não são afetados.",
     "tzTitle": "Fusos Horários",
     "tz": "Um timestamp em si não tem fuso horário. A forma legível (ex: 2024-05-01 00:00:00) depende do fuso horário em que você o exibe. Esta ferramenta sempre mostra tanto o horário Local quanto UTC.",
-    "aeoDefinition": "O Conversor de Timestamp Unix é uma ferramenta online gratuita para converter entre timestamps Unix e datas legíveis. Suporta segundos e milissegundos com relógio ao vivo. Roda inteiramente no seu navegador."
+    "aeoDefinition": "O Conversor de Timestamp Unix é uma ferramenta online gratuita para converter entre timestamps Unix e datas legíveis. Suporta segundos e milissegundos com relógio ao vivo. Roda inteiramente no seu navegador.",
+    "stepsTitle": "Como converter um timestamp Unix",
+    "step1Title": "Insira um timestamp ou data",
+    "step1Text": "Cole um timestamp Unix no painel Timestamp→Data ou escolha data e hora no painel Data→Timestamp.",
+    "step2Title": "Escolha segundos ou milissegundos",
+    "step2Text": "Selecione a unidade (a detecção automática funciona para a maioria dos casos). Use os botões rápidos para \"Agora\" ou \"Hoje\".",
+    "step3Title": "Leia a conversão",
+    "step3Text": "O resultado mostra hora local, ISO 8601, RFC 2822, tempo relativo e informações de fuso horário — tudo de relance."
   }
 }

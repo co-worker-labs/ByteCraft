@@ -52,7 +52,19 @@
     "limitationsP3": "Les différences de fins de ligne (CRLF vs LF) et les espaces de fin de ligne sont normalisées. Elles n'apparaîtront jamais comme des changements.",
     "faq1Q": "Qu'est-ce qu'un outil de diff de texte ?",
     "faq1A": "Un outil de diff compare deux textes et met en évidence les différences. Cet outil montre les ajouts, suppressions et modifications au niveau du mot ou du caractère.",
-    "aeoDefinition": "Text Diff est un outil gratuit en ligne pour comparer deux textes avec une précision au niveau des lignes et des mots. Vue côte à côte ou en ligne avec les changements mis en évidence. Fonctionne entièrement dans votre navigateur — aucune donnée n'est envoyée à un serveur."
+    "aeoDefinition": "Text Diff est un outil gratuit en ligne pour comparer deux textes avec une précision au niveau des lignes et des mots. Vue côte à côte ou en ligne avec les changements mis en évidence. Fonctionne entièrement dans votre navigateur — aucune donnée n'est envoyée à un serveur.",
+    "faq2Q": "Puis-je ignorer les espaces ou les différences de casse ?",
+    "faq2A": "Oui. Utilisez le menu Options pour activer « Ignorer les espaces » et « Ignorer la casse ». Ces paramètres filtrent les changements superficiels pour vous concentrer sur les différences significatives.",
+    "faq3Q": "Quel algorithme le diff utilise-t-il ?",
+    "faq3A": "L'outil utilise l'algorithme de diff de Myers via la bibliothèque jsdiff. Il calcule d'abord un diff au niveau des lignes, puis effectue un second passage au niveau des mots sur les lignes modifiées adjacentes pour mettre en évidence les mots spécifiques ajoutés ou supprimés.",
+    "step1Title": "Collez ou chargez vos textes",
+    "step1Desc": "Entrez votre texte original dans Texte A et la version modifiée dans Texte B. Vous pouvez aussi glisser-déposer des fichiers directement sur chaque entrée.",
+    "step2Title": "Choisir votre vue",
+    "step2Desc": "Basculez entre côte à côte (affiche les deux textes avec les changements alignés) et en ligne (affiche les ajouts et suppressions dans un flux unique).",
+    "step3Title": "Examiner les changements mis en évidence",
+    "step3Desc": "Les lignes ajoutées apparaissent en vert, les lignes supprimées en rouge. Les surlignages au niveau des mots dans les lignes modifiées montrent exactement quels mots diffèrent — la même convention utilisée par les pull requests GitHub.",
+    "stepsTitle": "Comment comparer deux textes",
+    "useCasesTitle": "Cas d'utilisation courants"
   },
   "tooLarge": "Le fichier est trop volumineux pour être comparé",
   "binaryRejected": "Les fichiers binaires ne sont pas supportés"

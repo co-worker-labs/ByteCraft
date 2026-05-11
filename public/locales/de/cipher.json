@@ -22,6 +22,23 @@
     "rc4dropConfig": "Standardmäßig werden 192 Wörter (768 Bytes) verworfen, aber Sie können den Algorithmus so konfigurieren, dass eine beliebige Anzahl von Wörtern verworfen wird.",
     "faq1Q": "Welche Verschlüsselungsalgorithmen werden unterstützt?",
     "faq1A": "AES, DES, Triple DES (3DES), Rabbit, RC4 und RC4Drop — mit CryptoJS. AES-256 wird für moderne Sicherheitsanforderungen empfohlen.",
-    "aeoDefinition": "Ver-/Entschlüsseln ist ein kostenloses Online-Tool zum Ver- und Entschlüsseln von Text mit AES, DES, Triple DES, Rabbit, RC4 und RC4Drop. Die gesamte Verarbeitung läuft in Ihrem Browser — es werden keine Daten an einen Server gesendet."
+    "aeoDefinition": "Ver-/Entschlüsseln ist ein kostenloses Online-Tool zum Ver- und Entschlüsseln von Text mit AES, DES, Triple DES, Rabbit, RC4 und RC4Drop. Die gesamte Verarbeitung läuft in Ihrem Browser — es werden keine Daten an einen Server gesendet.",
+    "faq2Q": "Welchen Algorithmus sollte ich verwenden?",
+    "faq2A": "Verwenden Sie AES für jedes neue Projekt — es ist der moderne Standard, weit verbreitet und gilt als sicher. DES ist veraltet (56-Bit-Schlüssel). Triple DES ist für Legacy-Systeme akzeptabel. RC4 hat bekannte Schwachstellen; verwenden Sie RC4Drop, falls Sie RC4 nutzen müssen. Rabbit ist schnell, aber weniger geprüft.",
+    "faq3Q": "Was ist ein Blockchiffren-Modus?",
+    "faq3A": "Blockchiffren (AES, DES) verschlüsseln Daten in Blöcken fester Größe (typischerweise 8 oder 16 Bytes). Der Modus bestimmt, wie mehrere Blöcke verkettet werden. CBC ist der gängigste und für allgemeine Verwendung empfohlen. ECB verschlüsselt jeden Block unabhängig — vermeiden Sie dies, da identische Klartextblöcke identische Chiffretextblöcke erzeugen.",
+    "step1Desc": "Wählen Sie AES (empfohlen), DES, Triple DES, Rabbit, RC4 oder RC4Drop. Wählen Sie bei Blockchiffren auch einen Modus (CBC, CFB, CTR, OFB, ECB) und ein Padding-Schema.",
+    "step1Title": "Algorithmus wählen",
+    "step2Desc": "Geben Sie den Klartext (zum Verschlüsseln) oder Chiffretext (zum Entschlüsseln) ein oder fügen Sie ihn ein. Geben Sie die Passphrase ein — dieselbe Passphrase wird zum Umkehren der Operation benötigt.",
+    "step2Title": "Text und Passphrase eingeben",
+    "step3Desc": "Klicken Sie auf Verschlüsseln oder Entschlüsseln. Das Ergebnis erscheint sofort. Kopieren Sie die Ausgabe oder leeren Sie die Felder für einen Neustart. Die gesamte Verarbeitung erfolgt in Ihrem Browser.",
+    "step3Title": "Ver- oder entschlüsseln",
+    "stepsTitle": "Text ver- oder entschlüsseln",
+    "useCasesP1": "Verschlüsseln von sensiblen Texten vor dem Teilen — der Empfänger benötigt dieselbe Passphrase zum Entschlüsseln.",
+    "useCasesP2": "Überprüfen der Verschlüsselungsausgabe oder Entschlüsseln von empfangenem Chiffretext, ohne Software zu installieren.",
+    "useCasesP3": "Testen und Lernen, wie verschiedene Algorithmen (AES, DES, RC4) mit verschiedenen Blockmodi und Padding-Schemata arbeiten.",
+    "useCasesTitle": "Gängige Anwendungsfälle",
+    "whatIs": "Verschlüsselung wandelt lesbaren Klartext mithilfe eines kryptografischen Algorithmus und eines geheimen Schlüssels in unlesbaren Chiffretext um. Nur wer den korrekten Schlüssel besitzt, kann den Chiffretext wieder in den ursprünglichen Klartext entschlüsseln. Dieses Tool unterstützt symmetrische Verschlüsselung — derselbe Schlüssel ver- und entschlüsselt.",
+    "whatIsTitle": "Was ist Verschlüsselung?"
   }
 }

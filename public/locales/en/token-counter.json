@@ -21,6 +21,18 @@
     "faq2Q": "Which models use the o200k_base encoding?",
     "faq2A": "The o200k_base encoding is used by GPT-4o, GPT-4.1, o1, o3, o4-mini, and GPT-5. It supports a vocabulary of approximately 200,000 tokens with improved multilingual coverage compared to the earlier cl100k_base encoding.",
     "faq3Q": "How accurate is the token count?",
-    "faq3A": "The count is highly accurate for standard text. It uses the same BPE algorithm as OpenAI's tokenizer. Minor discrepancies may occur for chat-formatted messages (system/user/assistant roles) since this tool counts raw text tokens, not chat template tokens."
+    "faq3A": "The count is highly accurate for standard text. It uses the same BPE algorithm as OpenAI's tokenizer. Minor discrepancies may occur for chat-formatted messages (system/user/assistant roles) since this tool counts raw text tokens, not chat template tokens.",
+    "stepsTitle": "How to Count Tokens",
+    "step1Title": "Paste your text",
+    "step1Text": "Type or paste the text you want to tokenize. The token count updates in real time.",
+    "step2Title": "Review the count",
+    "step2Text": "See total tokens, characters, chars-per-token ratio, and context window usage (based on GPT-4o 128K).",
+    "step3Title": "Inspect individual tokens",
+    "step3Text": "Scroll through the token visualization where each colored segment represents one BPE token with its ID and text.",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesDesc1": "Prompt engineering",
+    "useCasesP1": "Count tokens before sending prompts to OpenAI APIs to stay within context limits and estimate costs.",
+    "useCasesDesc2": "Model comparison",
+    "useCasesP2": "Compare token counts across different text inputs to optimize prompt efficiency for GPT-4o, o1, and GPT-5 models."
   }
 }

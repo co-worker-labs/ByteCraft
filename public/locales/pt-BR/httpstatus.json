@@ -453,6 +453,22 @@
     "faq2Q": "Quantos códigos de status estão documentados?",
     "faq2A": "A ferramenta cobre todos os códigos de status padrão em 5 categorias: 1xx (Informativo), 2xx (Sucesso), 3xx (Redirecionamento), 4xx (Erro do cliente) e 5xx (Erro do servidor).",
     "text": "Uma referência completa de códigos de status HTTP com descrições, categorias e links para especificações RFC. Cobre todos os códigos registrados na IANA além de códigos não oficiais comuns. Teste APIs com o [HTTP Client](/httpclient), ou codifique URLs com o [Codificador de URL](/urlencoder).",
-    "aeoDefinition": "Códigos de Status HTTP é uma referência online gratuita para todos os códigos de status HTTP com descrições, categorias e links RFC. Cobre códigos oficiais da IANA e códigos não oficiais comuns."
+    "aeoDefinition": "Códigos de Status HTTP é uma referência online gratuita para todos os códigos de status HTTP com descrições, categorias e links RFC. Cobre códigos oficiais da IANA e códigos não oficiais comuns.",
+    "whatIsTitle": "O que são Códigos de Status HTTP?",
+    "whatIs": "Códigos de status HTTP são números de três dígitos retornados por um servidor em resposta a uma requisição do cliente. Indicam se a requisição foi bem-sucedida, redirecionada ou encontrou um erro. Os códigos são agrupados em cinco classes: 1xx (Informativo), 2xx (Sucesso), 3xx (Redirecionamento), 4xx (Erro do cliente) e 5xx (Erro do servidor). Esta referência cobre todos os códigos registrados na IANA além de códigos não oficiais comuns do Nginx e Cloudflare.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesDesc1": "Depuração de APIs",
+    "useCasesP1": "Depure respostas de API consultando códigos de status desconhecidos e entendendo seu significado, causas comuns e contexto de uso.",
+    "useCasesDesc2": "Design de tratamento de erros",
+    "useCasesP2": "Implemente tratamento de erros adequado na sua aplicação entendendo quais códigos esperar e como responder a cada um.",
+    "stepsTitle": "Como usar a referência de Códigos de Status HTTP",
+    "step1Title": "Busque ou filtre",
+    "step1Text": "Busque por número do código, nome do status ou descrição. Filtre por categoria usando os botões: 1xx a 5xx ou códigos não oficiais.",
+    "step2Title": "Revise os detalhes",
+    "step2Text": "Passe o mouse sobre uma linha (desktop) ou toque nela (mobile) para expandir notas de uso e causas comuns daquele código de status.",
+    "step3Title": "Consulte a especificação",
+    "step3Text": "Cada código linka para sua especificação RFC. Clique no link da spec para ler a definição autoritativa.",
+    "faq3Q": "Qual é o código de status HTTP mais comum?",
+    "faq3A": "200 OK é o mais comum — significa que a requisição foi bem-sucedida. 404 Not Found (recurso não existe) e 500 Internal Server Error (falha no servidor) também são muito comuns. Entender esses códigos ajuda a diagnosticar problemas mais rapidamente."
   }
 }

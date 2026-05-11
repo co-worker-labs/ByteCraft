@@ -10,6 +10,19 @@
   "droppedWords": "Dropped words:",
   "descriptions": {
     "aeoDefinition": "Encrypt/Decrypt is a free online tool for encrypting and decrypting text using AES, DES, Triple DES, Rabbit, RC4, and RC4Drop. All processing runs in your browser — no data is sent to any server.",
+    "whatIsTitle": "What is encryption?",
+    "whatIs": "Encryption transforms readable plaintext into unreadable ciphertext using a cryptographic algorithm and a secret key. Only someone with the correct key can decrypt the ciphertext back to the original plaintext. This tool supports symmetric encryption — the same key encrypts and decrypts.",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesP1": "Encrypting sensitive text before sharing it — the recipient needs the same passphrase to decrypt.",
+    "useCasesP2": "Verifying encryption output or decrypting ciphertext you received, without installing any software.",
+    "useCasesP3": "Testing and learning how different algorithms (AES, DES, RC4) behave with various block modes and padding schemes.",
+    "stepsTitle": "How to Encrypt or Decrypt Text",
+    "step1Title": "Choose your algorithm",
+    "step1Desc": "Select AES (recommended), DES, Triple DES, Rabbit, RC4, or RC4Drop. For block ciphers, also pick a mode (CBC, CFB, CTR, OFB, ECB) and padding scheme.",
+    "step2Title": "Enter your text and passphrase",
+    "step2Desc": "Type or paste the plaintext (to encrypt) or ciphertext (to decrypt). Enter the passphrase — the same passphrase is required to reverse the operation.",
+    "step3Title": "Encrypt or decrypt",
+    "step3Desc": "Click the Encrypt or Decrypt button. The result appears immediately. Copy the output or clear the fields to start over. All processing happens in your browser.",
     "aesTitle": "AES",
     "aes": "The Advanced Encryption Standard (AES) is a U.S. Federal Information Processing Standard (FIPS). It was selected after a 5-year process where 15 competing designs were evaluated.",
     "desTitle": "DES, Triple DES",
@@ -22,6 +35,10 @@
     "rc4drop": "It was discovered that the first few bytes of keystream are strongly non-random and leak information about the key. We can defend against this attack by discarding the initial portion of the keystream. This modified algorithm is traditionally called RC4-drop.",
     "rc4dropConfig": "By default, 192 words (768 bytes) are dropped, but you can configure the algorithm to drop any number of words.",
     "faq1Q": "Is my data sent to a server during encryption?",
-    "faq1A": "No. All encryption and decryption happens entirely in your browser using the CryptoJS library. Your data and passphrase never leave your device."
+    "faq1A": "No. All encryption and decryption happens entirely in your browser using the CryptoJS library. Your data and passphrase never leave your device.",
+    "faq2Q": "Which algorithm should I use?",
+    "faq2A": "Use AES for any new project — it's the modern standard, widely supported, and considered secure. DES is obsolete (56-bit key). Triple DES is acceptable for legacy systems. RC4 has known vulnerabilities; use RC4Drop if you must use RC4. Rabbit is fast but less commonly audited.",
+    "faq3Q": "What is a block cipher mode?",
+    "faq3A": "Block ciphers (AES, DES) encrypt data in fixed-size blocks (typically 8 or 16 bytes). The mode defines how multiple blocks are chained together. CBC is the most common and recommended for general use. ECB encrypts each block independently — avoid it, as identical plaintext blocks produce identical ciphertext."
   }
 }

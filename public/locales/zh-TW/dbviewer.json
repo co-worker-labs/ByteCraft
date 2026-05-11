@@ -73,6 +73,18 @@
     "faq2Q": "資料庫會上傳到伺服器嗎？",
     "faq2A": "不會。資料庫使用 sql.js（編譯為 WebAssembly 的 SQLite）載入到瀏覽器記憶體中，所有操作在本機完成。",
     "faq3Q": "支援哪些 SQL 功能？",
-    "faq3A": "完整的 SQLite SQL 語法，包括 SELECT、INSERT、UPDATE、DELETE、JOIN、子查詢、聚合和交易。編輯器提供資料表和欄位名稱的自動補全。"
+    "faq3A": "完整的 SQLite SQL 語法，包括 SELECT、INSERT、UPDATE、DELETE、JOIN、子查詢、聚合和交易。編輯器提供資料表和欄位名稱的自動補全。",
+    "stepsTitle": "如何檢視 SQLite 資料庫",
+    "step1Title": "開啟資料庫檔案",
+    "step1Text": "拖放 .db、.sqlite 或 .sqlite3 檔案，或點擊「試試範例資料庫」瀏覽範例。",
+    "step2Title": "瀏覽資料表",
+    "step2Text": "點擊側欄中的任何資料表以檢視其結構描述和資料。使用分頁瀏覽大型資料集。",
+    "step3Title": "執行 SQL 查詢",
+    "step3Text": "在編輯器中撰寫 SQL，支援自動補全。執行 SELECT 查詢並將結果匯出為 CSV 或 JSON。",
+    "useCasesTitle": "常見使用場景",
+    "useCasesDesc1": "快速資料檢視",
+    "useCasesP1": "開啟來自行動應用、瀏覽器或嵌入式裝置的 SQLite 檔案，無需安裝桌面工具。",
+    "useCasesDesc2": "資料分析",
+    "useCasesP2": "對你的資料執行即席 SQL 查詢並匯出結果。使用 [CSV 轉換器](/csv)進一步處理。"
   }
 }

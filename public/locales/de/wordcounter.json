@@ -38,6 +38,18 @@
     "faq2A": "Wörter, Zeichen, Zeichen ohne Leerzeichen, Sätze, Absätze, CJK-Zeichen, Lesezeit und Sprechzeit — alle in Echtzeit aktualisiert während Sie tippen.",
     "faq3Q": "Kann ich bestimmte Schlüsselwörter verfolgen?",
     "faq3A": "Ja. Fügen Sie benutzerdefinierte Schlüsselwörter hinzu, um ihre Häufigkeit und Anzahl in Ihrem Text zu verfolgen. Der Schlüsselwörter-Tab zeigt die häufigsten Wörter und 2-Wort-Phrasen.",
-    "aeoDefinition": "Der Wortzähler ist ein kostenloses Online-Tool zur Echtzeit-Textanalyse einschließlich Wortanzahl, Zeichenanzahl, Satzanzahl, Lesezeit und Keyword-Dichte. Unterstützt CJK-Text. Es werden keine Daten an einen Server gesendet."
+    "aeoDefinition": "Der Wortzähler ist ein kostenloses Online-Tool zur Echtzeit-Textanalyse einschließlich Wortanzahl, Zeichenanzahl, Satzanzahl, Lesezeit und Keyword-Dichte. Unterstützt CJK-Text. Es werden keine Daten an einen Server gesendet.",
+    "step1Title": "Text einfügen",
+    "step1Text": "Geben Sie Text in den Eingabebereich ein oder fügen Sie ihn ein. Wortanzahl, Zeichenanzahl und Lesezeit aktualisieren sich in Echtzeit.",
+    "step2Title": "Übersicht prüfen",
+    "step2Text": "Die Registerkarte Übersicht zeigt Wörter, Zeichen, Sätze, Absätze, CJK-Zeichen, Lesezeit und Sprechzeit.",
+    "step3Title": "Schlüsselwörter analysieren",
+    "step3Text": "Wechseln Sie zur Registerkarte Schlüsselwörter für Häufigkeitsanalyse der häufigsten Wörter und 2-Wort-Phrasen, oder fügen Sie benutzerdefinierte Schlüsselwörter zum Tracking hinzu.",
+    "stepsTitle": "Wörter und Zeichen zählen",
+    "useCasesDesc1": "Schreiben und Bearbeiten",
+    "useCasesDesc2": "Übersetzungsschätzungen",
+    "useCasesP1": "Wortanzahl für Blogbeiträge, Essays oder Social-Media-Posts mit Zeichengrenzen verfolgen.",
+    "useCasesP2": "Genaue Wort- und Zeichenzählung für Übersetzungszeit- und Kostenschätzung, einschließlich CJK-Zeichenzählung.",
+    "useCasesTitle": "Gängige Anwendungsfälle"
   }
 }

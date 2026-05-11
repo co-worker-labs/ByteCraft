@@ -101,6 +101,20 @@
     "faq2Q": "¿Puedo usar autenticación?",
     "faq2A": "Sí. Soporta Basic Auth, tokens Bearer, claves API (header y query) y headers de autenticación personalizados. Todas las credenciales permanecen en tu navegador.",
     "faq3Q": "¿Soporta historial de peticiones?",
-    "faq3A": "Sí. Todas las peticiones se guardan en almacenamiento local con detalles completos de petición/respuesta. Puedes marcar como favoritas las peticiones usadas frecuentemente para acceso rápido."
+    "faq3A": "Sí. Todas las peticiones se guardan en almacenamiento local con detalles completos de petición/respuesta. Puedes marcar como favoritas las peticiones usadas frecuentemente para acceso rápido.",
+    "whatIsTitle": "¿Qué es el Cliente HTTP?",
+    "whatIs": "Un cliente HTTP basado en navegador para probar APIs REST. Envía solicitudes GET, POST, PUT, PATCH, DELETE, HEAD y OPTIONS con cabeceras, cuerpo y autenticación personalizados — todo desde tu navegador.",
+    "stepsTitle": "Cómo enviar una solicitud HTTP",
+    "step1Title": "Introduce una URL",
+    "step1Text": "Escribe o pega la URL del endpoint de la API. Selecciona un método HTTP (GET, POST, PUT, etc.).",
+    "step2Title": "Configura la solicitud",
+    "step2Text": "Añade parámetros de consulta, cabeceras, cuerpo de la solicitud (JSON, form-data o raw) y autenticación según sea necesario.",
+    "step3Title": "Envía e inspecciona",
+    "step3Text": "Haz clic en Enviar. Ve el cuerpo de la respuesta, cabeceras, cookies, tiempos e información de redirección en el panel de respuesta.",
+    "useCasesTitle": "Casos de uso comunes",
+    "useCasesDesc1": "Desarrollo de APIs",
+    "useCasesP1": "Prueba endpoints de APIs REST durante el desarrollo sin instalar herramientas de escritorio como Postman o curl.",
+    "useCasesDesc2": "Depuración",
+    "useCasesP2": "Inspecciona cabeceras de respuesta, códigos de estado y tiempos para diagnosticar problemas de API. Usa el interruptor proxy para evitar CORS."
   }
 }

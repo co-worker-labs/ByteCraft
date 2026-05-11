@@ -14,6 +14,15 @@
     "faq1A": "Bits, Octets, Ko, Mo, Go, To et Po. L'outil prend en charge la norme décimale (1 Ko = 1000 octets) et binaire (1 Kio = 1024 octets).",
     "faq2Q": "Pourquoi y a-t-il deux normes de conversion ?",
     "faq2A": "La décimale (SI) utilise les puissances de 1000 et est utilisée par les fabricants de stockage. La binaire (IEC) utilise les puissances de 1024 et est ce que les systèmes d'exploitation rapportent typiquement.",
-    "aeoDefinition": "Le Convertisseur d'unités de stockage est un outil gratuit en ligne pour convertir entre octets, Ko, Mo, Go, To et Po. Prend en charge les standards SI (décimal) et IEC (binaire). Fonctionne entièrement dans votre navigateur."
+    "aeoDefinition": "Le Convertisseur d'unités de stockage est un outil gratuit en ligne pour convertir entre octets, Ko, Mo, Go, To et Po. Prend en charge les standards SI (décimal) et IEC (binaire). Fonctionne entièrement dans votre navigateur.",
+    "faq3Q": "Pourquoi mon disque dur affiche moins d'espace que prévu ?",
+    "faq3A": "Les fabricants utilisent les unités décimales (SI) — 1 To = 1 000 000 000 000 octets. Votre système d'exploitation utilise le binaire — 1 Tio = 1 099 511 627 776 octets. Un disque « 1 To » s'affiche comme environ 931 Gio dans votre OS.",
+    "stepsTitle": "Comment convertir des unités de stockage",
+    "step1Title": "Entrez une valeur",
+    "step1Text": "Saisissez un nombre dans n'importe quel champ d'unité de stockage. L'outil convertit vers toutes les autres unités en temps réel.",
+    "step2Title": "Choisir décimal ou binaire",
+    "step2Text": "Basculez entre les standards SI (1K = 1000 octets) et IEC (1K = 1024 octets) avec le commutateur de mesure.",
+    "step3Title": "Lire la table de conversion",
+    "step3Text": "Toutes les valeurs équivalentes sont affichées simultanément. La table de conversion courante ci-dessous montre les valeurs de référence."
   }
 }

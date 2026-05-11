@@ -56,6 +56,18 @@
     "faq2Q": "为什么 Solana 路径要求所有段都是强化派生？",
     "faq2A": "Solana 通过 SLIP-0010 使用 ed25519 曲线，该标准仅支持强化派生。ed25519 密钥无法进行非强化派生，因此所有路径段必须包含 '（强化）后缀。",
     "faq3Q": "比特币 Legacy、SegWit 和 Taproot 地址有什么区别？",
-    "faq3A": "Legacy（P2PKH，以 1 开头）是最初的格式。SegWit（P2WPKH，以 bc1q 开头）使用 Bech32 编码，手续费更低。Taproot（P2TR，以 bc1p 开头）是最新的格式，提供更强的隐私和智能合约功能。"
+    "faq3A": "Legacy（P2PKH，以 1 开头）是最初的格式。SegWit（P2WPKH，以 bc1q 开头）使用 Bech32 编码，手续费更低。Taproot（P2TR，以 bc1p 开头）是最新的格式，提供更强的隐私和智能合约功能。",
+    "stepsTitle": "如何生成 HD 钱包",
+    "step1Title": "生成或输入助记词",
+    "step1Text": "点击「生成」创建新的 12 或 24 个单词的 BIP39 助记词，或粘贴已有的助记词。",
+    "step2Title": "选择链和路径",
+    "step2Text": "选择要派生地址的区块链，按需自定义派生路径。",
+    "step3Title": "查看派生地址",
+    "step3Text": "工具显示每个派生地址索引的地址、公钥和私钥。",
+    "useCasesTitle": "常见使用场景",
+    "useCasesDesc1": "开发和测试",
+    "useCasesP1": "为智能合约开发生成测试钱包，无需暴露真实资金。",
+    "useCasesDesc2": "理解 HD 钱包",
+    "useCasesP2": "通过尝试不同的路径和链来学习 BIP32/BIP39/BIP44 密钥派生的工作原理。"
   }
 }

@@ -64,9 +64,22 @@
     "aeoDefinition": "UUID Generator is a free online tool for generating v1, v3, v4, v5, and v7 UUIDs in bulk. Conforms to RFC 4122/9562. Runs entirely in your browser.",
     "whatIsP1": "UUID (Universally Unique Identifier) is a 128-bit identifier standard defined in RFC 4122 and RFC 9562. This tool generates UUID v4 (random) and v7 (time-ordered) in bulk. Use generated IDs as [Password](/password) seeds, encode them in [QR codes](/qrcode), or verify uniqueness with [Hashing](/hashing).",
     "whatIsP2": "UUIDs are widely used as database primary keys, distributed system identifiers, and session tokens. With 2^122 possible values, collision probability is negligible.",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesP1": "Database primary keys — UUIDs avoid ID collisions in distributed databases without requiring a central coordinator.",
+    "useCasesP2": "Distributed system identifiers — generate unique IDs across multiple services, regions, or data centers with zero coordination.",
+    "useCasesP3": "Session tokens and request tracing — use UUIDs as correlation IDs that are guaranteed unique across your entire infrastructure.",
+    "stepsTitle": "How to Generate UUIDs",
+    "step1Title": "Select your UUID version",
+    "step1Desc": "Choose v4 (random, general-purpose), v7 (time-ordered, database-friendly), v3/v5 (deterministic from namespace + name), or v1 (timestamp + MAC).",
+    "step2Title": "Set the quantity and format",
+    "step2Desc": "Adjust the slider to generate up to 100 UUIDs at once. Choose standard, no-hyphens, or braces format, and toggle uppercase if needed.",
+    "step3Title": "Copy or download",
+    "step3Desc": "Click the copy button for a single UUID, or download all generated UUIDs as a .txt file for bulk use.",
     "faq1Q": "How many UUIDs can I generate at once?",
     "faq1A": "You can generate up to 1,000 UUIDs in a single batch. All generation happens in your browser using crypto.getRandomValues().",
     "faq2Q": "Should I use UUID v4 or v7?",
-    "faq2A": "Use v4 for general-purpose random IDs. Use v7 for database primary keys or when time-ordering matters — v7 includes a millisecond timestamp prefix for sortable uniqueness."
+    "faq2A": "Use v4 for general-purpose random IDs. Use v7 for database primary keys or when time-ordering matters — v7 includes a millisecond timestamp prefix for sortable uniqueness.",
+    "faq3Q": "Can I generate the same UUID every time?",
+    "faq3A": "Yes. Use v3 (MD5) or v5 (SHA-1) with the same namespace and name input — they always produce the same deterministic UUID. This is useful for generating consistent identifiers from known inputs like URLs or domain names."
   }
 }

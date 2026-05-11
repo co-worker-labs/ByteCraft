@@ -38,6 +38,22 @@
     "faq2A": "A ferramenta fornece uma referência completa de caracteres especiais HTML incluindo entidades nomeadas (&amp;), decimais (&#38;) e hexadecimais (&#x26;).",
     "p1": "Entidades HTML são códigos especiais usados para representar caracteres reservados em HTML. Por exemplo, &lt; para <, &amp; para &, e &quot; para \". Veja a [Tabela ASCII](/ascii) para códigos de caracteres, ou [Códigos de status HTTP](/httpstatus) para referências de respostas web.",
     "p2": "Antes de usar um dos códigos abaixo no seu site, certifique-se de que seu documento HTML usa a codificação correta para garantir que os códigos HTML e caracteres especiais sejam exibidos corretamente. Para isso, utilize o conjunto de caracteres Unicode, que deve ser definido na seção head do seu documento HTML usando uma meta tag com o atributo charset e o valor UTF-8. Basta copiar e colar a meta tag abaixo na seção head e todos os caracteres HTML serão exibidos perfeitamente.",
-    "aeoDefinition": "O Codificador de Entidades HTML é uma ferramenta online gratuita para codificar e decodificar caracteres especiais e entidades HTML. Referência completa com entidades numéricas e nomeadas. Roda inteiramente no seu navegador."
+    "aeoDefinition": "O Codificador de Entidades HTML é uma ferramenta online gratuita para codificar e decodificar caracteres especiais e entidades HTML. Referência completa com entidades numéricas e nomeadas. Roda inteiramente no seu navegador.",
+    "whatIsTitle": "O que são Entidades HTML?",
+    "whatIs": "Entidades HTML são códigos que representam caracteres reservados em HTML (como <, >, &) ou caracteres difíceis de digitar. Usam o formato &nome; ou &#número; — por exemplo, &lt; renderiza como < e &#169; renderiza como o símbolo de copyright. Esta ferramenta fornece uma referência completa de entidades nomeadas, códigos decimais e hexadecimais em 8 categorias.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesDesc1": "Escape de HTML",
+    "useCasesP1": "Escape caracteres HTML reservados como <, >, &, e \" para que sejam exibidos como texto em vez de serem interpretados como markup.",
+    "useCasesDesc2": "Caracteres especiais",
+    "useCasesP2": "Insira símbolos especiais como sinais de moeda, operadores matemáticos ou marcas tipográficas em páginas web usando seus códigos de entidade.",
+    "stepsTitle": "Como encontrar entidades HTML",
+    "step1Title": "Escolha uma categoria",
+    "step1Text": "Selecione uma aba — Letras, Pontuação, Moedas, Matemáticos, Pronúncia, Diacríticos, ASCII ou Ícones.",
+    "step2Title": "Busque ou navegue",
+    "step2Text": "Use a barra de busca para filtrar por caractere, nome da entidade ou code point. Ou role pela tabela completa.",
+    "step3Title": "Copie o código",
+    "step3Text": "Cada linha mostra o caractere, entidade nomeada, código decimal e código hex. Copie o formato que seu projeto precisa.",
+    "faq3Q": "Qual a diferença entre entidades nomeadas e numéricas?",
+    "faq3A": "Entidades nomeadas usam um mnemônico como &amp; para & ou &lt; para <. Entidades numéricas usam o code point Unicode: &#38; (decimal) ou &#x26; (hex). Entidades nomeadas são mais legíveis, mas entidades numéricas funcionam para todos os caracteres Unicode."
   }
 }

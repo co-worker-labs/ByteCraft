@@ -87,6 +87,12 @@
     "faq2Q": "Qu'est-ce que l'espace colorimétrique OKLCH ?",
     "faq2A": "OKLCH est un espace colorimétrique perceptuellement uniforme qui correspond mieux à la vision humaine que HSL ou RGB. Il produit des dégradés de luminosité plus cohérents et des palettes accessibles.",
     "faq3Q": "Puis-je extraire les couleurs d'une image ?",
-    "faq3A": "Oui. Glissez-déposez n'importe quelle image dans la zone d'extraction de palette pour obtenir les couleurs dominantes. Vous pouvez aussi simuler les déficiences de vision des couleurs (protanopie, deutéranopie, tritanopie)."
+    "faq3A": "Oui. Glissez-déposez n'importe quelle image dans la zone d'extraction de palette pour obtenir les couleurs dominantes. Vous pouvez aussi simuler les déficiences de vision des couleurs (protanopie, deutéranopie, tritanopie).",
+    "useCasesTitle": "Cas d'utilisation courants",
+    "useCasesP1": "Sélectionner et convertir des couleurs pour le développement web — obtenez la valeur HEX, RGB, HSL ou OKLCH exacte pour CSS ou Tailwind.",
+    "useCasesP2": "Vérifier le contraste du texte par rapport à une couleur de fond pour respecter les guidelines d'accessibilité WCAG (AA/AAA) ou le standard APCA plus récent.",
+    "useCasesP3": "Extraire les couleurs dominantes d'une image pour construire une palette de design cohésive, puis générer des harmonies complémentaires, analogues ou triadiques.",
+    "whatIs": "Un utilitaire de couleur complet qui convertit entre 7 espaces colorimétriques (HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH), génère des harmonies, vérifie les rapports de contraste pour l'accessibilité, simule les déficiences de vision des couleurs et extrait des palettes d'images.",
+    "whatIsTitle": "Qu'est-ce que l'outil Couleur ?"
   }
 }

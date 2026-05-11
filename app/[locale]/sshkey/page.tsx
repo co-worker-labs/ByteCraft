@@ -1,11 +1,12 @@
 import { getTranslations } from "next-intl/server";
 import { generatePageMeta } from "../../../libs/seo";
 import { buildToolSchemas } from "../../../components/json-ld";
-import { TOOL_CATEGORIES, CATEGORY_SLUGS } from "../../../libs/tools";
+import { TOOLS, TOOL_CATEGORIES, CATEGORY_SLUGS } from "../../../libs/tools";
 import SshKeyPage from "./sshkey-page";
 
 const PATH = "/sshkey";
 const TOOL_KEY = "sshkey";
+const tool = TOOLS.find((t) => t.key === TOOL_KEY)!;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -15,6 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     path: PATH,
     title: t("sshkey.title"),
     description: t("sshkey.description"),
+    ogImage: { title: t("sshkey.shortTitle"), emoji: tool.emoji, desc: t("sshkey.description") },
   });
 }
 
@@ -25,6 +27,10 @@ export default async function SshKeyRoute({ params }: { params: Promise<{ locale
   const tc = await getTranslations({ locale, namespace: "categories" });
   const category = TOOL_CATEGORIES.find((c) => c.tools.includes(TOOL_KEY))!;
   const categorySlug = CATEGORY_SLUGS[category.key];
+  const howToSteps = [1, 2, 3, 4].map((i) => ({
+    name: ts(`descriptions.step${i}Title`),
+    text: ts(`descriptions.step${i}Desc`),
+  }));
   const schemas = buildToolSchemas({
     name: t("sshkey.title"),
     description: ts.has("descriptions.aeoDefinition")
@@ -37,10 +43,8 @@ export default async function SshKeyRoute({ params }: { params: Promise<{ locale
       q: ts(`descriptions.faq${i}Q`),
       a: ts(`descriptions.faq${i}A`),
     })),
-    howToSteps: [1, 2, 3, 4].map((i) => ({
-      name: ts(`descriptions.step${i}Title`),
-      text: ts(`descriptions.step${i}Desc`),
-    })),
+    howToSteps,
+    sameAs: tool.sameAs,
   });
 
   return (

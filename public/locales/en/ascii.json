@@ -23,6 +23,15 @@
     "faq1Q": "What control characters are included?",
     "faq1A": "All 33 control codes (0-31 and 127) including NUL, TAB, LF, CR, ESC, and DEL, with descriptions of their original teletype functions.",
     "faq2Q": "How is ASCII different from Unicode?",
-    "faq2A": "ASCII covers 128 characters for English. Unicode extends this to over 140,000 characters covering virtually all writing systems. ASCII is a subset of Unicode (the first 128 code points match)."
+    "faq2A": "ASCII covers 128 characters for English. Unicode extends this to over 140,000 characters covering virtually all writing systems. ASCII is a subset of Unicode (the first 128 code points match).",
+    "stepsTitle": "How to Use the ASCII Table",
+    "step1Title": "Search for a character",
+    "step1Text": "Type a character, decimal number, or hex value in the search bar. The table filters in real time.",
+    "step2Title": "Browse by category",
+    "step2Text": "Switch between Printable Characters and Control Code Charts tabs to explore different ASCII ranges.",
+    "step3Title": "Look up conversions",
+    "step3Text": "Each row shows decimal, binary, octal, hex, HTML code, and glyph — hover for details.",
+    "faq3Q": "What is the difference between ASCII and UTF-8?",
+    "faq3A": "ASCII is a 7-bit encoding (0-127). UTF-8 is a variable-length encoding that is backward-compatible with ASCII — the first 128 code points are identical. UTF-8 extends to cover all Unicode characters."
   }
 }

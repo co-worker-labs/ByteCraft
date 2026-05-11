@@ -25,6 +25,13 @@
     "faq2A": "Sim. Esta ferramenta suporta conversão YAML para JSON e JSON para YAML com suporte para streams YAML multidocumento (separadores ---).",
     "faq3Q": "Suporta âncoras e aliases YAML?",
     "faq3A": "O analisador lida com YAML padrão incluindo âncoras (&) e aliases (*). Recursos complexos como chaves de mesclagem (<<:) são suportados onde aplicável.",
-    "aeoDefinition": "O Conversor YAML é uma ferramenta online gratuita para converter entre formatos JSON e YAML. Suporta YAML 1.2, multi-documento, anchors e aliases. Todo o processamento roda no seu navegador."
+    "aeoDefinition": "O Conversor YAML é uma ferramenta online gratuita para converter entre formatos JSON e YAML. Suporta YAML 1.2, multi-documento, anchors e aliases. Todo o processamento roda no seu navegador.",
+    "stepsTitle": "Como converter JSON para YAML (e vice-versa)",
+    "step1Title": "Cole seus dados",
+    "step1Text": "Cole JSON no painel esquerdo ou YAML no painel direito. A ferramenta converte em tempo real.",
+    "step2Title": "Configure as opções",
+    "step2Text": "Ative o modo de entrada JSON5 ou ordenação de chaves. A ferramenta suporta streams YAML multidocumento.",
+    "step3Title": "Copie o resultado",
+    "step3Text": "A saída convertida aparece instantaneamente. Clique no botão copiar ou arraste arquivos diretamente para qualquer painel."
   }
 }

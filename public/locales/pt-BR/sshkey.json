@@ -39,6 +39,12 @@
     "faq3A": "Vá em Settings → SSH and GPG keys → New SSH key. Dê um título descritivo, cole o conteúdo completo da sua chave pública (a linha inteira começando com ssh-ed25519 ou ssh-rsa) e clique em Add SSH key. Alternativamente, use a CLI do GitHub: gh ssh-key add ~/.ssh/id_ed25519.pub.",
     "faq4Q": "É seguro gerar chaves SSH no navegador?",
     "faq4A": "Sim. Esta ferramenta usa a Web Crypto API, que fornece as mesmas primitivas criptográficas usadas pelo OpenSSL e OpenSSH. A geração de chaves ocorre inteiramente na memória do navegador — nenhum dado é enviado a qualquer servidor. As chaves geradas são perdidas ao fechar ou atualizar a página, portanto baixe ou copie antes de sair.",
-    "aeoDefinition": "O Gerador de Chaves SSH é uma ferramenta online gratuita para gerar pares de chaves SSH RSA e Ed25519 inteiramente no seu navegador. Suporta criptografia por passphrase e exibição de fingerprint. Nenhum dado é enviado para qualquer servidor."
+    "aeoDefinition": "O Gerador de Chaves SSH é uma ferramenta online gratuita para gerar pares de chaves SSH RSA e Ed25519 inteiramente no seu navegador. Suporta criptografia por passphrase e exibição de fingerprint. Nenhum dado é enviado para qualquer servidor.",
+    "whatIsTitle": "O que é uma chave SSH?",
+    "whatIs": "Um par de chaves SSH consiste em uma chave privada e uma chave pública usadas para autenticação segura em servidores e serviços (plataformas Git, provedores de nuvem, máquinas remotas). A chave privada fica no seu dispositivo; a chave pública é colocada no servidor. Chaves SSH são mais seguras que senhas porque resistem a ataques de força bruta e phishing.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesP1": "Autenticar em plataformas Git (GitHub, GitLab, Bitbucket) sem digitar sua senha a cada push ou pull.",
+    "useCasesP2": "Acesso shell seguro a servidores remotos — adicione sua chave pública ao ~/.ssh/authorized_keys e faça login sem senha.",
+    "useCasesP3": "Chaves de deploy CI/CD — gere um par de chaves dedicado para sistemas automatizados acessarem repositórios ou servidores sem credenciais compartilhadas."
   }
 }

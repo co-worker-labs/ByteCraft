@@ -14,7 +14,7 @@ const JsonView = dynamic(() => import("@uiw/react-json-view"), {
 });
 import { IndentIncrease, Minimize2, Upload, X } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
-import { renderLinkedText } from "../../../utils/linked-text";
+import DescriptionSection from "../../../components/description-section";
 
 import Layout from "../../../components/layout";
 import { CopyButton } from "../../../components/ui/copy-btn";
@@ -478,27 +478,12 @@ function Conversion() {
   );
 }
 
-function Description() {
+function JsonExtraSections() {
   const t = useTranslations("json");
   const tc = useTranslations("common");
-  const locale = useLocale();
 
   return (
-    <section id="description" className="mt-8">
-      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
-        <p className="text-fg-secondary text-sm leading-relaxed">
-          {t("descriptions.aeoDefinition")}
-        </p>
-      </div>
-      <div className="mb-4">
-        <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.whatIsTitle")}</h2>
-        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{renderLinkedText(t("descriptions.whatIsP1"), locale)}</p>
-          <p>{t("descriptions.whatIsP2")}</p>
-          <p>{t("descriptions.whatIsP3")}</p>
-        </div>
-      </div>
-
+    <>
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">{t("descriptions.json5Title")}</h2>
         <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
@@ -506,19 +491,6 @@ function Description() {
           <p>{t("descriptions.json5P2")}</p>
         </div>
       </div>
-
-      <div className="mb-4">
-        <h2 className="font-semibold text-fg-primary text-base">
-          {tc("descriptions.useCasesTitle")}
-        </h2>
-        <div className="mt-1 space-y-1.5 text-fg-secondary text-sm leading-relaxed">
-          <p>{t("descriptions.useCasesP1")}</p>
-          <p>{renderLinkedText(t("descriptions.useCasesP2"), locale)}</p>
-          <p>{t("descriptions.useCasesP3")}</p>
-          <p>{t("descriptions.useCasesP4")}</p>
-        </div>
-      </div>
-
       <div className="mb-4">
         <h2 className="font-semibold text-fg-primary text-base">
           {tc("descriptions.limitationsTitle")}
@@ -529,7 +501,16 @@ function Description() {
           <p>{t("descriptions.limitationsP3")}</p>
         </div>
       </div>
-    </section>
+    </>
+  );
+}
+
+function Description() {
+  const t = useTranslations("json");
+  const locale = useLocale();
+
+  return (
+    <DescriptionSection namespace="json" showFaq={false} extraSections={<JsonExtraSections />} />
   );
 }
 

@@ -45,6 +45,21 @@
     "keyFormats": "HMAC: beliebiger UTF-8-String. Asymmetrisch: nur PEM, PKCS8 (-----BEGIN PRIVATE KEY-----) zum Signieren, SPKI (-----BEGIN PUBLIC KEY-----) zum Verifizieren. PKCS1, SEC1, verschlüsseltes PEM und X.509-Zertifikate werden nicht akzeptiert. Das Tool teilt Ihnen den genauen openssl-Befehl zur Konvertierung mit.",
     "faq1Q": "Was ist ein JWT?",
     "faq1A": "JSON Web Token (JWT) ist ein offener Standard (RFC 7519) zur sicheren Übertragung von Informationen zwischen Parteien als JSON-Objekt. Es wird häufig für Authentifizierung und Informationsaustausch verwendet.",
-    "aeoDefinition": "Der JWT-Debugger ist ein kostenloses Online-Tool zum Kodieren, Dekodieren und Verifizieren von JSON Web Tokens. Unterstützt HS256, RS256, ES256 und weitere Algorithmen. Die gesamte Verarbeitung läuft in Ihrem Browser — es werden keine Tokens an einen Server gesendet."
+    "aeoDefinition": "Der JWT-Debugger ist ein kostenloses Online-Tool zum Kodieren, Dekodieren und Verifizieren von JSON Web Tokens. Unterstützt HS256, RS256, ES256 und weitere Algorithmen. Die gesamte Verarbeitung läuft in Ihrem Browser — es werden keine Tokens an einen Server gesendet.",
+    "faq2Q": "Was ist der Unterschied zwischen HMAC- und RSA-JWT-Algorithmen?",
+    "faq2A": "HMAC-Algorithmen (HS256/384/512) verwenden ein gemeinsames Geheimnis — Aussteller und Prüfer kennen denselben Schlüssel. RSA-Algorithmen (RS256/384/512) verwenden ein Public-/Private-Key-Paar — der Aussteller signiert mit dem privaten Schlüssel, jeder mit dem öffentlichen Schlüssel kann verifizieren. HMAC für Server-zu-Server, RSA für verteilte Systeme, in denen der Prüfer keine Tokens erstellen dürfen.",
+    "faq3Q": "Was passiert, wenn ein JWT abläuft?",
+    "faq3A": "Der exp-Claim im Payload gibt den Ablaufzeitstempel an. Nach diesem Zeitpunkt sollte der Server das Token ablehnen. Dieses Tool zeigt den dekodierten exp-Wert an, damit Sie prüfen können, ob ein Token noch gültig ist. Beachten Sie: JWT-Ablauf ist ein Claim, nicht vom Token selbst erzwungen — der Server muss ihn validieren.",
+    "step1Desc": "Kopieren Sie die vollständige JWT-Zeichenfolge (drei Base64URL-Segmente, durch Punkte getrennt) und fügen Sie sie in das Eingabefeld der Registerkarte Dekodieren ein.",
+    "step1Title": "JWT einfügen",
+    "step2Desc": "Das Tool dekodiert automatisch den Header (Algorithmus, Typ) und den Payload (Claims) in lesbares JSON. Prüfen Sie den exp-Claim, um zu sehen, ob das Token abgelaufen ist.",
+    "step2Title": "Header und Payload inspizieren",
+    "step3Desc": "Wechseln Sie zum Abschnitt Verifizieren, geben Sie das Geheimnis oder den öffentlichen Schlüssel ein und klicken Sie auf Verifizieren, um zu bestätigen, dass das Token von der erwarteten Partei signiert wurde.",
+    "step3Title": "Signatur verifizieren (optional)",
+    "stepsTitle": "JWT dekodieren",
+    "useCasesP1": "API-Anfragen authentifizieren — JWT im Authorization-Header (Bearer-Token) verwenden, um die Identität und Berechtigungen des Aufrufers zu verifizieren.",
+    "useCasesP2": "Tokens während der Entwicklung dekodieren und debuggen — Header und Payload-Claims (iss, sub, exp, iat) ohne Code inspizieren.",
+    "useCasesP3": "Token-Signaturen gegen ein gemeinsames Geheimnis (HMAC) oder einen öffentlichen Schlüssel (RSA/ECDSA) verifizieren, um Integrität sicherzustellen.",
+    "useCasesTitle": "Gängige Anwendungsfälle"
   }
 }

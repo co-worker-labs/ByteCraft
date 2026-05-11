@@ -34,6 +34,20 @@
     "faq2A": "Non. Tout le traitement d'image se fait dans votre navigateur en utilisant l'API Canvas. Vos images ne quittent jamais votre appareil.",
     "faq3Q": "Quels formats d'image sont pris en charge ?",
     "faq3A": "Entrée : JPEG, PNG, WebP, BMP, GIF. Sortie : JPEG, PNG, WebP. Vous pouvez convertir entre les formats tout en ajustant la qualité.",
-    "aeoDefinition": "Le Compresseur d'image est un outil gratuit en ligne pour compresser, redimensionner et convertir des images entre les formats PNG, JPG et WebP. Tout le traitement s'exécute localement dans votre navigateur."
+    "aeoDefinition": "Le Compresseur d'image est un outil gratuit en ligne pour compresser, redimensionner et convertir des images entre les formats PNG, JPG et WebP. Tout le traitement s'exécute localement dans votre navigateur.",
+    "stepsTitle": "Comment compresser une image",
+    "step1Title": "Déposer ou sélectionner une image",
+    "step1Text": "Glissez-déposez une image sur la zone de dépôt, ou cliquez pour parcourir. Supporte les entrées PNG, JPG, WebP, GIF, BMP et SVG.",
+    "step2Title": "Ajuster les paramètres",
+    "step2Text": "Choisissez un format de sortie (PNG, JPG, WebP), ajustez la qualité avec le curseur et optionnellement redimensionnez par pourcentage ou dimensions personnalisées.",
+    "step3Title": "Télécharger ou copier",
+    "step3Text": "Comparez l'original et le compressé côte à côte. Téléchargez le résultat ou copiez-le directement dans le presse-papiers au format PNG.",
+    "useCasesDesc1": "Optimisation web",
+    "useCasesP1": "Convertissez PNG en WebP pour des fichiers plus légers sur les sites web. Ajustez la qualité pour équilibrer fidélité visuelle et bande passante.",
+    "useCasesDesc2": "Redimensionnement rapide",
+    "useCasesP2": "Redimensionnez des images pour des profils de réseaux sociaux, des pièces jointes ou des captures d'écran de documentation sans ouvrir un éditeur bureautique.",
+    "useCasesTitle": "Cas d'utilisation courants",
+    "whatIs": "Compressez, redimensionnez et convertissez des images entre les formats PNG, JPG et WebP directement dans votre navigateur. Aucune donnée n'est envoyée à un serveur — tout le traitement utilise l'API HTML5 Canvas.",
+    "whatIsTitle": "Qu'est-ce que le Compresseur d'images ?"
   }
 }

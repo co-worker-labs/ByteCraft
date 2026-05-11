@@ -37,6 +37,22 @@
     "faq1A": "camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, dot.case, path/case, Title Case, Sentence case, UPPER CASE, lower case et plus encore.",
     "faq2Q": "Puis-je convertir plusieurs chaînes à la fois ?",
     "faq2A": "Oui. Collez plusieurs lignes et l'outil convertit chaque ligne indépendamment. La conversion multiligne applique la casse sélectionnée à chaque ligne.",
-    "aeoDefinition": "Le Convertisseur de casse de texte est un outil gratuit en ligne qui convertit du texte entre camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE et plus encore. Conversion instantanée avec aperçu en temps réel. Aucune donnée ne quitte votre navigateur."
+    "aeoDefinition": "Le Convertisseur de casse de texte est un outil gratuit en ligne qui convertit du texte entre camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE et plus encore. Conversion instantanée avec aperçu en temps réel. Aucune donnée ne quitte votre navigateur.",
+    "faq3Q": "Quels formats de casse sont pris en charge ?",
+    "faq3A": "Le convertisseur prend en charge 11 formats : camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, lower case, UPPER CASE, Title Case, Sentence case et path/case.",
+    "stepsTitle": "Comment convertir la casse de texte",
+    "step1Title": "Collez votre texte",
+    "step1Text": "Saisissez ou collez n'importe quelle chaîne dans le champ de saisie. L'outil détecte automatiquement le format de casse actuel.",
+    "step2Title": "Consulter les conversions",
+    "step2Text": "Les 11 formats de casse sont affichés instantanément dans un tableau. Le format détecté est mis en évidence avec un badge.",
+    "step3Title": "Copier le résultat",
+    "step3Text": "Cliquez sur le bouton copier à côté de n'importe quelle chaîne convertie pour la copier dans votre presse-papiers.",
+    "useCasesDesc1": "Migration de langage",
+    "useCasesP1": "Renommez des variables lors de la migration de code entre langages — convertissez du snake_case Python en camelCase JavaScript en un seul copier-coller.",
+    "useCasesDesc2": "Application des conventions de nommage",
+    "useCasesP2": "Générez des slugs d'URL, des classes CSS ou des noms de variables d'environnement cohérents à partir d'un texte en anglais brut.",
+    "useCasesTitle": "Cas d'utilisation courants",
+    "whatIs": "Un convertisseur de casse de texte transforme les chaînes entre les conventions de nommage utilisées en programmation et en rédaction. Il détecte automatiquement le format d'entrée et affiche les conversions vers camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dot.case, lower case, UPPER CASE, Title Case, Sentence case et path/case — toutes mises à jour en temps réel pendant la saisie.",
+    "whatIsTitle": "Qu'est-ce que le Convertisseur de casse de texte ?"
   }
 }

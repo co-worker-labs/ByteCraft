@@ -55,7 +55,19 @@
     "faq2Q": "Why do Solana paths require all hardened segments?",
     "faq2A": "Solana uses the ed25519 curve via SLIP-0010, which only supports hardened derivation. Non-hardened derivation is not possible with ed25519 keys, so all path segments must include the ' (hardened) suffix.",
     "faq3Q": "What is the difference between Legacy, SegWit, and Taproot Bitcoin addresses?",
-    "faq3A": "Legacy (P2PKH, starts with 1) is the original format. SegWit (P2WPKH, starts with bc1q) uses Bech32 encoding for lower fees. Taproot (P2TR, starts with bc1p) is the newest format with enhanced privacy and smart contract capabilities."
+    "faq3A": "Legacy (P2PKH, starts with 1) is the original format. SegWit (P2WPKH, starts with bc1q) uses Bech32 encoding for lower fees. Taproot (P2TR, starts with bc1p) is the newest format with enhanced privacy and smart contract capabilities.",
+    "stepsTitle": "How to Generate an HD Wallet",
+    "step1Title": "Generate or enter a mnemonic",
+    "step1Text": "Click Generate to create a new 12 or 24-word BIP39 mnemonic, or paste an existing one.",
+    "step2Title": "Select chains and paths",
+    "step2Text": "Choose which blockchains to derive addresses for. Customize the derivation path if needed.",
+    "step3Title": "View derived addresses",
+    "step3Text": "The tool shows address, public key, and private key for each derived address index.",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesDesc1": "Development and testing",
+    "useCasesP1": "Generate test wallets for smart contract development without exposing real funds.",
+    "useCasesDesc2": "Understanding HD wallets",
+    "useCasesP2": "Learn how BIP32/BIP39/BIP44 key derivation works by experimenting with different paths and chains."
   },
   "viewWordList": "View complete BIP39 word list →"
 }

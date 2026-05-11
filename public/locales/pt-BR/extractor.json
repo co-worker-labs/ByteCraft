@@ -42,7 +42,21 @@
     "faq2A": "Sim. Escreva seu próprio padrão regex para extrair qualquer formato de texto. A ferramenta destaca correspondências e mostra grupos de captura.",
     "faq3Q": "Quais padrões integrados estão disponíveis?",
     "faq3A": "Endereços de email, URLs, endereços IPv4/IPv6, números de telefone, cores hex, números e datas. Cada padrão é pré-configurado para casos de uso comuns.",
-    "aeoDefinition": "O Extrator de Email e URL é uma ferramenta online gratuita que extrai emails, URLs e números de telefone de qualquer texto instantaneamente. Suporta múltiplos formatos e processamento em lote. Roda inteiramente no seu navegador."
+    "aeoDefinition": "O Extrator de Email e URL é uma ferramenta online gratuita que extrai emails, URLs e números de telefone de qualquer texto instantaneamente. Suporta múltiplos formatos e processamento em lote. Roda inteiramente no seu navegador.",
+    "whatIsTitle": "O que é o Extrator de Texto?",
+    "whatIs": "O Extrator de Texto escaneia qualquer texto e extrai endereços de email, URLs e números de telefone em uma única passada. Ative ou desative cada tipo, visualize resultados deduplicados e exporte como CSV ou JSON — tudo no seu navegador.",
+    "stepsTitle": "Como extrair emails, URLs e números de telefone",
+    "step1Title": "Cole seu texto",
+    "step1Text": "Cole ou solte um arquivo de texto contendo emails, URLs ou números de telefone. A ferramenta escaneia em tempo real.",
+    "step2Title": "Ative os tipos de extração",
+    "step2Text": "Use os botões Email, URL e Telefone para incluir ou excluir cada tipo. Todas as correspondências são encontradas em uma única passada.",
+    "step3Title": "Exporte os resultados",
+    "step3Text": "Copie todos os resultados ou exporte como CSV e JSON. Os resultados são deduplicados por padrão.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesDesc1": "Geração de leads",
+    "useCasesP1": "Extraia endereços de email de páginas web, documentos ou arquivos de log para campanhas de divulgação.",
+    "useCasesDesc2": "Limpeza de dados",
+    "useCasesP2": "Extraia URLs ou números de telefone de texto não estruturado e exporte em formato estruturado."
   },
   "dropZone": "Solte qualquer arquivo de texto"
 }

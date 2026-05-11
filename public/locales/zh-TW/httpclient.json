@@ -101,6 +101,20 @@
     "faq2Q": "可以使用身份驗證嗎？",
     "faq2A": "可以。支援 Basic Auth、Bearer Token、API 金鑰（請求標頭和查詢參數）和自訂驗證標頭。所有憑證保留在你的瀏覽器中。",
     "faq3Q": "支援請求歷史嗎？",
-    "faq3A": "支援。所有請求都儲存到本機儲存空間，包含完整的請求/回應詳情。你可以將常用請求加入書籤以便快速存取。"
+    "faq3A": "支援。所有請求都儲存到本機儲存空間，包含完整的請求/回應詳情。你可以將常用請求加入書籤以便快速存取。",
+    "whatIsTitle": "什麼是 HTTP 用戶端？",
+    "whatIs": "一個基於瀏覽器的 HTTP 用戶端，用於測試 REST API。可傳送 GET、POST、PUT、PATCH、DELETE、HEAD 和 OPTIONS 請求，支援自訂標頭、請求主體和身份驗證——全部在瀏覽器中完成。",
+    "stepsTitle": "如何傳送 HTTP 請求",
+    "step1Title": "輸入 URL",
+    "step1Text": "輸入或貼上 API 端點 URL。選擇 HTTP 方法（GET、POST、PUT 等）。",
+    "step2Title": "設定請求",
+    "step2Text": "按需新增查詢參數、標頭、請求主體（JSON、form-data 或原始文字）和身份驗證。",
+    "step3Title": "傳送並檢查",
+    "step3Text": "點擊「傳送」。在回應面板中檢視回應主體、標頭、Cookie、耗時和重新導向資訊。",
+    "useCasesTitle": "常見使用場景",
+    "useCasesDesc1": "API 開發",
+    "useCasesP1": "在開發期間測試 REST API 端點，無需安裝 Postman 或 curl 等桌面工具。",
+    "useCasesDesc2": "除錯",
+    "useCasesP2": "檢查回應標頭、狀態碼和耗時以診斷 API 問題。使用 Proxy 切換繞過 CORS。"
   }
 }

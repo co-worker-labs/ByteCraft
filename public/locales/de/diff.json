@@ -54,6 +54,18 @@
     "limitationsP2": "Eingaben sind auf 5MB pro Seite begrenzt. Eingaben über 512KB werden in einem Hintergrund-Web-Worker verarbeitet; die Seite bleibt responsiv, aber der Diff selbst dauert bei sehr großen Eingaben proportional länger.",
     "limitationsP3": "Unterschiede in Zeilenenden (CRLF vs. LF) und nachgestellten Leerzeichen werden normalisiert. Sie erscheinen nie als Änderungen.",
     "faq1Q": "Was ist ein Text-Diff-Tool?",
-    "faq1A": "Ein Diff-Tool vergleicht zwei Texte und hebt die Unterschiede hervor. Dieses Tool zeigt Ergänzungen, Löschungen und Änderungen auf Wort- oder Zeichenebene."
+    "faq1A": "Ein Diff-Tool vergleicht zwei Texte und hebt die Unterschiede hervor. Dieses Tool zeigt Ergänzungen, Löschungen und Änderungen auf Wort- oder Zeichenebene.",
+    "faq2Q": "Kann ich Leerzeichen- oder Groß-/Kleinschreibungsunterschiede ignorieren?",
+    "faq2A": "Ja. Verwenden Sie das Optionsmenü, um „Leerzeichen ignorieren\" und „Groß-/Kleinschreibung ignorieren\" umzuschalten. Diese Einstellungen filtern oberflächliche Änderungen heraus, damit Sie sich auf die wesentlichen Unterschiede konzentrieren können.",
+    "faq3Q": "Welchen Algorithmus verwendet der Diff?",
+    "faq3A": "Das Tool verwendet den Myers-Diff-Algorithmus über die jsdiff-Bibliothek. Zunächst wird ein zeilenbasierter Diff berechnet, dann ein zweiter wortbasierter Durchlauf für benachbarte geänderte Zeilen durchgeführt, um zu zeigen, welche Wörter hinzugefügt oder entfernt wurden.",
+    "step1Desc": "Geben Sie Ihren Originaltext in Text A und die geänderte Version in Text B ein. Sie können auch Dateien direkt auf ein Eingabefeld ziehen.",
+    "step1Title": "Texte einfügen oder hochladen",
+    "step2Desc": "Wechseln Sie zwischen nebeneinander (zeigt beide Texte mit ausgerichteten Änderungen) und inline (zeigt Ergänzungen und Löschungen in einem einzigen Strom).",
+    "step2Title": "Ansicht wählen",
+    "step3Desc": "Hinzugefügte Zeilen erscheinen in Grün, entfernte in Rot. Wortebene-Hervorhebungen in geänderten Zeilen zeigen genau, welche Wörter sich unterscheiden — dieselbe Konvention wie bei GitHub-Pull-Requests.",
+    "step3Title": "Hervorgehobene Änderungen prüfen",
+    "stepsTitle": "Zwei Texte vergleichen",
+    "useCasesTitle": "Gängige Anwendungsfälle"
   }
 }

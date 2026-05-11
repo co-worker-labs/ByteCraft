@@ -75,20 +75,25 @@
     "libraryLoadFailed": "Failed to load QR generator. Please reload the page."
   },
   "descriptions": {
-    "title": "About QR Codes",
-    "intro": "QR codes encode text into a 2D matrix that smartphone cameras can decode. Higher error correction makes them readable even when partially obscured (by a logo, dirt, or damage).",
-    "ecTitle": "Error Correction Levels",
-    "ecL": "L — recovers ~7% damage. Smallest, no logo.",
-    "ecM": "M — recovers ~15%. Suitable for clean prints.",
-    "ecQ": "Q — recovers ~25%. Default; robust and supports small logos.",
-    "ecH": "H — recovers ~30%. Required for sizable logos.",
-    "tipsTitle": "Tips",
-    "tipMargin": "Always keep a margin (quiet zone) of at least 4 modules — scanners need it to detect the code.",
-    "tipContrast": "High contrast between foreground and background is essential. Avoid low-contrast pairs.",
-    "tipLogo": "If embedding a logo, use error correction H and keep logo size ≤ 30% of the QR.",
-    "tipTest": "Always test the generated QR with a real phone camera before printing or sharing widely.",
+    "whatIsTitle": "What is a QR Code?",
     "aeoDefinition": "QR Code Generator is a free online tool for creating QR codes for text, URLs, WiFi, vCard, and more. Supports custom colors, logos, and dot styles with SVG/PNG export. No data is sent to any server.",
+    "whatIs": "QR (Quick Response) codes are two-dimensional barcodes that store data in a pattern of black and white squares. Invented by Denso Wave in 1994, they can encode URLs, text, contact info, WiFi credentials, and more — scan them with any smartphone camera.",
+    "useCasesTitle": "Common Use Cases",
+    "useCasesP1": "Sharing a website URL — put a QR code on a business card, flyer, or poster so people can open the link instantly.",
+    "useCasesP2": "WiFi network sharing — encode the SSID, password, and encryption type so guests can connect by scanning.",
+    "useCasesP3": "vCard contact exchange — embed your name, phone, email, and organization into a scannable code.",
+    "stepsTitle": "How to Create a QR Code",
+    "step1Title": "Choose your content type",
+    "step1Desc": "Select Text/URL, WiFi, vCard, Email, SMS, or WhatsApp depending on what you want to encode.",
+    "step2Title": "Enter your data",
+    "step2Desc": "Fill in the required fields. For URLs, paste the full link. For WiFi, enter the network name and password.",
+    "step3Title": "Customize the appearance",
+    "step3Desc": "Adjust colors, dot style, error correction level, and optionally add a logo. Higher error correction (Q or H) is recommended when using logos.",
     "faq1Q": "What is the maximum QR code capacity?",
-    "faq1A": "Capacity depends on error correction level and data type. Numeric: up to 7,089 characters. Alphanumeric: up to 4,296. Binary: up to 2,953 bytes. Kanji: up to 1,817 characters."
+    "faq1A": "Capacity depends on error correction level and data type. Numeric: up to 7,089 characters. Alphanumeric: up to 4,296. Binary: up to 2,953 bytes. Kanji: up to 1,817 characters.",
+    "faq2Q": "Should I use SVG or PNG export?",
+    "faq2A": "Use SVG for print materials — it scales to any size without pixelation. Use PNG for digital display, social media, or when you need a fixed-resolution raster image. The PNG export supports up to 1024px resolution for high-quality printing.",
+    "faq3Q": "Can I put a logo inside my QR code?",
+    "faq3A": "Yes. Upload a logo image and the tool will overlay it at the center. Error correction is automatically raised to H (30% recovery) to maintain scannability. Keep the logo size at or below 30% of the QR code area for best results."
   }
 }

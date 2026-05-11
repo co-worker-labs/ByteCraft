@@ -67,6 +67,19 @@
     "faq1Q": "什麼是 UUID？",
     "faq1A": "UUID（通用唯一識別碼）是一種 128 位元識別碼標準。此工具產生 v4（隨機）和 v7（時間排序）UUID，無需中心協調即可保證唯一性。",
     "faq2Q": "一次可以產生多少個 UUID？",
-    "faq2A": "一次最多可產生 1,000 個 UUID。所有產生在瀏覽器中使用 crypto.getRandomValues() 完成。"
+    "faq2A": "一次最多可產生 1,000 個 UUID。所有產生在瀏覽器中使用 crypto.getRandomValues() 完成。",
+    "useCasesTitle": "常見使用場景",
+    "useCasesP1": "資料庫主鍵——UUID 在分散式資料庫中避免 ID 碰撞，無需中央協調器。",
+    "useCasesP2": "分散式系統識別符——跨多個服務、地區或資料中心產生唯一 ID，零協調。",
+    "useCasesP3": "連線令牌和請求追蹤——使用 UUID 作為關聯 ID，確保在整個基礎架構中唯一。",
+    "stepsTitle": "如何產生 UUID",
+    "step1Title": "選擇 UUID 版本",
+    "step1Desc": "選擇 v4（隨機，通用）、v7（時間排序，適合資料庫）、v3/v5（由命名空間+名稱確定）或 v1（時間戳+MAC）。",
+    "step2Title": "設定數量和格式",
+    "step2Desc": "調整滑桿一次產生最多 100 個 UUID。選擇標準、無連字符或大括號格式，並可切換大寫。",
+    "step3Title": "複製或下載",
+    "step3Desc": "點擊複製按鈕複製單個 UUID，或下載所有產生的 UUID 為 .txt 檔案。",
+    "faq3Q": "可以每次產生相同的 UUID 嗎？",
+    "faq3A": "可以。使用 v3（MD5）或 v5（SHA-1）搭配相同的命名空間和名稱輸入——它們始終產生相同的確定性 UUID。這對於從已知輸入（如 URL 或網域名稱）產生一致的識別符很有用。"
   }
 }

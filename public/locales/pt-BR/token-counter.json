@@ -21,6 +21,18 @@
     "faq2Q": "Quais modelos usam a codificação o200k_base?",
     "faq2A": "A codificação o200k_base é usada pelo GPT-4o, GPT-4.1, o1, o3, o4-mini e GPT-5. Suporta um vocabulário de aproximadamente 200.000 tokens com cobertura multilíngue aprimorada em relação à codificação anterior cl100k_base.",
     "faq3Q": "Quão precisa é a contagem de tokens?",
-    "faq3A": "A contagem é muito precisa para texto padrão. Usa o mesmo algoritmo BPE do tokenizador da OpenAI. Pequenas discrepâncias podem ocorrer em mensagens formatadas como chat (com funções system/user/assistant), pois esta ferramenta conta tokens de texto bruto, não tokens de template de chat."
+    "faq3A": "A contagem é muito precisa para texto padrão. Usa o mesmo algoritmo BPE do tokenizador da OpenAI. Pequenas discrepâncias podem ocorrer em mensagens formatadas como chat (com funções system/user/assistant), pois esta ferramenta conta tokens de texto bruto, não tokens de template de chat.",
+    "stepsTitle": "Como contar tokens",
+    "step1Title": "Cole seu texto",
+    "step1Text": "Digite ou cole o texto que deseja tokenizar. A contagem de tokens atualiza em tempo real.",
+    "step2Title": "Revise a contagem",
+    "step2Text": "Veja total de tokens, caracteres, razão caracteres/token e uso da janela de contexto (baseado no GPT-4o 128K).",
+    "step3Title": "Inspecione tokens individuais",
+    "step3Text": "Role pela visualização de tokens onde cada segmento colorido representa um token BPE com seu ID e texto.",
+    "useCasesTitle": "Casos de uso comuns",
+    "useCasesDesc1": "Engenharia de prompts",
+    "useCasesP1": "Conte tokens antes de enviar prompts para APIs OpenAI para se manter dentro dos limites de contexto e estimar custos.",
+    "useCasesDesc2": "Comparação de modelos",
+    "useCasesP2": "Compare contagens de tokens entre diferentes entradas de texto para otimizar a eficiência de prompts para modelos GPT-4o, o1 e GPT-5."
   }
 }

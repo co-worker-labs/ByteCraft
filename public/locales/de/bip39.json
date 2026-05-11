@@ -13,6 +13,15 @@
     "faq1Q": "Wie viele Wörter enthält die BIP39-Liste?",
     "faq1A": "Die englische BIP39-Wortliste enthält genau 2048 Wörter. Jedes Wort kodiert 11 Bits Daten, sodass eine 12-Wort-mnemonische Phrase 132 Bits (128 Bits Entropie + 4 Bits Prüfsumme) und eine 24-Wort-Phrase 264 Bits darstellt.",
     "faq2Q": "Kann ich BIP39-Wörter in anderen Sprachen verwenden?",
-    "faq2A": "BIP39 unterstützt mehrere Sprachen, darunter Englisch, Japanisch, Koreanisch, Spanisch, Chinesisch (vereinfacht und traditionell), Französisch, Italienisch, Portugiesisch und Tschechisch. Englisch ist jedoch am weitesten verbreitet und wird aus Kompatibilitätsgründen empfohlen."
+    "faq2A": "BIP39 unterstützt mehrere Sprachen, darunter Englisch, Japanisch, Koreanisch, Spanisch, Chinesisch (vereinfacht und traditionell), Französisch, Italienisch, Portugiesisch und Tschechisch. Englisch ist jedoch am weitesten verbreitet und wird aus Kompatibilitätsgründen empfohlen.",
+    "faq3Q": "Warum teilen keine zwei Wörter die ersten vier Buchstaben?",
+    "faq3A": "Dies ist eine bewusste Designentscheidung zur Reduzierung von Übertragungsfehlern. Bei der Eingabe einer Wiederherstellungsphrase auf einem Hardware-Wallet genügen die ersten vier Buchstaben, um jedes Wort eindeutig zu identifizieren — schneller und fehlerresistenter.",
+    "step1Title": "Nach einem Wort suchen",
+    "step1Text": "Geben Sie ein Wort oder eine Teilzeichenfolge in die Suchleiste ein. Treffer werden in Echtzeit hervorgehoben und gefiltert.",
+    "step2Title": "Nach Index suchen",
+    "step2Text": "Jedes Wort hat einen numerischen Index (1–2048). Suchen Sie nach Nummer, um das entsprechende Wort sofort zu finden.",
+    "step3Title": "Mnemonische Phrase verifizieren",
+    "step3Text": "Prüfen Sie, ob jedes Wort Ihrer mnemonischen Phrase in der BIP39-Wortliste existiert und korrekt geschrieben ist.",
+    "stepsTitle": "Verwendung der BIP39-Wortliste"
   }
 }

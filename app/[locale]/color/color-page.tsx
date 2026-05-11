@@ -25,6 +25,7 @@ import { VISION_MODES, visionFilterStyle, type VisionMode } from "../../../libs/
 import { STORAGE_KEYS } from "../../../libs/storage-keys";
 import { showToast } from "../../../libs/toast";
 import { Eye, Info, ArrowLeftRight } from "lucide-react";
+import DescriptionSection from "../../../components/description-section";
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
 import { CircleHelp } from "lucide-react";
@@ -418,18 +419,14 @@ function ContrastTab({ fg, bg, onFgChange, onBgChange }: ContrastTabProps) {
   );
 }
 
-function Description() {
+function ColorExtras() {
   const t = useTranslations("color.descriptions");
-
   return (
-    <div className="mt-8 space-y-6">
-      <div className="border-l-2 border-accent-cyan/40 pl-4 py-2.5 mb-4">
-        <p className="text-fg-secondary text-sm leading-relaxed">{t("aeoDefinition")}</p>
-      </div>
+    <div className="mt-6 space-y-6">
       <div className="flex items-start gap-2 border-l-2 border-accent-purple bg-accent-purple-dim/30 rounded-r-lg p-4">
         <Info size={18} className="text-accent-purple mt-0.5 shrink-0" />
         <div className="space-y-2">
-          <h3 className="text-sm font-semibold text-fg-primary">{t("title")}</h3>
+          <h3 className="text-sm font-semibold text-fg-primary">{t("spacesTitle")}</h3>
           <p className="text-sm text-fg-secondary leading-relaxed">{t("introP1")}</p>
         </div>
       </div>
@@ -483,10 +480,6 @@ function Description() {
             <li>{t("tipOklch")}</li>
           </ul>
         </div>
-      </div>
-      <div>
-        <h2 className="font-semibold text-fg-primary text-base">{t("faq3Q")}</h2>
-        <p className="text-fg-secondary text-sm mt-1 leading-relaxed">{t("faq3A")}</p>
       </div>
     </div>
   );
@@ -626,7 +619,7 @@ export default function ColorPage() {
           ]}
         />
 
-        <Description />
+        <DescriptionSection namespace="color" showHowTo={false} extraSections={<ColorExtras />} />
         <RelatedTools currentTool="color" />
       </div>
       <ColorHistoryBar history={history} onSelect={setColor} onClear={clearHistory} />
