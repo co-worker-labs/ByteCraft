@@ -1,3 +1,4 @@
+import { it, expect } from "vitest";
 import { axe, toHaveNoViolations } from "jest-axe";
 import { render } from "@testing-library/react";
 import { Card } from "./card";

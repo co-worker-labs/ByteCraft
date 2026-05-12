@@ -1,3 +1,4 @@
+import { it, expect, vi } from "vitest";
 import { axe, toHaveNoViolations } from "jest-axe";
 import { render, act } from "@testing-library/react";
 import { ToastProvider, useToastContext } from "./toast";
