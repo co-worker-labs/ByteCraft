@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Trash2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import type { KeyValue } from "../../libs/httpclient/types";
 
 interface KeyValueEditorProps {
@@ -19,6 +20,7 @@ export function KeyValueEditor({
   keyPlaceholder = "Key",
   valuePlaceholder = "Value",
 }: KeyValueEditorProps) {
+  const tc = useTranslations("common");
   const rows =
     pairs.length === 0 || pairs[pairs.length - 1].key !== "" || pairs[pairs.length - 1].value !== ""
       ? [...pairs, { key: "", value: "", enabled: true }]
@@ -48,6 +50,7 @@ export function KeyValueEditor({
           onUpdate={updateRow}
           onRemove={removeRow}
           isLast={index === rows.length - 1}
+          tc={tc}
         />
       ))}
     </div>
@@ -63,6 +66,7 @@ function KVRow({
   onUpdate,
   onRemove,
   isLast,
+  tc,
 }: {
   row: KeyValue;
   index: number;
@@ -72,6 +76,7 @@ function KVRow({
   onUpdate: (index: number, field: keyof KeyValue, value: string | boolean) => void;
   onRemove: (index: number) => void;
   isLast: boolean;
+  tc: ReturnType<typeof useTranslations>;
 }) {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [filtered, setFiltered] = useState<string[]>([]);
@@ -118,6 +123,8 @@ function KVRow({
           value={row.key}
           onChange={(e) => handleKeyChange(e.target.value)}
           placeholder={keyPlaceholder}
+          aria-expanded={showSuggestions && filtered.length > 0}
+          aria-autocomplete="list"
           className="w-full bg-bg-input border border-border-default rounded-lg px-3 py-1.5 text-sm text-fg-primary placeholder:text-fg-muted focus:outline-none focus:border-accent-cyan transition-colors"
           onFocus={() => {
             if (suggestions && row.key) {
@@ -128,11 +135,15 @@ function KVRow({
           }}
         />
         {showSuggestions && filtered.length > 0 && (
-          <div className="absolute top-full left-0 mt-1 min-w-[200px] max-h-40 overflow-y-auto bg-bg-elevated border border-border-default rounded-lg shadow-lg z-50">
+          <div
+            className="absolute top-full left-0 mt-1 min-w-[200px] max-h-40 overflow-y-auto bg-bg-elevated border border-border-default rounded-lg shadow-lg z-50"
+            role="listbox"
+          >
             {filtered.map((s) => (
               <button
                 key={s}
                 type="button"
+                role="option"
                 className="w-full text-left px-3 py-1.5 text-sm text-fg-primary hover:bg-accent-cyan-dim transition-colors"
                 onClick={() => selectSuggestion(s)}
               >
@@ -153,6 +164,7 @@ function KVRow({
         <button
           type="button"
           onClick={() => onRemove(index)}
+          aria-label={tc("removeItem")}
           className="text-fg-muted hover:text-danger transition-colors shrink-0 cursor-pointer"
         >
           <Trash2 size={16} />
