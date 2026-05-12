@@ -27,5 +27,5 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "app/sw.ts"]
+  "exclude": ["node_modules", "app/sw.ts", "**/*.a11y.test.tsx", "tests/a11y-setup.ts"]
 }
