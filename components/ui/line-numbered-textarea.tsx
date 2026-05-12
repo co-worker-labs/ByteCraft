@@ -4,6 +4,7 @@ import {
   forwardRef,
   useRef,
   useEffect,
+  useId,
   type TextareaHTMLAttributes,
   type ReactNode,
   type UIEvent,
@@ -16,9 +17,23 @@ type Props = Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, "wrap"> & {
 };
 
 export const LineNumberedTextarea = forwardRef<HTMLTextAreaElement, Props>(
-  ({ label, className = "", showLineNumbers, autoGrow = false, value, onScroll, ...rest }, ref) => {
+  (
+    {
+      label,
+      className = "",
+      showLineNumbers,
+      autoGrow = false,
+      value,
+      onScroll,
+      id: externalId,
+      ...rest
+    },
+    ref
+  ) => {
     const gutterRef = useRef<HTMLDivElement | null>(null);
     const innerRef = useRef<HTMLTextAreaElement | null>(null);
+    const generatedId = useId();
+    const id = externalId ?? generatedId;
 
     function setRef(node: HTMLTextAreaElement | null) {
       innerRef.current = node;
@@ -46,11 +61,21 @@ export const LineNumberedTextarea = forwardRef<HTMLTextAreaElement, Props>(
       return (
         <div className={outerClass}>
           {label && (
-            <label className="block text-sm font-medium text-fg-secondary mb-1 flex-shrink-0">
+            <label
+              htmlFor={id}
+              className="block text-sm font-medium text-fg-secondary mb-1 flex-shrink-0"
+            >
               {label}
             </label>
           )}
-          <textarea ref={setRef} value={value} onScroll={onScroll} className={taClass} {...rest} />
+          <textarea
+            ref={setRef}
+            value={value}
+            onScroll={onScroll}
+            className={taClass}
+            id={id}
+            {...rest}
+          />
         </div>
       );
     }
@@ -80,7 +105,10 @@ export const LineNumberedTextarea = forwardRef<HTMLTextAreaElement, Props>(
     return (
       <div className={outerClass}>
         {label && (
-          <label className="block text-sm font-medium text-fg-secondary mb-1 flex-shrink-0">
+          <label
+            htmlFor={id}
+            className="block text-sm font-medium text-fg-secondary mb-1 flex-shrink-0"
+          >
             {label}
           </label>
         )}
@@ -96,6 +124,7 @@ export const LineNumberedTextarea = forwardRef<HTMLTextAreaElement, Props>(
             value={value}
             onScroll={handleScroll}
             className={taClass}
+            id={id}
             {...rest}
           />
         </div>
