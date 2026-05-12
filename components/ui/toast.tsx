@@ -1,7 +1,8 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode } from "react";
 import { X } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type ToastType = "success" | "danger" | "info" | "warning";
 
@@ -31,24 +32,29 @@ const typeBorderColors: Record<ToastType, string> = {
 };
 
 export function ToastProvider({ children }: { children: ReactNode }) {
+  const tc = useTranslations("common");
   const [toasts, setToasts] = useState<Toast[]>([]);
 
-  const addToast = useCallback((message: string, type: ToastType, timeout = 3000) => {
+  const addToast = (message: string, type: ToastType, timeout = 3000) => {
     const id = globalNextId++;
     setToasts((prev) => [...prev, { id, message, type }]);
     setTimeout(() => {
       setToasts((prev) => prev.filter((t) => t.id !== id));
     }, timeout);
-  }, []);
+  };
 
-  const removeToast = useCallback((id: number) => {
+  const removeToast = (id: number) => {
     setToasts((prev) => prev.filter((t) => t.id !== id));
-  }, []);
+  };
 
   return (
     <ToastContext.Provider value={{ addToast }}>
       {children}
-      <div className="fixed bottom-4 right-4 z-[9999] flex flex-col gap-2">
+      <div
+        className="fixed bottom-4 right-4 z-[9999] flex flex-col gap-2"
+        aria-live="polite"
+        aria-atomic="false"
+      >
         {toasts.map((toast) => (
           <div
             key={toast.id}
@@ -58,6 +64,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
             <button
               onClick={() => removeToast(toast.id)}
               className="text-fg-muted hover:text-fg-primary transition-colors"
+              aria-label={tc("close")}
             >
               <X size={14} />
             </button>
