@@ -14,10 +14,12 @@ import { EditorState, Compartment } from "@codemirror/state";
 import { defaultKeymap, history, historyKeymap, indentWithTab } from "@codemirror/commands";
 import { sql, SQLite } from "@codemirror/lang-sql";
 import { autocompletion, closeBrackets, completionKeymap } from "@codemirror/autocomplete";
+import { linter } from "@codemirror/lint";
 import { Button } from "../../../../components/ui/button";
 import { useTheme } from "../../../../libs/theme";
 import { lightTheme, darkTheme } from "../../../../libs/dbviewer/codemirror-theme";
 import { formatSql, compressSql } from "../../../../libs/dbviewer/format";
+import { createSqlLintSource } from "../../../../libs/dbviewer/sql-linter";
 import {
   buildSchemaIndex,
   makeCompletionSource,
@@ -79,6 +81,7 @@ export function SqlEditor({
         drawSelection(),
         closeBrackets(),
         sql({ dialect: SQLite, upperCaseKeywords: true }),
+        linter(createSqlLintSource("sqlite"), { delay: 500 }),
         themeCompartment.of(themeExt),
         completionCompartment.of(completion),
         keymap.of([

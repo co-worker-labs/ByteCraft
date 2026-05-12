@@ -20,7 +20,7 @@ export function Dropdown({ trigger, items, className = "" }: DropdownProps) {
   return (
     <Menu as="div" className={`relative inline-block ${className}`}>
       <MenuButton as="div">{trigger}</MenuButton>
-      <MenuItems className="absolute right-0 mt-2 min-w-[180px] bg-bg-elevated border border-border-default rounded-xl shadow-lg overflow-hidden z-50 focus:outline-none">
+      <MenuItems className="absolute left-0 mt-2 min-w-[180px] max-h-[280px] overflow-y-auto bg-bg-elevated border border-border-default rounded-xl shadow-lg z-50 focus:outline-none">
         {items.map((item, index) => (
           <MenuItem key={index} disabled={item.disabled}>
             {({ focus }) => (

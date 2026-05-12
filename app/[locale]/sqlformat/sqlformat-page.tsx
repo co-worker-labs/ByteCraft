@@ -13,7 +13,16 @@ import {
 } from "@codemirror/view";
 import { EditorState, Compartment } from "@codemirror/state";
 import { defaultKeymap, history, historyKeymap, indentWithTab } from "@codemirror/commands";
-import { sql, MySQL, PostgreSQL, SQLite, PLSQL, MSSQL, type SQLDialect } from "@codemirror/lang-sql";
+import {
+  sql,
+  MySQL,
+  PostgreSQL,
+  SQLite,
+  PLSQL,
+  MSSQL,
+  type SQLDialect,
+} from "@codemirror/lang-sql";
+import { linter } from "@codemirror/lint";
 import { Dropdown } from "../../../components/ui/dropdown";
 import { Button } from "../../../components/ui/button";
 import { CopyButton } from "../../../components/ui/copy-btn";
@@ -24,17 +33,16 @@ import RelatedTools from "../../../components/related-tools";
 import { useTheme } from "../../../libs/theme";
 import { lightTheme, darkTheme } from "../../../libs/dbviewer/codemirror-theme";
 import { formatSql, compressSql } from "../../../libs/sqlformat/main";
+import { createSqlLintSource } from "../../../libs/dbviewer/sql-linter";
 import {
   DIALECTS,
-  INDENT_SIZES,
   KEYWORD_CASES,
   FUNCTION_CASES,
-  USE_TABS_OPTIONS,
   LINES_BETWEEN,
+  INDENT_OPTIONS,
 } from "../../../libs/sqlformat/dialects";
 import type {
   SqlLanguage,
-  IndentSize,
   KeywordCase,
   FunctionCase,
   LinesBetween,
@@ -68,10 +76,9 @@ function Conversion() {
   const { theme } = useTheme();
 
   const [language, setLanguage] = useState<SqlLanguage>("sql");
-  const [indentSize, setIndentSize] = useState<IndentSize>(2);
+  const [indentIdx, setIndentIdx] = useState(0);
   const [keywordCase, setKeywordCase] = useState<KeywordCase>("upper");
   const [functionCase, setFunctionCase] = useState<FunctionCase>("upper");
-  const [useTabs, setUseTabs] = useState(false);
   const [linesBetween, setLinesBetween] = useState<LinesBetween>(1);
 
   const [output, setOutput] = useState("");
@@ -85,6 +92,7 @@ function Conversion() {
   const [inputLangComp] = useState(() => new Compartment());
   const [outputThemeComp] = useState(() => new Compartment());
   const [outputLangComp] = useState(() => new Compartment());
+  const [lintComp] = useState(() => new Compartment());
 
   const readOnlyExt = EditorState.readOnly.of(true);
 
@@ -101,6 +109,9 @@ function Conversion() {
       keymap.of([...defaultKeymap, ...historyKeymap, indentWithTab]),
       EditorView.lineWrapping,
     ];
+    if (!isReadOnly) {
+      base.push(lintComp.of(linter(createSqlLintSource(language), { delay: 500 })));
+    }
     if (isReadOnly) base.push(readOnlyExt);
     return base;
   }
@@ -144,7 +155,10 @@ function Conversion() {
     outputViewRef.current?.dispatch({
       effects: outputLangComp.reconfigure(getDialectExtension(language)),
     });
-  }, [language, inputLangComp, outputLangComp]);
+    inputViewRef.current?.dispatch({
+      effects: lintComp.reconfigure(linter(createSqlLintSource(language), { delay: 500 })),
+    });
+  }, [language, inputLangComp, outputLangComp, lintComp]);
 
   function getInputValue(): string {
     return inputViewRef.current?.state.doc.toString() ?? "";
@@ -160,10 +174,11 @@ function Conversion() {
     setError(null);
     const input = getInputValue();
     try {
+      const indent = INDENT_OPTIONS[indentIdx];
       const result = formatSql(input, {
         language,
-        tabWidth: indentSize,
-        useTabs,
+        tabWidth: indent.size,
+        useTabs: indent.useTabs,
         keywordCase,
         functionCase,
         indentStyle: "standard",
@@ -218,23 +233,23 @@ function Conversion() {
         <Dropdown
           trigger={
             <button className="flex items-center gap-1.5 px-3 py-1.5 text-sm border border-border-default rounded-lg hover:border-accent-cyan transition-colors text-fg-primary">
-              {t("indentSize")}: {indentSize}
+              {t("indent")}: {t(INDENT_OPTIONS[indentIdx].i18nKey)}
             </button>
           }
-          items={INDENT_SIZES.map((s) => ({
-            label: String(s),
-            onClick: () => setIndentSize(s),
-            active: s === indentSize,
+          items={INDENT_OPTIONS.map((opt, i) => ({
+            label: t(opt.i18nKey),
+            onClick: () => setIndentIdx(i),
+            active: i === indentIdx,
           }))}
         />
         <Dropdown
           trigger={
             <button className="flex items-center gap-1.5 px-3 py-1.5 text-sm border border-border-default rounded-lg hover:border-accent-cyan transition-colors text-fg-primary">
-              {t("keywordCase")}: {keywordCase}
+              {t("keywordCase")}: {t(keywordCase)}
             </button>
           }
           items={KEYWORD_CASES.map((c) => ({
-            label: c,
+            label: t(c),
             onClick: () => setKeywordCase(c),
             active: c === keywordCase,
           }))}
@@ -242,25 +257,13 @@ function Conversion() {
         <Dropdown
           trigger={
             <button className="flex items-center gap-1.5 px-3 py-1.5 text-sm border border-border-default rounded-lg hover:border-accent-cyan transition-colors text-fg-primary">
-              {t("functionCase")}: {functionCase}
+              {t("functionCase")}: {t(functionCase)}
             </button>
           }
           items={FUNCTION_CASES.map((c) => ({
-            label: c,
+            label: t(c),
             onClick: () => setFunctionCase(c),
             active: c === functionCase,
-          }))}
-        />
-        <Dropdown
-          trigger={
-            <button className="flex items-center gap-1.5 px-3 py-1.5 text-sm border border-border-default rounded-lg hover:border-accent-cyan transition-colors text-fg-primary">
-              {useTabs ? t("tabs") : t("spaces")}
-            </button>
-          }
-          items={USE_TABS_OPTIONS.map((v) => ({
-            label: v ? t("tabs") : t("spaces"),
-            onClick: () => setUseTabs(v),
-            active: v === useTabs,
           }))}
         />
         <Dropdown
