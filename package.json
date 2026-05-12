@@ -11,7 +11,8 @@
     "icons:generate": "node scripts/generate-pwa-icons.mjs",
     "typecheck:sw": "tsc -p tsconfig.sw.json",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:a11y": "vitest run --config vitest.config.a11y.ts"
   },
   "dependencies": {
     "@codemirror/autocomplete": "^6.20.1",
@@ -95,6 +96,7 @@
     "eslint-config-next": "^16.2.4",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
+    "jest-axe": "^10.0.0",
     "jsdom": "^29.1.1",
     "lint-staged": "^16.4.0",
     "png-to-ico": "^3.0.1",
