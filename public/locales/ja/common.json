@@ -13,7 +13,8 @@
     "searchToolsHint": "ツール（⌘K）",
     "noMatchingTools": "一致するツールが見つかりません",
     "quickAccess": "クイックアクセス",
-    "recentTools": "最近使用"
+    "recentTools": "最近使用",
+    "mainNavigation": "メインナビゲーション"
   },
   "footer": {
     "home": "ホーム",
@@ -104,5 +105,9 @@
   },
   "advancedSettings": "詳細設定",
   "invalidInput": "無効な入力",
-  "indent": "インデント"
+  "indent": "インデント",
+  "skipToMain": "メインコンテンツへスキップ",
+  "floatingToolbar": "フローティングツールバー",
+  "removeItem": "項目を削除",
+  "searchTools": "ツールを検索"
 }

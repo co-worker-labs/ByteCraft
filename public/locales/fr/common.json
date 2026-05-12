@@ -13,7 +13,8 @@
     "searchToolsHint": "Outils (⌘K)",
     "noMatchingTools": "Aucun outil correspondant",
     "quickAccess": "Accès rapide",
-    "recentTools": "Récents"
+    "recentTools": "Récents",
+    "mainNavigation": "Navigation principale"
   },
   "footer": {
     "home": "Accueil",
@@ -104,5 +105,9 @@
   },
   "advancedSettings": "Paramètres avancés",
   "invalidInput": "Entrée invalide",
-  "indent": "Indentation"
+  "indent": "Indentation",
+  "skipToMain": "Aller au contenu principal",
+  "floatingToolbar": "Barre d'outils flottante",
+  "removeItem": "Supprimer l'élément",
+  "searchTools": "Rechercher un outil"
 }
