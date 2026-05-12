@@ -13,7 +13,7 @@ import {
 } from "@codemirror/view";
 import { EditorState, Compartment } from "@codemirror/state";
 import { defaultKeymap, history, historyKeymap, indentWithTab } from "@codemirror/commands";
-import { sql, MySQL, PostgreSQL, SQLite, PLSQL, MsSQL } from "@codemirror/lang-sql";
+import { sql, MySQL, PostgreSQL, SQLite, PLSQL, MSSQL, type SQLDialect } from "@codemirror/lang-sql";
 import { Dropdown } from "../../../components/ui/dropdown";
 import { Button } from "../../../components/ui/button";
 import { CopyButton } from "../../../components/ui/copy-btn";
@@ -51,12 +51,12 @@ ORDER BY order_count DESC
 LIMIT 20;`;
 
 function getDialectExtension(language: SqlLanguage) {
-  const dialectMap: Partial<Record<SqlLanguage, ReturnType<typeof MySQL>>> = {
+  const dialectMap: Partial<Record<SqlLanguage, SQLDialect>> = {
     mysql: MySQL,
     postgresql: PostgreSQL,
     sqlite: SQLite,
     plsql: PLSQL,
-    transactsql: MsSQL,
+    transactsql: MSSQL,
   };
   const dialect = dialectMap[language];
   return sql({ dialect, upperCaseKeywords: true });
