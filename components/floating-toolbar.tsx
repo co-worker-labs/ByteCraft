@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useSyncExternalStore } from "react";
+import { useState, useEffect, useSyncExternalStore, useRef } from "react";
 import { useRouter, usePathname } from "../i18n/navigation";
 import {
   LayoutGrid,
@@ -11,6 +11,7 @@ import {
   Minimize,
   Globe,
   GripVertical,
+  ShieldCheck,
 } from "lucide-react";
 import { useTheme } from "../libs/theme";
 import { useTranslations, useLocale } from "next-intl";
@@ -18,6 +19,10 @@ import { Dropdown } from "./ui/dropdown";
 import { useFullscreen } from "../hooks/use-fullscreen";
 import { useDraggable } from "../hooks/use-draggable";
 import { showToast } from "../libs/toast";
+import { STORAGE_KEYS } from "../libs/storage-keys";
+import { useOnboarding } from "../hooks/use-onboarding";
+import { useRecentTools } from "../hooks/use-recent-tools";
+import { OnboardingPopover } from "./ui/onboarding-popover";
 import { languages } from "../libs/i18n/languages";
 import ToolsDrawer from "./tools-drawer";
 
@@ -42,6 +47,10 @@ export default function FloatingToolbar() {
     () => typeof navigator !== "undefined" && !!navigator.clipboard,
     () => false
   );
+  const clipboardBtnRef = useRef<HTMLButtonElement>(null);
+  const { shouldShow: notGuided, dismiss } = useOnboarding(STORAGE_KEYS.onboardingClearClipboard);
+  const { recentTools } = useRecentTools();
+  const shouldShowOnboarding = notGuided && recentTools.length > 0 && isClipboardSupported;
 
   const defaultPosition =
     typeof window !== "undefined"
@@ -106,16 +115,28 @@ export default function FloatingToolbar() {
       <ToolsDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
 
       {isClipboardSupported && (
-        <button
-          type="button"
-          className={`flex h-[34px] w-[34px] items-center justify-center text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors border-r border-border-default ${clipAnimating ? "nav-btn-clear" : ""}`}
-          onClick={handleClearClipboard}
-          onAnimationEnd={() => setClipAnimating(false)}
-          aria-label={t("nav.clearClipboard")}
-          title={t("nav.clearClipboard")}
-        >
-          <ClipboardX size={16} />
-        </button>
+        <>
+          <button
+            ref={clipboardBtnRef}
+            type="button"
+            className={`flex h-[34px] w-[34px] items-center justify-center text-fg-secondary hover:text-accent-cyan hover:bg-accent-cyan/10 transition-colors border-r border-border-default ${clipAnimating ? "nav-btn-clear" : ""} ${shouldShowOnboarding ? "onboarding-pulse" : ""}`}
+            onClick={handleClearClipboard}
+            onAnimationEnd={() => setClipAnimating(false)}
+            aria-label={t("nav.clearClipboard")}
+            title={t("nav.clearClipboard")}
+          >
+            <ClipboardX size={16} />
+          </button>
+          <OnboardingPopover
+            show={shouldShowOnboarding}
+            onDismiss={dismiss}
+            targetRef={clipboardBtnRef}
+            icon={<ShieldCheck size={16} />}
+            title={t("onboarding.clearClipboardTitle")}
+            description={t("onboarding.clearClipboardDesc")}
+            buttonLabel={t("onboarding.gotIt")}
+          />
+        </>
       )}
 
       {fullscreen.isSupported && (

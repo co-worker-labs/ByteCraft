@@ -281,6 +281,23 @@
   animation: btn-clear 0.6s ease-in-out;
 }
 
+@keyframes onboarding-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(6, 214, 160, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(6, 214, 160, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(6, 214, 160, 0);
+  }
+}
+
+.onboarding-pulse {
+  animation: onboarding-pulse 2s ease-out infinite;
+  background-color: rgba(6, 214, 160, 0.1);
+}
+
 /* ===== Tools Drawer Animations ===== */
 @keyframes drawer-slide-in-right {
   from {
@@ -324,7 +341,8 @@
 @media (prefers-reduced-motion: reduce) {
   .animate-drawer-right,
   .animate-drawer-up,
-  .animate-backdrop {
+  .animate-backdrop,
+  .onboarding-pulse {
     animation: none !important;
   }
 }
