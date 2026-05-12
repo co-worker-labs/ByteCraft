@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: Props) {
       siteName: "OmniKit",
       images: [
         {
-          url: "/api/og?title=OmniKit&icon=🛠&desc=Free+online+developer+tools",
+          url: `/api/og?locale=${locale}&type=home`,
           width: 1200,
           height: 630,
         },

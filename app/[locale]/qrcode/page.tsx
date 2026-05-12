@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     path: PATH,
     title: t("qrcode.title"),
     description: t("qrcode.description"),
-    ogImage: { title: t("qrcode.shortTitle"), emoji: tool.emoji, desc: t("qrcode.description") },
+    ogImage: { type: "tool", key: TOOL_KEY },
   });
 }
 

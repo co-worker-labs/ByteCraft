@@ -1,12 +1,127 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
+import { routing } from "../../../i18n/routing";
+
+import enTools from "../../../public/locales/en/tools.json";
+import zhCnTools from "../../../public/locales/zh-CN/tools.json";
+import zhTwTools from "../../../public/locales/zh-TW/tools.json";
+import jaTools from "../../../public/locales/ja/tools.json";
+import koTools from "../../../public/locales/ko/tools.json";
+import esTools from "../../../public/locales/es/tools.json";
+import ptBrTools from "../../../public/locales/pt-BR/tools.json";
+import frTools from "../../../public/locales/fr/tools.json";
+import deTools from "../../../public/locales/de/tools.json";
+import ruTools from "../../../public/locales/ru/tools.json";
+
+import enCategories from "../../../public/locales/en/categories.json";
+import zhCnCategories from "../../../public/locales/zh-CN/categories.json";
+import zhTwCategories from "../../../public/locales/zh-TW/categories.json";
+import jaCategories from "../../../public/locales/ja/categories.json";
+import koCategories from "../../../public/locales/ko/categories.json";
+import esCategories from "../../../public/locales/es/categories.json";
+import ptBrCategories from "../../../public/locales/pt-BR/categories.json";
+import frCategories from "../../../public/locales/fr/categories.json";
+import deCategories from "../../../public/locales/de/categories.json";
+import ruCategories from "../../../public/locales/ru/categories.json";
+
+import enHome from "../../../public/locales/en/home.json";
+import zhCnHome from "../../../public/locales/zh-CN/home.json";
+import zhTwHome from "../../../public/locales/zh-TW/home.json";
+import jaHome from "../../../public/locales/ja/home.json";
+import koHome from "../../../public/locales/ko/home.json";
+import esHome from "../../../public/locales/es/home.json";
+import ptBrHome from "../../../public/locales/pt-BR/home.json";
+import frHome from "../../../public/locales/fr/home.json";
+import deHome from "../../../public/locales/de/home.json";
+import ruHome from "../../../public/locales/ru/home.json";
 
 export const runtime = "edge";
 
+type Locale = (typeof routing.locales)[number];
+
+type ToolEntry = { shortTitle: string; description: string };
+type CategoryEntry = { shortTitle: string; description: string };
+type HomeEntry = { title: string; metaDescription: string };
+
+ 
+const TOOL_MAP: Record<string, Record<string, any>> = {
+  en: enTools,
+  "zh-CN": zhCnTools,
+  "zh-TW": zhTwTools,
+  ja: jaTools,
+  ko: koTools,
+  es: esTools,
+  "pt-BR": ptBrTools,
+  fr: frTools,
+  de: deTools,
+  ru: ruTools,
+};
+
+ 
+const CATEGORY_MAP: Record<string, Record<string, any>> = {
+  en: enCategories,
+  "zh-CN": zhCnCategories,
+  "zh-TW": zhTwCategories,
+  ja: jaCategories,
+  ko: koCategories,
+  es: esCategories,
+  "pt-BR": ptBrCategories,
+  fr: frCategories,
+  de: deCategories,
+  ru: ruCategories,
+};
+
+const HOME_MAP: Record<string, HomeEntry> = {
+  en: enHome,
+  "zh-CN": zhCnHome,
+  "zh-TW": zhTwHome,
+  ja: jaHome,
+  ko: koHome,
+  es: esHome,
+  "pt-BR": ptBrHome,
+  fr: frHome,
+  de: deHome,
+  ru: ruHome,
+};
+
+const LOCALE_SET = new Set<string>(routing.locales);
+
+function resolveLocale(raw: string | null): Locale {
+  if (raw && LOCALE_SET.has(raw)) return raw as Locale;
+  return routing.defaultLocale;
+}
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
-  const title = searchParams.get("title") || "OmniKit";
-  const desc = searchParams.get("desc") || "Free Online Developer Tools";
+  const type = searchParams.get("type") || "home";
+  const locale = resolveLocale(searchParams.get("locale"));
+  const key = searchParams.get("key") || "";
+
+  let title = "OmniKit";
+  let desc = "Free Online Developer Tools";
+
+  if (type === "tool" && key) {
+    const entry = TOOL_MAP[locale]?.[key];
+    if (entry) {
+      title = entry.shortTitle;
+      desc = entry.description;
+    }
+  } else if (type === "category" && key) {
+    const entry = CATEGORY_MAP[locale]?.[key];
+    if (entry) {
+      title = entry.shortTitle;
+      desc = entry.description;
+    }
+  } else if (type === "home") {
+    const entry = HOME_MAP[locale];
+    if (entry) {
+      title = entry.title;
+      desc = entry.metaDescription;
+    }
+  } else if (type === "custom") {
+    title = searchParams.get("title") || title;
+    desc = searchParams.get("desc") || desc;
+  }
 
   return new ImageResponse(
     <div

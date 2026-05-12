@@ -16,11 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     path: PATH,
     title: t("password.title"),
     description: t("password.description"),
-    ogImage: {
-      title: t("password.shortTitle"),
-      emoji: tool.emoji,
-      desc: t("password.description"),
-    },
+    ogImage: { type: "tool", key: TOOL_KEY },
   });
 }
 
