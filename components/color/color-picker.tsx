@@ -45,7 +45,7 @@ export function ColorPicker({ value, onChange, showEyedropper = true }: ColorPic
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="w-full max-w-[280px] aspect-square">
+      <div className="w-full max-w-[280px] aspect-square" role="group" aria-label={t("converter")}>
         <HexAlphaColorPicker
           color={value}
           onChange={onChange}
