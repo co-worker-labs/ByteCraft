@@ -109,5 +109,10 @@
   "skipToMain": "跳至主要內容",
   "floatingToolbar": "浮動工具列",
   "removeItem": "移除項目",
-  "searchTools": "搜尋工具"
+  "searchTools": "搜尋工具",
+  "onboarding": {
+    "clearClipboardTitle": "清空剪貼簿",
+    "clearClipboardDesc": "一鍵清除瀏覽器剪貼簿中的敏感資料",
+    "gotIt": "知道了"
+  }
 }

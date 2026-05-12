@@ -109,5 +109,10 @@
   "skipToMain": "Aller au contenu principal",
   "floatingToolbar": "Barre d'outils flottante",
   "removeItem": "Supprimer l'élément",
-  "searchTools": "Rechercher un outil"
+  "searchTools": "Rechercher un outil",
+  "onboarding": {
+    "clearClipboardTitle": "Vider le presse-papiers",
+    "clearClipboardDesc": "En un clic, supprimez les données sensibles de votre presse-papiers",
+    "gotIt": "Compris"
+  }
 }

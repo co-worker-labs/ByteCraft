@@ -109,5 +109,10 @@
   "skipToMain": "跳转到主要内容",
   "floatingToolbar": "浮动工具栏",
   "removeItem": "移除项目",
-  "searchTools": "搜索工具"
+  "searchTools": "搜索工具",
+  "onboarding": {
+    "clearClipboardTitle": "清空剪贴板",
+    "clearClipboardDesc": "一键清除浏览器剪贴板中的敏感数据",
+    "gotIt": "知道了"
+  }
 }

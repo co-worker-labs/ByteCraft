@@ -109,5 +109,10 @@
   "skipToMain": "Zum Hauptinhalt springen",
   "floatingToolbar": "Schwebende Werkzeugleiste",
   "removeItem": "Element entfernen",
-  "searchTools": "Tools suchen"
+  "searchTools": "Tools suchen",
+  "onboarding": {
+    "clearClipboardTitle": "Zwischenablage leeren",
+    "clearClipboardDesc": "Mit einem Klick sensible Daten aus der Zwischenablage entfernen",
+    "gotIt": "Verstanden"
+  }
 }

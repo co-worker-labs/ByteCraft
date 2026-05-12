@@ -109,5 +109,10 @@
   "skipToMain": "메인 콘텐츠로 건너뛰기",
   "floatingToolbar": "플로팅 도구 모음",
   "removeItem": "항목 제거",
-  "searchTools": "도구 검색"
+  "searchTools": "도구 검색",
+  "onboarding": {
+    "clearClipboardTitle": "클립보드 지우기",
+    "clearClipboardDesc": "브라우저 클립보드에 남은 민감한 데이터를 원클릭으로 삭제",
+    "gotIt": "알겠습니다"
+  }
 }
