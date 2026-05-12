@@ -109,5 +109,10 @@
   "skipToMain": "Pular para o conteúdo principal",
   "floatingToolbar": "Barra de ferramentas flutuante",
   "removeItem": "Remover item",
-  "searchTools": "Buscar ferramentas"
+  "searchTools": "Buscar ferramentas",
+  "onboarding": {
+    "clearClipboardTitle": "Limpar área de transferência",
+    "clearClipboardDesc": "Um clique para remover dados sensíveis da área de transferência do navegador",
+    "gotIt": "Entendi"
+  }
 }

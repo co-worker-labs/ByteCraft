@@ -12,6 +12,7 @@ export const STORAGE_KEYS = {
   sshkeyDeployTarget: "okrun:sshkey:deploy",
   httpclientHistory: "okrun:httpclient:history",
   walletSelectedChains: "okrun:wallet:chains",
+  onboardingClearClipboard: "okrun:onboarding:clear-clipboard",
 } as const;
 
 export const COOKIE_KEYS = {

@@ -109,5 +109,10 @@
   "skipToMain": "Ir al contenido principal",
   "floatingToolbar": "Barra de herramientas flotante",
   "removeItem": "Eliminar elemento",
-  "searchTools": "Buscar herramientas"
+  "searchTools": "Buscar herramientas",
+  "onboarding": {
+    "clearClipboardTitle": "Limpiar portapapeles",
+    "clearClipboardDesc": "Un clic para eliminar datos sensibles del portapapeles de tu navegador",
+    "gotIt": "Entendido"
+  }
 }

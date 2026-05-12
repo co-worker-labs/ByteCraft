@@ -109,5 +109,10 @@
   "skipToMain": "メインコンテンツへスキップ",
   "floatingToolbar": "フローティングツールバー",
   "removeItem": "項目を削除",
-  "searchTools": "ツールを検索"
+  "searchTools": "ツールを検索",
+  "onboarding": {
+    "clearClipboardTitle": "クリップボードをクリア",
+    "clearClipboardDesc": "ブラウザのクリップボードに残った機密データをワンクリックで消去",
+    "gotIt": "了解"
+  }
 }

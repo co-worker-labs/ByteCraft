@@ -109,5 +109,10 @@
   "skipToMain": "Skip to main content",
   "floatingToolbar": "Floating toolbar",
   "removeItem": "Remove item",
-  "searchTools": "Search tools"
+  "searchTools": "Search tools",
+  "onboarding": {
+    "clearClipboardTitle": "Clear Clipboard",
+    "clearClipboardDesc": "One-click to clear sensitive data from your browser clipboard",
+    "gotIt": "Got it"
+  }
 }
