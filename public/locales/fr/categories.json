@@ -1,6 +1,6 @@
 {
   "text": {
-    "title": "Outils de traitement de texte — JSON, Regex, Diff et plus | OmniKit",
+    "title": "Outils de traitement de texte — JSON, Regex, Diff et plus",
     "shortTitle": "Traitement de texte",
     "description": "Outils gratuits de traitement de texte en ligne pour les développeurs. Formater du JSON, tester des regex, comparer des diffs, convertir la casse et plus encore. 100% côté client.",
     "intro": "Un ensemble de 8 outils de traitement de texte conçus pour les développeurs qui travaillent quotidiennement avec du texte structuré et non structuré. Formater et valider du JSON, tester des expressions régulières avec correspondance en temps réel, comparer des différences de texte, écrire du Markdown avec aperçu en direct, convertir la casse de texte, extraire les emails et URL, compter les mots et caractères, et supprimer les lignes en doublon — le tout sans envoyer aucune donnée à un serveur.",
@@ -12,7 +12,7 @@
     "faq3A": "Oui. La plupart des outils gèrent des fichiers allant jusqu'à plusieurs Mo. Le formateur JSON, le diff et l'éditeur Markdown utilisent des Web Workers pour des performances fluides sur les entrées volumineuses."
   },
   "encoding": {
-    "title": "Outils d'encodage et de conversion — Base64, URL, CSV, YAML | OmniKit",
+    "title": "Outils d'encodage et de conversion — Base64, URL, CSV, YAML",
     "shortTitle": "Encodage et conversion",
     "description": "Outils gratuits d'encodage et de conversion en ligne pour les développeurs. Encodage/décodage Base64, encodage/décodage d'URL, conversion CSV, conversion YAML, conversion de base numérique et plus encore. 100% côté client.",
     "intro": "7 outils d'encodage et de conversion qui couvrent les besoins les plus courants de transformation de données. Encoder et décoder des chaînes Base64, encoder les paramètres d'URL, convertir entre JSON et CSV ou YAML, transformer les bases numériques et convertir les unités de stockage. Chaque opération s'exécute localement dans votre navigateur — aucun téléchargement sur serveur.",
@@ -22,7 +22,7 @@
     "faq2A": "Oui. Toutes les conversions suivent leurs spécifications RFC respectives (RFC 4648 pour Base64, RFC 3986 pour l'encodage d'URL) et produisent un résultat conforme aux normes."
   },
   "security": {
-    "title": "Outils de sécurité et de cryptographie — JWT, Hachage, Chiffrement | OmniKit",
+    "title": "Outils de sécurité et de cryptographie — JWT, Hachage, Chiffrement",
     "shortTitle": "Sécurité et crypto",
     "description": "Outils gratuits de sécurité et de cryptographie en ligne pour les développeurs. Déboguer des jetons JWT, générer des hachages, créer des mots de passe sécurisés, générer des clés SSH, chiffrer du texte et calculer des sommes de contrôle. 100% côté client.",
     "intro": "6 outils de sécurité et de cryptographie pour les développeurs. Déboguer et vérifier des jetons JWT, générer des hachages MD5/SHA, créer des mots de passe cryptographiquement sécurisés, générer des paires de clés SSH, chiffrer et déchiffrer du texte avec AES/DES/RC4, et calculer des sommes de contrôle de fichiers. Toutes les opérations cryptographiques s'exécutent entièrement dans votre navigateur — vos données ne quittent jamais votre appareil.",
@@ -32,7 +32,7 @@
     "faq2A": "L'outil Chiffrer/Déchiffrer prend en charge AES-256, DES, Triple DES, Rabbit, RC4 et RC4Drop. Le générateur de hachages prend en charge MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3, Keccak et RIPEMD-160."
   },
   "generators": {
-    "title": "Outils de génération — UUID, Cron, Horodatage, QR Code | OmniKit",
+    "title": "Outils de génération — UUID, Cron, Horodatage, QR Code",
     "shortTitle": "Générateurs",
     "description": "Outils gratuits de génération en ligne pour les développeurs. Générer des UUID, construire des expressions Cron, convertir des horodatages Unix et créer des QR codes. 100% côté client.",
     "intro": "4 outils de génération pour créer des artefacts courants de développement. Générer des identifiants UUID v4 et v7, construire et décoder des expressions Cron avec aperçu des prochaines exécutions, convertir des horodatages Unix et générer des QR codes stylisés pour du texte, des URL, du WiFi et plus encore. Tout s'exécute localement dans votre navigateur.",
@@ -42,7 +42,7 @@
     "faq2A": "Oui. UUID v4 utilise des nombres aléatoires cryptographiquement sécurisés, et UUID v7 combine un horodatage avec de l'aléatoire. Les deux sont conformes à la RFC 4122/9562."
   },
   "visual": {
-    "title": "Outils visuels et média — Convertisseur de couleur, Compresseur d'image | OmniKit",
+    "title": "Outils visuels et média — Convertisseur de couleur, Compresseur d'image",
     "shortTitle": "Visuel et média",
     "description": "Outils visuels et média gratuits en ligne pour les développeurs. Convertir des couleurs entre HEX/RGB/HSL/OKLCH, extraire des palettes d'images, compresser et convertir des images. 100% côté client.",
     "intro": "2 outils visuels et média pour les flux de travail de design et d'image. Le convertisseur de couleur gère 7 espaces colorimétriques (HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH) avec un sélecteur visuel, l'extraction de palette d'image, la vérification du contraste WCAG et la simulation de daltonisme. Le compresseur d'image gère la conversion PNG, JPG et WebP avec prise en charge du redimensionnement. Tout le traitement s'exécute localement.",
@@ -52,7 +52,7 @@
     "faq2A": "Non. La compression d'image s'exécute entièrement dans votre navigateur via l'API Canvas, il n'y a donc pas de limite de taille côté serveur. Les images très volumineuses peuvent être plus lentes à traiter."
   },
   "reference": {
-    "title": "Outils de référence et recherche — Statut HTTP, ASCII, Codes HTML, Sous-réseaux | OmniKit",
+    "title": "Outils de référence et recherche — Statut HTTP, ASCII, Codes HTML, Sous-réseaux",
     "shortTitle": "Référence et recherche",
     "description": "Outils gratuits de référence et de recherche en ligne pour les développeurs. Codes de statut HTTP, table ASCII, entités HTML, visionneuse SQLite, client HTTP et calculateur de sous-réseaux. 100% côté client.",
     "intro": "6 outils de référence et de recherche pour des consultations rapides. Parcourir les codes de statut HTTP avec références RFC, consulter les codes de caractères ASCII, encoder les entités HTML, explorer les bases de données SQLite avec un éditeur SQL, tester les APIs REST avec le client HTTP et calculer des sous-réseaux avec le Calculateur de Sous-réseaux IP. Tous les outils sont gratuits et fonctionnent entièrement dans votre navigateur.",

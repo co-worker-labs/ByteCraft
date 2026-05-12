@@ -1,6 +1,6 @@
 {
   "text": {
-    "title": "文字處理工具 - JSON、Regex、Diff 及更多 | OmniKit",
+    "title": "文字處理工具 - JSON、Regex、Diff 及更多",
     "shortTitle": "文字處理",
     "description": "免費的線上文字處理工具，專為開發者設計。格式化 JSON、測試正則表達式、比較差異、轉換大小寫等。所有工具 100% 在瀏覽器中執行。",
     "intro": "一套為每天處理結構化與非結構化文字的開發者設計的 8 款文字處理工具。格式化與驗證 JSON、即時測試正則表達式、比較文字差異、即時預覽 Markdown 編輯器、轉換文字大小寫、提取電子郵件與 URL、統計字數與字元數、去除重複行——所有操作不會將任何資料傳送到伺服器。",
@@ -12,7 +12,7 @@
     "faq3A": "可以。大多數工具可處理數 MB 的檔案。JSON 格式化器、差異比對和 Markdown 編輯器使用 Web Worker 確保大檔案處理時的流暢體驗。"
   },
   "encoding": {
-    "title": "編碼與轉換工具 - Base64、URL、CSV、YAML | OmniKit",
+    "title": "編碼與轉換工具 - Base64、URL、CSV、YAML",
     "shortTitle": "編碼與轉換",
     "description": "免費的線上編碼與轉換工具，專為開發者設計。Base64 編碼/解碼、URL 編碼/解碼、CSV 轉換、YAML 轉換、進位轉換等。100% 在瀏覽器中執行。",
     "intro": "7 款編碼與轉換工具，涵蓋最常見的資料轉換需求。Base64 編碼/解碼、URL 編碼、JSON 與 CSV 或 YAML 互轉、進位轉換、儲存單位換算。每項操作都在瀏覽器本機執行，無需上傳到伺服器。",
@@ -22,7 +22,7 @@
     "faq2A": "是的。所有轉換遵循各自的 RFC 規範（Base64 遵循 RFC 4648，URL 編碼遵循 RFC 3986），產生符合標準的輸出。"
   },
   "security": {
-    "title": "安全性與密碼學工具 - JWT、雜湊、加密 | OmniKit",
+    "title": "安全性與密碼學工具 - JWT、雜湊、加密",
     "shortTitle": "安全與加密",
     "description": "免費的線上安全性與密碼學工具，專為開發者設計。除錯 JWT 權杖、產生雜湊值、建立安全密碼、產生 SSH 金鑰、加密文字、計算檔案校驗碼。100% 在瀏覽器中執行。",
     "intro": "6 款安全性與密碼學工具，專為開發者設計。除錯與驗證 JWT 權杖、產生 MD5/SHA 雜湊、建立加密安全的密碼、產生 SSH 金鑰對、使用 AES/DES/RC4 加密解密文字、計算檔案校驗碼。所有加密操作完全在瀏覽器中執行——你的資料永遠不會離開你的裝置。",
@@ -32,7 +32,7 @@
     "faq2A": "加密/解密工具支援 AES-256、DES、Triple DES、Rabbit、RC4 和 RC4Drop。雜湊產生器支援 MD5、SHA-1、SHA-224、SHA-256、SHA-384、SHA-512、SHA3、Keccak 和 RIPEMD-160。"
   },
   "generators": {
-    "title": "產生器工具 - UUID、Cron、時間戳、QR Code | OmniKit",
+    "title": "產生器工具 - UUID、Cron、時間戳、QR Code",
     "shortTitle": "產生器",
     "description": "免費的線上產生器工具，專為開發者設計。產生 UUID、建構 Cron 表達式、轉換 Unix 時間戳、建立 QR Code。所有工具 100% 在瀏覽器中執行。",
     "intro": "4 款產生器工具，幫助你建立常用的開發者產物。產生 UUID v4 和 v7 識別符、建構和解析 Cron 表達式並預覽下次執行時間、轉換 Unix 時間戳、以及產生自訂樣式的 QR Code（支援文字、URL、WiFi 等）。所有操作都在瀏覽器本機執行。",
@@ -42,7 +42,7 @@
     "faq2A": "是的。UUID v4 使用加密安全的隨機數，UUID v7 結合時間戳與隨機性。兩者皆符合 RFC 4122/9562。"
   },
   "visual": {
-    "title": "視覺與媒體工具 - 顏色轉換器、圖片壓縮器 | OmniKit",
+    "title": "視覺與媒體工具 - 顏色轉換器、圖片壓縮器",
     "shortTitle": "視覺與媒體",
     "description": "免費的線上視覺與媒體工具，專為開發者設計。在 HEX/RGB/HSL/OKLCH 之間轉換顏色、從圖片提取調色盤、壓縮和轉換圖片。100% 在瀏覽器中執行。",
     "intro": "2 款視覺與媒體工具，用於設計和圖片工作流程。顏色轉換器支援 7 種色彩空間（HEX、RGB、HSL、HSV、CMYK、LAB、OKLCH），具備視覺化拾色器、圖片調色盤提取、WCAG 對比度檢查及色覺模擬功能。圖片壓縮器支援 PNG、JPG 和 WebP 轉換，可調整大小。所有處理完全在本機執行。",
@@ -52,7 +52,7 @@
     "faq2A": "沒有。圖片壓縮完全使用 Canvas API 在瀏覽器中執行，因此沒有伺服器端的檔案大小限制。非常大的圖片處理速度可能較慢。"
   },
   "reference": {
-    "title": "參考與查詢工具 - HTTP 狀態碼、ASCII、HTML 實體、子網路計算 | OmniKit",
+    "title": "參考與查詢工具 - HTTP 狀態碼、ASCII、HTML 實體、子網路計算",
     "shortTitle": "參考與查詢",
     "description": "免費的線上參考與查詢工具，專為開發者設計。HTTP 狀態碼、ASCII 表、HTML 實體、SQLite 檢視器、HTTP 用戶端、子網路計算器。所有工具 100% 在瀏覽器中執行。",
     "intro": "6 款參考與查詢工具，用於快速查詢開發者常用資訊。瀏覽 HTTP 狀態碼及 RFC 參考、查詢 ASCII 字元代碼、編碼 HTML 實體、使用 SQL 編輯器瀏覽 SQLite 資料庫、以 HTTP 用戶端測試 REST API、使用 IP 子網路計算器計算子網。所有工具完全免費，在瀏覽器中執行。",
