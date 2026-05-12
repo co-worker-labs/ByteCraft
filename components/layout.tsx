@@ -17,6 +17,7 @@ import { ArrowUp } from "lucide-react";
 import { usePathname } from "../i18n/navigation";
 import { pathTrim } from "../utils/path";
 import { useFullscreen } from "../hooks/use-fullscreen";
+import { useTranslations } from "next-intl";
 
 interface LayoutSettings {
   reset: () => void;
@@ -60,6 +61,7 @@ export default function Layout({
   const [isHidden, setIsHidden] = useState<boolean>(hidden || false);
   const [showBackTop, setShowBackTop] = useState(false);
   const fullscreen = useFullscreen();
+  const tc = useTranslations("common");
 
   const isInFullscreen = fullscreen.isFullscreen;
 
@@ -101,6 +103,12 @@ export default function Layout({
         className={`min-h-screen flex flex-col ${footerPos === "fixed" ? "pb-5" : ""} ${bodyClassName || ""}`}
         style={bodyStyle}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-bg-elevated focus:text-fg-primary focus:border focus:border-accent-cyan focus:shadow-lg focus:outline-none"
+        >
+          {tc("skipToMain")}
+        </a>
         <Header
           position={headerPos}
           title={title}
@@ -125,6 +133,7 @@ export default function Layout({
         </button>
 
         <main
+          id="main-content"
           className={`flex-1 ${isInFullscreen ? "w-full" : "mb-6"} ${className || ""}`}
           style={style}
         >

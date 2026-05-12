@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     path: PATH,
     title: t("color.title"),
     description: t("color.description"),
-    ogImage: { title: t("color.shortTitle"), emoji: tool.emoji, desc: t("color.description") },
+    ogImage: { type: "tool", key: TOOL_KEY },
   });
 }
 

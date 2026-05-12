@@ -90,6 +90,12 @@
     "description": "線上格式化、壓縮和驗證 JSON。支援自訂縮排美化輸出、單行壓縮和 JSON5 寬鬆解析。100% 瀏覽器端處理。",
     "searchTerms": "jsongeshihua jsgsh yanzheng yasuo"
   },
+  "sqlformat": {
+    "title": "SQL 格式化工具 - 線上格式化和壓縮 SQL",
+    "shortTitle": "SQL 格式化",
+    "description": "格式化和壓縮 SQL 查詢，支援語法高亮。支援 MySQL、PostgreSQL、Oracle、SQL Server 等多種方言。",
+    "searchTerms": "sqlgeshihua sqlgsh yasuo geeshi"
+  },
   "jsonts": {
     "title": "JSON 轉 TypeScript - 產生介面與型別定義",
     "shortTitle": "JSON 轉 TypeScript",

@@ -11,12 +11,15 @@
     "icons:generate": "node scripts/generate-pwa-icons.mjs",
     "typecheck:sw": "tsc -p tsconfig.sw.json",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:a11y": "vitest run --config vitest.config.a11y.ts"
   },
   "dependencies": {
     "@codemirror/autocomplete": "^6.20.1",
     "@codemirror/commands": "^6.10.3",
     "@codemirror/lang-sql": "^6.10.0",
+    "@codemirror/language": "^6.12.3",
+    "@codemirror/lint": "^6.9.6",
     "@codemirror/state": "^6.6.0",
     "@codemirror/view": "^6.41.1",
     "@eslint-community/regexpp": "^4.12.2",
@@ -54,6 +57,7 @@
     "modern-screenshot": "^4.4.39",
     "next": "16.2.4",
     "next-intl": "^4.9.1",
+    "node-sql-parser": "^5.4.0",
     "papaparse": "^5.5.3",
     "pluralize": "^8.0.0",
     "prismjs": "^1.29.0",
@@ -95,6 +99,7 @@
     "eslint-config-next": "^16.2.4",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
+    "jest-axe": "^10.0.0",
     "jsdom": "^29.1.1",
     "lint-staged": "^16.4.0",
     "png-to-ico": "^3.0.1",

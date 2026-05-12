@@ -1,7 +1,7 @@
 "use client";
 
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/react";
-import { ReactNode } from "react";
+import { ReactNode, useState, useLayoutEffect, useRef } from "react";
 
 interface DropdownItem {
   label: ReactNode;
@@ -16,11 +16,29 @@ interface DropdownProps {
   className?: string;
 }
 
+function useAutoAlign(containerRef: React.RefObject<HTMLDivElement | null>) {
+  const [align, setAlign] = useState<"left" | "right">("left");
+
+  useLayoutEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    setAlign(rect.right + 180 > window.innerWidth ? "right" : "left");
+  }, [containerRef]);
+
+  return align;
+}
+
 export function Dropdown({ trigger, items, className = "" }: DropdownProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const align = useAutoAlign(containerRef);
+
   return (
-    <Menu as="div" className={`relative inline-block ${className}`}>
+    <Menu as="div" className={`relative inline-block ${className}`} ref={containerRef}>
       <MenuButton as="div">{trigger}</MenuButton>
-      <MenuItems className="absolute right-0 mt-2 min-w-[180px] bg-bg-elevated border border-border-default rounded-xl shadow-lg overflow-hidden z-50 focus:outline-none">
+      <MenuItems
+        className={`absolute ${align === "right" ? "right-0" : "left-0"} mt-2 min-w-[180px] max-h-[280px] overflow-y-auto bg-bg-elevated border border-border-default rounded-xl shadow-lg z-50 focus:outline-none`}
+      >
         {items.map((item, index) => (
           <MenuItem key={index} disabled={item.disabled}>
             {({ focus }) => (

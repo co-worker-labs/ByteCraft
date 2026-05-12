@@ -571,6 +571,7 @@ function Conversion() {
 
         {/* Preview area */}
         <div className="flex flex-col gap-3">
+          {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions -- image comparison slider (pointer only) */}
           <div
             ref={compareContainerRef}
             className="relative w-full rounded-lg border border-border-default bg-bg-surface overflow-hidden cursor-col-resize select-none"

@@ -111,6 +111,7 @@ function Conversion() {
         ))}
       </div>
 
+      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions -- drag-and-drop zone */}
       <div
         className="relative"
         onDragOver={dropZone.onDragOver}
@@ -177,6 +178,7 @@ function Conversion() {
           )}
           <div className="bg-bg-surface border border-border-default rounded-xl p-4 font-mono text-sm leading-relaxed break-all max-h-[50vh] overflow-y-auto">
             {displayTokens.map((token, i) => (
+              // eslint-disable-next-line jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events -- token highlight click
               <span
                 key={i}
                 className={`rounded px-0.5 mx-px cursor-pointer transition-all ${

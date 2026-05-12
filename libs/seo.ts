@@ -2,16 +2,18 @@ import type { Metadata } from "next";
 import { SITE_URL } from "./site";
 import { routing } from "../i18n/routing";
 
+type OgImageRef =
+  | { type: "tool"; key: string }
+  | { type: "category"; key: string }
+  | { type: "home" }
+  | { type: "custom"; title: string; desc: string };
+
 type GenerateMetaOptions = {
   locale: string;
   path: string;
   title?: string;
   description: string;
-  ogImage?: {
-    title: string;
-    emoji: string;
-    desc: string;
-  };
+  ogImage?: OgImageRef;
 };
 
 const OG_LOCALES: Record<string, string> = {
@@ -73,7 +75,14 @@ export function generatePageMeta({
   }
 
   if (ogImage) {
-    const ogImageUrl = `/api/og?title=${encodeURIComponent(ogImage.title)}&icon=${encodeURIComponent(ogImage.emoji)}&desc=${encodeURIComponent(ogImage.desc)}`;
+    let ogImageUrl: string;
+    if (ogImage.type === "home") {
+      ogImageUrl = `/api/og?locale=${locale}&type=home`;
+    } else if (ogImage.type === "custom") {
+      ogImageUrl = `/api/og?locale=${locale}&type=custom&title=${encodeURIComponent(ogImage.title)}&desc=${encodeURIComponent(ogImage.desc)}`;
+    } else {
+      ogImageUrl = `/api/og?locale=${locale}&type=${ogImage.type}&key=${encodeURIComponent(ogImage.key)}`;
+    }
     result.openGraph!.images = [ogImageUrl];
     result.twitter!.images = [ogImageUrl];
   }

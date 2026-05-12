@@ -297,6 +297,7 @@ function Conversion() {
   // --- Render ---
 
   const jsonInputArea = (
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions -- drag-and-drop zone
     <div
       className="relative"
       onDragOver={jsonDrop.onDragOver}
@@ -442,6 +443,7 @@ function Conversion() {
   );
 
   const csvInputArea = (
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions -- drag-and-drop zone
     <div
       className="relative"
       onDragOver={csvDrop.onDragOver}

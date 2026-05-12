@@ -90,6 +90,11 @@
     "description": "Форматирование, сжатие и валидация JSON онлайн. Pretty-print с настраиваемыми отступами, минификация в одну строку или парсинг JSON5. 100% в браузере.",
     "searchTerms": "jsonformatirovanie jsonformat json"
   },
+  "sqlformat": {
+    "title": "Форматер SQL — форматирование и сжатие SQL онлайн",
+    "shortTitle": "Форматер SQL",
+    "description": "Форматируйте и сжимайте SQL-запросы с подсветкой синтаксиса. Поддержка MySQL, PostgreSQL, Oracle, SQL Server и других."
+  },
   "jsonts": {
     "title": "JSON в TypeScript - Генерация интерфейсов и типов из JSON",
     "shortTitle": "JSON → TypeScript",

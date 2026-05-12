@@ -29,6 +29,7 @@ function useEyedropperSupported(): boolean {
 
 export function ColorPicker({ value, onChange, showEyedropper = true }: ColorPickerProps) {
   const t = useTranslations("color.converter");
+  const tt = useTranslations("color.tabs");
   const supportsEyedropper = useEyedropperSupported();
 
   async function pickFromScreen() {
@@ -45,7 +46,7 @@ export function ColorPicker({ value, onChange, showEyedropper = true }: ColorPic
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="w-full max-w-[280px] aspect-square">
+      <div className="w-full max-w-[280px] aspect-square" role="group" aria-label={tt("converter")}>
         <HexAlphaColorPicker
           color={value}
           onChange={onChange}

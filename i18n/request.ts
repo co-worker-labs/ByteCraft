@@ -47,6 +47,7 @@ const namespaces = [
   "jsonts",
   "cssunit",
   "subnet",
+  "sqlformat",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

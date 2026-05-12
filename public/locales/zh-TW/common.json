@@ -13,7 +13,8 @@
     "searchToolsHint": "工具 (⌘K)",
     "noMatchingTools": "沒有找到符合的工具",
     "quickAccess": "快速存取",
-    "recentTools": "最近使用"
+    "recentTools": "最近使用",
+    "mainNavigation": "主導覽"
   },
   "footer": {
     "home": "首頁",
@@ -104,5 +105,9 @@
   },
   "advancedSettings": "進階設定",
   "invalidInput": "輸入無效",
-  "indent": "縮排"
+  "indent": "縮排",
+  "skipToMain": "跳至主要內容",
+  "floatingToolbar": "浮動工具列",
+  "removeItem": "移除項目",
+  "searchTools": "搜尋工具"
 }

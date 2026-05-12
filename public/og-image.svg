@@ -1,150 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
   <defs>
-    <linearGradient id="og-bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0b0f1a"/>
       <stop offset="100%" stop-color="#111827"/>
     </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="blur"/>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06d6a0"/>
+      <stop offset="35%" stop-color="#06d6a0"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="65%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#06d6a0"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="18" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
     <filter id="ambient" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="80"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="100"/>
     </filter>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="40" x2="40" y2="40" stroke="#06d6a0" stroke-width=".5" opacity=".05"/>
-      <line x1="40" y1="0" x2="40" y2="40" stroke="#06d6a0" stroke-width=".5" opacity=".05"/>
+      <line x1="0" y1="40" x2="40" y2="40" stroke="#06d6a0" stroke-width=".5" opacity=".03"/>
+      <line x1="40" y1="0" x2="40" y2="40" stroke="#06d6a0" stroke-width=".5" opacity=".03"/>
     </pattern>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="630" fill="url(#og-bg)"/>
+  <rect width="1200" height="630" fill="url(#bg)"/>
   <rect width="1200" height="630" fill="url(#grid)"/>
 
-  <!-- Ambient glow -->
-  <ellipse cx="360" cy="315" rx="280" ry="200" fill="#06d6a0" opacity=".035" filter="url(#ambient)"/>
-  <ellipse cx="900" cy="220" rx="200" ry="160" fill="#8b5cf6" opacity=".025" filter="url(#ambient)"/>
+  <ellipse cx="600" cy="200" rx="400" ry="200" fill="#06d6a0" opacity=".025" filter="url(#ambient)"/>
+  <ellipse cx="600" cy="400" rx="300" ry="150" fill="#8b5cf6" opacity=".015" filter="url(#ambient)"/>
 
-  <!-- ===== Left: Browser Window ===== -->
-  <g transform="translate(72,80)">
-    <!-- Window frame -->
-    <rect width="400" height="470" rx="16" fill="#0d1117" stroke="#1e293b" stroke-width="2"/>
-    <!-- Title bar -->
-    <rect width="400" height="48" rx="16" fill="#161b22"/>
-    <rect y="32" width="400" height="16" fill="#161b22"/>
-    <!-- Traffic lights -->
-    <circle cx="28" cy="24" r="6.5" fill="#ff5f57"/>
-    <circle cx="50" cy="24" r="6.5" fill="#febc2e"/>
-    <circle cx="72" cy="24" r="6.5" fill="#28c840"/>
-
-    <!-- URL bar -->
-    <rect x="92" y="10" width="296" height="28" rx="8" fill="#0d1117" stroke="#1e293b" stroke-width="1"/>
-    <!-- Lock icon -->
-    <g transform="translate(102,17)">
-      <rect x="1" y="4" width="8" height="7" rx="1.5" fill="none" stroke="#06d6a0" stroke-width="1.2"/>
-      <path d="M3 4 V2.5 A2.5 2.5 0 0 1 8 2.5 V4" fill="none" stroke="#06d6a0" stroke-width="1.2"/>
-    </g>
-    <text x="118" y="29" font-family="'JetBrains Mono',monospace" font-size="12" fill="#64748b">omnikit.run/tools/hashing</text>
-
-    <!-- Page content -->
-    <g transform="translate(24,68)" font-family="'JetBrains Mono',monospace">
-      <!-- Header nav mockup -->
-      <rect x="0" y="4" width="24" height="24" rx="6" fill="#06d6a0" opacity=".15"/>
-      <path d="M5 10 L14 16 L5 22" stroke="#06d6a0" stroke-width="2" fill="none" stroke-linecap="butt" stroke-linejoin="miter"/>
-      <rect x="16" y="22" width="8" height="2.5" fill="#06d6a0" rx=".5"/>
-      <text x="30" y="21" font-size="14" font-weight="600" fill="#f1f5f9">OmniKit</text>
-      <line x1="0" y1="36" x2="352" y2="36" stroke="#06d6a0" stroke-width=".5" opacity=".15"/>
-
-      <!-- Tool title -->
-      <text x="0" y="62" font-size="18" font-weight="600" fill="#f1f5f9">Text Hashing</text>
-
-      <!-- Input area -->
-      <rect x="0" y="74" width="352" height="52" rx="8" fill="#0b0f1a" stroke="#1e293b" stroke-width="1"/>
-      <text x="12" y="96" font-size="12" fill="#94a3b8">hello world</text>
-      <text x="12" y="114" font-size="10" fill="#64748b">Plain Text</text>
-
-      <!-- Output area -->
-      <rect x="0" y="140" width="352" height="52" rx="8" fill="#0b0f1a" stroke="#06d6a0" stroke-width="1" stroke-opacity=".25"/>
-      <text x="12" y="162" font-size="11" fill="#06d6a0">b94d27b9 934364e0 6a048cf7 5e6f...</text>
-      <text x="12" y="180" font-size="10" fill="#64748b">SHA-256</text>
-
-      <!-- Algorithm chips -->
-      <g transform="translate(0,206)">
-        <rect width="48" height="22" rx="6" fill="#06d6a0" fill-opacity=".12" stroke="#06d6a0" stroke-width=".8" stroke-opacity=".3"/>
-        <text x="24" y="15" font-size="9" fill="#06d6a0" text-anchor="middle">MD5</text>
-        <rect x="56" width="54" height="22" rx="6" fill="#06d6a0" fill-opacity=".12" stroke="#06d6a0" stroke-width=".8" stroke-opacity=".3"/>
-        <text x="83" y="15" font-size="9" fill="#06d6a0" text-anchor="middle">SHA1</text>
-        <rect x="118" width="64" height="22" rx="6" fill="#06d6a0" fill-opacity=".2" stroke="#06d6a0" stroke-width="1" stroke-opacity=".5"/>
-        <text x="150" y="15" font-size="9" fill="#06d6a0" font-weight="600" text-anchor="middle">SHA256</text>
-        <rect x="190" width="64" height="22" rx="6" fill="#06d6a0" fill-opacity=".12" stroke="#06d6a0" stroke-width=".8" stroke-opacity=".3"/>
-        <text x="222" y="15" font-size="9" fill="#06d6a0" text-anchor="middle">SHA512</text>
-      </g>
-
-      <!-- Copy button -->
-      <rect x="0" y="244" width="72" height="26" rx="8" fill="#06d6a0" fill-opacity=".15"/>
-      <text x="36" y="261" font-size="11" fill="#06d6a0" text-anchor="middle">Copy</text>
-      <rect x="82" y="244" width="72" height="26" rx="8" fill="#0b0f1a" stroke="#1e293b" stroke-width="1"/>
-      <text x="118" y="261" font-size="11" fill="#64748b" text-anchor="middle">Clear</text>
-    </g>
+  <g transform="translate(600,195)" filter="url(#glow)">
+    <path d="M0 55
+      C0 100 -44 138 -100 138
+      C-170 138 -220 88 -220 28
+      C-220 -32 -170 -82 -100 -82
+      C-44 -82 0 -44 0 0
+      C0 -44 44 -82 100 -82
+      C170 -82 220 -32 220 28
+      C220 88 170 138 100 138
+      C44 138 0 100 0 55Z"
+      fill="none" stroke="url(#ribbon)" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <!-- ===== Right: Brand Content ===== -->
-  <g transform="translate(540,130)">
-    <!-- Small >_ icon -->
-    <g filter="url(#glow)" opacity=".7">
-      <path d="M4 8 L26 20 L4 32" stroke="#06d6a0" stroke-width="4" fill="none" stroke-linecap="butt" stroke-linejoin="miter"/>
-      <rect x="32" y="28" width="16" height="4" fill="#06d6a0" rx=".5"/>
-    </g>
+  <text x="600" y="360" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="56" font-weight="700" fill="#f1f5f9" text-anchor="middle" letter-spacing="-1.5">OmniKit</text>
 
-    <!-- Title -->
-    <text x="0" y="80" font-family="'JetBrains Mono',monospace" font-size="68" font-weight="700" fill="#f1f5f9" letter-spacing="-2">OmniKit</text>
+  <rect x="530" y="374" width="140" height="3" rx="1.5" fill="#06d6a0"/>
 
-    <!-- Accent underline -->
-    <rect y="98" width="100" height="3" fill="#06d6a0" rx="1.5"/>
+  <text x="600" y="410" font-family="Inter,system-ui,sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Free, browser-based developer tools.</text>
+  <text x="600" y="440" font-family="Inter,system-ui,sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">No sign-up, no tracking — just results.</text>
 
-    <!-- Subtitle -->
-    <text y="134" font-family="Inter,system-ui,sans-serif" font-size="20" fill="#94a3b8">A collection of practical, browser-based developer tools.</text>
-    <text y="162" font-family="Inter,system-ui,sans-serif" font-size="20" fill="#94a3b8">No sign-up, no tracking — just results.</text>
+  <g transform="translate(350,470)">
+    <rect width="90" height="28" rx="6" fill="#06d6a0" fill-opacity=".08" stroke="#06d6a0" stroke-width="1" stroke-opacity=".2"/>
+    <text x="45" y="19" font-family="'JetBrains Mono',monospace" font-size="12" fill="#06d6a0" text-anchor="middle">Hashing</text>
 
-    <!-- Feature tags -->
-    <g transform="translate(0,196)">
-      <!-- Row 1 -->
-      <rect width="96" height="30" rx="8" fill="#06d6a0" fill-opacity=".08" stroke="#06d6a0" stroke-width="1" stroke-opacity=".25"/>
-      <text x="48" y="20" font-family="'JetBrains Mono',monospace" font-size="12" fill="#06d6a0" text-anchor="middle">Hashing</text>
+    <rect x="100" width="76" height="28" rx="6" fill="#8b5cf6" fill-opacity=".08" stroke="#8b5cf6" stroke-width="1" stroke-opacity=".2"/>
+    <text x="138" y="19" font-family="'JetBrains Mono',monospace" font-size="12" fill="#8b5cf6" text-anchor="middle">Cipher</text>
 
-      <rect x="108" width="84" height="30" rx="8" fill="#06d6a0" fill-opacity=".08" stroke="#06d6a0" stroke-width="1" stroke-opacity=".25"/>
-      <text x="150" y="20" font-family="'JetBrains Mono',monospace" font-size="12" fill="#06d6a0" text-anchor="middle">Cipher</text>
+    <rect x="186" width="76" height="28" rx="6" fill="#06d6a0" fill-opacity=".08" stroke="#06d6a0" stroke-width="1" stroke-opacity=".2"/>
+    <text x="224" y="19" font-family="'JetBrains Mono',monospace" font-size="12" fill="#06d6a0" text-anchor="middle">Base64</text>
 
-      <rect x="204" width="84" height="30" rx="8" fill="#8b5cf6" fill-opacity=".08" stroke="#8b5cf6" stroke-width="1" stroke-opacity=".25"/>
-      <text x="246" y="20" font-family="'JetBrains Mono',monospace" font-size="12" fill="#8b5cf6" text-anchor="middle">Base64</text>
+    <rect x="272" width="90" height="28" rx="6" fill="#8b5cf6" fill-opacity=".08" stroke="#8b5cf6" stroke-width="1" stroke-opacity=".2"/>
+    <text x="317" y="19" font-family="'JetBrains Mono',monospace" font-size="12" fill="#8b5cf6" text-anchor="middle">Password</text>
 
-      <rect x="300" width="96" height="30" rx="8" fill="#06d6a0" fill-opacity=".08" stroke="#06d6a0" stroke-width="1" stroke-opacity=".25"/>
-      <text x="348" y="20" font-family="'JetBrains Mono',monospace" font-size="12" fill="#06d6a0" text-anchor="middle">Password</text>
-
-      <!-- Row 2 -->
-      <rect y="40" width="96" height="30" rx="8" fill="#8b5cf6" fill-opacity=".08" stroke="#8b5cf6" stroke-width="1" stroke-opacity=".25"/>
-      <text x="48" y="60" font-family="'JetBrains Mono',monospace" font-size="12" fill="#8b5cf6" text-anchor="middle">Checksum</text>
-
-      <rect x="108" y="40" width="72" height="30" rx="8" fill="#06d6a0" fill-opacity=".08" stroke="#06d6a0" stroke-width="1" stroke-opacity=".25"/>
-      <text x="144" y="60" font-family="'JetBrains Mono',monospace" font-size="12" fill="#06d6a0" text-anchor="middle">ASCII</text>
-
-      <rect x="192" y="40" width="108" height="30" rx="8" fill="#06d6a0" fill-opacity=".08" stroke="#06d6a0" stroke-width="1" stroke-opacity=".25"/>
-      <text x="246" y="60" font-family="'JetBrains Mono',monospace" font-size="12" fill="#06d6a0" text-anchor="middle">Storage</text>
-
-      <rect x="312" y="40" width="100" height="30" rx="8" fill="#8b5cf6" fill-opacity=".08" stroke="#8b5cf6" stroke-width="1" stroke-opacity=".25"/>
-      <text x="362" y="60" font-family="'JetBrains Mono',monospace" font-size="12" fill="#8b5cf6" text-anchor="middle">HTML Code</text>
-    </g>
+    <rect x="372" width="88" height="28" rx="6" fill="#06d6a0" fill-opacity=".08" stroke="#06d6a0" stroke-width="1" stroke-opacity=".2"/>
+    <text x="416" y="19" font-family="'JetBrains Mono',monospace" font-size="12" fill="#06d6a0" text-anchor="middle">Checksum</text>
   </g>
 
-  <!-- Bottom: Free & Open Source badge -->
-  <g transform="translate(72,580)">
-    <rect width="160" height="26" rx="13" fill="#06d6a0" fill-opacity=".08" stroke="#06d6a0" stroke-width="1" stroke-opacity=".2"/>
-    <text x="80" y="18" font-family="'JetBrains Mono',monospace" font-size="12" fill="#06d6a0" text-anchor="middle">Free &amp; Open Source</text>
-  </g>
+  <text x="600" y="610" font-family="'JetBrains Mono',monospace" font-size="13" fill="#06d6a0" opacity=".3" text-anchor="middle">omnikit.run</text>
 
-  <!-- Bottom binary decoration -->
-  <text x="72" y="620" font-family="'JetBrains Mono',monospace" font-size="11" fill="#06d6a0" opacity=".05">01001111 01101101 01101110 01101001 01001011 01101001 01110100</text>
+  <text x="30" y="620" font-family="'JetBrains Mono',monospace" font-size="10" fill="#06d6a0" opacity=".03">01001111 01101101 01101110 01101001 01001011 01101001 01110100</text>
 </svg>

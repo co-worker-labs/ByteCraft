@@ -1,39 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2=".5" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="100%" stop-color="#0b0f1a"/>
     </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="14" result="blur"/>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06d6a0"/>
+      <stop offset="35%" stop-color="#06d6a0"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="65%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#06d6a0"/>
+    </linearGradient>
+    <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <pattern id="pixels" width="32" height="32" patternUnits="userSpaceOnUse">
-      <rect width="2" height="2" fill="#06d6a0" opacity=".08"/>
-    </pattern>
   </defs>
 
-  <!-- Background -->
   <rect width="512" height="512" rx="108" fill="url(#bg)"/>
-  <rect width="512" height="512" rx="108" fill="url(#pixels)"/>
 
-  <!-- Subtle border -->
-  <rect x=".75" y=".75" width="510.5" height="510.5" rx="108" fill="none" stroke="#06d6a0" stroke-width="1.5" opacity=".15"/>
-
-  <!-- Terminal prompt with glow -->
   <g filter="url(#glow)">
-    <!-- > chevron — sharp pixel edges -->
-    <path d="M132 168 L264 256 L132 344" stroke="#06d6a0" stroke-width="32" fill="none" stroke-linecap="butt" stroke-linejoin="miter"/>
-    <!-- _ cursor block -->
-    <rect x="302" y="324" width="96" height="32" fill="#06d6a0" rx="2"/>
+    <path d="M256 310
+      C256 370 218 400 170 400
+      C108 400 68 340 68 256
+      C68 172 108 112 170 112
+      C218 112 256 142 256 202
+      C256 142 294 112 342 112
+      C404 112 444 172 444 256
+      C444 340 404 400 342 400
+      C294 400 256 370 256 310Z"
+      fill="none" stroke="url(#ribbon)" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-
-  <!-- Pixel accent blocks -->
-  <rect x="398" y="170" width="14" height="14" fill="#8b5cf6" opacity=".35" rx="2"/>
-  <rect x="416" y="170" width="14" height="14" fill="#06d6a0" opacity=".25" rx="2"/>
-  <rect x="96" y="378" width="14" height="14" fill="#06d6a0" opacity=".2" rx="2"/>
-  <rect x="114" y="394" width="14" height="14" fill="#8b5cf6" opacity=".25" rx="2"/>
 </svg>

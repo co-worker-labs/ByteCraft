@@ -13,7 +13,8 @@
     "searchToolsHint": "Инструменты (⌘K)",
     "noMatchingTools": "Инструменты не найдены",
     "quickAccess": "Быстрый доступ",
-    "recentTools": "Недавние"
+    "recentTools": "Недавние",
+    "mainNavigation": "Основная навигация"
   },
   "footer": {
     "home": "Главная",
@@ -104,5 +105,9 @@
   },
   "advancedSettings": "Дополнительные настройки",
   "invalidInput": "Неверный ввод",
-  "indent": "Отступ"
+  "indent": "Отступ",
+  "skipToMain": "Перейти к основному содержимому",
+  "floatingToolbar": "Плавающая панель инструментов",
+  "removeItem": "Удалить элемент",
+  "searchTools": "Поиск инструментов"
 }

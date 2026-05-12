@@ -121,6 +121,7 @@ export function DiffInput({
           </button>
         </div>
       </div>
+      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions -- drag-and-drop zone */}
       <div
         ref={dropRef}
         onDrop={onDrop}

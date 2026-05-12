@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Clipboard, ClipboardCheck } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { showToast } from "../../libs/toast";
 import { Button } from "./button";
 
@@ -25,6 +26,7 @@ export function CopyButton({
   label,
 }: CopyButtonProps) {
   const [copied, setCopied] = useState(false);
+  const tc = useTranslations("common");
   const content = getContent();
 
   if (!alwaysShow && !content) return null;
@@ -69,6 +71,7 @@ export function CopyButton({
       disabled={disabled}
       className={`text-fg-muted hover:text-accent-cyan transition-colors duration-200 ${disabled ? "opacity-30 cursor-not-allowed" : ""} ${className}`}
       title="Copy"
+      aria-label={tc("copy")}
     >
       {icon}
     </button>

@@ -87,6 +87,7 @@ function Conversion() {
             )}
           </div>
         </div>
+        {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions -- drag-and-drop zone */}
         <div
           className="relative"
           onDragOver={dropZone.onDragOver}

@@ -1,6 +1,6 @@
 {
   "text": {
-    "title": "Ferramentas de Processamento de Texto - JSON, Regex, Diff e mais | OmniKit",
+    "title": "Ferramentas de Processamento de Texto - JSON, Regex, Diff e mais",
     "shortTitle": "Processamento de Texto",
     "description": "Ferramentas online gratuitas de processamento de texto para desenvolvedores. Formate JSON, teste regex, compare diffs, converta cases e mais. Todas as ferramentas rodam 100% no seu navegador.",
     "intro": "Um conjunto de 8 ferramentas de processamento de texto projetadas para desenvolvedores que trabalham diariamente com texto estruturado e não estruturado. Formate e valide JSON, teste expressões regulares com correspondência em tempo real, compare diferenças de texto, escreva Markdown com pré-visualização ao vivo, converta cases de texto, extraia emails e URLs, conte palavras e caracteres, e remova linhas duplicadas — tudo sem enviar dados para qualquer servidor.",
@@ -12,7 +12,7 @@
     "faq3A": "Sim. A maioria das ferramentas suporta arquivos de até vários MB. O Formatador JSON, Diff e Editor Markdown usam Web Workers para performance suave com entradas grandes."
   },
   "encoding": {
-    "title": "Ferramentas de Codificação e Conversão - Base64, URL, CSV, YAML | OmniKit",
+    "title": "Ferramentas de Codificação e Conversão - Base64, URL, CSV, YAML",
     "shortTitle": "Codificação e Conversão",
     "description": "Ferramentas online gratuitas de codificação e conversão para desenvolvedores. Codificar/decodificar Base64, codificar/decodificar URL, conversão CSV, conversão YAML, conversão de base numérica e mais. 100% no lado do cliente.",
     "intro": "7 ferramentas de codificação e conversão que cobrem as necessidades mais comuns de transformação de dados. Codifique e decodifique strings Base64, codifique parâmetros URL, converta entre JSON e CSV ou YAML, transforme bases numéricas e converta unidades de armazenamento. Todas as operações rodam localmente no seu navegador — sem uploads para servidores.",
@@ -22,7 +22,7 @@
     "faq2A": "Sim. Todas as conversões seguem suas respectivas especificações RFC (RFC 4648 para Base64, RFC 3986 para codificação URL) e produzem saída compatível com os padrões."
   },
   "security": {
-    "title": "Ferramentas de Segurança e Criptografia - JWT, Hashing, Criptografia | OmniKit",
+    "title": "Ferramentas de Segurança e Criptografia - JWT, Hashing, Criptografia",
     "shortTitle": "Segurança e Cripto",
     "description": "Ferramentas online gratuitas de segurança e criptografia para desenvolvedores. Depure tokens JWT, gere hashes, crie senhas seguras, gere chaves SSH, criptografe texto e calcule checksums de arquivos. 100% no lado do cliente.",
     "intro": "6 ferramentas de segurança e criptografia para desenvolvedores. Depure e verifique tokens JWT, gere hashes MD5/SHA, crie senhas criptograficamente seguras, gere pares de chaves SSH, criptografe e descriptografe texto com AES/DES/RC4 e calcule checksums de arquivos. Todas as operações criptográficas rodam inteiramente no seu navegador — seus dados nunca saem do seu dispositivo.",
@@ -32,7 +32,7 @@
     "faq2A": "A ferramenta de Criptografia/Descriptografia suporta AES-256, DES, Triple DES, Rabbit, RC4 e RC4Drop. O Gerador de Hash suporta MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA3, Keccak e RIPEMD-160."
   },
   "generators": {
-    "title": "Ferramentas Geradoras - UUID, Cron, Timestamp, QR Code | OmniKit",
+    "title": "Ferramentas Geradoras - UUID, Cron, Timestamp, QR Code",
     "shortTitle": "Geradores",
     "description": "Ferramentas online gratuitas de geração para desenvolvedores. Gere UUIDs, construa expressões Cron, converta timestamps Unix e crie QR Codes. Todas as ferramentas rodam 100% no seu navegador.",
     "intro": "4 ferramentas geradoras que ajudam você a criar artefatos comuns de desenvolvimento. Gere identificadores UUID v4 e v7, construa e decodifique expressões Cron com pré-visualização da próxima execução, converta timestamps Unix e gere QR Codes estilizados para texto, URLs, WiFi e mais. Tudo roda localmente no seu navegador.",
@@ -42,7 +42,7 @@
     "faq2A": "Sim. UUID v4 usa números aleatórios criptograficamente seguros, e UUID v7 combina timestamp com aleatoriedade. Ambos estão em conformidade com RFC 4122/9562."
   },
   "visual": {
-    "title": "Ferramentas Visuais e de Mídia - Conversor de Cores, Compressor de Imagens | OmniKit",
+    "title": "Ferramentas Visuais e de Mídia - Conversor de Cores, Compressor de Imagens",
     "shortTitle": "Visual e Mídia",
     "description": "Ferramentas online gratuitas visuais e de mídia para desenvolvedores. Converta cores entre HEX/RGB/HSL/OKLCH, extraia paletas de imagens, comprima e converta imagens. 100% no lado do cliente.",
     "intro": "2 ferramentas visuais e de mídia para fluxos de trabalho de design e imagens. O Conversor de Cores suporta 7 espaços de cor (HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH) com seletor visual, extração de paleta de imagens, verificação de contraste WCAG e simulação de daltonismo. O Compressor de Imagens suporta conversão entre PNG, JPG e WebP com suporte a redimensionamento. Todo o processamento roda localmente.",
@@ -52,7 +52,7 @@
     "faq2A": "Não. A compressão de imagens roda inteiramente no seu navegador usando Canvas API, então não há limite de tamanho de arquivo no servidor. Imagens muito grandes podem ser mais lentas para processar."
   },
   "reference": {
-    "title": "Ferramentas de Referência e Consulta - HTTP Status, ASCII, Códigos HTML, Sub-redes | OmniKit",
+    "title": "Ferramentas de Referência e Consulta - HTTP Status, ASCII, Códigos HTML, Sub-redes",
     "shortTitle": "Referência e Consulta",
     "description": "Ferramentas online gratuitas de referência e consulta para desenvolvedores. Códigos de status HTTP, tabela ASCII, entidades HTML, visualizador SQLite, cliente HTTP e calculadora de sub-redes. Todas as ferramentas rodam 100% no seu navegador.",
     "intro": "6 ferramentas de referência e consulta para consultas rápidas de desenvolvimento. Navegue por códigos de status HTTP com referências RFC, consulte códigos de caracteres ASCII, codifique entidades HTML, explore bancos de dados SQLite com editor SQL, teste APIs REST com o cliente HTTP e calcule sub-redes com a Calculadora de Sub-redes IP. Todas as ferramentas são gratuitas e rodam inteiramente no seu navegador.",

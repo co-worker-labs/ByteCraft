@@ -90,6 +90,12 @@
     "description": "JSONをオンラインで整形、圧縮、検証。インデント設定可能な整形、1行圧縮、JSON5パースに対応。100%ブラウザ上で処理。",
     "searchTerms": "JSONseikei assyuku bari-de-to"
   },
+  "sqlformat": {
+    "title": "SQL フォーマッター - SQL のフォーマット・圧縮",
+    "shortTitle": "SQL フォーマッター",
+    "description": "SQL クエリのフォーマットと圧縮。シンタックスハイライト対応。MySQL、PostgreSQL、Oracle、SQL Server など多数のダイアレクトに対応。",
+    "searchTerms": "sqlhyoukisei sqlhyk ysaaku kakouchi"
+  },
   "jsonts": {
     "title": "JSON → TypeScript - インターフェースと型定義を生成",
     "shortTitle": "JSON → TypeScript",

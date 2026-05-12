@@ -185,6 +185,7 @@ export default function DbViewerPage() {
                 collapsed={sidebarCollapsed}
               />
               {!sidebarCollapsed && (
+                // eslint-disable-next-line jsx-a11y/no-static-element-interactions -- resize handle (mouse only)
                 <div
                   onMouseDown={handleResizeStart}
                   className="hidden md:flex w-2 shrink-0 cursor-col-resize items-center justify-center hover:bg-accent-cyan/20 transition-colors rounded-sm"

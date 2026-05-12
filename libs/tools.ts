@@ -77,6 +77,7 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
     key: "text",
     tools: [
       "json",
+      "sqlformat",
       "regex",
       "diff",
       "markdown",
@@ -117,6 +118,7 @@ export const QUICK_ACCESS_DEFAULT: string[] = ["json", "base64", "jwt", "regex",
 
 export const TOOL_RELATIONS: Record<string, string[]> = {
   json: ["csv", "yaml", "diff", "regex", "jsonts"],
+  sqlformat: ["dbviewer", "json", "yaml"],
   base64: ["urlencoder", "hashing", "cipher"],
   jwt: ["base64", "hashing", "password"],
   regex: ["json", "textcase", "diff"],
@@ -138,7 +140,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   "csv-md": ["csv", "markdown", "json"],
   cipher: ["hashing", "base64", "password"],
   numbase: ["color", "storageunit", "ascii", "subnet"],
-  dbviewer: ["csv", "json", "yaml"],
+  dbviewer: ["csv", "json", "yaml", "sqlformat"],
   checksum: ["hashing", "cipher"],
   storageunit: ["numbase", "checksum", "cssunit"],
   httpstatus: ["httpclient", "urlencoder", "subnet"],
@@ -179,6 +181,13 @@ export const TOOLS: ToolEntry[] = [
     icon: FileJson,
     emoji: "{}",
     sameAs: ["https://www.json.org", "https://datatracker.ietf.org/doc/html/rfc8259"],
+  },
+  {
+    key: "sqlformat",
+    path: "/sqlformat",
+    icon: FileCode,
+    emoji: "🗃️",
+    sameAs: ["https://en.wikipedia.org/wiki/SQL"],
   },
   {
     key: "jsonts",

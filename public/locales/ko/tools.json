@@ -90,6 +90,12 @@
     "description": "JSON을 온라인에서 포맷, 압축, 검증합니다. 설정 가능한 들여쓰기로 예쁘게 인쇄, 한 줄로 최소화, JSON5 파싱. 100% 클라이언트 처리.",
     "searchTerms": "jsonpomaeteu jspm yasuo meihwa"
   },
+  "sqlformat": {
+    "title": "SQL 포매터 - SQL 포맷 및 압축",
+    "shortTitle": "SQL 포매터",
+    "description": "SQL 쿼리 포맷 및 압축 도구. 구문 강조 지원. MySQL, PostgreSQL, Oracle, SQL Server 등 다양한 방언 지원.",
+    "searchTerms": "sqlhyeonshikwa sqlhsw yakhuk hyeonsik"
+  },
   "jsonts": {
     "title": "JSON → TypeScript - 인터페이스 및 타입 정의 생성",
     "shortTitle": "JSON → TypeScript",

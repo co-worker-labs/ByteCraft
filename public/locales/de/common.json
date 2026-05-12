@@ -13,7 +13,8 @@
     "searchToolsHint": "Tools (⌘K)",
     "noMatchingTools": "Keine passenden Tools gefunden",
     "quickAccess": "Schnellzugriff",
-    "recentTools": "Kürzlich"
+    "recentTools": "Kürzlich",
+    "mainNavigation": "Hauptnavigation"
   },
   "footer": {
     "home": "Startseite",
@@ -104,5 +105,9 @@
   },
   "advancedSettings": "Erweiterte Einstellungen",
   "invalidInput": "Ungültige Eingabe",
-  "indent": "Einrückung"
+  "indent": "Einrückung",
+  "skipToMain": "Zum Hauptinhalt springen",
+  "floatingToolbar": "Schwebende Werkzeugleiste",
+  "removeItem": "Element entfernen",
+  "searchTools": "Tools suchen"
 }

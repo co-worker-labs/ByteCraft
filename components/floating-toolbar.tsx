@@ -79,6 +79,8 @@ export default function FloatingToolbar() {
       ref={ref}
       style={style}
       onPointerDown={handlePointerDown}
+      role="toolbar"
+      aria-label={t("floatingToolbar")}
       className="z-[40] flex items-center gap-0 bg-bg-surface/80 backdrop-blur-xl rounded-xl shadow-lg border border-border-default transition-opacity duration-200"
     >
       <div

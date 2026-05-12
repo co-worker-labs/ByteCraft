@@ -70,7 +70,10 @@ export default function Header({
 
   return (
     <>
-      <nav className={`${positionClass} bg-bg-surface/80 backdrop-blur-md`}>
+      <nav
+        className={`${positionClass} bg-bg-surface/80 backdrop-blur-md`}
+        aria-label={t("nav.mainNavigation")}
+      >
         <div className="mx-auto flex items-center justify-between px-4 py-2 lg:px-6">
           <div className="flex items-center gap-1.5 min-w-0">
             <Link
