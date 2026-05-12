@@ -80,6 +80,11 @@
     "shortTitle": "JSON Format / Compress",
     "description": "Format, compress, and validate JSON. Pretty-print with configurable indentation, minify to single line, or parse JSON5."
   },
+  "sqlformat": {
+    "title": "SQL Formatter - Format & Minify SQL Online",
+    "shortTitle": "SQL Formatter",
+    "description": "Format and minify SQL queries with syntax highlighting. Supports MySQL, PostgreSQL, Oracle, SQL Server and more."
+  },
   "jsonts": {
     "title": "JSON to TypeScript - Generate Interfaces & Types from JSON",
     "shortTitle": "JSON / TypeScript",
