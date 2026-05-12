@@ -1,45 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2=".5" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="100%" stop-color="#0b0f1a"/>
     </linearGradient>
-    <linearGradient id="inf-g" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#06d6a0"/>
+      <stop offset="35%" stop-color="#06d6a0"/>
       <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="65%" stop-color="#8b5cf6"/>
       <stop offset="100%" stop-color="#06d6a0"/>
     </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur"/>
+    <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="12" cy="12" r="1" fill="#06d6a0" opacity=".06"/>
-    </pattern>
   </defs>
 
   <rect width="512" height="512" rx="108" fill="url(#bg)"/>
-  <rect width="512" height="512" rx="108" fill="url(#dots)"/>
-  <rect x=".75" y=".75" width="510.5" height="510.5" rx="108" fill="none" stroke="#06d6a0" stroke-width="1.5" opacity=".12"/>
 
   <g filter="url(#glow)">
-    <path d="M256 288
-      C256 340 220 368 176 368
-      C120 368 88 320 88 256
-      C88 192 120 144 176 144
-      C220 144 256 172 256 224
-      C256 172 292 144 336 144
-      C392 144 424 192 424 256
-      C424 320 392 368 336 368
-      C292 368 256 340 256 288Z"
-      fill="none" stroke="url(#inf-g)" stroke-width="36" stroke-linecap="round"/>
+    <path d="M256 310
+      C256 370 218 400 170 400
+      C108 400 68 340 68 256
+      C68 172 108 112 170 112
+      C218 112 256 142 256 202
+      C256 142 294 112 342 112
+      C404 112 444 172 444 256
+      C444 340 404 400 342 400
+      C294 400 256 370 256 310Z"
+      fill="none" stroke="url(#ribbon)" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-
-  <circle cx="96" cy="128" r="3" fill="#8b5cf6" opacity=".3"/>
-  <circle cx="416" cy="128" r="3" fill="#06d6a0" opacity=".25"/>
-  <circle cx="96" cy="384" r="3" fill="#06d6a0" opacity=".2"/>
-  <circle cx="416" cy="384" r="3" fill="#8b5cf6" opacity=".3"/>
 </svg>
