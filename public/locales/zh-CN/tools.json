@@ -90,6 +90,12 @@
     "description": "在线格式化、压缩和验证 JSON。支持自定义缩进美化输出、单行压缩和 JSON5 宽松解析。100% 浏览器端处理。",
     "searchTerms": "jsongeshihua jsgsh yanzheng yasuo"
   },
+  "sqlformat": {
+    "title": "SQL 格式化工具 - 在线格式化和压缩 SQL",
+    "shortTitle": "SQL 格式化",
+    "description": "格式化和压缩 SQL 查询，支持语法高亮。支持 MySQL、PostgreSQL、Oracle、SQL Server 等多种方言。",
+    "searchTerms": "sqlgeshihua sqlgsh yasuo geeshi"
+  },
   "jsonts": {
     "title": "JSON 转 TypeScript - 生成接口和类型定义",
     "shortTitle": "JSON 转 TypeScript",
