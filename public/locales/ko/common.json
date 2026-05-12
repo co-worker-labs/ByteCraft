@@ -13,7 +13,8 @@
     "searchToolsHint": "도구 (⌘K)",
     "noMatchingTools": "일치하는 도구가 없습니다",
     "quickAccess": "빠른 접근",
-    "recentTools": "최근 사용"
+    "recentTools": "최근 사용",
+    "mainNavigation": "메인 내비게이션"
   },
   "footer": {
     "home": "홈",
@@ -104,5 +105,9 @@
   },
   "advancedSettings": "고급 설정",
   "invalidInput": "잘못된 입력",
-  "indent": "들여쓰기"
+  "indent": "들여쓰기",
+  "skipToMain": "메인 콘텐츠로 건너뛰기",
+  "floatingToolbar": "플로팅 도구 모음",
+  "removeItem": "항목 제거",
+  "searchTools": "도구 검색"
 }

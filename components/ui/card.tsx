@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { KeyboardEvent, ReactNode } from "react";
 
 interface CardProps {
   children: ReactNode;
@@ -8,9 +8,21 @@ interface CardProps {
 }
 
 export function Card({ children, className = "", hover = false, onClick }: CardProps) {
+  function handleKeyDown(e: KeyboardEvent<HTMLDivElement>) {
+    if (!onClick) return;
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onClick();
+    }
+  }
+
   return (
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions -- conditional role/tabIndex/onKeyDown applied when onClick is present
     <div
       onClick={onClick}
+      onKeyDown={onClick ? handleKeyDown : undefined}
+      role={onClick ? "button" : undefined}
+      tabIndex={onClick ? 0 : undefined}
       className={`
         bg-bg-surface border border-border-default rounded-xl p-4
         transition-all duration-200

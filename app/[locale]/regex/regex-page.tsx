@@ -106,6 +106,7 @@ function MatchHighlightView({
         }
       };
       parts.push(
+        // eslint-disable-next-line jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events -- zero-width match highlight
         <span
           key={`match-${i}`}
           ref={refCallback}
@@ -125,6 +126,7 @@ function MatchHighlightView({
         }
       };
       parts.push(
+        // eslint-disable-next-line jsx-a11y/click-events-have-key-events -- match highlight click
         <mark
           key={`match-${i}`}
           ref={refCallback}
@@ -169,6 +171,7 @@ function MatchItem({
   const hasGroupValues = match.groupValues && match.groupValues.length > 1;
 
   return (
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions -- match result card hover
     <div
       className={`bg-bg-surface rounded-lg p-3 cursor-pointer transition-colors ${
         isHovered ? "ring-2 ring-accent-cyan" : "hover:bg-bg-elevated"

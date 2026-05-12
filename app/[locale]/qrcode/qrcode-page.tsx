@@ -420,6 +420,7 @@ function LogoControls({
     <div className="flex flex-col gap-3">
       <label className="text-sm text-fg-secondary">{t("styling.logo")}</label>
       {!styling.logo ? (
+        // eslint-disable-next-line jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events -- file drop zone with click fallback
         <div
           onClick={() => inputRef.current?.click()}
           onDragOver={(e) => e.preventDefault()}

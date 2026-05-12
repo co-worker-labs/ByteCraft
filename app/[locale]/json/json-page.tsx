@@ -246,6 +246,7 @@ function Conversion() {
   return (
     <section id="conversion">
       {/* Input Area */}
+      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions -- drag-and-drop zone */}
       <div
         className="relative"
         onDragOver={onDragOver}

@@ -342,6 +342,7 @@ export default function ToolsDrawer({ open, onClose }: ToolsDrawerProps) {
         }}
         onKeyDown={handleKeyDown}
         placeholder={t("nav.searchTools")}
+        aria-label={t("searchTools")}
         autoComplete="off"
         className="w-full bg-transparent text-sm text-fg-primary placeholder:text-fg-muted outline-none focus-visible:ring-0"
       />
