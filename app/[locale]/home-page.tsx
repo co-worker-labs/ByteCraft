@@ -283,6 +283,7 @@ function SearchResults({
           const Icon = tool.icon;
           const isFocused = index === focusedIndex;
           return (
+            // eslint-disable-next-line jsx-a11y/interactive-supports-focus, jsx-a11y/click-events-have-key-events -- managed by parent listbox keyboard navigation
             <div
               key={tool.path}
               ref={(el) => onCardRef(index, el)}

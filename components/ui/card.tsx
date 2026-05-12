@@ -17,6 +17,7 @@ export function Card({ children, className = "", hover = false, onClick }: CardP
   }
 
   return (
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions -- conditional role/tabIndex/onKeyDown applied when onClick is present
     <div
       onClick={onClick}
       onKeyDown={onClick ? handleKeyDown : undefined}

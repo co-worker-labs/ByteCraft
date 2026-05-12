@@ -144,6 +144,7 @@ function KVRow({
                 key={s}
                 type="button"
                 role="option"
+                aria-selected={false}
                 className="w-full text-left px-3 py-1.5 text-sm text-fg-primary hover:bg-accent-cyan-dim transition-colors"
                 onClick={() => selectSuggestion(s)}
               >
