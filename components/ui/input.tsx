@@ -4,17 +4,25 @@ import {
   SelectHTMLAttributes,
   forwardRef,
   ReactNode,
+  useId,
 } from "react";
 
 export const StyledInput = forwardRef<
   HTMLInputElement,
   InputHTMLAttributes<HTMLInputElement> & { label?: ReactNode }
->(({ label, className = "", ...props }, ref) => {
+>(({ label, className = "", id: externalId, ...props }, ref) => {
+  const generatedId = useId();
+  const id = externalId ?? generatedId;
   return (
     <div>
-      {label && <label className="block text-sm font-medium text-fg-secondary mb-1">{label}</label>}
+      {label && (
+        <label htmlFor={id} className="block text-sm font-medium text-fg-secondary mb-1">
+          {label}
+        </label>
+      )}
       <input
         ref={ref}
+        id={id}
         className={`w-full bg-bg-input border border-border-default rounded-lg px-3 py-2 text-fg-primary placeholder:text-fg-muted focus:outline-none focus:border-accent-cyan focus:shadow-input-focus transition-all duration-200 ${className}`}
         {...props}
       />
@@ -26,12 +34,19 @@ StyledInput.displayName = "StyledInput";
 export const StyledTextarea = forwardRef<
   HTMLTextAreaElement,
   TextareaHTMLAttributes<HTMLTextAreaElement> & { label?: ReactNode }
->(({ label, className = "", ...props }, ref) => {
+>(({ label, className = "", id: externalId, ...props }, ref) => {
+  const generatedId = useId();
+  const id = externalId ?? generatedId;
   return (
     <div>
-      {label && <label className="block text-sm font-medium text-fg-secondary mb-1">{label}</label>}
+      {label && (
+        <label htmlFor={id} className="block text-sm font-medium text-fg-secondary mb-1">
+          {label}
+        </label>
+      )}
       <textarea
         ref={ref}
+        id={id}
         className={`w-full bg-bg-input border border-border-default rounded-lg px-3 py-2 text-fg-primary placeholder:text-fg-muted focus:outline-none focus:border-accent-cyan focus:shadow-input-focus transition-all duration-200 resize-y ${className}`}
         {...props}
       />
@@ -43,12 +58,19 @@ StyledTextarea.displayName = "StyledTextarea";
 export const StyledSelect = forwardRef<
   HTMLSelectElement,
   SelectHTMLAttributes<HTMLSelectElement> & { label?: ReactNode }
->(({ label, className = "", children, ...props }, ref) => {
+>(({ label, className = "", children, id: externalId, ...props }, ref) => {
+  const generatedId = useId();
+  const id = externalId ?? generatedId;
   return (
     <div className="w-full">
-      {label && <label className="block text-sm font-medium text-fg-secondary mb-1">{label}</label>}
+      {label && (
+        <label htmlFor={id} className="block text-sm font-medium text-fg-secondary mb-1">
+          {label}
+        </label>
+      )}
       <select
         ref={ref}
+        id={id}
         className={`w-full bg-bg-input border border-border-default rounded-lg px-3 py-2 text-fg-primary focus:outline-none focus:border-accent-cyan focus:shadow-input-focus transition-all duration-200 ${className}`}
         {...props}
       >
