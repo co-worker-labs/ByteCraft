@@ -13,7 +13,8 @@
     "searchToolsHint": "Tools (⌘K)",
     "noMatchingTools": "No matching tools found",
     "quickAccess": "Quick Access",
-    "recentTools": "Recent"
+    "recentTools": "Recent",
+    "mainNavigation": "Main navigation"
   },
   "footer": {
     "home": "Home",
@@ -104,5 +105,9 @@
     "sha3Title": "SHA-3",
     "sha3": "SHA-3 is the winner of a five-year competition to select a new cryptographic hash algorithm where 64 competing designs were evaluated."
   },
-  "indent": "Indent"
+  "indent": "Indent",
+  "skipToMain": "Skip to main content",
+  "floatingToolbar": "Floating toolbar",
+  "removeItem": "Remove item",
+  "searchTools": "Search tools"
 }
