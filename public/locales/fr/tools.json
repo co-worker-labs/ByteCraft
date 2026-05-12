@@ -75,6 +75,11 @@
     "shortTitle": "JSON Format / Compress",
     "description": "Formatez, compressez et validez du JSON en ligne. Pretty-print avec indentation configurable, minification sur une seule ligne, ou analyse JSON5. 100% côté client."
   },
+  "sqlformat": {
+    "title": "Formateur SQL - Formater et compresser du SQL en ligne",
+    "shortTitle": "Formateur SQL",
+    "description": "Formatez et compressez des requêtes SQL avec coloration syntaxique. Prend en charge MySQL, PostgreSQL, Oracle, SQL Server et plus."
+  },
   "jsonts": {
     "title": "JSON vers TypeScript - Générer des Interfaces et Types depuis JSON",
     "shortTitle": "JSON → TypeScript",

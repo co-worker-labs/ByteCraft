@@ -75,6 +75,11 @@
     "shortTitle": "JSON Formatar / Comprimir",
     "description": "Formate, comprima e valide JSON online. Pretty-print com indentação configurável, minifique em linha única ou analise JSON5. 100% no navegador."
   },
+  "sqlformat": {
+    "title": "Formatador SQL - Formatar e Comprimir SQL Online",
+    "shortTitle": "Formatador SQL",
+    "description": "Formate e comprima consultas SQL com destaque de sintaxe. Suporta MySQL, PostgreSQL, Oracle, SQL Server e mais."
+  },
   "jsonts": {
     "title": "JSON para TypeScript - Gerar Interfaces e Tipos a partir de JSON",
     "shortTitle": "JSON → TypeScript",
