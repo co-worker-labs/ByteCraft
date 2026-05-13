@@ -46,6 +46,7 @@
     "colorthief": "^3.3.1",
     "crypto-js": "^4.2.0",
     "diff": "^7.0.0",
+    "fflate": "^0.8.2",
     "file-selector": "^2.1.2",
     "fuzzysort": "^3.1.0",
     "gpt-tokenizer": "^3.4.0",

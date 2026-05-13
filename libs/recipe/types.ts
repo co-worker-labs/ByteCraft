@@ -33,6 +33,12 @@ export interface RecipeStepDef {
   outputType: DataType;
   parameters: StepParam[];
   execute(input: string, params: Record<string, string>): Promise<StepResult>;
+  batch?: {
+    supported?: boolean;
+    maxInputs?: number;
+    outputFilenameTemplate?: string;
+    mimeType?: string;
+  };
 }
 
 export interface RecipeStepInstance {
