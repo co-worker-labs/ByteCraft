@@ -94,28 +94,28 @@ export const textSteps: RecipeStepDef[] = [
       {
         id: "pattern",
         type: "text",
-        label: "Pattern",
+        label: "pattern",
         defaultValue: "",
-        placeholder: "Regular expression pattern",
+        placeholder: "regexPattern",
       },
       {
         id: "replacement",
         type: "text",
-        label: "Replacement",
+        label: "replacement",
         defaultValue: "",
-        placeholder: "Replacement string",
+        placeholder: "replacementString",
       },
       {
         id: "flags",
         type: "text",
-        label: "Flags",
+        label: "flags",
         defaultValue: "g",
-        placeholder: "Regex flags (e.g. g, gi)",
+        placeholder: "regexFlags",
       },
     ],
     async execute(input: string, params: Record<string, string>) {
       const pattern = params.pattern || "";
-      if (!pattern) return { ok: false as const, error: "Pattern is required" };
+      if (!pattern) return { ok: false as const, error: "patternRequired" };
       try {
         const re = new RegExp(pattern, params.flags || "g");
         return { ok: true as const, output: input.replace(re, params.replacement || "") };
@@ -135,23 +135,15 @@ export const textSteps: RecipeStepDef[] = [
     parameters: [
       {
         id: "caseSensitive",
-        type: "select",
-        label: "Case Sensitive",
+        type: "checkbox",
+        label: "caseSensitive",
         defaultValue: "true",
-        options: [
-          { label: "Yes", value: "true" },
-          { label: "No", value: "false" },
-        ],
       },
       {
         id: "trimWhitespace",
-        type: "select",
-        label: "Trim Whitespace",
+        type: "checkbox",
+        label: "trimWhitespace",
         defaultValue: "true",
-        options: [
-          { label: "Yes", value: "true" },
-          { label: "No", value: "false" },
-        ],
       },
     ],
     async execute(input: string, params: Record<string, string>) {

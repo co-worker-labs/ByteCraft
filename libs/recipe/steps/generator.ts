@@ -16,7 +16,7 @@ export const generatorSteps: RecipeStepDef[] = [
       {
         id: "version",
         type: "select",
-        label: "Version",
+        label: "version",
         defaultValue: "v4",
         options: [
           { label: "UUID v4", value: "v4" },
@@ -25,10 +25,12 @@ export const generatorSteps: RecipeStepDef[] = [
       },
       {
         id: "count",
-        type: "text",
-        label: "Count",
+        type: "slider",
+        label: "count",
         defaultValue: "1",
-        placeholder: "Number of UUIDs",
+        min: 1,
+        max: 50,
+        step: 1,
       },
     ],
     async execute(_input: string, params: Record<string, string>) {
@@ -55,7 +57,7 @@ export const generatorSteps: RecipeStepDef[] = [
       {
         id: "size",
         type: "select",
-        label: "Resolution",
+        label: "size",
         defaultValue: "300",
         options: [
           { label: "300 × 300", value: "300" },
@@ -66,7 +68,7 @@ export const generatorSteps: RecipeStepDef[] = [
       {
         id: "errorLevel",
         type: "select",
-        label: "Error Correction",
+        label: "errorLevel",
         defaultValue: "M",
         options: [
           { label: "Low (L)", value: "L" },
@@ -78,7 +80,7 @@ export const generatorSteps: RecipeStepDef[] = [
       {
         id: "format",
         type: "select",
-        label: "Format",
+        label: "format",
         defaultValue: "png",
         options: [
           { label: "PNG", value: "png" },
@@ -113,7 +115,7 @@ export const generatorSteps: RecipeStepDef[] = [
           qr.append(container);
           await new Promise((r) => setTimeout(r, 50));
           const svgEl = container.querySelector("svg");
-          if (!svgEl) return { ok: false as const, error: "Failed to generate SVG" };
+          if (!svgEl) return { ok: false as const, error: "svgGenerationFailed" };
           const svgStr = new XMLSerializer().serializeToString(svgEl);
           return {
             ok: true as const,
@@ -125,7 +127,7 @@ export const generatorSteps: RecipeStepDef[] = [
         opts.type = "canvas";
         qr.update(opts);
         const blob = await qr.getRawData("png");
-        if (!blob) return { ok: false as const, error: "Failed to generate QR code" };
+        if (!blob) return { ok: false as const, error: "qrGenerationFailed" };
         const dataUrl = await new Promise<string>((resolve, reject) => {
           const reader = new FileReader();
           reader.onload = () => resolve(reader.result as string);

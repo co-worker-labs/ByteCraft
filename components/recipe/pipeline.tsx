@@ -3,11 +3,13 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import type { RecipeStepInstance, StepOutput } from "../../libs/recipe/types";
+import type { RecipeExample } from "../../libs/recipe/examples";
 import { STEP_REGISTRY } from "../../libs/recipe/registry";
+import { RECIPE_EXAMPLES } from "../../libs/recipe/examples";
 import StepCard from "./step-card";
 import StepPicker from "./step-picker";
 import { Button } from "../ui/button";
-import { Plus, FlaskConical } from "lucide-react";
+import { Plus, FlaskConical, Sparkles } from "lucide-react";
 
 interface PipelineProps {
   steps: RecipeStepInstance[];
@@ -15,6 +17,7 @@ interface PipelineProps {
   errorStepIndex: number | null;
   isLoading: boolean;
   onStepsChange: (steps: RecipeStepInstance[]) => void;
+  onLoadExample?: (example: RecipeExample) => void;
 }
 
 function FlowConnector({ type }: { type: "text" | "image" | "none" }) {
@@ -41,6 +44,7 @@ export default function Pipeline({
   errorStepIndex,
   isLoading,
   onStepsChange,
+  onLoadExample,
 }: PipelineProps) {
   const t = useTranslations("recipe");
   const [pickerOpen, setPickerOpen] = useState(false);
@@ -250,6 +254,31 @@ export default function Pipeline({
           <p className="text-xs text-fg-muted text-center leading-relaxed">
             {t("addStepsToBuild")}
           </p>
+          {onLoadExample && (
+            <div className="mt-4 w-full space-y-2">
+              <div className="flex items-center gap-1.5 mb-2">
+                <Sparkles size={12} className="text-accent-cyan" />
+                <span className="text-[11px] font-medium text-fg-muted uppercase tracking-wider">
+                  {t("examples")}
+                </span>
+              </div>
+              {RECIPE_EXAMPLES.map((ex) => (
+                <button
+                  key={ex.id}
+                  type="button"
+                  onClick={() => onLoadExample(ex)}
+                  className="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg border border-border-default/60 bg-bg-elevated hover:border-accent-cyan/40 hover:bg-accent-cyan-dim/20 text-left transition-all duration-200 cursor-pointer group"
+                >
+                  <span className="text-sm text-fg-secondary group-hover:text-fg-primary transition-colors truncate">
+                    {t(`examplesList.${ex.id}`)}
+                  </span>
+                  <span className="text-[10px] text-fg-muted shrink-0 ml-auto">
+                    {ex.steps.length} {ex.steps.length === 1 ? "step" : "steps"}
+                  </span>
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       )}
 

@@ -17,8 +17,6 @@ import CryptoJS from "crypto-js";
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
 import DescriptionSection from "../../../components/description-section";
-import SendToRecipe from "../../../components/recipe/send-to-recipe";
-
 type Algorithms = "AES" | "DES" | "Triple DES" | "Rabbit" | "RC4" | "RC4Drop";
 type BlockMode = "CBC" | "CFB" | "CTR" | "OFB" | "ECB";
 type PaddingScheme = "Pkcs7" | "Iso97971" | "AnsiX923" | "Iso10126" | "ZeroPadding" | "NoPadding";
@@ -439,7 +437,6 @@ function Conversion() {
             className="font-mono text-sm"
           />
           <CopyButton getContent={() => encryptedContent.trim()} className="absolute end-2 top-2" />
-          <SendToRecipe output={encryptedContent.trim()} toolState={{}} />
         </div>
       </div>
     </section>

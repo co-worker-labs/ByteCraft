@@ -77,7 +77,7 @@ export default function StepPicker({
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search steps..."
+              placeholder={t("searchSteps")}
               className="flex-1 bg-transparent text-sm text-fg-primary placeholder:text-fg-muted outline-none"
               autoFocus
             />
@@ -124,7 +124,7 @@ export default function StepPicker({
                           <div className="flex-1 min-w-0">
                             <p className="font-medium truncate text-[13px]">{stepName}</p>
                             <p className="text-[11px] text-fg-muted truncate mt-0.5">
-                              {def.description}
+                              {t(`steps.${def.id}.desc`)}
                             </p>
                           </div>
                           <div className="flex items-center gap-1.5 shrink-0">

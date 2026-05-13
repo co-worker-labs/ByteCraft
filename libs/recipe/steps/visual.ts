@@ -59,7 +59,7 @@ export const visualSteps: RecipeStepDef[] = [
       {
         id: "format",
         type: "select",
-        label: "Format",
+        label: "format",
         defaultValue: "webp",
         options: [
           { label: "PNG", value: "png" },
@@ -70,7 +70,7 @@ export const visualSteps: RecipeStepDef[] = [
       {
         id: "quality",
         type: "slider",
-        label: "Quality",
+        label: "quality",
         defaultValue: "80",
         min: 1,
         max: 100,
@@ -80,7 +80,7 @@ export const visualSteps: RecipeStepDef[] = [
       {
         id: "resizeMode",
         type: "select",
-        label: "Resize",
+        label: "resizeMode",
         defaultValue: "none",
         options: [
           { label: "None", value: "none" },
@@ -91,7 +91,7 @@ export const visualSteps: RecipeStepDef[] = [
       {
         id: "resizePercent",
         type: "slider",
-        label: "Percent",
+        label: "resizePercent",
         defaultValue: "100",
         min: 1,
         max: 400,
@@ -101,23 +101,23 @@ export const visualSteps: RecipeStepDef[] = [
       {
         id: "targetWidth",
         type: "text",
-        label: "Width",
+        label: "maxWidth",
         defaultValue: "",
-        placeholder: "Width in px",
+        placeholder: "widthPx",
         dependsOn: { paramId: "resizeMode", values: ["custom"] },
       },
       {
         id: "targetHeight",
         type: "text",
-        label: "Height",
+        label: "maxHeight",
         defaultValue: "",
-        placeholder: "Height in px",
+        placeholder: "heightPx",
         dependsOn: { paramId: "resizeMode", values: ["custom"] },
       },
     ],
     async execute(input: string, params: Record<string, string>) {
       try {
-        if (!input) return { ok: false as const, error: "No image input" };
+        if (!input) return { ok: false as const, error: "noImageInput" };
 
         const quality = Math.max(1, Math.min(100, parseInt(params.quality || "80", 10) || 80));
         const format = (params.format || "webp") as "png" | "jpeg" | "webp";

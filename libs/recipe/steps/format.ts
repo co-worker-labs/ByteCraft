@@ -16,10 +16,14 @@ export const formatSteps: RecipeStepDef[] = [
     parameters: [
       {
         id: "indent",
-        type: "text",
-        label: "Indent",
+        type: "select",
+        label: "indent",
         defaultValue: "2",
-        placeholder: "Number of spaces",
+        options: [
+          { label: "2 spaces", value: "2" },
+          { label: "4 spaces", value: "4" },
+          { label: "8 spaces", value: "8" },
+        ],
       },
     ],
     async execute(input: string, params: Record<string, string>) {
@@ -79,10 +83,14 @@ export const formatSteps: RecipeStepDef[] = [
     parameters: [
       {
         id: "indent",
-        type: "text",
-        label: "Indent",
+        type: "select",
+        label: "indent",
         defaultValue: "2",
-        placeholder: "Number of spaces",
+        options: [
+          { label: "2 spaces", value: "2" },
+          { label: "4 spaces", value: "4" },
+          { label: "8 spaces", value: "8" },
+        ],
       },
     ],
     async execute(input: string, params: Record<string, string>) {
@@ -108,9 +116,9 @@ export const formatSteps: RecipeStepDef[] = [
       {
         id: "rootName",
         type: "text",
-        label: "Root Name",
+        label: "rootName",
         defaultValue: "Root",
-        placeholder: "Root interface name",
+        placeholder: "rootInterfaceName",
       },
     ],
     async execute(input: string, params: Record<string, string>) {
@@ -120,7 +128,7 @@ export const formatSteps: RecipeStepDef[] = [
         exportKeyword: false,
       });
       if (result.success && result.types) return { ok: true as const, output: result.types };
-      return { ok: false as const, error: result.error ?? "Conversion failed" };
+      return { ok: false as const, error: result.error ?? "conversionFailed" };
     },
   },
   {
@@ -134,10 +142,14 @@ export const formatSteps: RecipeStepDef[] = [
     parameters: [
       {
         id: "delimiter",
-        type: "text",
-        label: "Delimiter",
+        type: "select",
+        label: "delimiter",
         defaultValue: ",",
-        placeholder: "Column delimiter",
+        options: [
+          { label: "Comma (,)", value: "," },
+          { label: "Semicolon (;)", value: ";" },
+          { label: "Tab (\\t)", value: "\t" },
+        ],
       },
     ],
     async execute(input: string, params: Record<string, string>) {
@@ -157,17 +169,25 @@ export const formatSteps: RecipeStepDef[] = [
     parameters: [
       {
         id: "delimiter",
-        type: "text",
-        label: "Delimiter",
+        type: "select",
+        label: "delimiter",
         defaultValue: ",",
-        placeholder: "Column delimiter",
+        options: [
+          { label: "Comma (,)", value: "," },
+          { label: "Semicolon (;)", value: ";" },
+          { label: "Tab (\\t)", value: "\t" },
+        ],
       },
       {
         id: "indent",
-        type: "text",
-        label: "Indent",
+        type: "select",
+        label: "indent",
         defaultValue: "2",
-        placeholder: "Number of spaces",
+        options: [
+          { label: "2 spaces", value: "2" },
+          { label: "4 spaces", value: "4" },
+          { label: "8 spaces", value: "8" },
+        ],
       },
     ],
     async execute(input: string, params: Record<string, string>) {
@@ -192,7 +212,7 @@ export const formatSteps: RecipeStepDef[] = [
       {
         id: "dialect",
         type: "select",
-        label: "Dialect",
+        label: "dialect",
         defaultValue: "sql",
         options: [
           { label: "SQL", value: "sql" },
@@ -234,7 +254,7 @@ export const formatSteps: RecipeStepDef[] = [
       {
         id: "dialect",
         type: "select",
-        label: "Dialect",
+        label: "dialect",
         defaultValue: "sql",
         options: [
           { label: "SQL", value: "sql" },

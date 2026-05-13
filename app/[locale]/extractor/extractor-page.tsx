@@ -15,7 +15,6 @@ import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
 import { Accordion } from "../../../components/ui/accordion";
 import { CircleHelp } from "lucide-react";
-import SendToRecipe from "../../../components/recipe/send-to-recipe";
 
 const TYPE_COLORS: Record<ExtractorType, string> = {
   email: "bg-[#06d6a0]/15 text-[#06d6a0] border-[#06d6a0]/30",
@@ -223,10 +222,6 @@ function Conversion() {
             </span>
             {hasResults && (
               <div className="flex items-center gap-1.5 ml-auto">
-                <SendToRecipe
-                  output={getExportValues().join("\n")}
-                  toolState={{ type: [...enabledTypes][0] || "url" }}
-                />
                 <Button
                   variant="outline-cyan"
                   size="sm"

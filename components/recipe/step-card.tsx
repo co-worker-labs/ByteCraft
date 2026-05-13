@@ -22,6 +22,27 @@ const CATEGORY_COLORS: Record<string, { bg: string; text: string; border: string
   visual: { bg: "bg-cyan-500/10", text: "text-cyan-400", border: "border-cyan-500/20" },
 };
 
+const OPTION_KEY_MAP: Record<string, string> = {
+  "resizeMode.none": "options.none",
+  "resizeMode.percent": "options.byPercent",
+  "resizeMode.custom": "options.custom",
+  "errorLevel.L": "options.lowL",
+  "errorLevel.M": "options.mediumM",
+  "errorLevel.Q": "options.quartileQ",
+  "errorLevel.H": "options.highH",
+  "indent.2": "options.indent2",
+  "indent.4": "options.indent4",
+  "indent.8": "options.indent8",
+  "delimiter.,": "options.delimiterComma",
+  "delimiter.;": "options.delimiterSemicolon",
+  "delimiter.\\t": "options.delimiterTab",
+  "version.v4": "options.uuidV4",
+  "version.v7": "options.uuidV7",
+  "size.300": "options.size300",
+  "size.600": "options.size600",
+  "size.1024": "options.size1024",
+};
+
 interface StepCardProps {
   def: RecipeStepDef;
   instance: RecipeStepInstance;
@@ -166,14 +187,15 @@ export default function StepCard({
                       type="button"
                       role="checkbox"
                       aria-checked={checked}
+                      aria-label={label}
                       onClick={() => handleParamChange(param.id, checked ? "false" : "true")}
-                      className={`relative h-[18px] w-[32px] rounded-full transition-colors duration-200 shrink-0 ${
-                        checked ? "bg-accent-cyan" : "bg-border-default"
+                      className={`recipe-toggle relative h-[20px] w-[36px] rounded-full transition-colors duration-200 shrink-0 hover:shadow-[0_0_6px_var(--accent-cyan)] ${
+                        checked ? "bg-accent-cyan" : "bg-border-default hover:bg-fg-muted/40"
                       }`}
                     >
                       <span
-                        className={`absolute top-[2px] left-[2px] h-[14px] w-[14px] rounded-full bg-white shadow-sm transition-transform duration-200 ${
-                          checked ? "translate-x-[14px]" : "translate-x-0"
+                        className={`absolute top-[2px] left-[2px] h-[16px] w-[16px] rounded-full bg-white shadow-sm transition-transform duration-200 ${
+                          checked ? "translate-x-[16px]" : "translate-x-0"
                         }`}
                       />
                     </button>
@@ -207,11 +229,15 @@ export default function StepCard({
                             value={instance.params[param.id] ?? param.defaultValue}
                             onChange={(e) => handleParamChange(param.id, e.target.value)}
                           >
-                            {param.options?.map((opt) => (
-                              <option key={opt.value} value={opt.value}>
-                                {opt.label}
-                              </option>
-                            ))}
+                            {param.options?.map((opt) => {
+                              const key = OPTION_KEY_MAP[`${param.id}.${opt.value}`];
+                              const label = key && t.has(key) ? t(key) : opt.label;
+                              return (
+                                <option key={opt.value} value={opt.value}>
+                                  {label}
+                                </option>
+                              );
+                            })}
                           </StyledSelect>
                         );
                       }
@@ -270,7 +296,13 @@ export default function StepCard({
                           label={label}
                           value={instance.params[param.id] ?? param.defaultValue}
                           onChange={(e) => handleParamChange(param.id, e.target.value)}
-                          placeholder={param.placeholder}
+                          placeholder={
+                            param.placeholder
+                              ? t.has(`placeholders.${param.placeholder}`)
+                                ? t(`placeholders.${param.placeholder}`)
+                                : param.placeholder
+                              : undefined
+                          }
                         />
                       );
                     });
@@ -309,7 +341,11 @@ export default function StepCard({
               ) : (
                 <div className="flex items-start gap-2 px-3 py-2 rounded-lg bg-red-500/5 border border-danger/20">
                   <AlertCircle size={13} className="text-danger shrink-0 mt-0.5" />
-                  <p className="text-xs text-danger">{output.result.error}</p>
+                  <p className="text-xs text-danger">
+                    {t.has(`errors.${output.result.error}`)
+                      ? t(`errors.${output.result.error}`)
+                      : output.result.error}
+                  </p>
                 </div>
               )}
             </div>

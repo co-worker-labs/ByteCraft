@@ -16,8 +16,6 @@ import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
 import { Accordion } from "../../../components/ui/accordion";
 import { CircleHelp } from "lucide-react";
-import SendToRecipe from "../../../components/recipe/send-to-recipe";
-
 const parseJson5 = async (input: string) => {
   const { default: JSON5 } = await import("json5");
   return JSON5.parse(input);
@@ -505,7 +503,6 @@ function Conversion() {
           className={`font-mono text-sm ${effectiveLayout === "horizontal" ? "h-[50vh]" : ""}`}
         />
         <CopyButton getContent={() => yamlContent} className="absolute end-2 top-2" />
-        <SendToRecipe output={yamlContent} toolState={{}} />
       </div>
       <input
         ref={yamlFileRef}

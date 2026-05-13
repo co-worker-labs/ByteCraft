@@ -9,8 +9,6 @@ import { clipInput, detectFormats, convertAll } from "../../../libs/textcase/mai
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
 import DescriptionSection from "../../../components/description-section";
-import SendToRecipe from "../../../components/recipe/send-to-recipe";
-
 const REFERENCE_ROWS: { key: string; example: string }[] = [
   { key: "camelCase", example: "myVariableName" },
   { key: "pascalCase", example: "MyVariableName" },
@@ -100,14 +98,12 @@ function Conversion() {
                     </th>
                     <td className="py-2.5 px-4 font-mono text-sm break-all">{r.output}</td>
                     <td className="py-2.5 px-2 align-middle">
-                      <CopyButton
-                        getContent={() => r.output}
-                        className="opacity-60 hover:opacity-100 transition-opacity"
-                      />
-                      <SendToRecipe
-                        output={r.output}
-                        toolState={{ case: r.key.replace("Case", "").toLowerCase() }}
-                      />
+                      <div className="flex items-center gap-1">
+                        <CopyButton
+                          getContent={() => r.output}
+                          className="opacity-60 hover:opacity-100 transition-opacity"
+                        />
+                      </div>
                     </td>
                   </tr>
                 );

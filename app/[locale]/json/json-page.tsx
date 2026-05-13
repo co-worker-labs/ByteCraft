@@ -26,8 +26,6 @@ import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
 import { Accordion } from "../../../components/ui/accordion";
 import { CircleHelp } from "lucide-react";
-import SendToRecipe from "../../../components/recipe/send-to-recipe";
-
 type IndentSize = 2 | 4 | 8;
 
 type JsonError = {
@@ -474,7 +472,6 @@ function Conversion() {
             </div>
           )}
           <CopyButton getContent={() => outputContent} className="absolute end-2 top-2" />
-          <SendToRecipe output={outputContent} toolState={{}} />
         </div>
       </div>
     </section>

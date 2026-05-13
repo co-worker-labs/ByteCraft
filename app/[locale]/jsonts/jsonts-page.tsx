@@ -12,8 +12,6 @@ import { Button } from "../../../components/ui/button";
 import { StyledTextarea, StyledInput } from "../../../components/ui/input";
 import { showToast } from "../../../libs/toast";
 import { jsonToTs, PRIMITIVE_ERROR } from "../../../libs/jsonts/main";
-import SendToRecipe from "../../../components/recipe/send-to-recipe";
-
 type OutputMode = "interface" | "type";
 
 function Conversion() {
@@ -116,7 +114,6 @@ function Conversion() {
               className="font-mono text-sm"
             />
             <CopyButton getContent={() => tsOutput} className="absolute end-2 top-2" />
-            <SendToRecipe output={tsOutput} toolState={{}} />
           </div>
         </div>
       </div>
@@ -194,22 +191,23 @@ function Conversion() {
           </button>
 
           <div className="flex-1" />
-
-          <Button
-            variant="danger"
-            size="sm"
-            disabled={!jsonInput.trim() && !tsOutput.trim()}
-            onClick={() => {
-              setJsonInput("");
-              setRootName("Root");
-              setOutputMode("interface");
-              setExportKeyword(false);
-              showToast(tc("allCleared"), "danger", 2000);
-            }}
-            className="rounded-full font-bold"
-          >
-            {tc("clearAll")}
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="danger"
+              size="sm"
+              disabled={!jsonInput.trim() && !tsOutput.trim()}
+              onClick={() => {
+                setJsonInput("");
+                setRootName("Root");
+                setOutputMode("interface");
+                setExportKeyword(false);
+                showToast(tc("allCleared"), "danger", 2000);
+              }}
+              className="rounded-full font-bold"
+            >
+              {tc("clearAll")}
+            </Button>
+          </div>
         </div>
       </div>
     </section>

@@ -6,7 +6,10 @@ import Layout from "../../../components/layout";
 import GlobalInput from "../../../components/recipe/global-input";
 import Pipeline from "../../../components/recipe/pipeline";
 import RecipePanel from "../../../components/recipe/recipe-panel";
+import DescriptionSection from "../../../components/description-section";
+import PrivacyBanner from "../../../components/privacy-banner";
 import type { DataType, RecipeStepInstance } from "../../../libs/recipe/types";
+import type { RecipeExample } from "../../../libs/recipe/examples";
 import { STEP_REGISTRY } from "../../../libs/recipe/registry";
 import {
   executePipeline,
@@ -16,7 +19,7 @@ import {
 import { consumeDraft } from "../../../libs/recipe/storage";
 import "../../../libs/recipe/steps/index";
 
-function loadDraft(): { input: string; inputType: DataType; steps: RecipeStepInstance[] } {
+function loadDraft(): { input: string; inputType: DataType; steps: RecipeStepInstance[] } | null {
   const draft = consumeDraft();
   if (draft) {
     const def = STEP_REGISTRY.get(draft.stepId);
@@ -39,16 +42,15 @@ function loadDraft(): { input: string; inputType: DataType; steps: RecipeStepIns
       };
     }
   }
-  return { input: "", inputType: "text", steps: [] };
+  return null;
 }
-
-const draft = loadDraft();
 
 export default function RecipePage() {
   const t = useTranslations("tools");
-  const [input, setInput] = useState(draft.input);
-  const [inputDataType, setInputDataType] = useState<DataType>(draft.inputType);
-  const [steps, setSteps] = useState<RecipeStepInstance[]>(draft.steps);
+  const [draft] = useState(loadDraft);
+  const [input, setInput] = useState(draft?.input ?? "");
+  const [inputDataType, setInputDataType] = useState<DataType>(draft?.inputType ?? "text");
+  const [steps, setSteps] = useState<RecipeStepInstance[]>(draft?.steps ?? []);
   const [pipelineResult, setPipelineResult] = useState<PipelineResult>({
     steps: [],
     finalOutput: null,
@@ -65,6 +67,20 @@ export default function RecipePage() {
     errorStepIndex: null,
     cacheKeys: [],
   });
+
+  useEffect(() => {
+    function onDraft() {
+      const d = loadDraft();
+      if (d) {
+        setInput(d.input);
+        setInputDataType(d.inputType);
+        setSteps(d.steps);
+      }
+    }
+
+    window.addEventListener("recipe:draft", onDraft);
+    return () => window.removeEventListener("recipe:draft", onDraft);
+  }, []);
 
   useEffect(() => {
     abortRef.current = true;
@@ -96,6 +112,12 @@ export default function RecipePage() {
     };
   }, [input, inputDataType, steps]);
 
+  function handleLoadExample(example: RecipeExample) {
+    setInput(example.input);
+    setInputDataType(example.inputType);
+    setSteps(example.steps);
+  }
+
   const resolvedInputType = getPipelineInputType(steps, STEP_REGISTRY);
   const inputType = input
     ? inputDataType
@@ -111,6 +133,7 @@ export default function RecipePage() {
     >
       <div className="min-h-[calc(100vh-4rem)]">
         <div className="container mx-auto px-4 py-6 lg:py-8">
+          <PrivacyBanner />
           <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-5 space-y-5">
               {resolvedInputType !== "none" && (
@@ -130,6 +153,7 @@ export default function RecipePage() {
                 errorStepIndex={pipelineResult.errorStepIndex}
                 isLoading={isLoading}
                 onStepsChange={setSteps}
+                onLoadExample={handleLoadExample}
               />
             </div>
             <div className="lg:col-span-7 lg:sticky lg:top-16 lg:self-start mt-5 lg:mt-0">
@@ -143,6 +167,7 @@ export default function RecipePage() {
               />
             </div>
           </div>
+          <DescriptionSection namespace="recipe" />
         </div>
       </div>
     </Layout>

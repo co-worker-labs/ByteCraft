@@ -32,16 +32,16 @@ interface RecipePanelProps {
   onAppendRecipe: (steps: RecipeStepInstance[]) => void;
 }
 
-function formatRelativeTime(timestamp: number): string {
+function formatRelativeTime(timestamp: number, t: ReturnType<typeof useTranslations>): string {
   const diff = Date.now() - timestamp;
   const seconds = Math.floor(diff / 1000);
-  if (seconds < 60) return `${seconds}s ago`;
+  if (seconds < 60) return t("ago.seconds", { count: seconds });
   const minutes = Math.floor(seconds / 60);
-  if (minutes < 60) return `${minutes}m ago`;
+  if (minutes < 60) return t("ago.minutes", { count: minutes });
   const hours = Math.floor(minutes / 60);
-  if (hours < 24) return `${hours}h ago`;
+  if (hours < 24) return t("ago.hours", { count: hours });
   const days = Math.floor(hours / 24);
-  if (days < 30) return `${days}d ago`;
+  if (days < 30) return t("ago.days", { count: days });
   return new Date(timestamp).toLocaleDateString();
 }
 
@@ -159,11 +159,11 @@ export default function RecipePanel({
 
   function handleSave() {
     if (!recipeName.trim()) {
-      showToast("Please enter a name", "warning");
+      showToast(t("toast.enterName"), "warning");
       return;
     }
     if (steps.length === 0) {
-      showToast("No steps to save", "warning");
+      showToast(t("toast.noSteps"), "warning");
       return;
     }
     const now = Date.now();
@@ -176,7 +176,7 @@ export default function RecipePanel({
     });
     setRecipeName("");
     setSavedRecipes(listRecipes());
-    showToast("Recipe saved", "success");
+    showToast(t("toast.saved"), "success");
   }
 
   function handleDeleteRecipe(id: string) {
@@ -205,7 +205,7 @@ export default function RecipePanel({
     if (finalOutputType === "image" && finalOutput.startsWith("data:")) {
       const a = document.createElement("a");
       a.href = finalOutput;
-      a.download = "recipe-output.png";
+      a.download = t("downloadImageName");
       a.click();
       return;
     }
@@ -213,7 +213,7 @@ export default function RecipePanel({
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "recipe-output.txt";
+    a.download = t("downloadTextName");
     a.click();
     URL.revokeObjectURL(url);
   }
@@ -341,7 +341,7 @@ export default function RecipePanel({
                   </p>
                   <p className="text-[11px] text-fg-muted mt-0.5">
                     {t("stepsCount", { count: recipe.steps.length })} ·{" "}
-                    {formatRelativeTime(recipe.updatedAt)}
+                    {formatRelativeTime(recipe.updatedAt, t)}
                   </p>
                 </button>
                 <div className="flex items-center shrink-0 border border-border-default/60 rounded-lg divide-x divide-border-default/60">

@@ -16,7 +16,6 @@ import { Button } from "../../../components/ui/button";
 import { ChevronsDown, ChevronsUp, X } from "lucide-react";
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
-import SendToRecipe from "../../../components/recipe/send-to-recipe";
 
 const BASE64_ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
@@ -232,16 +231,18 @@ function Conversion() {
               {tc("encodedText")}
             </span>
           </div>
-          <button
-            type="button"
-            className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
-            onClick={() => {
-              setEncodedContent("");
-              showToast(tc("cleared"), "danger", 2000);
-            }}
-          >
-            {tc("clear")}
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
+              onClick={() => {
+                setEncodedContent("");
+                showToast(tc("cleared"), "danger", 2000);
+              }}
+            >
+              {tc("clear")}
+            </button>
+          </div>
         </div>
         <div className="relative mt-1">
           <StyledTextarea
@@ -255,10 +256,6 @@ function Conversion() {
             className="font-mono text-sm"
           />
           <CopyButton getContent={() => encodedContent} className="absolute end-2 top-2" />
-          <SendToRecipe
-            output={lastDirection === "encode" ? encodedContent : rawContent}
-            toolState={{ mode: lastDirection }}
-          />
         </div>
       </div>
     </section>

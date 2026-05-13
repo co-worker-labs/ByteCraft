@@ -53,7 +53,6 @@ import type {
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
 import DescriptionSection from "../../../components/description-section";
-import SendToRecipe from "../../../components/recipe/send-to-recipe";
 const CONTENT_TYPES: ContentType[] = ["text", "wifi", "vcard", "email", "sms", "whatsapp"];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_MIN_DIGITS = 3;
@@ -957,9 +956,6 @@ export default function QrCodePage() {
                   {t("export.clipboard")}
                 </Button>
               )}
-            </div>
-            <div className="flex justify-center">
-              <SendToRecipe output={userContent} toolState={{}} />
             </div>
           </div>
         </div>

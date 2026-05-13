@@ -15,7 +15,6 @@ import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
 import { Accordion } from "../../../components/ui/accordion";
 import { CircleHelp } from "lucide-react";
-import SendToRecipe from "../../../components/recipe/send-to-recipe";
 
 function downloadText(content: string, filename: string) {
   const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
@@ -164,7 +163,6 @@ function Conversion() {
                 )}
                 {tc("copy")}
               </button>
-              <SendToRecipe output={result.output} toolState={{}} />
               <button
                 type="button"
                 className="text-fg-secondary text-xs hover:text-accent-cyan transition-colors cursor-pointer inline-flex items-center gap-1"

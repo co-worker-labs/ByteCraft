@@ -47,7 +47,6 @@ import type {
   FunctionCase,
   LinesBetween,
 } from "../../../libs/sqlformat/dialects";
-import SendToRecipe from "../../../components/recipe/send-to-recipe";
 
 const SAMPLE_SQL = `SELECT u.id, u.name, u.email, COUNT(o.id) AS order_count
 FROM users u
@@ -318,7 +317,6 @@ function Conversion() {
           {t("compress")}
         </Button>
         <CopyButton getContent={() => output} alwaysShow label={tc("copy")} />
-        <SendToRecipe output={output} toolState={{}} />
         <Button onClick={handleClear} variant="outline" size="sm">
           <Trash2 size={14} />
           {t("clear")}

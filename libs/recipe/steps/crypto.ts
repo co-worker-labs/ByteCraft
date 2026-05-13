@@ -74,14 +74,14 @@ export const cryptoSteps: RecipeStepDef[] = [
       {
         id: "key",
         type: "text",
-        label: "Key",
+        label: "key",
         defaultValue: "",
-        placeholder: "Encryption key",
+        placeholder: "encryptionKey",
       },
     ],
     async execute(input: string, params: Record<string, string>) {
       const key = params.key || "";
-      if (!key) return { ok: false as const, error: "Key is required" };
+      if (!key) return { ok: false as const, error: "keyRequired" };
       try {
         const encrypted = CryptoJS.AES.encrypt(input, key).toString();
         return { ok: true as const, output: encrypted };
@@ -102,18 +102,18 @@ export const cryptoSteps: RecipeStepDef[] = [
       {
         id: "key",
         type: "text",
-        label: "Key",
+        label: "key",
         defaultValue: "",
-        placeholder: "Decryption key",
+        placeholder: "decryptionKey",
       },
     ],
     async execute(input: string, params: Record<string, string>) {
       const key = params.key || "";
-      if (!key) return { ok: false as const, error: "Key is required" };
+      if (!key) return { ok: false as const, error: "keyRequired" };
       try {
         const bytes = CryptoJS.AES.decrypt(input, key);
         const decrypted = bytes.toString(CryptoJS.enc.Utf8);
-        if (!decrypted) return { ok: false as const, error: "Decryption failed" };
+        if (!decrypted) return { ok: false as const, error: "decryptionFailed" };
         return { ok: true as const, output: decrypted };
       } catch (e) {
         return { ok: false as const, error: String(e) };
@@ -132,14 +132,14 @@ export const cryptoSteps: RecipeStepDef[] = [
       {
         id: "key",
         type: "text",
-        label: "Key",
+        label: "key",
         defaultValue: "",
-        placeholder: "HMAC key",
+        placeholder: "hmacKey",
       },
     ],
     async execute(input: string, params: Record<string, string>) {
       const key = params.key || "";
-      if (!key) return { ok: false as const, error: "Key is required" };
+      if (!key) return { ok: false as const, error: "keyRequired" };
       return { ok: true as const, output: CryptoJS.HmacSHA256(input, key).toString() };
     },
   },
@@ -155,7 +155,7 @@ export const cryptoSteps: RecipeStepDef[] = [
       {
         id: "length",
         type: "slider",
-        label: "Length",
+        label: "length",
         defaultValue: "16",
         min: 4,
         max: 128,
@@ -164,25 +164,25 @@ export const cryptoSteps: RecipeStepDef[] = [
       {
         id: "uppercase",
         type: "checkbox",
-        label: "Uppercase",
+        label: "uppercase",
         defaultValue: "true",
       },
       {
         id: "lowercase",
         type: "checkbox",
-        label: "Lowercase",
+        label: "lowercase",
         defaultValue: "true",
       },
       {
         id: "numbers",
         type: "checkbox",
-        label: "Numbers",
+        label: "numbers",
         defaultValue: "true",
       },
       {
         id: "symbols",
         type: "checkbox",
-        label: "Symbols",
+        label: "symbols",
         defaultValue: "true",
       },
     ],
