@@ -27,6 +27,7 @@ import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
 import { Accordion } from "../../../components/ui/accordion";
 import { CircleHelp } from "lucide-react";
+import SendToRecipe from "../../../components/recipe/send-to-recipe";
 
 // --- Types ---
 
@@ -506,6 +507,7 @@ function Conversion() {
           className={`font-mono text-sm ${effectiveLayout === "horizontal" ? "h-[50vh]" : ""}`}
         />
         <CopyButton getContent={() => csvContent} className="absolute end-2 top-2" />
+        <SendToRecipe output={csvContent} toolState={{}} />
       </div>
       <input
         ref={csvFileRef}

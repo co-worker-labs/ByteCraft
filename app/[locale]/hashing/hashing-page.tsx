@@ -16,6 +16,7 @@ import CryptoJS from "crypto-js";
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
 import DescriptionSection from "../../../components/description-section";
+import SendToRecipe from "../../../components/recipe/send-to-recipe";
 
 interface Result {
   title: string;
@@ -376,6 +377,12 @@ function TextHashing() {
 
       {hashRes && (
         <div className="mt-4">
+          <div className="flex justify-end mb-2">
+            <SendToRecipe
+              output={hashRes.sha256 || hashRes.md5 || hashRes.sha1 || ""}
+              toolState={{ algorithm: hashRes.sha256 ? "sha256" : hashRes.md5 ? "md5" : "sha1" }}
+            />
+          </div>
           <NeonTabs
             tabs={[
               {

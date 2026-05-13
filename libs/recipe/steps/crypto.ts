@@ -154,50 +154,36 @@ export const cryptoSteps: RecipeStepDef[] = [
     parameters: [
       {
         id: "length",
-        type: "text",
+        type: "slider",
         label: "Length",
         defaultValue: "16",
-        placeholder: "Password length",
+        min: 4,
+        max: 128,
+        step: 1,
       },
       {
         id: "uppercase",
-        type: "select",
+        type: "checkbox",
         label: "Uppercase",
         defaultValue: "true",
-        options: [
-          { label: "Yes", value: "true" },
-          { label: "No", value: "false" },
-        ],
       },
       {
         id: "lowercase",
-        type: "select",
+        type: "checkbox",
         label: "Lowercase",
         defaultValue: "true",
-        options: [
-          { label: "Yes", value: "true" },
-          { label: "No", value: "false" },
-        ],
       },
       {
         id: "numbers",
-        type: "select",
+        type: "checkbox",
         label: "Numbers",
         defaultValue: "true",
-        options: [
-          { label: "Yes", value: "true" },
-          { label: "No", value: "false" },
-        ],
       },
       {
         id: "symbols",
-        type: "select",
+        type: "checkbox",
         label: "Symbols",
         defaultValue: "true",
-        options: [
-          { label: "Yes", value: "true" },
-          { label: "No", value: "false" },
-        ],
       },
     ],
     async execute(_input: string, params: Record<string, string>) {

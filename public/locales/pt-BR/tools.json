@@ -195,6 +195,11 @@
     "shortTitle": "Calculadora de Sub-redes",
     "description": "Calculadora CIDR IPv4/IPv6 con divisor de sub-redes e alocador VLSM. Calcula endereço de rede, broadcast, faixa de hosts e máscara de sub-rede — 100% no navegador."
   },
+  "recipe": {
+    "title": "Recipe - Construtor de receitas de dados",
+    "shortTitle": "Recipe Receita",
+    "description": "Encadeie múltiplas operações em uma receita. Combine etapas de processamento de texto e imagem no estilo CyberChef. Todos os dados são processados no navegador."
+  },
   "categories": {
     "text": "Processamento de texto",
     "encoding": "Codificação e conversão",

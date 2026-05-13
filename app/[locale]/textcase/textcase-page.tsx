@@ -9,6 +9,7 @@ import { clipInput, detectFormats, convertAll } from "../../../libs/textcase/mai
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
 import DescriptionSection from "../../../components/description-section";
+import SendToRecipe from "../../../components/recipe/send-to-recipe";
 
 const REFERENCE_ROWS: { key: string; example: string }[] = [
   { key: "camelCase", example: "myVariableName" },
@@ -102,6 +103,10 @@ function Conversion() {
                       <CopyButton
                         getContent={() => r.output}
                         className="opacity-60 hover:opacity-100 transition-opacity"
+                      />
+                      <SendToRecipe
+                        output={r.output}
+                        toolState={{ case: r.key.replace("Case", "").toLowerCase() }}
                       />
                     </td>
                   </tr>

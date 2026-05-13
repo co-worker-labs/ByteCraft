@@ -195,6 +195,11 @@
     "shortTitle": "Subnetzrechner",
     "description": "IPv4/IPv6-CIDR-Rechner mit Subnetz-Aufteiler und VLSM-Zuteiler. Berechnet Netzwerkadresse, Broadcast, Host-Bereich und Subnetzmaske — 100% clientseitig."
   },
+  "recipe": {
+    "title": "Recipe - Daten-Rezept-Builder",
+    "shortTitle": "Recipe Rezept",
+    "description": "Verketten Sie mehrere Operationen in einem Rezept. Kombinieren Sie Text- und Bildverarbeitungsschritte im CyberChef-Stil. Alle Daten werden im Browser verarbeitet."
+  },
   "categories": {
     "text": "Textverarbeitung",
     "encoding": "Kodierung & Konvertierung",

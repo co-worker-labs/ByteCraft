@@ -38,6 +38,7 @@ import {
   Wallet,
   BookOpen,
   Network,
+  FlaskConical,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -106,7 +107,7 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
     key: "security",
     tools: ["jwt", "hashing", "password", "sshkey", "wallet", "cipher", "checksum"],
   },
-  { key: "generators", tools: ["uuid", "cron", "unixtime", "qrcode"] },
+  { key: "generators", tools: ["uuid", "cron", "unixtime", "qrcode", "recipe"] },
   { key: "visual", tools: ["color", "image"] },
   {
     key: "reference",
@@ -117,13 +118,13 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
 export const QUICK_ACCESS_DEFAULT: string[] = ["json", "base64", "jwt", "regex", "diff", "hashing"];
 
 export const TOOL_RELATIONS: Record<string, string[]> = {
-  json: ["csv", "yaml", "diff", "regex", "jsonts"],
+  json: ["csv", "yaml", "diff", "regex", "recipe"],
   sqlformat: ["dbviewer", "json", "yaml"],
-  base64: ["urlencoder", "hashing", "cipher"],
+  base64: ["urlencoder", "hashing", "cipher", "recipe"],
   jwt: ["base64", "hashing", "password"],
   regex: ["json", "textcase", "diff"],
   uuid: ["password", "qrcode", "hashing"],
-  hashing: ["checksum", "cipher", "base64", "jwt"],
+  hashing: ["checksum", "cipher", "base64", "jwt", "recipe"],
   urlencoder: ["base64", "numbase", "textcase"],
   unixtime: ["cron", "uuid"],
   diff: ["json", "regex", "csv"],
@@ -156,6 +157,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   bip39: ["wallet", "password"],
   cssunit: ["storageunit", "numbase", "color"],
   subnet: ["numbase", "httpstatus", "ascii"],
+  recipe: ["json", "base64", "hashing"],
 };
 
 const PALETTE_SIZE = 20;
@@ -385,6 +387,13 @@ export const TOOLS: ToolEntry[] = [
       "https://datatracker.ietf.org/doc/html/rfc4291",
       "https://en.wikipedia.org/wiki/Subnetwork",
     ],
+  },
+  {
+    key: "recipe",
+    path: "/recipe",
+    icon: FlaskConical,
+    emoji: "🧪",
+    sameAs: ["https://gchq.github.io/CyberChef/"],
   },
 ];
 

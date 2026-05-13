@@ -7,7 +7,8 @@ const DRAFT_KEY = STORAGE_KEYS.recipeDraft;
 export function listRecipes(): Recipe[] {
   try {
     const raw = localStorage.getItem(LIST_KEY);
-    return raw ? JSON.parse(raw) : [];
+    const recipes: Recipe[] = raw ? JSON.parse(raw) : [];
+    return recipes.sort((a, b) => b.updatedAt - a.updatedAt);
   } catch {
     return [];
   }

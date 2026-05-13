@@ -234,6 +234,12 @@
     "description": "IPv4/IPv6 CIDR 子網路計算器，支援子網路劃分和 VLSM 分配。計算網路位址、廣播位址、主機範圍和子網路遮罩——100% 瀏覽器端處理。",
     "searchTerms": "ziwangjisuanqi zwjsq ziwang CIDR"
   },
+  "recipe": {
+    "title": "Recipe - 資料配方建構工具",
+    "shortTitle": "Recipe 配方",
+    "description": "將多個操作串聯成配方。以 CyberChef 風格組合文字和圖像處理步驟，建構資料處理配方。所有資料均在瀏覽器中處理。",
+    "searchTerms": "recipe peifang chuli buzhou liushui"
+  },
   "categories": {
     "text": "文本處理",
     "encoding": "編碼轉換",

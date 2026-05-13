@@ -16,6 +16,7 @@ import { Button } from "../../../components/ui/button";
 import { ChevronsDown, ChevronsUp, X } from "lucide-react";
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
+import SendToRecipe from "../../../components/recipe/send-to-recipe";
 
 const BASE64_ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
@@ -27,6 +28,7 @@ function Conversion() {
   const [rawCharset, setRawCharset] = useState<BufferEncoding>("utf-8");
   const [encodedContent, setEncodedContent] = useState<string>("");
   const [basicAuthEnabled, setBasicAuthEnabled] = useState<boolean>(false);
+  const [lastDirection, setLastDirection] = useState<"encode" | "decode">("encode");
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -59,6 +61,7 @@ function Conversion() {
     const encoded = Buffer.from(raw, rawCharset).toString("base64");
     updateEncodedContent(encoded);
     updateRawContent(raw);
+    setLastDirection("encode");
     showToast(tc("encoded"), "success", 2000);
   }
 
@@ -72,6 +75,7 @@ function Conversion() {
     const raw = Buffer.from(encoded, "base64").toString(rawCharset);
     updateEncodedContent(encoded);
     updateRawContent(raw);
+    setLastDirection("decode");
     showToast(tc("decoded"), "success", 2000);
   }
 
@@ -251,6 +255,10 @@ function Conversion() {
             className="font-mono text-sm"
           />
           <CopyButton getContent={() => encodedContent} className="absolute end-2 top-2" />
+          <SendToRecipe
+            output={lastDirection === "encode" ? encodedContent : rawContent}
+            toolState={{ mode: lastDirection }}
+          />
         </div>
       </div>
     </section>

@@ -54,6 +54,7 @@ import {
 import PrivacyBanner from "../../../components/privacy-banner";
 import RelatedTools from "../../../components/related-tools";
 import DescriptionSection from "../../../components/description-section";
+import SendToRecipe from "../../../components/recipe/send-to-recipe";
 
 const default_type = "Random";
 
@@ -806,6 +807,9 @@ function Generator({
             <ShieldCheck size={16} />
             {t("checkThisPassword")}
           </Button>
+        </div>
+        <div className="flex justify-center">
+          <SendToRecipe output={copyPassword(passwordType, password)} toolState={{}} />
         </div>
       </div>
     </section>

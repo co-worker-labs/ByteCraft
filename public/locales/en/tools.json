@@ -195,6 +195,11 @@
     "shortTitle": "Subnet Calculator",
     "description": "IPv4/IPv6 CIDR calculator with subnet splitter and VLSM allocator. Compute network address, broadcast, host range, and subnet mask — 100% client-side."
   },
+  "recipe": {
+    "title": "Recipe - Data Recipe Builder",
+    "shortTitle": "Recipe",
+    "description": "Chain multiple operations together into a recipe. Compose text and image processing steps CyberChef-style. All data stays in your browser."
+  },
   "categories": {
     "text": "Text Processing",
     "encoding": "Encoding & Conversion",

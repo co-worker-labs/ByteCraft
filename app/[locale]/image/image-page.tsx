@@ -22,6 +22,7 @@ import { getSupportedEncodeFormats } from "../../../libs/image/format-support";
 import type { OutputFormat, ResizeMode } from "../../../libs/image/types";
 import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
+import SendToRecipe from "../../../components/recipe/send-to-recipe";
 
 const FORMAT_OPTIONS: { value: OutputFormat; label: string }[] = [
   { value: "png", label: "PNG" },
@@ -566,6 +567,7 @@ function Conversion() {
               <Clipboard size={14} />
               {t("copyToClipboard")}
             </Button>
+            <SendToRecipe output={previewUrl || ""} toolState={{}} />
           </div>
         </div>
 

@@ -12,6 +12,7 @@ import { Button } from "../../../components/ui/button";
 import { StyledTextarea, StyledInput } from "../../../components/ui/input";
 import { showToast } from "../../../libs/toast";
 import { jsonToTs, PRIMITIVE_ERROR } from "../../../libs/jsonts/main";
+import SendToRecipe from "../../../components/recipe/send-to-recipe";
 
 type OutputMode = "interface" | "type";
 
@@ -115,6 +116,7 @@ function Conversion() {
               className="font-mono text-sm"
             />
             <CopyButton getContent={() => tsOutput} className="absolute end-2 top-2" />
+            <SendToRecipe output={tsOutput} toolState={{}} />
           </div>
         </div>
       </div>

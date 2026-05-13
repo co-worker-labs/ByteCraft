@@ -5,15 +5,20 @@ export type StepResult = { ok: true; output: string } | { ok: false; error: stri
 export interface StepOutput {
   input: string;
   result: StepResult;
+  outputType: DataType;
 }
 
 export interface StepParam {
   id: string;
-  type: "text" | "select";
+  type: "text" | "select" | "slider" | "checkbox";
   label: string;
   defaultValue: string;
   options?: { label: string; value: string }[];
   placeholder?: string;
+  min?: number;
+  max?: number;
+  step?: number;
+  dependsOn?: { paramId: string; values: string[] };
 }
 
 export type StepCategory = "encoding" | "crypto" | "text" | "format" | "generators" | "visual";

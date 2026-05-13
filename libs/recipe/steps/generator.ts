@@ -1,5 +1,7 @@
 import { generate as generateUuid, formatUuid } from "../../uuid/main";
+import { buildOptions } from "../../qrcode/styling";
 import type { RecipeStepDef } from "../types";
+import type { StylingOptions } from "../../qrcode/types";
 
 export const generatorSteps: RecipeStepDef[] = [
   {
@@ -52,10 +54,14 @@ export const generatorSteps: RecipeStepDef[] = [
     parameters: [
       {
         id: "size",
-        type: "text",
-        label: "Size",
+        type: "select",
+        label: "Resolution",
         defaultValue: "300",
-        placeholder: "Image size in px",
+        options: [
+          { label: "300 × 300", value: "300" },
+          { label: "600 × 600", value: "600" },
+          { label: "1024 × 1024", value: "1024" },
+        ],
       },
       {
         id: "errorLevel",
@@ -80,8 +86,56 @@ export const generatorSteps: RecipeStepDef[] = [
         ],
       },
     ],
-    async execute(_input: string, _params: Record<string, string>) {
-      return { ok: false as const, error: "QR code generation requires browser environment" };
+    async execute(input: string, params: Record<string, string>) {
+      try {
+        const size = Math.max(64, Math.min(1024, parseInt(params.size || "300", 10) || 300));
+        const errorLevel = (params.errorLevel || "M") as "L" | "M" | "Q" | "H";
+        const format = params.format || "png";
+
+        const data = input || "https://omnikit.run";
+
+        const styling: StylingOptions = {
+          foregroundColor: "#000000",
+          backgroundColor: "#ffffff",
+          dotStyle: "rounded",
+          errorCorrection: errorLevel,
+          size,
+          margin: 10,
+        };
+
+        const opts = buildOptions(data, styling);
+        const QRCodeStyling = (await import("qr-code-styling")).default;
+
+        if (format === "svg") {
+          opts.type = "svg";
+          const qr = new QRCodeStyling(opts);
+          const container = document.createElement("div");
+          qr.append(container);
+          await new Promise((r) => setTimeout(r, 50));
+          const svgEl = container.querySelector("svg");
+          if (!svgEl) return { ok: false as const, error: "Failed to generate SVG" };
+          const svgStr = new XMLSerializer().serializeToString(svgEl);
+          return {
+            ok: true as const,
+            output: `data:image/svg+xml;base64,${btoa(unescape(encodeURIComponent(svgStr)))}`,
+          };
+        }
+
+        const qr = new QRCodeStyling(opts);
+        opts.type = "canvas";
+        qr.update(opts);
+        const blob = await qr.getRawData("png");
+        if (!blob) return { ok: false as const, error: "Failed to generate QR code" };
+        const dataUrl = await new Promise<string>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result as string);
+          reader.onerror = reject;
+          reader.readAsDataURL(blob);
+        });
+        return { ok: true as const, output: dataUrl };
+      } catch (e) {
+        return { ok: false as const, error: String(e) };
+      }
     },
   },
 ];

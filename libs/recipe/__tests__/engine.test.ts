@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { executePipeline, getPipelineInputType } from "../engine";
-import type { RecipeStepDef, RecipeStepInstance, StepResult } from "../types";
+import type { DataType, RecipeStepDef, RecipeStepInstance, StepResult } from "../types";
 
 function makeDef(
   id: string,
@@ -31,13 +31,24 @@ function makeInstance(
 
 describe("executePipeline", () => {
   it("returns input as finalOutput when no steps", async () => {
-    const result = await executePipeline("hello", [], new Map());
-    expect(result).toEqual({ steps: [], finalOutput: "hello", errorStepIndex: null });
+    const result = await executePipeline("hello", "text", [], new Map());
+    expect(result.finalOutput).toBe("hello");
+    expect(result.finalOutputType).toBe("text");
+    expect(result.errorStepIndex).toBeNull();
+    expect(result.steps).toEqual([]);
   });
 
   it("returns null finalOutput when no steps and null input", async () => {
-    const result = await executePipeline(null, [], new Map());
-    expect(result).toEqual({ steps: [], finalOutput: null, errorStepIndex: null });
+    const result = await executePipeline(null, "text", [], new Map());
+    expect(result.finalOutput).toBeNull();
+    expect(result.finalOutputType).toBeNull();
+    expect(result.errorStepIndex).toBeNull();
+  });
+
+  it("preserves inputType as finalOutputType when no steps", async () => {
+    const result = await executePipeline("data:image/png;base64,abc", "image", [], new Map());
+    expect(result.finalOutput).toBe("data:image/png;base64,abc");
+    expect(result.finalOutputType).toBe("image");
   });
 
   it("executes single step successfully", async () => {
@@ -48,9 +59,11 @@ describe("executePipeline", () => {
     const defs = new Map([["upper", upper]]);
     const steps = [makeInstance("upper")];
 
-    const result = await executePipeline("hello", steps, defs);
+    const result = await executePipeline("hello", "text", steps, defs);
     expect(result.finalOutput).toBe("HELLO");
+    expect(result.finalOutputType).toBe("text");
     expect(result.steps).toHaveLength(1);
+    expect(result.steps[0].outputType).toBe("text");
     expect(result.errorStepIndex).toBeNull();
   });
 
@@ -69,8 +82,9 @@ describe("executePipeline", () => {
     ]);
     const steps = [makeInstance("upper"), makeInstance("reverse")];
 
-    const result = await executePipeline("hello", steps, defs);
+    const result = await executePipeline("hello", "text", steps, defs);
     expect(result.finalOutput).toBe("OLLEH");
+    expect(result.finalOutputType).toBe("text");
     expect(result.steps).toHaveLength(2);
   });
 
@@ -79,7 +93,7 @@ describe("executePipeline", () => {
     const defs = new Map([["fail", fail]]);
     const steps = [makeInstance("fail")];
 
-    const result = await executePipeline("hello", steps, defs);
+    const result = await executePipeline("hello", "text", steps, defs);
     expect(result.finalOutput).toBeNull();
     expect(result.errorStepIndex).toBe(0);
     expect(result.steps[0].result).toEqual({ ok: false, error: "boom" });
@@ -97,7 +111,7 @@ describe("executePipeline", () => {
     ]);
     const steps = [makeInstance("fail"), makeInstance("upper")];
 
-    const result = await executePipeline("hello", steps, defs);
+    const result = await executePipeline("hello", "text", steps, defs);
     expect(result.steps).toHaveLength(1);
     expect(result.errorStepIndex).toBe(0);
   });
@@ -117,7 +131,7 @@ describe("executePipeline", () => {
     ]);
     const steps = [makeInstance("upper", false), makeInstance("reverse")];
 
-    const result = await executePipeline("hello", steps, defs);
+    const result = await executePipeline("hello", "text", steps, defs);
     expect(result.finalOutput).toBe("olleh");
     expect(result.steps).toHaveLength(1);
   });
@@ -126,12 +140,12 @@ describe("executePipeline", () => {
     const defs = new Map<string, RecipeStepDef>();
     const steps = [makeInstance("missing")];
 
-    const result = await executePipeline("hello", steps, defs);
+    const result = await executePipeline("hello", "text", steps, defs);
     expect(result.errorStepIndex).toBe(0);
     expect(result.finalOutput).toBeNull();
   });
 
-  it("passes empty string to first step with none inputType", async () => {
+  it("passes empty string to step with none inputType", async () => {
     const gen = makeDef("gen", "none", "text", async (input) => ({
       ok: true,
       output: input + "generated",
@@ -139,11 +153,25 @@ describe("executePipeline", () => {
     const defs = new Map([["gen", gen]]);
     const steps = [makeInstance("gen")];
 
-    const result = await executePipeline(null, steps, defs);
+    const result = await executePipeline(null, "text", steps, defs);
     expect(result.finalOutput).toBe("generated");
   });
 
-  it("uses empty string as currentInput when input is null", async () => {
+  it("tracks outputType across steps", async () => {
+    const toImg = makeDef("toImg", "text", "image", async (input) => ({
+      ok: true,
+      output: `data:image/png;base64,${input}`,
+    }));
+    const defs = new Map([["toImg", toImg]]);
+    const steps = [makeInstance("toImg")];
+
+    const result = await executePipeline("hello", "text", steps, defs);
+    expect(result.finalOutput).toBe("data:image/png;base64,hello");
+    expect(result.finalOutputType).toBe("image");
+    expect(result.steps[0].outputType).toBe("image");
+  });
+
+  it("skips steps when input is null and step requires input", async () => {
     const upper = makeDef("upper", "text", "text", async (input) => ({
       ok: true,
       output: input.toUpperCase(),
@@ -151,8 +179,44 @@ describe("executePipeline", () => {
     const defs = new Map([["upper", upper]]);
     const steps = [makeInstance("upper")];
 
-    const result = await executePipeline(null, steps, defs);
-    expect(result.finalOutput).toBe("");
+    const result = await executePipeline(null, "text", steps, defs);
+    expect(result.finalOutput).toBeNull();
+    expect(result.steps).toHaveLength(0);
+  });
+
+  it("returns error on input type mismatch", async () => {
+    const imgStep = makeDef("imgStep", "image", "image", async () => ({
+      ok: true,
+      output: "",
+    }));
+    const defs = new Map([["imgStep", imgStep]]);
+    const steps = [makeInstance("imgStep")];
+
+    const result = await executePipeline("hello", "text", steps, defs);
+    expect(result.errorStepIndex).toBe(0);
+    expect(result.steps[0].result.ok).toBe(false);
+    if (!result.steps[0].result.ok) {
+      expect(result.steps[0].result.error).toContain("mismatch");
+    }
+  });
+
+  it("returns error on step chain type mismatch", async () => {
+    const toImg = makeDef("toImg", "text", "image", async (input) => ({
+      ok: true,
+      output: `data:image/png;base64,${input}`,
+    }));
+    const textStep = makeDef("textStep", "text", "text", async (input) => ({
+      ok: true,
+      output: input.toUpperCase(),
+    }));
+    const defs = new Map([
+      ["toImg", toImg],
+      ["textStep", textStep],
+    ]);
+    const steps = [makeInstance("toImg"), makeInstance("textStep")];
+
+    const result = await executePipeline("hello", "text", steps, defs);
+    expect(result.errorStepIndex).toBe(1);
   });
 });
 
@@ -181,9 +245,15 @@ describe("getPipelineInputType", () => {
     expect(getPipelineInputType([makeInstance("gen"), makeInstance("proc")], defs)).toBe("image");
   });
 
-  it("returns text when only step has none inputType", () => {
+  it("returns none when only step has none inputType", () => {
     const gen = makeDef("gen", "none", "text", async () => ({ ok: true, output: "" }));
     const defs = new Map([["gen", gen]]);
-    expect(getPipelineInputType([makeInstance("gen")], defs)).toBe("text");
+    expect(getPipelineInputType([makeInstance("gen")], defs)).toBe("none");
+  });
+
+  it("skips disabled steps", () => {
+    const imgStep = makeDef("img", "image", "text", async () => ({ ok: true, output: "" }));
+    const defs = new Map([["img", imgStep]]);
+    expect(getPipelineInputType([makeInstance("img", false)], defs)).toBe("none");
   });
 });
