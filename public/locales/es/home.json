@@ -36,5 +36,6 @@
   "catSecurityCrypto": "Cifra, hashea y protege tus datos con JWT, hashing, cifrado, claves SSH y contraseñas.",
   "catGenerators": "Genera UUIDs, códigos QR, expresiones Cron y marcas de tiempo.",
   "catVisualMedia": "Trabaja con colores, imágenes y contenido visual.",
-  "catReferenceLookup": "Busca códigos ASCII, códigos de estado HTTP, entidades HTML y más."
+  "catReferenceLookup": "Busca códigos ASCII, códigos de estado HTTP, entidades HTML y más.",
+  "catWorkflows": "Encadena múltiples operaciones en pipelines de procesamiento de datos y recetas."
 }

@@ -60,5 +60,15 @@
     "faq1A": "OmniKit ofrece 6 herramientas: referencia de Códigos de estado HTTP, Cliente HTTP para pruebas de API, Visor de bases de datos SQLite, Tabla ASCII, Codificador de entidades HTML y Calculadora de Subredes IP.",
     "faq2Q": "¿Puedo ejecutar consultas SQL en el visor de bases de datos?",
     "faq2A": "Sí. El visor SQLite soporta consultas SQL de solo lectura con autocompletado, historial de consultas, paginación y exportación a CSV o JSON, todo ejecutándose localmente en tu navegador mediante WebAssembly."
+  },
+  "workflows": {
+    "title": "Herramientas de Pipeline de Datos y Flujos de Trabajo - Recipe Builder",
+    "shortTitle": "Flujos de trabajo",
+    "description": "Herramientas gratuitas de pipeline de datos y flujos de trabajo para desarrolladores. Encadena operaciones de texto, codificación y criptografía en recetas. 100% en el navegador.",
+    "intro": "1 herramienta de flujo de trabajo que te permite encadenar múltiples operaciones en un pipeline de procesamiento de datos. Construye recetas combinando pasos de procesamiento de texto, codificación, hashing y más — estilo CyberChef. Todos los datos permanecen en tu navegador.",
+    "faq1Q": "¿Qué es la herramienta Recipe?",
+    "faq1A": "Recipe es un constructor de pipelines de datos que te permite encadenar múltiples operaciones. Por ejemplo, puedes codificar texto en Base64, luego aplicar hash al resultado y convertir a mayúsculas — todo en un solo flujo.",
+    "faq2Q": "¿Qué operaciones están disponibles en Recipe?",
+    "faq2A": "Recipe soporta transformaciones de texto, codificación/decodificación (Base64, URL, HTML), hashing (MD5, familia SHA), cifrado, conversión JSON/YAML, operaciones con expresiones regulares y más. Nuevos pasos se añaden regularmente."
   }
 }

@@ -17,6 +17,7 @@
   "catEncodingConversion": "Convertissez entre encodages et formats — Base64, encodage URL, bases numériques, YAML, CSV.",
   "catGenerators": "Générez des UUIDs, QR codes, expressions Cron et horodatages.",
   "catReferenceLookup": "Consultez les codes ASCII, codes de statut HTTP, entités HTML et plus encore.",
+  "catWorkflows": "Chaînez plusieurs opérations en pipelines de traitement de données et recettes.",
   "catSecurityCrypto": "Chiffrez, hachez et protégez vos données avec JWT, hachage, chiffrement, clés SSH et mots de passe.",
   "catTextProcessing": "Formatez, transformez et analysez du texte et du code avec des outils pour JSON, regex, diff et plus.",
   "catVisualMedia": "Travaillez avec les couleurs, images et contenu visuel.",

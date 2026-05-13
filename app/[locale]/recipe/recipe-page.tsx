@@ -104,7 +104,11 @@ export default function RecipePage() {
       : resolvedInputType;
 
   return (
-    <Layout title={t("recipe.shortTitle")}>
+    <Layout
+      title={t("recipe.shortTitle")}
+      categoryLabel={t("categories.workflows")}
+      categorySlug="workflows"
+    >
       <div className="min-h-[calc(100vh-4rem)]">
         <div className="container mx-auto px-4 py-6 lg:py-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-8">

@@ -24,6 +24,7 @@
   "catEncodingConversion": "編碼與格式轉換工具 — Base64、URL編碼、進制轉換、YAML、CSV。",
   "catGenerators": "產生 UUID、QR Code、Cron 表達式和時間戳。",
   "catReferenceLookup": "查詢 ASCII 碼、HTTP 狀態碼、HTML 實體等參考資料。",
+  "catWorkflows": "將多個操作串聯為資料處理管線和 Recipe。",
   "catSecurityCrypto": "加密、雜湊和保護資料 — JWT、雜湊、加密、SSH金鑰、密碼工具。",
   "catTextProcessing": "格式化、轉換和分析文字與程式碼 — JSON、正規表示式、文字比對等工具。",
   "catVisualMedia": "處理顏色、圖片和視覺內容。",

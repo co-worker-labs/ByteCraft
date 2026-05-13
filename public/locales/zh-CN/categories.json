@@ -60,5 +60,15 @@
     "faq1A": "OmniKit 提供 6 个参考工具：HTTP 状态码参考、HTTP 客户端（API 测试）、SQLite 数据库浏览器、ASCII 表、HTML 实体编码器和 IP 子网计算器。",
     "faq2Q": "可以在数据库浏览器中执行 SQL 查询吗？",
     "faq2A": "可以。SQLite 浏览器支持只读 SQL 查询，具备自动补全、查询历史、分页功能，并支持导出为 CSV 或 JSON——全部通过 WebAssembly 在浏览器本地运行。"
+  },
+  "workflows": {
+    "title": "数据流水线与工作流工具 - Recipe 构建器",
+    "shortTitle": "工作流",
+    "description": "免费在线数据流水线与工作流工具。将多个文本、编码、加密操作串联为 Recipe。100% 浏览器端运行。",
+    "intro": "1 个工作流工具，可让你将多个操作串联为数据处理流水线。通过组合文本处理、编码、哈希等步骤构建 Recipe，类似 CyberChef。所有数据留在你的浏览器中。",
+    "faq1Q": "Recipe 工具是什么？",
+    "faq1A": "Recipe 是一个数据流水线构建器，可以将多个操作串联在一起。例如，你可以先对文本进行 Base64 编码，然后哈希结果，再转换为大写——全部在一个流程中完成。",
+    "faq2Q": "Recipe 支持哪些操作？",
+    "faq2A": "Recipe 支持文本转换、编码/解码（Base64、URL、HTML）、哈希（MD5、SHA 系列）、加密、JSON/YAML 转换、正则操作等。新步骤持续添加中。"
   }
 }

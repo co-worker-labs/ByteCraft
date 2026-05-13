@@ -26,6 +26,7 @@
   "catEncodingConversion": "인코딩 및 형식 변환 — Base64, URL 인코딩, 진법 변환, YAML, CSV.",
   "catGenerators": "UUID, QR 코드, Cron 표현식, 타임스탬프 생성.",
   "catReferenceLookup": "ASCII 코드, HTTP 상태 코드, HTML 엔티티 등 참조 자료.",
+  "catWorkflows": "여러 작업을 데이터 처리 파이프라인과 Recipe로 체인하세요.",
   "catSecurityCrypto": "암호화, 해시, 데이터 보호 — JWT, 해시, 암호화, SSH 키, 비밀번호 도구.",
   "catTextProcessing": "텍스트 및 코드 서식, 변환, 분석 — JSON, 정규식, Diff 등의 도구.",
   "catVisualMedia": "색상, 이미지, 시각 콘텐츠 처리.",

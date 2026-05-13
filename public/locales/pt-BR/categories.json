@@ -60,5 +60,15 @@
     "faq1A": "O OmniKit oferece 6 ferramentas de referência: referência de Códigos de Status HTTP, Cliente HTTP para teste de APIs, Visualizador de Banco de Dados SQLite, Tabela ASCII, Codificador de Entidades HTML e Calculadora de Sub-redes IP.",
     "faq2Q": "Posso executar consultas SQL no Visualizador de DB?",
     "faq2A": "Sim. O Visualizador SQLite suporta consultas SQL somente leitura com autocompletar, histórico de consultas, paginação e exportação para CSV ou JSON — tudo rodando localmente no seu navegador via WebAssembly."
+  },
+  "workflows": {
+    "title": "Ferramentas de Pipeline de Dados e Fluxos de Trabalho - Recipe Builder",
+    "shortTitle": "Fluxos de trabalho",
+    "description": "Ferramentas gratuitas de pipeline de dados e fluxos de trabalho para desenvolvedores. Encadeie operações de texto, codificação e criptografia em receitas. 100% no navegador.",
+    "intro": "1 ferramenta de fluxo de trabalho que permite encadear múltiplas operações em um pipeline de processamento de dados. Construa receitas combinando etapas de processamento de texto, codificação, hashing e mais — estilo CyberChef. Todos os dados permanecem no seu navegador.",
+    "faq1Q": "O que é a ferramenta Recipe?",
+    "faq1A": "Recipe é um construtor de pipelines de dados que permite encadear múltiplas operações. Por exemplo, você pode codificar texto em Base64, depois aplicar hash ao resultado e converter para maiúsculas — tudo em um único fluxo.",
+    "faq2Q": "Quais operações estão disponíveis no Recipe?",
+    "faq2A": "Recipe suporta transformações de texto, codificação/decodificação (Base64, URL, HTML), hashing (MD5, família SHA), criptografia, conversão JSON/YAML, operações com expressões regulares e mais. Novas etapas são adicionadas regularmente."
   }
 }

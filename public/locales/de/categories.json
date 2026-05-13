@@ -60,5 +60,15 @@
     "faq1A": "OmniKit bietet 6 Referenztools: HTTP-Statuscodes-Referenz, HTTP-Client für API-Tests, SQLite-Datenbank-Viewer, ASCII-Tabelle, HTML-Entity-Kodierer und IP-Subnetzrechner.",
     "faq2Q": "Kann ich im DB-Viewer SQL-Abfragen ausführen?",
     "faq2A": "Ja. Der SQLite-Viewer unterstützt schreibgeschützte SQL-Abfragen mit Autovervollständigung, Abfrageverlauf, Paginierung und Export als CSV oder JSON — alles läuft lokal in Ihrem Browser über WebAssembly."
+  },
+  "workflows": {
+    "title": "Daten-Pipeline- & Workflow-Tools - Recipe Builder",
+    "shortTitle": "Workflows",
+    "description": "Kostenlose Online-Daten-Pipeline- und Workflow-Tools für Entwickler. Verketten Sie Text-, Codierungs- und Krypto-Operationen in Rezepten. 100% clientseitig.",
+    "intro": "1 Workflow-Tool, mit dem Sie mehrere Operationen zu einer Datenverarbeitungspipeline verketten können. Erstellen Sie Rezepte durch Kombinieren von Textverarbeitungs-, Codierungs-, Hashing- und weiteren Schritten — CyberChef-Stil. Alle Daten bleiben in Ihrem Browser.",
+    "faq1Q": "Was ist das Recipe-Tool?",
+    "faq1A": "Recipe ist ein Daten-Pipeline-Builder, mit dem Sie mehrere Operationen verketten können. Beispielsweise können Sie Text Base64-kodieren, dann das Ergebnis hashen und in Großbuchstaben umwandeln — alles in einem Ablauf.",
+    "faq2Q": "Welche Operationen sind in Recipe verfügbar?",
+    "faq2A": "Recipe unterstützt Texttransformationen, Kodierung/Dekodierung (Base64, URL, HTML), Hashing (MD5, SHA-Familie), Verschlüsselung, JSON/YAML-Konvertierung, Regex-Operationen und mehr. Neue Schritte werden regelmäßig hinzugefügt."
   }
 }

@@ -57,7 +57,14 @@ export interface ToolEntry {
   sameAs?: string[];
 }
 
-export type ToolCategory = "text" | "encoding" | "security" | "generators" | "visual" | "reference";
+export type ToolCategory =
+  | "text"
+  | "encoding"
+  | "security"
+  | "generators"
+  | "visual"
+  | "reference"
+  | "workflows";
 
 export interface CategoryGroup {
   key: ToolCategory;
@@ -71,6 +78,7 @@ export const CATEGORY_SLUGS: Record<ToolCategory, string> = {
   generators: "generators",
   visual: "visual-media",
   reference: "reference-lookup",
+  workflows: "workflows",
 };
 
 export const TOOL_CATEGORIES: CategoryGroup[] = [
@@ -107,12 +115,13 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
     key: "security",
     tools: ["jwt", "hashing", "password", "sshkey", "wallet", "cipher", "checksum"],
   },
-  { key: "generators", tools: ["uuid", "cron", "unixtime", "qrcode", "recipe"] },
+  { key: "generators", tools: ["uuid", "cron", "unixtime", "qrcode"] },
   { key: "visual", tools: ["color", "image"] },
   {
     key: "reference",
     tools: ["httpstatus", "httpclient", "dbviewer", "ascii", "htmlcode", "bip39", "subnet"],
   },
+  { key: "workflows", tools: ["recipe"] },
 ];
 
 export const QUICK_ACCESS_DEFAULT: string[] = ["json", "base64", "jwt", "regex", "diff", "hashing"];
