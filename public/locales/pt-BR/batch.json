@@ -1,0 +1,48 @@
+{
+  "stepSelector": {
+    "title": "Etapa de processamento",
+    "changeStep": "Alterar etapa",
+    "params": "Parâmetros",
+    "placeholder": "Selecione uma etapa..."
+  },
+  "inputPanel": {
+    "title": "Entradas",
+    "itemCount": "{count} itens",
+    "pasteText": "Colar texto",
+    "dropFiles": "Soltar arquivos",
+    "pastePlaceholder": "Cole múltiplas linhas, um item por linha...",
+    "removeAll": "Remover tudo",
+    "selectAll": "Selecionar tudo",
+    "maxItemsWarning": "Máximo de {max} itens permitidos",
+    "removeItem": "Remover"
+  },
+  "resultPanel": {
+    "title": "Resultados",
+    "copyAll": "Copiar tudo",
+    "downloadAll": "Baixar tudo",
+    "downloadZip": "Baixar ZIP",
+    "copySuccess": "{count} itens copiados",
+    "noResults": "Sem resultados ainda",
+    "downloadSingle": "Baixar"
+  },
+  "summary": {
+    "success": "{success}/{total} com sucesso",
+    "errors": "{errors} erros",
+    "duration": "{time}s",
+    "totalSaved": "Total: {before} → {after} ({percent}%)"
+  },
+  "descriptions": {
+    "aeoDefinition": "O Batch Processor é uma ferramenta que aplica uma única operação de processamento a múltiplas entradas simultaneamente, economizando tempo quando você precisa transformar, codificar, fazer hash ou converter muitos itens de uma vez.",
+    "whatIs": "O Batch Processor permite aplicar uma operação — como hashing, codificação ou compressão — a dezenas ou centenas de entradas de uma só vez. Solte múltiplos arquivos ou cole múltiplas linhas, escolha uma etapa e obtenha todos os resultados instantaneamente.",
+    "useCasesP1": "Faça hash de centenas de strings para importações de banco de dados, comprima pastas inteiras de imagens com um clique ou codifique múltiplos arquivos em Base64 simultaneamente.",
+    "howToStep1": "Selecione uma etapa de processamento no seletor",
+    "howToStep2": "Adicione múltiplas entradas colando texto ou soltando arquivos",
+    "howToStep3": "Veja os resultados individuais e baixe ou copie tudo de uma vez",
+    "faq1Q": "Existe um limite de itens para processar?",
+    "faq1A": "O Batch Processor manipula até 1.000 itens por lote. Todo o processamento ocorre no seu navegador — nenhum dado é enviado a qualquer servidor.",
+    "faq2Q": "Posso usar múltiplas etapas de processamento?",
+    "faq2A": "O Batch aplica uma única etapa a todas as entradas. Para processamento em múltiplas etapas, use a ferramenta Recipe para construir um pipeline.",
+    "faq3Q": "O que acontece se um item falhar?",
+    "faq3A": "Itens com falha são marcados com um selo de erro e ignorados. Os demais itens continuam sendo processados normalmente."
+  }
+}

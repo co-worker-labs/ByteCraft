@@ -1,0 +1,48 @@
+{
+  "stepSelector": {
+    "title": "处理步骤",
+    "changeStep": "更换步骤",
+    "params": "参数",
+    "placeholder": "选择一个步骤..."
+  },
+  "inputPanel": {
+    "title": "输入",
+    "itemCount": "{count} 项",
+    "pasteText": "粘贴文本",
+    "dropFiles": "拖放文件",
+    "pastePlaceholder": "粘贴多行文本，每行一项...",
+    "removeAll": "全部删除",
+    "selectAll": "全选",
+    "maxItemsWarning": "最多允许 {max} 项",
+    "removeItem": "删除"
+  },
+  "resultPanel": {
+    "title": "结果",
+    "copyAll": "全部复制",
+    "downloadAll": "全部下载",
+    "downloadZip": "下载 ZIP",
+    "copySuccess": "已复制 {count} 项",
+    "noResults": "暂无结果",
+    "downloadSingle": "下载"
+  },
+  "summary": {
+    "success": "{success}/{total} 成功",
+    "errors": "{errors} 个错误",
+    "duration": "{time}秒",
+    "totalSaved": "总计: {before} → {after} ({percent}%)"
+  },
+  "descriptions": {
+    "aeoDefinition": "批量处理器是一种将单个处理操作同时应用于多个输入的工具，在需要一次性转换、编码、哈希或处理大量数据时节省时间。",
+    "whatIs": "批量处理器让你将一个操作——如哈希、编码或压缩——一次性应用于数十或数百个输入。拖放多个文件或粘贴多行文本，选择步骤，即可获得所有结果。",
+    "useCasesP1": "批量哈希数百个字符串用于数据库导入，一键压缩整个图片文件夹，或同时将多个文件编码为 Base64。",
+    "howToStep1": "从选择器中选择一个处理步骤",
+    "howToStep2": "通过粘贴文本或拖放文件添加多个输入",
+    "howToStep3": "查看各项结果，一键全部下载或复制",
+    "faq1Q": "有处理数量限制吗？",
+    "faq1A": "批量处理器每次最多处理 1,000 项。所有处理在浏览器中进行——不会向任何服务器发送数据。",
+    "faq2Q": "可以使用多个处理步骤吗？",
+    "faq2A": "批量处理将单个步骤应用于所有输入。如需多步骤处理，请使用 Recipe 工具构建流水线。",
+    "faq3Q": "如果某一项处理失败怎么办？",
+    "faq3A": "失败的项会标记错误徽章并跳过，其余项继续正常处理。"
+  }
+}

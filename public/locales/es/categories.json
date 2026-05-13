@@ -62,13 +62,13 @@
     "faq2A": "Sí. El visor SQLite soporta consultas SQL de solo lectura con autocompletado, historial de consultas, paginación y exportación a CSV o JSON, todo ejecutándose localmente en tu navegador mediante WebAssembly."
   },
   "workflows": {
-    "title": "Herramientas de Pipeline de Datos y Flujos de Trabajo - Recipe Builder",
-    "shortTitle": "Flujos de trabajo",
-    "description": "Herramientas gratuitas de pipeline de datos y flujos de trabajo para desarrolladores. Encadena operaciones de texto, codificación y criptografía en recetas. 100% en el navegador.",
-    "intro": "1 herramienta de flujo de trabajo que te permite encadenar múltiples operaciones en un pipeline de procesamiento de datos. Construye recetas combinando pasos de procesamiento de texto, codificación, hashing y más — estilo CyberChef. Todos los datos permanecen en tu navegador.",
+    "title": "Herramientas de Pipeline y Flujo de Trabajo - Recipe Builder, Procesador por Lotes",
+    "shortTitle": "Flujos de Trabajo",
+    "description": "Herramientas gratuitas de pipeline y flujo de trabajo para desarrolladores. Encadena operaciones en recetas o aplica un solo paso a múltiples entradas con el Procesador por Lotes. 100% del lado del cliente.",
+    "intro": "2 herramientas de flujo de trabajo: Recipe encadena múltiples operaciones en un pipeline de procesamiento de datos, y el Procesador por Lotes aplica una sola operación a muchas entradas a la vez. Ambas se ejecutan en tu navegador.",
     "faq1Q": "¿Qué es la herramienta Recipe?",
-    "faq1A": "Recipe es un constructor de pipelines de datos que te permite encadenar múltiples operaciones. Por ejemplo, puedes codificar texto en Base64, luego aplicar hash al resultado y convertir a mayúsculas — todo en un solo flujo.",
-    "faq2Q": "¿Qué operaciones están disponibles en Recipe?",
-    "faq2A": "Recipe soporta transformaciones de texto, codificación/decodificación (Base64, URL, HTML), hashing (MD5, familia SHA), cifrado, conversión JSON/YAML, operaciones con expresiones regulares y más. Nuevos pasos se añaden regularmente."
+    "faq1A": "Recipe es un constructor de pipelines de datos que te permite encadenar múltiples operaciones. Por ejemplo, puedes codificar texto en Base64, luego hashear el resultado y convertir a mayúsculas — todo en un flujo.",
+    "faq2Q": "¿Qué es el Procesador por Lotes?",
+    "faq2A": "El Procesador por Lotes aplica un solo paso de procesamiento — como hashing, codificación o compresión — a múltiples entradas simultáneamente. Pega texto o suelta archivos, elige un paso y obtén todos los resultados al instante."
   }
 }

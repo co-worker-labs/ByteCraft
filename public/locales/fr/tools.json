@@ -200,6 +200,11 @@
     "shortTitle": "Recipe Recette",
     "description": "Chaînez plusieurs opérations dans une recette. Combinez des étapes de traitement de texte et d'image à la CyberChef. Toutes les données sont traitées dans le navigateur."
   },
+  "batch": {
+    "shortTitle": "Processeur par lots",
+    "title": "Processeur par lots - Outil d'opérations en masse | OmniKit",
+    "description": "Appliquez une seule opération à plusieurs entrées à la fois. Encodez, hachez, compressez et convertissez des fichiers et du texte par lots."
+  },
   "categories": {
     "text": "Traitement de texte",
     "encoding": "Encodage et conversion",

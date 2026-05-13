@@ -240,6 +240,12 @@
     "description": "将多个操作串联成配方。以 CyberChef 风格组合文本和图像处理步骤，构建数据处理配方。所有数据均在浏览器中处理。",
     "searchTerms": "recipe peifang liushuian chuli buzhou"
   },
+  "batch": {
+    "shortTitle": "批量处理器",
+    "title": "批量处理器 - 批量操作工具 | OmniKit",
+    "description": "将单个操作同时应用于多个输入。批量编码、哈希、压缩和转换文件与文本。",
+    "searchTerms": "piliangchuliqi plcq piliang hash bianma yasuo"
+  },
   "categories": {
     "text": "文本处理",
     "encoding": "编码转换",

@@ -62,13 +62,13 @@
     "faq2A": "Oui. La visionneuse SQLite prend en charge les requêtes SQL en lecture seule avec auto-complétion, historique des requêtes, pagination et export en CSV ou JSON — le tout fonctionnant localement dans votre navigateur via WebAssembly."
   },
   "workflows": {
-    "title": "Outils de Pipeline de Données et Flux de Travail - Recipe Builder",
-    "shortTitle": "Flux de travail",
-    "description": "Outils gratuits de pipeline de données et flux de travail pour développeurs. Chaînez des opérations de texte, encodage et cryptographie en recettes. 100% côté client.",
-    "intro": "1 outil de flux de travail qui vous permet de chaîner plusieurs opérations en un pipeline de traitement de données. Construisez des recettes en combinant des étapes de traitement de texte, d'encodage, de hachage et plus encore — style CyberChef. Toutes les données restent dans votre navigateur.",
+    "title": "Outils de Pipeline et Flux de Travail - Recipe Builder, Processeur par Lots",
+    "shortTitle": "Flux de Travail",
+    "description": "Outils gratuits de pipeline et flux de travail pour développeurs. Enchaînez des opérations en recettes ou appliquez une seule étape à plusieurs entrées avec le Processeur par Lots. 100% côté client.",
+    "intro": "2 outils de flux de travail : Recipe enchaîne plusieurs opérations en un pipeline de traitement de données, et le Processeur par Lots applique une seule opération à de nombreuses entrées à la fois. Les deux s'exécutent dans votre navigateur.",
     "faq1Q": "Qu'est-ce que l'outil Recipe ?",
-    "faq1A": "Recipe est un constructeur de pipelines de données qui vous permet de chaîner plusieurs opérations. Par exemple, vous pouvez encoder du texte en Base64, puis hacher le résultat, puis convertir en majuscules — le tout en un seul flux.",
-    "faq2Q": "Quelles opérations sont disponibles dans Recipe ?",
-    "faq2A": "Recipe prend en charge les transformations de texte, l'encodage/décodage (Base64, URL, HTML), le hachage (MD5, famille SHA), le chiffrement, la conversion JSON/YAML, les opérations d'expressions régulières et plus encore. De nouvelles étapes sont ajoutées régulièrement."
+    "faq1A": "Recipe est un constructeur de pipelines de données qui permet d'enchaîner plusieurs opérations. Par exemple, vous pouvez encoder du texte en Base64, puis hacher le résultat et convertir en majuscules — le tout en un seul flux.",
+    "faq2Q": "Qu'est-ce que le Processeur par Lots ?",
+    "faq2A": "Le Processeur par Lots applique une seule étape de traitement — comme le hachage, l'encodage ou la compression — à plusieurs entrées simultanément. Collez du texte ou déposez des fichiers, choisissez une étape et obtenez tous les résultats instantanément."
   }
 }

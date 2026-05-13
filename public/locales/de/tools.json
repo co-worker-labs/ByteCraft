@@ -200,6 +200,11 @@
     "shortTitle": "Recipe Rezept",
     "description": "Verketten Sie mehrere Operationen in einem Rezept. Kombinieren Sie Text- und Bildverarbeitungsschritte im CyberChef-Stil. Alle Daten werden im Browser verarbeitet."
   },
+  "batch": {
+    "shortTitle": "Stapelverarbeitung",
+    "title": "Stapelverarbeitung - Massenverarbeitungswerkzeug | OmniKit",
+    "description": "Wende eine einzelne Operation auf mehrere Eingaben gleichzeitig an. Stapelweises Codieren, Hashen, Komprimieren und Konvertieren."
+  },
   "categories": {
     "text": "Textverarbeitung",
     "encoding": "Kodierung & Konvertierung",

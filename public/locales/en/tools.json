@@ -200,6 +200,11 @@
     "shortTitle": "Recipe",
     "description": "Chain multiple operations together into a recipe. Compose text and image processing steps CyberChef-style. All data stays in your browser."
   },
+  "batch": {
+    "shortTitle": "Batch Processor",
+    "title": "Batch Processor - Bulk Operation Tool | OmniKit",
+    "description": "Apply a single operation to multiple inputs at once. Batch encode, hash, compress, and convert files and text."
+  },
   "categories": {
     "text": "Text Processing",
     "encoding": "Encoding & Conversion",

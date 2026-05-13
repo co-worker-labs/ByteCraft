@@ -200,6 +200,11 @@
     "shortTitle": "Recipe Receita",
     "description": "Encadeie múltiplas operações em uma receita. Combine etapas de processamento de texto e imagem no estilo CyberChef. Todos os dados são processados no navegador."
   },
+  "batch": {
+    "shortTitle": "Processador em lote",
+    "title": "Processador em lote - Ferramenta de operações em massa | OmniKit",
+    "description": "Aplique uma única operação a múltiplas entradas de uma vez. Codifique, faça hash, comprima e converta arquivos e textos em lote."
+  },
   "categories": {
     "text": "Processamento de texto",
     "encoding": "Codificação e conversão",

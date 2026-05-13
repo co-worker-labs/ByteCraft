@@ -1,0 +1,48 @@
+{
+  "stepSelector": {
+    "title": "Paso de procesamiento",
+    "changeStep": "Cambiar paso",
+    "params": "Parámetros",
+    "placeholder": "Selecciona un paso..."
+  },
+  "inputPanel": {
+    "title": "Entradas",
+    "itemCount": "{count} elementos",
+    "pasteText": "Pegar texto",
+    "dropFiles": "Soltar archivos",
+    "pastePlaceholder": "Pega múltiples líneas, un elemento por línea...",
+    "removeAll": "Eliminar todo",
+    "selectAll": "Seleccionar todo",
+    "maxItemsWarning": "Máximo {max} elementos permitidos",
+    "removeItem": "Eliminar"
+  },
+  "resultPanel": {
+    "title": "Resultados",
+    "copyAll": "Copiar todo",
+    "downloadAll": "Descargar todo",
+    "downloadZip": "Descargar ZIP",
+    "copySuccess": "{count} elementos copiados",
+    "noResults": "Sin resultados aún",
+    "downloadSingle": "Descargar"
+  },
+  "summary": {
+    "success": "{success}/{total} exitosos",
+    "errors": "{errors} errores",
+    "duration": "{time}s",
+    "totalSaved": "Total: {before} → {after} ({percent}%)"
+  },
+  "descriptions": {
+    "aeoDefinition": "Batch Processor es una herramienta que aplica una única operación de procesamiento a múltiples entradas simultáneamente, ahorrando tiempo cuando necesitas transformar, codificar, hashear o convertir muchos elementos a la vez.",
+    "whatIs": "Batch Processor te permite aplicar una operación — como hashing, codificación o compresión — a docenas o cientos de entradas de una sola vez. Suelta múltiples archivos o pega múltiples líneas, elige un paso y obtén todos los resultados al instante.",
+    "useCasesP1": "Hashea cientos de cadenas para importaciones a bases de datos, comprime carpetas enteras de imágenes con un clic o codifica múltiples archivos a Base64 simultáneamente.",
+    "howToStep1": "Selecciona un paso de procesamiento del selector",
+    "howToStep2": "Agrega múltiples entradas pegando texto o soltando archivos",
+    "howToStep3": "Ve los resultados individuales y descarga o copia todo a la vez",
+    "faq1Q": "¿Hay un límite de elementos a procesar?",
+    "faq1A": "Batch Processor maneja hasta 1,000 elementos por lote. Todo el procesamiento ocurre en tu navegador — no se envían datos a ningún servidor.",
+    "faq2Q": "¿Puedo usar múltiples pasos de procesamiento?",
+    "faq2A": "Batch aplica un único paso a todas las entradas. Para procesamiento multi-paso, usa la herramienta Recipe para construir un pipeline.",
+    "faq3Q": "¿Qué pasa si un elemento falla?",
+    "faq3A": "Los elementos fallidos se marcan con una insignia de error y se omiten. Los demás elementos continúan procesándose normalmente."
+  }
+}

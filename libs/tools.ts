@@ -39,6 +39,7 @@ import {
   BookOpen,
   Network,
   FlaskConical,
+  Layers,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -121,7 +122,7 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
     key: "reference",
     tools: ["httpstatus", "httpclient", "dbviewer", "ascii", "htmlcode", "bip39", "subnet"],
   },
-  { key: "workflows", tools: ["recipe"] },
+  { key: "workflows", tools: ["recipe", "batch"] },
 ];
 
 export const QUICK_ACCESS_DEFAULT: string[] = ["json", "base64", "jwt", "regex", "diff", "hashing"];
@@ -167,6 +168,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   cssunit: ["storageunit", "numbase", "color"],
   subnet: ["numbase", "httpstatus", "ascii"],
   recipe: ["json", "base64", "hashing"],
+  batch: ["recipe", "hashing", "base64", "image"],
 };
 
 const PALETTE_SIZE = 20;
@@ -403,6 +405,13 @@ export const TOOLS: ToolEntry[] = [
     icon: FlaskConical,
     emoji: "🧪",
     sameAs: ["https://gchq.github.io/CyberChef/"],
+  },
+  {
+    key: "batch",
+    path: "/batch",
+    icon: Layers,
+    emoji: "📦",
+    sameAs: ["https://en.wikipedia.org/wiki/Batch_processing"],
   },
 ];
 

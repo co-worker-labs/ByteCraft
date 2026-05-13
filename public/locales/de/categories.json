@@ -62,13 +62,13 @@
     "faq2A": "Ja. Der SQLite-Viewer unterstützt schreibgeschützte SQL-Abfragen mit Autovervollständigung, Abfrageverlauf, Paginierung und Export als CSV oder JSON — alles läuft lokal in Ihrem Browser über WebAssembly."
   },
   "workflows": {
-    "title": "Daten-Pipeline- & Workflow-Tools - Recipe Builder",
+    "title": "Daten-Pipeline & Workflow-Tools - Recipe Builder, Stapelverarbeitung",
     "shortTitle": "Workflows",
-    "description": "Kostenlose Online-Daten-Pipeline- und Workflow-Tools für Entwickler. Verketten Sie Text-, Codierungs- und Krypto-Operationen in Rezepten. 100% clientseitig.",
-    "intro": "1 Workflow-Tool, mit dem Sie mehrere Operationen zu einer Datenverarbeitungspipeline verketten können. Erstellen Sie Rezepte durch Kombinieren von Textverarbeitungs-, Codierungs-, Hashing- und weiteren Schritten — CyberChef-Stil. Alle Daten bleiben in Ihrem Browser.",
+    "description": "Kostenlose Online-Daten-Pipeline und Workflow-Tools für Entwickler. Verkette Operationen zu Recipes oder wende einen einzelnen Schritt auf mehrere Eingaben mit der Stapelverarbeitung an. 100% clientseitig.",
+    "intro": "2 Workflow-Tools: Recipe verkettet mehrere Operationen zu einer Datenverarbeitungspipeline, und die Stapelverarbeitung wendet eine einzelne Operation auf viele Eingaben gleichzeitig an. Beide laufen vollständig in deinem Browser.",
     "faq1Q": "Was ist das Recipe-Tool?",
-    "faq1A": "Recipe ist ein Daten-Pipeline-Builder, mit dem Sie mehrere Operationen verketten können. Beispielsweise können Sie Text Base64-kodieren, dann das Ergebnis hashen und in Großbuchstaben umwandeln — alles in einem Ablauf.",
-    "faq2Q": "Welche Operationen sind in Recipe verfügbar?",
-    "faq2A": "Recipe unterstützt Texttransformationen, Kodierung/Dekodierung (Base64, URL, HTML), Hashing (MD5, SHA-Familie), Verschlüsselung, JSON/YAML-Konvertierung, Regex-Operationen und mehr. Neue Schritte werden regelmäßig hinzugefügt."
+    "faq1A": "Recipe ist ein Daten-Pipeline-Builder, mit dem du mehrere Operationen verketten kannst. Zum Beispiel kannst du Text Base64-kodieren, dann das Ergebnis hashen und in Großbuchstaben umwandeln — alles in einem Flow.",
+    "faq2Q": "Was ist die Stapelverarbeitung?",
+    "faq2A": "Die Stapelverarbeitung wendet einen einzelnen Verarbeitungsschritt — wie Hashing, Kodierung oder Komprimierung — auf mehrere Eingaben gleichzeitig an. Text einfügen oder Dateien ablegen, Schritt auswählen und alle Ergebnisse sofort erhalten."
   }
 }
