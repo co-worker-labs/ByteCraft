@@ -1,0 +1,48 @@
+{
+  "stepSelector": {
+    "title": "Processing Step",
+    "changeStep": "Change Step",
+    "params": "Parameters",
+    "placeholder": "Select a step..."
+  },
+  "inputPanel": {
+    "title": "Inputs",
+    "itemCount": "{count} items",
+    "pasteText": "Paste Text",
+    "dropFiles": "Drop Files",
+    "pastePlaceholder": "Paste multiple lines, one item per line...",
+    "removeAll": "Remove All",
+    "selectAll": "Select All",
+    "maxItemsWarning": "Maximum {max} items allowed",
+    "removeItem": "Remove"
+  },
+  "resultPanel": {
+    "title": "Results",
+    "copyAll": "Copy All",
+    "downloadAll": "Download All",
+    "downloadZip": "Download ZIP",
+    "copySuccess": "Copied {count} items",
+    "noResults": "No results yet",
+    "downloadSingle": "Download"
+  },
+  "summary": {
+    "success": "{success}/{total} success",
+    "errors": "{errors} errors",
+    "duration": "{time}s",
+    "totalSaved": "Total: {before} → {after} ({percent}%)"
+  },
+  "descriptions": {
+    "aeoDefinition": "Batch Processor is a tool that applies a single processing operation to multiple inputs simultaneously, saving time when you need to transform, encode, hash, or convert many items at once.",
+    "whatIs": "Batch Processor lets you apply one operation—like hashing, encoding, or compression—to dozens or hundreds of inputs in one go. Drop multiple files or paste multiple lines, pick a step, and get all results instantly.",
+    "useCasesP1": "Batch hash hundreds of strings for database imports, compress entire image folders in one click, or encode multiple files to Base64 simultaneously.",
+    "howToStep1": "Select a processing step from the picker",
+    "howToStep2": "Add multiple inputs by pasting text or dropping files",
+    "howToStep3": "View individual results and download or copy all at once",
+    "faq1Q": "Is there a limit to how many items I can process?",
+    "faq1A": "Batch Processor handles up to 1,000 items per batch. All processing happens in your browser—no data is sent to any server.",
+    "faq2Q": "Can I use multiple processing steps?",
+    "faq2A": "Batch applies a single step to all inputs. For multi-step processing, use the Recipe tool to build a pipeline, then use Batch with a Recipe step.",
+    "faq3Q": "What happens if one item fails?",
+    "faq3A": "Failed items are marked with an error badge and skipped. All other items continue processing normally."
+  }
+}

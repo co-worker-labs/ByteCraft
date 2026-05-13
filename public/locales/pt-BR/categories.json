@@ -60,5 +60,15 @@
     "faq1A": "O OmniKit oferece 6 ferramentas de referência: referência de Códigos de Status HTTP, Cliente HTTP para teste de APIs, Visualizador de Banco de Dados SQLite, Tabela ASCII, Codificador de Entidades HTML e Calculadora de Sub-redes IP.",
     "faq2Q": "Posso executar consultas SQL no Visualizador de DB?",
     "faq2A": "Sim. O Visualizador SQLite suporta consultas SQL somente leitura com autocompletar, histórico de consultas, paginação e exportação para CSV ou JSON — tudo rodando localmente no seu navegador via WebAssembly."
+  },
+  "workflows": {
+    "title": "Ferramentas de Pipeline e Fluxo de Trabalho - Recipe Builder, Processador em Lote",
+    "shortTitle": "Fluxos de Trabalho",
+    "description": "Ferramentas gratuitas de pipeline e fluxo de trabalho para desenvolvedores. Encadeie operações em receitas ou aplique um único passo a múltiplas entradas com o Processador em Lote. 100% no lado do cliente.",
+    "intro": "2 ferramentas de fluxo de trabalho: Recipe encadeia múltiplas operações em um pipeline de processamento de dados, e o Processador em Lote aplica uma única operação a muitas entradas de uma vez. Ambas rodam no seu navegador.",
+    "faq1Q": "O que é a ferramenta Recipe?",
+    "faq1A": "Recipe é um construtor de pipelines de dados que permite encadear múltiplas operações. Por exemplo, você pode codificar texto em Base64, depois hashear o resultado e converter para maiúsculas — tudo em um fluxo.",
+    "faq2Q": "O que é o Processador em Lote?",
+    "faq2A": "O Processador em Lote aplica um único passo de processamento — como hashing, codificação ou compressão — a múltiplas entradas simultaneamente. Cole texto ou solte arquivos, escolha um passo e obtenha todos os resultados instantaneamente."
   }
 }

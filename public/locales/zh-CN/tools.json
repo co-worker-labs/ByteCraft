@@ -234,12 +234,25 @@
     "description": "IPv4/IPv6 CIDR 子网计算器，支持子网划分和 VLSM 分配。计算网络地址、广播地址、主机范围和子网掩码——100% 浏览器端处理。",
     "searchTerms": "ziwangjisuanqi zwjsq ziwang CIDR"
   },
+  "recipe": {
+    "title": "Recipe - 数据配方构建器",
+    "shortTitle": "Recipe 配方",
+    "description": "将多个操作串联成配方。以 CyberChef 风格组合文本和图像处理步骤，构建数据处理配方。所有数据均在浏览器中处理。",
+    "searchTerms": "recipe peifang liushuian chuli buzhou"
+  },
+  "batch": {
+    "shortTitle": "批量处理器",
+    "title": "批量处理器 - 批量操作工具 | OmniKit",
+    "description": "将单个操作同时应用于多个输入。批量编码、哈希、压缩和转换文件与文本。",
+    "searchTerms": "piliangchuliqi plcq piliang hash bianma yasuo"
+  },
   "categories": {
     "text": "文本处理",
     "encoding": "编码转换",
     "security": "安全加密",
     "generators": "生成器",
     "visual": "视觉媒体",
-    "reference": "参考速查"
+    "reference": "参考速查",
+    "workflows": "工作流"
   }
 }

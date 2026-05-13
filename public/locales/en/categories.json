@@ -60,5 +60,15 @@
     "faq1A": "OmniKit offers 6 reference tools: HTTP Status Codes reference, HTTP Client for API testing, SQLite Database Viewer, ASCII Table, HTML Entity Encoder, and IP Subnet Calculator.",
     "faq2Q": "Can I run SQL queries in the DB Viewer?",
     "faq2A": "Yes. The SQLite Viewer supports read-only SQL queries with autocomplete, query history, pagination, and export to CSV or JSON — all running locally in your browser via WebAssembly."
+  },
+  "workflows": {
+    "title": "Data Pipeline & Workflow Tools - Recipe Builder, Batch Processor",
+    "shortTitle": "Workflows",
+    "description": "Free online data pipeline and workflow tools for developers. Chain operations into recipes, or apply a single step to multiple inputs with Batch Processor. 100% client-side.",
+    "intro": "2 workflow tools: Recipe chains multiple operations into a data processing pipeline, and Batch Processor applies a single operation to many inputs at once. Both run entirely in your browser.",
+    "faq1Q": "What is the Recipe tool?",
+    "faq1A": "Recipe is a data pipeline builder that lets you chain multiple operations together. For example, you can Base64-encode text, then hash the result, then convert to uppercase — all in one flow.",
+    "faq2Q": "What is Batch Processor?",
+    "faq2A": "Batch Processor applies a single processing step — like hashing, encoding, or compression — to multiple inputs simultaneously. Paste text or drop files, pick a step, and get all results instantly."
   }
 }

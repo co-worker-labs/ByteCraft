@@ -1,0 +1,48 @@
+{
+  "stepSelector": {
+    "title": "處理步驟",
+    "changeStep": "更換步驟",
+    "params": "參數",
+    "placeholder": "選擇一個步驟..."
+  },
+  "inputPanel": {
+    "title": "輸入",
+    "itemCount": "{count} 項",
+    "pasteText": "貼上文字",
+    "dropFiles": "拖放檔案",
+    "pastePlaceholder": "貼上多行文字，每行一項...",
+    "removeAll": "全部刪除",
+    "selectAll": "全選",
+    "maxItemsWarning": "最多允許 {max} 項",
+    "removeItem": "刪除"
+  },
+  "resultPanel": {
+    "title": "結果",
+    "copyAll": "全部複製",
+    "downloadAll": "全部下載",
+    "downloadZip": "下載 ZIP",
+    "copySuccess": "已複製 {count} 項",
+    "noResults": "暫無結果",
+    "downloadSingle": "下載"
+  },
+  "summary": {
+    "success": "{success}/{total} 成功",
+    "errors": "{errors} 個錯誤",
+    "duration": "{time}秒",
+    "totalSaved": "總計: {before} → {after} ({percent}%)"
+  },
+  "descriptions": {
+    "aeoDefinition": "批量處理器是一種將單個處理操作同時應用於多個輸入的工具，在需要一次轉換、編碼、雜湊或處理大量資料時節省時間。",
+    "whatIs": "批量處理器讓你將一個操作——如雜湊、編碼或壓縮——一次應用於數十或數百個輸入。拖放多個檔案或貼上多行文字，選擇步驟，即可獲得所有結果。",
+    "useCasesP1": "批量雜湊數百個字串用於資料庫匯入，一鍵壓縮整個圖片資料夾，或同時將多個檔案編碼為 Base64。",
+    "howToStep1": "從選擇器中選擇一個處理步驟",
+    "howToStep2": "透過貼上文字或拖放檔案新增多個輸入",
+    "howToStep3": "檢視各項結果，一鍵全部下載或複製",
+    "faq1Q": "有處理數量限制嗎？",
+    "faq1A": "批量處理器每次最多處理 1,000 項。所有處理在瀏覽器中進行——不會向任何伺服器傳送資料。",
+    "faq2Q": "可以使用多個處理步驟嗎？",
+    "faq2A": "批量處理將單個步驟應用於所有輸入。如需多步驟處理，請使用 Recipe 工具建構管線。",
+    "faq3Q": "如果某一項處理失敗怎麼辦？",
+    "faq3A": "失敗的項會標記錯誤徽章並跳過，其餘項繼續正常處理。"
+  }
+}

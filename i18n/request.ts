@@ -48,6 +48,8 @@ const namespaces = [
   "cssunit",
   "subnet",
   "sqlformat",
+  "recipe",
+  "batch",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

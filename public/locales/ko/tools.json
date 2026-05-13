@@ -234,12 +234,25 @@
     "description": "IPv4/IPv6 CIDR 서브넷 계산기. 서브넷 분할 및 VLSM 할당 지원. 네트워크 주소, 브로드캐스트, 호스트 범위, 서브넷 마스크 계산 — 100% 클라이언트 처리.",
     "searchTerms": "seobinetgyesangi sbnCIDR somak"
   },
+  "recipe": {
+    "title": "Recipe - 데이터 레시피 빌더",
+    "shortTitle": "Recipe 레시피",
+    "description": "여러 작업을 레시피로 연결하세요. CyberChef 스타일로 텍스트 및 이미지 처리 단계를 조합합니다. 모든 데이터는 브라우저에서 처리됩니다.",
+    "searchTerms": "recipe resipi bujeok seutepeu cheori"
+  },
+  "batch": {
+    "shortTitle": "배치 프로세서",
+    "title": "배치 프로세서 - 일괄 작업 도구 | OmniKit",
+    "description": "단일 작업을 여러 입력에 동시에 적용. 일괄 인코딩, 해시, 압축 및 변환.",
+    "searchTerms": "baeCHIPUROSESEO bcps ilgwal haseu enkoding"
+  },
   "categories": {
     "text": "텍스트 처리",
     "encoding": "인코딩 & 변환",
     "security": "보안 & 암호화",
     "generators": "생성기",
     "visual": "비주얼 & 미디어",
-    "reference": "참조 & 조회"
+    "reference": "참조 & 조회",
+    "workflows": "워크플로"
   }
 }

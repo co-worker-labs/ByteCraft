@@ -12,7 +12,6 @@ import { Button } from "../../../components/ui/button";
 import { StyledTextarea, StyledInput } from "../../../components/ui/input";
 import { showToast } from "../../../libs/toast";
 import { jsonToTs, PRIMITIVE_ERROR } from "../../../libs/jsonts/main";
-
 type OutputMode = "interface" | "type";
 
 function Conversion() {
@@ -192,22 +191,23 @@ function Conversion() {
           </button>
 
           <div className="flex-1" />
-
-          <Button
-            variant="danger"
-            size="sm"
-            disabled={!jsonInput.trim() && !tsOutput.trim()}
-            onClick={() => {
-              setJsonInput("");
-              setRootName("Root");
-              setOutputMode("interface");
-              setExportKeyword(false);
-              showToast(tc("allCleared"), "danger", 2000);
-            }}
-            className="rounded-full font-bold"
-          >
-            {tc("clearAll")}
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="danger"
+              size="sm"
+              disabled={!jsonInput.trim() && !tsOutput.trim()}
+              onClick={() => {
+                setJsonInput("");
+                setRootName("Root");
+                setOutputMode("interface");
+                setExportKeyword(false);
+                showToast(tc("allCleared"), "danger", 2000);
+              }}
+              className="rounded-full font-bold"
+            >
+              {tc("clearAll")}
+            </Button>
+          </div>
         </div>
       </div>
     </section>

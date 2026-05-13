@@ -13,6 +13,8 @@ export const STORAGE_KEYS = {
   httpclientHistory: "okrun:httpclient:history",
   walletSelectedChains: "okrun:wallet:chains",
   onboardingClearClipboard: "okrun:onboarding:clear-clipboard",
+  recipeList: "okrun:recipe:list",
+  recipeDraft: "okrun:recipe:draft",
 } as const;
 
 export const COOKIE_KEYS = {

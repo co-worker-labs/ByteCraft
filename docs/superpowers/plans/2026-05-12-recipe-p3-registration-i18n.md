@@ -1,0 +1,276 @@
+# Recipe System — Part 3: Tool Registration + i18n
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Register the Recipe tool in the OmniKit tool system (tools.ts, categories, relations) and add English i18n keys for the recipe page, step names, and param labels.
+
+**Architecture:** Follow existing tool registration pattern — add to `TOOLS` array, `TOOL_CATEGORIES`, `TOOL_RELATIONS`, and update i18n namespaces. Add `recipe.json` translation file with all step names, descriptions, param labels, and UI strings.
+
+**Tech Stack:** TypeScript, next-intl
+
+**Depends on:** Part 1 (types), Part 2 (step definitions)
+
+**Produces:** Recipe tool visible in tool system, all English translations ready for UI.
+
+---
+
+## File Structure
+
+| Action | File                            | Responsibility                                       |
+| ------ | ------------------------------- | ---------------------------------------------------- |
+| Modify | `libs/tools.ts`                 | Add recipe to TOOLS, TOOL_CATEGORIES, TOOL_RELATIONS |
+| Modify | `i18n/request.ts`               | Add "recipe" namespace                               |
+| Create | `public/locales/en/recipe.json` | English translations for recipe page                 |
+| Modify | `public/locales/en/tools.json`  | Add recipe tool entry                                |
+
+---
+
+### Task 1: Register Recipe Tool in tools.ts
+
+**Files:**
+
+- Modify: `libs/tools.ts`
+
+- [ ] **Step 1: Add FlaskConical import**
+
+At the top of `libs/tools.ts`, add `FlaskConical` to the lucide-react import block:
+
+After `Network,` add:
+
+```ts
+  FlaskConical,
+```
+
+- [ ] **Step 2: Add recipe to TOOL_CATEGORIES**
+
+In the `TOOL_CATEGORIES` array, update the `generators` group:
+
+```ts
+  { key: "generators", tools: ["uuid", "cron", "unixtime", "qrcode", "recipe"] },
+```
+
+- [ ] **Step 3: Add TOOL_RELATIONS for recipe**
+
+Add these entries to `TOOL_RELATIONS`:
+
+```ts
+  recipe: ["json", "base64", "hashing"],
+```
+
+Update the reverse relations to maintain bidirectional invariant:
+
+For `json` — swap "jsonts" for "recipe":
+
+```ts
+  json: ["csv", "yaml", "diff", "regex", "recipe"],
+```
+
+For `base64` — append "recipe":
+
+```ts
+  base64: ["urlencoder", "hashing", "cipher", "recipe"],
+```
+
+For `hashing` — append "recipe":
+
+```ts
+  hashing: ["checksum", "cipher", "base64", "jwt", "recipe"],
+```
+
+- [ ] **Step 4: Add recipe to TOOLS array**
+
+Add at the end of the `TOOLS` array (before the closing `];`):
+
+```ts
+  {
+    key: "recipe",
+    path: "/recipe",
+    icon: FlaskConical,
+    emoji: "🧪",
+    sameAs: ["https://gchq.github.io/CyberChef/"],
+  },
+```
+
+- [ ] **Step 5: Run tool relations test**
+
+Run: `npx vitest run libs/__tests__/tool-relations.test.ts`
+Expected: PASS (bidirectional invariant holds, 2-5 relations, no self-reference)
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add libs/tools.ts
+git commit -m "feat(recipe): register recipe tool in tool system with relations"
+```
+
+---
+
+### Task 2: Add i18n Namespace
+
+**Files:**
+
+- Modify: `i18n/request.ts`
+
+- [ ] **Step 1: Add "recipe" to namespaces array**
+
+Add `"recipe"` at the end of the `namespaces` array:
+
+```ts
+  "sqlformat",
+  "recipe",
+```
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add i18n/request.ts
+git commit -m "feat(recipe): add recipe i18n namespace"
+```
+
+---
+
+### Task 3: English Translation Files
+
+**Files:**
+
+- Create: `public/locales/en/recipe.json`
+- Modify: `public/locales/en/tools.json`
+
+- [ ] **Step 1: Create recipe.json**
+
+```json
+{
+  "title": "Recipe",
+  "input": "Input",
+  "output": "Output",
+  "addStep": "Add Step",
+  "save": "Save",
+  "delete": "Delete",
+  "untitled": "Untitled Recipe",
+  "expandAll": "Expand All",
+  "collapseAll": "Collapse All",
+  "disabled": "Step disabled — skipped in pipeline",
+  "waitingInput": "Waiting for input...",
+  "computing": "Computing...",
+  "sourceStepOnlyAtStart": "Source steps can only be placed at the beginning",
+  "typeMismatch": "Expected {expected} input, but received {received} output",
+  "dropImageHere": "Drop image here or click to select",
+  "noInputNeeded": "No input needed — source steps generate data",
+  "categories": {
+    "encoding": "Encoding",
+    "crypto": "Crypto",
+    "text": "Text",
+    "format": "Format",
+    "generators": "Generators",
+    "visual": "Visual"
+  },
+  "steps": {
+    "base64-encode": { "name": "Base64 Encode", "desc": "Encode text to Base64" },
+    "base64-decode": { "name": "Base64 Decode", "desc": "Decode Base64 to text" },
+    "url-encode-component": { "name": "URL Encode (Component)", "desc": "Encode URL component" },
+    "url-decode-component": { "name": "URL Decode (Component)", "desc": "Decode URL component" },
+    "url-encode-full": { "name": "URL Encode (Full)", "desc": "Encode full URL" },
+    "url-decode-full": { "name": "URL Decode (Full)", "desc": "Decode full URL" },
+    "hash-md5": { "name": "MD5 Hash", "desc": "Generate MD5 hash" },
+    "hash-sha1": { "name": "SHA-1 Hash", "desc": "Generate SHA-1 hash" },
+    "hash-sha256": { "name": "SHA-256 Hash", "desc": "Generate SHA-256 hash" },
+    "hash-sha512": { "name": "SHA-512 Hash", "desc": "Generate SHA-512 hash" },
+    "aes-encrypt": { "name": "AES Encrypt", "desc": "Encrypt text with AES" },
+    "aes-decrypt": { "name": "AES Decrypt", "desc": "Decrypt AES-encrypted text" },
+    "hmac-sha256": { "name": "HMAC-SHA256", "desc": "Generate HMAC-SHA256 signature" },
+    "password-gen": { "name": "Password Generator", "desc": "Generate a secure password" },
+    "text-camel": { "name": "camelCase", "desc": "Convert to camelCase" },
+    "text-pascal": { "name": "PascalCase", "desc": "Convert to PascalCase" },
+    "text-snake": { "name": "snake_case", "desc": "Convert to snake_case" },
+    "text-kebab": { "name": "kebab-case", "desc": "Convert to kebab-case" },
+    "text-upper": { "name": "UPPERCASE", "desc": "Convert to uppercase" },
+    "text-lower": { "name": "lowercase", "desc": "Convert to lowercase" },
+    "regex-replace": { "name": "Regex Replace", "desc": "Find and replace using regex" },
+    "dedup-lines": { "name": "Remove Duplicate Lines", "desc": "Remove duplicate lines from text" },
+    "extract-emails": { "name": "Extract Emails", "desc": "Extract email addresses from text" },
+    "extract-urls": { "name": "Extract URLs", "desc": "Extract URLs from text" },
+    "json-format": { "name": "JSON Format", "desc": "Format and beautify JSON" },
+    "json-minify": { "name": "JSON Minify", "desc": "Minify JSON to compact form" },
+    "json-yaml": { "name": "JSON → YAML", "desc": "Convert JSON to YAML" },
+    "yaml-json": { "name": "YAML → JSON", "desc": "Convert YAML to JSON" },
+    "json-ts": { "name": "JSON → TypeScript", "desc": "Generate TypeScript interfaces from JSON" },
+    "json-csv": { "name": "JSON → CSV", "desc": "Convert JSON to CSV" },
+    "csv-json": { "name": "CSV → JSON", "desc": "Convert CSV to JSON" },
+    "sql-format": { "name": "SQL Format", "desc": "Format SQL query" },
+    "sql-minify": { "name": "SQL Minify", "desc": "Minify SQL query" },
+    "uuid-gen": { "name": "UUID Generator", "desc": "Generate UUID v4 or v7" },
+    "qrcode-gen": { "name": "QR Code Generator", "desc": "Generate QR code from text" },
+    "image-compress": { "name": "Image Compress", "desc": "Compress and resize images" }
+  },
+  "params": {
+    "key": "Key",
+    "length": "Length",
+    "pattern": "Pattern",
+    "replacement": "Replacement",
+    "indent": "Indent",
+    "delimiter": "Delimiter",
+    "dialect": "Dialect",
+    "quality": "Quality",
+    "size": "Size",
+    "errorLevel": "Error Correction",
+    "format": "Format",
+    "version": "Version",
+    "count": "Count",
+    "caseSensitive": "Case Sensitive",
+    "trimWhitespace": "Trim Whitespace",
+    "flags": "Flags",
+    "rootName": "Root Name",
+    "maxWidth": "Max Width",
+    "maxHeight": "Max Height",
+    "uppercase": "Uppercase (A-Z)",
+    "lowercase": "Lowercase (a-z)",
+    "numbers": "Numbers (0-9)",
+    "symbols": "Symbols (!@#)"
+  },
+  "options": {
+    "yes": "Yes",
+    "no": "No"
+  },
+  "sendToRecipe": "Send to Recipe",
+  "savedRecipes": "Saved Recipes",
+  "stepsCount": "{count} steps"
+}
+```
+
+- [ ] **Step 2: Add recipe entry to tools.json**
+
+In `public/locales/en/tools.json`, add a `recipe` entry after the last tool entry (before the closing `}`):
+
+```json
+  "recipe": {
+    "title": "Recipe - Data Pipeline Builder",
+    "shortTitle": "Recipe",
+    "description": "Chain multiple operations together in a pipeline. Build recipes by composing text and image processing steps CyberChef-style. All data stays in your browser."
+  }
+```
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add public/locales/en/recipe.json public/locales/en/tools.json
+git commit -m "feat(recipe): add English i18n translations for recipe tool"
+```
+
+---
+
+### Task 4: Final Verification
+
+- [ ] **Step 1: Run typecheck**
+
+Run: `npx tsc --noEmit`
+Expected: No errors
+
+- [ ] **Step 2: Run all tests**
+
+Run: `npm run test`
+Expected: All tests pass, including tool-relations test
+
+- [ ] **Step 3: Verify dev server starts without errors**
+
+Run: `npm run build 2>&1 | tail -20`
+Expected: Build succeeds (or at least no import/namespace errors for recipe)

@@ -195,12 +195,23 @@
     "shortTitle": "Calculadora de Subredes",
     "description": "Calculadora CIDR IPv4/IPv6 con divisor de subredes y asignador VLSM. Calcula dirección de red, broadcast, rango de hosts y máscara de subred — 100% del lado del cliente."
   },
+  "recipe": {
+    "title": "Recipe - Constructor de recetas de datos",
+    "shortTitle": "Recipe Receta",
+    "description": "Encadena múltiples operaciones en una receta. Combina pasos de procesamiento de texto e imagen al estilo CyberChef. Todos los datos se procesan en el navegador."
+  },
+  "batch": {
+    "shortTitle": "Procesador por lotes",
+    "title": "Procesador por lotes - Herramienta de operaciones masivas | OmniKit",
+    "description": "Aplica una operación a múltiples entradas a la vez. Codifica, hashea, comprime y convierte archivos y texto por lotes."
+  },
   "categories": {
     "text": "Procesamiento de texto",
     "encoding": "Codificación y conversión",
     "security": "Seguridad y criptografía",
     "generators": "Generadores",
     "visual": "Visual y multimedia",
-    "reference": "Referencia y consulta"
+    "reference": "Referencia y consulta",
+    "workflows": "Flujos de trabajo"
   }
 }

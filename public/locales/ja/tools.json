@@ -234,12 +234,25 @@
     "description": "IPv4/IPv6 CIDR サブネット計算機。サブネット分割と VLSM 割り当てに対応。ネットワークアドレス、ブロードキャスト、ホスト範囲、サブネットマスクを計算——100% ブラウザ上で処理。",
     "searchTerms": "sabunettokarakyurator sbntkr sabunetto CIDR"
   },
+  "recipe": {
+    "title": "Recipe - データレシピビルダー",
+    "shortTitle": "Recipe レシピ",
+    "description": "複数の処理をレシピに連鎖させます。CyberChef スタイルでテキスト・画像処理ステップを組み合わせます。すべてのデータはブラウザ内で処理されます。",
+    "searchTerms": "recipe reshipi buzhou rensa shori"
+  },
+  "batch": {
+    "shortTitle": "バッチプロセッサ",
+    "title": "バッチプロセッサ - 一括操作ツール | OmniKit",
+    "description": "単一の操作を複数の入力に一括適用。一括エンコード、ハッシュ、圧縮、変換。",
+    "searchTerms": "batchburosesa btpcs ikkatsu handy gurobaru"
+  },
   "categories": {
     "text": "テキスト処理",
     "encoding": "エンコード・変換",
     "security": "セキュリティ・暗号",
     "generators": "ジェネレーター",
     "visual": "ビジュアル・メディア",
-    "reference": "リファレンス"
+    "reference": "リファレンス",
+    "workflows": "ワークフロー"
   }
 }

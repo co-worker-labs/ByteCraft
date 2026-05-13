@@ -28,6 +28,7 @@
   "catGenerators": "Generate UUIDs, QR codes, cron expressions, and timestamps.",
   "catVisualMedia": "Work with colors, images, and visual content.",
   "catReferenceLookup": "Look up ASCII codes, HTTP status codes, HTML entities, and more.",
+  "catWorkflows": "Chain multiple operations into data processing pipelines and recipes.",
   "faqTitle": "Frequently Asked Questions",
   "faq1Q": "What is OmniKit?",
   "faq1A": "OmniKit is a free collection of browser-based developer tools including JSON formatter, Base64 encoder, password generator, hash calculator, and more. All tools run entirely in your browser with no data sent to servers.",

@@ -195,12 +195,23 @@
     "shortTitle": "Calculateur de Sous-réseaux",
     "description": "Calculateur CIDR IPv4/IPv6 avec diviseur de sous-réseaux et allocateur VLSM. Calcule l'adresse réseau, la diffusion, la plage d'hôtes et le masque de sous-réseau — 100% côté client."
   },
+  "recipe": {
+    "title": "Recipe - Constructeur de recettes de données",
+    "shortTitle": "Recipe Recette",
+    "description": "Chaînez plusieurs opérations dans une recette. Combinez des étapes de traitement de texte et d'image à la CyberChef. Toutes les données sont traitées dans le navigateur."
+  },
+  "batch": {
+    "shortTitle": "Processeur par lots",
+    "title": "Processeur par lots - Outil d'opérations en masse | OmniKit",
+    "description": "Appliquez une seule opération à plusieurs entrées à la fois. Encodez, hachez, compressez et convertissez des fichiers et du texte par lots."
+  },
   "categories": {
     "text": "Traitement de texte",
     "encoding": "Encodage et conversion",
     "security": "Sécurité et cryptographie",
     "generators": "Générateurs",
     "visual": "Visuel et médias",
-    "reference": "Référence et recherche"
+    "reference": "Référence et recherche",
+    "workflows": "Flux de travail"
   }
 }

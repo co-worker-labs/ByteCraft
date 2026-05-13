@@ -1,0 +1,48 @@
+{
+  "stepSelector": {
+    "title": "처리 단계",
+    "changeStep": "단계 변경",
+    "params": "매개변수",
+    "placeholder": "단계를 선택하세요..."
+  },
+  "inputPanel": {
+    "title": "입력",
+    "itemCount": "{count}개",
+    "pasteText": "텍스트 붙여넣기",
+    "dropFiles": "파일 드롭",
+    "pastePlaceholder": "여러 줄의 텍스트를 붙여넣으세요. 한 줄에 하나씩...",
+    "removeAll": "모두 삭제",
+    "selectAll": "모두 선택",
+    "maxItemsWarning": "최대 {max}개까지 가능",
+    "removeItem": "삭제"
+  },
+  "resultPanel": {
+    "title": "결과",
+    "copyAll": "모두 복사",
+    "downloadAll": "모두 다운로드",
+    "downloadZip": "ZIP 다운로드",
+    "copySuccess": "{count}개 복사됨",
+    "noResults": "결과 없음",
+    "downloadSingle": "다운로드"
+  },
+  "summary": {
+    "success": "{success}/{total} 성공",
+    "errors": "{errors}개 오류",
+    "duration": "{time}초",
+    "totalSaved": "합계: {before} → {after} ({percent}%)"
+  },
+  "descriptions": {
+    "aeoDefinition": "배치 프로세서는 단일 처리 작업을 여러 입력에 동시에 적용하는 도구로, 변환, 인코딩, 해시, 변환을 한 번에 수행할 때 시간을 절약합니다.",
+    "whatIs": "배치 프로세서를 사용하면 해시, 인코딩, 압축 등의 작업을 수십~수백 개의 입력에 한 번에 적용할 수 있습니다. 여러 파일을 드롭하거나 여러 줄의 텍스트를 붙여넣고, 단계를 선택하면 모든 결과를 즉시 확인할 수 있습니다.",
+    "useCasesP1": "데이터베이스 가져오기를 위해 수백 개의 문자열을 일괄 해시, 이미지 폴더를 원클릭으로 압축, 여러 파일을 동시에 Base64로 인코딩.",
+    "howToStep1": "피커에서 처리 단계를 선택",
+    "howToStep2": "텍스트 붙여넣기 또는 파일 드롭으로 여러 입력 추가",
+    "howToStep3": "개별 결과를 확인하고 모두 다운로드하거나 복사",
+    "faq1Q": "처리할 수 있는 항목 수에 제한이 있나요?",
+    "faq1A": "배치 프로세서는 한 번에 최대 1,000개의 항목을 처리합니다. 모든 처리는 브라우저에서 이루어지며 서버로 데이터가 전송되지 않습니다.",
+    "faq2Q": "여러 처리 단계를 사용할 수 있나요?",
+    "faq2A": "배치 처리는 모든 입력에 단일 단계를 적용합니다. 다단계 처리를 위해서는 Recipe 도구로 파이프라인을 구축하세요.",
+    "faq3Q": "한 항목이 실패하면 어떻게 되나요?",
+    "faq3A": "실패한 항목은 오류 배지가 표시되고 건너뜁니다. 나머지 항목은 정상적으로 계속 처리됩니다."
+  }
+}

@@ -54,7 +54,6 @@ import {
 import PrivacyBanner from "../../../components/privacy-banner";
 import RelatedTools from "../../../components/related-tools";
 import DescriptionSection from "../../../components/description-section";
-
 const default_type = "Random";
 
 const alert_copy_timeout = 2000;

@@ -440,6 +440,41 @@
   margin-right: 0.4rem;
 }
 
+/* ===== Recipe Step Slider (rc-slider) ===== */
+.rc-slider-handle {
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s,
+    border-color 0.2s;
+}
+.rc-slider-handle:hover {
+  box-shadow: 0 0 8px var(--accent-cyan) !important;
+  transform: scale(1.15);
+}
+.rc-slider-handle:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+  box-shadow: 0 0 8px var(--accent-cyan) !important;
+}
+
+/* ===== Recipe Step Toggle (checkbox) ===== */
+.recipe-toggle:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+/* ===== Custom Select Arrow ===== */
+.recipe-select-arrow {
+  pointer-events: none;
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.recipe-select-arrow svg {
+  display: block;
+}
+
 /* Print styles — applies to all pages, used primarily by /markdown's "Export PDF". */
 @media print {
   /* Hide global chrome and any opt-out node */

@@ -27,6 +27,7 @@ function Conversion() {
   const [rawCharset, setRawCharset] = useState<BufferEncoding>("utf-8");
   const [encodedContent, setEncodedContent] = useState<string>("");
   const [basicAuthEnabled, setBasicAuthEnabled] = useState<boolean>(false);
+  const [lastDirection, setLastDirection] = useState<"encode" | "decode">("encode");
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -59,6 +60,7 @@ function Conversion() {
     const encoded = Buffer.from(raw, rawCharset).toString("base64");
     updateEncodedContent(encoded);
     updateRawContent(raw);
+    setLastDirection("encode");
     showToast(tc("encoded"), "success", 2000);
   }
 
@@ -72,6 +74,7 @@ function Conversion() {
     const raw = Buffer.from(encoded, "base64").toString(rawCharset);
     updateEncodedContent(encoded);
     updateRawContent(raw);
+    setLastDirection("decode");
     showToast(tc("decoded"), "success", 2000);
   }
 
@@ -228,16 +231,18 @@ function Conversion() {
               {tc("encodedText")}
             </span>
           </div>
-          <button
-            type="button"
-            className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
-            onClick={() => {
-              setEncodedContent("");
-              showToast(tc("cleared"), "danger", 2000);
-            }}
-          >
-            {tc("clear")}
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              className="text-danger text-xs hover:text-danger/80 transition-colors cursor-pointer"
+              onClick={() => {
+                setEncodedContent("");
+                showToast(tc("cleared"), "danger", 2000);
+              }}
+            >
+              {tc("clear")}
+            </button>
+          </div>
         </div>
         <div className="relative mt-1">
           <StyledTextarea

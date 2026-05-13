@@ -13,7 +13,6 @@ import RelatedTools from "../../../components/related-tools";
 import PrivacyBanner from "../../../components/privacy-banner";
 import { Accordion } from "../../../components/ui/accordion";
 import { CircleHelp } from "lucide-react";
-
 function encodeComponent(input: string): string {
   return encodeURIComponent(input);
 }
@@ -88,12 +87,14 @@ function Conversion() {
   const [encodedContent, setEncodedContent] = useState<string>("");
   const [mode, setMode] = useState<Mode>("component");
   const [isTrimRaw, setIsTrimRaw] = useState<boolean>(true);
+  const [direction, setDirection] = useState<"encode" | "decode">("encode");
 
   function doEncode() {
     const raw = isTrimRaw ? rawContent.trim() : rawContent;
     const out = encodeFor(mode, raw);
     setEncodedContent(out);
     setRawContent(raw);
+    setDirection("encode");
     showToast(tc("encoded"), "success", 2000);
   }
 
@@ -103,6 +104,7 @@ function Conversion() {
       const out = decodeFor(mode, encoded);
       setRawContent(out);
       setEncodedContent(encoded);
+      setDirection("decode");
       showToast(tc("decoded"), "success", 2000);
     } catch {
       showToast(t("decodeFailed"), "danger", 3000);

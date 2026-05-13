@@ -6,6 +6,7 @@ import {
   ReactNode,
   useId,
 } from "react";
+import { ChevronDown } from "lucide-react";
 
 export const StyledInput = forwardRef<
   HTMLInputElement,
@@ -68,14 +69,19 @@ export const StyledSelect = forwardRef<
           {label}
         </label>
       )}
-      <select
-        ref={ref}
-        id={id}
-        className={`w-full bg-bg-input border border-border-default rounded-lg px-3 py-2 text-fg-primary focus:outline-none focus:border-accent-cyan focus:shadow-input-focus transition-all duration-200 ${className}`}
-        {...props}
-      >
-        {children}
-      </select>
+      <div className="relative">
+        <select
+          ref={ref}
+          id={id}
+          className={`w-full appearance-none bg-bg-input border border-border-default rounded-lg px-3 py-2 pr-8 text-fg-primary focus:outline-none focus:border-accent-cyan focus:shadow-input-focus hover:border-fg-muted transition-all duration-200 ${className}`}
+          {...props}
+        >
+          {children}
+        </select>
+        <span className="recipe-select-arrow text-fg-muted pointer-events-none">
+          <ChevronDown size={14} />
+        </span>
+      </div>
     </div>
   );
 });

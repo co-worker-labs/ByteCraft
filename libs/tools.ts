@@ -38,6 +38,8 @@ import {
   Wallet,
   BookOpen,
   Network,
+  FlaskConical,
+  Layers,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -56,7 +58,14 @@ export interface ToolEntry {
   sameAs?: string[];
 }
 
-export type ToolCategory = "text" | "encoding" | "security" | "generators" | "visual" | "reference";
+export type ToolCategory =
+  | "text"
+  | "encoding"
+  | "security"
+  | "generators"
+  | "visual"
+  | "reference"
+  | "workflows";
 
 export interface CategoryGroup {
   key: ToolCategory;
@@ -70,6 +79,7 @@ export const CATEGORY_SLUGS: Record<ToolCategory, string> = {
   generators: "generators",
   visual: "visual-media",
   reference: "reference-lookup",
+  workflows: "workflows",
 };
 
 export const TOOL_CATEGORIES: CategoryGroup[] = [
@@ -112,18 +122,19 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
     key: "reference",
     tools: ["httpstatus", "httpclient", "dbviewer", "ascii", "htmlcode", "bip39", "subnet"],
   },
+  { key: "workflows", tools: ["recipe", "batch"] },
 ];
 
 export const QUICK_ACCESS_DEFAULT: string[] = ["json", "base64", "jwt", "regex", "diff", "hashing"];
 
 export const TOOL_RELATIONS: Record<string, string[]> = {
-  json: ["csv", "yaml", "diff", "regex", "jsonts"],
+  json: ["csv", "yaml", "diff", "regex", "recipe"],
   sqlformat: ["dbviewer", "json", "yaml"],
-  base64: ["urlencoder", "hashing", "cipher"],
+  base64: ["urlencoder", "hashing", "cipher", "recipe"],
   jwt: ["base64", "hashing", "password"],
   regex: ["json", "textcase", "diff"],
   uuid: ["password", "qrcode", "hashing"],
-  hashing: ["checksum", "cipher", "base64", "jwt"],
+  hashing: ["checksum", "cipher", "base64", "jwt", "recipe"],
   urlencoder: ["base64", "numbase", "textcase"],
   unixtime: ["cron", "uuid"],
   diff: ["json", "regex", "csv"],
@@ -156,6 +167,8 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   bip39: ["wallet", "password"],
   cssunit: ["storageunit", "numbase", "color"],
   subnet: ["numbase", "httpstatus", "ascii"],
+  recipe: ["json", "base64", "hashing"],
+  batch: ["recipe", "hashing", "base64", "image"],
 };
 
 const PALETTE_SIZE = 20;
@@ -385,6 +398,20 @@ export const TOOLS: ToolEntry[] = [
       "https://datatracker.ietf.org/doc/html/rfc4291",
       "https://en.wikipedia.org/wiki/Subnetwork",
     ],
+  },
+  {
+    key: "recipe",
+    path: "/recipe",
+    icon: FlaskConical,
+    emoji: "🧪",
+    sameAs: ["https://gchq.github.io/CyberChef/"],
+  },
+  {
+    key: "batch",
+    path: "/batch",
+    icon: Layers,
+    emoji: "📦",
+    sameAs: ["https://en.wikipedia.org/wiki/Batch_processing"],
   },
 ];
 
