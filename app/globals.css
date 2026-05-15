@@ -160,6 +160,24 @@
   display: none;
 }
 
+/* Visible thin scrollbar for dropdowns and small scrollable areas */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: var(--fg-muted);
+}
+
 /* ===== Utility Classes ===== */
 @utility text-shadow-glow {
   text-shadow: 0 0 30px rgba(6, 214, 160, 0.3);
