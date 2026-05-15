@@ -198,6 +198,12 @@
     "description": "自由選択、プリセット比率、または正確なピクセル寸法で画像をトリミング。PNG、JPG、WebP対応。すべての処理はブラウザで実行されます。",
     "searchTerms": "gazoutorimingu gotrg torimingu gazou kado"
   },
+  "image-rotate": {
+    "title": "画像回転 - オンラインで画像を回転・反転",
+    "shortTitle": "画像回転",
+    "description": "画像を 90°、180°、270° 回転し、水平・垂直に反転。PNG、JPG、WebP 対応。すべての処理はブラウザで実行されます。",
+    "searchTerms": "gazoukaiten gzk 90do 180do tentou"
+  },
   "extractor": {
     "title": "メール / URL / 電話番号抽出 — オンラインでメール、URL、電話番号を抽出",
     "shortTitle": "メール / URL / 電話抽出",

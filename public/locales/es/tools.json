@@ -165,6 +165,11 @@
     "shortTitle": "Recortar Imagen",
     "description": "Recorta imágenes con selección libre, relaciones de aspecto predefinidas o dimensiones exactas en píxeles. Compatible con PNG, JPG, WebP. Todo el procesamiento se realiza en tu navegador."
   },
+  "image-rotate": {
+    "title": "Rotador de Imágenes - Rotar y Voltear Imágenes Online",
+    "shortTitle": "Rotador de Imágenes",
+    "description": "Rota imágenes 90°, 180° o 270° y voltea horizontal o verticalmente. Soporta PNG, JPG, WebP. Todo el procesamiento se realiza en tu navegador."
+  },
   "extractor": {
     "title": "Extractor de Emails, URLs y Teléfonos — Extracción en Línea",
     "shortTitle": "Extractor Email / URL / Teléfono",

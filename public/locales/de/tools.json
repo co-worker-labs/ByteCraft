@@ -165,6 +165,11 @@
     "shortTitle": "Bild Zuschneiden",
     "description": "Schneiden Sie Bilder mit freier Auswahl, voreingestellten Seitenverhältnissen oder genauen Pixelmaßen zu. Unterstützt PNG, JPG, WebP. Die gesamte Verarbeitung erfolgt in Ihrem Browser."
   },
+  "image-rotate": {
+    "title": "Bildrotierung - Bilder online drehen und spiegeln",
+    "shortTitle": "Bilder drehen",
+    "description": "Drehen Sie Bilder um 90°, 180° oder 270° und spiegeln Sie sie horizontal oder vertikal. Unterstützt PNG, JPG, WebP. Die gesamte Verarbeitung erfolgt in Ihrem Browser."
+  },
   "extractor": {
     "title": "E-Mail / URL / Telefon-Extraktor — Online-Extraktion",
     "shortTitle": "E-Mail / URL / Telefon Extraktor",

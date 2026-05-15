@@ -170,6 +170,11 @@
     "shortTitle": "Image Cropper",
     "description": "Crop images with free selection, preset aspect ratios, or exact pixel dimensions. Supports PNG, JPG, WebP. All processing runs in your browser."
   },
+  "image-rotate": {
+    "title": "Image Rotator - Rotate & Flip Images Online",
+    "shortTitle": "Image Rotate",
+    "description": "Rotate images by 90°, 180°, or 270° and flip horizontally or vertically. Supports PNG, JPG, WebP. All processing runs in your browser."
+  },
   "extractor": {
     "title": "Email & URL Extractor - Extract Emails, URLs, Phone Numbers Online",
     "shortTitle": "Email / URL / Phone Extractor",

@@ -198,6 +198,12 @@
     "description": "自由裁剪、預設比例或精確像素尺寸裁剪圖片。支援 PNG、JPG、WebP。所有處理在瀏覽器本機完成。",
     "searchTerms": "tupiancaijian tpccj caijian xuanqu qiege"
   },
+  "image-rotate": {
+    "title": "圖片旋轉 - 線上旋轉和翻轉圖片",
+    "shortTitle": "圖片旋轉",
+    "description": "按 90°、180°、270° 旋轉圖片，支援水平/垂直翻轉。支援 PNG、JPG、WebP。所有處理在瀏覽器本機完成。",
+    "searchTerms": "tupianxuanzhuan tpxz 90du 180du fanzhuan"
+  },
   "extractor": {
     "title": "信箱 / URL / 電話提取器 — 線上提取信箱、網址、電話號碼",
     "shortTitle": "信箱 / URL / 電話提取",

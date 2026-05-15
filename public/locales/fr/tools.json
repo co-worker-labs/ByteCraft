@@ -165,6 +165,11 @@
     "shortTitle": "Recadrer une Image",
     "description": "Recadrez des images avec sélection libre, ratios prédéfinis ou dimensions exactes en pixels. Prend en charge PNG, JPG, WebP. Tout le traitement s'effectue dans votre navigateur."
   },
+  "image-rotate": {
+    "title": "Rotation d'Images - Rotationner et Retourner des Images en Ligne",
+    "shortTitle": "Rotation d'Images",
+    "description": "Rotationnez les images de 90°, 180° ou 270° et retournez-les horizontalement ou verticalement. Supporte PNG, JPG, WebP. Tout le traitement s'effectue dans votre navigateur."
+  },
   "extractor": {
     "title": "Extracteur d'Emails, URLs et Téléphones — Extraction en Ligne",
     "shortTitle": "Extracteur Email / URL / Téléphone",
