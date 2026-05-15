@@ -30,13 +30,13 @@ export const INPUT_MIME_TYPES: readonly string[] = [
 
 export const FORMAT_EXTENSIONS: Record<OutputFormat, string> = {
   png: ".png",
-  jpeg: ".jpg",
+  jpeg: ".jpeg",
   webp: ".webp",
 };
 
 export const FORMAT_DISPLAY_NAMES: Record<string, string> = {
   png: "PNG",
-  jpeg: "JPG",
+  jpeg: "JPEG",
   webp: "WebP",
   avif: "AVIF",
   gif: "GIF",

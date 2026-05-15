@@ -38,6 +38,7 @@ const namespaces = [
   "image-resize",
   "image-compress",
   "image-convert",
+  "image-crop",
   "extractor",
   "wordcounter",
   "deduplines",

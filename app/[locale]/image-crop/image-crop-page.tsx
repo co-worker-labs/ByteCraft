@@ -44,7 +44,7 @@ function Conversion() {
   // Tool-specific state
   const [cropMode, setCropMode] = useState<CropMode>("free");
   const [crop, setCrop] = useState<Crop>();
-  const [selectedRatio, setSelectedRatio] = useState<number | null>(null);
+  const [selectedRatio, setSelectedRatio] = useState<number | null | undefined>(undefined);
   const [exactWidth, setExactWidth] = useState(0);
   const [exactHeight, setExactHeight] = useState(0);
   const [keepAspectRatio, setKeepAspectRatio] = useState(false);
@@ -74,9 +74,11 @@ function Conversion() {
 
   // Calculate aspect prop for ReactCrop
   const cropAspect =
-    cropMode === "preset" && sourceBitmap
-      ? (selectedRatio ?? sourceBitmap.width / sourceBitmap.height)
-      : undefined;
+    cropMode === "preset" && selectedRatio != null && sourceBitmap
+      ? selectedRatio
+      : cropMode === "exact" && keepAspectRatio && exactWidth > 0 && exactHeight > 0
+        ? exactWidth / exactHeight
+        : undefined;
 
   // Exact mode: update crop when dimensions change
   useEffect(() => {
@@ -100,6 +102,22 @@ function Conversion() {
     return () => clearTimeout(timer);
   }, [cropMode, exactWidth, exactHeight, sourceBitmap]);
 
+  function clearResult() {
+    if (prevBlobUrlRef.current) URL.revokeObjectURL(prevBlobUrlRef.current);
+    prevBlobUrlRef.current = null;
+    setPreviewUrl(null);
+    setResultBlob(null);
+  }
+
+  function handleCropChange(_crop: Crop, percentCrop: Crop) {
+    setCrop(percentCrop);
+
+    if (cropMode === "exact" && sourceBitmap && percentCrop.width > 0 && percentCrop.height > 0) {
+      setExactWidth(Math.round((percentCrop.width / 100) * sourceBitmap.width));
+      setExactHeight(Math.round((percentCrop.height / 100) * sourceBitmap.height));
+    }
+  }
+
   // Encode pipeline — same stalenessId pattern as image-resize
   // Key difference: always 300ms debounce (no initialLoadRef), guard on crop existence
   useEffect(() => {
@@ -111,7 +129,17 @@ function Conversion() {
     const pw = Math.round((crop.width / 100) * sourceBitmap.width);
     const ph = Math.round((crop.height / 100) * sourceBitmap.height);
 
-    if (pw <= 0 || ph <= 0 || pw < 10 || ph < 10) return;
+    if (pw <= 0 || ph <= 0 || pw < 10 || ph < 10) {
+      let cancelled = false;
+      const timer = setTimeout(() => {
+        if (cancelled) return;
+        clearResult();
+      }, 0);
+      return () => {
+        cancelled = true;
+        clearTimeout(timer);
+      };
+    }
 
     let cancelled = false;
     const timer = setTimeout(async () => {
@@ -152,15 +180,18 @@ function Conversion() {
     };
   }, []);
 
-  // Mode change: reset crop and result
+  // Mode change: preserve existing crop selection
   function handleCropModeChange(mode: CropMode) {
     setCropMode(mode);
-    setCrop(undefined);
-    setSelectedRatio(null);
-    setResultBlob(null);
-    if (prevBlobUrlRef.current) URL.revokeObjectURL(prevBlobUrlRef.current);
-    prevBlobUrlRef.current = null;
-    setPreviewUrl(null);
+    setSelectedRatio(undefined);
+    clearResult();
+
+    if (mode === "exact" && sourceBitmap) {
+      const w = crop ? Math.round((crop.width / 100) * sourceBitmap.width) : sourceBitmap.width;
+      const h = crop ? Math.round((crop.height / 100) * sourceBitmap.height) : sourceBitmap.height;
+      setExactWidth(w);
+      setExactHeight(h);
+    }
   }
 
   // Preset ratio: calculate max centered crop at the selected ratio
@@ -168,9 +199,13 @@ function Conversion() {
     setSelectedRatio(ratio);
     if (!sourceBitmap) return;
 
-    const aspect = ratio ?? sourceBitmap.width / sourceBitmap.height;
+    if (ratio === null) {
+      setCrop({ unit: "%", x: 0, y: 0, width: 100, height: 100 });
+      return;
+    }
+
     const centered = centerCrop(
-      makeAspectCrop({ unit: "%", width: 90 }, aspect, sourceBitmap.width, sourceBitmap.height),
+      makeAspectCrop({ unit: "%", width: 90 }, ratio, sourceBitmap.width, sourceBitmap.height),
       sourceBitmap.width,
       sourceBitmap.height
     );
@@ -204,7 +239,7 @@ function Conversion() {
     setProcessing(false);
     setCropMode("free");
     setCrop(undefined);
-    setSelectedRatio(null);
+    setSelectedRatio(undefined);
     setExactWidth(0);
     setExactHeight(0);
     setKeepAspectRatio(false);
@@ -234,8 +269,8 @@ function Conversion() {
   return (
     <section className="mt-4">
       <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6">
-        {/* Left panel — controls */}
-        <div className="flex flex-col gap-4">
+        {/* Left panel — controls (below crop area on mobile) */}
+        <div className="flex flex-col gap-4 order-2 md:order-1">
           {/* Crop mode selector */}
           <div>
             <label className="block text-sm font-medium text-fg-secondary mb-2">
@@ -337,16 +372,16 @@ function Conversion() {
           </div>
         </div>
 
-        {/* Right panel — preview */}
-        <div className="flex flex-col gap-3">
+        {/* Right panel — preview (shown first on mobile) */}
+        <div className="flex flex-col gap-3 order-1 md:order-2">
           <div
-            className="relative w-full rounded-lg border border-border-default bg-bg-surface overflow-hidden"
+            className="relative w-full flex items-center justify-center rounded-lg border border-border-default bg-bg-surface overflow-hidden"
             style={{ maxHeight: "500px" }}
           >
             {sourceUrl && (
               <ReactCrop
                 crop={crop}
-                onChange={(_, percentCrop) => setCrop(percentCrop)}
+                onChange={handleCropChange}
                 aspect={cropAspect}
                 ruleOfThirds
                 minWidth={10}
@@ -367,42 +402,50 @@ function Conversion() {
                 <span className="text-sm text-fg-secondary">{t("processing")}</span>
               </div>
             )}
+
+            {/* Floating result thumbnail — md+ only (picture-in-picture) */}
+            {previewUrl && (
+              <div className="hidden md:flex absolute bottom-3 right-3 w-36 rounded-lg border-2 border-accent-cyan/50 shadow-lg overflow-hidden bg-bg-surface/90 backdrop-blur-sm flex-col z-20 pointer-events-none">
+                <p className="text-[10px] text-fg-muted px-1.5 pt-1">{t("result")}</p>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={previewUrl}
+                  alt=""
+                  className="w-full object-contain max-h-28"
+                  draggable={false}
+                />
+              </div>
+            )}
           </div>
 
-          {/* Cropped result preview */}
+          {/* Result preview — mobile only (independent row) */}
           {previewUrl && (
-            <div className="rounded-lg border border-border-default bg-bg-surface overflow-hidden p-2">
+            <div className="md:hidden rounded-lg border border-border-default bg-bg-surface overflow-hidden p-2">
               <p className="text-xs text-fg-muted mb-1">{t("result")}</p>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={previewUrl}
                 alt=""
-                className="max-w-full max-h-64 object-contain"
+                className="max-w-full max-h-40 object-contain"
                 draggable={false}
               />
             </div>
           )}
 
-          {resultBlob && (
-            <ImageInfoBar
-              original={{
-                label: t("original"),
-                fileSize: sourceFile!.size,
-                format: formatKeyFromMime(sourceFile!.type),
-                dimensions: { width: sourceBitmap!.width, height: sourceBitmap!.height },
-              }}
-              result={{
-                label: t("result"),
-                fileSize: resultBlob.size,
-                format: String(outputFormat),
-                dimensions: cropDimensions,
-              }}
-            />
-          )}
-
-          {!crop && !resultBlob && (
-            <p className="text-sm text-fg-muted text-center">{t("noSelection")}</p>
-          )}
+          <ImageInfoBar
+            original={{
+              label: t("original"),
+              fileSize: sourceFile!.size,
+              format: formatKeyFromMime(sourceFile!.type),
+              dimensions: { width: sourceBitmap!.width, height: sourceBitmap!.height },
+            }}
+            result={{
+              label: t("result"),
+              fileSize: resultBlob?.size ?? 0,
+              format: String(outputFormat),
+              dimensions: cropDimensions,
+            }}
+          />
         </div>
       </div>
     </section>
