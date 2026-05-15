@@ -6,7 +6,8 @@ export async function renderThumbnail(
   const pdfjs = await import("pdfjs-dist");
   pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
 
-  const pdf = await pdfjs.getDocument({ data: new Uint8Array(data) }).promise;
+  // Copy the buffer — pdfjs-dist may transfer (detach) the underlying ArrayBuffer
+  const pdf = await pdfjs.getDocument({ data: new Uint8Array(data.slice(0)) }).promise;
   const page = await pdf.getPage(1);
 
   const viewport = page.getViewport({ scale: 1 });
@@ -21,6 +22,10 @@ export async function renderThumbnail(
   await page.render({ canvasContext: ctx, viewport: scaledViewport }).promise;
 
   const dataUrl = canvas.toDataURL("image/png");
+
   pdf.destroy();
+  canvas.width = 0;
+  canvas.height = 0;
+
   return dataUrl;
 }

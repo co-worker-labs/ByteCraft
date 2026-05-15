@@ -52,6 +52,7 @@ const namespaces = [
   "sqlformat",
   "recipe",
   "batch",
+  "pdf-merge",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

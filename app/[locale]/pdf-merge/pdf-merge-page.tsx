@@ -17,6 +17,11 @@ import type { PdfFileEntry, MergeProgress } from "../../../libs/pdf-merge/types"
 
 const THUMBNAIL_CONCURRENCY = 3;
 
+function releaseEntry(entry: PdfFileEntry) {
+  entry.thumbnailUrl = null;
+  entry.arrayBuffer = new ArrayBuffer(0);
+}
+
 async function processFiles(
   files: File[],
   existingCount: number,
@@ -83,6 +88,7 @@ function Conversion() {
   const [merging, setMerging] = useState(false);
   const [progress, setProgress] = useState<MergeProgress | null>(null);
   const [resultBlob, setResultBlob] = useState<Blob | null>(null);
+  const [resultPages, setResultPages] = useState(0);
   const [error, setError] = useState<string | null>(null);
 
   const dropZoneRef = useRef<HTMLDivElement>(null);
@@ -92,9 +98,28 @@ function Conversion() {
   const dragItemRef = useRef<number | null>(null);
   const dragOverItemRef = useRef<number | null>(null);
 
+  const filesRef = useRef<PdfFileEntry[]>([]);
+  const resultBlobRef = useRef<Blob | null>(null);
+
   const enabledFiles = files.filter((f) => f.enabled);
   const totalPages = enabledFiles.reduce((sum, f) => sum + f.pageCount, 0);
   const canMerge = enabledFiles.length >= 2 && !merging;
+
+  // Sync refs for cleanup and release on unmount
+  useEffect(() => {
+    filesRef.current = files;
+  }, [files]);
+  useEffect(() => {
+    resultBlobRef.current = resultBlob;
+  }, [resultBlob]);
+  // Release all entries only on unmount
+  useEffect(() => {
+    return () => {
+      for (const entry of filesRef.current) releaseEntry(entry);
+      filesRef.current = [];
+      resultBlobRef.current = null;
+    };
+  }, []);
 
   // Drag-and-drop file handling
   useEffect(() => {
@@ -161,7 +186,11 @@ function Conversion() {
   }
 
   function handleDelete(id: string) {
-    setFiles((prev) => prev.filter((f) => f.id !== id));
+    setFiles((prev) => {
+      const entry = prev.find((f) => f.id === id);
+      if (entry) releaseEntry(entry);
+      return prev.filter((f) => f.id !== id);
+    });
   }
 
   function handleToggle(id: string) {
@@ -195,18 +224,23 @@ function Conversion() {
 
   async function handleMerge() {
     if (!canMerge) return;
+    const pagesAtMerge = totalPages;
+    const buffers = enabledFiles.map((f) => f.arrayBuffer);
     setMerging(true);
     setProgress(null);
     setError(null);
     setResultBlob(null);
+    setResultPages(0);
 
     try {
-      const buffers = enabledFiles.map((f) => f.arrayBuffer);
       const result = await mergePdfs(buffers, (current, total) => {
         setProgress({ current, total });
       });
       const blob = new Blob([new Uint8Array(result)], { type: "application/pdf" });
       setResultBlob(blob);
+      setResultPages(pagesAtMerge);
+      for (const entry of files) releaseEntry(entry);
+      setFiles([]);
     } catch (e) {
       setError(t("mergeFailed"));
       showToast(t("mergeFailed"), "danger");
@@ -223,12 +257,14 @@ function Conversion() {
     a.href = url;
     a.download = "merged.pdf";
     a.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
   function handleNewMerge() {
+    for (const entry of files) releaseEntry(entry);
     setFiles([]);
     setResultBlob(null);
+    setResultPages(0);
     setError(null);
     setProgress(null);
     setMerging(false);
@@ -238,7 +274,6 @@ function Conversion() {
 
   // Result state
   if (resultBlob) {
-    const resultPages = enabledFiles.reduce((sum, f) => sum + f.pageCount, 0);
     return (
       <section className="mt-4">
         <div className="rounded-xl border border-accent-cyan/30 bg-accent-cyan-dim/10 p-6 text-center">
@@ -368,26 +403,38 @@ function Conversion() {
             ))}
           </div>
 
-          {/* Add more button */}
-          <div className="mt-3">
-            <input
-              ref={addMoreInputRef}
-              type="file"
-              accept=".pdf"
-              multiple
-              className="hidden"
-              onChange={(e) => handleFileInput(e.target.files, true)}
-            />
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => {
-                if (addMoreInputRef.current) addMoreInputRef.current.click();
-              }}
-            >
-              <Plus size={14} className="me-1" />
-              {t("addMoreFiles")}
-            </Button>
+          {/* Add more button + file/page count */}
+          <div className="mt-3 flex items-center justify-between">
+            <div>
+              <input
+                ref={addMoreInputRef}
+                type="file"
+                accept=".pdf"
+                multiple
+                className="hidden"
+                onChange={(e) => handleFileInput(e.target.files, true)}
+              />
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  if (addMoreInputRef.current) addMoreInputRef.current.click();
+                }}
+              >
+                <Plus size={14} className="me-1" />
+                {t("addMoreFiles")}
+              </Button>
+            </div>
+            <div className="text-sm text-fg-secondary">
+              <span className="font-medium">
+                {t("mergeButtonInfo", { count: enabledFiles.length, pages: totalPages })}
+              </span>
+              {files.length - enabledFiles.length > 0 && (
+                <span className="ml-2 text-fg-muted">
+                  ({t("excludedCount", { count: files.length - enabledFiles.length })})
+                </span>
+              )}
+            </div>
           </div>
 
           {/* Merge progress bar */}
@@ -408,24 +455,14 @@ function Conversion() {
             </div>
           )}
 
-          {/* Summary and merge button */}
-          <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            <div className="text-sm text-fg-secondary">
-              <span className="font-medium">
-                {t("mergeButtonInfo", { count: enabledFiles.length, pages: totalPages })}
-              </span>
-              {files.length - enabledFiles.length > 0 && (
-                <span className="ml-2 text-fg-muted">
-                  ({t("excludedCount", { count: files.length - enabledFiles.length })})
-                </span>
-              )}
-            </div>
+          {/* Merge button */}
+          <div className="mt-4 flex justify-center">
             <Button
               variant="primary"
               size="lg"
               disabled={!canMerge}
               onClick={handleMerge}
-              className="rounded-full uppercase font-bold"
+              className="w-full max-w-md rounded-full uppercase font-bold"
             >
               {merging ? t("merging") : t("mergeButton")}
             </Button>

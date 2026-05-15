@@ -71,7 +71,7 @@ const nextConfig = {
     resolveAlias: {
       fs: { browser: "./scripts/empty-module.js" },
       path: { browser: "./scripts/empty-module.js" },
-      canvas: false,
+      canvas: "./scripts/empty-module.js",
     },
   },
   webpack: (config, { isServer }) => {
