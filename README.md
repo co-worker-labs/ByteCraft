@@ -39,7 +39,9 @@ A collection of browser-based developer utilities, built with [Next.js](https://
 | Unix Timestamp                | Convert between Unix timestamps and dates with live clock, supports seconds & milliseconds                          |
 | QR Code Generator             | Customizable QR code generation with logo overlay, SVG/PNG export                                                   |
 | Color Tool                    | Color picker, multi-format conversion (HEX/RGB/HSL/OKLCH), image palette, contrast checker, color vision simulation |
-| Image Compressor              | Compress, resize, convert images (PNG/JPG/WebP), drag-to-compare preview                                            |
+| Image Resizer                 | Resize images by percentage or custom dimensions                                                                    |
+| Image Compressor              | Compress images with adjustable quality, drag-to-compare preview                                                    |
+| Image Converter               | Convert images between PNG, JPG, and WebP formats                                                                   |
 | HTTP Status Codes             | HTTP status code reference with categories, search, and spec links                                                  |
 | HTTP Client                   | REST API tester, GET/POST/PUT/DELETE with headers, body, auth                                                       |
 | DB Viewer                     | SQLite database viewer with SQL editor, autocomplete, and CSV/JSON export                                           |
@@ -128,7 +130,9 @@ app/[locale]/       # Pages (one directory per tool)
   unixtime/         # Unix timestamp converter
   qrcode/           # QR code generator
   color/            # Color tool
-  image/            # Image compressor
+  image-resize/      # Image resizer
+  image-compress/    # Image compressor
+  image-convert/     # Image converter
   httpstatus/       # HTTP status codes
   httpclient/       # HTTP client
   dbviewer/         # SQLite database viewer
