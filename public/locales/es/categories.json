@@ -42,10 +42,10 @@
     "faq2A": "Sí. UUID v4 usa números aleatorios criptográficamente seguros, y UUID v7 combina timestamp con aleatoriedad. Ambos cumplen con RFC 4122/9562."
   },
   "visual": {
-    "title": "Herramientas visuales y multimedia - Conversor de color, Compresor de imágenes",
+    "title": "Herramientas visuales y multimedia - Conversor de color, Compresor de imágenes, Fusionar PDF",
     "shortTitle": "Visual y multimedia",
-    "description": "Herramientas gratuitas visuales y multimedia para desarrolladores. Convierte colores entre HEX/RGB/HSL/OKLCH, extrae paletas de imágenes, comprime y convierte imágenes. 100% del lado del cliente.",
-    "intro": "2 herramientas visuales y multimedia para flujos de diseño e imagen. El Conversor de color maneja 7 espacios de color (HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH) con selector visual, extracción de paleta de imagen, verificación de contraste WCAG y simulación de daltonismo. El Compresor de imágenes maneja conversión PNG, JPG y WebP con soporte de redimensionamiento. Todo el procesamiento se ejecuta localmente.",
+    "description": "Herramientas gratuitas visuales y multimedia para desarrolladores. Convierte colores, comprime y convierte imágenes, fusiona PDFs. 100% del lado del cliente.",
+    "intro": "5 herramientas visuales y multimedia para flujos de diseño, imagen y documento. El Conversor de color maneja 7 espacios de color con extracción de paleta y verificación de contraste. El Redimensionador, Compresor y Convertidor de imágenes manejan transformaciones de imagen. Fusionar PDF combina múltiples PDFs en uno con reordenamiento por arrastrar y soltar. Todo el procesamiento se ejecuta localmente.",
     "faq1Q": "¿Qué espacios de color son compatibles?",
     "faq1A": "El Conversor de color soporta HEX, RGB, HSL, HSV, CMYK, LAB y OKLCH con conversión bidireccional y comparación visual.",
     "faq2Q": "¿Hay un límite de tamaño de archivo para la compresión de imágenes?",

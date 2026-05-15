@@ -215,6 +215,11 @@
     "title": "Batch Processor - Bulk Operation Tool | OmniKit",
     "description": "Apply a single operation to multiple inputs at once. Batch encode, hash, compress, and convert files and text."
   },
+  "pdf-merge": {
+    "title": "PDF Merger - Combine Multiple PDFs into One",
+    "shortTitle": "PDF Merger",
+    "description": "Merge multiple PDF files into a single document. Drag-and-drop reorder, thumbnail preview, and instant download. All processing runs in your browser."
+  },
   "categories": {
     "text": "Text Processing",
     "encoding": "Encoding & Conversion",

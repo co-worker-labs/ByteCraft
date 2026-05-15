@@ -211,9 +211,14 @@
     "description": "Encadeie múltiplas operações em uma receita. Combine etapas de processamento de texto e imagem no estilo CyberChef. Todos os dados são processados no navegador."
   },
   "batch": {
-    "shortTitle": "Processador em lote",
-    "title": "Processador em lote - Ferramenta de operações em massa | OmniKit",
-    "description": "Aplique uma única operação a múltiplas entradas de uma vez. Codifique, faça hash, comprima e converta arquivos e textos em lote."
+    "shortTitle": "Processador em Lote",
+    "title": "Processador em Lote - Ferramenta de Operações em Massa | OmniKit",
+    "description": "Aplica uma única operação a múltiplas entradas de uma vez. Codifique, faça hash, comprima e converta arquivos e texto em lote."
+  },
+  "pdf-merge": {
+    "title": "Mesclar PDF - Combinar Vários PDFs em Um",
+    "shortTitle": "Mesclar PDF",
+    "description": "Mescle vários arquivos PDF em um único documento. Reordenação por arrastar e soltar, pré-visualização de miniaturas e download instantâneo. Todo o processamento é feito no seu navegador."
   },
   "categories": {
     "text": "Processamento de texto",

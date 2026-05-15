@@ -255,8 +255,14 @@
   "batch": {
     "shortTitle": "バッチプロセッサ",
     "title": "バッチプロセッサ - 一括操作ツール | OmniKit",
-    "description": "単一の操作を複数の入力に一括適用。一括エンコード、ハッシュ、圧縮、変換。",
-    "searchTerms": "batchburosesa btpcs ikkatsu handy gurobaru"
+    "description": "複数の入力に対して1つの操作を一度に適用します。ファイルとテキストのバッチエンコード、ハッシュ、圧縮、変換。",
+    "searchTerms": "batchpurosessaa batchpurosessaa batch hash"
+  },
+  "pdf-merge": {
+    "title": "PDF 結合ツール - 複数の PDF を1つに結合",
+    "shortTitle": "PDF 結合",
+    "description": "複数の PDF ファイルを1つのドキュメントに結合。ドラッグ＆ドロップで並べ替え、サムネイルプレビュー、即座にダウンロード。すべての処理はブラウザで実行されます。",
+    "searchTerms": "pdfgattai pdfgt gattai pdf bunnsyo"
   },
   "categories": {
     "text": "テキスト処理",

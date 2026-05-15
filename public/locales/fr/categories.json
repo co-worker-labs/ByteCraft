@@ -42,10 +42,10 @@
     "faq2A": "Oui. UUID v4 utilise des nombres aléatoires cryptographiquement sécurisés, et UUID v7 combine un horodatage avec de l'aléatoire. Les deux sont conformes à la RFC 4122/9562."
   },
   "visual": {
-    "title": "Outils visuels et média — Convertisseur de couleur, Compresseur d'image",
+    "title": "Outils visuels et média — Convertisseur de couleur, Compresseur d'image, Fusionner PDF",
     "shortTitle": "Visuel et média",
-    "description": "Outils visuels et média gratuits en ligne pour les développeurs. Convertir des couleurs entre HEX/RGB/HSL/OKLCH, extraire des palettes d'images, compresser et convertir des images. 100% côté client.",
-    "intro": "2 outils visuels et média pour les flux de travail de design et d'image. Le convertisseur de couleur gère 7 espaces colorimétriques (HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH) avec un sélecteur visuel, l'extraction de palette d'image, la vérification du contraste WCAG et la simulation de daltonisme. Le compresseur d'image gère la conversion PNG, JPG et WebP avec prise en charge du redimensionnement. Tout le traitement s'exécute localement.",
+    "description": "Outils visuels et média gratuits en ligne pour les développeurs. Convertir des couleurs, compresser et convertir des images, fusionner des PDF. 100% côté client.",
+    "intro": "5 outils visuels et média pour les flux de travail de design, d'image et de document. Le convertisseur de couleur gère 7 espaces colorimétriques avec l'extraction de palette et la vérification du contraste. Le redimensionneur, compresseur et convertisseur d'image gèrent les transformations d'image. Fusionner PDF combine plusieurs PDF en un avec réorganisation par glisser-déposer. Tout le traitement s'exécute localement.",
     "faq1Q": "Quels espaces colorimétriques sont supportés ?",
     "faq1A": "Le convertisseur de couleur prend en charge HEX, RGB, HSL, HSV, CMYK, LAB et OKLCH avec conversion bidirectionnelle et comparaison visuelle.",
     "faq2Q": "Y a-t-il une limite de taille de fichier pour la compression d'image ?",

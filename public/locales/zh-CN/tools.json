@@ -258,6 +258,12 @@
     "description": "将单个操作同时应用于多个输入。批量编码、哈希、压缩和转换文件与文本。",
     "searchTerms": "piliangchuliqi plcq piliang hash bianma yasuo"
   },
+  "pdf-merge": {
+    "title": "PDF 合并工具 - 在线合并多个 PDF 文件",
+    "shortTitle": "PDF 合并",
+    "description": "将多个 PDF 文件合并为一个文档。支持拖拽排序、缩略图预览、即时下载。所有处理在浏览器本地完成。",
+    "searchTerms": "pdfhebing pdfhb hebing pdf wenjian"
+  },
   "categories": {
     "text": "文本处理",
     "encoding": "编码转换",

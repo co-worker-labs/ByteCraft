@@ -211,9 +211,14 @@
     "description": "Verketten Sie mehrere Operationen in einem Rezept. Kombinieren Sie Text- und Bildverarbeitungsschritte im CyberChef-Stil. Alle Daten werden im Browser verarbeitet."
   },
   "batch": {
-    "shortTitle": "Stapelverarbeitung",
-    "title": "Stapelverarbeitung - Massenverarbeitungswerkzeug | OmniKit",
-    "description": "Wende eine einzelne Operation auf mehrere Eingaben gleichzeitig an. Stapelweises Codieren, Hashen, Komprimieren und Konvertieren."
+    "shortTitle": "Batch-Prozessor",
+    "title": "Batch-Prozessor - Stapelverarbeitungstool | OmniKit",
+    "description": "Wendet einen einzelnen Vorgang auf mehrere Eingaben gleichzeitig an. Batch-Codierung, Hashing, Komprimierung und Konvertierung von Dateien und Text."
+  },
+  "pdf-merge": {
+    "title": "PDF Zusammenführen - Mehrere PDFs zu einem kombinieren",
+    "shortTitle": "PDF Zusammenführen",
+    "description": "Führen Sie mehrere PDF-Dateien zu einem Dokument zusammen. Drag-and-Drop-Sortierung, Vorschaubilder und sofortiger Download. Die gesamte Verarbeitung läuft in Ihrem Browser."
   },
   "categories": {
     "text": "Textverarbeitung",

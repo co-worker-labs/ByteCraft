@@ -253,10 +253,16 @@
     "searchTerms": "recipe resipi bujeok seutepeu cheori"
   },
   "batch": {
-    "shortTitle": "배치 프로세서",
-    "title": "배치 프로세서 - 일괄 작업 도구 | OmniKit",
-    "description": "단일 작업을 여러 입력에 동시에 적용. 일괄 인코딩, 해시, 압축 및 변환.",
-    "searchTerms": "baeCHIPUROSESEO bcps ilgwal haseu enkoding"
+    "shortTitle": "일괄 처리기",
+    "title": "일괄 처리기 - 대량 작업 도구 | OmniKit",
+    "description": "여러 입력에 대해 단일 작업을 한 번에 적용합니다. 파일과 텍스트의 일괄 인코딩, 해싱, 압축, 변환.",
+    "searchTerms": "ilgwalchuliqi ilcgq ilgwal hash"
+  },
+  "pdf-merge": {
+    "title": "PDF 병합 도구 - 여러 PDF를 하나로 병합",
+    "shortTitle": "PDF 병합",
+    "description": "여러 PDF 파일을 하나의 문서로 병합합니다. 드래그 앤 드롭으로 순서 변경, 썸네일 미리보기, 즉시 다운로드. 모든 처리는 브라우저에서 실행됩니다.",
+    "searchTerms": "pdfhapche pdfhc hapche pdf moonseo"
   },
   "categories": {
     "text": "텍스트 처리",

@@ -42,6 +42,7 @@ import {
   Network,
   FlaskConical,
   Layers,
+  FileStack,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -119,7 +120,10 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
     tools: ["jwt", "hashing", "password", "sshkey", "wallet", "cipher", "checksum"],
   },
   { key: "generators", tools: ["uuid", "cron", "unixtime", "qrcode"] },
-  { key: "visual", tools: ["color", "image-resize", "image-compress", "image-convert"] },
+  {
+    key: "visual",
+    tools: ["color", "image-resize", "image-compress", "image-convert", "pdf-merge"],
+  },
   {
     key: "reference",
     tools: ["httpstatus", "httpclient", "dbviewer", "ascii", "htmlcode", "bip39", "subnet"],
@@ -154,14 +158,14 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   cipher: ["hashing", "base64", "password"],
   numbase: ["color", "storageunit", "ascii", "subnet"],
   dbviewer: ["csv", "json", "yaml", "sqlformat"],
-  checksum: ["hashing", "cipher"],
+  checksum: ["hashing", "cipher", "pdf-merge"],
   storageunit: ["numbase", "checksum", "cssunit"],
   httpstatus: ["httpclient", "urlencoder", "subnet"],
   yaml: ["json", "csv", "markdown", "jsonts"],
   jsonts: ["json", "csv", "yaml"],
   "image-resize": ["image-compress", "image-convert", "color"],
-  "image-compress": ["image-resize", "image-convert", "checksum"],
-  "image-convert": ["image-resize", "image-compress", "qrcode"],
+  "image-compress": ["image-resize", "image-convert", "checksum", "pdf-merge"],
+  "image-convert": ["image-resize", "image-compress", "qrcode", "pdf-merge"],
   htmlcode: ["ascii", "httpstatus", "markdown"],
   ascii: ["htmlcode", "numbase", "httpstatus", "subnet"],
   extractor: ["regex", "textcase", "deduplines"],
@@ -173,6 +177,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   subnet: ["numbase", "httpstatus", "ascii"],
   recipe: ["json", "base64", "hashing"],
   batch: ["recipe", "hashing", "base64", "image-resize", "image-compress"],
+  "pdf-merge": ["image-compress", "image-convert", "checksum"],
 };
 
 const PALETTE_SIZE = 20;
@@ -418,6 +423,16 @@ export const TOOLS: ToolEntry[] = [
     icon: Layers,
     emoji: "📦",
     sameAs: ["https://en.wikipedia.org/wiki/Batch_processing"],
+  },
+  {
+    key: "pdf-merge",
+    path: "/pdf-merge",
+    icon: FileStack,
+    emoji: "📑",
+    sameAs: [
+      "https://en.wikipedia.org/wiki/PDF",
+      "https://developer.mozilla.org/en-US/docs/Glossary/PDF",
+    ],
   },
 ];
 

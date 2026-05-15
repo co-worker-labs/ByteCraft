@@ -5,6 +5,9 @@
   "license": "AGPL-3.0-or-later",
   "type": "module",
   "scripts": {
+    "copy-pdf-worker": "cp node_modules/pdfjs-dist/build/pdf.worker.min.mjs public/pdf.worker.min.mjs",
+    "predev": "npm run copy-pdf-worker",
+    "prebuild": "npm run copy-pdf-worker",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -61,6 +64,8 @@
     "next-intl": "^4.9.1",
     "node-sql-parser": "^5.4.0",
     "papaparse": "^5.5.3",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^4.10.38",
     "pluralize": "^8.0.0",
     "prismjs": "^1.29.0",
     "qr-code-styling": "^1.9.2",

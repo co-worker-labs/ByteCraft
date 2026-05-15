@@ -42,10 +42,10 @@
     "faq2A": "Yes. UUID v4 uses cryptographically secure random numbers, and UUID v7 combines timestamp with randomness. Both conform to RFC 4122/9562."
   },
   "visual": {
-    "title": "Visual & Media Tools - Color Converter, Image Compressor",
+    "title": "Visual & Media Tools - Color Converter, Image Compressor, PDF Merger",
     "shortTitle": "Visual & Media",
-    "description": "Free online visual and media tools for developers. Convert colors between HEX/RGB/HSL/OKLCH, extract palettes from images, compress and convert images. 100% client-side.",
-    "intro": "2 visual and media tools for design and image workflows. The Color Converter handles 7 color spaces (HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH) with a visual picker, image palette extraction, WCAG contrast checking, and color-blindness simulation. The Image Compressor handles PNG, JPG, and WebP conversion with resize support. All processing runs locally.",
+    "description": "Free online visual and media tools for developers. Convert colors, compress and convert images, merge PDFs. 100% client-side.",
+    "intro": "5 visual and media tools for design, image, and document workflows. The Color Converter handles 7 color spaces with palette extraction and contrast checking. Image Resizer, Compressor, and Converter handle image transformations. PDF Merger combines multiple PDFs into one with drag-and-drop reordering. All processing runs locally in your browser.",
     "faq1Q": "What color spaces are supported?",
     "faq1A": "The Color Converter supports HEX, RGB, HSL, HSV, CMYK, LAB, and OKLCH with bidirectional conversion and visual comparison.",
     "faq2Q": "Is there a file size limit for image compression?",
