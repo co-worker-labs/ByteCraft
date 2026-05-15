@@ -20,7 +20,7 @@ import ImageInfoBar from "../../../components/image/ImageInfoBar";
 
 const FORMAT_OPTIONS: { value: OutputFormat; label: string }[] = [
   { value: "png", label: "PNG" },
-  { value: "jpeg", label: "JPEG" },
+  { value: "jpeg", label: "JPG" },
   { value: "webp", label: "WebP" },
 ];
 

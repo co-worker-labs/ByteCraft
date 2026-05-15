@@ -63,7 +63,7 @@ export const visualSteps: RecipeStepDef[] = [
         defaultValue: "webp",
         options: [
           { label: "PNG", value: "png" },
-          { label: "JPEG", value: "jpeg" },
+          { label: "JPG", value: "jpeg" },
           { label: "WebP", value: "webp" },
         ],
       },
