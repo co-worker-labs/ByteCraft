@@ -124,7 +124,15 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
   { key: "generators", tools: ["uuid", "cron", "unixtime", "qrcode"] },
   {
     key: "visual",
-    tools: ["color", "image-resize", "image-compress", "image-convert", "image-crop", "pdf-merge"],
+    tools: [
+      "color",
+      "image-resize",
+      "image-compress",
+      "image-convert",
+      "image-crop",
+      "image-rotate",
+      "pdf-merge",
+    ],
   },
   {
     key: "reference",
