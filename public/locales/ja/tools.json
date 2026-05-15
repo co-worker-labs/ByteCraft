@@ -192,6 +192,12 @@
     "description": "PNG、JPG、WebP フォーマット間で画像を変換。すべての処理はブラウザで実行されます。",
     "searchTerms": "gazouformat gf fmt henkan webp png"
   },
+  "image-crop": {
+    "title": "画像トリミング - オンラインで画像を切り抜き",
+    "shortTitle": "画像トリミング",
+    "description": "自由選択、プリセット比率、または正確なピクセル寸法で画像をトリミング。PNG、JPG、WebP対応。すべての処理はブラウザで実行されます。",
+    "searchTerms": "gazoutorimingu gotrg torimingu gazou kado"
+  },
   "extractor": {
     "title": "メール / URL / 電話番号抽出 — オンラインでメール、URL、電話番号を抽出",
     "shortTitle": "メール / URL / 電話抽出",

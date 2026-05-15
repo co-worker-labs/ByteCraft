@@ -192,6 +192,12 @@
     "description": "PNG, JPG, WebP 포맷 간 이미지 변환. 모든 처리는 브라우저에서 실행됩니다.",
     "searchTerms": "imijifomat imf fmt image webp png"
   },
+  "image-crop": {
+    "title": "이미지 자르기 - 온라인 이미지 크롭",
+    "shortTitle": "이미지 자르기",
+    "description": "자유 선택, 미리 설정된 비율 또는 정확한 픽셀 크기로 이미지를 자릅니다. PNG, JPG, WebP 지원. 모든 처리는 브라우저에서 실행됩니다.",
+    "searchTerms": "imijajareugi ijjrg jareugi sajin seontaeg"
+  },
   "extractor": {
     "title": "이메일 / URL / 전화번호 추출기 — 온라인 이메일, URL, 전화번호 추출",
     "shortTitle": "이메일 / URL / 전화 추출",

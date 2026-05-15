@@ -160,6 +160,11 @@
     "shortTitle": "Convertidor de Imágenes",
     "description": "Convierte imágenes entre formatos PNG, JPG y WebP. Todo el procesamiento se realiza en tu navegador."
   },
+  "image-crop": {
+    "title": "Recortar Imagen - Recortar Imágenes Online",
+    "shortTitle": "Recortar Imagen",
+    "description": "Recorta imágenes con selección libre, relaciones de aspecto predefinidas o dimensiones exactas en píxeles. Compatible con PNG, JPG, WebP. Todo el procesamiento se realiza en tu navegador."
+  },
   "extractor": {
     "title": "Extractor de Emails, URLs y Teléfonos — Extracción en Línea",
     "shortTitle": "Extractor Email / URL / Teléfono",

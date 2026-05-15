@@ -192,6 +192,12 @@
     "description": "在 PNG、JPG、WebP 格式之間轉換圖片。所有處理在瀏覽器本機完成。",
     "searchTerms": "tupiangeshi tpgs geshi webp png jpg"
   },
+  "image-crop": {
+    "title": "圖片裁剪 - 線上裁剪圖片",
+    "shortTitle": "圖片裁剪",
+    "description": "自由裁剪、預設比例或精確像素尺寸裁剪圖片。支援 PNG、JPG、WebP。所有處理在瀏覽器本機完成。",
+    "searchTerms": "tupiancaijian tpccj caijian xuanqu qiege"
+  },
   "extractor": {
     "title": "信箱 / URL / 電話提取器 — 線上提取信箱、網址、電話號碼",
     "shortTitle": "信箱 / URL / 電話提取",

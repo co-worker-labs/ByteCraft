@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "react-image-crop/dist/ReactCrop.css";
 
 /* ===== Theme Variables ===== */
 @layer base {
@@ -473,6 +474,17 @@
 }
 .recipe-select-arrow svg {
   display: block;
+}
+
+/* ===== react-image-crop Theme Overrides ===== */
+.ReactCrop {
+  --rc-border-color: #06d6a0;
+  --rc-drag-handle-bg-colour: #06d6a0;
+}
+
+.ReactCrop__rule-of-thirds-hz::before,
+.ReactCrop__rule-of-thirds-vt::before {
+  background-color: rgba(6, 214, 160, 0.3);
 }
 
 /* Print styles — applies to all pages, used primarily by /markdown's "Export PDF". */
