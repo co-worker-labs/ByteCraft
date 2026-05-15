@@ -174,11 +174,23 @@
     "description": "在二進位、八進位、十進位、十六進位之間即時轉換數字。支援 8/16/32/64 位元二進位補數，視覺化位元編輯器。",
     "searchTerms": "jinweizhuanhuan jwzh erjinwei"
   },
-  "image": {
-    "title": "圖片壓縮 / 格式轉換 - PNG, JPG, WebP",
+  "image-resize": {
+    "title": "圖片縮放 - 線上調整圖片尺寸",
+    "shortTitle": "圖片縮放",
+    "description": "按百分比或自訂尺寸縮放圖片。支援 PNG、JPG、WebP 輸入。所有處理在瀏覽器本機完成。",
+    "searchTerms": "tupiansuofang tpsf suofang chicun daxiao"
+  },
+  "image-compress": {
+    "title": "圖片壓縮 - 壓縮 PNG、JPG、WebP",
     "shortTitle": "圖片壓縮",
-    "description": "線上壓縮、調整大小、轉換圖片格式，支援 PNG、JPG、WebP。所有處理在瀏覽器本機完成，不上傳資料。",
-    "searchTerms": "tupianyasuo tpyas yasuo webp"
+    "description": "可調品質的圖片壓縮工具，支援拖曳對比預覽。支援 PNG、JPG、WebP。所有處理在瀏覽器本機完成。",
+    "searchTerms": "tupianyasuo tpyz yasuo webp zhiliang"
+  },
+  "image-convert": {
+    "title": "圖片格式轉換 - PNG、JPG、WebP",
+    "shortTitle": "圖片格式轉換",
+    "description": "在 PNG、JPG、WebP 格式之間轉換圖片。所有處理在瀏覽器本機完成。",
+    "searchTerms": "tupiangeshi tpgs geshi webp png jpg"
   },
   "extractor": {
     "title": "信箱 / URL / 電話提取器 — 線上提取信箱、網址、電話號碼",

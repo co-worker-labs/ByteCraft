@@ -145,10 +145,20 @@
     "shortTitle": "Conversor de base numérica",
     "description": "Convierte números entre binario, octal, decimal y hexadecimal con sincronización en tiempo real. Soporta complemento a dos de 8/16/32/64 bits y editor visual de bits."
   },
-  "image": {
-    "title": "Compresor y conversor de imágenes - PNG, JPG, WebP",
-    "shortTitle": "Compresor de imágenes",
-    "description": "Comprime, redimensiona y convierte imágenes entre formatos PNG, JPG y WebP. Todo el procesamiento se ejecuta localmente en tu navegador."
+  "image-resize": {
+    "title": "Redimensionador de Imágenes - Redimensionar Imágenes Online",
+    "shortTitle": "Redimensionador de Imágenes",
+    "description": "Redimensiona imágenes por porcentaje o dimensiones personalizadas. Soporta PNG, JPG, WebP. Todo el procesamiento se realiza en tu navegador."
+  },
+  "image-compress": {
+    "title": "Compresor de Imágenes - Comprimir PNG, JPG, WebP",
+    "shortTitle": "Compresor de Imágenes",
+    "description": "Comprime imágenes con calidad ajustable. Vista previa de comparación arrastrando. Soporta PNG, JPG, WebP. Todo el procesamiento se realiza en tu navegador."
+  },
+  "image-convert": {
+    "title": "Convertidor de Formato de Imagen - PNG, JPG, WebP",
+    "shortTitle": "Convertidor de Imágenes",
+    "description": "Convierte imágenes entre formatos PNG, JPG y WebP. Todo el procesamiento se realiza en tu navegador."
   },
   "extractor": {
     "title": "Extractor de Emails, URLs y Teléfonos — Extracción en Línea",

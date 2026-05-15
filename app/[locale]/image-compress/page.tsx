@@ -1,31 +1,34 @@
 import { getTranslations } from "next-intl/server";
 import { generatePageMeta } from "../../../libs/seo";
 import { buildToolSchemas } from "../../../components/json-ld";
-import { TOOL_CATEGORIES, CATEGORY_SLUGS, TOOLS } from "../../../libs/tools";
-import ImagePage from "./image-page";
+import { TOOLS, TOOL_CATEGORIES, CATEGORY_SLUGS } from "../../../libs/tools";
+import ImageCompressPage from "./image-compress-page";
 
-const PATH = "/image";
-const TOOL_KEY = "image";
+const PATH = "/image-compress";
+const TOOL_KEY = "image-compress";
+const tool = TOOLS.find((t) => t.key === TOOL_KEY)!;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tools" });
-  const tool = TOOLS.find((t) => t.key === TOOL_KEY)!;
   return generatePageMeta({
     locale,
     path: PATH,
-    title: t("image.title"),
-    description: t("image.description"),
+    title: t("image-compress.title"),
+    description: t("image-compress.description"),
     ogImage: { type: "tool", key: TOOL_KEY },
   });
 }
 
-export default async function ImageRoute({ params }: { params: Promise<{ locale: string }> }) {
+export default async function ImageCompressRoute({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "tools" });
-  const tx = await getTranslations({ locale, namespace: "image" });
+  const tx = await getTranslations({ locale, namespace: "image-compress" });
   const tc = await getTranslations({ locale, namespace: "categories" });
-  const tool = TOOLS.find((t) => t.key === TOOL_KEY)!;
   const category = TOOL_CATEGORIES.find((c) => c.tools.includes(TOOL_KEY))!;
   const categorySlug = CATEGORY_SLUGS[category.key];
   const howToSteps = Array.from({ length: 3 }, (_, i) => ({
@@ -33,10 +36,10 @@ export default async function ImageRoute({ params }: { params: Promise<{ locale:
     text: tx(`descriptions.step${i + 1}Text`),
   })).filter((step) => step.name);
   const schemas = buildToolSchemas({
-    name: t("image.title"),
+    name: t("image-compress.title"),
     description: tx.has("descriptions.aeoDefinition")
       ? tx("descriptions.aeoDefinition")
-      : t("image.description"),
+      : t("image-compress.description"),
     path: PATH,
     categoryName: tc(`${category.key}.shortTitle`),
     categoryPath: `/${categorySlug}`,
@@ -57,7 +60,7 @@ export default async function ImageRoute({ params }: { params: Promise<{ locale:
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }}
         />
       ))}
-      <ImagePage />
+      <ImageCompressPage />
     </>
   );
 }

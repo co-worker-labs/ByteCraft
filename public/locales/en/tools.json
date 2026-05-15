@@ -150,10 +150,20 @@
     "shortTitle": "Number Base Converter",
     "description": "Convert numbers between binary, octal, decimal, and hexadecimal with real-time sync. Supports 8/16/32/64-bit two's complement, bit visual editor."
   },
-  "image": {
-    "title": "Image Compressor & Format Converter - PNG, JPG, WebP",
+  "image-resize": {
+    "title": "Image Resizer - Resize Images Online",
+    "shortTitle": "Image Resizer",
+    "description": "Resize images by percentage or custom dimensions. Supports PNG, JPG, WebP input. All processing runs in your browser."
+  },
+  "image-compress": {
+    "title": "Image Compressor - Compress PNG, JPG, WebP",
     "shortTitle": "Image Compressor",
-    "description": "Compress, resize, and convert images between PNG, JPG, and WebP formats. Drag-to-compare preview with adjustable quality and dimensions."
+    "description": "Compress images with adjustable quality. Drag-to-compare preview. Supports PNG, JPG, WebP. All processing runs in your browser."
+  },
+  "image-convert": {
+    "title": "Image Format Converter - PNG, JPG, WebP",
+    "shortTitle": "Image Converter",
+    "description": "Convert images between PNG, JPG, and WebP formats. All processing runs in your browser."
   },
   "extractor": {
     "title": "Email & URL Extractor - Extract Emails, URLs, Phone Numbers Online",

@@ -174,11 +174,23 @@
     "description": "在二进制、八进制、十进制、十六进制之间实时转换数字。支持 8/16/32/64 位二进制补码，可视化位编辑器。",
     "searchTerms": "jinzhizhuanhuan jzzh erjinzhi"
   },
-  "image": {
-    "title": "图片压缩 / 格式转换 - PNG, JPG, WebP",
+  "image-resize": {
+    "title": "图片缩放 - 在线调整图片尺寸",
+    "shortTitle": "图片缩放",
+    "description": "按百分比或自定义尺寸缩放图片。支持 PNG、JPG、WebP 输入。所有处理在浏览器本地完成。",
+    "searchTerms": "tupiansuofang tpsf suofang chicun daxiao"
+  },
+  "image-compress": {
+    "title": "图片压缩 - 压缩 PNG、JPG、WebP",
     "shortTitle": "图片压缩",
-    "description": "在线压缩、调整大小、转换图片格式，支持 PNG、JPG、WebP。所有处理在浏览器本地完成，不上传数据。",
-    "searchTerms": "tupianyasuo tpyas yasuo webp"
+    "description": "可调质量的图片压缩工具，支持拖拽对比预览。支持 PNG、JPG、WebP。所有处理在浏览器本地完成。",
+    "searchTerms": "tupianyasuo tpyz yasuo webp zhiliang"
+  },
+  "image-convert": {
+    "title": "图片格式转换 - PNG、JPG、WebP",
+    "shortTitle": "图片格式转换",
+    "description": "在 PNG、JPG、WebP 格式之间转换图片。所有处理在浏览器本地完成。",
+    "searchTerms": "tupiangeshi tpgs geshi webp png jpg"
   },
   "extractor": {
     "title": "邮箱 / URL / 电话提取器 — 在线提取邮箱、网址、电话号码",

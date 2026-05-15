@@ -174,11 +174,23 @@
     "description": "2진수, 8진수, 10진수, 16진수 간 실시간 동기화로 숫자를 변환합니다. 8/16/32/64비트 2의 보수, 비트 시각 편집기 지원.",
     "searchTerms": "jinbeobbyeonhwangi jbbh sipjin yukjin bipyeon"
   },
-  "image": {
-    "title": "이미지 압축 & 형식 변환기 - PNG, JPG, WebP",
-    "shortTitle": "이미지 압축기",
-    "description": "PNG, JPG, WebP 형식 간 이미지를 압축, 크기 조절, 변환합니다. 모든 처리는 브라우저에서 로컬로 실행됩니다.",
-    "searchTerms": "imijeuapchuki imac apchuk hyeongsik"
+  "image-resize": {
+    "title": "이미지 리사이즈 - 온라인 이미지 크기 조정",
+    "shortTitle": "이미지 리사이즈",
+    "description": "백분율 또는 사용자 정의 크기로 이미지 크기를 조정합니다. PNG, JPG, WebP 입력 지원. 모든 처리는 브라우저에서 실행됩니다.",
+    "searchTerms": "imijirisaizu irs risaizu resize image"
+  },
+  "image-compress": {
+    "title": "이미지 압축 - PNG, JPG, WebP 압축",
+    "shortTitle": "이미지 압축",
+    "description": "품질 조절 가능한 이미지 압축 도구. 드래그 비교 미리보기. PNG, JPG, WebP 지원. 모든 처리는 브라우저에서 실행됩니다.",
+    "searchTerms": "imijiabchug imac abchug pumjil webp"
+  },
+  "image-convert": {
+    "title": "이미지 포맷 변환 - PNG, JPG, WebP",
+    "shortTitle": "이미지 포맷 변환",
+    "description": "PNG, JPG, WebP 포맷 간 이미지 변환. 모든 처리는 브라우저에서 실행됩니다.",
+    "searchTerms": "imijifomat imf fmt image webp png"
   },
   "extractor": {
     "title": "이메일 / URL / 전화번호 추출기 — 온라인 이메일, URL, 전화번호 추출",
