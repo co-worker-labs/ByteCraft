@@ -37,7 +37,7 @@ export function Dropdown({ trigger, items, className = "" }: DropdownProps) {
     <Menu as="div" className={`relative inline-block ${className}`} ref={containerRef}>
       <MenuButton as="div">{trigger}</MenuButton>
       <MenuItems
-        className={`absolute ${align === "right" ? "right-0" : "left-0"} mt-2 min-w-[180px] max-h-[280px] overflow-y-auto bg-bg-elevated border border-border-default rounded-xl shadow-lg z-50 focus:outline-none`}
+        className={`absolute ${align === "right" ? "right-0" : "left-0"} mt-2 min-w-[180px] max-h-[440px] overflow-y-auto bg-bg-elevated border border-border-default rounded-xl shadow-lg z-50 focus:outline-none`}
       >
         {items.map((item, index) => (
           <MenuItem key={index} disabled={item.disabled}>
