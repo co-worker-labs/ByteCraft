@@ -15,6 +15,7 @@ import {
   Hash,
   KeyRound,
   CaseSensitive,
+  Crop,
   Lock,
   Clock,
   Timer,
@@ -122,7 +123,7 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
   { key: "generators", tools: ["uuid", "cron", "unixtime", "qrcode"] },
   {
     key: "visual",
-    tools: ["color", "image-resize", "image-compress", "image-convert", "pdf-merge"],
+    tools: ["color", "image-resize", "image-compress", "image-convert", "image-crop", "pdf-merge"],
   },
   {
     key: "reference",
@@ -163,9 +164,10 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   httpstatus: ["httpclient", "urlencoder", "subnet"],
   yaml: ["json", "csv", "markdown", "jsonts"],
   jsonts: ["json", "csv", "yaml"],
-  "image-resize": ["image-compress", "image-convert", "color"],
-  "image-compress": ["image-resize", "image-convert", "checksum", "pdf-merge"],
-  "image-convert": ["image-resize", "image-compress", "qrcode", "pdf-merge"],
+  "image-crop": ["image-resize", "image-compress", "image-convert"],
+  "image-resize": ["image-compress", "image-convert", "image-crop", "color"],
+  "image-compress": ["image-resize", "image-convert", "image-crop", "checksum", "pdf-merge"],
+  "image-convert": ["image-resize", "image-compress", "image-crop", "qrcode", "pdf-merge"],
   htmlcode: ["ascii", "httpstatus", "markdown"],
   ascii: ["htmlcode", "numbase", "httpstatus", "subnet"],
   extractor: ["regex", "textcase", "deduplines"],
@@ -373,6 +375,7 @@ export const TOOLS: ToolEntry[] = [
   { key: "image-resize", path: "/image-resize", icon: Scaling, emoji: "📐", sameAs: [] },
   { key: "image-compress", path: "/image-compress", icon: FileDown, emoji: "🗜️", sameAs: [] },
   { key: "image-convert", path: "/image-convert", icon: RefreshCw, emoji: "🔄", sameAs: [] },
+  { key: "image-crop", path: "/image-crop", icon: Crop, emoji: "✂️", sameAs: [] },
   { key: "htmlcode", path: "/htmlcode", icon: Code, emoji: "🔖", sameAs: [] },
   {
     key: "ascii",
