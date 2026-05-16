@@ -55,6 +55,7 @@ const namespaces = [
   "recipe",
   "batch",
   "pdf-merge",
+  "image-watermark",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

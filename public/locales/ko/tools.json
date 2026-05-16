@@ -276,6 +276,12 @@
     "description": "여러 PDF 파일을 하나의 문서로 병합합니다. 드래그 앤 드롭으로 순서 변경, 썸네일 미리보기, 즉시 다운로드. 모든 처리는 브라우저에서 실행됩니다.",
     "searchTerms": "pdfhapche pdfhc hapche pdf moonseo"
   },
+  "image-watermark": {
+    "title": "이미지 워터마크 - 텍스트 또는 로고 워터마크 추가",
+    "shortTitle": "이미지 워터마크",
+    "description": "이미지에 텍스트 또는 로고 워터마크를 추가합니다. 위치, 투명도, 회전, 타일 배치를 맞춤 설정. PNG, JPG, WebP 지원. 모든 처리는 브라우저에서 실행됩니다.",
+    "searchTerms": "imijiwoteomakeu ijwtk sutakka ugin rogo"
+  },
   "categories": {
     "text": "텍스트 처리",
     "encoding": "인코딩 & 변환",

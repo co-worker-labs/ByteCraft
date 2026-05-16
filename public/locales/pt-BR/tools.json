@@ -230,6 +230,11 @@
     "shortTitle": "Mesclar PDF",
     "description": "Mescle vários arquivos PDF em um único documento. Reordenação por arrastar e soltar, pré-visualização de miniaturas e download instantâneo. Todo o processamento é feito no seu navegador."
   },
+  "image-watermark": {
+    "title": "Marca d'Água - Adicionar Texto ou Logo",
+    "shortTitle": "Marca d'Água",
+    "description": "Adicione marcas d'água de texto ou logo em imagens. Personalize posição, opacidade, rotação e mosaico. Suporta PNG, JPG, WebP. Todo o processamento é feito no seu navegador."
+  },
   "categories": {
     "text": "Processamento de texto",
     "encoding": "Codificação e conversão",

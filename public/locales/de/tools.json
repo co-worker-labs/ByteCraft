@@ -230,6 +230,11 @@
     "shortTitle": "PDF Zusammenführen",
     "description": "Führen Sie mehrere PDF-Dateien zu einem Dokument zusammen. Drag-and-Drop-Sortierung, Vorschaubilder und sofortiger Download. Die gesamte Verarbeitung läuft in Ihrem Browser."
   },
+  "image-watermark": {
+    "title": "Bildwasserzeichen - Text oder Logo hinzufügen",
+    "shortTitle": "Wasserzeichen",
+    "description": "Fügen Sie Text- oder Logo-Wasserzeichen zu Bildern hinzu. Passen Sie Position, Deckkraft, Drehung und Kachelung an. Unterstützt PNG, JPG, WebP. Die gesamte Verarbeitung erfolgt in Ihrem Browser."
+  },
   "categories": {
     "text": "Textverarbeitung",
     "encoding": "Kodierung & Konvertierung",

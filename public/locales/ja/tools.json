@@ -276,6 +276,12 @@
     "description": "複数の PDF ファイルを1つのドキュメントに結合。ドラッグ＆ドロップで並べ替え、サムネイルプレビュー、即座にダウンロード。すべての処理はブラウザで実行されます。",
     "searchTerms": "pdfgattai pdfgt gattai pdf bunnsyo"
   },
+  "image-watermark": {
+    "title": "画像ウォーターマーク - テキスト・ロゴ透かし追加",
+    "shortTitle": "画像ウォーターマーク",
+    "description": "画像にテキストまたはロゴのウォーターマークを追加。位置、透明度、回転、タイル配置をカスタマイズ。PNG、JPG、WebP対応。全ての処理はブラウザで実行。",
+    "searchTerms": "gazouotamaku gotmk mizushi shomei rogo"
+  },
   "categories": {
     "text": "テキスト処理",
     "encoding": "エンコード・変換",
