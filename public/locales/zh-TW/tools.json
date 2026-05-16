@@ -276,6 +276,12 @@
     "description": "將多個 PDF 檔案合併為一個文件。支援拖曳排序、縮圖預覽、即時下載。所有處理在瀏覽器本機完成。",
     "searchTerms": "pdfhebing pdfhb hebing pdf wenjian"
   },
+  "image-watermark": {
+    "title": "圖片浮水印 - 新增文字或 Logo 浮水印",
+    "shortTitle": "圖片浮水印",
+    "description": "為圖片新增文字或 Logo 浮水印，自訂位置、透明度、旋轉和拼貼。支援 PNG、JPG、WebP。所有處理在瀏覽器本機完成。",
+    "searchTerms": "tupianfushuiyin tpfyy fushuiyin yinji banquan"
+  },
   "categories": {
     "text": "文本處理",
     "encoding": "編碼轉換",

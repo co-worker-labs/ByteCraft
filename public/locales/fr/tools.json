@@ -230,6 +230,11 @@
     "shortTitle": "Fusionner PDF",
     "description": "Fusionnez plusieurs fichiers PDF en un seul document. Réorganisation par glisser-déposer, aperçu des miniatures et téléchargement instantané. Tout le traitement s'exécute dans votre navigateur."
   },
+  "image-watermark": {
+    "title": "Filigrane - Ajouter un Texte ou Logo sur Image",
+    "shortTitle": "Filigrane",
+    "description": "Ajoutez des filigranes texte ou logo sur vos images. Personnalisez position, opacité, rotation et motif en mosaïque. Supporte PNG, JPG, WebP. Tout le traitement s'exécute dans votre navigateur."
+  },
   "categories": {
     "text": "Traitement de texte",
     "encoding": "Encodage et conversion",
