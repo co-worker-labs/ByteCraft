@@ -145,10 +145,30 @@
     "shortTitle": "Conversor de Base Numérica",
     "description": "Converta números entre binário, octal, decimal e hexadecimal com sincronização em tempo real. Suporta complemento de dois 8/16/32/64 bits e editor visual de bits."
   },
-  "image": {
-    "title": "Compressor e Conversor de Imagens - PNG, JPG, WebP",
+  "image-resize": {
+    "title": "Redimensionador de Imagens - Redimensionar Imagens Online",
+    "shortTitle": "Redimensionador de Imagens",
+    "description": "Redimensione imagens por porcentagem ou dimensões personalizadas. Suporta PNG, JPG, WebP. Todo o processamento é feito no seu navegador."
+  },
+  "image-compress": {
+    "title": "Compressor de Imagens - Comprimir PNG, JPG, WebP",
     "shortTitle": "Compressor de Imagens",
-    "description": "Comprima, redimensione e converta imagens entre formatos PNG, JPG e WebP. Todo processamento é local no navegador."
+    "description": "Comprima imagens com qualidade ajustável. Visualização de comparação arrastando. Suporta PNG, JPG, WebP. Todo o processamento é feito no seu navegador."
+  },
+  "image-convert": {
+    "title": "Conversor de Formato de Imagem - PNG, JPG, WebP",
+    "shortTitle": "Conversor de Imagens",
+    "description": "Converta imagens entre os formatos PNG, JPG e WebP. Todo o processamento é feito no seu navegador."
+  },
+  "image-crop": {
+    "title": "Recortar Imagem - Cortar Imagens Online",
+    "shortTitle": "Recortar Imagem",
+    "description": "Recorte imagens com seleção livre, proporções predefinidas ou dimensões exatas em pixels. Suporta PNG, JPG, WebP. Todo o processamento é feito no seu navegador."
+  },
+  "image-rotate": {
+    "title": "Rotacionador de Imagens - Rotacionar e Espelhar Imagens Online",
+    "shortTitle": "Rotacionador de Imagens",
+    "description": "Rotacione imagens em 90°, 180° ou 270° e espelhe horizontal ou verticalmente. Suporta PNG, JPG, WebP. Todo processamento é feito no seu navegador."
   },
   "extractor": {
     "title": "Extrator de Emails, URLs e Telefones — Extração Online",
@@ -201,9 +221,14 @@
     "description": "Encadeie múltiplas operações em uma receita. Combine etapas de processamento de texto e imagem no estilo CyberChef. Todos os dados são processados no navegador."
   },
   "batch": {
-    "shortTitle": "Processador em lote",
-    "title": "Processador em lote - Ferramenta de operações em massa | OmniKit",
-    "description": "Aplique uma única operação a múltiplas entradas de uma vez. Codifique, faça hash, comprima e converta arquivos e textos em lote."
+    "shortTitle": "Processador em Lote",
+    "title": "Processador em Lote - Ferramenta de Operações em Massa | OmniKit",
+    "description": "Aplica uma única operação a múltiplas entradas de uma vez. Codifique, faça hash, comprima e converta arquivos e texto em lote."
+  },
+  "pdf-merge": {
+    "title": "Mesclar PDF - Combinar Vários PDFs em Um",
+    "shortTitle": "Mesclar PDF",
+    "description": "Mescle vários arquivos PDF em um único documento. Reordenação por arrastar e soltar, pré-visualização de miniaturas e download instantâneo. Todo o processamento é feito no seu navegador."
   },
   "categories": {
     "text": "Processamento de texto",

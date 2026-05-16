@@ -35,7 +35,11 @@ const namespaces = [
   "csv",
   "csv-md",
   "numbase",
-  "image",
+  "image-resize",
+  "image-compress",
+  "image-convert",
+  "image-crop",
+  "image-rotate",
   "extractor",
   "wordcounter",
   "deduplines",
@@ -50,6 +54,7 @@ const namespaces = [
   "sqlformat",
   "recipe",
   "batch",
+  "pdf-merge",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

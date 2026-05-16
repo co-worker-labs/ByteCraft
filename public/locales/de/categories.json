@@ -42,10 +42,10 @@
     "faq2A": "Ja. UUID v4 verwendet kryptografisch sichere Zufallszahlen und UUID v7 kombiniert Zeitstempel mit Zufälligkeit. Beide entsprechen RFC 4122/9562."
   },
   "visual": {
-    "title": "Visuelle & Medien-Tools – Farbkonverter, Bildkompressor",
+    "title": "Visuelle & Medien-Tools – Farbkonverter, Bildkompressor, PDF Zusammenführen",
     "shortTitle": "Visuell & Medien",
-    "description": "Kostenlose Online-Visuell- und Medientools für Entwickler. Farben zwischen HEX/RGB/HSL/OKLCH konvertieren, Paletten aus Bildern extrahieren, Bilder komprimieren und konvertieren. 100% clientseitig.",
-    "intro": "2 Visuell- und Medientools für Design- und Bild-Workflows. Der Farbkonverter verarbeitet 7 Farbräume (HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH) mit visueller Farbauswahl, Bildpaletten-Extraktion, WCAG-Kontrastprüfung und Farbfehlsichtigkeitssimulation. Der Bildkompressor unterstützt PNG-, JPG- und WebP-Konvertierung mit Größenänderung. Alle Verarbeitung läuft lokal.",
+    "description": "Kostenlose Online-Visuell- und Medientools für Entwickler. Farben konvertieren, Bilder komprimieren und konvertieren, PDFs zusammenführen. 100% clientseitig.",
+    "intro": "5 Visuell- und Medientools für Design-, Bild- und Dokument-Workflows. Der Farbkonverter verarbeitet 7 Farbräume mit Paletten-Extraktion und Kontrastprüfung. Der Bild-Resizer, -Kompressor und -Konverter verarbeitet Bildtransformationen. PDF Zusammenführen kombiniert mehrere PDFs zu einem mit Drag-and-Drop-Sortierung. Alle Verarbeitung läuft lokal.",
     "faq1Q": "Welche Farbräume werden unterstützt?",
     "faq1A": "Der Farbkonverter unterstützt HEX, RGB, HSL, HSV, CMYK, LAB und OKLCH mit bidirektionaler Konvertierung und visuellem Vergleich.",
     "faq2Q": "Gibt es eine Dateigrößenbeschränkung für die Bildkomprimierung?",

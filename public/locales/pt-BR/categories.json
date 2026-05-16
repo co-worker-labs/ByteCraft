@@ -42,10 +42,10 @@
     "faq2A": "Sim. UUID v4 usa números aleatórios criptograficamente seguros, e UUID v7 combina timestamp com aleatoriedade. Ambos estão em conformidade com RFC 4122/9562."
   },
   "visual": {
-    "title": "Ferramentas Visuais e de Mídia - Conversor de Cores, Compressor de Imagens",
+    "title": "Ferramentas Visuais e de Mídia - Conversor de Cores, Compressor de Imagens, Mesclar PDF",
     "shortTitle": "Visual e Mídia",
-    "description": "Ferramentas online gratuitas visuais e de mídia para desenvolvedores. Converta cores entre HEX/RGB/HSL/OKLCH, extraia paletas de imagens, comprima e converta imagens. 100% no lado do cliente.",
-    "intro": "2 ferramentas visuais e de mídia para fluxos de trabalho de design e imagens. O Conversor de Cores suporta 7 espaços de cor (HEX, RGB, HSL, HSV, CMYK, LAB, OKLCH) com seletor visual, extração de paleta de imagens, verificação de contraste WCAG e simulação de daltonismo. O Compressor de Imagens suporta conversão entre PNG, JPG e WebP com suporte a redimensionamento. Todo o processamento roda localmente.",
+    "description": "Ferramentas online gratuitas visuais e de mídia para desenvolvedores. Converta cores, comprima e converta imagens, mescle PDFs. 100% no lado do cliente.",
+    "intro": "5 ferramentas visuais e de mídia para fluxos de design, imagem e documento. O Conversor de Cores suporta 7 espaços de cor com extração de paleta e verificação de contraste. O Redimensionador, Compressor e Conversidor de Imagens lidam com transformações de imagem. Mesclar PDF combina múltiplos PDFs em um com reordenação por arrastar e soltar. Todo o processamento roda localmente.",
     "faq1Q": "Quais espaços de cor são suportados?",
     "faq1A": "O Conversor de Cores suporta HEX, RGB, HSL, HSV, CMYK, LAB e OKLCH com conversão bidirecional e comparação visual.",
     "faq2Q": "Existe limite de tamanho de arquivo para compressão de imagens?",

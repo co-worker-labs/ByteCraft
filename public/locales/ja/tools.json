@@ -174,11 +174,35 @@
     "description": "2進数、8進数、10進数、16進数をリアルタイム同期で相互変換。8/16/32/64ビットの2の補数、ビットビジュアルエディタに対応。",
     "searchTerms": "shinsuuhenkan nisshin hasshin jusshin"
   },
-  "image": {
-    "title": "画像圧縮＆フォーマット変換 - PNG、JPG、WebP",
+  "image-resize": {
+    "title": "画像リサイズ - オンラインで画像サイズを変更",
+    "shortTitle": "画像リサイズ",
+    "description": "パーセントまたはカスタムサイズで画像をリサイズ。PNG、JPG、WebP 入力対応。すべての処理はブラウザで実行されます。",
+    "searchTerms": "gazourisaizu grs risaizu size henko"
+  },
+  "image-compress": {
+    "title": "画像圧縮 - PNG、JPG、WebP を圧縮",
     "shortTitle": "画像圧縮",
-    "description": "画像をPNG、JPG、WebP形式間で圧縮、リサイズ、変換。すべての処理はブラウザ上でローカルに実行。",
-    "searchTerms": "gazouasshuku atsushuku rizaizu PNG"
+    "description": "品質調整可能な画像圧縮ツール。ドラッグで比較プレビュー。PNG、JPG、WebP 対応。すべての処理はブラウザで実行されます。",
+    "searchTerms": "gazouasshuku gaz ashuku hinsitsu webp"
+  },
+  "image-convert": {
+    "title": "画像フォーマット変換 - PNG、JPG、WebP",
+    "shortTitle": "画像フォーマット変換",
+    "description": "PNG、JPG、WebP フォーマット間で画像を変換。すべての処理はブラウザで実行されます。",
+    "searchTerms": "gazouformat gf fmt henkan webp png"
+  },
+  "image-crop": {
+    "title": "画像トリミング - オンラインで画像を切り抜き",
+    "shortTitle": "画像トリミング",
+    "description": "自由選択、プリセット比率、または正確なピクセル寸法で画像をトリミング。PNG、JPG、WebP対応。すべての処理はブラウザで実行されます。",
+    "searchTerms": "gazoutorimingu gotrg torimingu gazou kado"
+  },
+  "image-rotate": {
+    "title": "画像回転 - オンラインで画像を回転・反転",
+    "shortTitle": "画像回転",
+    "description": "画像を 90°、180°、270° 回転し、水平・垂直に反転。PNG、JPG、WebP 対応。すべての処理はブラウザで実行されます。",
+    "searchTerms": "gazoukaiten gzk 90do 180do tentou"
   },
   "extractor": {
     "title": "メール / URL / 電話番号抽出 — オンラインでメール、URL、電話番号を抽出",
@@ -243,8 +267,14 @@
   "batch": {
     "shortTitle": "バッチプロセッサ",
     "title": "バッチプロセッサ - 一括操作ツール | OmniKit",
-    "description": "単一の操作を複数の入力に一括適用。一括エンコード、ハッシュ、圧縮、変換。",
-    "searchTerms": "batchburosesa btpcs ikkatsu handy gurobaru"
+    "description": "複数の入力に対して1つの操作を一度に適用します。ファイルとテキストのバッチエンコード、ハッシュ、圧縮、変換。",
+    "searchTerms": "batchpurosessaa batchpurosessaa batch hash"
+  },
+  "pdf-merge": {
+    "title": "PDF 結合ツール - 複数の PDF を1つに結合",
+    "shortTitle": "PDF 結合",
+    "description": "複数の PDF ファイルを1つのドキュメントに結合。ドラッグ＆ドロップで並べ替え、サムネイルプレビュー、即座にダウンロード。すべての処理はブラウザで実行されます。",
+    "searchTerms": "pdfgattai pdfgt gattai pdf bunnsyo"
   },
   "categories": {
     "text": "テキスト処理",

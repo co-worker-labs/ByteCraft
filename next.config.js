@@ -6,6 +6,7 @@ const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  transpilePackages: ["pdfjs-dist"],
   async headers() {
     const securityHeaders = [
       {
@@ -70,6 +71,7 @@ const nextConfig = {
     resolveAlias: {
       fs: { browser: "./scripts/empty-module.js" },
       path: { browser: "./scripts/empty-module.js" },
+      canvas: "./scripts/empty-module.js",
     },
   },
   webpack: (config, { isServer }) => {
@@ -80,6 +82,7 @@ const nextConfig = {
         path: false,
       };
     }
+    config.resolve.alias.canvas = false;
     return config;
   },
 };

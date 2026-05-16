@@ -150,10 +150,30 @@
     "shortTitle": "Number Base Converter",
     "description": "Convert numbers between binary, octal, decimal, and hexadecimal with real-time sync. Supports 8/16/32/64-bit two's complement, bit visual editor."
   },
-  "image": {
-    "title": "Image Compressor & Format Converter - PNG, JPG, WebP",
+  "image-resize": {
+    "title": "Image Resizer - Resize Images Online",
+    "shortTitle": "Image Resizer",
+    "description": "Resize images by percentage or custom dimensions. Supports PNG, JPG, WebP input. All processing runs in your browser."
+  },
+  "image-compress": {
+    "title": "Image Compressor - Compress PNG, JPG, WebP",
     "shortTitle": "Image Compressor",
-    "description": "Compress, resize, and convert images between PNG, JPG, and WebP formats. Drag-to-compare preview with adjustable quality and dimensions."
+    "description": "Compress images with adjustable quality. Drag-to-compare preview. Supports PNG, JPG, WebP. All processing runs in your browser."
+  },
+  "image-convert": {
+    "title": "Image Format Converter - PNG, JPG, WebP",
+    "shortTitle": "Image Converter",
+    "description": "Convert images between PNG, JPG, and WebP formats. All processing runs in your browser."
+  },
+  "image-crop": {
+    "title": "Image Cropper - Crop Images Online",
+    "shortTitle": "Image Cropper",
+    "description": "Crop images with free selection, preset aspect ratios, or exact pixel dimensions. Supports PNG, JPG, WebP. All processing runs in your browser."
+  },
+  "image-rotate": {
+    "title": "Image Rotator - Rotate & Flip Images Online",
+    "shortTitle": "Image Rotate",
+    "description": "Rotate images by 90°, 180°, or 270° and flip horizontally or vertically. Supports PNG, JPG, WebP. All processing runs in your browser."
   },
   "extractor": {
     "title": "Email & URL Extractor - Extract Emails, URLs, Phone Numbers Online",
@@ -204,6 +224,11 @@
     "shortTitle": "Batch Processor",
     "title": "Batch Processor - Bulk Operation Tool | OmniKit",
     "description": "Apply a single operation to multiple inputs at once. Batch encode, hash, compress, and convert files and text."
+  },
+  "pdf-merge": {
+    "title": "PDF Merger - Combine Multiple PDFs into One",
+    "shortTitle": "PDF Merger",
+    "description": "Merge multiple PDF files into a single document. Drag-and-drop reorder, thumbnail preview, and instant download. All processing runs in your browser."
   },
   "categories": {
     "text": "Text Processing",

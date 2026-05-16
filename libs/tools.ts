@@ -15,6 +15,7 @@ import {
   Hash,
   KeyRound,
   CaseSensitive,
+  Crop,
   Lock,
   Clock,
   Timer,
@@ -29,7 +30,10 @@ import {
   Binary,
   Table,
   FileSpreadsheet,
-  ImageDown,
+  Scaling,
+  FileDown,
+  RefreshCw,
+  RotateCw,
   ListFilter,
   Search,
   AlignLeft,
@@ -40,6 +44,7 @@ import {
   Network,
   FlaskConical,
   Layers,
+  FileStack,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -117,7 +122,18 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
     tools: ["jwt", "hashing", "password", "sshkey", "wallet", "cipher", "checksum"],
   },
   { key: "generators", tools: ["uuid", "cron", "unixtime", "qrcode"] },
-  { key: "visual", tools: ["color", "image"] },
+  {
+    key: "visual",
+    tools: [
+      "color",
+      "image-resize",
+      "image-compress",
+      "image-convert",
+      "image-crop",
+      "image-rotate",
+      "pdf-merge",
+    ],
+  },
   {
     key: "reference",
     tools: ["httpstatus", "httpclient", "dbviewer", "ascii", "htmlcode", "bip39", "subnet"],
@@ -141,7 +157,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   password: ["jwt", "sshkey", "uuid", "hashing"],
   wallet: ["sshkey", "password", "hashing", "jwt", "bip39"],
   sshkey: ["password", "hashing", "jwt", "wallet"],
-  color: ["image", "numbase", "cssunit"],
+  color: ["image-resize", "image-compress", "image-convert", "numbase", "cssunit"],
   cron: ["unixtime", "regex"],
   markdown: ["json", "diff", "htmlcode"],
   qrcode: ["uuid", "urlencoder", "password"],
@@ -152,12 +168,16 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   cipher: ["hashing", "base64", "password"],
   numbase: ["color", "storageunit", "ascii", "subnet"],
   dbviewer: ["csv", "json", "yaml", "sqlformat"],
-  checksum: ["hashing", "cipher"],
+  checksum: ["hashing", "cipher", "pdf-merge"],
   storageunit: ["numbase", "checksum", "cssunit"],
   httpstatus: ["httpclient", "urlencoder", "subnet"],
   yaml: ["json", "csv", "markdown", "jsonts"],
   jsonts: ["json", "csv", "yaml"],
-  image: ["color", "qrcode", "checksum"],
+  "image-crop": ["image-resize", "image-compress", "image-convert", "image-rotate"],
+  "image-resize": ["image-compress", "image-convert", "image-crop", "image-rotate"],
+  "image-compress": ["image-resize", "image-convert", "image-crop", "image-rotate", "pdf-merge"],
+  "image-convert": ["image-resize", "image-compress", "image-crop", "image-rotate", "pdf-merge"],
+  "image-rotate": ["image-resize", "image-compress", "image-convert", "image-crop"],
   htmlcode: ["ascii", "httpstatus", "markdown"],
   ascii: ["htmlcode", "numbase", "httpstatus", "subnet"],
   extractor: ["regex", "textcase", "deduplines"],
@@ -168,7 +188,8 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   cssunit: ["storageunit", "numbase", "color"],
   subnet: ["numbase", "httpstatus", "ascii"],
   recipe: ["json", "base64", "hashing"],
-  batch: ["recipe", "hashing", "base64", "image"],
+  batch: ["recipe", "hashing", "base64", "image-resize", "image-compress"],
+  "pdf-merge": ["image-compress", "image-convert", "checksum"],
 };
 
 const PALETTE_SIZE = 20;
@@ -361,7 +382,11 @@ export const TOOLS: ToolEntry[] = [
     sameAs: ["https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"],
   },
   { key: "yaml", path: "/yaml", icon: FileBraces, emoji: "📄", sameAs: ["https://yaml.org/spec/"] },
-  { key: "image", path: "/image", icon: ImageDown, emoji: "🖼️", sameAs: [] },
+  { key: "image-resize", path: "/image-resize", icon: Scaling, emoji: "📐", sameAs: [] },
+  { key: "image-compress", path: "/image-compress", icon: FileDown, emoji: "🗜️", sameAs: [] },
+  { key: "image-convert", path: "/image-convert", icon: RefreshCw, emoji: "🔄", sameAs: [] },
+  { key: "image-crop", path: "/image-crop", icon: Crop, emoji: "✂️", sameAs: [] },
+  { key: "image-rotate", path: "/image-rotate", icon: RotateCw, emoji: "🔃", sameAs: [] },
   { key: "htmlcode", path: "/htmlcode", icon: Code, emoji: "🔖", sameAs: [] },
   {
     key: "ascii",
@@ -412,6 +437,16 @@ export const TOOLS: ToolEntry[] = [
     icon: Layers,
     emoji: "📦",
     sameAs: ["https://en.wikipedia.org/wiki/Batch_processing"],
+  },
+  {
+    key: "pdf-merge",
+    path: "/pdf-merge",
+    icon: FileStack,
+    emoji: "📑",
+    sameAs: [
+      "https://en.wikipedia.org/wiki/PDF",
+      "https://developer.mozilla.org/en-US/docs/Glossary/PDF",
+    ],
   },
 ];
 

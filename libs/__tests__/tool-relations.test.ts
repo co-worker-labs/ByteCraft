@@ -48,5 +48,6 @@ describe("TOOL_RELATIONS", () => {
         }
       }
     }
+    expect(errors, `Bidirectional errors: ${errors.join(", ")}`).toEqual([]);
   });
 });

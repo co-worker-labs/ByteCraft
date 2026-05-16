@@ -145,10 +145,30 @@
     "shortTitle": "Zahlenbasiskonverter",
     "description": "Zahlen zwischen Binär, Oktal, Dezimal und Hexadezimal mit Echtzeit-Synchronisation konvertieren. Unterstützt 8/16/32/64-Bit-Zweierkomplement, visueller Bit-Editor."
   },
-  "image": {
-    "title": "Bildkompressor & Formatkonverter - PNG, JPG, WebP",
-    "shortTitle": "Bildkompressor",
-    "description": "Bilder komprimieren, verkleinern und zwischen PNG-, JPG- und WebP-Formaten konvertieren. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser."
+  "image-resize": {
+    "title": "Bildgrößenänderung - Bilder Online Skalieren",
+    "shortTitle": "Bild skalieren",
+    "description": "Skalieren Sie Bilder nach Prozent oder benutzerdefinierten Abmessungen. Unterstützt PNG, JPG, WebP. Die gesamte Verarbeitung erfolgt in Ihrem Browser."
+  },
+  "image-compress": {
+    "title": "Bildkompressor - PNG, JPG, WebP Komprimieren",
+    "shortTitle": "Bild komprimieren",
+    "description": "Komprimieren Sie Bilder mit einstellbarer Qualität. Drag-to-Compare-Vorschau. Unterstützt PNG, JPG, WebP. Die gesamte Verarbeitung erfolgt in Ihrem Browser."
+  },
+  "image-convert": {
+    "title": "Bildformatkonverter - PNG, JPG, WebP",
+    "shortTitle": "Bild konvertieren",
+    "description": "Konvertieren Sie Bilder zwischen PNG, JPG und WebP Formaten. Die gesamte Verarbeitung erfolgt in Ihrem Browser."
+  },
+  "image-crop": {
+    "title": "Bild Zuschneiden - Bilder Online Zuschneiden",
+    "shortTitle": "Bild Zuschneiden",
+    "description": "Schneiden Sie Bilder mit freier Auswahl, voreingestellten Seitenverhältnissen oder genauen Pixelmaßen zu. Unterstützt PNG, JPG, WebP. Die gesamte Verarbeitung erfolgt in Ihrem Browser."
+  },
+  "image-rotate": {
+    "title": "Bildrotierung - Bilder online drehen und spiegeln",
+    "shortTitle": "Bilder drehen",
+    "description": "Drehen Sie Bilder um 90°, 180° oder 270° und spiegeln Sie sie horizontal oder vertikal. Unterstützt PNG, JPG, WebP. Die gesamte Verarbeitung erfolgt in Ihrem Browser."
   },
   "extractor": {
     "title": "E-Mail / URL / Telefon-Extraktor — Online-Extraktion",
@@ -201,9 +221,14 @@
     "description": "Verketten Sie mehrere Operationen in einem Rezept. Kombinieren Sie Text- und Bildverarbeitungsschritte im CyberChef-Stil. Alle Daten werden im Browser verarbeitet."
   },
   "batch": {
-    "shortTitle": "Stapelverarbeitung",
-    "title": "Stapelverarbeitung - Massenverarbeitungswerkzeug | OmniKit",
-    "description": "Wende eine einzelne Operation auf mehrere Eingaben gleichzeitig an. Stapelweises Codieren, Hashen, Komprimieren und Konvertieren."
+    "shortTitle": "Batch-Prozessor",
+    "title": "Batch-Prozessor - Stapelverarbeitungstool | OmniKit",
+    "description": "Wendet einen einzelnen Vorgang auf mehrere Eingaben gleichzeitig an. Batch-Codierung, Hashing, Komprimierung und Konvertierung von Dateien und Text."
+  },
+  "pdf-merge": {
+    "title": "PDF Zusammenführen - Mehrere PDFs zu einem kombinieren",
+    "shortTitle": "PDF Zusammenführen",
+    "description": "Führen Sie mehrere PDF-Dateien zu einem Dokument zusammen. Drag-and-Drop-Sortierung, Vorschaubilder und sofortiger Download. Die gesamte Verarbeitung läuft in Ihrem Browser."
   },
   "categories": {
     "text": "Textverarbeitung",

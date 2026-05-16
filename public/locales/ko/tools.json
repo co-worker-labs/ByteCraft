@@ -174,11 +174,35 @@
     "description": "2진수, 8진수, 10진수, 16진수 간 실시간 동기화로 숫자를 변환합니다. 8/16/32/64비트 2의 보수, 비트 시각 편집기 지원.",
     "searchTerms": "jinbeobbyeonhwangi jbbh sipjin yukjin bipyeon"
   },
-  "image": {
-    "title": "이미지 압축 & 형식 변환기 - PNG, JPG, WebP",
-    "shortTitle": "이미지 압축기",
-    "description": "PNG, JPG, WebP 형식 간 이미지를 압축, 크기 조절, 변환합니다. 모든 처리는 브라우저에서 로컬로 실행됩니다.",
-    "searchTerms": "imijeuapchuki imac apchuk hyeongsik"
+  "image-resize": {
+    "title": "이미지 리사이즈 - 온라인 이미지 크기 조정",
+    "shortTitle": "이미지 리사이즈",
+    "description": "백분율 또는 사용자 정의 크기로 이미지 크기를 조정합니다. PNG, JPG, WebP 입력 지원. 모든 처리는 브라우저에서 실행됩니다.",
+    "searchTerms": "imijirisaizu irs risaizu resize image"
+  },
+  "image-compress": {
+    "title": "이미지 압축 - PNG, JPG, WebP 압축",
+    "shortTitle": "이미지 압축",
+    "description": "품질 조절 가능한 이미지 압축 도구. 드래그 비교 미리보기. PNG, JPG, WebP 지원. 모든 처리는 브라우저에서 실행됩니다.",
+    "searchTerms": "imijiabchug imac abchug pumjil webp"
+  },
+  "image-convert": {
+    "title": "이미지 포맷 변환 - PNG, JPG, WebP",
+    "shortTitle": "이미지 포맷 변환",
+    "description": "PNG, JPG, WebP 포맷 간 이미지 변환. 모든 처리는 브라우저에서 실행됩니다.",
+    "searchTerms": "imijifomat imf fmt image webp png"
+  },
+  "image-crop": {
+    "title": "이미지 자르기 - 온라인 이미지 크롭",
+    "shortTitle": "이미지 자르기",
+    "description": "자유 선택, 미리 설정된 비율 또는 정확한 픽셀 크기로 이미지를 자릅니다. PNG, JPG, WebP 지원. 모든 처리는 브라우저에서 실행됩니다.",
+    "searchTerms": "imijajareugi ijjrg jareugi sajin seontaeg"
+  },
+  "image-rotate": {
+    "title": "이미지 회전 - 온라인 이미지 회전 및 뒤집기",
+    "shortTitle": "이미지 회전",
+    "description": "이미지를 90°, 180°, 270° 회전하고 수평/수직으로 뒤집기. PNG, JPG, WebP 지원. 모든 처리는 브라우저에서 실행됩니다.",
+    "searchTerms": "imijehoejeon ijhj 90do 180do sangjohoejeon"
   },
   "extractor": {
     "title": "이메일 / URL / 전화번호 추출기 — 온라인 이메일, URL, 전화번호 추출",
@@ -241,10 +265,16 @@
     "searchTerms": "recipe resipi bujeok seutepeu cheori"
   },
   "batch": {
-    "shortTitle": "배치 프로세서",
-    "title": "배치 프로세서 - 일괄 작업 도구 | OmniKit",
-    "description": "단일 작업을 여러 입력에 동시에 적용. 일괄 인코딩, 해시, 압축 및 변환.",
-    "searchTerms": "baeCHIPUROSESEO bcps ilgwal haseu enkoding"
+    "shortTitle": "일괄 처리기",
+    "title": "일괄 처리기 - 대량 작업 도구 | OmniKit",
+    "description": "여러 입력에 대해 단일 작업을 한 번에 적용합니다. 파일과 텍스트의 일괄 인코딩, 해싱, 압축, 변환.",
+    "searchTerms": "ilgwalchuliqi ilcgq ilgwal hash"
+  },
+  "pdf-merge": {
+    "title": "PDF 병합 도구 - 여러 PDF를 하나로 병합",
+    "shortTitle": "PDF 병합",
+    "description": "여러 PDF 파일을 하나의 문서로 병합합니다. 드래그 앤 드롭으로 순서 변경, 썸네일 미리보기, 즉시 다운로드. 모든 처리는 브라우저에서 실행됩니다.",
+    "searchTerms": "pdfhapche pdfhc hapche pdf moonseo"
   },
   "categories": {
     "text": "텍스트 처리",

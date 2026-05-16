@@ -145,10 +145,30 @@
     "shortTitle": "Convertisseur de base",
     "description": "Convertissez des nombres entre binaire, octal, décimal et hexadécimal avec synchronisation en temps réel. Supporte le complément à deux en 8/16/32/64 bits et l'éditeur visuel de bits."
   },
-  "image": {
-    "title": "Compresseur et convertisseur d'images - PNG, JPG, WebP",
-    "shortTitle": "Compresseur d'images",
-    "description": "Compressez, redimensionnez et convertissez des images entre les formats PNG, JPG et WebP. Tout le traitement s'exécute localement dans votre navigateur."
+  "image-resize": {
+    "title": "Redimensionneur d'Images - Redimensionner des Images en Ligne",
+    "shortTitle": "Redimensionneur d'Images",
+    "description": "Redimensionnez des images par pourcentage ou dimensions personnalisées. Prend en charge PNG, JPG, WebP. Tout le traitement s'effectue dans votre navigateur."
+  },
+  "image-compress": {
+    "title": "Compresseur d'Images - Compresser PNG, JPG, WebP",
+    "shortTitle": "Compresseur d'Images",
+    "description": "Compressez des images avec qualité ajustable. Aperçu de comparaison par glisser. Prend en charge PNG, JPG, WebP. Tout le traitement s'effectue dans votre navigateur."
+  },
+  "image-convert": {
+    "title": "Convertisseur de Format d'Image - PNG, JPG, WebP",
+    "shortTitle": "Convertisseur d'Images",
+    "description": "Convertissez des images entre les formats PNG, JPG et WebP. Tout le traitement s'effectue dans votre navigateur."
+  },
+  "image-crop": {
+    "title": "Recadrer une Image - Recadrage en Ligne",
+    "shortTitle": "Recadrer une Image",
+    "description": "Recadrez des images avec sélection libre, ratios prédéfinis ou dimensions exactes en pixels. Prend en charge PNG, JPG, WebP. Tout le traitement s'effectue dans votre navigateur."
+  },
+  "image-rotate": {
+    "title": "Rotation d'Images - Rotationner et Retourner des Images en Ligne",
+    "shortTitle": "Rotation d'Images",
+    "description": "Rotationnez les images de 90°, 180° ou 270° et retournez-les horizontalement ou verticalement. Supporte PNG, JPG, WebP. Tout le traitement s'effectue dans votre navigateur."
   },
   "extractor": {
     "title": "Extracteur d'Emails, URLs et Téléphones — Extraction en Ligne",
@@ -201,9 +221,14 @@
     "description": "Chaînez plusieurs opérations dans une recette. Combinez des étapes de traitement de texte et d'image à la CyberChef. Toutes les données sont traitées dans le navigateur."
   },
   "batch": {
-    "shortTitle": "Processeur par lots",
-    "title": "Processeur par lots - Outil d'opérations en masse | OmniKit",
-    "description": "Appliquez une seule opération à plusieurs entrées à la fois. Encodez, hachez, compressez et convertissez des fichiers et du texte par lots."
+    "shortTitle": "Processeur par lot",
+    "title": "Processeur par lot - Outil d'opérations en masse | OmniKit",
+    "description": "Applique une seule opération à plusieurs entrées à la fois. Codez, hachez, compressez et convertissez des fichiers et du texte par lot."
+  },
+  "pdf-merge": {
+    "title": "Fusionner PDF - Combiner Plusieurs PDF en Un Seul",
+    "shortTitle": "Fusionner PDF",
+    "description": "Fusionnez plusieurs fichiers PDF en un seul document. Réorganisation par glisser-déposer, aperçu des miniatures et téléchargement instantané. Tout le traitement s'exécute dans votre navigateur."
   },
   "categories": {
     "text": "Traitement de texte",
